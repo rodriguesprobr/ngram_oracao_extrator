@@ -1,0 +1,1156 @@
+
+Comunicação Oral
+ANÁLISE DE ACEITAÇÃO DO SOFTWARE LIVRE PARA CRIAÇÃO E GESTÃO
+
+DE BASES DE DADOS REFERENCIAIS DE ARTIGOS CIENTÍFICOS – BADRAC
+
+Resumo: A aceitação e a utilização de tecnologias da informação são temas explorados pela Ciência
+da Informação, pois trabalham a interface entre o homem e o computador, entre o usuário e a
+tecnologia. Tendo em vista a especialização de conteúdos nas bases de dados, e estas, estarem
+disponíveis on-line na Internet, criou-se uma fonte de pesquisa para estudantes, professores e
+pesquisadores. Existem várias bases de dados que referenciam, de forma exclusiva, itens
+bibliográficos, como livros, artigos científicos, dissertações, teses etc. O portal de Periódicos Capes, o
+SciELO e a Brapci são exemplos de bases de dados referenciais. Apesar da importância e existência de
+várias ferramentas de busca de conteúdos específicos, especialmente no que tange à busca de
+informação científica, não foi encontrada, durante o período de execução desta pesquisa, nenhuma
+ferramenta de software livre que permitisse a criação de bases de dados referenciais de artigos
+científicos e gestão do conteúdo armazenado. Por esse motivo, optou-se pelo desafio do
+desenvolvimento de uma ferramenta com tais características. O software foi denominado “Base de
+Dados Referencial de Artigos Científicos” (Badrac) e permite que qualquer interessado construa uma
+base de dados referencial. Diante desse contexto, esta pesquisa teve como objetivo verificar o grau de
+aceitação, por meio do modelo Technology Acceptance Model – TAM, do software livre Badrac, que
+permite a construção e gestão de bases de dados referenciais de artigos científicos visando auxiliar na
+disseminação e na recuperação da produção científica armazenada em meio digital. Por fim, foi
+possível concluir que esse software, apesar de necessitar das correções e melhorias intrínsecas a esse
+tipo de ferramenta, obteve um relevante grau de aceitação pela amostra pesquisada.
+Palavras-chave: Base de Dados Referencial. Periódico Científico Digital. Recuperação da Informação
+Digital. Modelo de Aceitação Tecnológica.
+1 INTRODUÇÃO
+Considerando que a evolução e o desenvolvimento da sociedade fundamentam-se na
+disponibilização, no acesso, no uso e, eventualmente, no descarte da informação, é necessário
+refletir sobre o papel e as aplicações da tecnologia para a comunicação e a sua disseminação na
+sociedade. Essa comunicação pode ser realizada por meio de diferentes canais, dentre os quais
+destaca-se a comunicação científica, e alcançar públicos distintos, como a comunidade
+científica, alvo ao qual se destina esse tipo de comunicação.
+Assim, a comunicação científica é parte inerente do desenvolvimento da ciência e está
+fundamentada na informação científica, gerando conhecimento, divulgado, sobretudo, por meio
+de periódicos científicos (GUEDES, 1998).
+O periódico científico, por sua vez, desenvolve a disseminação da produção científica e
+tem um papel fundamental no meio acadêmico, promovendo avanços e destacando autores e
+editores. Na década de 1990, com a chegada da informação eletrônica e o uso da Internet,
+ocorreu a grande ruptura no modo de editoração e disseminação de informações, principalmente
+da produção científica (FACHIN, 2002). Com a Internet, o formato digital passou a promover a
+disseminação de conhecimento científico em larga escala e permitir uma divulgação mais
+eficiente de suas publicações.
+Porém, devido a grande quantidade de informação armazenada na Internet, o que se
+observa é que a heterogeneidade das informações é um problema para que uma recuperação de
+informação relevante na Web seja alcançada. Essa questão, entretanto, pode ser suavizada com a
+organização especializada das bases de dados.
+
+Com a especialização de conteúdos nas bases de dados, a Internet se mostra fonte de
+pesquisa para estudantes, professores e pesquisadores. Existem várias bases de dados que
+referenciam, de forma exclusiva, itens bibliográficos, como livros, artigos científicos,
+dissertações, teses etc. O portal de Periódicos Capes, o SciELO e a Brapci são exemplos de
+bases de dados referenciais.
+É fato que a organização especializada das bases de dados reduz o escopo das
+informações passíveis de busca. Diferentemente de uma pesquisa geral na Web, onde vários
+tipos de bases de dados, que referenciam os mais diversos tipos de informação, são acionadas,
+as bases de dados que referenciam apenas itens bibliográficos aumentam a relevância dos
+resultados das buscas.
+Apesar da importância e existência de várias ferramentas de busca de conteúdos
+específicos, especialmente no que tange à busca de informação científica, não foi encontrada,
+durante o período de execução desta pesquisa, nenhuma ferramenta de software livre que
+permitisse a criação de bases de dados referenciais de artigos científicos e gestão do conteúdo
+armazenado. Por esse motivo e para o andamento desta pesquisa de mestrado foi necessária a
+criação de uma ferramenta que permitisse tal ação.
+Assim, foi desenvolvido um software livre que permite à construção de bases
+referenciais para recuperação de artigos científicos digitais por meio da disponibilização de
+links. O software foi denominado “Base de Dados Referencial de Artigos Científicos” (Badrac)
+e está hospedado no endereço eletrônico http://badrac.herokuapp.com. Tendo em vista sua
+característica de software livre, qualquer interessado pode fazer uso do código dessa ferramenta
+e construir sua própria base de dados referencial por intermédio do serviço GitHub desta
+pesquisa – github.com/badrac/ProjetoMestrado. Deve-se considerar, também, que o software
+disponibilizado está na versão 1.1.7 e necessita de mais testes e da contribuição dos usuários e
+dos pesquisadores da área da Ciência da Informação (CI) para ser continuamente melhorado.
+A justificativa acerca da realização desta pesquisa se insere no contexto de
+armazenamento e recuperação de informação digital. Em acréscimo a funcionalidade
+proporcionada pelas principais bases de dados referenciais – em que os usuários usufruem dos
+serviços de busca de artigos previamente cadastrados –, um software livre para a construção e
+gestão de bases de dados referenciais de artigos científicos proporciona a estudantes,
+professores e pesquisadores a possibilidade de criação de suas próprias bases de dados,
+auxiliando na disseminação e recuperação da informação científica, além da sua
+democratização.
+Sabe-se que esses elementos são importantes para a ciência, em especial à Ciência da
+
+Informação. Assim, é preciso que se busquem meios para evoluir nesses aspectos, de modo a
+contribuir com a melhoria de cada um deles. A análise de aceitação de uma ferramenta que tem
+a finalidade de auxiliar nesse processo de disseminação e recuperação da informação científica
+pode indicar se esse fim está sendo concretizado ou se o caminho a ser seguido para alcançá-lo
+deve ser corrigido ou completamente modificado.
+Desse modo, esta pesquisa surgiu da necessidade de se investigar até que ponto a
+comunidade acadêmica está interessada em uma ferramenta que favoreça a disseminação e
+recuperação da informação científica por meio da criação, por parte de qualquer interessado, de
+bases de dados referenciais especializadas.
+Por fim, o objetivo geral desta pesquisa foi avaliar a aceitação do software livre para
+criação e gestão de bases de dados referenciais de artigos científicos – Badrac. Esta pesquisa
+contou com o apoio do CNpQ e trabalhou com dois tópicos estudados pelos pesquisadores da
+Ciência da Informação, que são as bases de dados e o mecanismos de recuperação da
+informação em suporte digital. Nesta comunicação é apresentado os procedimentos
+metodológicos aplicados e os resultados obtidos.
+2 BASE DE DADOS REFERENCIAL DE ARTIGOS CIENTÍFICOS
+A Base de Dados Referencial de Artigos Científicos (Badrac), ferramenta analisada
+nesta pesquisa, é um software livre que foca na recuperação de artigos científicos digitais por
+meio da disponibilização de links , a depender do termo de busca a ser pesquisado, que remetem
+o usuário à outra fonte, externa, que contém os arquivos digitais disponíveis para download.
+Foi desenvolvido sob a plataforma Linux Ubuntu 12.4 LTS por meio da linguagem de
+programação Ruby on Rails versão 4.0.2 e sistema gerenciador de banco de dados PostgreSQL
+versão 9.1.13. Ele pode ser acessado em qualquer computador ou dispositivo móvel,
+independente do sistema operacional, desde que o faça por meio dos navegadores Google
+Chrome (v. 34.0 ou superior) ou Mozilla Firefox (v. 31.0 ou superior).
+Em acréscimo a funcionalidade proporcionada pelas principais bases de dados
+referenciais – em que os usuários usufruem dos serviços de busca de artigos previamente
+cadastrados –, um software livre para a construção e gestão de bases de dados referenciais de
+artigos científicos proporciona a estudantes, professores e pesquisadores a possibilidade de
+criação de suas próprias bases de dados, auxiliando na disseminação e recuperação da
+informação científica, além da sua democratização.
+A partir da utilização da Badrac, grupos de pesquisa podem criar bases de dados que
+referenciem apenas artigos de uma linha ou assunto específico ou, analogamente, um programa
+
+de pós-graduação, independentemente da sua área de atuação, pode subsidiar estudos e
+propostas ao referenciar a produção de artigos daquela área em particular. Ou seja, sendo um
+software livre, a Badrac pode ser manipulada tanto por uma universidade/faculdade quanto por
+um docente ou discente; é livre para que qualquer um que tenha interesse em criar uma base de
+dados referencial personalizada às suas necessidades usufrua de seus benefícios.
+A Badrac está dividida em duas interfaces: a primeira, disponível para qualquer pessoa,
+é formada pelo mecanismo de recuperação de informação ou de busca. Independente do termo
+de busca utilizado pelo usuário, a Badrac cruza essa informação com os atributos título, resumo,
+palavra-chave e autor. Além disso, para que o usuário possa tomar uma decisão sobre quais
+artigos são ou não relevantes, sempre que uma busca for realizada, o sistema irá retornar o
+título, os autores – nome e sobrenome –, o resumo, as palavras-chave e o respectivo link com o
+endereço de acesso dos artigos que satisfizerem o termo de busca imposto pelo usuário.
+Ademais, é valido ressaltar que o software livre Badrac disponibiliza três sessões informativas,
+acessíveis por qualquer pessoa – “Dicas de Pesquisa”, “Sobre o Projeto” e “Contatos –, e uma
+sessão acessível apenas por usuários cadastrados – o “Tutorial de Cadastro”.
+Já a segunda interface, disponível apenas para o administrador e gestor da base, é
+formada pelo menu administrativo, que tem como função principal o cadastro das referências
+dos artigos.
+3 TECHNOLOGY ACCEPTANCE MODEL – TAM
+A aceitação e a utilização de tecnologias da informação são temas explorados pela CI.
+Esses estudos surgem, dentre outros fatores, em função das novas tecnologias de disseminação
+da informação e de sua influência no comportamento da sociedade. Os sistemas de informação,
+em sua maioria, são desenvolvidos com as atenções voltadas às tecnologias empregadas e não
+ao uso estratégico ou à adequação aos usuários (STÉBILE, 2001). Para Silva, M. (2006, p. 24),
+é necessário “verificar não só os requisitos oferecidos pela tecnologia, mas, também, o
+comportamento de quem está do outro lado da tecnologia: os humanos”. É importante, então,
+destacar a necessidade de um olhar não apenas técnico para entender a aceitação e a utilização
+de tecnologias pelo usuário.
+Dentre os diversos modelos e teorias propostos para estudar a aceitação e a utilização de
+tecnologias, o Modelo de Aceitação de Tecnologia (Technology Acceptance Model – TAM) é
+considerado um dos mais influentes e utilizados por pesquisadores (LEE, KOZAR, LARSEN,
+2003; SILVA, A., 2005; SILVA, M., 2006).
+O TAM, proposto por Davis (1986), é uma adaptação do modelo da Teoria da Ação
+
+Racional (Theory of Reasoned Action – TRA), proposto por Fishbein e Ajzen (1979) e advindo
+da psicologia, que foi especificamente modificado para prever e explicar o comportamento de
+uso e aceitação de tecnologias da informação. O TAM surgiu a partir de um contrato entre a
+empresa International Business Machines (IBM), do Canadá, e a Universidade Massachusetts
+Institute of Technology, na década de 1980, com o propósito de renovar seus estudos de
+potencial de mercado e propiciar explicações sobre os determinantes do uso de tecnologias
+(DAVIS, BAGOZZI, WARSHAW, 1989; BRITO et al., 2014).
+Brito et al. (2014, p. 104) assevera que o TAM foi projetado “para compreender a relação
+causal entre variáveis externas de aceitação do usuário, e a utilização efetiva da tecnologia,
+buscando entender o comportamento desses usuários através do conhecimento da utilidade e
+facilidade de utilização percebida por eles”. Para criar o TAM (Figura 1), Davis (1986)
+centralizou seu estudo em dois construtos que, segundo o autor, representam as percepções que
+influenciam o usuário no uso de um determinado sistema ou tecnologia. De acordo com Davis
+(1986), as pessoas tendem a usar, ou não usar, uma tecnologia baseada na possibilidade de
+melhoria de desempenho. Não obstante, mesmo que o uso de determinada tecnologia seja
+considerado útil pelo usuário, sua devida utilização pode não ser efetivada caso seu uso seja
+considerado complicado e os benefícios dessa nova tecnologia não compensem o esforço da
+curva do aprendizado.
+Davis, Bagozzi e Warshaw (1989) e o próprio Davis (1989) definem os dois principais
+construtos do modelo TAM da seguinte forma:
+•
+
+Utilidade Percebida – o grau em que uma pessoa acredita que o uso de um sistema
+particular pode melhorar o seu desempenho;
+
+•
+
+Facilidade de Uso Percebida – o grau em que uma pessoa acredita que o uso de um
+sistema é livre de esforço físico e mental.
+Figura 1 – Technology Acceptance Model – TAM.
+
+Fonte: DAVIS, 1986.
+
+Com base na Figura 1 representativa do TAM, percebe-se que o uso de um sistema ou
+tecnologia é determinada pela intenção de uso do indivíduo – construto Intenção de Uso.
+Segundo Bobsin (2007), ficou evidente no trabalho de Davis (1989) que o uso de tecnologias
+
+depende, de certa forma, das intenções das pessoas. Estas, por sua vez, são determinadas
+conjuntamente pela atitude com relação ao uso do sistema e pela Utilidade Percebida. A relação
+entre UP e Intenção de Uso (IU) fundamenta-se na ideia de que as pessoas formam intenções
+baseadas em comportamentos que elas acreditam aumentar e melhorar a performance no
+trabalho. Já a relação entre atitude e IU “sugere que as pessoas formam intenções de realizar
+ações para as quais elas têm um sentimento positivo” (BRITO et al., 2014, p. 106).
+Pode-se observar ainda, a partir da Figura 1, que a atitude de um indivíduo com relação
+ao uso de um sistema é determinada simultaneamente pela Utilidade Percebida e Facilidade de
+Uso Percebida (FUP), formando assim, o componente atitudinal deste modelo. Ademais,
+pressupõe-se que o esforço poupado devido a melhoras na facilidade de uso pode ser aplicado
+em outras tarefas, aumentando, consequentemente, a produtividade no ambiente de trabalho.
+Portanto, da mesma forma que o aumento da facilidade de uso contribui diretamente para um
+melhor desempenho, a FUP tem efeito direto sobre a utilidade percebida (DAVIS, 1989).
+Com relação às Variáveis Externas (VE), Davis (1986) assevera que elas servem de elo
+entre as diferenças individuais que afetam o comportamento, as atitudes e as intenções
+representadas pelo TAM. Pode-se considerar, então, que elas formam a intenção comportamental
+de usar ou não determinada tecnologia. Em outras palavras, pode-se afirmar que as “variáveis
+externas proporcionam uma melhor compreensão do que influencia a utilidade percebida e
+percepção de facilidade de uso” (BRITO et al., 2014, p. 106).
+Para Saleh (2004), o TAM é comportamental e, por isso, só pode referir-se às questões
+diretamente relacionadas com o usuário e suas percepções sobre o uso de um determinado
+sistema ou tecnologia. Dessa forma, “os construtos devem ser desenvolvidos de modo a captar
+opiniões pessoais e tratar suposições a respeito de terceiros” (SALEH, 2004). Nesse caso, focase nas interpretações que a pessoa faz da realidade e não na realidade em si.
+A percepção atual do indivíduo, segundo Davis (1986), é decisiva para a percepção
+futura. Dessa forma, o TAM não leva em consideração variações temporais, sendo seus
+construtos medidos uma única vez, refletindo as percepções naquele período de tempo
+específico. Para Davis (1986), se quaisquer outras condições forem mantidas iguais, um sistema
+com maior Utilidade Percebida e/ou Facilidade de Uso Percebida tende a ser mais bem aceito
+pelos usuários.
+4 METODOLOGIA
+Quanto à sua finalidade, a presente pesquisa caracteriza-se como aplicada, pois objetiva
+a geração de conhecimento prático, dirigido à solução de problemas específicos. De acordo com
+
+Gil (2009), pesquisas dessa natureza possuem “como característica fundamental o interesse na
+aplicação, utilização e consequências práticas dos conhecimentos”. Já quanto aos objetivos, esta
+pesquisa configura-se como sendo um estudo descritivo, pois tem o objetivo de “dizer como é e
+como se manifesta determinado fenômeno” (SAMPIERI; COLLADO; LUCIO, 2006). Quanto
+à natureza ou abordagem esta pesquisa é caracterizada como quantitativa, pois o modelo TAM,
+que norteou este estudo de aceitação de tecnologia é essencialmente quantitativo.
+4.1 POPULAÇÃO E AMOSTRA DA PESQUISA
+Segundo Marconi e Lakatos (2002), a população da pesquisa é definida como sendo um
+conjunto de indivíduos que apresentam pelo menos uma característica em comum. Dessa forma,
+a população desta pesquisa foi formada pelos discentes ativos que cursaram o sétimo período do
+Curso de Biblioteconomia e o quinto período do Curso de Arquivologia no segundo semestre do
+ano de 2014, pelos discentes ativos do Curso de Mestrado do Programa de Pós-Graduação em
+Ciência da Informação (PPGCI) e pelos docentes ativos do Departamento de Ciência da
+Informação (DCI), além daqueles vinculados ao PPGCI da UFPB.
+Segundo dados da Superintendência de Tecnologia da Informação (STI) da UFPB, no
+início do segundo semestre do ano de 2014 o sétimo período em Biblioteconomia possuía 29
+discentes e o quinto período de Arquivologia possuía 39. Já a pós-graduação era composta por
+47 discentes, sendo 22 ingressantes na turma do ano de 2013 e 25 na turma de 2014. A
+quantidade de docentes do Departamento de Ciência da Informação somado aos docentes de
+outros departamentos que são vinculados ao DCI é de 42. Desse total de indivíduos foram
+excluídos, além dos autores dessa pesquisa, 5 discentes de biblioteconomia e 4 de arquivologia,
+uma vez que esses alunos não participaram das aulas, sendo, assim, reprovados. Desse modo, a
+população desta pesquisa é constituída por 146 indivíduos, entre discentes de graduação, pósgraduação e docentes.
+Para se “[...] obter um juízo sobre o total (universo), mediante a compilação e exame de
+apenas uma parte, a amostra, selecionada por procedimentos científicos” (MARCONI;
+LAKATOS, 2002, p. 31), esta pesquisa utilizou o método de amostragem classificado como
+“por conveniência” (VERGARA, 2003). Esse tipo de amostra é não probabilístico e sua seleção
+é direcionada pela facilidade de acesso e não por meio da estatística. Ademais, para uma
+amostra ser considerada válida deve-se calcular o número mínimo de indivíduos que devem
+constituí-la. Desta forma, para o tamanho total da população e uma margem de erro de 6%, um
+nível de confiança de 95% e uma heterogeneidade de 50%, a amostra considerada válida deve
+ser constituída de, no mínimo, 95 indivíduos.
+
+4.2 COLETA DE DADOS
+Para o início da coleta de dados, houve a necessidade de criação de três bases de dados
+referenciais a partir do software livre Badrac, para, em seguida, serem cadastradas as referências
+dos artigos pelos discentes do sétimo período em Biblioteconomia e do quinto período em
+Arquivologia, no início do segundo semestre do ano de 2014. Esse cadastro foi realizado sob a
+supervisão destes autores. A primeira das três bases foi povoada com referências de artigos de
+periódicos em Turismo, a segunda em Filosofia e a terceira em Geociências. Essa etapa durou
+quatro semanas e se fundamentou na inserção e gerência de dados referenciais nessas três bases.
+Ao total foram cadastradas 2830 referências a artigos dessas três áreas.
+Esta pesquisa utilizou como instrumento de coleta de dados um questionário adaptado e
+baseado nos estudos de Davis (1986), Davis (1989), Venkatesh (2003), Brito et al. (2014), entre
+outros, por meio do qual foi possível identificar a aceitação/rejeição dos participantes desta
+pesquisa em relação ao uso do software livre Base de Dados Referencial de Artigos Científicos
+(Badrac).
+Assim, de posse de todas as informações consideradas relevantes, deu-se início a fase de
+formulação das questões. Durante a fase de pré-teste, todas as sugestões consideradas relevantes
+foram acatadas e várias mudanças foram incorporadas. Nessa fase, resolveu-se incorporar ao
+questionário questões antonímias, ou seja, que contradizem ou são opostas a uma ou mais
+questões. Dessa forma, em uma etapa posterior a coleta de dados, pode-se descartar as respostas
+daqueles respondentes que ou não tinham conhecimento suficiente ou responderam as questões
+de forma aleatória, aumentando, assim, a confiabilidade das respostas e, por consequência, dos
+resultados desta pesquisa.
+O questionário final foi dividido em cinco partes: a primeira parte corresponde ao
+construto Utilidade Percebida de um software livre qualquer – e não especificamente ao
+software livre Badrac. As partes dois, três, quarto e cinco se referem especificamente ao
+software livre Badrac e correspondem, respectivamente, aos construtos Utilidade Percebida
+(UP), Facilidade de Uso Percebida (FUP), Variáveis Externas (VE) e Intenção de Uso (IU).
+O questionário final possui 29 questões e foi desenvolvido com o auxílio da ferramenta
+de criação de formulários do Google e disponibilizado a todos os indivíduos que constituíram a
+população desta pesquisa.
+Esse questionário utilizou a escala de Likert com o grau de concordância crescendo
+conforme maior for o número de pontos assinalados. Assim, cada respondente teve de
+especificar o grau de concordância ou discordância de cada questão afirmativa desse
+instrumento de coleta de dados. Essa pesquisa empregou cinco graus de afirmação na escala
+
+Likert: (1) Discordo Totalmente, (2) Discordo Parcialmente, (3) Nem Concordo Nem Discordo,
+(4) Concordo Parcialmente e (5) Concordo Totalmente.
+5 ANÁLISE DOS RESULTADOS
+Em concordância com a teoria investigada e a aplicação de técnicas estatísticas, esta
+Seção visou a analisar os dados coletados e evidenciar interpretações e constatações que
+auxiliassem o alcance do objetivo geral desta pesquisa.
+5.1 TRATAMENTO DOS DADOS COLETADOS
+O questionário ficou aberto a respostas por 30 dias consecutivos e alcançou 97
+indivíduos, o que garante a validade diante dos parâmetros estabelecidos (Subseção 4.1). A
+primeira análise realizada, que levou em consideração os dados de todas as respostas, sem
+divisão ou distinção de construtos, foi a análise de frequência, na qual verificou-se que 21
+respostas estavam em branco, sem valor estabelecido. Apesar desse número representar apenas
+0.746% do total de 2.813 itens respondidos, optou-se por substituir as respostas em branco pela
+média dos valores das respostas da questão, que segundo Freitas e Rodrigues (2005) é “o
+procedimento mais adequado para o tratamento de situações em que existe a ausência de
+valores”.
+Em seguida, foi realizada uma análise comparando os valores assumidos por cada
+resposta de uma questão com sua respectiva questão antonímia, descartando, assim, como
+explicado na Subseção 4.2, aquelas que feriram com a lógica do questionário. Ao todo, as
+respostas de oito indivíduos tiveram de ser descartadas.
+Consequentemente, houve a necessidade de recalcular a validade da amostra, uma vez
+que, depois desse descarte, o total de indivíduos respondentes passou a ser de 89 (97 total geral
+menos 8 descartes). Como o número de 89 respondentes é menor que o de 95 mínimos para
+uma amostra dentro dos parâmetros estabelecidos na Subseção 4.1, foi necessário aumentar para
+7% a margem de erro, diminuindo, assim, o número mínimo de indivíduos respondentes para
+84.
+Com a realização desse descarte, a função das questões antonímias foi cumprida, motivo
+pelo qual tais questões foram removidas e passaram a ser desconsideradas na análise do
+questionário.
+Por fim, apesar desse aumento de 1% no erro amostral e dessa diminuição no número de
+questões de 29 para 21, que tendem a diminuir a confiabilidade do instrumento de pesquisa
+(HAIR et al., 2005), adiante, na Subseção 5.2, comprovou-se o aumento da confiabilidade
+
+devido ao descarte dos oito indivíduos respondentes e da remoção das questões antonímias.
+5.2 ANÁLISE DE CONFIABILIDADE
+Como forma de estimar a confiabilidade do instrumento de pesquisa, foi utilizado o
+coeficiente alfa de Cronbach (Quadro 1). Este, avalia o grau de consistência entre múltiplas
+medidas de uma variável (HAIR et al., 2005). Em geral, considera-se satisfatório um
+instrumento de pesquisa que obtenha alfa superior ou igual a 0.700 (HAIR et al., 2005).
+Quadro 1 – Comparação de confiabilidade por meio do Coeficiente Alfa de Cronbach.
+Questionário
+Com 29 Questões
+Com 21 Questões
+
+Alfa de Cronbach
+0.605
+0.867
+
+Fonte: Elaborado pelos autores.
+
+Como pode ser observado no Quadro 1, o coeficiente alfa de Cronbach foi calculado
+para medir a confiabilidade do instrumento de pesquisa antes, com 29 questões, e depois, com
+21 questões, do tratamento dos dados coletados. Os números apresentados como resultado desse
+cálculo reforçam a importância da incorporação das questões antonímias ao questionário, que
+foi apontada no pré-teste. Ademais, é preciso ressaltar que, além de ultrapassar o valor padrão
+alfa de 0.700, o coeficiente apresentado é aproximado àqueles alcançados em pesquisa
+anteriores, como as dos autores Davis (1986), Davis, Bagozzi e Warshaw (1989), Saleh (2004),
+Bobsin (2007) e Brito et al. (2014), o que reforça sua fidedignidade.
+5.3 ANÁLISE E DISCUSSÃO DOS CONSTRUTOS
+Esta Subseção analisou, por meio das medidas estatísticas média e desvio-padrão (d.p.),
+cada um dos cinco construtos adaptados do TAM para esta pesquisa. A análise dos resultados do
+primeiro construto indicam que os respondentes acreditam que a criação de bases de dados
+referenciais por meio de software livre seja importante para comunidade científica e que
+contribua para a disseminação de informação. Isso é evidenciado pela alta média (4.868) e
+baixo d.p. (0.371), apontando que os respondentes julgam como útil a existência de software
+com essas características.
+Isso, inclusive, responde à indagação do Seção 2 que questionava se a não existência de
+um software livre que permite a criação e gerência de múltiplas bases de dados referencias se
+dava pela não aceitação ou mera falta de oportunidade de conhecer e trabalhar com um software
+com essas características. Diante dessa constatação de que os respondentes julgam como útil e
+importante a existência de software com essas características – geral – resta investigar o grau
+em que uma pessoa acredita que usar a Badrac – específico – irá melhorar seu desempenho.
+O fato é que os valores altos da média (4.726) e baixos do desvio-padrão (0.517) do
+
+construto Utilidade Percebida corroboram com a análise anterior, certificando que os
+respondentes também consideram importante a utilização do software livre Badrac. Ademais,
+apesar de o desvio-padrão deste construto ser um pouco maior que o do construto anterior,
+mesmo considerando um d.p. para menos, ou seja, subtraindo da média o valor do desviopadrão, nenhuma das questões da UP da Badrac atingem um valor de média inferior a 4. Vale
+ressaltar, também, que os respondentes concordam que a Badrac pode ser útil e contribuir de
+forma positiva para a disseminação de informação científica.
+De forma geral, o construto FUP obteve valores de média (4.084) e desvio-padrão
+(1.026) próximos, porém menos intensos do que os obtidos pela UP, o que condiz com estudos
+anteriores (SILVA, A., 2005; BRITO et al., 2014). Não obstante, esses valores de média e
+desvio-padrão, embora não tão acentuados quanto nos dois primeiros construtos, reforçam a
+facilidade de uso do sistema de busca e do cadastro de referências do software livre Badrac.
+Como evidenciado na Seção 3, a atitude de um indivíduo com relação ao uso de um
+software é determinada simultaneamente pela Utilidade Percebida e Facilidade de Uso
+Percebida. Portanto, com base nas médias e desvios-padrão desses dois construtos, conclui-se
+que o software livre Badrac foi bem aceito e que os respondentes tendem a ter uma atitude
+positiva em relação ao uso desse software. Contudo, deve-se levar em consideração a análise
+dos dois construtos restantes para sustentar tal afirmação.
+Os respondentes perceberam a interferência que as Variáveis Externas aplicam ao
+software livre Badrac. Com base nas altas médias e nos desvios-padrão relativamente baixos, os
+respondentes denotaram concordância em relação aos bons e bem definidos recursos de
+navegação, à interface agradável e à facilidade de acesso ao software.
+Ficou evidente que os respondentes perceberam a Intenção de Uso do software livre
+Badrac, posto que, para todas as variáveis, a média teve resultado acima de 4.000 e o desviopadrão não ultrapassou o valor de 1.100 em nenhuma das três questões, apresentando, assim,
+concordância em relação a todas as afirmações.
+O que dá mais destaque a esses valores é o fato de Davis (1986) afirmar que a Intenção
+de Uso é o principal determinante do comportamento de uso de um sistema e que se a Utilidade
+e a Facilidade de Uso Percebida forem positivas, o indivíduo desenvolverá Intenção de Uso e,
+por conseguinte, fará uso da tecnologia desenvolvida.
+Portanto, de acordo com a análise dos valores de média e desvio-padrão das 21 questões
+ficou constatado que o software livre Badrac foi bem aceito e tende a ser utilizado pela
+comunidade estudada.
+
+5.4 ANÁLISE DE CORRELAÇÃO DOS CONSTRUTOS
+O coeficiente de correlação de Pearson representa o grau de dependência linear entre
+duas variáveis. Quanto mais próximo estiver dos valores 1 ou -1, mais forte é a associação
+linear entre as duas variáveis. A correlação de Pearson referente aos cinco construtos desta
+pesquisa é ilustrada na Tabela 1.
+Tabela 1 – Correlação de Pearson dos construtos.
+Correlações
+
+Utilidade Percebida
+(Geral)
+Utilidade Percebida
+Facilidade de Uso
+Percebida
+Variáveis Externas
+
+Intenção de Uso
+
+C. de Pearson
+
+Utilidade
+Percebida (Geral)
+
+Utilidade
+Percebida
+
+Facilidade de
+Uso Percebida
+
+Variáveis
+Externas
+
+Intenção
+de Uso
+
+1
+
+.398**
+
+0.111
+
+0.144
+
+0.175
+
+Sig. (2 extrem.)
+
+0
+
+0.302
+
+0.18
+
+0.101
+
+1
+
+.277**
+
+.367**
+
+.466**
+
+0.009
+
+0
+
+0
+
+1
+
+.700**
+
+.249*
+
+0
+
+0.018
+
+1
+
+.400**
+
+C. de Pearson
+
+.398**
+
+Sig. (2 extrem.)
+
+0
+
+C. de Pearson
+
+0.111
+
+.277**
+
+Sig. (2 extrem.)
+
+0.302
+
+0.009
+
+C. de Pearson
+
+0.144
+
+.367**
+
+.700**
+
+Sig. (2 extrem.)
+
+0.18
+
+0
+
+0
+
+C. de Pearson
+
+0.175
+
+.466**
+
+.249*
+
+.400**
+
+Sig. (2 extrem.)
+
+0.101
+
+0
+
+0.018
+
+0
+
+0
+1
+
+** A correlação é significativa no nível 0,01 (2 extremidades).
+* A correlação é significativa no nível 0,05 (2 extremidades).
+
+Fonte: Elaborada pelos autores.
+
+De acordo com os resultados da Tabela 1, o construto que obteve os menores
+coeficientes de correlação foi o Utilidade Percebida Geral. Isso decorre do fato de esse
+construto e suas questões se referirem a um software livre qualquer e não especificamente ao
+software livre Badrac.
+Já os outros quatro construtos, que se referem especificamente ao software livre Badrac,
+obtiveram correlações positivas e significantes. Os resultados da Tabela 1 mostram que há uma
+relação direta entre a Utilidade Percebida e a Facilidade de Uso Percebida com a Intenção de
+Uso, o que corrobora com o apresentado na Seção anterior e com outros estudos anteriores,
+incluindo o de Davis (1986). Vale ressaltar, também, que, para os respondentes, o construto UP
+teve uma maior influência sobre a IU do que o construto FUP, característica também encontrada
+nos estudos de Davis (1986), Davis e Venkatesh (1996), Venkatesh e Morris (2000), Bobsin
+(2007) e de outros pesquisadores. Já em relação às Variáveis Externas, o construto Facilidade de
+Uso Percebida exerce uma influência positiva e bastante significativa, caracterizada com uma
+forte correlação.
+Por fim, assim como verificado na pesquisa da autora Bobsin (2007), houve uma fraca
+correlação entre os construtos Utilidade Percebida e Facilidade de Uso Percebida, o que diverge
+
+da grande maioria dos estudos já realizados. Legris et al. (2003), por exemplo, afirmaram que
+dos 28 estudos por eles analisados apenas cinco não apresentaram uma correlação positiva entre
+essas duas variáveis.
+5.5 ANÁLISE DE REGRESSÃO LINEAR
+O coeficiente de correlação de Pearson representa o grau de dependência linear entre
+duas variáveis. Quanto mais próximo estiver dos valores 1 ou -1, mais forte é a associação
+linear entre as duas variáveis. A correlação de Pearson referente aos cinco construtos desta
+pesquisa é ilustrada na Tabela 1.
+A análise de correlações não explica as relações simultâneas entre as variáveis.
+Enquanto a correlação (Subseção 5.4) quantificou a força da relação dos construtos, a análise de
+regressão linear, realizada nesta Subseção, explicitou a forma dessas relações.
+A regressão linear estima valores de uma variável com base em valores conhecidos de
+outras variáveis. Os valores x são preditos com base em valores dados ou conhecidos de y ou y
+e z, por exemplo. A variável x, nesse caso, é chamada de variável dependente e as variáveis y e
+z de variáveis explicativas. Em outras palavras, a análise de regressão linear estuda como uma
+variável x é afetada por uma variável y ou um conjunto de variáveis y, z e w.
+Vários outros estudos que fazem uso do modelo TAM e suas extensões utilizaram a
+regressão linear para estudar os relacionamentos entre os construtos (DAVIS, 1986; BOBSIN,
+2007; SILVA, A., 2005), como por exemplo, a influência da Utilidade Percebida na aceitação de
+determinado sistema ou os efeitos diretos e indiretos entre Treinamento e Utilidade Percebida e
+Facilidade de Uso Percebida. Portanto, para enriquecer o que foi evidenciado na Subseção 5.3,
+que certificou que o software livre Badrac foi bem aceito e tende a ser utilizado pela
+comunidade acadêmica da Ciência da Informação da Universidade Federal da Paraíba, e na
+Subseção 5.4, que comprovou as correlações positivas e significantes dos construtos, realizou-se
+uma análise de regressão linear a fim de investigar quatro hipóteses. Estas são caracterizadas
+como hipóteses nulas, que indicam a não relevância dos parâmetros, ou seja, Y independe de X.
+São elas:
+•
+
+H0 – Não houve influência das Variáveis Externas na Utilidade Percebida ou na
+Facilidade de Uso Percebida;
+
+•
+
+H1 – A Facilidade de Uso Percebida não exerceu influência direta sobre a Utilidade
+Percebida;
+
+•
+
+H2 – A Intenção de Uso não foi influenciada pela Utilidade Percebida, Facilidade de
+Uso Percebida ou Variáveis Externas;
+
+H3 – A Intenção de Uso não foi influenciada pelo conjunto de construtos Utilidade
+
+•
+
+Percebida, Facilidade de Uso Percebida e Variáveis Externas.
+Os dados obtidos na primeira regressão (Tabela 2) confirmam os resultados da Subseção
+anterior, que indicaram uma forte correlação (R = .700) entre as Variáveis Externas e a
+Facilidade de Uso Percebida e uma correlação moderada entre as VE e a Utilidade Percebida (R
+= .367). A análise do coeficiente de determinação (R2 ajustado), que mede a proporção da
+variável dependente que é explicada pelas variáveis independentes (HAIR et al., 2005), indicou
+que as VE correspondem a 48.4% da variação da FUP (R2 ajustado = 0.484). Isso significa que
+aproximadamente metade das variações desse construto são explicadas pelas Variáveis
+Externas. O mesmo não ocorre com a relação VE e UP, no qual (R2 ajustado = 0.134) 86.6% das
+variações são explicadas por outros fatores.
+Tabela 2 – Regressões de VE em UP e FUP – Resumo.
+Resumo do modelo
+Erro padrão da
+estimativa
+1
+.367a 0.134
+0.124
+0.3515
+2
+.700b 0.49
+0.484
+0.56443
+a Preditores: (Constante), M_VariaveisExternas
+b Preditores: (Constante), M_VariaveisExternas
+Modelo
+
+R
+
+R2
+
+R2 ajustado
+
+Fonte: Elaborada pelos autores.
+
+Ademais, os valores de Sig. (Tabela 3) menores que o α de significância (0.05) também
+sugerem a rejeição da hipótese nula H0, o que comprova que as Variáveis Externas influenciam,
+sim, os construtos Utilidade Percebida e Facilidade de Uso Percebida, embora a influência
+maior seja do construto FUP.
+Tabela 3 – Regressões de VE em UP e FUP – Coeficientes.
+Coeficientes a,b
+Coeficientes não
+Coeficientes
+padronizados
+padronizados
+Erro
+B
+Beta
+Padrão
+4.08
+0.18
+
+t
+
+Sig.
+
+22.726
+
+0
+
+M_VariaveisExternas
+
+0.156
+
+0.043
+
+0.367
+
+3.674
+
+0
+
+(Constante)
+
+1.505
+
+0.288
+
+5.22
+
+0
+
+M_VariaveisExternas
+
+0.624
+
+0.068
+
+0.7
+
+9.146
+
+0
+
+Modelo
+1a
+2b
+
+(Constante)
+
+a Variável Dependente: M_UtilidadePercebida
+b Variável Dependente: M_FacilidadeUsoPercebida
+
+Fonte: Elaborada pelos autores.
+
+A segunda regressão (Tabelas 4 e 5) mostrou que pouco da variação do construto
+Utilidade Percebida (R2 ajustado = 0.066) foi explicada pela Facilidade de Uso Percebida. De
+fato, 93.4% da variação foi explicada por outros fatores quaisquer. O coeficiente de regressão
+
+linear (B = 4.185) estabeleceu que quando o valor da Facilidade de Uso Percebida fosse 0.000,
+o valor da Utilidade Percebida seria 4.185 e que cada incremento de 1.000 na FUP aumentaria
+apenas 0.132 a UP. Isso reitera a fraca influência da FUP sobre a UP e apoia a hipótese nula H1
+que assevera que a Facilidade de Uso Percebida não exerceu influência sobre a Utilidade
+Percebida.
+Tabela 4 – Regressões de FUP em UP – Resumo.
+Resumo do modelo
+Erro padrão da
+estimativa
+1
+.277a 0.077
+0.066
+0.36299
+a Preditores: (Constante), M_FacilidadeUsoPercebida
+Modelo
+
+R
+
+R2
+
+R2 ajustado
+
+Fonte: Elaborada pelos autores.
+Tabela 5 – Regressões de FUP em UP – Coeficientes.
+Coeficientesa
+Coeficientes não
+padronizados
+Modelo
+Erro
+B
+Padrão
+1
+(Constante)
+4.185
+0.205
+M_FacilidadeUsoPercebida
+0.132
+0.049
+a Variável Dependente: M_UtilidadePercebida
+
+Coeficientes
+padronizados
+
+t
+
+Sig.
+
+20.441
+2.691
+
+0
+0.009
+
+Beta
+0.277
+
+Fonte: Elaborada pelos autores.
+
+A terceira regressão (Tabelas 6 e 7) possui quatro modelos distintos. Os modelos 1, 2 e 3
+fazem referência à hipótese H2 e o modelo 4 à hipótese H3. Ambas as hipóteses averiguam uma
+possível influência dos construtos UP, FUP e VE sobre o construto Intenção de Uso. O que as
+diferencia é o fato da hipótese H2 verificar tal influência de forma isolada, enquanto a H3 o faz
+de forma conjunta.
+Essas duas hipóteses são importantes para o entendimento e avaliação do grau de
+aceitação, no caso deste estudo, do software livre Badrac, pois os estudos de Davis (1986),
+Davis e Venkatesh (1996), Venkatesh e Morris (2000), Bobsin (2007), entre outros, apontam a
+Intenção de Uso como fator determinante na aceitação de um sistema. Dessa forma, entender os
+fatores que influenciam a IU foi considerado de grande valia.
+Tabela 6 – Regressões de UP, FUC e VE em IU – Resumo.
+Resumo do modelo
+Modelo
+
+R
+
+R2
+
+R2 ajustado
+
+1
+
+.466a
+
+0.217
+
+0.208
+
+Erro padrão da
+estimativa
+0.84338
+
+2
+
+.249b
+
+0.062
+
+0.051
+
+0.92316
+
+3
+
+.400c
+
+0.16
+
+0.15
+
+0.87374
+
+4
+
+.530d
+
+0.281
+
+0.255
+
+0.81791
+
+a Preditores: (Constante), M_UtilidadePercebida
+b Preditores: (Constante), M_FacilidadeUsoPercebida
+c Preditores: (Constante), M_VariaveisExternas
+
+a Preditores: (Constante), M_VariaveisExternas,
+M_UtilidadePercebida, M_FacilidadeUsoPercebida
+
+Fonte: Elaborada pelos autores.
+Tabela 7 – Regressões de UP, FUC e VE em IU – Coeficientes.
+Coeficientes a
+Coeficientes não
+padronizados
+Erro
+B
+Padrão
+-1.45
+1.135
+
+Modelo
+1
+
+(Constante)
+M_UtilidadePercebida
+
+2
+3
+4
+
+1.176
+
+0.239
+
+(Constante)
+
+2.88
+
+0.521
+
+M_FacilidadeUsoPercebida
+
+0.301
+
+0.125
+
+(Constante)
+
+2.332
+
+0.446
+
+M_VariaveisExternas
+
+0.43
+
+0.106
+
+(Constante)
+
+-1.351
+
+1.119
+
+M_UtilidadePercebida
+
+0.936
+
+0.25
+
+M_FacilidadeUsoPercebida
+
+-0.09
+
+M_VariaveisExternas
+
+0.34
+
+Coeficientes
+padronizados
+
+t
+
+Sig.
+
+-1.278
+
+0.205
+
+4.915
+
+0
+
+Beta
+0.466
+
+5.532
+
+0
+
+2.402
+
+0.018
+
+5.225
+
+0
+
+4.07
+
+0
+
+-1.208
+
+0.23
+
+0.371
+
+3.75
+
+0
+
+0.155
+
+-0.075
+
+-0.581
+
+0.563
+
+0.143
+
+0.316
+
+2.377
+
+0.02
+
+0.249
+0.4
+
+a Variável Dependente: M_IntençãoUso
+
+Fonte: Elaborada pelos autores.
+
+A análise isolada dos construtos mostrou que a Utilidade Percebida foi o construto que
+exerceu maior influência sobre a Intenção de Uso. Isso ficou evidenciado pelos valores de R2
+ajustado (Tabela 6). Note que cerca de 20%, 5% e 15% da variação desse construto foi
+explicado pela UP, FUP e VE, respectivamente. Percebe-se, também, que de forma associada,
+esses construtos exerceram uma influência superior, 25.5%. Esses valores corroboram com os
+resultados da Subseção 6.4.
+Ademais, como base nos valores dos coeficientes de regressão da Tabela 7, observou-se
+que a UP e o conjunto de construtos (UP + FUP + VE) influenciaram de maneira significativa o
+construto Intenção de Uso.
+Finalmente, a Tabela 8 foi calculada com base nos valores do coeficiente de regressão
+(B) da Tabela 7. Os valores de B para as constantes são chamados de coeficientes lineares e
+indicam o valor da variável dependente quando as outras variáveis forem zero. Já os valores de
+B para os construtos, chamados de coeficiente angular, indicam o valor do incremento para cada
+salto de 1.000 no valor da constante. Assim, a Tabela 8 exibe os possíveis valores da Intenção
+de Uso a cada incremento de 1.000 dos construtos Utilidade Percebida, Facilidade de Uso
+Percebida, Variáveis Externas e do conjunto desses construtos.
+
+Tabela 8 – Predições dos valores da IU baseada nos construtos UP, FUP e VE.
+Predição da IU baseada nos
+valores da UP
+
+Predição da IU baseada nos
+valores da FUP
+
+Predição da IU baseada nos
+valores da VE
+
+Predição da IU baseada nos
+valores da UP+FUP+VE
+
+0
+
+-1.45
+
+0
+
+2.88
+
+0
+
+2.332
+
+0
+
+-1.351
+
+1
+
+-0.274
+
+1
+
+3.181
+
+1
+
+2.762
+
+1
+
+-0.165
+
+2
+
+0.902
+
+2
+
+3.482
+
+2
+
+3.192
+
+2
+
+1.021
+
+3
+
+2.078
+
+3
+
+3.783
+
+3
+
+3.622
+
+3
+
+2.207
+
+4
+
+3.254
+
+4
+
+4.084
+
+4
+
+4.052
+
+4
+
+3.393
+
+5
+
+4.43
+
+5
+
+4.385
+
+5
+
+4.482
+
+5
+
+4.579
+
+Fonte: Elaborada pelos autores.
+
+Com base nos valores da Tabela 8, observe que quando a Utilidade Percebida e o
+conjunto dos construtos era zero o valor da Intenção de Uso era negativo. Além disso, cada
+incremento de 1.000 no valor desses construtos acarretava em um aumento expressivo no
+construto IU. O mesmo não ocorreu com tamanha intensidade quando se analisou a influência
+da FUP e VE sobre a Intenção de Uso.
+Portanto, ficou evidenciado que o construto Utilidade Percebida e o conjunto de
+construtos – Utilidade Percebida, Facilidade de Uso Percebida e Variáveis Externas –
+influenciaram de maneira significativa a Intenção de Uso do software livre Badrac. Dessa
+forma, a hipótese H2 foi rejeitada, principalmente por conta da influência do construto Utilidade
+Percebida sobre a Intenção de Uso. Essas evidências corroboram com os resultados das duas
+Subseções anteriores e com vários outros estudos, como os de Davis (1986), Davis e Venkatesh
+(1996), Venkatesh e Morris (2000), Bobsin (2007), entre outros. Outrossim, a hipótese H3
+também foi rejeitada.
+5 CONSIDERAÇÕES FINAIS
+Como evidenciado na contextualização, os periódicos científicos, quando armazenados
+em bases de dados, ou seja, digitais, auxiliam a disseminação e recuperação da informação
+científica. Sabe-se que, do ponto de vista técnico, a partir do momento que um software se
+encontra disponível e realiza as funções a que foi desenvolvido, este é considerado pronto,
+embora não findo, uma vez que, durante seu ciclo de vida, ele passa por atualizações, correções,
+melhorias etc. Do ponto de vista da CI, no entanto, é preciso ir além e buscar compreender a
+aceitação e utilização de um software considerando seu uso e sua adequação aos usuários
+(SARACEVIC, 1996; STÉBILE, 2001; SALEH, 2004; SILVA, M., 2006).
+Assim, a partir do desenvolvimento do software livre Badrac e da utilização do Modelo
+de Aceitação de Tecnologia (Technology Acceptance Model – TAM), foi possível concluir que
+esse software, apesar de necessitar das correções e melhorias intrínsecas a esse tipo de
+ferramenta, obteve um relevante grau de aceitação pela amostra pesquisada.
+
+A constatação do relevante grau de aceitação da Badrac na comunidade pesquisada
+revela que a disponibilização de um software com as características da Badrac − ou seja, livre
+para que qualquer um que tenha interesse possa criar sua própria base de dados referencial e
+usufruir dos benefícios que essa personalização possa lhe gerar − pode, de fato, auxiliar no
+processo de disseminação e recuperação da informação científica, podendo significar, inclusive,
+uma forma de democratizá-la. Ressalta-se, porém, que apesar de esta pesquisa ter sido
+direcionada para acadêmicos da área da Ciência da Informação, a ideia que fundamentou a
+criação do software utilizado neste estudo pode contribuir para o desenvolvimento da Ciência
+em qualquer área do conhecimento, tendo em vista a otimização dos resultados que uma busca
+realizada em uma base de dados especializada pode proporcionar.
+Uma limitação encontrada inicialmente para a realização da coleta de dados da pesquisa
+foi a aplicação do modelo TAM de aceitação tecnológica em uma ferramenta de software
+recém-desenvolvida e desconhecida por parte dos respondentes até o ato do preenchimento do
+questionário. Considerando que esse modelo objetiva medir um grau de aceitação de uma
+ferramenta, é indispensável que o público-alvo da pesquisa tenha um certo conhecimento sobre
+a ferramenta avaliada. Assim, durante a aplicação do questionário foi necessário, em muitos
+casos, um acompanhamento presencial dos respondentes para que estes pudessem dirimir
+quaisquer dúvidas sobre o software que surgissem ao conhecê-lo e manuseá-lo, tanto no que se
+refere ao seu mecanismo de busca quanto à sua área administrativa acessando login.
+Finalmente, reitera-se que a contribuição principal deste trabalho se caracteriza pela
+constatação de que a existência de um software livre que permite a criação e gerência de bases
+de dados referenciais é benéfica para a comunidade acadêmica e que a Badrac alcançou um grau
+de aceitação relevante, além de potenciais usuários, que poderão, com seu uso, auxiliar na
+disseminação de informação científica.
+

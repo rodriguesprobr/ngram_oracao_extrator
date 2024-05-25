@@ -1,0 +1,1140 @@
+
+Comunicação Oral
+
+CONTRIBUIÇÕES DE UM PERFIL DE APLICAÇÃO À DESCRIÇÃO
+ARQUIVÍSTICA VISANDO A INTEROPERABILIDADE NOS MOLDES
+DO MODELO RESOURCE DESCRIPTION FRAMEWORK
+
+
+Resumo: Apresenta um perfil de aplicação que faz uso de elementos de metadados dos padrões
+Dublin Core e Encoded Archival Description, em conformidade com a Norma Geral Internacional de
+Descrição Arquivística, visando a descrição dos documentos arquivísticos nos moldes do modelo
+Resource Description Framework. O perfil de aplicação desenvolvido tem como foco auxiliar na
+organização das informações arquivísticas existentes hoje na web. Desta maneira, este instrumento
+descreve as unidades arquivísticas que compõem a descrição de um documento em partes,
+estruturando as informações e relacionando-as outras informações presentes em outras bases de dados
+por meio de inferências, tendo como objeto um vocabulário específico da área.
+Palavras-chave: Perfil de aplicação. Norma Geral Internacional de Descrição Arquivística. Resource
+Description Framework. Encoded Archival Description. Dublin Core.
+1 INTRODUÇÃO
+Com a chegada da web visualiza-se um novo momento à recuperação das informações
+no contexto da Arquivística. Há um volume crescente de informações dispostas em diferentes
+formatos e locais de acesso, inviabilizando não só o processo de recuperação como também a
+interoperabilidade dos resultados obtidos na busca.
+Este trabalho, teve como ponto de partida, propor um perfil de aplicação que faz uso
+dos metadados Dublin Core (DC) e Encoded Archival Description (EAD), a partir da Norma
+Geral Internacional de Descrição Arquivística [ISAD(G)], orientado à descrição arquivística
+nos moldes do modelo Resource Description Framework (RDF), visando a interoperabilidade
+dos dados que compõem o documento arquivístico descrito .
+Assim, este estudo parte da hipótese que a interoperabilidade dos dados arquivísticos é
+possível por meio da adoção do modelo RDF. Desta maneira, a proposta de um conjunto de
+elementos de metadados essenciais à descrição de documentos arquivísticos, por intermédio
+de um perfil de aplicação, propiciará visualizar a utilização do modelo RDF na organização
+das informações.
+Destaca-se que este estudo, reúne conceitos e posicionamentos da Ciência da
+Informação (CI), Tecnologia, Web Semântica e Arquivística, tendo como ponto central a troca
+de contribuições entre estas, possibilitando o início de novas pesquisas referentes as temáticas
+abordadas e corroborando com a organização e recuperação das informações disponíveis na
+web.
+2 DESCRIÇÃO ARQUIVÍSTICA: NORMA ISAD(G)
+A atividade de descrição arquivística é complexa, assim relatam os autores da área de
+arquivos (BELLOTTO, 2002, 2007; BRASIL, 2006; CONSELHO INTERNACIONAL DE
+ARQUIVOS, 2001; CORTES ALONSO, 1982; CRUZD MUNDET, 1996; DURANTI, 1993;
+GUEGUEN et al., 2013; LODOLINI, 1984), desta maneira, requer cautela em suas fases de
+elaboração e execução.
+Para Lodolini (1984), a descrição arquivística relaciona-se à ordenação e à
+inventariação, tendo como principal objetivo identificar e compreender o contexto e o
+conteúdo, a fim de propiciar o acesso aos documentos (CONSELHO INTERNACIONAL DE
+ARQUIVOS, 2001).
+
+Embora a descrição seja uma atividade sempre presente no fazer arquivístico, foi
+somente após a publicação do Manual de Arranjo e Descrição de Arquivos, em 1973, que
+surgiram normas e publicações voltadas a auxiliar os profissionais e os usuários de arquivo no
+que tangia a descrição dos documentos de arquivo.
+A partir de 1980, a normalização da descrição tomou grande impulso internacional,
+devido aos avanços proporcionados com o uso dos computadores e aos progressos na área de
+Biblioteconomia (SILVA, 1999). Assim, observa-se um esforço na formulação de normas
+internacionais voltadas à descrição arquivística, tal como evidenciado no QUADRO 1:
+QUADRO 1- Normas Internacionais - desenvolvimento e publicação.
+NORMA
+
+EDIÇÃO
+
+Declaração de Princípios
+ISAD (G)
+ISAAR (CPF)
+ISAD (G)
+ISAAR (CPF)
+ISDF
+ISDIAH
+
+1ª
+1ª
+2ª
+2ª
+1ª
+1ª
+
+PERÍODO DE
+DESENVOLVIMENTO
+
+DATA DE
+PUBLICAÇÃO
+
+(1988) 1989 – 1992
+1990 – 1993
+1993 – 1995
+1996 – 2000
+2000 – 2004
+2005 – 2007
+2005 – 2008
+
+1992
+1994
+1996
+1999
+2004
+2007
+2008
+
+Fonte: (GUEGUEN et al., 2013, p. 102).
+
+Foram 16 anos de trabalhos, que resultaram na elaboração da Declaração dos
+Princípios que nortearam a criação e revisão das quatro normas citadas acima.
+A Norma ISAD(G), foi elaborada a partir da cooperação de vários especialistas
+ligados ao Conselho Internacional de Arquivos (CIA). Esta Norma estabelece diretrizes para a
+preparação de descrições arquivísticas, podendo ser aplicada em qualquer documento,
+independente de forma ou suporte, visando: assegurar a criação de descrições consistentes;
+facilitar a recuperação e a troca de informação sobre documentos arquivísticos; possibilitar o
+compartilhamento de dados de autoridades; e tornar possível a integração de descrições de
+diferentes
+
+arquivos
+
+em
+
+um
+
+sistema
+
+unificado
+
+de
+
+informação
+
+(CONSELHO
+
+INTERNACIONAL DE ARQUIVOS, 2001).
+Na Norma ISAD(G), as regras estão separadas em sete áreas de informação descritiva,
+que incluem: identificação; contextualização; conteúdo e estrutura; condições de acesso e uso;
+fontes relacionadas; notas; e controle de descrição. Dos 26 elementos compreendidos pela
+norma, somente um conjunto deles são considerados essenciais para que haja o intercâmbio
+internacional de informação descritiva, sendo eles: Código de referência; Título; Produtor;
+Data (s); Dimensão da unidade de descrição; e o Nível de descrição (CONSELHO
+INTERNACIONAL DE ARQUIVOS, 2001).
+
+O intuito é desenvolver uma discussão em torno da descrição, e sua relação com a Web
+Semântica. Para isso, será discorrido de forma breve, conceitos relativos a interoperabilidade
+com base no modelo RDF.
+3 A INTEROPERABILIDADE A PARTIR DO MODELO RDF
+Embora seja um termo recente, a origem da Web Semântica se relaciona ao artigo da
+revista Scientific American, de 2001, escrito por Tim Berners-Lee, e como coautores James
+Hendler e Ora Lassila. Neste artigo, os autores esboçam uma web de estrutura comum, onde
+os aplicativos compartilham seus dados linkados com outros aplicativos. Conforme o W3C, a
+Web Semântica dá às pessoas a capacidade de criarem repositórios de dados na web, de forma
+a facilitar a troca de informação (WORLD WIDE WEB CONSORTIUM, 2008).
+Dentro das camadas que compõem a arquitetura da Web Semântica (FIGURA 1),
+observa-se a camada RDF:
+FIGURA 1 - Arquitetura da Web Semântica.
+
+Fonte: (TENNISON, 2010, p. [6]).
+
+A camada RDF, assim como o próprio nome indica, fornece um framework que
+representa os metadados sobre os recursos, ou seja, sua padronização estabelece um modelo
+de dados e sintaxe para representar, codificar e transmitir os metadados, de maneira a prover
+uma interoperabilidade entre os recursos na web (TAYLOR, 2004; BRICKLEY; GUHA,
+2000; LASSILA; SWICK ,1999; HEATH; BIZER, 2011).
+Hoje, a maior parte do conteúdo presente na web é dedicado a leitura e ao
+processamento, por meio da interação entre o usuário e o resultado de sua pesquisa. A
+proposta idealizada pelo W3C, visa possibilitar que por intermédio da descrição por níveis, os
+
+motores possam realizar a busca por meio de inferências, propiciando uma melhor
+interpretação dos dados disponíveis na web.
+3.1 OS METADADOS ENCODED ARCHIVAL DESCRIPTION E O DUBLIN CORE
+Os metadados inserem-se hoje em muitos estudos em razão de sua aplicação junto a
+tecnologias da informação, de maneira que as informações sejam descritas, e os dados
+estruturados e organizados para uma melhor recuperação na Web. Para o W3C metadados
+“[...] machine is understandable Information for the web.”(2001, p. [1]). Tal definição,
+ressalta que o fator central no contexto da Web Semântica é o processamento automático
+realizado pela máquina. Este argumento, ampara-se na explicação dos autores Dempsey e
+Heery (1997, p. [1]), que definem metadados como “[...] data associated with objects which
+relieves their potential users of having to have full advance knowledge of their existence or
+characteristics.”
+Há uma variedade de usos relativos aos metadados, podendo estes serem usados para
+descrever informações presentes em catálogos de bibliotecas (informações como autor, título,
+palavras-chaves, entre outras); são encontrados em aplicativos onde fornecem informações
+relativas ao produto (como no caso das bases de dados). Desta maneira, relaciona-se os
+metadados como um recurso, que auxilia na descrição de um serviço, tal ação é observada nos
+metadados EAD e DC, utilizados na constituição do perfil de aplicação proposto neste estudo.
+O desenvolvimento da Encoded Archival Description (EAD) começou em meados de
+1993 na Biblioteca da Universidade de Berkely, a partir da possibilidade de criar um padrão
+de metadados para codificação de instrumentos de pesquisa.
+A EAD é um padrão de codificação usado na descrição arquivística que auxilia nos
+processos de busca e arquivamento. Expresso em eXtensible Markup Language (XML) para
+auxiliar a busca, organização e representação na web; sua estrutura geral é composta por três
+principais grupos de informação: informações administrativas, informações descritivas e
+informações relativas as listagens dos documentos (ENCODED ARCHIVAL DESCRIPTION
+INSTRUCTION MANUAL, 2012).
+O Dublin Core (DC) é um conjunto de elementos de metadados para a descrição de
+recursos. O Dublin Core Metadata Element Set (DCMES), é um vocabulário composto por 15
+propriedades, este foi idealizado para ser simples e autoexplicativo, de maneira que o próprio
+produtor do documento possa descreve-lo ao publicá-lo eletronicamente (DUBLIN CORE
+METADATA INITIATIVE, 2012).
+
+De posse deste conhecimento, parte-se para a discussão a respeito do processo de
+elaboração do perfil de aplicação, ao qual se dedica este estudo.
+4 PERFIL DE APLICAÇÃO
+Um perfil de aplicação define os termos para a anotação de dados com metadados, e
+relata como usá-los de forma consistente de acordo com normas específicas de uso. Um perfil
+pode ser considerado como um esquema que representa os metadados de um conjunto de
+metadados e tipos de valores permitidos (RATANAJAIPAN, NANTAJEEWARAWAT,
+WUWONGSE, 2007). Para Heery e Patel (2000), um perfil de aplicação é um esquema que
+consiste de elementos de dados elaborados a partir de um ou mais namespaces, combinados
+por implementadores, e otimizado para uma aplicação local em particular
+Coyle e Baker (2009), descrevem que cada metadado possui necessidades diferentes e
+aplicações variadas, o que resulta numa proliferação de formatos. Desta forma, o Dublin Core
+Metadata Initiative (DCMI) fornece diretrizes para a concepção de um Dublin Core
+Aplicattion Profile (DCAP), e especifica quais termos de metadados uma organização,
+provedor de informação, ou comunidade de utilizadores usa, de maneira a proporcionar uma
+interoperabilidade semântica com outras aplicações, tendo como base vocabulários e modelos
+globalmente definidos (COYLE; BAKER 2009).
+Um DCAP é uma construção genérica à concepção de registros de metadados, e não
+requer o uso dos termos de metadados definidos pelo Dublin Core Metadata Initiative Terms
+(DCMI-MT), podendo ser aplicado com quaisquer metadados, definidos com base no modelo
+RDF, por meio da combinação de vários termos de namespaces conforme se fizer necessário
+(COYLE; BAKER, 2009).
+O DCAP segue Dublin Core Abstract Model (DCAM), este é um modelo genérico
+para registros dos metadados, que engloba orientações e especificações claras voltadas aos
+desenvolvedores de metadados, estabelecendo o que se pretende e o que pode ser esperado a
+partir dos dados. Como resultado, tem-se metadados integrados com uma Web semântica de
+dados linkados.
+De acordo com Nilsson (2008), a Description Set Profile (DSP) é uma maneira de
+descrever as restrições estruturais e formais sobre um conjunto descrição. A DSP contém
+restrições formais, assim, deve ser combinada com informações legíveis, diretrizes de uso,
+gerenciamento de versão, etc. Desse modo, a DSP descreve a estrutura de uma descrição
+utilizando as noções de Templates (modelos) e Constraints (restrições). Um Template
+
+descreve as possíveis estruturas de metadados em um registro em conformidade, existindo
+dois níveis de Templates em um DSP:
+•
+
+Description Templates - que contém os modelos de instrução que se aplicam a um
+único tipo de descrição, bem como as restrições acerca do modelo descrito;
+
+•
+
+Statement Templates – que contém todas as restrições sobre a propriedade, valores
+das strings, esquemas de codificação de vocabulário, etc., que se aplicam a um
+único tipo de declaração (NILSSON, 2008).
+
+Enquanto os Templates são usados para expressar as estruturas os Constraints são
+utilizados para limitar estas estruturas. O fundamento principal para uso do DSP relaciona-se
+a examinar se um registro de metadados corresponde ao DSP. Esta correspondência é definida
+a partir da linkagem de descrições de modelos de descrição, onde cada descrição deve ser
+linkada a exatamente uma descrição do modelo; pela linkagem das declarações de modelos de
+instrução, assim cada declaração deve seguir um modelo de declaração; e da avaliação das
+restrições, onde se identificam e analisam todas as restrições.
+5 PROCEDIMENTOS METODOLÓGICOS
+O estudo faz parte de uma trabalho de mestrado já concluído, que tinha como objetivo
+geral “Propor um perfil de aplicação DC e EAD a partir da Norma ISAD(G), orientado a
+descrição arquivística nos moldes do modelo RDF”.
+Desta forma, foram exploradas as recomendações elaboradas pelo W3C, DCMI,
+comitê técnico da EAD, e as Normas de Descrição Arquivística.
+Inicialmente,
+
+foram
+
+identificados
+
+os
+
+documentos
+
+(Normas,
+
+Diretrizes,
+
+Recomendações, entre outros), e as fontes bibliográficas nacionais e internacionais, que
+serviram como base teórica neste estudo. Após, seguiu-se a análise e leitura dos materiais
+relacionados anteriormente, de maneira a adquirir maior embasamento e amparo ao discurso.
+De posse destes materiais, analisou-se a Norma ISAD(G) e os padrões de metadados
+candidatos DC e EAD.
+Para compor um perfil de aplicação com os metadados para descrição arquivística no
+contexto da Web Semântica, foram a analisados os termos presentes nos padrões de
+metadados DC e EAD em concordância com a Norma ISAD(G), de modo a obter resultados
+confiáveis, refinados e interoperáveis. Após a escolha, conduziu-se à elaboração e validação
+do perfil de aplicação, sendo esta última ação realizada por meio dos instrumentos
+disponibilizados pela comunidade W3C.
+
+6 RESULTADOS
+Serão apresentados de maneira sucinta os resultados atingidos como parte da pesquisa
+de mestrado efetuada. Visando identificar as propriedades que seriam descritas no perfil de
+aplicação, inicialmente analisou-se todas as Normas de Descrição disponibilizadas pelo CIA,
+o que permitiu visualizar que o tempo para conclusão da pesquisa exigiria a escolha de uma
+Norma de Descrição.
+6.1 IDENTIFICAÇÃO DOS TERMOS DE METADADOS
+A escolha pela Norma Geral Internacional de Descrição Arquivística [ISAD[G]),
+deve-se ao fato que esta norma serve como de base à elaboração de outras normas, o CIA
+estabelece que cada país elabore sua própria norma de descrição a partir de sua realidade
+arquivística. A Norma ISAD(G) forneceu os termos que desempenharam o papel de
+descritores do perfil. Assim, foram analisados os 146 termos presentes na EAD e os 15 termos
+existentes no DC, para então eleger os 15 termos que descrevessem a unidade arquivística de
+forma a responder à questão que norteou todo este estudo.
+De posse destes elementos, os documentos do DC, EAD e a Norma ISAD(G) foram
+comparados e confrontados, afim de uma delimitação mais concreta. Após esta etapa, seguiuse para a definição dos termos que viriam a compor o perfil de aplicação. Evidencia-se que os
+termos adotados foram considerados suficientemente amplos para a descrição proposta neste
+trabalho, porém, cada pesquisador pode fazer a inserção de mais elementos conforme a
+necessidade da instituição.
+O Perfil de Aplicação, foi criado de acordo com os documentos do DCMI, dentre os
+quais o Guidelines for Dublin Core Application Profiles; Encoded Archival Description 2002
+Schema, Version 2002 of the Document Type Definition (DTD) for the Encoded Archival
+Description da Library of Congress; normas e diretrizes do CIA.
+6.2 UNIT FOR ARCHIVAL DESCRIPTION
+A descrição do Perfil de Aplicação proposto foi realizada a partir da Description Set
+Profile (DSP) disponibilizada pelo DCMI, onde detalhou-se uma ‘unidade de descrição
+arquivística’ (CONSELHO INTERNACIONAL DE ARQUIVO, 2001; SCHELLEMBERG,
+2002), aqui nominada como ‘Unit for Archival Description’.
+
+Na etapa seguinte, realizou-se a descrição em RDF da Unit for Archival Description,
+sendo o esquema validado na ferramenta RDF Validation Service que assegurou que a
+semântica realizada no estudo estava correta.
+Segue-se os requisitos funcionais e de domínio, os termos e o Description Set Profile.
+7 JOÁ ARCHIVAL DESCRIPTION APPLICATION PROFILE (JADAP)
+O perfil de aplicação criado recebeu o nome de Joá Archival Description Application
+Profile (JADAP), sendo concebido para declarar termos de metadados úteis à descrição
+arquivística, fazendo uso das propriedades existentes no DC e na EAD, tomando como eixo
+central a Norma ISAD (G). O JADAP compreende os termos de metadados necessários para
+que ocorra uma descrição eficiente e eficaz. Assim, optou-se por nominar a unidade de
+descrição do recurso a ser descrita como Unit for Archival Description. O QUADRO 2
+relaciona as propriedades do DC e da EAD que fazem parte do JADAP:
+QUADRO 2 - ISAD(G): Propriedades do DC e EAD
+ISAD(G)
+ÁREA DE
+IDENTIFICAÇÃO
+
+ÁREA DE
+CONTEXTUALIZAÇÃO
+ÁREA DE CONDIÇÕES
+DE ACESSO E USO
+ÁREA DE FONTES
+RELACIONADAS
+
+3.1.1 Código de referência
+3.1.2 Título
+3.1.3 Data(s)
+3.1.4 Nível de descrição
+3.1.5 Dimensão e suporte
+3.1.1 Código de referência
+3.2.2História Administrativa/Biografia
+3.2.3 História Arquivística
+3.4.1 Condições de acesso
+3.4.2 Condições de reprodução
+3.4.3 Idioma
+3.5.1 Existência e localização dos originais
+3.5.2 Existência e localização de cópias
+
+ÁREA DE INDEXAÇÃO
+
+DC
+
+EAD
+
+Identifier
+Title
+Date
+Level
+Format; Type
+Creator
+Biography for History
+Description
+Conditions Governing Access
+Conditions Governing Use
+Language
+Locations of Originals
+Alternative form Available
+Subject
+
+Fonte: Elaborado pelas autoras.
+
+Para a escolha das propriedades DC e EAD, levou-se em consideração a descrição
+apresentada das propriedades em concordância com a unidade de descrição do recurso
+especificada na Norma ISAD(G).
+Conforme o QUADRO 3, foram descritos os termos que se relacionam as
+propriedades da Unit for Archival Description que fazem parte do JADAP, a partir dos
+seguintes atributos: Term URI, Name, Label, Defined By, Definition, Comments, Type of
+Term, Refines, Type of Value, Obligation, Min Occurrence e Max Occurrence.
+
+QUADRO 3 - Atributos dos termos.
+TERMOS
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+
+Obligation
+
+Min Occurrence
+Max Occurrence
+
+DESCRIÇÃO
+Uniform Resource Identifier (URI) que identifica exclusivamente o termo
+Identificador atribuído para o termo; único dentro do DCMI Namespace
+Etiqueta para leitura humana atribuída ao termo;
+Um namespace que aponta para o documento no qual o termo encontra-se definido.
+A declaração que claramente representa o conceito e a natureza essencial do termo;
+Informações adicionais sobre o termo ou sobre a sua aplicação;
+Tipo de Termo, conforme define o DCMI Abstract Model (DCAM)
+Uma propriedade da qual o termo descrito é uma sub propriedade
+O tipo do valor permitido: Literal (o valor é exatamente uma string) ou Non-Literal
+(uma URI que remete ao valor ou um literal que representa o valor)
+Indica se a presença do termo é necessária. O perfil da obrigação pode ser: obrigatório
+[mandatory (M)], obrigatório se aplicável [mandatory if applicable (MA)], altamente
+recomendável [recommended (R)] ou opcional [opcional (O)]. A obrigatoriedade dos
+termos se apoia na utilização da informação disponível. Um termo obrigatório deve
+possuir um valor. O recomendável é que os termos opcionais devam ser preenchidos
+com um valor se a informação for apropriada para o recurso dado, mas se não for, eles
+podem ser omitidos.
+Número mínimo de vezes que um valor poderá ocorrer numa descrição
+Número máximo de vezes que um valor poderá ocorrer numa descrição
+
+Fonte: Elaborado pelas autoras com base no DCMI - Libraries Working Group (DUBLIN CORE
+METADATA INICIATIVE, 2004).
+
+Na sequência, observa-se no QUADRO 4 as descrições dos termos presente no
+JADAP:
+QUADRO 4: Descrição dos termos
+Identifier
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://purl.org/dc/elements/1.1/identifier
+Identifier
+Identifier
+http://dublincore.org/documents/dcmi-terms/
+Localização do recurso da web
+Este metadado corresponde na Norma ISAD(G) ao elemento Código de referência, sub elemento
+do header na EAD.
+Proprietário
+Literal
+M
+1
+1
+
+Title
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+Date
+
+http://purl.org/dc/elements/1.1/title
+Title
+Title
+http://dublincore.org/documents/dcmi-terms/
+Um nome dado ao recurso.
+Palavra, frase, caractere ou grupo de caracteres que designa uma unidade de descrição.
+Proprietário
+Literal
+M
+1
+1
+
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://purl.org/dc/elements/1.1/date
+Date
+Date
+http://dublincore.org/documents/dcmi-terms/
+Um ponto ou período de tempo associado com um evento no ciclo de vida do recurso.
+Data pode ser utilizado para expressar a informação temporal, a qualquer nível de granulosidade. A
+prática recomendada é a utilização de um esquema de codificação, tais como o perfil W3CDTF de
+ISO 8601 (W3CDTF).
+Proprietário
+Não literal
+M
+1
+Infinito
+
+Archdesc.
+Term URI
+Name
+Label
+Defined by
+Definition
+
+Comments
+
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://www.loc.gov/ead/tglib/elements/archdesc.html
+Archdesc
+Archdesc
+http://www.loc.gov/ead/tglib/elements/archdesc.html
+Campo destinado a descrição da coleção
+Esta seção é o núcleo da ferramenta de busca da EAD.
+Ele inclui informações administrativas e descritivo sobre a coleção. O elemento <archdesc> possui
+diversos atributos especializados. O atributo nível exigido identifica o caráter de toda a unidade,
+por exemplo, "classe", "coleção", "fonds", recordgrp "," série "," "sub-fundo", "subgrp", "subsérie",
+ou "outro nível. "Este atributo é comparável a ISAD(G) elemento de dados 3.1.4.
+Proprietário
+Level
+Não literal
+M
+1
+1
+
+Format
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://dublincore.org/documents/dcmi-terms/#elements-format
+Format
+Format
+http://dublincore.org/documents/dcmi-terms/
+O formato de arquivo, meio físico, ou as dimensões do recurso.
+Exemplos de dimensões incluem o tamanho e a duração. A prática recomendada é a utilização de
+um vocabulário controlado, como a lista de tipos Internet Media de Types (MIME).
+Proprietário
+Não literal
+M
+1
+Infinito
+
+Type
+Term URI
+Name
+Label
+Defined by
+Definition
+
+Comments
+
+Type of Term
+Refines
+Type of Value
+Min Occurrence
+Max Occurrence
+
+http://dublincore.org/documents/dcmi-terms/#terms-type
+Type
+Type
+http://dublincore.org/documents/dcmi-terms/
+A natureza ou gênero do recurso.
+A prática recomendada é a utilização de um vocabulário controlado, como o DCMI Tipo
+Vocabulário (DCMITYPE). Para descrever o formato de arquivo, meio físico, ou as dimensões do
+recurso, use o elemento A prática recomendada é a utilização de um vocabulário controlado, como
+o DCMI Tipo Vocabulário (DCMITYPE). Para descrever o formato de arquivo, meio físico, ou as
+dimensões do recurso, use o elemento Formato.
+Proprietário
+
+Não literal
+1
+1
+
+Creator
+Term URI
+
+http://dublincore.org/documents/dcmi-terms/#elements-creator
+
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+Creator
+Creator
+http://dublincore.org/documents/dcmi-terms/
+A entidade coletiva, família ou pessoa que produziu, acumulou e/ou manteve documentos na
+gestão de sua atividade coletiva ou pessoal.
+Exemplos de um Criador incluem uma pessoa, uma organização, ou um serviço. Tipicamente, o
+nome de um criador deve ser usado para indicar uma entidade.
+Proprietário
+Não literal
+M
+1
+Infinito
+
+Biography or History
+Term URI
+Name
+Label
+Defined by
+Definition
+
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://www.loc.gov/ead/tglib/elements/bioghist.html
+Biography or History
+<bioghist>
+http://www.loc.gov/ead/tglib/elements/bioghist.html
+Fornece uma história administrativa ou de dados (s) produtor (es) biográfico da unidade de
+descrição, para contextualizar a coleção e torná-lo mais compreensível.
+Um resumo conciso ou cronológico que coloca os materiais de arquivo no contexto, fornecendo
+informações sobre o seu criador (s). Inclui informações significativas sobre a vida de um indivíduo
+ou família, ou a história administrativa de um órgão social.
+O elemento <bioghist> é comparável à ISAD(G) de elemento de dados 3.2.2
+Proprietário
+Archdesc
+Não literal
+R
+1
+1
+
+Description
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://purl.org/dc/elements/1.1/description
+Description
+Description
+http://dublincore.org/documents/dcmi-terms/
+Uma descrição de um recurso
+A descrição pode incluir: um resumo, uma tabela de conteúdo, uma representação gráfica, ou
+uma descrição do próprio recurso
+Proprietário
+Não literal
+R
+1
+1
+
+Conditions Governing Access.
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligattion
+Min Occurrence
+Max Occurrence
+
+http://www.loc.gov/ead/tglib/elements/accessrestrict.html
+Conditions Governing Access
+<accessrestrict>
+http://www.loc.gov/ead/tglib/element_index.html
+Informações sobre as condições que afetam a disponibilidade dos materiais que estão sendo
+descritos.
+Descrição pode incluir, entretanto não se limita: um resumo, uma tabela de conteúdo, uma
+representação gráfica, ou uma conta de texto livre do recurso.
+Proprietário
+Não- literal
+R
+1
+Infinito
+
+Conditions Governing Use.
+Term URI
+Name
+Label
+Defined by
+
+http://www.loc.gov/ead/tglib/elements/userestrict.html
+Conditions Governing Use
+<userestrict>
+http://www.loc.gov/ead/tglib/element_index.html
+
+Definition
+
+Comments
+
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+Identifica quaisquer restrições à reprodução da unidade de descrição.
+Informações sobre as condições que afetam o uso dos materiais descritos após o acesso foi
+concedido. Pode indicar limitações, regulamentos ou procedimentos especiais impostos por um
+repositório, doador, estatuto legal, ou outra agência sobre reprodução, publicação, ou cotação
+dos materiais descritos. Também pode indicar a ausência de restrições, como quando copyright
+ou direitos literários têm sido dedicados ao público.
+Proprietário
+Não- literal
+R
+1
+1
+
+Language
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://dublincore.org/documents/dcmi-terms/#elements-language
+Language
+Language
+http://dublincore.org/documents/dcmi-terms/
+O idioma do recurso.
+A Norma ISAD(G) sugere o código (s) ISO (s) apropriado para inclusão(ões) a(s) língua(s)
+(ISO 639-1 e 639-2) normas internacionais ISO para Códigos de Idioma ou escrita(s) (ISO
+15924: Norma Internacional de Nomes de Scripts).
+Proprietário
+Literal
+MA
+1
+1
+
+Location of Originals.
+Term URI
+Name
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://www.loc.gov/ead/tglib/elements/originalsloc.html
+Locations of Originals
+Location
+<originalsloc>
+Identifica a organização que detém o recurso ou como o acesso é obtido.
+Usado para um local físico que permite ao usuário recuperar o item quando uma URI não é
+proprietária (por exemplo, para os itens físicos não disponíveis eletronicamente). Isso também
+facilita o acesso se o URI não recuperar nada. Também pode conter ainda a identificação dentro
+de um local, como número de telefone, número de acesso.
+Proprietário
+Não literal
+O
+1
+Infinito
+
+Alternative Form Available
+Term URI
+Name
+
+http://www.loc.gov/ead/tglib/elements/altformavail.html
+Alternative Form Available
+
+Label
+Defined by
+
+<altformavail>
+
+Definition
+
+Comments
+Type of Term
+Refines
+Type of Value
+Obligation
+Min Occurrence
+Max Occurrence
+
+http://www.loc.gov/ead/tglib/element_index.html
+Indica a existência, a localização, a disponibilidade e / ou a destruição do original, quando a
+unidade é constituída por cópias de descrição.
+Informações sobre as cópias dos materiais que estão sendo descritos, incluindo o tipo de forma
+alternativa, os números de controle significativos, localização e fonte para encomendar, se
+aplicável. Os formatos adicionais são tipicamente microformas, fotocópias ou reproduções
+digitais.
+Proprietário
+Não Literal
+MA
+1
+Infinito
+
+Subject
+Term URI
+Name
+
+http://purl.org/dc/elements/1.1/subject
+Subject
+
+Label
+Defined by
+Definition
+Comments
+Type of Term
+Refines
+Type of Value
+Obligattion
+Min Occurrence
+Max Occurrence
+
+Subject
+http://dublincore.org/documents/dcmi-terms/
+Identifica a unidade de descrição
+Este elemento de descrição não existe na ISAD(G). Este requer descrição do estudo, definição e
+avaliação periódica pela entidade custodiante como a política desenvolvida para recuperação
+sistêmica de informações e de política de indexação assunto. Assuntos de indexação devem
+incluir nomes de entidades, eventos, áreas geográficas, períodos e temas da atualidade.
+Proprietário
+Não literal
+M
+1
+Infinito
+
+Elaborado pelas autoras com base no DCMI –TERMS (DUBLIN CORE METADATA INITIATIVE,
+2005) e do Encoded Archival Description Best Practices (ENCODED ARCHIVAL DESCRIPTION
+BEST PRACTICES WORKING GROUP, 2004).
+.
+
+Segue-se os conjuntos de descrição que compõem o Resource for Archival
+Description, elaborado conforme o DSP.
+7.1 JADAP: Description Set Profile
+Para descrição do JADAP foi utilizada a DSP publicada pelo DCMI (NILSSON,
+2008), tendo a Unit for Archival Description como Description Template, como pode ser vista
+a seguir na FIGURA 2:
+FIGURA 2 - JADAP: Description Set Profile
+DescriptionSet: JADAP
+Description template: UnitforArchivalDescription
+minimum = 1; maximum = 1
+Statement template: identifier
+minimun = 1; maximum = 1
+Property: http://purl.org/dc/elements/1.1/identifier
+Type of Value = "literal"
+Statement template: title
+minimum = 1; maximum = 1
+Property: http://purl.org/dc/elements/1.1/title
+Type of value = "literal"
+Statement template: date
+minimun = 1; maximum = infinity
+Property: http://purl.org/dc/elements/1.1/date
+Type of value = "literal"
+Statement template: archdesc
+minimun = 1; maximum = 1
+Property: http://www.loc.gov/ead/tglib/elements/archdesc.html
+Type of Value = "literal"
+Statement template: Format
+minimun = 1; maximum = infinity
+Property: http://dublincore.org/documents/dcmi-terms/#elements-format
+Type of Value = "literal"
+Statement template: type
+minimun = 1; maximum = infinity
+Property: http://dublincore.org/documents/dcmi-terms/#terms-type
+Type of Value = "literal"
+Statement template: creator
+minimun = 1; maximum = infinity
+Property: http://dublincore.org/documents/dcmi-terms/#elements-creator
+
+Type of Value = "literal"
+Statement template: bioghist
+minimun = 1; maximum = 1
+Property: http://www.loc.gov/ead/tglib/elements/bioghist.html
+SubPropertOf: http://www.loc.gov/ead/tglib/elements/archdesc.html
+Type of Value = "literal"
+Statement template: description
+minimun = 1; maximum = 1
+Property: http://purl.org/dc/elements/1.1/description
+Type of Value = "literal"
+Statement template: accessrestrict
+minimun = 1; maximum = infinity
+Property: http://www.loc.gov/ead/tglib/elements/accessrestrict.html
+Type of Value = "literal"
+Statement template: userestrict
+minimun = 1; maximum = 1
+Property: http://www.loc.gov/ead/tglib/elements/userestrict.html
+Type of Value = "literal"
+Statement template: language
+minimun = 1; maximum = 1
+Property: http://dublincore.org/documents/dcmi-terms/#elements-language
+Type of Value = "non literal"
+Statement template: originalsloc
+minimun = 1; maximum = infinity
+Property: http://www.loc.gov/ead/tglib/elements/originalsloc.html
+Type of Value = "literal"
+Statement template: alformavail
+minimun = 1; maximum = infinity
+Property: http://www.loc.gov/ead/tglib/elements/altformavail.html
+Type of Value = "literal"
+Statement template: subject
+minimun = 1; maximum = infinity
+Property: http://purl.org/dc/elements/1.1/subject
+Type of Value = "literal"
+
+Fonte: Elaborado pelas autoras.
+
+Para exemplificação da DSP do perfil JADAP, utilizou-se o documento “Juramento de
+Dom Pedro I do matrimônio celebrado com Dona Inês de Castro. O documento original
+encontra-se sob custódia do Arquivo Nacional Torre do Tombo. A descrição arquivística a
+partir do uso do perfil JADAP em RDF é demonstrada na FIGURA 3:
+FIGURA 3 - Descrição em RDF da unidade arquivística exemplificada
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/"
+xmlns:ead="http://www.loc.gov/ead/ead2002a.html" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+<rdf:Description rdf:about="http://digitarq.arquivos.pt/details?id=4614772">
+<dcterms:identifier rdf:resource="http://digitarq.arquivos.pt/details?id=4614772"/>
+<dcterms:title>Juramento de Dom Pedro I do matrimonio celebrado com Dona Ines de Castro</dcterms:title>
+<dcterms:date>1360-06-18</dcterms:date>
+<dcterms:format>1 item documental</dcterms:format>
+<dcterms:type>pergaminho</dcterms:type>
+<dcterms:creator>Dom Pedro I</dcterms:creator>
+<ead:originalsloc rdf:resource="http://antt.dglab.gov.pt/wp-content/uploads/sites/17/2013/10/PT-TT-GAV-1520-10_c0001B.jpg"/>
+<ead:altformavail>Copia microfilmada Portugal, Torre do Tombo, Reforma das Gavetas, Livro 31, Folha
+336</ead:altformavail>
+</rdf:Description>
+</rdf:RDF>
+
+Fonte: Elaborado pelas autoras.
+
+De posse de tal esquema de descrição, procedeu-se sua validação no RDF Validation
+Service, sendo este, expresso por meio das Triplas of the Data Model como demonstra o
+QUADRO 5:
+QUADRO 5 - Validação e Triplas of the Data Model - JADAP
+Number
+
+Subject
+
+Predicate
+
+Object
+
+1
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://purl.org/dc/t
+erms/identifier
+
+http://digitarq.arquivos.pt/d
+etails?id=4614772
+
+2
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://purl.org/dc/t
+erms/title
+
+"Juramento de Dom Pedro I do
+matrimonio celebrado com Dona
+Ines de Castro"
+
+3
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://purl.org/dc/t
+erms/date
+
+"1360-06-18"
+
+4
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://purl.org/dc/t
+erms/format
+
+"1 item documental"
+
+5
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://purl.org/dc/t
+erms/type
+
+"pergaminho"
+
+6
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://purl.org/dc/t
+erms/creator
+
+"Dom Pedro I"
+
+7
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://www.loc.gov/e
+ad/ead2002a.htmlorig
+inalsloc
+
+http://antt.dglab.gov.pt/wpcontent/uploads/sites/17/2013
+/10/PT-TT-GAV-15-2010_c0001B.jpg
+
+8
+
+http://digitarq.arqui
+vos.pt/details?id=461
+4772
+
+http://www.loc.gov/e
+ad/ead2002a.htmlaltf
+ormavail
+
+"Copia microfilmada Portugal,
+Torre do Tombo, Reforma das
+Gavetas, Livro 31, Folha 336"
+
+Fonte: Elaborado pelas autoras junto ao site RDF Validation Service.
+
+Considera-se a validação uma garantia de credibilidade ao esquema, de maneira que
+este possa ser analisado e posteriormente validado pela comunidade arquivística responsável
+pela descrição de documentos, com vista a sua utilização em instituições arquivísticas.
+Com o esquema de descrição validado, pôde-se junto a ferramenta RDF Validator
+visualizar o gráfico, conforme a FIGURA 4.
+
+FIGURA 4 - Gráfico RDF do perfil JADAP
+
+Fonte: Elaborado pela autora.
+
+A partir dos grafos destacados no processo de validação do perfil de aplicação,
+visualiza-se semântica no esquema de descrição realizado. Ou seja, pode-se verificar os
+relacionamentos formados.
+Este estudo almeja que o JADAP tenha seu uso pela comunidade arquivística e demais
+instituições custodiadoras de acervos arquivísticos, afim de servir para descrição de
+documentos conforme as diretrizes existentes na Norma ISAD(G).
+8 CONSIDERAÇÕES FINAIS
+O estudo teve como impulso o debate acerca da descrição arquivística, tomando como
+viés o universo da Web Semântica. Desta forma, uniram-se temáticas com características e
+anseios próprios, visando um mesmo objetivo, visualizar as contribuições entre ambas de
+modo recíproco.
+Adotou-se uma metodologia que auxiliasse na elaboração de um perfil de aplicação
+DC e EAD a partir da Norma ISAD(G), para descrição arquivística nos moldes do modelo
+RDF. Foram identificados os termos que viriam a compor o perfil de aplicação, e seguiu-se
+sua elaboração nos moldes propostos anteriormente.
+
+A Norma ISAD(G) serviu como guia na proposição dos termos que atuaram como
+descritores do perfil. Assim, foram analisados os 146 termos presentes na EAD e os 15 termos
+existentes no DC, para então eleger os 15 termos que descrevessem a unidade arquivística de
+forma a atingir o objetivo geral deste estudo.
+Ao final desta pesquisa, contata-se que a inserção da Web Semântica no contexto
+arquivístico contribui no sentido de promover a interoperabilidade dos dados. Uma vez
+descritas as unidades arquivísticas em RDF pôde-se verificar sua organização e a recuperação.
+Neste sentido, é possível criar relacionamentos com outros dados descritos na Web, tornando
+a rede de dados para recuperação da informação cada vez mais ampla.
+Como este trabalho é o resultado de um processo de Mestrado, a descrição e
+explicação pela escolha de cada item não pode ser detalhada de forma mais ampla, tal como
+colocado no trabalho de dissertação que deu origem a este, que se encontra presente nas
+referências no final deste trabalho.
+A possibilidade de relacionar os metadados EAD e DC, e os perfis de aplicação junto a
+atividade de descrição arquivística trouxe também contribuições à área de arquivos. Viu-se
+durante a elaboração deste trabalho a ausência de trabalhos publicados que relacionam o uso
+destes metadados de forma mútua, e o início de um debate acerca da utilização dos perfis de
+aplicação na área da CI.
+Espera-se que este trabalho possa trazer estas questões para o debate no meio
+arquivístico, e mais ainda levar a CI a se aprofundar no campo de desenvolvimento dos perfis
+de aplicação.
+Verifica-se um novo olhar não só da CI, mas da comunidade arquivística frente as
+tecnologias que estão a propiciar um novo rumo a pesquisa junto aos acervos arquivísticos no
+mundo. O caminho pode ser longo e complexo, porém, visualiza-se que a CI e a Web
+Semântica, devem estreitar seus relacionamentos, de maneira que os postulados que orientam
+as duas áreas possam se cruzar, e ambas se beneficiarem com estudos que amparem o
+desenvolvimento da organização da informação presente na web.
+8.1 LIMITAÇÕES DA PESQUISA
+Infelizmente, em decorrência do tempo destinado a pesquisa não foi possível realizar a
+validação do perfil proposto junto às comunidades ligadas a implementação dos metadados
+DC e EAD, e entre a comunidade arquivística, entretanto, espera-se realizar tal etapa ainda
+como resultado posterior ao trabalho.

@@ -1,0 +1,867 @@
+
+Comunicação Oral
+
+INTEGRAÇÃO SEMÂNTICA DE PUBLICAÇÕES, DADOS DIGITAIS E
+INFORMAÇÕES SOBRE A PESQUISA: UMA PROPOSTA DE
+
+Resumo: Considerando a dinâmica veloz do mundo da pesquisa contemporânea, especialmente nos
+ambientes de eScience, as relações que se estabelecem entre os produtos de pesquisa em uma
+publicação ampliada não são fixas e não podem ser completamente pré-definidas. Dessa forma, os
+pesquisadores e gestores dos sistemas de informação para a pesquisa devem dispor de ferramentas
+amigáveis automatizadas para expandir, de forma controlada e sob alguma forma de moderação, os
+vocabulários semânticos associados com cada tipo de relação. Essa é uma questão relevante que se
+coloca para os sistemas de informação científicos mais avançados. Devido a essa condição, o presente
+trabalho tem como objetivo apresentar uma proposta de interface para integração semântica de
+publicações, dados digitais e informações sobre a pesquisa, pois as relações entre esses itens
+informacionais são requisito importantes no processo de construção de um novo modelo de publicação
+que extrapole os limites do texto convencional. O modelo apresentado foi proposto para um domínio
+específico: as Ciências Nucleares. O trabalho usou como abordagem metodológica para identificação
+de seus principais componentes a análise de domínio de Hjorland, especificamente as abordagens
+estrutura dos sistemas de informação científica no domínio das Ciências Nucleares e a da estrutura da
+Instituição científica para o qual o trabalho foi desenvolvido – neste caso a Comissão Nacional de
+Energia Nuclear - CNEN e o Instituto de Engenharia Nuclear – IEN. Como resultado, é apresentado
+1
+
+O conteúdo textual deste artigo, os nomes e e-mails foram extraídos dos metadados informados e são de total
+responsabilidade dos autores do trabalho.
+
+um modelo gráfico de publicação ampliada genérico que pode servir a quaisquer domínios e um
+modelo específico para a área das Ciências Nucleares.
+Palavras-chave: Publicação ampliada, Dados científicos, Relações entre conceitos, Arquitetura de
+informação.
+Abstract: Considering the fast dynamics of the world of contemporary research, especially in the
+eScience environment, the relations established between the research products in an enhanced
+publication are not fixed and can not be completely predefined. Therefore, researchers and managers
+of information systems for research should have friendly automated tools to increase in a controlled
+way and with some moderation, the semantic vocabularies associated with each type of relationship.
+This is an important issue that arises for the most advanced scientific information systems. Because of
+this condition, this paper aims to propose a interface for semantic integration of publications, digital
+data and information about reserach, since the relationships between these informational items are
+important requirement in the construction of a new publishing model that go beyond the limits of
+conventional text. The model has been proposed for a specific domain: The Nuclear Sciences. The
+work used as a methodological approach to identifying its main components Hjørland domain
+analysis, specifically the structure approaches of scientific information systems in the field of Nuclear
+Sciences and the structure of scientific institution to which the work was done - in this case the
+Brazilian National Nuclear Energy Commission - CNEN and the Nuclear Engineering Institute - IEN.
+As a result, this paper shows a graph model of generic enhanced publication, that can serve any fields
+and another specific model for Nuclear Sciences area.
+Keywords: Enhanced publication. Research data. Semantic relationship. Information architecture.
+
+1 INTRODUÇÃO
+O processo de construção do saber científico estabelece um espectro amplo de relações
+entre os produtos de pesquisa gerados nos diversos fluxos de pesquisa científica. Dados de
+pesquisa e os diversos tipos de publicações acadêmicas e científicas decorrentes da atividade
+científica guardam entre si significações informacionais ricas que podem auxiliar o
+pesquisador no desenvolvimento de novas pesquisas. Outro tipo de informação importante
+para a produção de novas pesquisas que também deveria aparecer relacionada em um
+processo de busca são as relações que ocorrem entre os diversos atores envolvidos no ciclo de
+geração de conhecimento, como, por exemplo, pesquisadores, gestores e instituições
+científicas e de fomento à pesquisa; e ainda entre os objetos de pesquisa e esses mesmos
+atores. Esse tipo de informação, auxilia o pesquisador que está iniciando sua pesquisa a
+identificar seus pares, seus possíveis financiadores, laboratórios e equipamentos científicos,
+possíveis colaboradores e ainda serve como justificativa ou como fundamento para outras
+interpretações.
+Há, portanto, uma profícua interlocução entre todas as entidades existentes no mundo
+da pesquisa, o que torna o diálogo entre os recursos de informação e demais objetos um tema
+importante a ser investigado pela Ciência da Informação e um percurso necessário para a
+
+inovação nos processos de C & T. Entretanto, para que esses objetos de informação possam
+fazer parte das infraestruturas de informação voltadas para a pesquisa, esses recursos precisam
+ser formalizados, sendo passíveis de processamento por computador para que possam ser
+oferecidos na forma de serviços pelos sistemas de informação existentes. Isto significa dizer
+que os sistemas de informação precisam permitir que esses novos ativos informacionais sejam
+estruturados, armazenados, preservados, intercambiados, disseminados e reusados.
+Este estudo apresenta algumas relações entre entidades do mundo da pesquisa que são
+claras e têm os seus significados imediatamente reconhecidos dentro de um domínio
+específico, como por exemplo “autoria” e “orientação”. Porém, diversas relações possíveis de
+se estabelecerem entre os objetos de pesquisa e entre atores do universo de pesquisa, ricas de
+significados, não estão explicitadas, padronizadas e, consequentemente, não são facilmente
+identificadas, ou não têm os seus contornos semânticos bem delineados, impossibilitando do
+ponto de vista prático, que elas sejam registradas, automatizadas e incorporadas aos sistemas
+de informações como OPACS e às redes de repositórios digitais. Como desdobramento direto,
+essas relações implícitas não podem ser caracterizadas como recurso informacional e não
+podem ser reutilizadas pela comunidade de pesquisadores.
+Considerando o modelo atual de comunicação científica, o problema fica ainda mais
+evidente ao se constatar que, apesar da apropriação de tecnologias avançadas pelos sistemas
+de informação para a pesquisa, atualmente continua-se tendo como resultado final da pesquisa
+uma publicação digital - que é um fac-símile da publicação impressa tradicional – isolada e
+independente dos outros objetos digitais ao qual está vinculada objetiva ou subjetivamente.
+Por exemplo, uma publicação em formato PDF. Essa concepção ignora e não consegue
+expressar a diversidade e a riqueza de conteúdo dos produtos de pesquisa – por exemplo,
+dados e conjunto de dados, programas de computadores, anotações, multimídias e simulações
+– ou seja, não revelam a as relações que se estabelecem entre as entidades intervenientes no
+processo de geração de conhecimento científico, o que dificulta a compreensão da pesquisa
+como um todo complexo.
+Um modelo de sistema de informação que considere as vinculações semânticas entre
+as diversas entidades é “fortemente demandado pela comunidade, posto que, tipicamente, os
+cientistas não produzem unicamente textos (artigos, livros, etc), mas também relacionamentos
+científicos entre objetos de pesquisa”, enfatiza Parinov (2013, p.17), que vai além e
+argumenta que as técnicas existentes para visualizar tais relacionamentos – por exemplo, os
+mecanismos de citação – ainda não estão suficientemente avançados para os desafios da
+moderna informação científica e tecnológica (PARINOV, 2013, p.17).
+
+No escopo das Ciências Nucleares, assim como em outras áreas, publicações e objetos
+relacionados são processados separadamente como objetos individuais, dessa forma, a
+conexão entre eles não é fácil de ser identificada. “Como as relações entre objetos de pesquisa
+não são oferecidas pelos sistemas de informação atuais, fica difícil de constatar se objetos
+relacionados existem e estão disponíveis”, argumentam Woutersen-Windhouwer e Brandsma
+(2009, p.21) no Relatório do SURF Foundation.
+A concepção dos sistemas de informação para a pesquisa, especialmente os moldados
+pelo padrão CRIS – Current Research Informations System – exploram o conceito de relações
+como um recurso relevante para todo o ciclo de gestão da pesquisa. O Relatório CERIF deixa
+clara essa importância quando define informação para a pesquisa como “a informação sobre
+entidades de pesquisa, tais como pessoas, projetos, organizações, publicações, patentes,
+produtos, fomento, etc e o relacionamento (grifo nosso) entre eles” (EUROCRIS, 2012, p.2).
+As relações relevantes e flexíveis, a possibilidade de intercâmbio em formatos padronizados
+XML e a especificação de uma matriz semântica para essas relações constituem instrumentos
+poderosos para a formulação de sistemas de informação escaláveis e orientados à qualidade.
+O modelo aqui apresentado via interfaces para um sistema de agregação de objeto
+digital complexo é um dos resultados de uma pesquisa de tese que argumentou a favor de
+trazer os padrões de vinculações semânticas praticadas no ambiente CRIS para as publicações
+científicas e acadêmicas, permitindo que, dessa forma, elas sejam integradas semanticamente
+com dados e outros objetos de pesquisa, podendo explicitar também os papéis de cada ator
+envolvido. Este modelo foi denominado de Publicação Ampliada (SALES, 2014).
+Uma publicação ampliada pode ser definida como um novo modelo de publicação que
+expande as fronteiras da informação para além do texto científico formal, possibilitando que o
+leitor amplie seu conhecimento por meio de conexões semânticas com outros tipos de
+informações digitais importantes para a compreensão da pesquisa relatada nas publicações
+científicas. São exemplos de informações que podem estar relacionadas semanticamente em
+uma publicação ampliada, dados de pesquisa, informações sobre o pesquisador, sobre a
+instituição que subsidia a pesquisa, sobre os laboratórios e equipamentos utilizados na
+realização da pesquisa, informações históricas sobre o projeto, informações ilustrativas,
+documentos relacionados, entre outros. Este conjunto de dados e informações digitais quando
+acoplados à publicação científica, muda o status da publicação de objeto simples para objeto
+complexo. A literatura internacional de área de Ciência da Informação ainda é pequena no que
+tange a esse tipo de publicação (VERNOOY-GERRITSEN, MARJAN, 2009a, 2009b;
+WOUTERSEN-WINDHOUWER, 2009; ZUDILOVA-SEINSTRA, KOERS, HEEMAN,
+
+AALBERSBERG, 2012; BARDI, ALESSIA; MANGHI, PAOLO, 2014). No entanto, é
+possível encontrar uma vasta produção que ressalta a necessidade de novos modelos de
+publicação (KIRCZ, 2001, 2002; AALBERSBERGH, DUNHAN, KOERS, 2011; GREY,
+2007, HEY, TANSLEY, TOLLE, 2009), bem como propostas de outros novos modelos de
+publicação, como
+
+publicações compostas
+
+(HUNTER, 2006; CHEUNG ET AL, 2008),
+
+publicações sobrepostas (GINSPARG, 1997; VAN DE SOMPEL ET AL, 2004; CAVALLI,
+2009) publicações semânticas (ERICKSON, 2007a 2007b, SHOTTON, 2009; NESIC 2009,
+2010) entre outros .
+É importante destacar que o modelo que será aqui apresentado não é um modelo
+conceitual e sim uma representação gráfica de uma abstração de uma parte da realidade,
+conforme em Sayão (2001) onde um modelo é compreendido como “uma criação destinada a
+representar uma realidade e alguns de seus aspectos, a fim de torná-los descritíveis e algumas
+vezes observáveis” (SAYÃO, 2001, p.83).
+O presente trabalho visa expor o modelo de publicação ampliada que considere as
+relações entre as entidades e objetos e as interfaces recomendadas para a sua criação. Essas
+interfaces são: interface de criação e edição de publicações ampliadas e interface de
+apresentação (hipertextual, gráfica e XML). A apresentação dessas interfaces será de
+fundamental importância para compreensão do modelo de publicação ampliada proposto.
+2 LEVANTAMENTO DAS ENTIDADES PARA PROPOSIÇÃO DO MODELO DE
+PUBLICAÇÃO AMPLIADA PARA A ÁREA NUCLEAR
+A metodologia utilizada para estabelecimento do modelo se pautou na caracterização
+da área nuclear por meio de abordagens de análise de domínio de Hjorland (2002). As
+abordagens escolhidas foram: análise da estrutura dos sistemas de informação científica no
+domínio das Ciências Nucleares e análise da estrutura da Instituição científica para a qual o
+trabalho foi desenvolvido – neste caso a Comissão Nacional de Energia Nuclear - CNEN e o
+Instituto de Engenharia Nuclear – IEN. Por meio dessas abordagens foi possível identificar os
+elementos que iriam compor o modelo.
+Além disso, a concepção de um modelo de publicação ampliada para a área nuclear
+seguiu de perto alguns padrões, recomendações e pressupostos já estabelecidos, sendo os
+principais os seguintes: Recomendações sobre a criação de publicações ampliadas da SURF
+Foundation - Enhaced Publications: Linking Publications and Research Data in Digital
+Repositories (2009b); Relatórios da EROCRIS: CERIF 1.3 Full Data Model (FDM):
+Introduction and Specifications (2007) e CERIF 1.3 Semantics: Research Vocabulary (2010);
+
+Vocabulários, taxonomias e ontologias consagradas e de ampla aplicação nas áreas científicas,
+por exemplo: CITO - Citation Typing Ontology, DoCo - Document Components Ontology,
+SKOS - Simple Knowledge Organization System, CERIF etc.
+O roteiro metodológico seguido para a identificação dessas entidades foi: 1)
+Mapeamento dos temas abordados nas linhas de pesquisa do IEN; 2)Mapeamento dos dados
+gerados a partir das pesquisas no IEN; 3)Mapeamento dos e-prints gerados no IEN;
+4)Mapeamento das entidades envolvidas no desenvolvimento das pesquisas no IEN;
+5)Mapeamento das relações existentes entre as entidades que representam as pesquisas no
+IEN.
+As três primeiras etapas foram delineadas tendo como base uma entrevista guiada feita
+com os líderes de áreas temáticas e a análise dos assuntos presentes nos cadernos de áreas
+temáticas – documento que formaliza a existências das linhas de pesquisa do IEN. Essa
+análise de assunto foi realizada utilizando como instrumento terminológico o tesauro do
+International Nuclear Information System – INIS e expertise de um indexador especialista na
+área nuclear.
+A quarta etapa, isto é, o mapeamento das entidades envolvidas no desenvolvimento do
+IEN se pautou no modelo CERIF 1.3 já disseminado na Comunidade Europeia para o
+tratamento de informações sobre pesquisa, sendo adaptado, porém, à realidade do IEN.
+Assim, no domínio das Ciências Nucleares, as entidades definidas operacionalmente foram:
+E-PRINT; DADO DE PESQUISA; PROJETO; PESSOA e ORGANIZAÇÃO.
+A partir da definição dessas entidades, a quinta etapa consistiu no mapeamento das
+possibilidades de relações entre cada uma delas. Essas entidades foram combinadas através do
+método de arranjo, onde para cada par de entidades considerou-se uma entidade fonte e uma
+entidade alvo. Para cada par “FONTE_ALVO” foi levantado em Vocabulários, Ontologias e
+Taxonomias existentes as possibilidades de relações. Quando relações necessárias não foram
+encontradas nas Ontologias existentes, essas relações foram criadas e colocadas à parte em
+um documento denominado VOC-IEN.
+Seguindo esse roteiro metodológico foi possível obter todos os elementos necessários
+para a proposição de uma interface de criação de publicação ampliada e de um modelo geral e
+outro específico.
+3 PROPOSTA DE INTERFACES PARA PUBLICAÇÃO AMPLIADA
+A ausência de formalização e de padronização semântica das relações que ocorrem no
+universo de pesquisa da área de Ciências Nucleares, representado aqui pelo IEN, é um
+
+problema que está presente não apenas no âmbito da criação de publicações ampliadas. Esta
+lacuna pode ser identificada na maioria dos instrumentos de organização do conhecimento já
+existentes no domínio da área nuclear, como pode ser constatado no Tesauro do International
+Nuclear Information System (INIS).
+Por outro lado, a criação de novos modelos de publicação científica para a área nuclear
+é algo fundamental, haja vista que as pesquisas nesse domínio são de natureza complexa,
+interdisciplinares e de geração intensiva de dados digitais com grande potencial de reuso.
+Assim, um modelo de publicação que revele essa complexidade, essa multidisciplinaridade e
+acople esses dados digitais, que também são resultados de pesquisa, é uma necessidade
+importante para a comunidade nuclear. Desta forma, a criação de publicações ampliadas deve
+torna-se parte do ambiente natural de trabalho do cientista nuclear.
+O Relatório de Vehaar (2008) - publicado em 2008 pelo Digital Repository
+Infrastructure Vision for European Research II -DRIVER-II - sobre modelo de objetos digitais
+complexos -definiu o termo enhanced publications- ou publicação ampliada, tradução que
+vem sendo adotada no Brasil - como “objetos digitais compostos que combinam e-prints com
+um ou mais recursos de dados, um ou mais registros de metadados, ou qualquer combinação
+destes”. Este relatório argumenta a favor de que ferramentas simples devem ser desenvolvidas
+e disponibilizadas para que os membros das comunidades acadêmicas e científicas possam,
+eles mesmos, arquivar seus dados, a sua descrição e a relação entre eles em repositórios
+especificamente desenvolvidos para esse fim. A ideia acolhida pelo modelo proposto é
+apresentada na forma de uma camada sobreposta ao repositório de dados do IEN, aqui
+denominada “Interface de criação e edição de publicações ampliadas”, apresentada na Figura
+1, mais adiante.
+O Relatório de Vehaar (2008) identifica ainda uma série de requisitos fundamentais
+para a composição de objetos digitais complexos que assegurem a sua capacidade de
+intercâmbio, preservação e acesso, conforme se espera das publicações ampliadas. Tomando
+os pressupostos de padronização preconizados pelo Relatório como base para a especificação
+das interfaces de autoria de publicações ampliadas para a área nuclear, torna-se necessário a
+conformidade com dois pontos de fundamental importância para o conceito de publicação
+ampliada que está sendo proposto. São eles: 1) Deve ser possível registrar a autoria da
+publicação ampliada e dos itens de informação que a compõem. 2) Deve ser possível registrar
+as relações entre os recursos Web que fazem parte da publicação ampliada.
+Considerando o primeiro ponto, é necessário que haja uma distinção clara entre o autor
+da publicação ampliada e os autores das partes que a compõem. Autores de um e-print e de
+
+um particular conjunto de dados são agentes responsáveis pelo conteúdo intelectual desses
+recursos, enquanto o “autor da publicação ampliada como um todo é o agente que decidiu
+combinar esses vários recursos na forma de um único objeto composto” (VEHAAR, 2008,
+p.107).
+Considerando o segundo item, o modelo proposto estipula que além de registrar os
+dados de pesquisa e as informações que os contextualizam – expressos por metadados - o
+pesquisador possa também estabelecer ligações entre esses dados e os diversos outros objetos
+de pesquisa através de interfaces Web, criando objetos digitais compostos com valores
+semânticos entre eles. Esse objeto composto que resulta da agregação configura outra
+publicação cujo autor é o pesquisador que reuniu os objetos de pesquisa e estabeleceu as
+relações semânticas entre eles.
+Dessa forma, links entre objetos informacionais que portem significados podem ser
+criados diretamente por pesquisadores formando agregações na forma de publicações
+ampliadas. Essas agregações podem ser registradas com indicação explícita de quem é o autor
+da agregação e responsável por explicitar semanticamente conhecimento, opiniões
+profissionais, comentários ou hipóteses científicas reveladas pelos links semânticos
+(PARINOV, 2013). O registro das relações é acompanhado pela referência à taxonomia de
+relações, que apontam para ontologias e vocabulários científicos que conferem significado a
+este registro.
+A agregação formada pelos links pode ser depositada por seus autores no Repositório
+Digital como um recurso independente e identificado por URI própria, cujo acesso depende
+das políticas praticadas pela instituição, mas que no modelo proposto é desejável que seja
+livre e disponível via interface Web.
+3.1 INTERFACE DE CRIAÇÃO E EDIÇÃO DE PUBLICAÇÕES AMPLIADAS
+Esta seção apresenta o fluxo que um autor deve seguir na criação de uma publicação
+ampliada, mostrando as ações necessárias desde a identificação do objeto, passando pelo
+estabelecimento de relações, até a adição de comentários conforme necessidade do autor.
+Estas ações são executadas na interface de criação e edição de uma publicação ampliada.
+A Figura 1 representa o fluxo de ações requeridas para o registro de relações entre
+objetos de pesquisa no ambiente do repositório do IEN. Essas ações são controladas pela
+interface de autoria/edição de publicações ampliadas. As ações requeridas para compor uma
+publicação ampliada são as seguintes: Ação 1 – a interface exibe um objeto de pesquisa (eprint, dado, projeto) acessado via mecanismos de recuperação do repositório. Ação 2 - a
+
+interface oferece a opção da criação de uma publicação ampliada ancorada no objeto
+apresentado. Ação 3 – a interface solicita a identificação, na forma de URI, do recurso que se
+quer vincular à tese. Esse recurso é denominado entidade-alvo. Ação 4 – a interface solicita
+identificar o tipo da entidade-alvo: e-PRINT, DADO, PROJETO, PESSOA ou
+ORGANIZAÇÃO. Ação 5 – identificado o tipo da entidade-alvo, é definido o tipo de relação
+- no exemplo EPRINT_DADO - a partir daí a interface consulta a Taxonomia de Relações e
+exibe as relações de partida já definidas. Caso as relações exibidas não contemplem a
+representação que o pesquisador tem em mente, há opção de registrar uma nova relação. Ação
+6 – a interface confirma o estabelecimento do link semântico entre as entidades origem e alvo
+apresentando uma representação gráfica da agregação. No caso do exemplo, o link semântico
+que se estabelece entre o e-print e os dados é “cita como fonte de dados” e tem o significado
+definido pela ontologia correspondente. Ação 7 – gera a publicação ampliada e seus
+metadados essenciais: autor, identificação e data da última versão. Ação 8 – opcionalmente o
+autor é solicitado a explicar ou a fazer comentários sobre o valor semântico da agregação que
+ele está criando (não representado na figura).
+O sistema registra também os dados mínimos sobre o autor que permitam informá-lo
+sobre possíveis mudanças ocorridas nos objetos agregados e da necessidade de revisar o valor
+semântico do link. A Figura 1 a seguir mostra o fluxo das ações de construção da publicação
+ampliada em uma proposta de interface de autoria e edição de publicação.
+
+Figura 1: Interface de criação e edição de publicações ampliadas
+Fonte: Os autores
+É importante considerar que ao selecionar as relações de ontologias já existentes, o
+pesquisador volta a pensar sobre o seu objeto de pesquisa e pode identificar outras possíveis
+relações sobre as quais não havia pensado. Esse fato pode estimular a criação de outras
+inovações ainda não pensadas pelo pesquisador. Por outro lado, neste momento, o pesquisador
+pode identificar a necessidade de novas relações que não existem na taxonomia pré-definida.
+Quando a relação que o pesquisador quer estabelecer não se encontra representada na
+Taxonomia de Relações (APÊNDICE A), que é, por princípio, uma taxonomia de partida, a
+interface do sistema abre a possibilidade de o pesquisador registrar uma nova relação. O fluxo
+de registro de uma nova relação encontra-se ilustrado na Figura 2.
+As ações necessárias são as seguintes: Ação 1 – o pesquisador assinala a opção de
+“criar nova relação”; Ação 2 – a interface solicita informar o tipo de relação, no exemplo a
+relação assinalada automaticamente é EPRINT_DADO; Ação 3 – a interface solicita entrar
+com a relação, por exemplo: “confirmado por”. Ação 4 – a interface solicita informar se a
+relação foi extraída de alguma ontologia ou vocabulário conhecido pelo pesquisador. Ação 5
+– opcionalmente o pesquisador é solicitado a justificar ou fazer comentários sobre o registro
+da nova relação.
+
+Figura 2: Interface do fluxo de registro de nova relação
+Fonte: Os autores
+Considerando que tanto as agregações que caracterizam as publicações ampliadas
+como as relações semânticas podem ser criadas no ambiente do repositório de modo
+descentralizado, os procedimentos de registro desses recursos implicam também na
+implantação de dispositivos de moderação e validação – que incluem filtros éticos e de gestão
+de direitos - para determinar quais os recursos que devem estar disponíveis publicamente.
+Esses procedimentos devem ficar a cargo de um curador, que pode ser um bibliotecário ou um
+cientista de dados.
+Além disso, as relações podem ser registradas de forma independente da criação da
+publicação ampliada. As relações que forem validadas pelos gestores do repositório vão
+incrementar a Taxonomia de Relações (APÊNDICE A).
+Dessa forma, alinham-se aos requisitos mais gerais os requisitos específicos que
+definem a aplicação no âmbito do IEN, que implica na adoção de links entre os componentes
+da publicação ampliada que possam ser portadores de significado, ou seja, links semânticos
+que estejam associados a vocabulários e ontologias científicas de relevância para os
+
+pesquisadores no domínio do Instituto. A Taxonomia de Relações é o instrumento concebido
+para cumprir esse papel.
+A pesquisa evidenciou que é possível e, muitas vezes necessário, registrar as relações
+semânticas como recurso informacional, identificadas por URI, com autoria reconhecida e
+associada a algum vocabulário semântico de partida, tornando-as publicamente disponíveis
+para uso no ambiente do Repositório. As relações disponíveis constituem-se ferramentas que
+permitem aos pesquisadores reconstruírem significados e delinearem novas unidades de
+pensamento a partir da vinculação de objetos de pesquisa já registrados, definindo um novo
+objeto intelectual. Os cientistas podem trabalhar com os objetos de pesquisa como blocos de
+encaixe, expressando sua opinião e estabelecendo novas formas, novos objetos intelectuais
+que podem ser compartilhados e dessa forma definindo novos modelos para ideias de pesquisa
+e para problemas reais. Esta proposta remete à origem da Teoria da Classificação Facetada de
+Ranganathan (1967), em que este teórico formula sua teoria com base na ideia de blocos de
+encaixes, propondo um esquema de classificação em que diversos conceitos pudessem ser
+combinados formando um novo assunto.
+A padronização das relações, concretizada pela Taxonomia de Relações, e a
+disponibilidade pública via interface Web dos seus termos e estrutura abrem a possibilidade
+inédita para que cada pesquisador individualmente ou em grupo expresse sua opinião sobre os
+múltiplos relacionamentos que podem existir entre as entidades do seu domínio específico de
+pesquisa e possa compartilhar a sua experiência. Isso possivelmente colabora para o
+estabelecimento de um ambiente propício à criatividade científica, onde a combinação
+semântica dos dados pode levar à formulação de novas pesquisas teóricas ou aplicadas.
+3.2 INTERFACE DE APRESENTAÇÃO DE PUBLICAÇÕES AMPLIADAS
+
+A visualização via interface Web das agregações e dos valores semânticos dos links é
+uma finalização importante para o modelo proposto. A possibilidade de haver uma
+manifestação gráfica da agregação que seja navegável é um complemento que pode contribuir
+para o avanço dos serviços oferecidos pelos repositórios digitais, principalmente para aqueles
+que gerenciam dados de pesquisa e e-prints, que é precisamente o caso do repositório do IEN.
+No ambiente do repositório do IEN, quando um item de informação for recuperado,
+será informado se faz parte da agregação de uma ou mais publicações ampliadas; caso
+positivo, será oferecida a possibilidade de recuperar as agregações ou apenas o item que
+interessar ao usuário. O modelo de publicação ampliada pode se manifestar em três tipos de
+
+formas de visualização: hipertextual, gráfica e no formato OAI-ORE/RDF. Essas
+manifestações estão representadas na Figura 3, e descritas a seguir.
+
+Figura 3: Formas de apresentação do modelo de publicação ampliada
+Fonte: Os autores
+A) Apresentação hipertextual - está ancorada num e-print reformatado num padrão de
+documento hipertextual que apresenta abas indicando as entidades alvo que compõem a
+publicação ampliada. Para cada entidade alvo é apresentado um menu com as relações
+semânticas existentes que são clicáveis e conduzem à entidade alvo correspondente.
+B) Apresentação gráfica - Mostra numa visão gráfica, a totalidade das agregações da
+publicação ampliada explicitadas, incluindo as vinculações existentes entre as diversas
+publicações ampliadas que estão vinculadas entre si. O gráfico permite a navegação entre a
+totalidade dos recursos agregados, compreendendo a navegação entre publicações ampliadas,
+formando, assim, uma rede semântica clicável.
+C) Apresentação em XML, no formato de agregação OAI-ORE - Como o OAI-ORE
+define padrões para a descrição e intercâmbio de agregações de recursos Web, o formato pode
+ser usado para descrever publicações ampliadas e facilitar o intercâmbio entre instituições.
+Além disso, a serialização em RDF permite o harvesting da descrição via o protocolo OIAPMH (WOUTERSEN-WINDHOUWER; BRANDSMA, 2009, p.137)
+
+É importante destacar que em todas as manifestações, os seguintes dados são apresentados
+de acordo com cada tipo de entidade que está sendo agregada: 1) Identificação da publicação
+ampliada; 2) Identificação de cada objeto que compõe a publicação ampliada; 3) Autoria da
+publicação ampliada; 4) Autoria de cada componente; 5) Dados sobre o versionamento da
+publicação ampliada e dos objetos componentes; 6) Relações semânticas entre pares de
+objetos.
+Com o intuito de melhor compreensão, a Figura 4 exibe o exemplo de uma manifestação
+hipertextual de uma possível publicação ampliada de uma tese. Os objetos de pesquisa e
+alguns dos atores envolvidos na agregação são apresentados com os respectivos links
+semânticos.
+
+Figura 4: Exemplo de publicação ampliada e respectivas relações semânticas
+Fonte: Os autores
+Textualmente pode-se descrever a publicação ampliada apresentada na Figura 4 do
+exemplo da seguinte forma: A tese (E-PRINT) tem autoria de Luana (PESSOA); foi
+desenvolvida a partir do projeto de qualificação (PROJETO) no âmbito do programa de pósgraduação do IBICT (ORGANIZAÇÃO) e com o apoio institucional do IEN
+(ORGANIZAÇÃO); teve como orientador a Profa. Rosali (PESSOA) e contou com correções
+do Prof. SAYÃO (PESSOA); a tese descreve o levantamento realizado sobre a produção de
+dados do IEN (DADOS) e utilizou também como fonte de dados entrevistas com
+pesquisadores (DADOS) e os cadernos de áreas temáticas do IEN (PROJETO); a tese está
+
+baseada no relatório “Enhanced Publications: Linking Publications and Research Data in
+Digital Repositories” (E-PRINT) e está de acordo com o padrão “CERIF 1.3 Full Data
+Model (FDM): Introduction and Specification” (E-PRINT); além disso inclui trecho do artigo
+“Dados de pesquisa: contribuição para o estabelecimento de um modelo de curadoria digital
+para o país” (E-PRINT); a pesquisa é divulgada pelo blog “Documentos Ampliados” (EPRINT) .
+Tomando um grau a mais de formalização, traduzindo as relações presentes
+(sublinhadas) por meio da Taxonomia de Relações, e identificando as entidades por meio dos
+seus URIs o Quadro 1, apresenta todos os elementos que compõem a publicação ampliada,
+exemplificada na Figura 4.
+Quadro 1: Elementos que compõem o exemplo da publicação ampliada da pesquisa-tese
+PUBLICAÇÃO AMPLIADA
+AUTOR: Luana Farias Sales
+TITULO: Pesquisa tese sobre publicações ampliadas para a área de ciências nucleares
+IDENTIFICADOR:CARPEDIEN.IEN.pesquisa_tese_luana
+DATA DA ÚLTIMA VERSÃO: 23junho de 2014
+ENTIDADE FONTE
+AUTOR: Luana Farias Sales
+TITULO: Integração semântica de publicações científicas e dados de pesquisa: proposta de modelo de publicação ampliada para a área
+de ciências nucleares
+TIPO: EPRINT
+ENTIDADES ALVO
+TAXONOMIA DE RELAÇÕES
+ENTIDADE
+
+TIPO
+
+CLASSE DE
+IDENTIFICADOR
+
+ONTLOGIA
+
+RELACIONAME
+NTO
+
+RELAÇÃO
+
+/
+VOCABULÁ
+RIO
+
+Luana
+
+PESSOA
+
+lattes.cnpq.br/9090064478702633
+
+EPRINT_PESSOA
+
+Autoria
+
+VOC_IEN
+
+Profa. Rosali
+
+PESSOA
+
+lattes.cnpq.br/1722582102636346
+
+EPRINT_PESSOA
+
+Orienta
+
+CITO
+
+Prof. Sayão
+
+PESSOA
+
+lattes.cnpq.br/3422623122948389
+
+EPRINT_PESSOA
+
+É corrigido por
+
+CITO
+
+Produção de dados
+
+DADO
+
+CAPRPEDIEN.IEN.dados001
+
+EPRINT_DADO
+
+Descreve
+
+CITO
+
+DADO
+
+CAPRPEDIEN.IEN.dados002
+
+EPRINT_DADO
+
+Cita como fonte
+
+CITO
+
+do IEN
+Entrevistas
+
+de dados
+Caderno de áreas
+
+PROJET
+
+temáticas
+
+O
+
+Projeto
+
+de
+
+PROJET
+
+qualificação
+
+O
+
+IEN
+
+ORG
+
+CAPRPEDIEN.IEN.projeto001
+
+EPRINT_PROJETO
+
+Cita como fonte
+
+CITO
+
+documental
+CAPRPEDIEN.IEN.projeto002
+
+EPRINT_PROJETO
+
+Resulta em
+
+VOC_IEN
+
+www.ien.gov.br
+
+EPRINT_ORG
+
+Obtém apoio de
+
+CITO
+
+IBICT
+
+ORG
+
+www.ibict.br
+
+EPRINT_ORG
+
+Autor
+
+CERIF
+
+institucional
+Dados de pesquisa:
+
+EPRINT
+
+contribuição p/ o
+
+http://inseer.ibict.br/ancib/index.php
+
+EPRINT_EPRINT
+
+Inclui trecho de
+
+CITO
+
+/tpbci/issue/view/7/showToc
+
+estabelecimento de
+um
+
+modelo
+
+curadoria
+
+de
+
+digital
+
+para o país
+Enhanced
+Publications
+
+EPRINT
+
+http://dare.uva.nl/document/150723
+
+EPRINT_EPRINT
+
+É base de
+
+Data Cite
+
+EPRINT
+
+http://www.eurocris.org/Uploads/W
+
+EPRINT_EPRINT
+
+Concorda com
+
+CITO
+
+:
+
+Linking
+Publications
+
+and
+
+Research Data in
+Digital Repositories
+CERIF
+
+1.3
+
+Full
+
+Data Model (FDM)
+
+eb%20pages/CERIF-
+
+Introduction
+
+1.3/Specifications/CERIF1.3_FDM.
+
+and
+
+Specification
+
+pdf
+
+Fonte: Os autores
+O Quadro 1 é apenas outra maneira de apresentar a publicação ampliada, mas poderia
+se configurar também como um formulário de entrada de dados para composição de uma
+publicação ampliada em um sistema de informação. A seção a seguir vem mostrar que o
+modelo proposto, além de integrar informações de diversos repositórios, por meio das
+relações, pode também oferecer uma série de serviços, o que expande ainda mais as vantagens
+de uso dessa nova forma de publicação.
+4 MODELO GRÁFICO DE PUBLICAÇÃO AMPLIADA
+Muito além dos serviços básicos de busca e recuperação oferecidos pelos repositórios
+digitais, a camada de registro de relações e de edição, autoria e apresentação de publicações
+ampliadas expande a gama de serviços que pode ser oferecido aos pesquisadores e à
+sociedade em geral.
+O modelo proposto pelo estudo tem um olhar mais atento sobre as questões de dados
+de pesquisa. O fato de os dados formarem agregações na forma de publicação ampliada cria
+um compromisso institucional de armazená-los e preservá-los por longo prazo, para que seja
+mantida a integridade desse novo objeto de informação. A característica de variar com o
+tempo adiciona um grau a mais de complexidade aos dados de pesquisa e exige uma gestão
+dinâmica que só é possível por meio das ferramentas, padrões e boas práticas oferecidas pelas
+metodologias da curadoria digital de dados de pesquisa.
+
+Dessa forma, os dados de pesquisa que antes estavam armazenados em mídias e
+servidores isolados e sujeitos a perdas irreversíveis, têm a sua visibilidade multiplicada
+quando agregados às publicações científicas por meio de links semânticos. Este fato
+determinante amplia o potencial cognitivo – entendido como a capacidade de o objeto ser
+interpretado agora e no futuro – e, naturalmente, o seu potencial de reuso por todas as áreas
+temáticas, quando se fala especificamente do IEN. A oferta dos dados de pesquisa, tratados
+tecnicamente por metadados apropriados e contextualizados pelos demais objetos agregados
+pela publicação ampliada, constitui um novo serviço desenvolvido sobre os dados de
+pesquisa.
+Em relação à geração de indicadores de atividade científica, Parinov e Kogalovsky
+(2014) - no âmbito de suas pesquisas sobre links semânticos voltados para estudos
+cientométricos – esclarecem que: “o monitoramento e o processamento dos links semânticos
+criados nos contextos de um repositório digital produz uma fonte de dados para novos estudos
+cientométricos [..]”. Complementarmente aos indicadores já existentes, os dados provenientes
+desses repositórios permitem uma inspeção profunda sobre as características de impacto e de
+uso de dados e informações por cientistas e organizações, gerando novas modalidades de
+indicadores. A cadeia de relações que é exposta pelas ligações semânticas entre as diversas
+entidades, produtos de pesquisa e atores, expõe mais claramente a dinâmica dos processos
+envolvidos. Uma visualização mais explícita do uso dos produtos de pesquisa podem
+aprimorar o ciclo de comunicação científica e dar maior consistência às métricas de avaliação
+da atividade de pesquisa.
+A cadeia de ligações semânticas entre as entidades envolvidas mostra com clareza os
+produtos gerados por instituições, laboratórios, projetos e pesquisadores; os desdobramentos
+em artigos, livros, materiais didáticos, software e patentes; os financiadores; as entidades
+intervenientes externas e ainda o possível retorno social das atividades de pesquisa. O
+processamento por computador dessas informações pode criar instrumentos de gestão
+inéditos, que se compatibilizam com os serviços preconizados pelo padrão CRIS – Current
+Research Information System.
+A apresentação dos produtos de pesquisa e de seus principais atores agregados
+semanticamente exibem uma contextualização que pode estar na forma de serviços de
+informação úteis para as esferas sociais fora do mundo científico e acadêmico, ou para
+instituições ou pessoas que tenham alguma responsabilidade política, gerencial, filosófica,
+educacional ou financeira em relação à pesquisa científica, ou para o cidadão – que contribui
+
+com seus impostos para a manutenção de toda a estrutura - que deseja entender mais
+claramente o que se passa no misterioso e complexo mundo da ciência.
+Por fim, é importante considerar que os serviços podem ser criados de acordo com as
+necessidades específicas de cada área ou de cada instituição. Assim, a seção a seguir
+apresenta o modelo de publicação ampliada construído para o contexto do IEN.
+Neste ponto em que todas as entidades, relações, interfaces e fluxos estão
+estabelecidos, a abordagem descritiva adotada até aqui para a formulação de um modelo
+conceitual de publicação ampliada para a área de ciências nucleares - instanciada pelo IEN pode ser expressa por representações gráficas. Estas representações se encaminham na direção
+de ilustrar que se confirma a hipótese de que através de processos que permitam conferir
+significados consistentes às relações entre os diversos recursos agregados é possível formular
+publicações ampliadas que expressem mais claramente a complexidade e a sofisticação dos
+processos de pesquisa da área nuclear.
+A Figura 5 representa – com as limitações de uma linguagem não formal – a
+arquitetura de um sistema voltado para a criação, gestão e apresentação de uma publicação
+ampliada genérica. Junta-se ao modelo a camada de registro de relações semânticas que
+adiciona qualidade de expressar semanticamente as relações entre os recursos de informação
+que estão agregados, que é uma contribuição importante da presente pesquisa. O dispositivo
+que padroniza as relações e as estruturas em forma de uma taxonomia considera as relações já
+padronizadas pelas principais ontologias científicas, garantindo consistência na atribuição de
+semântica aos links e abrindo também a possibilidade de interoperabilidade com outros
+sistemas.
+
+Figura 1: Modelo de publicação ampliada
+Fonte: Os autores
+A Figura 5 ilustra a base para a definição dos fluxos na criação de publicações
+ampliadas que atendam às especificidades da área nuclear representada pelo IEN, na
+qualidade de campo empírico. Essas especificidades foram padronizadas na forma de uma
+taxonomia que foi criada para atender especificamente o contexto do IEN – VOC-IEN
+(APÊNDICE B). Dessa forma, tomando como base a representação da Figura 5, é proposto o
+modelo representado pela Figura 6, onde novas camadas são adicionadas para expressar os
+requisitos do IEN.
+
+Figura 6: Fluxo de construção de publicação ampliada para o IEN
+Fonte: Os autores
+Analisando brevemente o modelo, tem-se:
+1.
+
+DEFINIÇÃO DAS ENTIDADES DO IEN – representa o processo de análise do
+
+levantamento de dados (questionário, entrevistas, cadernos temáticos, conversas registradas,
+etc.) para a definição das entidades de partida que farão parte do modelo; para isso são
+considerados também os padrões adotados pelos principais sistemas voltados para a pesquisa.
+2.
+
+DEFINIÇÃO DAS RELAÇÕES ENTRE AS ENTIDADES – a partir do levantamento
+
+dos fluxos de pesquisa do IEN é definido um conjunto de relações que se estabelecem entre
+
+produtos de pesquisa e atores; essas relações são estruturadas duas a duas tomando como base
+o padrão CERIF; o resultado dessa operação é o conjunto de CLASSES DE
+RELACIONAMENTOS que servirão de base para a estruturação de uma taxonomia.
+3.
+
+REGISTROS DAS RELAÇÕES SEMÂNTICAS DO IEN – as relações são então
+
+formalizadas tomando como base as ontologias científicas mais conhecidas e as relações
+específicas do IEN denominada VOC-IEN; essas relações são estruturadas, tomando como
+base as CLASSES DE RELACIONAMENTOS, na forma de uma taxonomia denominada
+“TAXONOMIA DE RELAÇÕES”. (APÊNDICE B) Esta operação, como já vista, é realizada
+através de uma interface própria, mostrada na Figura 2, pelo pesquisador e/ou bibliotecário.
+4.
+
+CRIAÇÃO DA PUBLICAÇÃO AMPLIADA - os recursos informacionais (dados, e-
+
+prints, projetos) e os atores (pessoas e organizações) são agregados e a relação entre eles é
+assinalada pelo pesquisador tomando como base a Taxonomia de Relações; recursos externos,
+como dados da Plataforma Lattes e da base de dados do INIS podem ser ligados via URI; o
+bibliotecário tem a prerrogativa de liberar a agregação; esta operação é realizada por uma
+interface própria mostrada na Figura 1, chamada de interface de criação e edição de
+publicação ampliada; são assinalados nessa camada os metadados mínimos necessários à
+gestão e à recuperação da publicação ampliada.
+5.
+
+GESTÃO DE PUBLICAÇÃO AMPLIADA – nessa camada as publicações ampliadas
+
+são gerenciadas tendo em vista o armazenamento, a preservação, a recuperação e o acesso;
+isso inclui também os metadados associados à publicação. Para o IEN, essa gestão será
+realizada pelo seu repositório ampliado como novas interfaces para operar com as publicações
+ampliadas.
+6.
+
+MANIFESTAÇÕES E SERVIÇOS – as publicações ampliadas podem se manifestar de
+
+diversas maneiras: em formato de hipermídia voltado para a apresentação; em formato de rede
+de dados em que várias publicações ampliadas estão interligadas formando uma rede
+semântica; e padrão de objetos compostos OAI-ORE/RDF voltados para a interoperabilidade
+e compartilhamento com outros sistemas e compatibilização com a Web semântica; o sistema
+deve também prover serviços básicos de acesso, recuperação e submissão e ainda
+proporcionar serviços inovadores a partir dos recursos que estão agregados pela publicação
+ampliada, como por exemplo, análises cientométricas e geração de indicadores.
+
+5 CONSIDERAÇÕES FINAIS
+Uma questão evidenciada na tese de Sales (2014) - que gerou o modelo apresentado neste
+trabalho - no que tange a criação de publicações ampliadas, é a necessidade de curadoria dos
+dados de pesquisa que deverão estar integrados na formação de uma publicação ampliada. A
+justificativa se pauta no fato de os dados usados para a formação da publicação ampliada
+precisarem de uma gestão minuciosa, desde a geração do dado, passando pelos procedimentos
+de preservação até os processos de reuso, modificação, compartilhamento e geração de novos
+dados. No entanto, os dados usados na formação de uma publicação ampliada precisam ser
+gerenciados sob os auspícios de uma política nacional de curadoria digital de dados de
+pesquisas, haja vista que a publicação ampliada, enquanto instância de um objeto digital
+complexo, pode ser formada por meio de relacionamentos entre recursos distribuídos em
+diversos repositórios digitais, saindo assim do alcance de uma única instituição.
+Neste sentido, propor diretrizes para uma política de curadoria digital para o país
+significa estabelecer em esfera nacional, normas e padrões comuns que propiciem a
+cooperação entre as instituições de pesquisa e a interoperabilidade entre esses sistemas que
+abrigam os recursos digitais de pesquisa (e-prints, dados de pesquisa, etc). A proposição
+destas diretrizes foi um segundo resultado da tese não apresentado neste trabalho, mas
+intimamente relacionado com o que foi apresentado aqui.
+Apesar dessa pesquisa estar voltada para aplicação em um domínio específico, a
+proposição do modelo deverá considerar explicitamente as estruturas envolvidas na
+formulação de políticas de C&T no país e aspectos geopolíticos, como legislação,
+financiamento,
+
+pesquisa,
+
+educação,
+
+capacitação,
+
+infraestruturas
+
+tecnológicas
+
+e
+
+de
+
+gerenciamento de C&T, etc. A infraestrutura concebida como contextualização do modelo
+proposto serve também para prover uma contribuição para a formação de um ambiente de
+curadoria para o país. Assim, enquanto uma política nacional não é estabelecida, as diretrizes
+propostas podem servir como elementos norteadores para as instituições locais que pretendem
+dar algum tipo de tratamento aos dados de pesquisa, sejam para fins de preservação, de
+gestão, de disseminação via novos modelos de publicação ou qualquer outra finalidade.
+A exequibilidade que o modelo reafirma está diretamente ligada à questão da
+viabilidade técnica de se implementar o conceito proposto com as ferramentas tecnológicas
+disponíveis no Instituto de Engenharia Nuclear – como banco de dados, linguagem de
+software, computadores em rede e armazenamento em massa seguro. Outra questão
+importante está relacionada com a necessidade de se construir um sistema que esteja em
+
+consonância com os padrões internacionais de interoperabilidade, representação e
+preservação, e que esteja próximo aos novos modelos de informação para a pesquisa.
+É preciso considerar ainda, questões políticas, principalmente no que tange o
+compartilhamento de dados de pesquisa na área nuclear. Apesar da existência de um
+repositório, a ausência de política institucional que torne compulsório o depósito dos dados de
+pesquisa pode ser um desafio a ser encarado futuramente. Por fim é necessário expertise para
+fazer a gestão de um sistema complexo, o que está acima das questões tecnológicas e
+redimensiona o papel do profissional da informação.
+A metodologia baseada em ontologias consagradas, enriquecida com relações de um
+vocabulário próprio, mostrou-se adequada ao propósito de conferir significado aos links, posto
+que esses instrumentos oferecem um vasto espectro de relações que cobrem quase a totalidade
+de valores semânticos de partida necessários aos sistemas científicos. Mas para isso houve a
+necessidade de estruturação e classificação dessas relações tendo em vista a futura
+implementação em base de dados.
+Por fim, ao adicionar a arquitetura clássica de um repositório institucional – composto
+de módulos de gestão, armazenamento, recuperação e acesso – uma camada que permite
+“linkar” os recursos, proporciona um ganho sensível na capacidade de os recursos agregados
+transmitirem com mais precisão informação e conhecimento. No entanto, atribuir valores
+semânticos, padronizados e provenientes de vocabulários científicos a esse links, significa
+oferecer ao pesquisador uma nova ferramenta, que extrapola os limites dos sistemas
+convencionais, sem abdicar deles, para expressar a sofisticação do seu trabalho de pesquisa.
+
+

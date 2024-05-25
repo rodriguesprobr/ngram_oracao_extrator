@@ -1,0 +1,732 @@
+
+Comunicação Oral
+
+FERRAMENTAS PARA INDEXAÇÃO AUTOMÁTICA: UMA ANÁLISE
+COMPARATIVA ENTRE O OGMA, PARSER PALAVRAS, LX-PARSER
+E A EXTRAÇÃO MANUAL DE SINTAGMAS NOMINAIS1
+
+Resumo: Avalia e compara ferramentas de extração automática de sintagmas nominais como o parser
+PALAVRAS, OGMA e LX-Parser, usando como referência a extração manual de sintagmas nominais
+e tendo como intuito evidenciar ferramentas e métodos que podem auxiliar na indexação automática.
+Nessa comparação, foram observadas a quantidade de sintagmas nominais identificados, a quantidade
+de expressões que não constituíam sintagmas nominais e a quantidade de sintagmas nominais
+relevantes para descrição de um documento. O experimento tem como finalidade mostrar como as
+ferramentas automáticas de extração se comportam na realização dessas tarefas: extração e/ou
+identificação de sintagmas nominais. Em tese, ao usar os sintagmas nominais, tem-se a recuperação da
+informação sem a perda de sentido estabelecido pela memória discursiva da autoria do documento.
+Dessa forma, com o resultados da comparação entre as referidas ferramentas automáticas, percebe-se
+que apesar do LX-Parser ter tido melhor desempenho em alguns aspectos como extrair um maior
+número de sintagmas nominais do que o PALAVRAS, esse ainda consegue ser melhor pelo número
+menor de erros e a possibilidade de submeter um texto completo à análise do programa, ação que o
+LX-Parser não permite realizar. Sugere, ainda, algumas possíveis soluções para os problemas de
+identificação de sintagmas nominais enfrentados pelas ferramentas automáticas e, assim, o possível
+auxílio na descrição de documentos na organização da informação.
+Palavras-chave: Sintagmas Nominais. Indexação Automática. Ferramentas de Identificação e
+Extração de Sintagmas Nominais. OGMA. LX-Parser. Parser PALAVRAS.
+
+1 INTRODUÇÃO
+Criar novas ferramentas que possibilitem a realização da busca de um usuário e que
+esse se satisfaça é o objetivo dos estudiosos do objeto informação. O cientista da informação
+se preocupa com o processo de “produção, seleção, organização, interpretação,
+armazenamento,
+
+recuperação,
+
+disseminação,
+
+transformação
+
+e uso
+
+da informação”
+
+(GRIFFITH, 1980 apud CAPURRO, 2003, on-line).
+Por meio do processo de recuperação da informação (RI) é que o usuário encontra a
+informação que procura. O processo de RI envolve representação, armazenamento,
+organização e acesso aos documentos. Para tanto, devem ser observadas, também, a
+indexação, a relevância e os termos de índice, assim como os de consulta, pois com a
+evolução da internet, a área de RI vem desenvolvendo cada vez mais métodos e técnicas que
+aprimorem a indexação e a busca de documentos.
+Os sistemas de Recuperação da Informação (SRI) que compreendem a interface de RI,
+o tratamento da informação, seu armazenamento e sua organização (KURAMOTO, 1995)
+adotam termos índices que geralmente são as palavras-chave para indexar documentos
+(SOUZA, 2005) que pode ser feita de forma manual, automática ou mista.
+A indexação automática pode ser tomada como o tratamento prévio que os
+documentos devem passar para serem armazenados em uma base de dados, no intuito de que
+cada documento seja recuperado. Mas será que a indexação automática por meio da extração
+de SNs descreveria documentos e facilitaria a recuperação de documentos? Quais ferramentas
+de extração automática de SNs em textos em língua portuguesa existem na literatura?
+
+As palavras, quando são extraídas de um documento, perdem valores atribuídos pela
+autoria do documento, o que leva a perda de qualquer referência da realidade extralinguística
+do autor (KURAMOTO, 1995). Sendo assim, é necessário que os descritores de um
+documento sejam contextualizados e que representem a informação sem descaracterizá-la.
+Neste contexto, pode-se pensar nos sintagmas nominais (SNs). O SN é definido como a
+menor unidade de sentido do discurso e que possui uma estrutura sintática e lógico-semântica
+(KURAMOTO, 1995) e que tem como núcleo o substantivo ou palavra substantivada. Os SNs
+podem se tornar descritores em SRIs que são softwares buscadores de documentos, o que
+permitiria uma recuperação melhor.
+Diante desse contexto, os objetivos dessa pesquisa consistem em avaliar e comparar
+softwares extratores e identificadores de SNs para textos em Português tais como parser
+PALAVRAS, OGMA e LX-Parser, usando como referência a extração manual de SNs e
+evidenciando as ferramentas e métodos que podem auxiliar na indexação automática.
+O presente artigo se justifica pelo fato de que as ferramentas extração automática de
+sintagmas nominais devem ser comparados entre si para que se possam detectar os problemas
+existentes quanto às metodologias e às ferramentas de extração destes sintagmas nominais em
+língua portuguesa. Tendo, dessa maneira, as ferramentas e as metodologias melhoradas para
+que efetivamente possam ser aplicadas em sistemas de recuperação de informação, fazendo a
+seleção de sintagmas nominais que possam ser usados como descritores documentais no
+intuito de satisfazer as necessidades informacionais do usuário.
+2 REVISÃO DE LITERATURA
+2.1 INDEXAÇÃO AUTOMÁTICA
+Para Navarro (1988), é a tradução do conteúdo de um documento, feita a partir de
+palavras que possibilitem a recuperação. Brito (1992, p. 224) corrobora com Navarro, ao dizer
+que a “indexação, tal qual nós a vemos, é uma tradução lexical das unidades da língua, ou
+ainda uma tradução sintática, quando se trata de exprimir as relações entre as diferentes partes
+do discurso (...)”.
+Souza (2005) aponta para duas fases independentes na indexação. A primeira é
+chamada de análise de assunto (análise conceitual), em que se determina a temática do
+conteúdo. Enquanto que a segunda é a tradução, em que há a representação dos assuntos
+pertinentes identificados.
+Há três dimensões de indexação, segundo Lancaster (2004): a primeira é a
+exaustividade que está relacionada ao adicionar mais termos a indexação; a segundo é a
+
+seletiva que se refere ao processo de quando menos termos são incluídos; e a terceira é a
+especificidade que é referida a tarefa de se usar termos mais específicos que façam com que o
+documento seja compreendido integralmente.
+Holanda e Braz (2012) trazem como conceito de indexação a substituição do texto de
+um documento por uma descrição do conteúdo tratado, no intuito de que as informações
+contidas nesse documento sejam recuperadas.
+Existem três formas de fazer indexação de documentos, sendo a primeira desenvolvida
+pelo homem, chamada de manual, a segunda feita de forma automática pelo computador e a
+terceira é a híbrida que utiliza as duas primeiras técnicas. O foco dessa pesquisa está na
+indexação automática.
+Hjørland (2008) e Lancaster (2004) se referem a Hans Peter Luhn como o autor do
+primeiro método de indexação automática. Esse método considerava a frequência das palavras
+dos títulos dos documentos, no intuito de se criar um índice rotativo. As palavras consideradas
+importantes eram as que tinham uma frequência média, sendo descartadas as palavras vazias
+como os artigos, preposições e conjunções.
+2.2 PROCESSAMENTO DE LINGUAGEM NATURAL
+Os aspectos estudados no PLN são os textos produzidos em diversos gêneros textuais
+e diferentes linguagens (verbais, não verbais, mista, matemática). Esses textos são
+representados por sons, palavras, sentenças e discursos.
+Segundo Pinheiro (2009, p. 04), o PLN tem como principal foco a etapa de préprocessamento que é constituído de fases como “seleção e filtragem de dados, limpeza de
+dados, normalização e parsing, análise semântica e representação numérica dos termos
+extraídos do documento em um vetor no espaço vetorial (BOW – Bag-of-Words)”. Gonzalez e
+Lima (2003, p. 03) argumentam que “o PLN visa fazer o computador se comunicar em
+linguagem humana, nem sempre necessariamente em todos os níveis de entendimento e/ou
+geração de sons, palavras, sentenças e discurso”.
+Pode-se dizer ainda que os métodos estatísticos têm contribuído para os estudos do
+PLN, pois juntamente com a teoria da probabilidade, têm indicado meios para o
+processamento de significados dentro das ferramentas de PLN como os taggers e os parsers
+que serão expostas a seguir.
+Pode-se dizer que os métodos estatísticos ainda subsidiam diversas abordagens do
+PLN; desse modo, lança-se mão dos estudos linguísticos e dos estudos matemáticos para
+compor uma linguagem mista no intuito de fazer com que a máquina se comunique em
+
+linguagem natural, apresentando resultados de análise que auxiliam na busca feita pelo
+usuário.
+2.2.1 Etiquetador Morfossintático (Tagger)
+O reconhecimento das categorias gramaticais é um dos objetivos do PLN, por isso a
+análise morfossintática se faz necessária. A morfologia analisa a estrutura das palavras por
+meio dos morfemas com suas regras de formação e inflexão. Em um sistema de computador, a
+morfologia permite que se armazenem os radicais das palavras e suas formas flexionadas pela
+aplicação das regras de formação da palavra. Já a sintaxe estuda as leis que regem a formação
+de uma sentença de uma determinada língua, apresentando a estrutura sintática da frase. As
+regras sintáticas determinam a linearidade e a hierarquia que existem entre os constituintes de
+uma frase, com base na sua categoria sintática (obrigatória e facultativa).
+Dentro das estratégias do PLN para enfrentar a ambiguidade de termos e buscar os
+significados dos léxicos, entre outros objetivos, está o etiquetador gramatical (tagger) que na
+língua inglesa é denominado de “part-of-speech tagger”. O tagger, segundo Bick (1998), é
+um sistema que tem como meta identificar, por meio de uma tag (etiqueta) a categoria
+gramatical de cada léxico do texto analisado.
+2.2.2 Analisador Sintático (Parser)
+A sintaxe trabalha com as leis que regem a estrutura de uma frase em uma língua, ou
+seja, ela estuda as relações entre os constituintes de uma frase, que podem ser chamados de
+sintagmas que, por sua vez, podem ser conceituados como grupos de elementos linguísticos
+que estão ligados a um núcleo como substantivo, verbo, preposição, adjetivo, advérbio, entre
+outros derivados desses elementos.
+O analisador sintático avalia o agrupamento das palavras, trabalhando a estrutura da
+frase e é denominado de parser, que pode ser entendido como um software que tem por
+finalidade mapear uma sentença, utilizando o léxico e a gramática do sistema (BARROS;
+ROBIN, 2001).
+Para Vieira e Lima (2001), parsers são sistemas que analisam a estrutura das frases e
+seus constituintes. Ainda, para Vieira e Lima (2001, p. 06), “esses sistemas reconhecem
+estruturas válidas a partir de um léxico que define o vocabulário da língua e um conjunto de
+regras que definem a gramática da língua”.
+
+Desse modo, Gonzalez e Lima (2003) ressaltam que a análise sintática é muito
+importante, pois viabiliza o processamento semântico. Para tanto, os parsers podem trabalhar
+com alguns métodos de análise como o top-down, bottom-up, left-corner e tabular.
+O parser top-down faz análise associado à linguagem de programação Prolog, a partir
+da esquerda para direita, respondendo com uma afirmação ou negação sobre a validade da
+sentença na consulta do usuário, identificando sua estrutura sintática e associando argumentos
+aos constituintes representados, o que pode ocasionar, como citam Vieira e Lima (2001, p.
+18), a transformação em outra gramática, pois “é sabido que qualquer gramática recursiva à
+esquerda pode ser transformada em outra gramática que gera a mesma cadeia de palavras, mas
+não é recursiva à esquerda”.
+O bottom-up codifica os léxicos no intuito de combiná-los. Ao encontrar uma palavra,
+ele a reconhece, encontra a próxima que juntos formam um sintagma (VIEIRA; LIMA, 2001),
+ou seja, o parser bottom-up analisa a frase a partir das folhas da árvore de derivação e tenta
+montá-la combinando as regras para chegar a uma estrutura sintática, (BARROS; ROBIN,
+2001; MORELLATO, 2007), não tendo problemas com loop para regras recursivas à
+esquerda.
+Combinando as estratégias dos dois analisadores anteriores (top-down e bottom-up), o
+left-corner, ao encontrar um vocábulo, observa a que categoria de constituintes se inicia tal
+palavra e lida com as regras recursivas à esquerda, de modo que as regras são exploradas uma
+de cada vez (VIEIRA; LIMA, 2001), não tendo problemas com loop (MORELLATO, 2007).
+Já o analisador tabular, chamado também de chart parser, atenta para as subestruturas
+já analisadas e se um retrocesso for mister, a repetição pode ser evitada. Pois, guarda as
+estruturas que já foram analisadas e as reutiliza, se for necessário.
+2.3 SINTAGMAS NOMINAIS (SNS)
+Em 1957, Noam Chomsky, professor do Instituto de Tecnologia de Massachussets
+publica o livro Estruturas Sintáticas que traz uma nova percepção de como a linguagem deve
+ser analisada, ocorrendo o foco no cognitivo do falante e percebendo a linguagem como
+componente criativo do ser humano. Nessa concepção, a natureza da linguagem está ligada a
+estrutura biológica humana, assim, a experiência com outros indivíduos estimula a faculdade
+da linguagem.
+Dubois-Charlier (1977) conceitua sintagmas como sequências de palavras que formam
+uma unidade. Assim, pode-se dizer que os sintagmas são associações de elementos compostos
+em conjuntos, organizados e funcionando conjuntamente.
+
+Há duas classificações para os sintagmas, os essenciais e facultativos. Os essenciais
+são tidos como elementos básicos de uma oração, o sintagma verbal (SV), cujo núcleo é um
+verbo ou uma locução verbal, e o SN (sintagma nominal) que tem como núcleo o substantivo
+ou palavra substantivada. Esses dois tipos de sintagmas são compostos por outros sintagmas
+como o sintagma adjetival (SA), o qual tem como núcleo um adjetivo ou locução adjetiva, o
+sintagma preposicional (SP) que é composto por um núcleo chamado preposição e o sintagma
+adverbial (SAdv) cujo núcleo é um advérbio ou uma locução adverbial.
+O SN é definido como a menor unidade de sentido do discurso e que possui uma
+estrutura sintática e lógico-semântica (KURAMOTO, 1999). Perini et al (1996) conceitua SN
+como uma classe gramatical que se comporta sintaticamente como sujeito, objeto direto e se
+for o caso de ser precedido de uma preposição, pode se comportar como um adjunto
+adnominal ou um objeto indireto.
+Quando o SN é extraído do texto, ele mantém o mesmo significado. Daí a importância
+de tê-lo na organização da informação, pois são elementos identificadores de informação com
+alto poder discriminatório.
+Os SNs podem ser organizados hierarquicamente em forma arbórea, o que, para
+Kuramoto (2002), permite que o usuário filtre com mais fidelidade os resultados de sua
+consulta, assim, os níveis da estrutura dos SNs vão do mais generalizado ao mais específico,
+resultando em uma maior interação do usuário com o sistema e em um maior retorno de
+documentos relevantes.
+Há várias possibilidades na composição de um SN, ou seja, ele não é estático. Sua
+composição pode ser feita ora por único substantivo/pronome (núcleo), ora pela composição
+entre determinantes (DET), núcleo (N) e modificadores (MOD).
+Os determinantes são formados por artigos, pronomes demonstrativos e pronomes
+possessivos, sendo assim, uma classe de palavra fechada. A sua função é especificar um
+nome, sendo anteposto a esse, o que permite uma construção de sua valoração de referência,
+fazendo com que a extração de informações acerca das propriedades semântico-sintáticas dos
+objetos ou entidades as quais sejam referentes se realizem.
+O núcleo de uma SN sempre será um vocábulo com a função nominal. Assim, as
+classes de palavras que se enquadra nessa função são os substantivos, pronomes, numerais e
+palavras substantivas que, por sua vez, são aquelas pertencentes a outras classes, mas que se
+tornam substantivos quando precedidas por um artigo ou por pronome (demonstrativo ou
+possessivo). Desse modo, o SN pode ter como núcleo um substantivo próprio ou comum,
+
+pronome
+
+substantivo,
+
+pronomes
+
+(pessoal,
+
+demonstrativo,
+
+indefinido,
+
+interrogativo,
+
+possessivo, relativo).
+Os modificadores, diferentemente dos determinantes que sempre antecedem o núcleo,
+podem estar antepostos ou pospostos ao núcleo, exercendo a função de caracterizar,
+quantificar, enfatizar e sendo compostos por adjetivos, locuções adjetivas, advérbios e
+locuções adverbiais.
+2.3.2 Identificação e Extração Automática de SNs
+Corrêa et al (2011) afirmam que os SNs são extraídos do texto e analisados a fim de
+facilitar o processo de indexação automática. Dessa maneira, a utilização dos sintagmas
+nominais como recurso de acesso à informação contida em uma base de dados textual se
+apresenta como uma forma alternativa aos SRIs tradicionais, como também apontou
+Kuramoto (1995, p. 03):
+O processo de indexação produzindo uma lista de descritores visa à representação dos conteúdos dos
+documentos. Ou seja, este processo tem como objetivo extrair as informações contidas nos documentos,
+organizando-as para permitir a recuperação destes últimos. Assim, os descritores deveriam ser, obrigatoriamente,
+portadores de informação de maneira a relacionar um objeto da realidade extra-linguística com o documento que
+traz informações sobre este objeto. Contudo, na maioria dos SRI convencionais, os descritores não passam de
+uma simples lista de palavras extraídas dos documentos que constituem as bases de dados.
+
+Souza (2005) coloca que a identificação de sintagmas pode ou não ser fácil, pois,
+segundo Perini (1995), depende da intuição para que a oração seja separada em seus
+constituintes imediatos, feitos a partir de critérios puramente formais.
+Quando se fala de identificação automática de SNs, significa observar programas
+computacionais que identifique as sequências de léxicos que constituem SNs. Sua aplicação
+pode ser feita na RI para criar termos de indexação. Para Santos (2005), a identificação de
+SNs é um problema de classificação, pois associa a cada item do corpus uma etiqueta
+adicional que o classifique como pertencente ou não a um SN.
+Pode-se entender um identificador de SNs como um programa computacional que tem
+a função de retornar sintagmas nominais contidos em um texto, tendo como entrada a frase
+que passa por um pré-processamento em que os léxicos são etiquetados (recebendo categorias
+gramaticais) e submetidos às regras gramaticais de uma língua natural e tendo como saída o
+texto com os SNs marcados.
+Ferramentas de extração automática de SNs são softwares desenvolvidos para fazer o
+processo de etiquetagem que consiste em marcar as palavras de acordo com suas categorias
+gramaticais, dando-lhes traços linguísticos e a partir daí, com a combinação dessas classes
+
+gramaticais, têm-se regras que regem as estruturas formadas pelos constituintes dos SNs.
+Dessa maneira, as ferramentas extraem os SNs, aplicando no texto as regras de estrutura dos
+SNs e detectando, assim, se um determinado conjunto de constituintes está de acordo com a
+regra do sintagma ou não. O programa mostra como saída uma lista de sintagmas nominais
+retirados do texto.
+Os parsers são softwares que realizam a análise sintática das frases, construindo uma
+representação arbórea dos constituintes das mesmas. Os parsers podem ser utilizados como
+identificadores de SN, pois recebem os textos e dão como retorno textos em formatos de
+árvores, ou em gráfico, ou em representação de análise de texto simples, em que os SNs são
+identificados.
+Nessa seção serão descritas superficialmente as ferramentas de extração automática de
+SNs que serão comparadas nesse trabalho, o OGMA e os parsers PALAVRAS e LX-Parser.
+O OGMA faz análise textual, cálculo de similaridade entre documentos e extração de
+SN, identificação da classe do SN e o cálculo da pontuação do mesmo como descritor de
+forma automática.
+O parser PALAVRAS (BICK, 2000), segundo Maia (2008), é um programa que faz
+parte de um conjunto de várias ferramentas multilíngues que compõe o Visual Interactive
+Syntax Learning (VISL), às quais o usuário submete um texto ou até mesmo uma sentença e
+recebe como resultado o texto com a marcação. As marcações indicam elementos linguísticos
+diversos no texto como categorias gramaticais, flexões de gênero e número, sujeito (SN) e
+predicado (SV).
+O parser PALAVRAS apresenta como saída três formatos: forma gráfica; forma
+arbórea; formato de representação da análise de texto. O VISL trabalha com uma gramática de
+restrições que é feita a partir de uma análise em que se observam os morfemas, os grupos de
+palavras e a composição da oração, o que permite uma observação da ortografia, da semântica
+e da sintaxe. Quando feita a identificação dos morfemas, essa ferramenta elimina as
+ambiguidades encontradas em cada léxico. A eliminação se dá por meio de uma aplicação de
+regras que identificam e eliminam as possibilidades de estruturas sintáticas inexistentes.
+Outro analisador é o LX-Parser2 que é uma parte de um conjunto chamado lx suíte.
+Essa ferramenta é constituída de vários programas que fazem algumas tarefas: o lx-lemmatizer
+que identifica a conjugação dos verbos fornecidos; o lx-conjugator que faz a conjugação dos
+verbos; o lx-tagger que marca as categorias morfossintáticas do texto; e o lx-infletor que
+2
+
+LX-Parser. Disponível em: <http://lxcenter.di.fc.ul.pt/tools/pt/conteudo/ LXParser.html>. Acesso em 17
+jun. 2015.
+
+identifica as variantes de gênero e número dos termos. Assim, o LX-Parser é um analisador
+sintático de textos escritos em português baseado em uma abordagem estatística.
+O LX-Parser é desenvolvido pelo NLX-Group. O site do LX-Center, no qual o parser
+está agregado, disponibiliza várias outras ferramentas de trabalho de análise linguística feita
+automaticamente.
+
+3 ASPECTO METODOLÓGICO
+Nos procedimentos, foi utilizada a pesquisa bibliográfica para trazer alguns conceitos
+necessários ao entendimento da indexação automática por meio da extração e seleção de SNs.
+Foi usado, nos procedimentos, o estudo de caso, pois permite estudar a extração
+automática de SNs de forma profunda e exaustiva no intuito de descrever os contextos em que
+as aplicações das metodologias foram realizadas, formular as hipóteses possíveis acerca dos
+problemas não resolvidos pelas ferramentas, explicando as variáveis que determinam os
+vários comportamentos tomados por esses softwares.
+Para avaliar e comparar as ferramentas de extração automática de SNs, fez-se extração
+manualmente dos SNs presentes no conjunto de textos usados para compor o corpus dessa
+pesquisa que é constituído de 30 resumos de teses e dissertações de três áreas diferentes
+(Direito, Nutrição e Ciência da Computação), indexados na BDTD/UFPE, sendo 10 resumos
+para cada área. A escolha desses se deu de forma aleatória, tendo como objetivo observar o
+comportamento das ferramentas automáticas diante de documentos de áreas de domínios
+diferentes.
+Feita a extração de SNs dos textos que compõem o corpus dessa dissertação,
+compararam-se as extrações automáticas de SNs feitas pelo OGMA, pelo parser PALAVRAS
+e pelo LX – Parser, a fim de apresentar as falhas existentes nessas ferramentas e possibilitar o
+melhoramento dos recursos para extração automática desses símbolos linguísticos. Esses
+softwares foram escolhidos porque estão disponíveis livremente na Web.
+Os resumos constituem de texto com formato simples, sendo tiradas as palavras-chave,
+o nome do autor e os dados institucionais, contemplando apenas o título e o corpo em si do
+resumo. Já no LX-Parser, o título do resumo e cada sentença do corpo do resumo (sem o
+nome da autoria nem os dados institucionais) foram submetidos um a um, já que o programa
+analisa a sentença até o primeiro ponto final encontrado. Enquanto no PALAVRAS e no
+OGMA, o título e o corpo do resumo (sem nome da autoria nem os dados institucionais)
+foram submetidos em única vez.
+
+O único programa que faz a extração de SNs é o OGMA, dessa maneira, após a
+extração feita por essa ferramenta, os SNs foram copiados e colocados em editores de texto e
+de planilha. Já o LX-Parser e o PALAVRAS apenas identificavam os SNs, sendo feita a
+extração manualmente para também editores de texto e planilha.
+Logo após a essa etapa, foram computados os SNs totais extraídos por cada ferramenta
+e a extração manual, classificando cada SN de acordo com sua característica e seguindo as
+seguintes categorias: expressões que não constituem SNs; SNs compostos por palavras
+semelhantes às palavras-chave; SNs semelhantes às palavras-chaves.
+O procedimento para a seleção de expressões que, de fato, constituem SNs levou em
+consideração o descarte dos que começavam com preposição ou conjunção, que continham
+verbos em suas estruturas e numerais que não exerciam função de determinantes dos nomes.
+Em seguida foram contabilizados os SNs que eram semelhantes às palavras-chave e os que
+continham essas em sua estrutura.
+As métricas utilizadas para a computação dos resultados foram: a taxa de acerto que é
+a razão do total de expressões que de fato constituem SN sobre o total de expressões extraídas
+por cada programa; e a taxa de revocação que, por sua vez, é a razão do número de expressões
+que de fato são SNs extraídos pelos softwares sobre o número total de SNs extraído pela
+técnica manual.
+4 RESULTADOS E DISCUSSÃO
+O processo de construção da Tabela 1 foi feito a partir da extração dos SNs pelo
+software OGMA, identificação dos SNs pelos softwares Parser PALAVRAS e LX-Parser,
+bem como da extração manual. Da saída dos softwares PALAVRAS e LX-Parser foram
+extraídos os SNs marcados, ou seja, esses programas identificavam os SNs por meio de
+representações arbóreas em que cada palavra era etiquetada de acordo com seu valor
+semântico e logo em seguida era feita a transcrição dos SNs (manualmente) em um editor de
+texto e editor de planilhas. O OGMA já faz o processo de extração de SNs, permitindo, assim,
+rapidez nas transferências dos sintagmas para um editor de texto e de planilha. O processo de
+extração manual foi feito a partir da leitura especializada do autor dessa dissertação.
+A Tabela 1 apresenta o número total de todas as ocorrências de SNs extraídos pelos
+referidos programas e pela extração manual, assim como aponta a quantidade de expressões
+identificadas pelas ferramentas e pela técnica manual, mas que constituem SNs. O que
+identificou mais SNs foi LX-Parser, contudo os SNs extraídos por essa ferramenta são muito
+vulneráveis a erros que serão expostos logo mais. O que obteve o menor número na extração
+
+foi o OGMA, mas quando se observa os “verdadeiros” SNs esse número cai ainda mais. O
+PALAVRAS foi o que mais se aproximou da extração manual, porém apresentou alguns erros
+nas estruturas dos SNs identificados.
+Tabela 1 - Total de expressões e SNs extraídos dos resumos da BDTD-UFPE pelo OGMA, parser
+PALAVRAS, LX-Parser e pela técnica manual
+Resumos
+
+OGMA
+Expressões
+extraídas
+
+Total
+CC
+Total DI
+Total
+NU
+TOTAL
+CC –
+DI –
+NU –
+
+PALAVRAS
+Expressões
+extraídas
+
+507
+
+Expressões
+que não
+são SNs
+121
+
+310
+481
+
+101
+135
+
+1.298
+357
+Ciência da Computação
+Direito
+Nutrição
+
+LX-Parser
+Expressões
+extraídas
+
+958
+
+Expressões
+que não
+são SNs
+42
+
+558
+842
+2.358
+
+Extração Manual
+Expressões
+extraídas
+
+1.231
+
+Expressões
+que não
+são SNs
+260
+
+1.036
+
+Expressões
+que não
+são SNs
+0
+
+33
+63
+
+769
+1.340
+
+203
+368
+
+609
+924
+
+0
+0
+
+138
+
+3.340
+
+831
+
+2.569
+
+0
+
+Fonte: os autores
+
+Na seleção das expressões que, de fato, constituem SNs, foram descartados os que
+começavam com preposição ou conjunção, que continham verbos em suas estruturas e
+numerais que não exerciam função de determinantes dos nomes. Desse modo, apresentam-se
+os resultados referidos a cada identificador de SN.
+Das 1.298 expressões extraídas pelo OGMA, 357 não constituem SN, tendo um total
+de 941 de expressões que constituem SNs, de fato. Assim, a taxa de acerto3 desse software foi
+de 72,5% em relação aos seus próprios resultados, porém se for feita uma comparação com a
+extração manual (2.569 SNs extraídos), a taxa de revocação4 é de 36,5%.
+Os problemas apresentados pelo referido programa estão relacionados à marcação de
+adjetivos e verbos como SN, por exemplo, a expressão “bilateral de negociação de serviços
+do controlador” que começa com um sintagma adjetival, mas é extraído pelo OGMA como
+um SN. Alguns dos SNs extraídos começavam com preposição ou conjunção. Outro problema
+identificado é quanto ao quebramento do SN, deixando-o incompleto.
+
+3
+
+Essa taxa de acerto é a razão do total de expressões que de fato constituem SN sobre o total de
+expressões extraídas pelos programas.
+4 A taxa de revocação é a razão do número de expressões que de fato são SNs extraídos pelos softwares
+sobre o número total de SNs extraído pela técnica manual.
+
+O Parser PALAVRAS, considerado pela literatura como o melhor identificador de
+SNs, identificou 2.358 expressões, sendo 2.220 como expressões que constituem SNs, de fato,
+representando, assim, um total de 94% de acerto em relação aos seus próprios resultados, o
+que reafirma a taxa obtida pelo seu idealizador, Bick (2000), que foi de 98% de acerto na
+identificação de SNs (lembrando que o método de análise é diferente do usado pelo referido
+autor), contudo se for levada em consideração a extração manual, a taxa de revocação é de
+86,5%.
+Os problemas apresentados pelo PALAVRAS estão relacionados a várias
+circunstâncias como algumas palavras que deixaram de ser identificadas como SN, sendo
+apenas marcadas como nomes, outros vocábulos que pertenciam a uma classe gramatical eram
+marcados como outra classe diferente (por exemplo, adjetivos e verbos marcados como nomes
+e, por conseguinte como SN), algumas palavras foram excluídas de alguns SNs, numerais
+foram identificados isoladamente como SNs, em alguns momentos o artigo “os” foi
+confundido com o pronome oblíquo, sendo marcado, dessa maneira, como um SN.
+O LX-Parser faz a leitura de frases simples e que sua análise sempre acaba no primeiro
+ponto final, tendo ainda dificuldades de etiquetagem quando há a falta de verbo. Sendo assim,
+a submissão dos resumos foi feita período por período (cada sentença até o ponto final). Um
+dos pontos positivos desse software e do PALAVRAS, é que o usuário visualiza os SNs em
+seus diversos níveis, ou seja, o LX-Parser consegue identificar diferentes sentenças e analisálas em uma representação arbórea.
+Esse programa identificou 3.340 expressões nominais, dentre os softwares utilizados
+foi o que mais identificou SNs, sendo que desse total, 2.509 constituíam SNs de fato,
+atingindo 75% de acerto na identificação de SN de acordo com os próprios resultados, mas
+em comparação com o resultado da extração manual, a taxa de revocação é de 97,5%.
+De modo geral, o LX-Parser enfrenta alguns problemas de etiquetagem. Algumas
+palavras de outras classes gramaticais foram marcadas como verbos, por exemplo, adjetivos,
+advérbios, numerais, siglas e até letras isoladas. Em algumas situações, palavras como
+adjetivos, verbos, numerais, artigos e até símbolos e letras isoladas foram identificados como
+SNs.
+Também havia problemas quando LX-Parser identificava o SN começando por sinal
+de pontuação (vírgula “,”, dois pontos “:”), conjunção e preposição. Mas um ponto positivo é
+que esse programa raramente partia o SN ao meio.
+Enquanto OGMA já pontua os SNs, sinalizando quais são, hipoteticamente, mais
+relevantes, o LX consegue apresentar os SNs por níveis, percebidos pelo usuário por meio da
+
+representação arbórea. Essa estrutura por níveis também é encontrada no Parser PALAVRAS,
+isso remonta a Kuramoto (1995) que formulou um protótipo em que o usuário navegaria pelos
+níveis do SN até satisfazer a sua necessidade informacional.
+Outros aspectos observados nessa análise foram a quantidade de vezes em que os
+programas e as extrações manuais recuperaram os SNs que compunham o corpo das palavraschave utilizadas pelas autorias dos resumos e a quantidade de SNs que continham essas
+palavras-chave.
+Assim, na Tabela 2, há a quantidade de vezes que cada programa e a extração manual
+fizeram a extração de SNs que se assemelhavam com as palavras-chave dos resumos, tendo
+em vista que algumas palavras-chave estavam no singular, enquanto nos resumos se
+encontravam flexionadas no plural, assim como os SNs que continham as palavras-chave
+dentro de seus constituintes.
+
+Tabela 2 – Quantidade SNs relevantes para a descrição dos resumos
+Tipos de SNs
+extraídos
+Semelhantes às
+palavras-chave dos
+resumos
+
+OGMA
+
+PALAVRAS
+
+LX-Parser
+
+Extração Manual
+
+19
+
+112
+
+127
+
+167
+
+Contém palavraschave dos resumos
+
+131
+
+296
+
+312
+
+387
+
+TOTAL
+
+150
+
+408
+
+439
+
+554
+
+Fonte: os autores
+A ferramenta que mais se aproximou da extração manual (167 SNs semelhantes às
+palavras-chave) foi o LX-Parser que conseguiu atingir a taxa de 76% de revocação, seguido
+do Parser PALAVRAS com 67% e, por fim, o OGMA com 11,5%.
+A representação de cada programa em comparação com os próprios resultados é de
+14% para OGMA, 13,5% para o PALAVRAS, 13% para a extração manual e 15% para o LXParser, levando-se em consideração a razão da quantidade de SNs constituídos por palavraschave dos resumos sobre o total de SNs, de fato, extraídos. Se observado por esse ângulo, o
+OGMA obteve melhor desempenho do que as outras duas ferramentas, se aproximando da
+extração manual, mas a quantidade desse tipo de SNs obtida pela extração manual é 2,5 vezes
+maior do que a obtida pelo OGMA.
+A quantidade de SNs relevantes identificados pela extração manual atinge uma taxa de
+precisão de 19,5% do total de SNs extraídos, contudo na comparação entre as ferramentas
+automáticas, tomam-se os 554 SNs relevantes como referência para calcular a razão de
+
+extração dos SNs relevantes por cada programa sobre o total de SNs relevantes extraídos pela
+técnica manual.
+O OGMA tem uma taxa de precisão de 16% de SNs relevantes dos 941 SNs de fato
+extraídos, mas em comparação com a quantidade de SNs relevantes extraídos pela extração
+manual, aquele programa tem 30,5% na taxa de revocação. O Parser PALAVRAS atinge uma
+taxa de precisão de 18,5%, se forem tomados como referência os seus 2.220 SNs de fato
+identificados, mas tomando como referência a extração manual, o PALAVRAS alcança
+82,5% de revocação, uma situação confortável e muito próximo do LX-Parser que, por sua
+vez, consegue atingir a marca de 88,5% de revocação quando se remete a quantidade SNs
+relevantes apresentados pela extração manual, mas em relação aos seus resultados alcança a
+taxa de precisão é de 17,5%.
+Diante desses resultados, cabe agora apontar a ferramenta que teve melhor
+desempenho levando em consideração todos os aspectos apresentados nessa análise.
+No primeiro momento, em que se observou o total de expressões que, de fato,
+constituíam SNs, o LX conseguiu 1,13 vezes a mais do que o PALAVRAS, assim como 6
+vezes mais na identificação de expressões que não constituíam SNs. Esse último aspecto foi
+um ponto muito negativo na identificação de SNs feita pelo o LX-Parser, assim como atingir
+uma taxa de 25% de erro em relação ao seu próprio resultado, enquanto o PALAVRAS teve
+apenas 6% de erro. Já o OGMA atingiu a taxa de 27% de erro em relação aos seus próprios
+resultados, um resultado próximo ao do LX-Parser.
+De acordo com os resultados apresentados, o LX-Parser teve um desempenho melhor,
+todavia algumas questões devem ser retomadas como a submissão dos resumos que nessa
+ferramenta foi feita sentença por sentença, o que de certa forma facilita o trabalho do
+programa, mesmo assim, ainda identificou um número de falsos SNs muito alto em relação ao
+OGMA e ao PALAVRAS.
+O PALAVRAS obteve um bom resultado na identificação de SNs tendo como
+referências os seus próprios resultados, pois o objetivo das ferramentas automáticas
+identificadoras de SNs é apontar um maior número de SNs de fato.
+Considera-se, assim, reafirmando o que a literatura diz, o PALAVRAS como a
+ferramenta que diante de todo contexto tem maior potencial para identificação de SNs,
+facilitando o trabalho do indexador, diferentemente do LX-Parser, o usuário pode submeter
+todo o texto de uma vez só, o que demanda maior trabalho do software.
+
+Frente aos problemas apresentados pelas ferramentas automáticas, algumas sugestões
+podem ser dadas no intuito que os programas identificadores ou extratores de SNs consigam
+melhorar os seus desempenhos.
+Os valores semânticos de algumas palavras ainda são confundidos na etapa de
+etiquetagem, parte essencial para identificação dos SNs posteriormente. Quando na etapa de
+marcar as palavras de acordo com suas categorias gramaticais ocorrem equívocos, as
+expressões podem ser identificadas como SN, sendo outro tipo de sintagma como
+preposicionado, verbal, adjetival ou adverbial. Isso pode ser resolvido quando identificados os
+fenômenos sinonímicos e polissêmicos, categorizando as palavras de acordo com o contexto
+linguístico. Esse problema foi apresentado por todos os softwares em uma quantidade
+proporcional aos SNs identificados por cada um.
+Outro erro cometido pelas ferramentas é em relação ao uso do pronome relativo “que”,
+que segundo a gramática normativa fica entre um substantivo e um verbo, assim a palavra que
+vem logo depois do pronome relativo “que” é marcado como parte do SN. O programa que
+cometeu mais esse erro foi o LX-Parser, contudo as outras duas ferramentas também
+cometeram esse equívoco, para exemplificar tem-se a expressão “a idéia central desta
+abordagem é construir regiões que descrevem e discriminem classes de exemplos
+observados” analisada pelo LX-Parser e pelo PALAVRAS.
+Quando houver esse tipo de situação, os programas deveriam marcar o SN até o
+substantivo preposicionado ao pronome relativo “que”, logo em seguida identificar o “que”
+(pronome relativo) como SN, marcando as outras palavras subsequentes como outro tipo de
+sintagma, no caso do exemplo como sintagma verbal.
+Há outra dificuldade enfrentada pelos softwares, para a qual existe uma maneira bem
+simples para superá-la, gramaticalmente falando. Quando a regência nominal tem uma
+preposição que é seguida de um verbo, esse passa a ser considerado como parte do SN, por
+exemplo, “o direito de despedir”. Vale ressaltar que se tem o verbo, no exemplo, na forma
+nominal, ou seja, quando o comportamento dele se assemelha a um substantivo, adjetivo ou
+advérbio. As formas nominais (infinitivo – caso do exemplo-, gerúndio e o particípio)
+atrapalharam muito o desempenho do PALAVRAS, principalmente do LX-Parser, fazendo
+com que eles marcassem o “despedir” como SN, quando desmembrado do “o direito de”, o
+fato é que o referido verbo faz parte de um SN, não constituindo, assim, isoladamente tal
+expressão nominal, como se vê quando o referido SN é visto em seu nível 1:
+Nível 2: O direito de despedir
+Nível 1: despedir
+
+As preposições mais presentes nessas situações são “de” e “para”. A solução para esse
+problema seria a construção de um banco de palavras para cada radical de um léxico, assim,
+ao se deparar com essa dificuldade, o programa buscaria um substantivo que remetesse ao
+verbo, tendo para o “despedir” do exemplo a substituição por “dispensa” ou “demissão”.
+Para problemas como os sintagmas preposicionados sendo identificados como SN, fica
+a sugestão da eliminação da preposição inicial, podendo reavaliar a organização das palavras
+subsequentes se elas se enquadram em uma estrutura de SN.
+Quanto ao problema do LX-Parser começar alguns SNs com conjunção e sinais de
+pontuação, tem-se como solução a eliminação desses na hora em que é apresentada a estrutura
+arbórea da sentença para o usuário.
+Todavia, todas as ferramentas têm seus méritos e devem ter um maior número de
+estudos que atentem para seus objetivos, aperfeiçoando suas funcionalidades no intuito de que
+facilite o trabalho do indexador que, por sua vez, ajude o usuário na busca de satisfazer as
+suas necessidades informacionais.
+5 CONSIDERAÇÕES FINAIS
+Quanto aos objetivos dessa pesquisa, acredita-se que eles tenham sido atingidos,
+permitindo que sugestões fossem dadas para a melhoria das análises morfossintáticas das
+ferramentas automáticas de identificação e extração de SNs.
+As contribuições para a Ciência da Informação dada por essa pesquisa são a retomada
+e apresentação de ferramentas que sendo aperfeiçoadas podem auxiliar no processo de escolha
+automática de melhores termos que possam ser usados como descritores de documentos.
+A presente pesquisa corrobora em dizer que os SNs são essenciais descritores dos
+documentos e que as pesquisas sobre a extração automática de SNs em língua portuguesa
+devem receber uma atenção maior para que elas atinjam um grau de amadurecimento elevado,
+aperfeiçoando as ferramentas automáticas existentes e/ou a criação de outras novas e
+eficientes.
+Os resultados obtidos na comparação entre as ferramentas automáticas em que o LXParser, por alguns momentos, mostrou uma performance melhor do que o do PALAVRAS,
+permitem dizer que a extração automática de informação de um documento por meio de SNs
+deve ser estimulada para que aconteça a aplicabilidade nos SRIs efetivamente.
+Quanto aos resultados de SNs relevantes, os quais foram tomados como referências os
+SNs que se assemelhavam as palavras-chave dos resumos ou as continham em suas estruturas,
+fica a ressalva de que algumas palavras que não se enquadravam nesses dois grupos tinham
+
+grande potencial de serem descritores documentais. Às vezes, algumas palavras-chave eram
+menos relevantes que outras palavras que apareciam nos resumos. Desse modo, sugere-se, em
+trabalhos futuros, uma atenção maior a esse tipo de palavra, pois as palavras-chave são
+escolhidas pela autoria do texto, a qual pode escolhê-las inadequadamente.
+O uso dos SNs no processo de indexação de documentos vai além de recuperar
+documentos relevantes para o usuário, é uma questão, também, de inclusão social, o que
+poderá ser visto em trabalhos futuros com a descrição de documentos para pessoas com
+deficiência auditiva, pois como são apontados por Crato e Cárnio (2009), os surdos
+apresentam dificuldades na escrita do português, principalmente no uso de verbos. Diante
+dessa constatação, os SNs seriam alternativas para que esses usuários pudessem navegar pelos
+níveis sintagmáticos nominais até encontrar a informação que procura, como sugeriu
+Kuramoto (1995) com o seu protótipo de interface de busca que se baseava no encadeamento
+hierárquico existente entre os SNs, fazendo com que haja interatividade entre a estrutura
+arbórea e o usuário.
+Outras contribuições que os SNs podem dar para trabalhos futuros seriam em relação à
+confecção de mapas conceituais, que poderiam ser usados também como alternativa na
+representação de documentos, ao ler os descritores de um documento, o usuário poderiam
+também ter possibilidade de ver aquele documento por meio de um mapa conceitual, o que
+possibilitaria confirmar se aquele documento é relevante para a sua busca.
+AGRADECIMENTO
+Os autores agradecem o fomento da Fundação de Amparo à Ciência e Tecnologia de
+Pernambuco (FACEPE) ao projeto intitulado "Mapeador Temático de Teses e Dissertações".
+
+
+
