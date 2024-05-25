@@ -1,0 +1,828 @@
+
+Comunicação Oral
+
+APORTES DA VISUALIZAÇÃO DA INFORMAÇÃO PARA SISTEMAS
+DE RECUPERAÇÃO DA INFORMAÇÃO
+
+Resumo: Dissertação de mestrado com o objetivo de verificar os aportes da Visualização da
+Informação para sistemas de recuperação da informação. Diante do reconhecimento da importância da
+informação nos dias de hoje, que, por sua vez, expõe o valor dos sistemas de recuperação da
+informação, é essencial buscar formas de se aperfeiçoar a relação dos usuários com estes sistemas de
+maneira a proporcionar maior eficiência na aquisição de informações. Ao aplicar os entendimentos
+sobre a percepção humana para aprimorar a apresentação de informações, a Visualização da
+Informação mostra-se com potencial para proporcionar novas maneiras de se fornecer resultados de
+buscas em sistemas de recuperação da informação. Por meio de pesquisa bibliográfica foi possível
+identificar estudos sobre Visualização da Informação aplicada a sistemas de recuperação da
+informação que tenham como objetivo a criação de melhores interfaces ao, por exemplo, propuserem
+maneiras de reduzir esforço cognitivo na interação e também possibilitar a apresentação de melhores
+descrições de resultados de buscas.
+Palavras-chave: Visualização da Informação. Sistemas de recuperação da informação. Recuperação
+da Informação. Interface com usuário. Informação.
+
+1 INTRODUÇÃO
+As modernas tecnologias de informação e comunicação têm possibilitado a
+manutenção e acesso a grandes estoques de informação. A Internet, por exemplo, permite a
+interconexão de informações e pessoas ignorando as barreiras geográficas existentes. Há, de
+um lado, uma enorme fartura de informação disponível em ambientes digitais e, de outro, a
+complexidade da vida moderna que impele as pessoas a buscarem informações que as
+auxiliem na consecução das mais variadas atividades. Motores de busca na Web como o do
+Google são o recurso utilizado cotidianamente por milhões de pessoas para suprir suas
+necessidades de informação, desde as mais triviais até as profissionais. Bibliotecas digitais e
+bases de dados online, por exemplo, estão profundamente inseridas nas atividades de estudo e
+pesquisa, pois, ao promoverem acesso remoto, atingem um público muito mais amplo do que
+as bibliotecas convencionais.
+Ressaltando o caráter vital que a informação tem para a economia nos dias de hoje, o
+sociólogo espanhol Manuel Castells (1992; 1993), nas palavras de Lastres e Ferraz,
+[…] aponta para a inauguração de um novo tipo de economia: a economia
+informacional, que se articula em consonância com uma importante
+revolução tecnológica: a das tecnologias de informação. O papel
+crescentemente importante do conhecimento e da informação é apontado
+como principal característica dos novos sistemas econômicos avançados,
+transcendendo a importância econômica de outras eras. (LASTRES;
+FERRAZ, 1999, p. 39).
+
+Neste contexto se insere o aperfeiçoamento e popularização dos sistemas de
+recuperação da informação (SRI), que passaram de manuais e locais, para informatizados e
+acessíveis remotamente. Marchionini, Geisler e Brunk (2000, p. 1) apontam que, por conta da
+crescente importância da informação para as mais amplas atividades humanas, a atividade de
+busca por informações mostra-se mais relevante e complexa.
+Dirk Lewandowski (2008), comparou a efetividade da recuperação feita por motores
+de busca da Web (web search engines) a partir da verificação do grau de conformidade da
+descrição dos resultados (results descriptions) em relação aos resultados propriamente ditos
+(os documentos recuperados). O autor, ao indagar que tipo de informação uma boa descrição
+de resultados deve prover, cita uma passagem em que Crystal e Greenberg (2006, p. 1370
+
+apud LEWANDOWSKI, 2008, p. 920) afirmam que “Good surrogates should provide
+metadata that enable users to predict the relevance of the document quickly and accurately”.
+Lewandowski conclui que os motores de busca devem não apenas aprimorar a precisão na
+recuperação, mas também considerar a qualidade das descrições dos resultados assim como a
+conformidade delas com o conteúdo dos documentos recuperados (LEWANDOWSKI, 2008,
+p. 934).
+A socióloga Regula Valérie Burri e o antropólogo Joseph Dumit constatam que
+“Today, we live in a visual culture” (2007, p. 297). De acordo com os autores:
+Images are inextricable from the daily practices of science, knowledge
+representation, and dissemination. Diagrams, maps, graphs, tables, drawings,
+illustrations, photographs, simulations, computer visualizations, and body
+scans are used in everyday scientific work and publications. (BURRI;
+DUMIT, 2007, p. 297).
+
+Neste contexto surgiu a Visualização da Informação (VI). Formalizada por volta da década de
+1980 nos laboratórios do Xerox PARC (Palo Alto Research Center), na Califórnia, ela
+pressupõe“[...] the use of computer-supported interactive visual representations of abstract
+data to amplify cognition”(CARD et al., 1999 apud OSTERGREN, 2011, p. 1). Tendo como
+base os estudos sobre como o homem percebe e pensa oriundos das ciências cognitivas
+(WARE, 2013, p. 1, 10 e 11), a VI busca aumentar a eficiência do trabalho cognitivo
+(cognitive work) das pessoas, isto é, facilitar a realização de tarefas como a execução de
+negócios no mercado de ações, cozinhar com ajuda de uma receita, trabalhar numa caixa
+registradora (WARE, 2013, p. 23).
+As visualizações, ou estruturas de Visualização da Informação (DIAS, 2007), produto
+da VI, são representações gráficas de dados ou conceitos (WARE, 2013, p. 2), isto é,
+“imagens, figuras, estruturas gráficas e quaisquer outros recursos gráficos” (DIAS, 2007, p.
+3). Podendo atuar como um dispositivo de apoio à tomada de decisão (WARE, 2013, p. 2), as
+visualizações aparecem como um recurso valioso para ajudar o usuário em interação com SRI
+(HENNINGER; BELKIN, 1995). No âmbito deste texto, o termo “visualização” se refere à
+estrutura de visualização da informação, isto é, recurso gráfico produto da VI.
+Embora exista literatura sobre aplicação de visualizações em sistemas de recuperação
+da informação, ela é, em sua maioria, estrangeira e produzida por autores de fora da Ciência
+da Informação, conforme assinalam Vieira e Correa:
+Foram encontradas dificuldades em localizar trabalhos com o foco específico
+na aplicação da visualização da informação na construção de interface para
+SRIs, pois na literatura de Ciência da Informação são poucos os trabalhos
+que discutem as visualizações neste domínio de aplicação. (VIEIRA;
+CORREA, 2011).
+
+Sendo assim, propor uma pesquisa em Ciência da Informação que busque condensar e
+apresentar os estudos de VI aplicada à recuperação da informação aparece como uma
+iniciativa promissora.
+Considerando a importância da informação para a vida em sociedade e,
+consequentemente, dos sistemas de recuperação da informação (MARCHIONINI; GEISLER;
+BRUNK, 2000, p. 1); a procura por maior qualidade nas descrições de resultados de buscas
+em SRI (LEWANDOWSKI, 2008); o potencial que a VI demonstra para o aprimoramento de
+SRI (HENNINGER; BELKIN, 1995); e a reduzida produção de trabalhos nessa temática pela
+Ciência da Informação brasileira (VIEIRA; CORREA, 2011), este trabalho se propõe a
+verificar os possíveis aportes da Visualização da Informação para sistemas de recuperação da
+informação.
+O tema foi trabalhado em duas frentes: uma direcionada à Visualização da Informação
+aplicada à descrição de resultados de buscas em SRI, e outra orientada a proposição de
+estratégias de design e boas práticas que possam ser incorporadas ao projeto de interfaces de
+SRI. Para tanto, foi desenvolvida uma pesquisa bibliográfica para analisar qualitativamente o
+conteúdo sobre Visualização da Informação aplicada a sistemas de recuperação da
+informação. O presente trabalho traz os resultados da pesquisa desenvolvida ao longo do
+curso de Mestrado no Programa de Pós-graduação em Ciência da Informação da Universidade
+Federal Fluminense e está estruturado da seguinte maneira: após a introdução são
+apresentados os fundamentos teóricos; em seguida, a metodologia da pesquisa, mais adiante,
+os resultados obtidos; e, por fim, as considerações finais.
+2 RECUPERAÇÃO DA INFORMAÇÃO
+A Recuperação da Informação, segundo Mooers (1951 apud SARACEVIC, 2009, p.
+9), engloba desde os aspectos intelectuais da descrição da informação até os sistemas, técnicas
+ou máquinas que são utilizados para efetivá-la. A partir da sua formalização, por volta da
+década de 1950, atuou tanto como ferramenta quanto como combustível de uma indústria da
+informação e teria contribuído para o desenvolvimento da Ciência da Informação
+(SARACEVIC, 1991 apud PINHEIRO; LOUREIRO, 1995, p. 49-50). Inúmeros estudos da
+Ciência da Informação se relacionam diretamente à recuperação da informação ao indagarem,
+por exemplo, como o acesso à informação registrada pode ser mais rápido e eficiente
+(SARACEVIC, 2009, p. 5). Conforme Saracevic (2009, p. 5), a indagação acima está
+diretamente ligada ao design de sistemas de recuperação da informação, e “Effective design is
+highly dependent on the consideration of social and physical features” (SARACEVIC, 2009,
+
+p. 6).
+Sistemas de Recuperação de Informação, ou SRI, segundo Lancaster e Warner (1993,
+p. 4 e 5), nas palavras de Souza
+[…] são a interface entre uma coleção de recursos de informação, em meio
+impresso ou não, e uma população de usuários; e desempenham as seguintes
+tarefas: aquisição e armazenamento de documentos; organização e controle
+desses; e distribuição e disseminação aos usuários. (SOUZA, 2006, p. 2).
+
+Lunardi (2008, apud VIEIRA; CORREA, 2011, p. 75 e 76) afirma que “o principal objetivo
+de um SRI é a seleção, dentro de um universo de documentos disponíveis, do conjunto de
+documentos relevantes para uma necessidade de informação do usuário”. No âmbito desta
+pesquisa, SRI se refere especificamente aos sistemas baseados em computadores.
+Há dois modelos básicos de interação entre usuário e SRI que repercutem diretamente
+no tipo de interface: o modelo de pesquisa (query searching) e o modelo de navegação
+(browsing) (BAEZA-YATES; RIBEIRO-NETO, 1999, p. 4; XAVIER, 2009, p. 15). Estes
+modelos, que condicionam os tipos de tarefas que os usuários devem proceder na interação
+com o sistema, fundamentam o recorte dado ao tema ao atuarem como ponto de partida para a
+categorização e organização do material levantado.
+No modelo de interação por pesquisa, o usuário expressa sua necessidade
+informacional na forma de um conjunto de termos que o sistema comparará com vocabulários
+controlados ou textos de documentos para, por fim, indicar documentos que têm potencial
+para atender a consulta (SOUZA, 2006, p. 4; XAVIER, 2009, p. 15). Já o modelo de interação
+por navegação “[...] refere-se à visualização, olhar global, visão geral e exploração da
+informação no conjunto documental (XAVIER, 2009, p. 16). Nele, a busca não é feita através
+de uma consulta automatizada por termos mais ou menos específicos, mas pela navegação por
+áreas de interesse que são apresentadas através de uma estrutura organizada que permite ao
+usuário decidir a direção da sua pesquisa (SOUZA, 2006, p. 4; XAVIER, 2009, p. 17).
+3 VISUALIZAÇÃO DA INFORMAÇÃO
+Os psicólogos Robert Sekuler e Randolph Blake afirmam, na obra “Perception”, que o
+“[...] sense of vision arguably represents our most diverse source of information of the world
+around us” (SEKULER; BLAKE, 1994 apud RIEBER, 1995, p. 45). Colin Ware
+complementa:
+The eye and the visual cortex of the brain form a massively parallel
+processor that provides the highest bandwidth channel into human cognitive
+centers. Indeed, we acquire more information through vision than through all
+of the other senses combined. The 20 billion or so neurons of the brain
+devoted to analyzing visual information provide a pattern-finding
+
+mechanism that is a fundamental component in much of our cognitive
+activity. (WARE, 2013, XVI e p. 2).
+
+Reconhecer a importância da percepção visual humana para a aquisição da informação, e que,
+conforme já mencionado, sistemas de recuperação da informação provêm acesso a uma
+enorme quantidade de informações, aponta para a necessidade de se elaborar interfaces de
+sistemas de recuperação de informação que, ao considerarem as características do aparato
+visual humano, auxiliem o usuário a encontrar e apreender as informações de que necessita.
+Espera-se que os estudos em torno da Visualização da Informação possam dar algumas
+respostas.
+O processo de criação de visualizações, segundo Ware (2013, p. 4), é composto por
+quatro estágios básicos que se retroalimentam: coleta e armazenamento dos dados; préprocessamento computacional para transformar os dados em algo mais fácil de manipular,
+neste estágio geralmente se realiza algum tipo de filtragem nos dados disponíveis;
+transformação dos dados selecionados, geralmente com recursos da computação gráfica, em
+uma apresentação visual que, idealmente, deve permitir manipulações por parte dos usuários;
+e, por fim, a apreensão da informação por intermédio do sistema perceptivo e cognitivo da
+pessoa. De acordo com o autor, este processo está vinculado a um ambiente social que
+determina de maneira complexa e quase imperceptível o que é coletado e como isso é
+interpretado (WARE, 2013, p. 5).
+A visualização aplicada à recuperação da informação, ao explorar as capacidades
+perceptivas humanas em vias de reduzir o esforço cognitivo na interação com o sistema,
+proporciona melhorias ao processo de busca (ZHANG, 2008, p. 13). Zhang (2008, p. 16)
+afirma que a aplicação de técnicas de visualização na recuperação da informação é orientada
+por três paradigmas: o paradigma pesquisa-navegação (query searching and browsing), cuja
+interação se inicia por meio de uma expressão de busca que resultará numa interface de
+navegação pela qual o usuário continuará a refinar sua busca; o paradigma navegaçãopesquisa (browsing and query searching), pelo qual o usuário entra em contato com uma
+interface de navegação que poderá ser refinada por meio de uma expressão de busca; e o
+paradigma, apenas-navegação (browsing only paradigm), onde há apenas a visão global do
+conteúdo do sistema de recuperação em que o usuário navega em busca de informações mais
+específicas.
+4 PROCEDIMENTOS METODOLÓGICOS
+O método escolhido para verificar os aportes da Visualização da Informação para
+
+sistemas de recuperação da informação foi a pesquisa bibliográfica, que “[...] é desenvolvida
+com base em material já elaborado, constituído principalmente de livros e artigos científicos.”
+(GIL, 2002, p. 44). O tema foi explorado por meio de uma abordagem qualitativa do material
+levantado em que foram identificados e analisados estudos sobre técnicas de visualização da
+informação aplicadas a interfaces de sistemas de recuperação da informação.
+Por meio de pesquisa na Internet foram identificadas e selecionadas dez fontes que se
+mostram relevantes e pertinentes ao tema proposto. Dentre os escolhidos constam periódicos,
+bibliotecas digitais e publicações resultantes de eventos relacionados à Visualização da
+Informação e à Ciência da Informação. Assim, buscou-se verificar o que vem sendo produzido
+sobre VI aplicada a sistemas de recuperação da informação e como isto vem sendo abordado
+no âmbito da Ciência da Informação. No quadro 1 constam as fontes, seus fatores de impacto
+(medição 2013) e total de artigos selecionados.
+Quadro 1 – Fontes, fator de impacto e artigos selecionados.
+Fonte
+Transactions on Visualization and Computer Graphics (TVCG)
+Journal of Information Science (JIS)
+Journal of the Association for Information Science and Technology (JASIST)
+Annual Review of Information Science and Technology (ARIST)
+IEEE Information Visualization Conference (InfoVis)
+Cite See r X
+Base de dados referencial de artigos de periódicos em Ciência da Informação (BRAPCI)
+Biblioteca Digital Brasileira de Teses e Dissertações (BDTD-IBICT)
+Encontro Nacional de Pesquisa em Ciência da Informação (ENANCIB)
+Joint Conference on Digital Libraries (JCDL)
+
+FI
+1919
+1087
+2230
+1727
+NA
+NA
+NA
+NA
+NA
+NA
+
+Nº Artigos
+16
+3
+8
+1
+4
+13
+2
+0
+0
+11
+Total: 58 artigos
+
+Fonte: autoria própria.
+
+Para se chegar aos totais apresentados no quadro 1, foram realizados os procedimentos
+detalhados a seguir. Como a proposta é verificar os aportes da VI para sistemas de
+recuperação da informação, foi definida a expressão de busca Information Visualization AND
+Information Retrieval e sua versão em português Visualização da Informação AND
+Recuperação da Informação. A estratégia de busca empregada para explorar as fontes
+consistiu em pesquisar pelas expressões de busca mencionadas acima nos campos menos
+restritivos dos formulários avançados de pesquisa das fontes selecionadas. O levantamento
+realizado no dia 01 de maio de 2014 apresentou 1.519 resultados, quantidade grande demais
+para a análise qualitativa proposta, o que provocou ajustes na estratégia de busca.
+A saída encontrada foi utilizar campos mais restritivos nos formulários de pesquisa
+avançada nas fontes com maior volume retornado: Cite Seer X (1.152 referências) e Journal
+of the Association for Information Science and Technology (JASIST) (129 referências).
+Optou-se efetuar a busca através dos resumos (abstract), pois condensam o tema e os
+conceitos utilizados nos artigos, e porque outros campos mais restritivos retornam resultados
+
+nulos. Ao substituir a busca no campo “text” pelo campo “abstract” no Cite Seer X foram
+retornados 39 documentos. A medida foi repetida no Journal of the Association for
+Information Science and Technology (JASIST) que passou a indicar 12 resultados. A redução
+do total de documentos recuperados possibilitou o início da etapa de verificação de repetições
+de resultados entre as fontes que identificou 37 repetições e também referências que não
+levam a textos científicos (introdução dos Anais do evento, apresentações de workshops,
+índices, elementos pré-textuais e lista de colaboradores).
+Como o novo quantitativo (252 documentos) é um volume possível de ser analisado
+qualitativamente e em tempo hábil, foi dado início a avaliação dos títulos, resumos e palavraschave das obras recuperadas com o objetivo de identificar quais destes documentos
+efetivamente tratam de técnicas de visualização da informação aplicadas a sistemas de
+recuperação da informação. Esta seleção é necessária para desconsiderar artigos que, embora
+recuperados por meio de uma expressão de busca específica, não tratam diretamente de
+visualização da informação aplicada à recuperação da informação, pois funções de consulta
+por proximidade de ocorrência de termos ou características de indexação empregadas nas
+fontes podem apontar para artigos que não tenham utilidade para a pesquisa. A seleção
+resultou num total de 58 artigos, referenciados em Azevedo (2015), que apresentam estudos
+que efetivamente atendem ao eixo temático desta pesquisa.
+A organização e classificação do material selecionado tem como base os modelos
+básicos de interação com SRI, os paradigmas da visualização aplicada à recuperação da
+informação e também os objetivos propostos nesta pesquisa. Os três cenários de aplicação de
+interfaces visuais em bibliotecas digitais (digital libraries – DL) sugeridos por Börner e Chen
+(2002, p. 2) tiveram peso fundamental para a definição da organização do material:
+(1)support the identification of the composition of a retrieval result,
+understand the interrelation of retrieved documents to one another, and refine
+a search; (2) gain an overview of the coverage of a digital library and to
+facilitate browsing; (3)visualize user interaction data in relation to available
+documents in order to evaluate and improve DL usage. (BÖRNER; CHEN,
+2002, p. 2).
+
+Contribuíram também as quatro categorias de aplicação de visualizações em bibliotecas
+digitais propostas por Shiri (2008, p. 766) que consideram a função esperada para a
+visualização e também o que é visualizado: visualização para formulação e modificação de
+pesquisa, visualização com foco em resultados de busca, visualização com foco em
+representação de coleções e visualização de relevância.
+Foram definidas quatro categorias para classificação da literatura selecionada
+conforme aplicação das técnicas de visualização da informação. Dentre elas, três são baseadas
+
+no modelo de interação utilizado: “Visualização da informação aplicada à interação por
+pesquisa”; “Visualização da informação aplicada à interação por navegação”; “Visualização
+da informação aplicada à interação por navegação e por pesquisa”. A “Visualização da
+informação aplicada a sistemas de recuperação da informação com foco em análise visual” foi
+estabelecida com base num conjunto de estudos cuja característica em comum é que a
+visualização não é uma ferramenta para analisar e acessar documentos, mas sim o resultado
+final da recuperação. A elas foi adicionada uma que reflete características próprias do material
+levantado: “Pesquisas de avaliação ou revisões de literatura”. O material classificado como
+“Pesquisas de avaliação ou revisões de literatura” é aquele cujos autores não apresentam
+propostas de aplicação de visualizações em sistemas de recuperação da informação, mas
+avaliam sistemas existentes ou conduzem revisão de literatura sobre VI aplicada a sistemas de
+recuperação da informação.
+Também foram definidas subcategorias que se referem ao que é visualizado (quadro
+2). Elas foram baseadas nas categorias propostas por Börner e Chen (2002) e Shiri (2008, p.
+766) mencionadas anteriormente, mas considerando as especificidades dos estudos analisados.
+As categorias e subcategorias, além de ampararem o tratamento do material analisado,
+representam um esforço para sintetizar as possibilidades de aplicação de visualizações em
+sistemas de recuperação da informação relatadas na literatura analisada.
+Quadro 2 – Subcategorias de aplicação de visualizações em SRI.
+Subcate gorias
+
+Caracte rísticas dos artigos
+
+Visualização de coleções ou tesauros
+
+abrange estudos com foco na apresentação da visão geral de coleções ou tesauros
+
+Visualização de relações entre documentos
+Visualização de múltiplas características de
+coleções/resultados de pesquisa
+Visualização de resultados de pesquisa em
+relação à expressão de busca
+Visualização de documentos ou metadados
+
+abrange estudos com foco na apresentação de relações (semânticas, hierárquicas etc.)
+entre documentos
+abrange estudos que utilizam visualizações para representar diferentes propriedades de
+coleções ou resultados de pesquisa
+abrange estudos com foco na apresentação da relação entre os documentos recuperados e
+a expressão de busca (rankeamento, proximidade semântica etc.) com o objetivo de
+
+facilitar a “visualização de relevância”
+abrange estudos com foco na apresentação de conteúdo (ou parte), estrutura ou metadados
+de documentos
+
+Fonte: autoria própria.
+
+Resultados: análise e discussão
+A análise do material foi iniciada a partir dos seguintes questionamentos: qual a
+proporção de publicações oriundas de periódicos de Ciência da Informação? Qual a
+concentração de autores brasileiros? Quantos estudos conduzem testes com usuários para
+avaliar se o uso de visualizações aprimora a busca por informações e, dentre eles, quantos
+relatam sucesso diante das estratégias convencionais?
+A participação de fontes e artigos brasileiros no levantamento efetuado é de três fontes
+
+brasileiras (30% do total) das quais apenas dois artigos foram selecionados, representando
+apenas 3,4% do total de artigos. Assim, as fontes estrangeiras compreendem 96,6% por cento
+do material analisado. As cinco fontes de Ciência da Informação forneceram 14 (quatorze)
+artigos, representando pouco menos de um quarto (24%) do total de artigos analisados. A
+concentração de brasileiros no quantitativo de autores, embora reduzida, é significativamente
+maior, pois, dos 174 autores distribuídos nos 58 artigos, 12 (doze) (6,9%) são brasileiros, ou
+seja, o dobro da proporção de artigos oriundos de fontes nacionais.
+Os autores em publicações de Ciência da Informação representam 17,8% do total (31
+autores) e dentre eles há apenas quatro brasileiros (12,9%) em dois artigos, frente a 27
+(87,1%) estrangeiros distribuídos em 12 publicações. Com base nestes dados, e tendo em vista
+que apenas duas (40%) das fontes de Ciência da Informação consultadas são brasileiras
+(BRAPCI e BENANCIB), é possível sugerir que ainda há poucos estudos sobre VI aplicada a
+sistemas de recuperação da informação no âmbito da Ciência da Informação brasileira.
+Dos 58 artigos analisados, pouco mais da metade (32 artigos) conduziram avaliações
+com participantes externos. Destes, 18 estudos (56,25%) verificam apenas se a proposta
+apresentada atende aos objetivos almejados ou faz comparações entre técnicas de visualização
+da informação. Os outros 14 artigos (43,75%) aferem a influência das visualizações na
+interação com sistemas de recuperação da informação em comparação com interfaces
+convencionais (textuais): dez (71,4%) apresentam resultados positivos, enquanto quatro
+(28,6%) apontam para piora no desempenho, diferença insignificante ou resultado
+inconclusivo. Os resultados positivos compreendem, por exemplo, menor tempo para
+realização de tarefas, maior grau de satisfação do usuário ou opção mais intuitiva frente ao
+texto.
+5 VISUALIZAÇÃO
+
+DA INFORMAÇÃO APLICADA À INTERAÇÃO POR
+
+NAVEGAÇÃO
+A navegação é uma das estratégias mais tradicionais para se encontrar informações,
+porque é efetuada de forma muito parecida no mundo digital e fora dele:
+We wander aisles, scan shelves, sort papers, open folders, click links, flick
+photos, and shuffle songs. [...] Browsing evokes a sense of place. There are
+trails, edges, signs, maps, and landmarks that test our wayfinding skills. As a
+spatial experience, browsing is unique, and yet many of its most worn paths
+lead directly to and from search. (MORVILLE; CALLENDER, 2010, p. 8).
+
+Diversos estudos sobre VI aplicada à recuperação da informação abordam a interação por
+navegação, conforme pode ser visto, por exemplo, em Zhang (2008) e Xavier (2009), e um
+dos seus principais produtos é representação de coleções (SHIRI, 2008, p. 766). O quadro 3
+
+apresenta os 10 artigos analisados que tratam de VI aplicada à interação por navegação. A
+primeira coluna se refere à aplicação da visualização (subcategoria), a segunda fornece o
+número de artigos analisados e a terceira apresenta as estruturas ou técnicas de VI e as
+propriedades visuais trabalhadas em cada artigo. As estruturas e propriedades visuais foram
+identificadas com base nas pesquisas desenvolvidas por Dias (2007), Shiri (2008) e Vieira e
+Correa (2011).
+Quadro 3 – Aportes da VI para interação por navegação.
+VI aplicada à interação por
+navegação
+
+Nº
+artigos
+
+Estrutura/técnica de VI, metáfora e propriedade visual
+Mapa, forma e posição espacial (LIN, 1996); Mapa, “Fisheye view”, “Fractal View”
+(magnificação), forma e posição espacial (YANG; CHEN; HONG, 1999); Hierarquia,
+gráfico, cor, forma e posição espacial (SHNEIDERMAN et al., 2000); Sala de
+exibição de museu, forma (SHIAW; JACOB; CRANE, 2004); Diagrama, árvore,
+forma e posição espacial (STANESCU; BURDESCU, 2009)
+Diagrama, mapa, cor e forma (BARTRAM; UHL; CALVERT, 2000); Diagrama,
+círculos, cor e forma (PAULOVICH; MINGHIM, 2008);
+
+Visualização de coleções ou tesauros
+
+5
+
+Visualização de relações entre
+documentos
+
+2
+
+Visualização de múltiplas características
+de coleções/resultados de pesquisas
+
+1
+
+Linha do tempo, bolhas e gráfico em barras, cor, forma e posição espacial (PADIA;
+AlNOAMANY; WEIGLE, 2012)
+
+Visualização de documentos ou
+metadados
+
+2
+
+Gráfico de dispersão, forma e posição espacial (BÜRING; GERKEN; REITERER,
+2006); Texto & imagem e cartão (STROBELT et al, 2009)
+
+Fonte: elaboração própria.
+
+Conforme é possível notar, as propostas de visualização aplicada a interfaces de
+navegação utilizam estratégias como posicionamento espacial, uso de cores, formas,
+estruturas como linhas de tempo e gráficos para representar coleções e características de seus
+itens. Em comum, todos os estudos acima citados contribuem com a busca por formas de
+auxiliar o usuário a explorar e entender coleções documentais. Com relação aos paradigmas
+da visualização aplicada a recuperação da informação, nenhuma proposta pôde ser
+enquadrada como “navegação-pesquisa”, portanto se limita ao paradigma “apenasnavegação”. Apenas quatro dos dez artigos analisados conduziram avaliação com usuário e
+todos apresentaram resultados positivos.
+6 VISUALIZAÇÃO
+
+DA INFORMAÇÃO APLICADA À INTERAÇÃO POR
+
+PESQUISA
+Distanciando-se da tradição enciclopédica que sustentou o acesso à informação por
+eras e que inspirou interfaces de navegação como a dos “diretórios Yahoo!”, o bem-sucedido
+motor de busca “Google” pode ter sido um dos responsáveis pela popularização das interfaces
+de pesquisa – que já eram utilizadas em sistemas de recuperação da informação anteriores à
+World Wide Web. Apesar das reconhecidas qualidades da interação por pesquisa, ela ainda é
+problemática, pois pode gerar uma quantidade muito pequena de resultados ou um volume
+impossível de analisar e ainda exigir a proposição de complexas expressões de busca. Diante
+
+disso, pesquisadores recorrem aos estudos da VI para aprimorar a apresentação de resultados
+de maneira a ajudar os usuários a lidarem com grandes quantidades de itens recuperados. O
+quadro 4 traz na primeira coluna a aplicação de visualização analisada, na segunda, o número
+de artigos e na terceira a propriedade visual, estrutura ou técnica de VI utilizada.
+Quadro 4 – Aportes da VI para interação por pesquisa.
+VI aplicada à inte ração por pesquisa Nº de artigos
+
+Visualização de relações entre
+documentos
+
+Visualização de múltiplas
+características de coleções/resultados
+de pesquisas
+
+Visualização de documentos ou
+metadados
+
+Visualização de resultados de pesquisa
+em relação à expressão de busca
+
+8
+
+Estrutura/técnica de VI, me táfora e proprie dade visual
+Diagrama,cor, forma e posição espacial (SWAN; ALLAN; BYRD,
+1998); Esferas, cor, forma e posição espacial (LEUSKI: ALLAN,
+2000); Diagrama, cor e forma (BÖRNER, 2000); cor, forma e
+posição espacial (BENOÎT, 2002); Mapa, diagrama, cor, forma e
+posição espacial (GIACOMO et al, 2007); Diagrama, mapa, cor,
+forma e posição espacial (CAO et al, 2010); Mapa, diagrama de
+Voronoi, cor e forma (NOCAJ; BRANDES, 2012); Círculos, Cor e
+forma (Gomez-Nieto et al, 2014)
+
+3
+
+Mapa, diagrama, cor, forma e posição espacial (DING et al, 2000);
+Linha de tempo, mapa, nuvem, cor, forma e posição espacial (DORK
+et al., 2008); Linha de tempo, mapa, árvore, gráfico de dispersão,
+gráfico em barra, cor, forma e posição espacial (KOCH et al, 2010);
+
+5
+
+“Fisheye lens”, forma (PAEK; DUMAIS; LOGAN, 2004); Colagem
+de Texto & Imagem (KERNE et al, 2006); Espiral e cores
+(VEGAS; CRESTANI; FUENTES, 2007); Árvore, forma
+(WATTENBERG; VIEGAS, 2008); Diagrama, forma e posição
+espacial (KNAUTZ; SOUBUSTA; STOCK, 2010)
+
+8
+
+Gráfico de dispersão, cor, forma e posição espacial (FOX et al,
+1999); Par de coordenadas, posição espacial (ZHANG;
+KORFHAGE, 1999); Diagrama de Venn, árvore, cilindro, forma e
+posição espacial (HOUSTON; JACOBSON, 2000); cor, forma e
+posição espacial (KIM; JOHNSON; HUARNG, 2002); Espiral,
+ícones, cor, forma e posição espacial (SPOERRI, 2004); Sistema
+solar, cor, forma e posição espacial (NGUYEN; ZHANG, 2006);
+Mapa, diagrama, forma e posição espacial (MILNE; WITTEN,
+2011); Gráfico em barras, cor, forma e posição espacial (HEIMERL
+et al, 2012)
+
+Fonte: elaboração própria.
+
+Os 24 artigos analisados compreendem 16 anos (1998-2014) de pesquisas sobre a
+aplicação de visualizações com o objetivo de aprimorar interfaces de pesquisa. Os estudos
+analisados recorrem a diferentes estratégias baseadas em técnicas de visualização da
+informação para fornecer resultados de buscas. Duas pesquisas analisadas vão mais longe,
+propondo estruturas de VI para apoiar a formulação de expressões de buscas. Koch et al.
+(2010 apud AZEVEDO, 2015, p. 115) propõem uma visualização para amparar a aplicação de
+operadores booleanos, e Dork (2008, apud AZEVEDO, 2015, p. 115) para a aplicação de
+filtros temporais e geográficos.
+7 VISUALIZAÇÃO
+
+DA INFORMAÇÃO APLICADA À INTERAÇÃO POR
+
+NAVEGAÇÃO E POR PESQUISA
+Parte da literatura levantada não se posiciona claramente a que modelo de recuperação
+da informação (ou paradigma de visualização aplicada à recuperação da informação) se refere,
+
+e permite ao usuário interagir das duas formas. No quadro 5 consta a aplicação a que a
+visualização se destina (primeira coluna), o número de artigos analisados (segunda coluna) e a
+estrutura de VI e propriedade visual utilizada (terceira coluna). É possível notar que, exceto
+pelo “QueryKids” de Druin et al.(2001), todos os estudos abordados trazem propostas com
+“visualização de múltiplas características de coleções/documentos”.
+Quadro 5 – Aportes da VI para interação por navegação e por pesquisa
+VI aplicada à interação por nave gação e
+por pe squisa
+
+Visualização de múltiplas características de
+coleções/resultados de pesquisas
+
+Visualização de coleções ou tesauros
+
+Nº de
+Estrutura/té cnica de VI, me táfora e proprie dade visual
+artigos
+Árvore, muro, mesa de trabalho, cor, forma e posição
+espacial (MACKINLAY; ROBERTSON; CARD, 1992);
+Mapa, cor, forma e posição espacial (PEDIOTAKIS;
+4
+HASCOËT-ZIZI, 1996); Mapa, paisagem (landscape),
+forma e posição espacial (FABRIKANT, 2000); Mapa,
+galáxia, forma e posição espacial (GRANITZER et al,
+2004)
+1
+Mapa, zoológico, forma (DRUIN et al, 2001)
+
+Fonte: autoria própria.
+
+Os 5 artigos, que abrangem 12 anos (1992-2004) trazem propostas que possibilitam a
+interação através de navegação e de pesquisa, deixando a cargo do usuário decidir qual atende
+melhor a sua necessidade. Das cinco contribuições apresentadas, apenas o protótipo “InfoSky
+visual explorer”, de Granitzer et al. (2004 apud AZEVEDO, 2015, p. 121) passou por
+avaliação com usuários, que indicou que a visualização só melhora a performance quando em
+conjunto com a listagem textual convencional.
+8
+
+VISUALIZAÇÃO
+
+DA
+
+INFORMAÇÃO
+
+APLICADA
+
+A
+
+SISTEMAS
+
+DE
+
+RECUPERAÇÃO DA INFORMAÇÃO COM FOCO EM ANÁLISE VISUAL
+Na literatura levantada foram identificados estudos que, embora tratem de recuperação
+da informação e visualização da informação, têm foco na análise visual de conteúdos. A
+característica em comum nestes estudos é que a visualização não é uma ferramenta para
+analisar (aferir relevância) e acessar documentos, mas sim o resultado final da recuperação,
+isto é, pretende sanar a necessidade informacional sem demandar acesso direto aos itens
+recuperados. O quadro 6 indica os autores analisados (primeira coluna), referenciados em
+Azevedo (2015) e as estruturas de VI e propriedades visuais identificadas (segunda coluna).
+
+Quadro 6 – Aportes da VI para sistemas de recuperação da informação com foco em
+análise visual.
+Visualização da Informação aplicada a siste mas de recuperação da informação com foco e m análise
+visual
+Autor
+Estrutura/té cnica de VI, me táfora e proprie dade visual
+(HAVRE; HETZLER; NOWELL, 2000)
+Temporal, Rio, cor, forma, posição espacial
+(DORK et al., 2012)
+Diagrama, cor, forma e posição espacial
+(LUO et al., 2012)
+Temporal, Rio, cor, forma, posição espacial
+(GORG et al., 2013)
+Árvores, grade, diagrama, pontos, cor, forma e posição espacial
+
+Fonte: autoria própria.
+
+Os quatro artigos apresentados analisados contribuem com aplicações de recuperação
+da informação que, em vez de apontarem itens que podem atender a necessidade do usuário,
+pretendem fornecer diretamente as informações necessárias aos usuários. Considerando a
+grande concentração de estudos recentes, esta aplicação pode ser uma tendência na atualidade.
+9 PESQUISAS DE AVALIAÇÃO E REVISÕES DE LITERATURA
+Revisões de literatura de pesquisas de avaliação de sistemas de recuperação da
+informação que utilizem técnicas de visualização da informação fornecem valiosas
+contribuições para o tema trabalhado. Estes estudos, em vez de proporem aplicações de
+técnicas de visualização da informação para sistemas de recuperação da informação, analisam
+aplicações existentes ou a literatura sobre o tema. O material apresentado abrange estudos
+sobre: a influência das habilidades ou familiaridade do usuário com uso do computador, de
+visualizações e de sistemas específicos; avaliações de técnicas de visualização da informação
+ou sistemas que as utilizem; e também revisões bibliográficas que relacionem VI com Ciência
+da Informação ou Recuperação da Informação.
+Allen (1998 apud AZEVEDO, 2015), Sebrechts et al. (1999 apud AZEVEDO, 2015 )
+e Koshman (2005 apud AZEVEDO, 2015) indicam que aplicar técnicas de visualização da
+informação não resulta necessariamente em maior facilidade para usuários leigos. Estudos
+comparando o desempenho de usuários interagindo com visualizações e com texto
+desenvolvidos por Cribbin e Chen (2001 apud AZEVEDO, 2015), Hornbæk (2001 apud
+AZEVEDO, 2015) e Cole e Leide (2003) sugerem que as estruturas de visualização não
+resultam em melhorias na recuperação da informação. Contudo, conforme demonstram
+Morse, Lewis e Olsen (2002 apud AZEVEDO, 2015) e Julien, Leide e Bouthillier (2008 apud
+AZEVEDO, 2015), é preciso ter cautela com resultados de pesquisas de avaliação, pois aferir
+o desempenho de visualizações apenas com base em medidas de recuperação da informação e
+com parâmetros pouco padronizados pode comprometer sua qualidade.
+
+10 POTENCIAIS BOAS PRÁTICAS DE DESIGN INTERFACES DE SISTEMAS DE
+RECUPERAÇÃO DA INFORMAÇÃO
+Colin Ware (2013, p. 445 a 457), na obra “Information Visualization: Perception for
+Design”, propôs 168 (cento e sessenta e oito) diretrizes para criação de visualizações
+destinadas a diversas aplicações, contudo, nenhuma é especificamente direcionada à
+recuperação da informação. O segundo objetivo desta pesquisa foi estabelecido como “propor
+estratégias de design e melhores práticas que possam ser incorporadas ao projeto de interfaces
+de sistemas de recuperação da informação”. Contudo, considerando a falta de generalização
+característica dos estudos sobre VI aplicada a sistemas de recuperação da informação
+mencionada por Chen e Börner (2002, p. 228) e Julien, Leide e Bouthiller (2008 apud
+AZEVEDO, 2015, p. 129), pareceu coerente ser mais cauteloso e incluir o adjetivo
+“potenciais” nos resultados obtidos.
+Com o objetivo de complementar as contribuições da VI identificadas como potenciais
+boas práticas de design de sistemas de recuperação da informação, foram apresentadas
+paralelamente as diretrizes propostas por Colin Ware (2013) que se mostraram compatíveis.
+Os artigos analisados são somente aqueles que conduziram algum tipo de avaliação de
+desempenho de visualizações, pois seus resultados podem ser vistos como evidências de
+potenciais boas práticas para design de interfaces de sistemas de recuperação da informação –
+resumidas no quadro 7.
+
+Quadro 7 – Potenciais boas práticas de design de sistemas de recuperação da informação
+Cenário de
+aplicação
+
+Representação
+de coleções ou
+tesauros
+
+Representação
+de resultados
+de pesquisas
+em relação à
+expressão de
+busca
+
+Representação
+de documentos
+ou metadados
+
+Potenciais boas práticas para design de SRI
+Pontos e eixos coordenados podem ser um valioso recurso para representar grandes coleções organizadas hierarquicamente
+(baseada em SHNEIDERMAN et al., 2000 apud AZEVEDO, 2015);
+Representar objetos museológicos em conjunto, em vez de um a um, pode auxiliar os usuários a entenderem o contexto das
+coleções (baseada em SHIAW; JACOB; CRANE, 2004 apud AZEVEDO, 2015);
+A utilização de visualizações para representar coleções não deve ser feita em substituição ao texto, mas em complementação –
+esta potencial boa prática de design parece ser aplicável a sistemas de recuperação da informação em geral (baseada em
+GRANITZER et al., 2004 apud AZEVEDO, 2015);
+Utilizar técnicas de visualização da informação para representar tesauros pode facilitar a exploração e proporcionar melhor
+entendimento, resultando numa experiência mais satisfatória (baseada em STANESCU; BURDESCU, 2009 apud AZEVEDO,
+2015).
+Indicar a distribuição dos termos da expressão de busca no conteúdo dos documentos recuperados por meio da codificação por
+forma, cores e posição espacial pode ajudar os usuários a julgar quais são relevantes (baseada em KIM, JOHNSON e
+HUARNG, 2002 apud AZEVEDO, 2015);
+Utilizar analogias do senso comum, posição espacial e cores para representar relevância de documentos em relação à expressão
+de busca pode agradar aos usuários (baseada em NGUEYN; ZHANG, 2006 apud AZEVEDO, 2015);
+Estruturas baseadas em mapas e diagramas podem ser úteis para apresentar tópicos relacionados à pesquisa realizada (baseada
+em MILNE; WITTEN, 2011 apud AZEVEDO, 2015);
+Visualizações podem tornar a interação mais lenta (por conta da densidade informacional) e ainda demandarem maior
+aprendizado que as opções convencionais (como simples rankeamento) para representar relações entre documentos
+recuperados e a expressão de busca. Portanto, a decisão pela utilização de visualizações deve considerar seu custo-benefício em
+relação às opções convencionais ou que sejam familiares aos usuários (baseada em HEIMERL et al., 2012 apud AZEVEDO,
+2015; WARE, 2013).
+A adoção de uma lista de resultados menor que a convencional, que deve ser explorada por meio da técnica “fisheye lens”
+(simulação de lente de aumento convexa), pode ajudar os usuários a analisar descrições de resultados de pesquisa (como
+KWIC), pois limita o foco à região de interesse (baseada em PAEK; DUMAIS; LOGAN, 2004 apud AZEVEDO, 2015;
+WARE, 2013, p. 141);
+Sistemas de recuperação da informação desenvolvidos para funcionar em dispositivos com telas pequenas devem considerar a
+utilização da técnica “fisheye distortion” (simulação de lente de aumento convexa) (baseada em BÜRING; GERKEN;
+REITERER, 2006 apud AZEVEDO, 2015);
+Apresentar documentos recuperados como colagens de texto e imagem pode auxiliar tarefas de descoberta de informação para
+processos de invenção (baseada em KERNE et al., 2006 apud AZEVEDO, 2015);
+Representar elementos constituintes e a estrutura interna dos documentos por meio de visualização em espiral facilita a análise
+dos itens recuperados (baseada em VEGAS; CRESTANI; FUENTES, 2007 apud AZEVEDO, 2015);
+A estrutura “Tag cluster” (agrupamento de etiquetas) parece melhor que a “Tag cloud” (nuvem de etiquetas) para amparar a
+busca por informações (baseada em KNAUTZ; SOUBUSTA; STOCK, 2010).
+
+Fonte: autoria própria
+
+Continuação do quadro 7 – Potenciais boas práticas de design de sistemas de recuperação da
+informação
+Representar diferentes características dos documentos recuperados por meio de mapas e diagramas pode auxiliar o usuário a
+entender melhor o domínio em que sua pesquisa se insere (baseada em DING et al., 2000 apud AZEVEDO, 2015);
+Visualização
+de múltiplas
+Utilizar estruturas como linha do tempo, mapa e “Tag Cloud” (nuvem de etiquetas) para apresentar, respectivamente,
+características características como data limite, país de origem e etiquetas pode facilitar a busca por recursos na Web (baseada em Dork et al.,
+de coleções/
+2008 apud AZEVEDO, 2015);
+resultados de
+Auxiliar a aplicação de operadores booleanos por meio de uma visualização pode ajudar usuários menos familiarizados. As
+pesquisa
+múltiplas visualizações de resultados de pesquisa, por outro lado, embora aumentem a qualidade da busca, exigem maior
+treinamento em relação à lista textual rank eada convencional (baseada em Koch et al., 2010 apud AZEVEDO, 2015).
+Visualizações podem ser mais eficientes que o texto para apresentar relações semânticas entre documentos (baseada em
+CRIBBIN; CHEN, 2001 apud AZEVEDO, 2015; WARE, 2013);
+É preciso considerar a influência dos periféricos (tanto de entrada quanto de saída) na interação ao projetar visualizações de
+relações entre documentos (baseada em SWAN; ALLAN; BYRD, 1998 apud AZEVEDO, 2015);
+Complementar listagem de resultados convencional com visualização representando relações entre documentos pode resultar em
+Representação melhora na busca por informações (baseada em LEUSKI; ALLAN, 2000 apud AZEVEDO, 2015; GRANITZER et al., 2004
+de relações
+apud AZEVEDO, 2015);
+entre
+documentos A aplicação de estruturas baseadas em mapa e diagrama para apresentar resultados de pesquisa agrupados por categoria ajuda
+a indicar relações entre categorias e documentos (baseada em GIACOMO et al., 2000 apud AZEVEDO, 2015);
+A representação das relações entre diferentes documentos e suas facetas podem ser proporcionadas por meio de visualizações
+baseadas em mapas e diagramas (baseada em CAO et al., 2010 apud AZEVEDO, 2015 );
+Agrupar “snippets” por similaridade, utilizando proximidade e cores, pode ser melhor que simplesmente apresentá-los em ordem
+de relevância (baseado em GOMEZ-NIETO et al., 2014 apud AZEVEDO, 2015).
+Ao se projetar sistemas de recuperação da informação, sobretudo os que utilizam visualizações, é preciso promover a
+Acelerar a
+correspondência entre as habilidades do usuário final e as tarefas a que o sistema se destina (baseado em ALLEN, 1998 apud
+familiarização
+AZEVEDO, 2015);
+com sistemas
+O emprego de analogias para promover a transferência de habilidade (skill transfer) pode ser um recurso para acelerar
+de
+familiarização (baseada em WARE, 2013; DRUIN et al., 2001 apud AZEVEDO, 2015);
+recuperação
+da informação Quando possível, usuários finais devem participar ativamente do planejamento da interface (baseada em DRUIN et al., 2001
+apud AZEVEDO, 2015).
+Utilize codificação redundante para auxiliar a memorização dos itens representados na visualização. (baseada em TORY;
+SWINDELLS; DREEZER, 2009 apud AZEVEDO, 2015);
+Memorização
+no contexto de Visualizações que utilizem pontos são melhores para memorização que mapas de contorno e paisagens 3D, portanto, parecem
+SRI
+indicadas para aplicações em que a memorização seja um fator determinante (baseada em TORY; SWINDELLS; DREEZER,
+2009 apud AZEVEDO, 2015).
+
+Fonte: autoria própria
+
+11 CONSIDERAÇÕES FINAIS
+Entende-se que o objetivo de “apresentar uma visão geral do aportes da Visualização
+da Informação para interfaces de navegação e de pesquisa” foi atendido a contento, pois foi
+apresentada uma gama significativa de estudos, totalizando 58 referências, dentro de um
+espectro temporal de 22 anos (1992-2014). Foram apresentadas diferentes abordagens para a
+descrição de resultados de busca por meio de visualizações, seja nas interfaces de navegação,
+nas de pesquisa ou nos modelos híbridos e derivados.
+O segundo objetivo: “propor estratégias de design e melhores práticas que possam ser
+incorporadas ao projeto de interfaces de sistemas de recuperação da informação” foi
+alcançado, mas, para ressaltar a cautela que orientou a proposição das boas práticas de design
+de sistemas de recuperação da informação, elas foram tratadas como “potenciais boas práticas
+de design de sistemas de recuperação da informação”. Considerando o escopo do trabalho,
+elas também podem ser interpretadas como “potenciais boas práticas de design de
+visualizações para sistemas de recuperação da informação”.
+Parte do problema que motivou a execução desta pesquisa foi a escassez de estudos
+
+sobre VI aplicada a sistemas de recuperação da informação no âmbito da Ciência da
+Informação brasileira. O levantamento bibliográfico realizado apenas reforçou este dado.
+Primeiramente, não foram identificadas fontes brasileiras direcionadas à VI e, considerando
+toda a literatura analisada, a quantidade de autores brasileiros é tímida. Observou-se também
+uma baixíssima concentração de pesquisas oriundas de fontes brasileiras de Ciência da
+Informação. A presente pesquisa espera contribuir positivamente para a mudança desta
+situação.
+Os estudos avaliativos, que representam parte do material analisado, fornecem indícios
+de que o uso de visualizações pode trazer benefícios à atividade de busca por informações em
+sistemas de recuperação da informação (71% deles). Todavia, conforme sugerido pelas
+“potenciais boas práticas de design de sistemas de recuperação da informação”, não se deve
+pretender substituir o texto por visualizações, mas complementá-lo, proporcionando ao
+usuário de sistemas de recuperação da informação uma experiência mais rica.
+Embora os resultados indiquem que a VI pode contribuir positivamente para a
+qualidade da interação com sistemas de recuperação da informação, é preciso reconhecer que
+isto ainda não é um consenso, pois quase 30% dos 14 estudos que compararam visualizações
+com texto apontaram para resultados negativos ou inconclusivos. É necessário também
+considerar que a qualidade geral do sistema de recuperação da informação é fundamental. Um
+desempenho fraco em termos de revocação e precisão ou uma indexação deficiente não
+podem ser efetivamente contornados pelo uso de visualizações. Também cabe mencionar que
+a criação de visualizações é altamente dependente de técnicas sofisticadas de extração e
+organização de dados.
+O panorama apresentado, portanto, pode servir como ponto de partida para estudos
+mais aprofundados sobre VI aplicada a sistemas de recuperação da informação, atuando como
+um valioso material de consulta. Também pode amparar o planejamento de sistemas de
+recuperação da informação, pois fornece indícios de que as visualizações aprimoram sistemas
+de recuperação da informação, aponta possíveis maneiras de aplicação e sintetiza orientações
+que podem atuar como potenciais boas práticas de design. Paralelamente, espera-se que a
+presente pesquisa promova uma aproximação entre a Ciência da Informação e os estudos
+sobre percepção, introduzindo na área questões sobre os aspectos da cognição de baixo nível,
+isto é, como as pessoas percebem diferentes elementos gráficos, e como isto pode ser
+utilizado para melhorar o acesso à informação.
+

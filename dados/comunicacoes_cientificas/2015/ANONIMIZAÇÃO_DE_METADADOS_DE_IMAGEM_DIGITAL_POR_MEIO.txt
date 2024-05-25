@@ -1,0 +1,657 @@
+
+Pôster
+
+ANONIMIZAÇÃO DE METADADOS DE IMAGEM DIGITAL POR MEIO
+DO MODELO K-ANONIMATO1
+
+
+Resumo: Um recurso informacional iconográfico digital, quando representado por metadados e liberado
+sem o devido cuidado, pode implicar na quebra de privacidade. Assim, destaca-se a relevância de estudos
+sobre o processo de anonimização no compartilhamento de imagens digitais, de forma a proporcionar sua
+representação e mantê-las disponíveis e recuperáveis. Nesse contexto, é possível proteger a privacidade e,
+ao mesmo tempo, permitir o acesso e o compartilhamento de imagens? O objetivo desta pesquisa foi
+categorizar os metadados de imagens digitais que podem comprometer a privacidade, tendo como base a
+fundamentação do modelo k-anonimato. A metodologia constituiu-se em uma pesquisa exploratória dos
+metadados de imagem, complementada, inicialmente, pelo uso das operações de supressão e generalização
+estipuladas pelo modelo K-anonimato. Como resultado, foi apresentada à categorização dos metadados
+identificadores, semi-identificadores, sensíveis e não sensíveis, e aplicação das operações de supressão e
+generalização dos metadados. A partir desta pesquisa, é possível afirmar, preliminarmente, que os
+metadados identificadores devem ser suprimidos das imagens digitais, e o uso de generalização de
+metadados semi-identificadores minimizam a possível correlação com outros dados.
+Palavras-chave: Anonimato. Metadados. Imagem Digital. Privacidade.
+
+
+INTRODUÇÃO
+Muitas organizações armazenam, compartilham e usam vários recursos de informações,
+
+que variam em termos de tipo, estrutura e conteúdo. Nenhuma organização pode melhorar o seu
+desempenho sem mecanismos adequados para garantir o acesso a esses recursos
+(CHOWDHURY; CHOWDHURY, 2007).
+Dentre esses recursos, o aumento dos meios de captura de imagem tem avançado
+juntamente com as Tecnologias da Informação e Comunicação, que oferecem dispositivos e
+softwares para captura e processamento da imagem digital. A recuperação destes conteúdos
+requerem atenção especial, e “a imagem digital é um recurso iconográfico que necessita de
+orientações mais precisas e específicas em seu tratamento descritivo” (SIMIONATO; SANTOS,
+2013, p.3), assim, a representação destes por meio de metadados pode propiciar uma melhor
+recuperação, preservação e ampliação de pontos de acesso destes conteúdos para o usuário final.
+Metadados que, para Alves e Santos (2013) são entendidos como um conjunto de dados
+estruturados que auxiliam o processo de localização, identificação e recuperação de textos,
+documentos e imagens disponíveis em meios digitais.
+Ao realizar um upload de uma imagem, o usuário perde parcialmente o controle sobre este
+recurso digital, já que não é senso comum à percepção de que o recurso imagético possui mais
+informações do que o conteúdo visual propriamente dito. O conteúdo pode incluir metadados,
+intrinsecamente incorporados, que podem representar, inclusive, ameaças à privacidade dos
+usuários (HENNE; SMITH, 2014).
+A disponibilidade das informações imagéticas em diferentes dispositivos, aliada a
+necessidade de representação, compartilhamento e acesso, torna imprescindível uma maior
+atenção aos aspectos que envolvem a preservação da privacidade e, a Ciência da Informação pode
+desempenhar papel de destaque nesta questão, pois [...] “está relacionada com o corpo de
+
+conhecimentos relativos à produção, coleta, organização, armazenamento, recuperação,
+interpretação, transmissão, transformação e utilização da informação” (BORKO, 1968, p. 3,
+tradução nossa). Neste contexto, é relevante refletir sobre o seguinte problema: É possível
+proteger as questões pessoais ao permitir o acesso e compartilhamento de informações
+imagéticas, e ainda manter a representação do recurso digital?
+O objetivo desta pesquisa é categorizar os metadados de imagem digital por meio de
+elementos do modelo k-anonimato, promovendo uma reflexão sobre os aspectos da privacidade
+em recursos imagéticos.
+2
+
+IMAGEM DIGITAL
+Para representação da imagem digital são encontrados diversos padrões que possibilitam a
+
+descrição deste recurso, como a estrutura de dados automática EXIF2 e padrões como: Dublin
+Core, MARC 21 3 , MIX
+
+4
+
+e MODS 5 . Os dispositivos de captura podem inserir metadados
+
+automaticamente e ferramentas de criação e editoração de imagens permitem aos usuários
+adicionar ou editar metadados incorporados na imagem. Na imagem digital os metadados
+auxiliam na identificação de informações, tais como, direitos autorais, dados de processamento e
+captura (BACA, 1999).
+As especificidades dos padrões permitem uma melhor recuperação, preservação e mais
+pontos de acesso, todavia, estes acabam revelando, também, informações que podem tornar
+frágeis aspectos relacionados à privacidade, como: autor da imagem, data, coordenadas GPS,
+destacando, ainda, que os metadados são facilmente legíveis por máquinas.
+Henne e Smith (2014) enfatizam que embora os metadados possam comprometer a
+privacidade do indivíduo, estes são instrumentos valiosos para a descrição e recuperação da
+imagem. No entanto, o proprietário da imagem deve ser capaz de escolher, conscientemente,
+quais metadados irá compartilhar, minimizando a dependência atual, depositada sobre os próprios
+serviços de armazenamento e disponibilização, de proteger ou remover os metadados, já que não
+é possível controlar o destino intramuros destes dados uma vez sob controle dos responsáveis por
+estes serviços.
+2
+
+Exchangeable Image File Format.
+Machine-Readable Cataloguing
+4
+Metadata for Digital Still Images Standards Committee.
+5
+Metadata Object Description Schema
+3
+
+Para Samarati e Sweeney (1998) há situações que a utilidade dos dados depende da
+capacidade do responsável em fornecer dados anônimos e, não fornecer a proteção adequada,
+pode criar situações que comprometam a privacidade do indivíduo. Neste sentido, a privacidade
+pode ser entendida como o privilégio dos usuários em determinar por si mesmos quando, como e
+para quem suas informações podem ser disponibilizadas (BHASKAR; AHAMED, 2007).
+Diferenciando privacidade de anonimato, Skopek (2014) enfatiza que na condição de
+privacidade, pode-se ter o conhecimento da identidade de um indivíduo, mas não do fato
+associado a ele, que, na condição de anonimato, tem-se o conhecimento do fato do indivíduo, mas
+não da identidade deste. Assim, pode-se associar o anonimato a visão foucaultiana em que se é
+visto, mas não identificado, onde se é “objeto de uma informação, nunca sujeito numa
+comunicação” (FOUCAULT, 1987, p. 224). O anonimato pode ser definido, ainda, como a
+incapacidade de identificar o indivíduo num contexto, de tal forma que ele não possa ser
+analisado, criticado, julgado ou punido (ZIMBARDO, 1969 apud CHRISTOPHERSON, 2007).
+Uma das alternativas para minimizar problemas que afetam a proteção a privacidade é o
+modelo k-anonimato, conceituado como uma forma de definir propriedades que um conjunto de
+dados deve possuir de forma a garantir a privacidade dos envolvidos em sua eventual divulgação
+ou acesso. Samarati e Sweeney (1998) propõem, neste modelo, operações de generalização e
+supressão com o objetivo de garantir que cada registro acessado possa ser associado com pelo
+menos k possíveis correspondentes. Quanto maior for o valor numérico de k, maior será
+anonimização e consequentemente menor o risco de identificação do indivíduo.
+Na divulgação dos dados os atributos podem ser classificados como: identificadores
+(identificam unicamente o indivíduo); semi-identificadores (combinados com dados externos
+podem identificar o indivíduo); atributos sensíveis (contêm informações confidenciais) e
+atributos não sensíveis (não se enquadram em nenhuma das categorias) (SAMARATI;
+SWEENEY, 1998; FUNG et al., 2010).
+3 METODOLOGIA
+A metodologia consistiu em análise exploratória dos metadados de uma imagem digital
+capturada por celular e representados na estrutura de dados automática EXIF. Para extração dos
+metadados foi utilizada a ferramenta open source ExifTool.
+
+Com base nos metadados extraídos da imagem, foi realizada a categorização destes como:
+identificadores, semi-identificadores e não sensíveis. Logo, foram aplicadas as operações de
+supressão dos metadados identificadores e generalização dos metadados semi-identificadores, de
+acordo com o modelo k-anonimato.
+4 RESULTADOS E DISCUSSÕES
+A Figura 1 representa a imagem capturada, da qual foram extraídos os metadados para
+realizar a categorização e as operações estipuladas pelo modelo k-anonimato.
+Figura 1: Imagem capturada
+
+Fonte: Autores.
+
+Foram suprimidos os metadados categorizados como identificadores, pois podem permitir
+a identificação do sujeito. Aplicou-se a operação de generalização nos metadados categorizados
+como semi-identificadores e que possuem valores do tipo data, pois estes quando combinados
+com outros dados podem apontar para a descoberta de informações sobre o sujeito (Quadro 1).
+Esta ação permite manter parte da representação semântica e preservar a autenticidade e
+representatividade dos metadados.
+
+Interop. Version
+Sensing Method
+Scene Type
+Exposure Mode
+
+NS
+NS
+NS
+NS
+
+100
+One-chip color área
+Directly photo
+Auto
+
+-
+
+100
+One-chip color area
+Directly photo
+Auto
+
+NS
+
+Auto
+
+- Auto
+
+G 04/2015
+
+White Balance
+Focal Length In 35mm
+Format
+
+NS
+
+31 mm
+
+- 31 mm
+
+G
+-
+
+Scene Capture Type
+Image Unique ID
+Offset Schema
+GPS Version ID
+GPS Latitude Ref
+GPS Longitude Ref
+GPS Altitude Ref
+GPS Time Stamp
+GPS Proc. Method
+
+NS
+NS
+NS
+NS
+SI
+SI
+NS
+NS
+NS
+
+Standard
+S13F0SAGI01
+140
+2.2.0.0
+South
+West
+Above Sea Level
+13:59:36
+ASCII
+
+-
+
+-
+
+9.98
+parque.jpg
+.
+3.7 MB
+
+G 04/2015
+
+04/2015
+rw-rw-rwJPEG
+Jpg
+image/jpeg
+Big-endian
+Parque
+SAMSUNG
+GT-I9505
+
+Valor
+
+Categoria
+
+Resultado
+
+Metadados
+
+Ação
+
+9.98
+parque.jpg
+.
+3.7 MB
+2015:04:18
+SI 08:35:15-03:00
+2015:04:17
+SI 16:49:25-03:00
+2015:04:17
+SI 16:47:44-03:00
+NS rw-rw-rwNS JPEG
+File Type Extension NS jpg
+MIME Type
+NS image/jpeg
+Exif Byte Order
+NS Big-endian
+Image Description NA Parque
+Make
+NS SAMSUNG
+Cam Model Name SI GT-I9505
+
+Resultado
+
+NS
+NS
+NS
+
+Ação
+
+Categoria
+
+ExifTool V. Num
+File Name
+Directory
+File Size
+File Modification
+Date/Time
+File Access
+Date/Time
+File Creation
+Date/Time
+File Permissions
+File Type
+
+Valor
+
+Metadados
+
+Quadro1: Categorização e Operações de Supressão/Generalização nos Metadados
+
+Standard
+S13F0SAGI01
+140
+2.2.0.0
+South
+West
+Above Sea Level
+13:59:36
+ASCII
+
+Orientation
+X Resolution
+Y Resolution
+Resolution Unit
+Software
+Modify Date
+Artist
+YCbCr Positioning
+Copyright
+Exposure Time
+F Number
+Exposure Program
+ISO
+Exif Version
+Date/Time Orig.
+
+NS
+NS
+NS
+NS
+NS
+SI
+I
+NS
+I
+NS
+NS
+NS
+NS
+NS
+SI
+
+Horizontal
+72
+72
+inches
+
+I9505VJUGNI2
+2015:04:17 10:58:59 G
+Lucia Oliveira
+S
+Centered
+Lucia Oliveira
+S
+1/1096
+2.2
+Program AE
+50
+220
+2015:04:17 10:58:59 G
+
+GPS Date Stamp
+XP Title
+XP Author
+XP Subject
+I9505VJUGNI2 Padding
+04/2015
+Compression
+Thumbnail Offset
+Centered
+Thumbnail Length
+About
+1/1096
+Rights
+2.2
+Title
+Program AE Description
+50
+Creator
+220
+Image Width
+04/2015
+Image Height
+
+SI
+NA
+I
+NA
+NS
+NS
+NS
+NS
+NS
+I
+NA
+NA
+I
+NS
+NS
+
+Create Date
+Components Conf.
+Shutter Sp. Value
+Aperture Value
+Brightness Value
+Exposure
+Compensation
+Max Apert. Value
+Light Source
+
+SI
+NS
+NS
+NS
+NS
+
+2015:04:17 10:58:59
+Y, Cb, Cr,
+1/1134
+2.2
+836.328.125
+
+04/2015
+Y, Cb, Cr,
+1/1134
+2.2
+836.328.125
+
+Encoding Process
+Bits Per Sample
+Color Components
+Y Cb Cr Sub Sampling
+Aperture
+
+NS
+NS
+NS
+NS
+NS
+
+- 0
+- 2.2
+- Unknown
+
+GPS Date/Time
+GPS Latitude
+GPS Longitude
+
+SI
+SI
+SI
+
+Flash
+NS No Flash
+Focal Length
+NS 4.2 mm
+Maker N. Version NS 100
+
+- No Flash
+- 4.2 mm
+- 100
+
+SI
+NS
+NS
+
+Device Type
+Face Detect
+
+NS Cell Phone
+NS Off
+
+- Cell Phone
+- Off
+
+GPS Position
+Image Size
+Megapixels
+Scale Factor To 35 mm
+Equivalent
+Shutter Speed
+
+User Comment
+Sub Sec Time
+Original
+
+NS metadata-start
+
+- metadata-start Create Date
+
+NS 0
+
+- 0
+
+Date/Time Original
+
+SI
+
+7.4
+1/1096
+2015:04:17
+10:58:59.00
+2015:04:17
+10:58:59.00
+
+Sub Sec Time Dig.
+Flashpix Version
+Color Space
+Exif Image Width
+Exif Image Height
+GPS Altitude
+
+NS
+NS
+NS
+NS
+NS
+SI
+
+-
+
+Thumbnail Image
+Circle Of Confusion
+Field Of View
+Focal Length
+Hyperfocal Distance
+Light Value
+
+NS
+NS
+NS
+NS
+NS
+NS
+
+Binary data 45001 b
+0.004 mm
+60.3 deg
+(4.2 mm)
+1.97 m
+13.4
+
+NS 0
+NS 2.2
+NS Unknown
+
+0
+100
+sRGB
+4128
+2322
+422 m
+
+G
+-
+
+Horizontal
+72
+72
+Inches
+
+0
+100
+sRGB
+4128
+2322
+422 m
+
+NS
+NS
+SI
+
+2015:04:17
+G 04/2015
+Parque
+- Parque
+Lucia Oliveira
+S Passeio
+- Passeio
+(Binary dt 2044 b)
+- (Binary data 2044 b)
+JPEG (old-style)
+- JPEG (old-style)
+9716
+- 9716
+45001
+- 45001
+uuid:faf5bdd5-ba3d- - uuid:faf5bdd5-ba3dLucia Oliveira
+S Parque
+- Parque
+Parque
+- Parque
+Lucia Oliveira
+S 4128
+- 4128
+2322
+- 2322
+Baseline DCT,
+Baseline DCT,
+Huffman coding
+- Huffman coding
+8
+- 8
+3
+- 3
+YCbCr4:2:0 (2 2)
+- YCbCr4:2:0 (2 2)
+2.2
+- 2.2
+2015:04:17
+13:59:36Z
+G 04/2015
+22 deg 7' 41.37" S
+G - 22º 7’
+51 deg 24' 3.88" W
+G - 51º 25’
+22 deg 7' 41.37" S
+- 22º 7’
+51 deg 24' 3.88" W
+G - 51º 25’
+4128x2322
+- 4128x2322
+9.6
+- 9.6
+- 7.4
+- 1/1096
+G 04/2015
+G 04/2015
+-
+
+Binary data 45001 b
+0.004 mm
+60.3 deg
+(4.2 mm)
+1.97 m
+13.4
+
+I=Identificador; SI=Semi-Identificador; NS=Não Sensível; NA=Não Analisado; G=Generalização e S=Supressão.
+Fonte: Autores.
+
+Os metadados com valores das coordenadas GPS, categorizados como semiidentificadores, receberam também a operação de generalização, pois ao utilizar recursos como
+Flickr ou Google Maps, pode-se visualizar o local da captura da imagem e, assim, estabelecer
+uma possível correlação com o sujeito. Os metadados relacionados com descrição e assunto da
+imagem foram categorizados como não analisado, pois não tem delimitação de conteúdo e
+dependem do usuário, assim, torna-se subjetivo para a realização da categorização.
+
+5 CONSIDERAÇÕES
+Os metadados são fundamentais para adicionar valor ao recurso informacional imagético,
+pois auxiliam o acesso, compartilhamento e recuperação da imagem, todavia, estes devem ser
+cuidadosamente analisados para não implicar no comprometimento da privacidade.
+Por meio do modelo k-anonimato, pode-se analisar imagens digitais, identificando quais
+metadados podem ser mantidos sem perder a privacidade e ainda manter a descrição do recurso.
+É possível inferir que os metadados identificadores devem ser suprimidos de imagens
+digitais a serem publicadas e a generalização de metadados semi-identificadores tornam os
+valores menos específicos, minimizando a potencial correlação com outros dados.
+Como trabalhos futuros pretende-se tratar um banco de imagens e seus metadados por
+meio da aplicação do modelo k-anonimato e, ainda simulando ataques por meio de
+correlacionamento com outras fontes de dados.
+
+
+
+

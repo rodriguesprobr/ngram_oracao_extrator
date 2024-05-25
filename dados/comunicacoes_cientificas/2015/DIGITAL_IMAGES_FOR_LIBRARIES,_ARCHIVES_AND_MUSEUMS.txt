@@ -1,0 +1,723 @@
+Comunicação Oral
+
+DIGITAL IMAGES FOR LIBRARIES, ARCHIVES AND MUSEUMS
+(DILAM): APRESENTAÇÃO DE UM MODELO CONCEITUAL1
+
+Resumo: A expressiva quantidade de recursos informacionais, entre eles os imagéticos digitais, estão
+relacionadas as novas formas de comunicação da sociedade. Diante disso, procedimentos necessários
+para localização e recuperação são tarefas complicadas para o profissional e para o próprio usuário
+pela variedade de recursos a serem descritos. Da mesma forma, instituições com uma proposta de
+convergência para determinados tipos de acervo crescem visando a interoperabilidade sintática de
+registros. Nesse contexto, é possível questionar como integrar os princípios descritivos para os
+contextos da Arquivologia, Biblioteconomia e Museologia do recurso imagético digital? Objetiva-se
+apresentar o modelo conceitual Digital Images for Libraries, Archives and Museums (DILAM)
+enfatizando as suas entidades e os atributos responsáveis pela integração aos contextos e ao recurso
+imagético digital. A pesquisa é classificada como teórico-aplicada e qualitativa, em relação aos
+objetivos de desenvolvimento, e exploratória pela realização de um levantamento bibliográfico de
+nível nacional e internacional. Os resultados apresentam as três etapas de criação do modelo, 1)
+definição de requisitos funcionais para os usuários, 2) definição dos metadados apropriados ao recurso
+imagético digital e 3) definição das entidades e criação do modelo DILAM. Conclui que a interlocução
+entre arquivos, bibliotecas e museus, não reflete em uma unificação, mas expressa a colaboração e
+cooperação em relação aos avanços tecnológicos presentes na representação e organização da
+informação.
+Palavras-chave: Imagens digitais. Modelagem conceitual. Arquivos. Bibliotecas. Museus.
+
+
+1 INTRODUÇÃO
+A necessidade de tornar acessíveis e disponíveis as imagens digitais em repositórios,
+banco de imagens e catálogos, insere-se aos procedimentos metodológicos da área de Ciência
+da Informação e ao conjunto aos aspectos tecnológicos envolvidos na representação da
+informação.
+O conjunto de procedimentos metodológicos da Ciência da Informação (CI), derivam
+do estudo, análise, disseminação, preservação e representação para o acesso aos registros
+informacionais. (BUCKLAND, 1991). O objeto documental também dito como recurso
+informacional, definido como “[...] a informação objetivada [...] em uma estrutura analógica
+e/ou digital, com valor informacional que caracteriza a sua concepção intelectual expressa na
+corporificação de manifestações estruturadas na forma de itens.” (SANTOS; SIMIONATO;
+ARAKAKI, 2014, p. 148).
+A representação desse recurso informacional deve corresponder à forma expressa de
+sua retratação, isso condiz que a imagem seja adequadamente tratada nos conceitos da área de
+CI. Sendo que ao mesmo tempo é considerado como desafio para área, representar e organizar
+atributos de recursos informacionais que elucidem as características principais considerando
+as ocasiões necessárias de acesso e localização feitas pelos usuários.
+Glushko (2013) e Svenonius (2000) enfatizam a preocupação para as questões sobre o
+domínio de recursos informacionais, sendo os domínios conceitualmente definidos por
+campos de estudo mais abrangentes inseridos a tipologia de recursos informacionais, como
+imagéticos, bibliográficos, sonoro, entre outros. Da mesma forma, essa preocupação deve se
+
+atentar a representação dos recursos e suas propriedades amplas, ou seja, devem descrevê-los
+a fim de tornar o recurso único.
+É possível também apontar outra preocupação, que corresponde a integração dos
+princípios descritivos dos contextos da Arquivologia, Biblioteconomia e Museologia. Em
+razão desse tipo do recurso imagético pertencer aos acervos destas unidades de informação,
+incluindo as Galerias de Arte, pelo valor que a imagem possui como patrimônio artístico,
+cultural, preservação da memória, de comprovação, entre outros. Parte dessa preocupação
+também inserida aos estudos e eventos sobre o movimento de integração destes contextos
+como destacados por alguns autores, entre Homulus (1990), Smit (1993), Smit e Barreto
+(2002), Guimarães (2008), Tanus e Araújo (2012) e Marcondes (2012).
+Esse trabalho inicia em uma camada invisível e intangível ao usuário final,
+estruturando uma abordagem que proporcione possibilidades de convergência para que os
+dados desses diferentes contextos tenham interligações, favorecendo a recuperação e
+localização dos recursos pelo usuário.
+Nesse caso, são consideradas as diferenças organizacionais e as necessidades da
+análise documental realizada em cada unidade informacional, a compreensão do conjunto da
+imagem e as convergências para o contexto arquivístico, biblioteconômico e museológico.
+Considera que o ambiente digital é um meio convergente de diversos usuários,
+independentemente do vínculo institucional formado, ou seja, o ambiente digital pode agrupar
+diferentes grupos informacionais.
+Para isso foi pressuposto que os princípios descritivos dos contextos arquivístico,
+biblioteconômico e museológico são fatores que subsidiam a construção de um modelo
+conceitual, que possa ser relacionado com os atributos de recursos imagéticos em ambientes
+digitais a partir do seu domínio. Sendo assim, o objetivo desse trabalho é apresentar o modelo
+conceitual Digital Images for Libraries, Archives and Museums (DILAM) enfatizando as suas
+entidades e os atributos responsáveis pela integração aos contextos e ao recurso imagético
+digital.
+
+2 METODOLOGIA
+A pesquisa é classificada como natureza teórico-aplicada e qualitativa, objetivando gerar
+novas possibilidades para construção de registros informacionais na representação e
+organização de imagens digitais. Em relação aos objetivos do trabalho para integração dos
+contextos arquivístico, biblioteconômico e museológico, essa pesquisa é classificada como
+
+exploratória. Aos procedimentos técnicos recorre-se a pesquisa bibliográfica, com o
+levantamento realizado em nível nacional e internacional em fontes de pesquisa primárias,
+secundárias e terciárias.
+Em relação ao levantamento bibliográfico, o período selecionado foi de 2000 a 2014,
+levando em consideração que algumas obras deveriam ser citadas independente da data. As
+fontes utilizadas no levantamento bibliográfico foram: Biblioteca Digital Brasileira de Teses e
+Dissertações (BDTD), Base de Dados Referenciais de Artigos de Periódicos em Ciência da
+Informação (BRAPCI), P@rthenon UNESP, Portal de Periódicos da Capes, Google Acadêmico,
+Scientific Electronic Library Online (SciELO) e a Web of Science, tendo como resultados
+artigos, teses e dissertações, capítulos de livros e livros.
+O método escolhido para o desenvolvimento do modelo foi a modelagem EntidadeRelacionamento, já trabalhada nos Requisitos Funcionais para Dados Imagéticos Digitais
+(RFDID) por Simionato (2012), sendo sua base espelhada na estrutura dos Functional
+Requirements for Bibliographic Records (FRBR).
+3 A IMAGEM DIGITAL E OS PRINCÍPIOS DESCRITIVOS NA ARQUIVOLOGIA,
+BIBLIOTECONOMIA E MUSEOLOGIA
+A partir das redes sociais e do ambiente digital, o recurso imagético teve uma ampla
+proporção de aceitação e utilização, o que facilitou ainda mais a sua criação. As características
+que a diferenciam da imagem analógica, são relativas à gênese digital. Estas propriedades são
+importantes e principalmente em alguns casos, podem ser recuperadas pelos dados
+Exchangeable Image File Format (EXIF) ou pelas diferentes extensões. As extensões podem
+ser nomeadas por imagens vetoriais, ou seja, imagens geradas a partir de descrições geométricas
+de formas e se diferencia das imagens bitmap ou mapa de bits; ou raster, que são geradas a
+partir de pontos minúsculos diferenciados por suas cores.
+Todavia, é importante lembrar que caso os recursos não estiverem descritos
+adequadamente ao tipo de ambiente inserido, ocorrerá problemas em sua localização e
+consequentemente o usuário não recuperará o que deseja. Segundo Sánchez Vigil (2006) o
+documento imagético está disperso nos acervos apresentando variedades (fotografias, negativos,
+imagens digitais) e dependentes do tipo de instituição que as incorpora no acervo são
+diferenciadas pela sua aplicação e função. Após a aquisição, as imagens são distinguidas pelo
+seu assunto, tratadas de modo aleatório e pouco utilizados os vocabulários controlados e a
+indexação, e em raros os casos pela autoria e título.
+Para possibilitar a localização, acesso e recuperação das imagens vários tratamentos
+
+informacionais e criações computacionais são necessárias, uma delas é a padronização dos
+atributos, realizadas por instrumentos de descrição. A “[...] definição dos elementos, dos
+atributos de descrição para a representação é realizada em diferentes níveis nas unidades de
+informação em que atuam.” (SANTOS, 2013, não paginado), em razão de que os elementos
+identificados devem constituir de propriedades que identificam o tipo recurso informacional.
+No entanto, ao diferenciar o tipo de instituição como arquivos, bibliotecas e museus,
+também diverge o tratamento do tipo de recurso. As diferenças do tratamento informacional
+estão presentes desde os atributos derivados à lógica representacional de cada contexto até os
+atributos do próprio recurso informacional. Em razão das dissonâncias salientadas pelos
+aspectos organizacionais e representacionais, tendências internacionais estão preocupadas em
+sanar desafios entre as áreas, como a cooperação de coleções, registros e dados entre de
+arquivos, bibliotecas e museus. Como destaca Marcondes (2012, p. 188),
+Alinhamentos semânticos facilitam a navegação através de dados abertos
+interligados entre recursos informacionais diferentes através dos links
+semânticos entre entidades em diferentes conjuntos de dados. Na área de
+arquivos, bibliotecas e museus, alguns esforços de alinhamento semântico já
+foram feitos, como entre os modelos FRBR (1998) (da área de bibliotecas) e o
+CIDOC CRM (da área de museus), resultando disso o FRBRoo.
+
+O estudo da descrição de imagens na Arquivologia, foi identificado as correntes teóricas
+e metodológicas que definem as formas representação no ciclo de vida dos documentos. Nas
+correntes mais tradicionais do campo, como a diplomática arquivística e a pós custodial, onde a
+descrição somente deverá ser realizada na fase permanente. Já na arquivística integrada,
+proposta por Rousseau e Couture (1998) a descrição inicia-se a partir da criação/produção do
+documento na instituição, preservando os atributos já definidos na sua fase corrente.
+A arquivística integrada é uma forma gerada e conduzida ao propósito da organização,
+dentro destas funções, pode ser concentrada conforme às formalidades da descrição e da
+classificação. (ROUSSEAU; COUTURE, 1998). Essa corrente garante a unicidade das
+intervenções nos documentos, aplicando o princípio das três idades e ainda caracterizando pela
+construção lógica dos metadados descritivos para o arranjo e da ordem original dos subgrupos,
+denominadas como séries, dos documentos.
+De certa forma, a utilização da corrente da arquivística integrada garante o acesso aos
+documentos, desde a fase inicial e ainda, poupa o retrabalho do profissional arquivista evitando
+novas descrições ao longo do processo documental. Ressalva que na arquivística integrada, os
+fundamentos apoiam o tratamento descritivo para o Gerenciamento Eletrônico de Documentos
+
+(GED) definidos por Rousseau e Couture (1998).
+No entanto, os instrumentos arquivísticos mais utilizados como a International Standard
+Archival Description General – ISAD (G) não acompanharam o mesmo desenvolvimento
+organizacional e representacional junto as novas possibilidades do meio digital, assim não
+conseguem explorar todo o potencial e seus alinhamentos com o desenvolvimento de seus
+modelos conceituais, como o Conceptual Model for Archival Description (CMAD) e as
+iniciativas Modular Requirements for Records Systems (MoReq) e Modelo de Entidades e
+Relacionamentos do e-ARQ Brasil.
+Já a Biblioteconomia, pelo seu próprio desfecho histórico apresenta uma maior dinâmica
+em relação aos instrumentos descritivos e aos modelos conceituais. Guinchat e Menou (1994, p.
+101) afirmam que a catalogação deve “[...] fornecer uma representação do documento que é
+descrito de uma forma única e não ambígua, o que permite identificá-lo, localizá-lo, representálo nos catálogos correspondentes e recuperá-lo.”
+A catalogação permite que o catálogo possa multidimensionar as escolhas, para que o
+usuário encontre o material desejado. Segundo Santos e Pereira (2014, p. 71)
+O processo de Catalogação de um recursos, em suas diversas etapas, demanda
+tempo, custos, e conhecimento especializados para a análise de um dado
+bibliográfico e para utilização dos instrumentos de trabalho da representação,
+como, por exemplo, os códigos, as normas, os padrões de metadados, os
+formatos de intercâmbio de dados bibliográficos, os requisitos funcionais, as
+listas de cabeçalhos de assuntos, as listas de cabeçalho de autor, os manuais e
+outros catálogos, para garantir um padrão mínimo de qualidade e
+padronização.
+
+Portanto, o processo de catalogação além de garantir a unicidade ao recurso
+informacional em uma forma sucinta e estruturada dos dados, apresenta certas características.
+As disposições da catalogação estão relacionadas as novas formas de representação como o
+Functional Requirements for Bibliographic Records (FRBR), por exemplo. Com a concepção
+do FRBR, o entendimento do processo de representação do recurso informacional foi revisto e
+com isso, novos relacionamentos entre os recursos informacionais foram possíveis.
+Essa percepção influenciou diretamente a estrutura de alguns códigos de catalogação
+como a International Standard Bibliographic Description (ISBD) em sua versão consolidada e
+o Anglo-American Cataloguing Rules, second edition revised (AACR2r) que se diferenciam por
+suas estruturas e tipos de recursos como livros e materiais cartográficos. Dessa forma, a ISBD a
+que havia diversas publicações transformou em apenas um único manual e o AACR2r que
+subdividia seus capítulos direcionadas a descrição de um tipo de recurso está sendo substituído
+
+pelo Resource Description and Access (RDA).
+Já a museologia é reconhecida pela sua instituição condizer a coleção e a
+responsabilidade de induzir a ampliação dos conhecimentos sobre a humanidade e suas técnicas,
+ou seja, toda forma representacional reluz as fontes informacionais daquela determinada
+imagem digital e de sua coleção. Assim, “[...] liga-se diretamente à morfologia do objeto, isto é,
+diz respeito a materiais e técnicas de confecção, a formas, ornamentos, a partes constituintes, a
+funções utilitárias para as quais foi concebido e a significados simbólicos relacionados às
+formas materiais de representação.” (BARBUY, 2002, p. 71).
+O catálogo na museologia “[...] trata-se de um meio de comunicação típico e objetivo
+para difusão de suas propostas. Através dele o museu comunica os estudos e pesquisa que vêm
+sendo realizados sobre um determinado aspecto, utilizando seus próprios meios de interpretação
+[...]”. (CAMARGO-MORO, 1986, p. 225).
+Os instrumentos de representação na Museologia específicos são pouco abordados, pela
+diversidade de campos que são necessários para os registros. Mesmo que nem todos sejam
+preenchidos, os campos necessários estão: o tipo do material, técnica utiliza, procedência,
+história de exposição, as considerações de instalação e valor de avaliação.
+4 O MODELO CONCEITUAL DILAM
+Ao contrário do escopo de criar um novo padrão de metadados para a imagem digital, o
+modelo DILAM tem como objetivo equivaler os princípios descritivos dos contextos da
+Arquivologia, Biblioteconomia e Museologia, de tal forma que não trate de forma diminutiva,
+mas sim de forma colaborativa e seja complementar ao planejamento de dados estruturados em
+um modelo conceitual.
+Assim, o modelo DILAM foi desenvolvido a partir dos estudos denominados como
+modelagem DILAM (SIMIONATO, 2015) elaborada a partir de três etapas, que constituem: 1)
+definição de requisitos funcionais para os usuários, 2) definição dos metadados apropriados ao
+recurso imagético digital e 3) definição das entidades e criação do modelo DILAM.
+A definição dos requisitos funcionais foi baseada no aprofundamento dos estudos sobre
+o recurso imagético digital, como também sobre cada uma das necessidades de cada contexto e
+seus usuários.
+Os requisitos funcionais na Ciência da Informação, também são encontrados com a
+terminologia user tasks ou tarefas do usuário. Essas tarefas coincidem com as propriedades que
+cada particularidade da modelagem deve priorizar. Nos Arquivos o usuário das Bibliotecas não
+tenha o mesmo intuito em seus sistemas, também deve ser repensado o registro para os
+
+profissionais como usuários do sistema. Outro ponto considerado foi a harmonização entre o os
+modelos conceituais já finalizados na área de Ciência da Informação, como o FRBR e o
+Requisitos Funcionais para Recursos Imagéticos Digitais (RFDID) proposto por Simionato
+(2012).
+Dessa forma, os requisitos conceituais previstos na modelagem e caracterizados no
+modelo DILAM, foram planejados a partir dos modelos conceituais e propostas da
+Arquivologia, Biblioteconomia e Museologia, que incluem Functional Requirements for
+Bibliographic Records (FRBR), Autoridade (FRAD) e Assunto (FRSAD), o domínio da
+arquivístico, Conceptual Model for Archival Description (CMAD) e o Modular Requirements
+for Records Systems (MoReq) e o domínio museológico, Conceptual Reference Model (CRM).
+Assim, os requisitos funcionais para o DILAM são:
+•
+
+Encontrar materiais que correspondem aos critérios estabelecidos de
+pesquisa do usuário;
+
+•
+
+Identificar uma entidade;
+
+•
+
+Selecionar uma entidade que é adequado para as necessidades do usuário;
+
+•
+
+Explorar os recursos imagéticos de uma coleção, utilizando atributos e
+relações entre os recursos, usando atributos e relacionamentos;
+
+•
+
+Escolher os assuntos para que possam encontrar as imagens desejadas,
+usando atributos e relacionamentos;
+
+•
+
+Reconhecer as responsabilidades de criação de um recurso imagético digital,
+e buscar as autorias, usando atributos e relacionamentos; e
+
+•
+
+Obter o recurso imagético, selecionado e identificado.
+
+O segundo passo foi a escolha dos metadados apropriados foi derivado do método
+crosswalk (ST. PIERRE; LAPLANT, 1998). Os crosswalks são usados para “[...] comparar
+elementos de metadados de um esquema ou elemento definido para um ou mais outros
+esquemas [...]” (BACA, 2008, p. 47, tradução nossa) e também da metodologia BEAM
+proposto por Santos, Simionato e Arakaki (2014).
+Os padrões de metadados utilizados no crosswalk foram: Anglo-American Cataloguing
+Rules, second edition revised (AACR2r), Cataloging Cultural Objects (CCO), Categories for
+the Description of Works of Art (CDWA), Categories for the Description of Works of Art Lite
+(CDWA Lite), Describing Archives: a content standard (DACS), Dublin Core (DC), Encoded
+Archival Description (EAD), Graphic Materials, International Standard Archival Description
+General (ISAD(G)), International Standard Bibliographic Description, consolidated edition
+
+(ISBD), Resource Description and Access (RDA), Rules for Archival Description (RAD) e
+SPECTRUM.
+Os resultados dos crosswalks foram base para o desenvolvimento do último passo, a
+criação das entidades para o modelo DILAM. Inicialmente, foi determinado que as entidades da
+modelagem entidade-relacionamento, no escopo da desvinculação de um registro monolítico
+sem relacionamentos, como na estrutura MARC 21, para um registro construído a partir de
+integrações da imagem digital, principalmente, entre áreas.
+O
+
+modelo
+
+conceitual
+
+DILAM
+
+é
+
+visualizado
+
+pela
+
+figura
+
+1.
+
+Figura 1 - Modelo Conceitual DILAM
+
+Fonte: Simionato (2015, p. 121).
+
+Como visto na Figura 1, as entidades são compatíveis com as entidades já compostas da
+família FRBR e por isso as entidades foram mantidas, Obra, Expressão, Manifestação, Item
+(Grupo 1), Pessoa, Família, Entidade Coletiva (Grupo 2), Conceito, Objeto, Evento e Lugar
+(Grupo 3).
+Outras entidades foram criadas para acrescentar e subsidiar alguns relacionamentos
+entre as entidades. Tipo-Relacionamento, que descreve a que tipo de relacionamento pertence o
+relacionamento complementar as entidades do Grupo 1 e Obra, Responsabilidade, entidade que
+relaciona ao controle de autoridade do Grupo 2 e Obra, e Thema, entidade que relaciona ao
+controle de assunto do Grupo 3 e Obra.
+Para a integração entre os contextos arquivístico, biblioteconômico e museológico, a
+modelagem conceitual precisou que algumas entidades fossem incorporadas ao seu escopo.
+Desse modo, trariam os requisitos específicos de cada contexto. Entre os modelos de
+Museologia e Arquivologia, algumas características se mostram importantes e comuns, em
+relação a descrição: tempo, propriedades físicas, origem do recurso informacional (procedência
+e proveniência) e os processos técnicos dos recursos imagéticos, como a classificação de
+documentos. Outro destaque foi aos ‘fundos’, ‘séries’, ‘arquivos’ do documento, mas é
+compreendido que nesse modelo conceitual insere-se as abstrações de uma obra, expressão e
+manifestação, por serem propriedades de organização do recurso. Por isso, foram criadas quatro
+novas entidades que relacionam entre as outras já mencionadas. As entidades são: Chronos
+(tempo), Fysikos (propriedades físicas), Rízo (origem o recurso) e Érgo (atividades técnicas).
+(SIMIONATO, 2015).
+Para tanto, um melhor entendimento sobre as entidades do modelo DILAM será feito a
+partir do quadro 1, que descreve cada uma das entidades e seus relacionamentos.
+Quadro 1 – Descrição das entidades do modelo conceitual DILAM
+Entidades do modelo DILAM
+
+Obra
+
+Expressão
+
+Descrição
+É a abstração da concepção intelectual do autor, ou seja, é
+uma entidade definida como o que autor pensou antes de se
+tornar concreto. Nesta entidade, a concepção de um recurso
+imagético não está ligada a uma concepção primária,
+inicialmente, o autor não compõe a obra em um suporte, mas
+somente, a conceitua.
+Condiz a realização intelectual ou artística, ou seja, podemos
+dizer que é a elaboração da obra, é quando o autor já feito a
+concepção de uma obra decide traduzi-la na forma imagética
+e se preocupa em como será a imagem. Possui o
+relacionamento de ‘estar em’, ‘incorporar’ e ‘conter’ com a
+manifestação.
+
+Manifestação
+
+Item
+
+Tipo-Relacionamento
+
+Pessoa
+
+Família
+
+Entidade coletiva
+
+Responsabilidade
+
+Conceito
+
+Objeto
+
+Evento
+Lugar
+Thema
+Chronos
+
+A Manifestação atribui a forma física e concreta da
+expressão de uma obra. Pode ser uma imagem analógica,
+digital ou as duas ao mesmo tempo, será o suporte de
+registro da imagem. Possui o relacionamento de
+‘exemplificar’ com o item.
+A imagem que o usuário encontrará em um catálogo, banco
+ou repositório de imagens.
+Descreve a que tipo de relacionamento pertence o
+relacionamento complementar as entidades do Grupo 1 e
+Obra, Responsabilidade, entidade que relaciona ao controle
+de autoridade do Grupo 2 e Obra. Os relacionamentos
+podem ser de adaptação, complemento, imitação, sucessão,
+suplemento, sumarização, transformação e todo para a parte.
+É a abstração de um indivíduo, o principal responsável pela
+criação, ou ainda a responsabilidade da realização de uma
+obra. Ou seja, o responsável pela captura da imagem digital
+ou por sua realização. No caso, não é importante que o
+fotógrafo seja amador ou profissional, ou se o responsável
+pela criação foi um telescópio.
+A Família é atrelada não a responsabilidade de criação, mas a
+redentora dos direitos autorais do indivíduo criador. E seus
+componentes familiares estarão ligados a pessoa. Como da
+mesma forma é a Entidade coletiva, contudo, o que difere
+são as formas de parentesco dos responsáveis.
+São as organizações ou grupos de indivíduos responsáveis
+pelo conteúdo intelectual da imagem digital, inclusive
+grupos temporários (encontros, conferências, reuniões,
+festivais, etc.) e autoridades territoriais como uma federação,
+um estado, uma região, entre outros.
+Auxilia na identificação das principais formas de autoridade
+para o usuário. Sua atribuição deriva-se as necessidades
+encontradas no modelo conceitual FRAD. Logo, atribui seu
+relacionamento de uma entidade ser conhecida por uma
+responsabilidade.
+Representa uma noção abstrata ou uma ideia que podem ser
+amplas ou específicas, abrangendo abstrações de uma obra.
+Essas abstrações podem ser termos que identifiquem as áreas
+de conhecimento, disciplinas, escolas de pensamento,
+teorias; ou ainda as técnicas fotográficas que podem ser
+incorporadas as imagens desde a sua concepção.
+Está relacionado a uma coisa material, que abrange uma
+completa categoria de coisas materiais que podem incluir o
+conteúdo de ser as uma obra: objetos da natureza, objetos da
+criação humana ou objetos que já não existam.
+Entidade que inclui as ações, ocorrências ou acontecimentos
+que derivaram ou ao que a imagem se encontra, como um
+momento histórico, época, período de tempo.
+É a localização ou uma série de localizações como: terrestres
+e
+extraterrestres,
+históricas
+ou
+contemporâneas,
+características geográficas e jurisdições geopolíticas.
+É uma entidade para que os relacionamentos de todos os
+assuntos se atrelarem a apenas um, incorporando as
+entidades de Conceito, Objeto, Evento e Lugar.
+Foi identificado nos contextos e na definição dos atributos a
+
+necessidade de arquivos e museus em destacarem o tempo de
+uma obra. Principalmente, para Arquivologia a entidade
+determina em questão a temporalidade do recurso imagético
+e qual forma será armazenada. Possui relacionamentos de
+registro.
+A necessidade de uma entidade para propriedades físicas,
+parte do escopo da Museologia na criteriosa avaliação do
+estado em que os recursos se encontram, no caso, a imagem
+Fysikos
+analógica se houve alguma danificação ou outra ocorrência.
+Possui relacionamentos de estrutura.
+Abrange as necessidades específicas para a identificação da
+procedência e proveniência. Possui relacionamentos de
+Rízo
+origem e provir.
+Corresponde as atividades que necessitam ser relatadas,
+como a classificação, avaliação e curadoria. Possui
+Érgo
+relacionamentos de composição.
+Fonte: Elaborado pelas autoras com base em Simionato (2015).
+
+Algumas entidades, principalmente as correspondentes ao Grupo 3, possibilitam que a
+descrição seja utilizada a partir dos EXIF como fonte de informação. No entanto, para que seja
+evitada anomalias de alguns atributos, o quadro 2 apresenta cada entidade, os relacionamentos e
+seus respectivos atributos, que serão utilizados para a descrição das entidades de forma integral,
+já previstos pela etapa anterior no crosswalk realizado.
+Quadro 2 - Atribuição de metadados para cada entidade e relacionamento da modelagem
+DILAM
+ENTIDADE
+
+Obra
+
+Obra-obra
+
+Expressão
+
+ATRIBUTO
+Data de criação*
+Data relacionada ao título
+Nome(s) do(s) produtor(es)*
+Nota descritiva*
+Título *
+Título do criador
+Tipo de relacionamento*
+Descrição da derivação*
+Extensão do autor
+Qualificação do autor
+Título do autor*
+Data*
+Data de criação*
+Data relacionada ao título
+Localização da criação*
+Notas*
+Data de criação*
+Data de relação a obra*
+Data relacionada ao título
+Data*
+Descrição da derivação
+Descrição da edição*
+
+Expressão-expressão
+
+Expressão-obra
+
+Manifestação
+
+Manifestação-manifestação
+
+Item
+
+Item-manifestação
+Item-item
+
+Pessoa
+Família
+
+Nome(s) do(s) produtor(es)*
+Nota descritiva*
+Número da edição
+Número de identificação*
+Tipo de relação a obra
+Título equivalente*
+Título da expressão*
+Título do criador*
+Notas*
+Descrição da derivação
+Descrição da edição*
+Idioma*
+Notas*
+Data*
+Data de criação*
+Data relacionada ao título*
+Idioma*
+Notas*
+Data de criação*
+Data relacionada ao título
+Nome(s) do(s) produtor(es)*
+Nota descritiva*
+Título da manifestação*
+Designação de edição/impressão
+Local de publicação/distribuição
+Publicador/distribuidor
+Data de publicação/distribuição
+Fabricante
+Indicação de série
+Forma do suporte
+Extensão do suporte
+Meio físico
+Modo de captura
+Dimensões do suporte
+Identificador da Manifestação
+Fonte para aquisição/autorização de acesso
+Notas*
+Data de criação*
+Data relacionada ao título
+Notas*
+Identificador do item*
+Impressão digital
+Restrições de acesso ao item*
+Localização do item*
+Notas*
+Data de criação*
+Localização*
+Notas*
+Data de criação*
+Localização*
+Notas*
+Nome da Pessoa*
+Datas da Pessoa
+Título da Pessoa
+Outra designação associada à Pessoa
+Notas*
+Nome da Família*
+
+Entidade coletiva
+
+Responsabilidade
+
+Conceito
+Objeto
+Evento
+
+Lugar
+
+Thema
+
+Chronos
+
+Fysikos
+
+Datas da Família
+Título da Família
+Outra designação associada à Família
+Notas*
+Nome da Entidade Coletiva*
+Número associado à Entidade Coletiva
+Local associado à Entidade Coletiva
+Data associada à Entidade Coletiva
+Outra designação associada à Entidade Coletiva
+Notas*
+Data de Falecimento*
+Data de Nascimento*
+Nacionalidade*
+Nome da fonte das informações inseridas
+Nome da Pessoa, Família ou Entidade Coletiva*
+Nota biográfica da pessoa
+Pessoas vinculadas à Pessoa, Família ou Entidade
+Coletiva
+Profissão da pessoa*
+Sexo*
+Notas*
+Assunto principal de conceito*
+Data atribuída ao assunto*
+Notas*
+Assunto principal de objeto*
+Notas*
+Assunto principal de evento*
+Data do evento*
+Estilo do período histórico
+Notas*
+Assunto principal de lugar*
+Contexto arqueológico
+Contexto arquitetônico
+Locais relacionados
+Local do evento*
+Localização histórica
+Tipo de evento - cultural
+Tipo de evento - histórico
+Tipo do período histórico*
+Notas*
+Descrição do conteúdo - atividade
+Descrição do conteúdo - objeto
+Escopo e conteúdo*
+Nota descritiva do assunto*
+Notas*
+Termos de indexação*
+Termos genéricos*
+Termos técnicos de iconografia
+Notas*
+Descrição sobre a temporalidade*
+Datas associadas a manifestação
+Datas associadas a expressão
+Notas*
+Abertura da lente
+Coloração*
+Compensação de exposição
+Contraste*
+
+Rízo
+
+Érgo
+
+Descrição das dimensões*
+Distância focal
+Extensão*
+Flash*
+Forma*
+Formato / Tamanho*
+ISO*
+Marcas d'água*
+Materiais / Técnicas de Descrição*
+Materiais / Técnicas de Extensão*
+Nitidez*
+Orientação*
+Saturação*
+Tamanho
+Tipo de extensão*
+Tipo de dimensões
+Unidade das dimensões
+Valor das dimensões*
+Condição do Item
+Histórico de tratamento
+Plano de tratamento
+Notas*
+Descrição da procedência*
+Descrição da proveniência
+Estatuto Jurídico relacionado
+História administrativa/Biografia do
+Criador/Produtor*
+História da custódia*
+Procedência*
+Proveniência do Item
+Marcas/inscrições
+Histórico de exibição
+Notas*
+Descrição do proprietário / agente*
+Descrição sobre avaliação e eliminação
+Descrição sobre o sistema de arranjo*
+Características físicas e requisitos técnicos*
+Condições de acesso*
+Condições de reprodução
+Direitos autorais*
+Notas*
+
+Fonte: Simionato, 2015, p. 133-136.
+
+Os atributos com o asterisco (*) foram julgados como metadados obrigatórios e que são
+importantes para a identificação da entidade.
+O processo de correspondência estará vinculado a padrões de metadados que subsidiam
+uma estrutura, ou seja, o formato para construção do registro. Por isso, em alguns momentos do
+crosswalk para os padrões de metadados específicos da Arquivologia, Biblioteconomia,
+Museologia e também para os recursos imagéticos digitais, um metadado corresponderá a
+muitos outros metadados do outro padrão, em diferentes casos poderão ocorrer que diversos
+metadados serão direcionados a apenas outro do padrão de destino ou então, um metadado não
+
+corresponderá a nenhum outro e assim, o metadado não será utilizado.
+4 CONSIDERAÇÕES FINAIS
+Considera que em virtude das novas necessidades de vinculação e integração de dados,
+essa pesquisa traz uma abordagem para o contexto em que já vivenciamos e conhecemos, a
+descrição em arquivos, bibliotecas e museus.
+Nesse sentido, o modelo DILAM é uma proposta que acrescenta mais entidades já vistas
+no Requisitos Funcionais para Recursos Imagéticos Digitais (RFDID), apreciando as
+necessidades fundamentais dos contextos já explicitados, principalmente quando uma das
+questões fundamentais é produção do item informacional.
+Referente ao item informacional, ressalta-se a discrepância e as precauções para cada
+contexto. Em bibliotecas, o item pode ter várias cópias que possuem o mesmo processo
+documental - os exemplares, ao contrário do que acontece em arquivos e museus. Os cuidados
+com o recurso imagético para a Arquivologia e a Museologia são no sentido que os documentos
+são tratados como únicos e não há exemplares, apenas cópias ou réplicas. Além disso, nesses
+dois casos há uma importância maior: o vínculo com o criador ou produtor, no qual é decisivo
+para incorporação na coleção.
+A construção do modelo DILAM foi baseado nos principais modelos conceituais já
+consolidados e por isso, as principais entidades não teriam grandes ajustes em relação a
+persistência e consistência de dados. Isso quer dizer, que seja para um banco de dados, uma base
+de um catálogo cooperativo, é possível que contenha diversos tipos de abstrações com a mesma
+base conceitual. Isso pode ainda mais criar a interoperabilidade sintática de diversos tipos de
+recursos informacionais, bibliográficos, imagéticos, fílmicos, entre outros, em uma mesma base
+e catálogo.
+Indica que o sentido desta interlocução entre as instituições não converge à unificação,
+pois cada contexto mostra diferenças. Mas é importante expressar e destacar por meio do
+modelo DILAM como isso pode ser colaborativo e cooperativo em relação aos avanços
+tecnológicos presentes na representação e organização da informação.
+

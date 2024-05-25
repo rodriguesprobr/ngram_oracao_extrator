@@ -1,0 +1,685 @@
+
+Comunicação Oral
+
+ANÁLISE ONTOLÓGICA DE REQUISITOS FUNCIONAIS PARA
+REPRESENTAÇÃO DE DOCUMENTOS MULTIMÍDIA
+
+Resumo: O artigo busca avançar nas pesquisas sobre representação semântica de documentos não
+necessariamente textuais, mas envolvendo também vídeos, imagens, áudios, propondo uma análise de
+padrões de metadados, modelos e ontologias destinados a aplicações que lidam com recursos de
+informação na Web. Adotou-se o NeOn Methodology como um guia metodológico atual, confiável,
+com aplicabilidade em diferentes domínios e áreas que fazem uso de ontologias nessa perspectiva. A
+partir desse guia foi possível buscar por recursos ontológicos candidatos à análise e estabelecer uma
+análise comparativa entre os selecionados. O trabalho traz o resultado de análises de cobertura de
+requisitos funcionais envolvendo ontologias para descrição multimídia desvelando características que
+poderiam, deveriam e não estão sendo consideradas para caracterização desse tipo de recurso,
+refletindo em decisões de seleção para reuso de recursos de conhecimento disponíveis.
+Palavras-chave: Documentos multimídia. Anotação semântica. Padrão de metadados. Ontologias.
+Representação do conhecimento.
+
+1 INTRODUÇÃO
+Svenonius (2000) elucida que a informação para ser organizada precisa ser descrita e
+que o produto desse processo descritivo é a representação da informação. Ressalta que alguns
+tipos de representação da informação são construídos através do uso de linguagens, as quais são
+subdivididas em linguagens que descrevem a informação (o conteúdo) e linguagens que
+descrevem o documento (o suporte).
+Na representação descritiva de documentos, a criação e uso de metadados torna-se
+essencial para a padronização e descrição (ou anotação, conforme indica a literatura no campo
+das ciências da Web) de recursos de informação, pois promove a interpretação uniforme e
+universal, em qualquer idioma e em qualquer tipo de unidade de informação. Metadados é a
+forma mais comumente empregada para agregar semântica a informações (VELLUCI, 1998)
+com o propósito de facilitar a busca de recursos.
+Em se tratando de documentos textuais, tradicionalmente o conhecimento embutido nos
+mesmos é gerenciado com o uso de metadados por meio de palavras-chave, informação sobre
+autoria, publicação, etc. Contudo, a representação de documentos multimídia, que faz referência
+a vários tipos de objetos, tais como vídeo, texto livre, som, imagem, entre outros, possui
+estrutura muito mais complexa do que simplesmente cadeias de letras e números, pois lida com
+relações espaciais entre elementos de interesse dentro do conteúdo da mídia; com relações
+temporais na ocorrência de eventos dentro de um período de tempo; com atributos técnicos de
+baixo nível de conteúdo (cores, texturas, timbres de som, descrição de melodia); e com
+características semânticas de alto nível como, por exemplo, classificação de gênero ou
+representação de informação sobre pessoas retratadas na mídia.
+A necessidade de inclusão de metadados para além de recursos textuais, isto é,
+metadados destinados à descrição de conteúdo multimídia, especialmente na Web, viabilizou o
+esforço conjunto entre comunidades e entidades normativas interessadas em fornecer um
+esquema comum de metadados para aplicações endereçadas a raciocínio automatizado sobre
+mídias. São os casos do World Wide Web Consortium (W3C) e da International Organization
+for Standardization/ International Electrotechnical Commission (ISO/IEC), que buscam
+soluções inteligentes para descrição de conteúdo multimídia processável por máquina e baseada
+em semântica por meio da Web Semântica (BERNERS-LEE; HENDLER; LASSILA, 2001);
+
+além da Interface de Descrição de Conteúdo Multimídia, conhecida como MPEG-7 (NACK;
+LINDSAY, 1999a; NACK; LINDSAY, 1999b; SALEMBIER, 2001; SALEMBIER; SMITH,
+2001; CHANG; SIKORA; PURL, 2001; MARTÍNEZ; KOENEN; PEREIRA, 2002;
+MARTÍNEZ, 2004). Contudo, apesar de a visão sobre metadados ser similar tanto para a
+comunidade MPEG quanto para a comunidade W3C, algumas diferenças em relação a
+propósito são evidentes. A primeira foca uma interface comum para descrever material
+multimídia refletindo informação sobre o conteúdo, o que difere da segunda que foca na
+descrição subjacente ao conteúdo (ou na descrição do conhecimento sobre o recurso) por meio
+de tecnologias semânticas, especialmente com uso de ontologias.
+As comunidades de Biblioteca Digital, Representação do Conhecimento e Inteligência
+Artificial (uma parte da comunidade interessada em raciocínio automatizado sobre mídias) que
+interpretam, manipulam e geram arquivos de mídia audiovisuais têm participado intensamente
+em projetos de pesquisas voltados a modelos e tecnologias para processamento de metadados
+(OSSENBRUGGEN; NACK; HARDMAN, 2004; NACK; OSSENBRUGGEN; HARDMAN,
+2005; BODOFF; HUNG; BEN-MENACHEM, 2005). Tais pesquisas são endereçadas a
+problemas significativos envolvendo metadados textuais e no contexto multimídia,
+principalmente pela convergência de processos informacionais na Web (OSSENBRUGGEN;
+NACK; HARDMAN, 2004), a saber: i) custo, cuja produção de metadados de alta qualidade é
+uma atividade dispendiosa e consome tempo; ii) subjetividade, em que anotadores geralmente
+têm visões específicas acerca do conteúdo e do contexto em que é usado; iii) restritividade, em
+que um esquema com pouca restrição (como campo em texto livre) proporciona, geralmente,
+uma terminologia subjetiva, inconsistente e pouco aproveitada pela máquina; iv) longevidade,
+cuja construção de um esquema de anotação para fins específicos dentro de um domínio (e
+suficientemente genérico entre domínios) é uma tarefa difícil; v) privacidade, cujos metadados
+podem prover informações privadas ou sigilosas, o que requer cuidado especial; e vi)
+padronização, em que há necessidade de padronização tanto no nível de sintaxe quanto no nível
+semântico.
+A comunidade de Biblioteca Digital usa metadados como auxílio na catalogação e na
+recuperação da informação em grandes coleções de documentos. O padrão Dublin Core (ISQ,
+2010) é o comumente usado na comunidade com os seus 15 elementos de metadados e
+qualificadores específicos destinados principalmente a catálogos em bibliotecas, incluindo
+título, assunto e dados de criação da obra. Para o W3C, a Web Semântica é uma tentativa de
+produzir resultados de pesquisas em biblioteca digital e representação do conhecimento que
+sejam aplicáveis à Web.
+
+Pesquisadores de Representação do Conhecimento ocupam-se com a infraestrutura
+tecnológica bem projetada para adicionar metadados a documentos Web com vistas à
+publicação formal e explícita de conhecimento na Web. Ontologias são estruturas-chave para
+compartilhar e comunicar conhecimento explícito por meio de um compromisso ontológico
+entre pessoas e aplicações (GRUBER, 1993; GUARINO, 1998) que irão usar a terminologia da
+ontologia de acordo com regras especificadas. No que tange à Web, ontologias são concebidas
+por meio de linguagens de representação (ou declarativas) como OWL (Ontology Web
+Language) na especificação de objetos, conceitos, relacionamento entre eles e regras que
+limitam a interpretação destes em certo domínio.
+
+Como exemplo, cita-se um cenário
+
+(BODOFF; HUNG; BEN-MENACHEM, 2005) em que um vídeo na Web é descrito por
+metadados que especificam que o vídeo é sobre “dois jovens profissionais urbanos”; uma
+consulta feita com a sentença “estilo de vida yuppie” não retornaria a página. Combinando o
+metadado com uma ontologia, poder-se-ia declarar que “Yuppie” é um acrônimo comum para
+“Jovem Profissional Urbano” e que denota um estilo de vida específico. Desse modo, a mesma
+consulta retornaria a página com o vídeo em questão.
+A norma ISO MPEG-7 empreendeu esforços na proposição de uma interface comum
+para descrever material multimídia, refletindo informação sobre o conteúdo. Entretanto, o
+MPEG-7 apesar de ser um padrão de descrição recomendado pela comunidade multimídia,
+principalmente por seu background de conhecimento neste domínio, possui limitações de ordem
+semântica (OSSENBRUGGEN; NACK; HARDMAN, 2004; NACK; OSSENBRUGGEN;
+HARDMAN, 2005; ARNDT et al., 2009; NIXON et al., 2011) por ser baseado no formato
+XML Schema (eXtensible Markup Language) . Tal característica pode acarretar um desacordo
+entre a informação que pode ser extraída do dado e a interpretação que o usuário faz numa dada
+situação envolvendo o mesmo dado, conhecida como gap semântico (SUÁREZ-FIGUEROA;
+ATEMEZING; CORCHO, 2013).
+Por outro lado, o W3C e comunidades afins vêm empregando esforços de pesquisas
+(ARNDT et al., 2009; STEGMAIER et al., 2009; NIXON et. al., 2011; SUÁREZ-FIGUEROA;
+ATEMEZING; CORCHO, 2013) para ir além dos padrões de metadados correntes com a
+adoção de ontologias para anotação multimídia baseadas em Resource Description Framework
+(RDF)/OWL. Ontologias apresentam-se como possibilidades de representação de conhecimento
+em sistemas de informação na medida em que buscam organizar e padronizar conceitos, termos
+e definições aceitas por uma comunidade particular. Permitem que a máquina interprete as
+marcações com semânticas bem definidas e necessárias para garantir, por exemplo, que o
+
+anotador e o consumidor da anotação compartilhem o mesmo significado perante um recurso
+(SILVA, 2014).
+Anotação semântica formalmente identifica conceitos e relações em documentos e é
+direcionada principalmente para uso de máquinas. Anotações semânticas baseadas em
+ontologias beneficiam os sistemas de recuperação de informação e endereçam problemas
+relacionados à interoperabilidade (UREN et al., 2005; BÜRGER et al., 2009; HUNTER, 2009;
+DOMINGUE; FENSEL; HENDLER, 2011). No primeiro caso, a recuperação da informação é
+melhorada na execução de buscas, que aproveitam de ontologias para fazer inferências sobre
+dados de fontes heterogêneas. No que tange à interoperabilidade, as organizações que possuem
+bases de dados legadas geralmente lidam com dados não integrados e em diferentes formatos.
+Nessas circunstâncias, anotações que fazem uso de ontologias podem fornecer uma estrutura
+semântica comum para a integração de dados advindos de bases heterogêneas.
+Apesar das diferenças entre as abordagens sobre modelagem de informação nas
+comunidades supracitadas, muitas aplicações necessitam de elementos de pesquisa das áreas
+envolvidas. Segundo Ossenbruggen, Nack e Hardman (2004), ontologias podem ser
+endereçadas, por exemplo, para organização e controle da terminologia usada em metadados;
+além de auxiliar usuários na produção de anotações mais sistemáticas e consistentes por meio
+de conhecimento explícito acerca de um domínio. Contudo, surgem desafios na identificação,
+seleção e alinhamento de uma variedade de padrões de metadados, vocabulários e ontologias
+disponíveis que reflete aspectos de interoperabilidade semântica e sintática para o provimento
+de compartilhamento entre sistemas e aplicações na web.
+Diante ao exposto, a proposta deste artigo é apresentar (i) as iniciativas de padrões de
+metadados, vocabulários, ontologias e modelos conceituais voltados ao domínio da descrição
+multimídia; e (ii) o resultado de análises de cobertura de requisitos funcionais envolvendo
+ontologias para descrição multimídia. Nesse sentido, o artigo contribui em trazer à luz um
+estudo comparativo envolvendo ontologias e padrões de metadados para descrição multimídia
+que desvela características que poderiam, deveriam e não estão sendo consideradas para
+caracterização desse tipo de recurso, principalmente no contexto da Web, refletindo em decisões
+de seleção para reuso de recursos de conhecimento disponíveis.
+O artigo está organizado como se segue. Nesta introdução, apresenta-se a
+contextualização da pesquisa, delineando os objetivos a serem alcançados. O capítulo 2
+descreve a metodologia de pesquisa, elucidando os métodos e as técnicas utilizados para o
+alcance dos objetivos. O capítulo 3 traz os resultados da análise de cobertura de requisitos
+funcionais frente às ontologias selecionadas na pesquisa a partir de critério pré-determinado.
+
+Finalmente, o capítulo 4 se incumbe de traçar as considerações gerais da análise e conclusões do
+artigo.
+2 METODOLOGIA DE PESQUISA
+O propósito deste artigo é apresentar uma análise comparativa de cobertura de requisitos
+funcionais entre ontologias para o domínio da descrição de documentos multimídia. Desse
+modo, fez-se necessária a adoção de um guia metodológico que representasse atualidade,
+confiabilidade e aplicabilidade em diferentes domínios e áreas que fazem uso de ontologias
+nessa perspectiva. Após uma revisão na literatura na área de Engenharia de Ontologias, foi
+possível identificar e selecionar a NeOn Methodology (SUÁREZ-FIGUEROA; GÓMEZPÉREZ; FERNÁNDEZ-LÓPEZ, 2012), advinda de frameworks metodológicos amplamente
+aceitos em áreas maduras como Engenharia de Software e Engenharia do Conhecimento
+(FERNANDEZ; GOMEZ-PEREZ; JURISTO, 1997).
+A metodologia de Engenharia de Ontologias NeOn abrange nove cenários2 que sugerem
+uma série de passos flexíveis para o desenvolvimento de ontologias para a Web, focando o
+reuso de recursos de conhecimento disponíveis. Dentre os cenários indicados no guia, destacase neste artigo a utilização de parte do Cenário 3 - reuso de recursos ontológicos – que
+compreende o reuso de possíveis recursos ontológicos existentes para a construção ou
+aprimoramento de uma rede de ontologias. Um recurso ontológico abrange, por exemplo,
+ontologias já definidas ou partes de ontologias disponíveis e úteis à resolução de problemas. As
+etapas metodológicas deste Cenário efetuadas na pesquisa foram: i) busca por ontologias:
+buscar por recursos ontológicos candidatos à análise de conteúdo da ontologia,
+preferencialmente em repositórios da Web Semântica; e ii) comparação de ontologias:
+estabelecer uma análise comparativa entre os recursos ontológicos selecionados em (i), levandose em consideração critérios determinados pelo ontologista, que, para o propósito deste
+trabalho, o critério comparativo determinado foi o número de requisitos funcionais cobertos
+(será elucidado na seção 2.2).
+O processo metodológico, assim como a descrição de seus métodos e técnicas, é
+elucidado nas seções subsequentes da seguinte forma: a seção 2.1 apresenta o método usado
+para identificação e seleção de ontologias para descrição multimídia na literatura e em
+repositórios específicos; e a seção 2.2 elucida a estratégia metodológica determinada para apoiar
+a análise e a comparação das ontologias selecionadas.
+2
+
+Em virtude do limite de extensão do presente artigo, optou-se em não elucidar os nove cenários do guia. A
+descrição completa pode ser conferida em (SUÁREZ-FIGUEROA; GÓMEZ-PÉREZ; FERNÁNDEZ-LÓPEZ,
+2012).
+
+2.1 IDENTIFICAÇÃO E SELEÇÃO DE ONTOLOGIAS
+O primeiro passo foi realizar a atividade de aquisição de conhecimento sobre o assunto
+“descrição de documentos multimídia”, a qual envolveu um estudo acerca do domínio por meio
+de fontes documentais, incluindo normas, artigos e bibliotecas de esquemas XML relacionadas
+a padrões para descrição de documentos multimídia. Os padrões ISO MPEG-7 e Dublin Core
+foram selecionados como material de referência para aquisição de conhecimento sobre o
+domínio, pois, em revisão recente na literatura (SILVA; SOUZA, 2014), evidenciou-se que
+grande parte de ontologias para este domínio é construída com fundamentos advindos do padrão
+MPEG-7 e do padrão Dublin Core. Para o levantamento de características multimídia foram
+consultados os descritores e os esquemas de descrição do MPEG-7 e os elementos do Dublin
+Core, além do documento ISO/IEC JTC1/SC29/WG11N6828 (MARTÍNEZ, 2004) que
+especifica os requisitos do padrão MPEG-7.
+Após a atividade de aquisição de conhecimento sobre o domínio, tornou-se possível
+determinar um conjunto de elementos de parâmetro (detalhe em SILVA, 2014, pp.330-338) que
+serviram como base para identificar, analisar e comparar ontologias para descrição multimídia
+no aspecto de características concernentes a dois padrões de metadados consolidados nas
+comunidades de Biblioteca Digital, Web Semântica e Multimídia. A organização da aquisição
+de conhecimento ocorreu em três categorias de tipos de metadados fundamentados na literatura
+(com garantia literária), a saber: metadados independentes de conteúdo, metadados dependentes
+de conteúdo e metadados descritivos de conteúdo.
+A categoria metadados independentes de conteúdo (32 requisitos) é endereçada ao
+gerenciamento e a administração de recursos informacionais e foi organizada em quatro tipos de
+descrição, a saber: i) criação e produção da mídia; ii) classificação da mídia; iii) informação da
+mídia; e iv) uso da mídia. Em (i) têm-se características envolvendo a criação do conteúdo da
+mídia e de recursos a ele associados; em (ii) têm-se características destinadas à classificação de
+materiais audiovisual, tais como gênero, assunto, propósito, idioma, além de classificação
+etária, orientação para pais e avaliação subjetiva; em (iii) as características são voltadas ao
+meios de armazenamento incluindo formato, compressão e codificação do conteúdo
+audiovisual; e em (iv) as características refletem direitos de uso, registro e disponibilidade de
+uso e informação financeira acerca do conteúdo audiovisual.
+A categoria metadados dependentes de conteúdo (44 requisitos) foi organizada nas
+subcategorias metadados visuais e metadados para áudio, ambas consideradas de baixo nível e
+geralmente seus conteúdos são extraídos automaticamente por algoritmos computacionais. Os
+metadados visuais abrangeram as características: estruturas básicas, cor, textura, forma,
+
+movimento, localização e reconhecimento de rosto. Os metadados para áudio contemplaram as
+características: base espectral, timbre espectral, timbre temporal, paramétricos de sinal,
+espectral básico e básico.
+A categoria metadados descritivos de conteúdo (44 requisitos) se caracteriza por
+associar entidades da mídia com entidades do mundo real e foi organizada nas seguintes
+subcategorias: i) segmentos de mídia; ii) semântica de conteúdo; iii) personalização de
+conteúdo; e iv) características de alto nível envolvendo áudio. Em (i) têm-se características
+relacionadas à estrutura de conteúdo em termos de segmentos (decomposição) de vídeo e de
+áudio; em (ii) encontram-se características envolvendo objetos, eventos e noções do mundo real
+que podem ser abstraídos do conteúdo multimídia; em (iii) agregam características de modos de
+personalização de conteúdo multimídia a fim de facilitar navegação, acesso e interação de
+usuários em relação ao consumo de conteúdo; e em (iv) têm-se características voltadas à
+cobertura de domínios de conhecimento específicos envolvendo áudio.
+O segundo passo, por sua vez, foi identificar ontologias fazendo-se um levantamento na
+literatura e buscas em repositórios da Web Semântica. O critério usado para a seleção de
+ontologias para descrição multimídia na literatura se baseou no conceito de “multimídia”. Outro
+princípio adotado para o critério de seleção foi o de seguir diretrizes relevantes na literatura
+(SUÁREZ-FIGUEROA; ATEMEZING; CORCHO, 2013) e recomendadas pelo padrão de
+metadados MPEG-7 no aspecto de descrição multimídia, envolvendo: i) descrições no assunto
+expressando a semântica transmitida; ii) descrições estruturais permitindo a decomposição e
+localização das partes de conteúdo; e iii) descrições de baixo nível cobrindo características de
+áudio e visuais. Para a identificação e seleção de ontologias em repositórios Web, o guia NeOn
+recomenda o uso de máquinas de busca para a recuperação de ontologias em repositórios da
+Web Semântica. Nesse sentido, as máquinas de busca selecionadas, dentre as opções listadas
+pela comunidade Linked Open Data (LOD, 2012), foram o Watson (WATSON, 2007) e o
+Swoogle (SWOOGLE, 2007) pelo fato de terem sido bem avaliadas em projetos e validações de
+uso (SUÁREZ-FIGUEROA; GÓMEZ-PÉREZ; FERNÁNDEZ-LÓPEZ, 2012). Os termos
+chave usados para a busca de documentos semânticos foram determinados a partir da atividade
+de aquisição de conhecimento anteriormente comentada. A análise de conteúdo das ontologias
+identificadas foi realizada por meio do editor Protégé 4.3.
+As atividades de busca na literatura e em repositórios Web resultaram, num primeiro
+momento, em dezessete ontologias para descrição multimídia candidatas a análise. Após um
+
+processo de refinamento 3 frente às ontologias previamente selecionadas para análise, nove
+ontologias foram selecionadas e são brevemente descritas a seguir.
+A Media Ontology foi proposta no ano de 2009 (STEGMAIER et al., 2009) dentro do
+W3C Media Annotation Working Group. A ontologia foi construída utilizando padrões de
+metodologias de Engenharia de Ontologias e seu propósito de construção foi de definir um
+conjunto de propriedades de anotação centrais para descrever conteúdo multimídia, juntamente
+com um conjunto de mapeamentos entre os principais formatos de metadados em uso
+atualmente.
+A M3 Multimedia (ATEMEZING, 2011) faz parte de uma ontologia abrangente
+denominada M3 Ontology Network, resultado de um projeto de pesquisa espanhol denominado
+Buscamedia. O projeto objetiva criar um mecanismo de busca semântica de recursos multimídia
+visando progressos nas áreas de semântica, produção audiovisual e distribuição de mídia. No
+ano de 2012 foi finalizada a versão 2.7 da M3 Ontology Network. A M3 tem como objetivo
+modelar informação multimídia para qualquer tipo de recurso em vários domínios e num
+contexto multi-idioma.
+A Multimedia Metadata Ontology (M3O) (SAATHOFF; SCHERP, 2010) foi proposta
+em 2010 como um modelo abrangente para representar metadados multimídia, contemplando
+combinações de modelos e padrões de metadados para descrever semanticamente apresentações
+de documentos multimídia estruturados. O modelo M3O possui uma diferença em relação a
+outros projetos de ontologias multimídia em não focar na representação ontológica
+fundamentada em um padrão de metadado específico, como, por exemplo, o MPEG-7.
+O projeto Boemie (Bootstrapping Ontology Evolution with Multimedia Information)
+teve seu início no ano de 2006 e relatório final publicado no ano de 2008 (DASIOPOULOU et
+al., 2008). Almejou o desenvolvimento de ontologias para anotação multimídia e de domínios
+específicos com o propósito de representar semântica multimídia dentro de um cenário de
+aplicação integrada contemplando representação e aquisição de conhecimento, raciocínio,
+evolução de ontologia, recuperação e apresentação.
+A Core Ontology for Multimedia, conhecida como COMM, foi desenvolvida no ano de
+2007 por um grupo de renomados pesquisadores nas áreas Multimídia, Bibliotecas Digitais e
+Web Semântica (ARNDT et al., 2009). O propósito principal da ontologia COMM é fornecer
+uma conceituação fundamental (denominada core ontology) para descrição multimídia cobrindo
+de maneira genérica um domínio em específico que lida com conteúdo multimídia.
+3
+
+Tentativas de abertura das ontologias no editor Protégé; visualização de anomalias em suas estruturas; e
+ontologias fora do escopo proposto foram as justificativas para a exclusão de algumas delas da lista de seleção.
+
+A ontologia MPEG-7 MDS (VALKANAS; TSETSOS; HADJIEFTHYMIADES, 2007)
+foi desenvolvida no ano de 2006 dentro do projeto Polysema. O projeto propôs uma
+infraestrutura adequada para gerenciamento e processamento semântico de conteúdo multimídia
+com o uso de ontologias e padrões de metadados em ambientes interativos, especialmente
+serviços de TV digital e ferramentas para anotação de vídeos.
+A ontologia MPEG-7 de Hunter foi proposta em 2001 dentro do projeto Harmony
+International Digital Library. Hunter (2001) propôs uma tradução manual do MPEG-7 em RDF
+(Schema) e posteriormente esta ontologia foi traduzida em OWL a fim de endereçar descrições
+semânticas vinculadas a ontologias de domínios específicos.
+O projeto SmartWeb (VEMBU et al., 2006) foi conduzido entre os anos de 2004 e 2007.
+Um conjunto de ontologias relevantes tem sido desenvolvido para apoiar sistemas móveis,
+multimodais e inteligentes com funcionalidades de respostas a consultas de usuários em
+temáticas de domínios diversos na Web.
+Finalmente, a ontologia Rhizomik (GARCÍA; CELMA, 2005) foi desenvolvida dentro
+do projeto ReDeFer em 2005 com o propósito de produzir ontologias fundamentadas no padrão
+MPEG-7 para integração com iniciativas de metadados multimídia existentes. O projeto teve
+uma abordagem diferenciada das propostas de tradução manual de partes do padrão MPEG-7,
+como ocorreu na ontologia de Hunter. A ontologia Rhizomik propõe uma tradução automática
+completa do esquema MPEG-7 em OWL.
+2.2 ANÁLISE E COMPARAÇÃO DE ONTOLOGIAS
+A atividade de análise das ontologias para descrição multimídia foi considerada como
+um processo de auditoria, no qual as ontologias e documentações subjacentes foram
+inspecionadas e analisadas.
+O critério comparativo número de requisitos funcionais cobertos, advindo do guia Neon,
+avalia se a ontologia analisada cobre de forma parcial ou total os requisitos determinados na
+pesquisa, podendo apoiar, assim, o processo de reuso de conceitos relacionados à descrição
+multimídia adequados a características provenientes dos padrões MPEG-7 e Dublin Core.
+Requisitos funcionais são resultados de práticas advindas da área de Engenharia de Software e
+que foram adaptadas na área de Engenharia de Ontologias (FERNANDEZ, GOMEZ-PEREZ e
+JURISTO, 1997; SUÁREZ-FIGUEROA; GÓMEZ-PÉREZ; FERNÁNDEZ-LÓPEZ, 2012)
+como forma de viabilizar as tarefas voltadas a especificações de conteúdo de um domínio de
+conhecimento em particular, obtendo-se, como resultado, terminologias endereçadas a uma
+ontologia. No caso específico do domínio da descrição multimídia, um conhecimento sobre
+
+mídia poderia ser representado, por exemplo, nas seguintes declarações: “um GIF é um tipo de
+formato de imagem”; “um formato 3D é uma subclasse de formato de mídia”; e como
+terminologia poder-se-ia obter a partir de uma convenção do padrão MPEG-7: “mpeg7:
+Content” e “mpeg7: FileFormat”.
+Para a determinação do valor numérico para este critério, considerou-se a seguinte
+proposição: a cobertura de requisitos funcionais consiste na proporção de requisitos funcionais
+(denominados de Elementos-de-Parâmetro) que estão inclusos na terminologia das ontologias
+analisadas (denominados de Terminologia-da-Ontologia-Candidata) sobre os requisitos
+funcionais. A fórmula é expressa como se segue: cobertura = Terminologia-da-OntologiaCandidata interseção Elementos-de-Parâmetro / Elementos-de-Parâmetro.
+As estruturas de análise de requisitos funcionais foram organizadas por ontologia e
+modularizadas pelas categorias de metadados elencadas na pesquisa. Na concepção das
+estruturas de análise, os elementos de parâmetro e suas descrições foram dispostos em suas
+linhas, e os elementos ontológicos inspecionados foram postos em suas colunas no formato de
+Classes, Propriedades, Instâncias e Axiomas (detalhe em SILVA, 2014, pp.341-442).
+Classes (ou Taxonomia) são estruturas hierárquicas (relações genéricas e específicas;
+relações todo/parte) responsáveis pela organização dos conceitos do domínio. Propriedades são
+características que descrevem uma classe da ontologia, tais como definição, sinônimos, relações
+entre classes, papéis, links para esquemas de classificação externo (como conceitos em SKOS Simple Knowledge Organization System), relação inversa, atributos, valores e comentários.
+Instâncias são objetos específicos (Individuals) de um conceito (nesse caso, multimídia). E
+axiomas são restrições impostas sobre os conceitos (classes e propriedades) envolvidos na
+ontologia para descrição multimídia a fim de evitar ambiguidades na semântica dos termos,
+garantindo, assim, que as definições formais apoiem a interpretação pela máquina por meio de
+inferências lógicas.
+O processo de análise de conteúdo das ontologias consistiu de uma análise de
+compatibilidade (ou alinhamento semântico) entre os vocabulários das ontologias e os requisitos
+funcionais determinados na pesquisa. A análise de compatibilidade ocorreu especialmente nos
+elementos das declarações ontológicas, sob dois aspectos e em sequência: i) nível linguístico; e
+ii) nível de definição do conceito. No nível linguístico, a interpretação do significado da
+nomenclatura do termo é subjetiva, não sendo suficiente para assegurar uma correspondência de
+ordem conceitual. Desse modo, como segunda etapa foi realizada uma análise conceitual que
+refletiu no significado intencionado do elemento (termo) frente ao contexto pretendido. Para
+este último, as propriedades de anotação dos conceitos (por exemplo: comentários e definições)
+
+foram verificadas e, quando existentes, analisadas para a obtenção de informações relevantes
+sobre a natureza dos mesmos.
+O alinhamento considerou ocorrências semânticas no processo de compatibilização de
+vocabulários, as quais podem ser caracterizadas como: i) equivalência; ii) mais específica; iii)
+mais genérica; e iv) relacionada. Em (i) a semântica de dois elementos é equivalente na maioria
+dos contextos possíveis; em (ii) a semântica envolvida no elemento ontológico cobre apenas um
+subconjunto de possibilidades expressas pelo elemento equiparado; em (iii) a semântica
+envolvida no elemento ontológico é mais genérica do que as propriedades envolvidas no
+elemento equiparado; e em (iv) os dois elementos são relacionados, porém essa relação não tem
+semântica definida. Tal abordagem tem sido considerada em projetos de construção de
+ontologias para anotação multimídia, como foi o caso da Media Ontology (STEGMAIER,
+2009).
+Torna-se válido ressaltar que o sucesso para a análise conceitual depende da coerência
+adotada pelos criadores da ontologia em explicitar em linguagem natural informações claras e
+objetivas sobre as declarações ontológicas, além de determinação não ambígua para termos e de
+composição taxonômica que reflita de maneira precisa o domínio da descrição multimídia.
+3 RESULTADOS DA COBERTURA DE REQUISITOS FUNCIONAIS
+O presente capítulo descreve a forma como cada ontologia analisada cobriu os requisitos
+funcionais envolvendo as categorias de metadados independentes de conteúdo, dependentes de
+conteúdo e descritivos de conteúdo. A Figura 1 exibe para cada ontologia analisada, o índice de
+cobertura (conferir Quadros 1 e 2) para cada categoria de metadados em relação ao total de
+requisitos funcionais presente em cada uma delas, conforme é descrito a seguir.
+
+FIGURA 1- Índice de cobertura por categoria de metadados frente às ontologias analisadas
+
+Fonte: elaborado pela autora.
+
+A categoria metadados independentes de conteúdo manteve um índice de cobertura
+superior às duas outras categorias, apresentando uma queda para as ontologias MPEG-7 Hunter
+(28.1%), Boemie (15.6%) e M3O (21.9%). A categoria foi explorada por todas as ontologias
+analisadas. As ontologias que mais se destacaram foram a Rhizomiki (100%), a Media
+Ontology e a M3 Multimedia, ambas como 87.5% de cobertura. A coincidência de índice de
+cobertura para as duas ontologias se deu em função da M3 reusar os descritores oriundos da
+Media Ontology para esta natureza. E a COMM (59.4%), a SmartWeb (46.9%) e a Polysema
+(62.5%) mantiveram um índice equilibrado para esta categoria de metadados.
+A categoria metadados dependentes de conteúdo ficou com um índice de cobertura
+inferior às outras duas em grande parte das ontologias analisadas (com exceção em Hunter e
+Boemie), conforme demonstra a Figura 1. Metadados visuais e de áudio não são representados
+pelas ontologias Media Ontology, Polysema e M3O. Para esta última, por ser um modelo
+extensível, os metadados desta natureza podem ser representados em seu framework genérico a
+partir dos padrões AnnotationPattern (padrão de anotação) e Data Value (representando
+características de baixo nível). As outras duas não mencionam tal intenção em seus escopos. A
+SmartWeb cobriu uma pequena parte de metadados visuais com um índice de 11.4%
+representado por classes e propriedades de objetos. As ontologias COMM (45.5%), MDO
+Boemie (50%), M3 Multimedia (50%) e MPEG-7 Hunter (45.5%) apresentaram índices bem
+próximos de cobertura visual para esta categoria. A única ontologia que se sobressaiu na
+cobertura de metadados visuais e de áudio foi a MPEG-7 Rhizomiki com um índice de 95.5%
+
+representado exclusivamente por classes. Há de se notar que metadados para áudio não são
+explorados pela grande maioria das ontologias analisadas. O que se percebe, em alguns casos, é
+a existência de taxonomias sem axiomatização e, geralmente, sem anotações, para comportar
+futuras implementações de descritores MPEG-7 para áudio.
+A categoria metadados descritivos de conteúdo se manteve com um índice de cobertura
+intermediário para a maioria das ontologias em relação às outras duas categorias, conforme
+indicação na Figura 1. A cobertura se deu total ou parcialmente para todas as ontologias
+analisadas da seguinte forma: 100% pela ontologia MPEG-7 Rhizomik; 68.2% pela M3
+Multimedia; 47.7% para SmartWeb MPEG-7; 43.2% para ambas as ontologias COMM e Media
+Ontology; 34.1% para MCO Boemie; 31.8% para ambas as ontologias MPEG-7 Hunter e M3O;
+e 20.5% para Polysema MPEG-7.
+Finalmente, em termos de cobertura geral, isto é, consolidando as três categorias de
+metadados anteriormente comparadas, tem-se a MPEG-7 Rhizomiki se destacando em primeiro
+lugar (98,3%) no ranking de cobertura, tendo em vista que a sua proposta é disponibilizar
+metadados MPEG-7 na Web preservando a flexibilidade das especificações deste padrão. As
+demais colocações se explicam a partir das elucidações anteriormente expostas. A Figura 2
+apresenta os índices de cobertura consolidados (conferir Quadros 1 e 2) correspondentes a cada
+ontologia analisada.
+FIGURA 2 - Índice de cobertura geral para as ontologias analisadas
+
+Fonte: elaborado pela autora.
+
+Quadro 1 - Análise de requisitos funcionais das ontologias analisadas (a)
+Aspectos analisados
+
+Requisitos
+funcionais
+cobertos
+
+Media
+Ontology
+
+Metadados
+para
+descrição
+Multimídia
+
+Independentes de
+conteúdo (32)
+Dependentes de
+conteúdo (44)
+Descritivos de
+conteúdo (44)
+Cobertura (120)
+
+COMM
+
+Boemie
+
+M3
+Multimedia
+
+M3O
+
+28
+
+87.5%
+
+19
+
+59.4%
+
+5
+
+15.6%
+
+28
+
+87.5%
+
+7
+
+21.9%
+
+0
+
+0%
+
+20
+
+45.5%
+
+22
+
+50.0%
+
+22
+
+50.0%
+
+0
+
+0%
+
+19
+
+43.2%
+
+19
+
+43.2%
+
+15
+
+34.1%
+
+30
+
+68.2%
+
+14
+
+31.8%
+
+47
+
+39.2%
+
+58
+
+48.3%
+
+42
+
+35.0%
+
+80
+
+66.7%
+
+21
+
+17.5%
+
+Fonte: elaborado pela autora.
+Quadro 2 - Análise de requisitos funcionais das ontologias analisadas (b)
+Aspectos analisados
+
+Requisitos
+funcionais
+cobertos
+
+Metadados
+para
+descrição
+Multimídia
+
+Independentes de
+conteúdo (32)
+Dependentes de
+conteúdo (44)
+Descritivos de
+conteúdo (44)
+Cobertura (120)
+
+MPEG-7
+Hunter
+
+MPEG-7
+Rhizomik
+
+SmartWeb
+MPEG-7
+
+Polysema
+MPEG-7
+
+9
+
+28.1%
+
+32
+
+100%
+
+15
+
+46.9%
+
+20
+
+62.5%
+
+20
+
+45.5%
+
+42
+
+95.5%
+
+5
+
+11.4%
+
+0
+
+0%
+
+14
+
+31.8%
+
+44
+
+100%
+
+21
+
+47.7%
+
+9
+
+20.5%
+
+43
+
+35.8%
+
+118
+
+98.3%
+
+41
+
+34.2%
+
+29
+
+24.2%
+
+Fonte: elaborado pela autora.
+
+4 CONSIDERAÇÕES FINAIS
+Cobertura de requisitos funcionais é uma característica que possibilitou algumas
+observações relevantes acerca da existência de lacunas que podem ser endereçadas à proposição
+de recomendações para modelagem de descrição multimídia. São elas: metadados para
+classificação e uso da mídia, personalização de conteúdo e características de áudio são pouco
+explorados no contexto das ontologias analisadas. Descritores MPEG-7 específicos para áudio,
+tanto de alto nível quanto de baixo nível, são cobertos apenas pela ontologia MPEG-7
+Rhizomiki. Algumas, como são os casos da MDO Boemie e SmartWeb MPEG-7, modelam
+classes de recursos de áudio desprovidas de axiomas e anotações para comportar futuras
+implementações.
+Estratégias diversificadas de modelagem para metadados descritivos de conteúdo foi um
+aspecto notório na análise das ontologias para descrição multimídia. Algumas ontologias
+propagam ambiguidades semânticas presentes no padrão MPEG-7 buscando seguir a
+flexibilidade de seus esquemas; outras buscam restringir classes e propriedades relacionadas ao
+padrão por meio de axiomas, como ocorreu com a MCO Boemie. Há de se pensar na estratégia
+mais conveniente numa perspectiva de uso dessas ontologias na Web em que as possibilidades
+interpretativas dos agentes (humanos e computacionais) são diversas. E, ontologias para
+anotação semântica são concebidas como meio de a máquina interpretar os metadados com
+
+semânticas bem definidas e necessárias para garantir que o anotador e o consumidor da
+anotação compartilhem o mesmo significado perante um recurso multimídia.
+O problema que se apresenta em como organizar sistematicamente as tipologias de
+metadados existentes para descrição de conteúdo multimídia frente a variados contextos e
+necessidades pode ser amenizado pelo mapeamento de cobertura dos requisitos funcionais
+determinados nesta pesquisa envolvendo as categorias de metadados independentes de
+conteúdo, dependentes de conteúdo e descritivos de conteúdo. A comparação de várias
+propostas de ontologias para descrição multimídia frente a padrões de metadados ISO
+evidenciou características relevantes que podem e devem ser descritas para melhor recuperação
+de recursos multimídia na Web.
+A partir das constatações das características multimídia concernentes a cada uma das
+ontologias analisadas, podem-se selecionar os recursos de conhecimento provenientes de suas
+estruturas a partir do confrontamento com requisitos determinados em projetos que demandem
+reuso de conceitos para tal domínio. Desse modo, um modelo conceitual pode ser proposto a
+partir do reuso das ontologias investigadas nesta pesquisa e vir a ser uma solução abrangente
+para representação multimídia. As propostas investigadas, geralmente, ou focam em aspectos
+mais genéricos envolvendo padrões multimídia como anotação e segmentação, mas sem
+contemplar tipologias específicas de metadados para descrição multimídia; ou oferecem
+descritores específicos para algumas categorias de metadados, mas sem raciocínios de
+modelagem pertinentes que possam assegurar, por exemplo, a extensibilidade da conceituação
+da ontologia. Por fim, a necessidade de integração semântica e disponibilização global de
+recursos multimídia na rede é um propósito comum entre as propostas analisadas.
