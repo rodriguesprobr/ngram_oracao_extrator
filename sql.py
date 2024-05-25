@@ -1,6 +1,5 @@
 import sqlalchemy as db
-from sqlalchemy import func, ForeignKey
-from sqlalchemy.testing.pickleable import Order
+from sqlalchemy import ForeignKey
 
 engine = db.create_engine("sqlite:///database.sqlite")
 conn = engine.connect()
