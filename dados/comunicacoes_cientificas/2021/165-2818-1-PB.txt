@@ -1,0 +1,456 @@
+
+Tecnologias Semânticas para Avaliar Projetos Construtivos Sustentáveis
+Modalidade: Trabalho Completo
+Resumo: Avaliar projetos construtivos "verdes" visa mensurar o quão sustentáveis são as edificações
+e isso é importante para poupar o meio ambiente em crescente deterioração. No entanto, a maioria
+das tarefas de avaliação ainda é realizada manualmente, consumindo tempo e aumentando a
+possibilidade de erros. O emprego de tecnologias semânticas é uma alternativa para sistematizar e
+acelerar o processo de avaliação. Apresenta-se o emprego de tecnologias semânticas e uma ontologia
+BIM simplificada para integrar dados de projetos BIM (Building Information Modeling) e outros dados
+tabulares externos ao projeto para automatizar as tarefas da certificação LEED (Leadership in Energy
+and Environmental Design). Para validar um protótipo, dados de um projeto BIM e dados abertos
+tabulados da prefeitura de Belo Horizonte são anotados semanticamente e um grafo de
+conhecimento é gerado no formato RDF. Uma vez integrados no grafo, os dados são utilizados para
+avaliar os critérios da certificação por meio de consultas. Os resultados preliminares sugerem que a
+aplicação destas tecnologias promove a extensão semântica dos elementos construtivos em BIM,
+facilitando a sua integração com outras bases de conhecimento e organiza conceitualmente os dados
+para melhor recuperar informações.
+
+Palavras-Chave: Tecnologias semânticas; Ontologia; Projetos construtivos sustentáveis; LEED.
+INTRODUÇÃO
+A preocupação com o uso de recursos e do meio ambiente em projetos levou ao
+conceito de construção verde, cada vez mais significativo na indústria da construção. A
+construção verde é definida para garantir qualidade e segurança durante todo o ciclo de vida
+da edificação e corresponde à aplicação da ideia de desenvolvimento sustentável (XU et al,
+2019).
+Para obter o selo verde, é indispensável avaliar o projeto da construção. A certificação
+LEED (Leadership in Energy and Environmental Design), concebida e concedida pela USGBC
+(US Green Building Council), é um sistema que classifica os projetos em quatro níveis
+(certificado, prata, ouro e platina) e é amplamente utilizada nas fases de projeto, construção,
+operação e manutenção de edifícios. Os critérios LEED são organizados em sete categorias:
+espaços sustentáveis, eficiência hídrica, energia e atmosfera, materiais e recursos, crédito de
+prioridade regional, qualidade ambiental interna e inovação (USGBC, 2020).
+A tecnologia BIM (Building Information Modeling) tem recebido cada vez mais
+destaque na indústria da construção. As ferramentas computacionais, que atendem aos
+conceitos desta tecnologia, interoperam com o uso de dados no formato IFC (Industry
+Foundation Classes), bem como exportam dados tabulares para análise de informações. Com
+a tecnologia BIM, um modelo virtual preciso de um ambiente construído contêm geometria
+e dados necessários para apoiar as atividades de todo o ciclo de vida do ambiente
+construído. Essa tecnologia fornece base para novos recursos de projeto e construção,
+mudanças nas funções e relacionamentos entre a equipe. Assim, o BIM se apresenta como
+uma evolução no processo de projeto, pois permite novas possibilidades para visualizar,
+representar, processar, usar e recuperar a informação (SACKS et al, 2018).
+A certificação LEED suportada por BIM pode economizar tempo e recursos
+substanciais. Com a integração entre BIM e edifícios verdes, surgem oportunidades para
+desenvolver ferramentas práticas para certificar construções verdes, melhorando a
+compatibilidade e a facilidade de uso por especialistas (WONG; ZHOU, 2015).
+Avaliar uma construção para certificar sua sustentabilidade requer métodos mais
+inteligentes. A avaliação tradicional, realizada manualmente, é trabalhosa e propensa a erros
+
+
+(JIANG; WANG; WU, 2018). Conciliado às limitações semânticas do formato IFC, a busca por
+aplicar tecnologias semânticas visa atender às melhores práticas para integrar, recuperar
+informações e gerar novos conhecimentos.
+Em um fluxo de trabalho integrado, mediado por ontologias, o mapeamento entre os
+elementos da construção e outros dados pode auxiliar na análise de projetos. A
+representação semântica da construção por ontologias permite que os colaboradores de um
+projeto obtenham informações combinadas com outras fontes, enriquecendo as análises.
+Este método de representação é potencialmente vantajoso para auxiliar a certificação por
+meio de inferências, integrações e consultas, tornando um diferencial inovador (NIKNAM;
+KARSHENAS, 2017a; SACKS et al, 2018).
+Outros conjuntos de dados, em formatos tabulares, também podem ser integrados
+com os dados de um projeto BIM. Para isso, é necessário realizar a conversão destes
+formatos aplicando tecnologias semânticas. Geralmente, estes conjuntos de dados são
+acompanhados de um dicionário de dados que descreve os dados. O uso de Dicionário
+Semântico de Dados (SDD - Semantic Data Dictionary) é uma alternativa para representar
+metadados legíveis por máquina para um conjunto de dados (RASHID et al., 2020). O SDD
+formaliza a atribuição de uma representação semântica aos dados, anotando as colunas
+destes conjuntos e seus valores, usando conceitos de vocabulários e ontologias de práticas
+recomendadas. Abordagens para o mapeamento e representação semântica destes dados
+promovem a descoberta, interoperabilidade, reutilização e rastreabilidade. A formalização
+dos dados tabulares em grafos RDF (Resource Description Framework) é realizada na
+conversão da sua estrutura em uma ontologia OWL.
+Padrões W3C1, incluindo RDF e OWL, fornecem interpretações semânticas para grafos
+RDF que permitem inferir instruções RDF adicionais a partir de afirmações explicitamente
+dadas. Muitos aplicativos que dependem dessas semânticas requerem uma linguagem de
+consulta como SPARQL, que é uma linguagem bem estabelecida, capaz de combinar grafos
+RDF arbitrários e retornar atributos e transformações dos mesmos. Essa linguagem se
+tornou um padrão na indústria para representar regras e restrições em modelos da Web
+Semântica, sendo bem suportada por vários mecanismos e bancos de dados. Assim, triplas
+
+1
+
+World Wide Web Consortium
+
+
+
+retornadas em uma consulta SPARQL também podem ser consideradas inferências em um
+processo de raciocínio (COPPENS et al, 2013; TERKAJ; SOJIC, 2015).
+Este trabalho apresenta o emprego de tecnologias semânticas para integrar dados de
+um projeto BIM e outros dados tabulares para automatizar as tarefas para certificação LEED.
+Como experimentação, os dados de um projeto BIM foram serializados em uma ontologia
+simplificada, dados tabulares da prefeitura de Belo Horizonte2 sobre o entorno foram
+agregados e anotados em conjunto utilizando um dicionário semântico de dados para gerar
+grafos RDF. Inferências SPARQL realizadas no grafo forneceram novos conhecimentos sobre o
+atendimento aos critérios para certificar um projeto construtivo. O artefato desenvolvido
+neste trabalho visa promover a organização das informações, otimizar a recuperação das
+informações e apoiar a tomada de decisões.
+Esta pesquisa é de natureza aplicada, uma vez que foram utilizados conhecimentos de
+estudos anteriores e das necessidades para certificação LEED. Destaca-se o emprego da
+metodologia Design Science e o ciclo regulador de Wieringa (2009), que consiste em uma
+estrutura lógica com diretrizes úteis para a resolução de problemas na elaboração de um
+artefato (BAX, 2013).
+Na Seção 2 do artigo, apresenta-se os trabalhos relacionados, a Seção 3 explica a
+metodologia de construção do artefato e a Seção 4 demonstra a experimentação do
+protótipo e descreve soluções adotadas frente às dificuldades no método tradicional. Por
+fim, a Seção 5 sintetiza as considerações finais.
+
+2 TRABALHOS CORRELATOS
+É possível encontrar trabalhos que investigaram interdependências multidisciplinares
+em projetos de edifícios verdes, com foco na otimização computacional e colaboração na
+elaboração de projetos (AZHAR et al, 2011; GEYER, 2012; HONG; LEE; YU, 2019).
+Identifica-se ainda estudos recentes relacionados ao uso de ontologias para classificar
+materiais e realizar análises automatizadas de características da construção para certificação
+verde. Zhang et al (2019) utilizam ontologia, com regras SWRL (Semantic Web Rule
+
+2
+
+http://bhmap.pbh.gov.br/v2/mapa/idebhgeo
+
+
+Language), para inferir a pontuação em tempo real de projetos verdes em um ambiente
+informatizado de comunicação social.
+Nesta mesma linha de pesquisa, Jiang, Wang e Wu (2018) apresentam uma ontologia
+com utilização de regras SRWL. Os resultados experimentais demonstraram que a base de
+conhecimento BIM pode servir para a sustentabilidade da construção, bem como o
+compartilhamento, manutenção e aquisição de conhecimento entre os diferentes
+participantes do projeto. Também pode-se observar em Xu et al (2019) que utilizar
+inferências lógicas para avaliar um critério permite pesquisar aspectos que necessitam de
+melhorias na edificação e ajudando os gerentes de projeto a usar os dados BIM.
+Essas pesquisas relacionadas acima não abordam, entretanto, a integração com dados
+abertos para análise do entorno, nem a aplicação de inferências para análises quantitativas,
+pontos-chave deste projeto. Nossa proposta busca modelar relações mais complexas do que
+aquelas encontradas nos trabalhos acima para realizar uma análise mais abrangente da
+certificação LEED.
+
+3 ABORDAGEM TECNOLÓGICA PARA AUTOMATIZAR A CERTIFICAÇÃO
+A Figura 1 apresenta a orquestração de métodos que compõem o fluxo de trabalho,
+ainda manual, que posteriormente será integrado na arquitetura de um arcabouço. Este
+fluxo de trabalho exige o conhecimento de tecnologias e, ainda, pode ser considerado
+complexo para o uso de um especialista em certificação. A implementação busca validar o
+protótipo como solução para o problema desta pesquisa, com os devidos cuidados para que
+possa ser aprimorada e expandida em outras soluções.
+
+
+
+Figura 1: Fluxo de trabalho da metodologia
+
+Fonte: Os autores
+
+No início do fluxo, um arquivo no formato IFC de um projeto BIM é convertido em
+uma ontologia simplificada para avaliação dos critérios LEED. Para integrar dados externos,
+dados abertos, em formato CSV (Comma-separated values), são obtidos, mapeados para
+conceitos das ontologias e convertidos em grafos RDF. Os conjuntos de dados são inseridos
+no triplestore Parliament3 para realização das consultas e inferências em SPARQL. Uma
+consulta final é executada para apresentação do resultado das inferências sobre as
+pontuações obtidas para a certificação.
+3.1 Ontologia Simplificada
+Uma ontologia simplificada é criada, reutilizando as ontologias ifcOWL (PAUWELS;
+TERKAJ, 2016), SimpleBIM (PAUWELS; ROXIN, 2016), BOT (RASMUSSEN; HVIID; KARLSHØJ,
+2017) e BIMSO (NIKNAM; KARSHENAS, 2017b), para organizar semanticamente os dados
+BIM. Os critérios LEED abrangendo o uso de materiais, utilizações dos espaços, dentre
+outros, são considerados usando dados de um projeto BIM. Tais critérios, no contexto da
+ontologia, embasam as inferências que avaliam o estado da edificação. Os procedimentos
+realizados para elaborar a ontologia simplificada se basearam na proposta de Pauwels &
+Roxin (2016), no método 101 (NOY; MCGUINNESS, 2001) e na abordagem SABiO (FALBO,
+2014). A ontologia simplificada SEBIM (Semantic BIM) foi criada no Protégé 5.5 (Figura 2),
+com classes que representam os dados necessários para organizar as informações e analisar
+os critérios da certificação LEED.
+
+3
+
+https://github.com/SemWebCentral/parliament
+
+
+Os componentes do projeto de construção foram escolhidos para atender as análises
+dos critérios utilizados para certificá-lo. As áreas (Zona) do ambiente construído são divididas
+nas subclasses Construção, Espaço e Andar4. Estas zonas são relacionadas entre si através das
+propriedades de interseção, adjacência e abrangência. As áreas se relacionam com a classe
+Estilo e uma Zona pode ter equipamentos instalados.
+Para aplicar os critérios da certificação, uma Construção se relaciona com a classe
+Certificação. Os critérios são subclasses da certificação, seguindo o manual LEED, para
+agrupamentos sobre Localização e Transporte, Eficiência Hídrica, Energia e Atmosfera,
+Recursos e Materiais, Crédito de Prioridade Regional, Qualidade Ambiental Interna e
+Inovação. Entre as classes de Localização e Transporte (LocationTransportation) e Recursos e
+Materiais (MaterialResource) existem os demais agrupamentos, suprimidos no diagrama por
+limitação de espaço. As subclasses de Localização e Transporte, bem como dos outros
+agrupamentos, registram separadamente cada pontuação recebida para organizar as
+informações. Uma tripla de dados associada a uma subclasse será inserida ao conjunto de
+dados com a pontuação recebida. A consulta (2) corresponde à inserção de uma tripla para a
+subclasse Qualidade do Transporte (QualityTransport). Destaca-se ainda que não foram
+realizados relacionamentos entre os critérios e as classes de componentes de uma
+construção, uma vez que as inferências realizam a recuperação destas informações.
+
+4
+
+Os termos na ontologia estão em inglês.
+
+
+
+Figura 2: Ontologia simplificada
+
+Fonte: Os autores
+
+Como muitas análises envolvem utilizar materiais e equipamentos, classes foram
+consideradas para abstrair esses dados, e o relacionamento de inclusão em uma Zona. A
+vinculação com equipamentos envolve a medição de dados e a localização interna de
+sensores, equipamentos de ar-condicionado, placas fotovoltaicas, entre outros. Já o
+relacionamento de zonas com materiais busca identificar o atendimento aos requisitos de
+sustentabilidade. Os materiais têm relação para a sua composição de matérias primas e para
+classificação, conforme o tipo de utilização. Tais relações e atributos correspondem às
+propriedades de dados e objetos.
+Os atributos correspondem ao armazenamento de valores numéricos, como a
+pontuação obtida (score), descrições alfanuméricas, datas e dados geoespaciais (asWkt).
+Sendo este último necessário para vincular os dados abertos sobre o entorno do ambiente
+construído.
+
+
+
+3.2 Anotação de Dados Tabulares
+Publicar dados abertos na Web é uma ação de prefeituras que promove a cidade
+inteligente (ISOTANI; BITTENCOURT, 2015). No site da prefeitura de Belo Horizonte é possível
+encontrar conjuntos de dados sobre serviços e locais, mas, ainda sem utilizar as
+potencialidades da Web Semântica. A quantidade de dados é excessiva para interpretação
+humana e torna a interligação de dados dispendiosa e suscetível a erros.
+Dados abertos sobre meios de transporte e parques são utilizados para avaliação de
+critérios da classe Localização e Transporte. Estes dados tem coordenadas geométricas de
+áreas e pontos da cidade, seguindo padronização da OGC5 (Open Geospatial Consortium),
+que define um vocabulário para representar dados geoespaciais.
+Diante das opções para conversão de dados tabulares para RDF (DING et al, 2011;
+JEREMY TANDY; HERMAN; KELLOGG, 2015; RASHID et al, 2020), optou-se por Dicionários
+Semânticos de Dados, implementado na ferramenta sdd2rdf6. Os objetos e seus atributos
+são representados e identificados por meio de ontologias relevantes que constituem essas
+informações de uma maneira formalmente precisa e legível por máquina (RASHID et al.,
+2020).
+O grafo RDF gerado pela execução do script ssd2rdf contém a formalização dos dados
+e favorece a integração para consulta sobre locais da cidade por dados espaciais. Assim,
+dados sobre ciclovias, parques e pontos de ônibus são convertidos em grafos RDF.
+
+3.3 Geração de Inferências
+Regras lógicas permitem calcular automaticamente as pontuações do projeto de
+construção sobre as cláusulas de análise de dados internos do projeto BIM. Conforme
+Bassiliades (2018), SWRL tornou-se uma escolha popular para o desenvolvimento de
+aplicativos baseados em regras. Porém, como o SWRL existe há mais de dez anos e ainda não
+alcançou o mundo industrial, optamos por utilizar SPARQL sobre os grafos RDF gerados. Uma
+vez que estes dados são integrados a outros, SPARQL é uma solução para centralizar as
+inferências. Em comparação com as linguagens de consulta específicas, o SPARQL é
+especialmente aplicável a cenários em que são necessários dados de várias fontes (KRIJNEN;
+BEETZ, 2018).
+5
+
+https://www.ogc.org/standards/geosparql
+
+6
+
+https://github.com/tetherless-world/SemanticDataDictionary
+
+
+
+As inferências deste trabalho foram realizadas em SPARQL, aplicando um INSERT para
+inserir a tripla inferida no conjunto de dados, direcionando a pontuação à classe
+correspondente ao critério. A consulta (1) exibe a inferência realizada para avaliar a
+instalação para bicicletas.
+PREFIX sebim: <http://www.semanticweb.org/SEBIM#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+INSERT {?cr <http://www.semanticweb.org/SEBIM#score> “1”^^xsd:decimal}
+WHERE {
+?cr rdf:type sebim:BicycleFacilities.
+?build rdf:type sebim:Material.
+?build sebim:hasMaterialClassification sebim:RackBike.
+?build sebim:value ?n.
+{ SELECT (count(?s) as ?place) WHERE { ?s rdf:type sebim:Space.} }
+}
+GROUP BY ?cr ?build ?n ?place
+HAVING (?place >= ?n)
+
+(1)
+
+As consultas para análises sobre o entorno exigem utilizar funções GeoSPARQL para
+capturar as coordenadas geoespaciais do ambiente usando representações de polígonos
+Well-Known-Text (WKT), padronizadas pela OGC. A consulta (2) exibe a inferência que analisa
+a proximidade de pontos de ônibus e cria a tripla com a pontuação.
+PREFIX sebim: <http://www.semanticweb.org/SEBIM#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX uom: <http://www.opengis.net/def/uom/OGC/1.0/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX geof: <http://www.opengis.net/def/function/geosparql/>
+INSERT {?cr <http://www.semanticweb.org/SEBIM#Score> "1"^^xsd:decimal }
+WHERE {
+?build rdf:type bim:Terrain.
+?build geo:asWkt ?pb.
+?build ?x sebim:busstation.
+?bus ?y sebim:geometria.
+?bus geo:asWKT ?pl.
+?cr rdf:type sebim:QualityTransport.
+FILTER (geof:distance(?pb, ?fpl, uom:metre) <= 800)
+}
+
+(2)
+
+O processo de inserir novas triplas via SPARQL automatiza a avaliação dos critérios da
+certificação LEED7. As consultas foram agrupadas em dados internos ao projeto BIM, dados
+7
+
+https://github.com/cgtsbr/sebim
+
+
+
+de simulações e dados externos ao BIM. A experimentação inicial baseou-se na criação de
+instâncias e atributos fictícios para validar as inferências dos critérios para avaliação de um
+projeto construtivo. Como a certificação LEED fornece critérios por tipologia da construção
+(novas construções, manutenções, hospitais e galpões), adotou-se a avaliação de uma nova
+construção. Diante da complexidade de informações necessárias para todos os critérios,
+selecionou-se aqueles que representassem um tipo de extração diferente. Assim, dos 57
+critérios para uma nova construção, foram implementados 7 critérios, conforme explicado na
+próxima seção.
+4 DEMONSTRAÇÃO DO PROTÓTIPO
+Para experimentar os métodos empregados no protótipo, foi escolhido um projeto
+acadêmico elaborado por alunos do curso de arquitetura da Universidade FUMEC. A
+modelagem, exibida na Figura 3, foi criada no software Autodesk Revit8 e contém edifícios
+envidraçados com 27 áreas (pavimentos). O Revit possibilita a modelagem tridimensional em
+BIM, oferece suporte a projetos, possibilita simulações de análises da construção e exporta
+dados para integração com outras ferramentas.
+Figura 3: Projeto BIM desenvolvido no Autodesk Revit
+
+Na primeira tentativa de exportar dados para integrá-los a outros dados externos,
+optou-se por gerar o arquivo IFC do projeto no Revit. De posse do arquivo, buscou-se
+converter o formato IFC em grafo RDF. As ferramentas utilizadas foram o IFCtoRDF9 para
+converter os dados usando a ontologia ifcOWL, e o IFCtoLDB10 para converter os dados
+
+8
+
+https://www.autodesk.com.br/products/revit
+https://github.com/pipauwel/IFCtoRDF
+10
+https://github.com/jyrkioraskari/IFCtoLBD
+9
+
+
+
+conforme a ontologia BOT. Ambas convertem os dados do arquivo IFC para as suas
+respectivas ontologias, anotando-os. Porém, devido à limitação das ferramentas, obteve-se
+uma superficialidade semântica das relações entre as classes dessas ontologias
+(exclusivamente relações de subsunção), a organização final das informações constitui antes
+uma taxonomia do que uma ontologia. Diante da insuficiência do resultado obtido, a
+segunda tentativa de exportar dados envolveu a geração de arquivos tabulares no Revit, ao
+invés de exportar em formato IFC. Esta tentativa se mostrou mais eficaz, uma vez que
+permitiu utilizar a ferramenta sdd2rdf, vinculando os dados à ontologia SEBIM, desenvolvida
+neste trabalho. Devido à limitação do filtro de exportação do Revit, foram gerados dois
+arquivos, sendo um contendo os dados de materiais e o outro os dados das áreas.
+Os dados do projeto BIM a ser avaliado como sustentável e os dados da prefeitura de
+Belo Horizonte foram anotados semanticamente por meio do dicionário semântico e
+convertidos de forma integrada para o padrão RDF (com a ferramenta sdd2rdf) e, por fim,
+inseridos no triplestore. A execução das inferências via consultas SPARQL gerou novas triplas
+contendo a pontuação final para verificar se os critérios da certificação LEED foram ou não
+atendidos. Os critérios analisados no projeto em questão são apresentados no Quadro 1.
+Pode-se concluir que apenas três critérios não obtiveram nota máxima. Cabe ainda destacar
+que os critérios com nota máxima acima de 1, podem apresentar escalas de pontuação
+definidas no manual LEED.
+Quadro 1: Pontuação dos critérios utilizados na experimentação
+Critério
+Acesso a transporte de qualidade
+Instalações para bicicletas
+Veículos verdes
+Espaço aberto
+Produção de energia renovável
+Ingredientes do material
+Iluminação interna
+
+Nota Máxima
+5
+1
+1
+1
+3
+2
+2
+
+Pontuação
+5
+0
+0
+1
+0
+2
+2
+
+Fonte: Os autores.
+
+Durante a realização da pesquisa, as dificuldades identificadas (Quadro 2) no
+processo tradicional de organização das informações para a certificação LEED são utilizadas
+para validar a pertinência da aplicação das tecnologias semânticas empregadas no protótipo
+proposto.
+
+
+A utilização do BIM é um fator determinante para a evolução do trabalho colaborativo
+de profissionais da indústria da construção. O registro dos dados, associado aos elementos
+tridimensionais, é essencial para organizar as informações do projeto. Mesmo utilizando as
+ferramentas especializadas em BIM, a recuperação das informações é trabalhosa. Assim, a
+conversão do formato IFC para OWL é abordada como solução para aumentar a semântica
+entre os dados e facilitar a recuperação de informações para análises. Além disso, a
+integração com outros conjuntos de dados, como dados de prefeituras anotados
+semanticamente, é facilitada.
+Quadro 2: Soluções para as dificuldades encontradas
+Dificuldade / Desafio de pesquisa
+Solução
+Extensão do formato IFC da tecnologia BIM Conversão do IFC para a ontologia simplificada (SEBIM)
+Integração com dados externos
+Anotação semântica de dados tabulares
+Organização das informações
+Grafos de conhecimento
+Análise dos dados (critérios LEED)
+Inferências SPARQL
+Recuperação de dados
+Consultas SPARQL
+Fonte: Os autores.
+
+Na primeira versão do protótipo, buscou-se a abordagem baseada em ontologia
+monotônica, na qual a linguagem de regras SWRL foi usada para formalizar as regras para
+inferir
+
+as pontuações. Porém, esta abordagem apresentou algumas limitações,
+
+especialmente na modelagem de regras complexas e facilidade de manutenção. Assim, a
+implementação do modelo de raciocínio baseado em regras, utilizou consultas SPARQL,
+gerando novas triplas para inferências sobre a pontuação de cada critério.
+O fluxo de trabalho proposto por esta pesquisa permite implementar uma solução
+amigável para especialistas que desconhecem tecnologias semânticas. O protótipo pode ser
+implementado em frameworks como JenaSemanticWeb e VirtuosoOpenSource, que
+suportam funções GeoSPARQL e recursos para as inferências.
+5 CONSIDERAÇÕES FINAIS
+Apresenta-se o protótipo de uma solução para integrar dados e gerar inferências com
+tecnologias da Web Semântica para automatizar a avaliação da certificação LEED. A
+tecnologia BIM, referência na indústria da construção civil, é utilizada como base de uma
+ontologia simplificada para integrar dados. Dados abertos, em formato tabular, são anotados
+semanticamente utilizando dicionário semântico de dados. Com os dados integrados em um
+triplestore, consultas SPARQL forneceram inferências sobre o atendimento aos critérios para
+
+
+certificação. Os resultados sugerem que essa solução promove uma extensão semântica dos
+elementos construtivos em BIM, facilita a integração com outras bases de conhecimento e
+organiza os dados para a recuperação de informações.
+Conforme apresentado neste trabalho, a implementação adotando tecnologias
+semânticas em cenários com dados BIM integrados a outros dados não depende de sistemas
+proprietários. A escolha do Parliament se resume em maior simplicidade de instalação,
+utilização e suporte gratuito às funções GeoSPARQL. Outras ferramentas podem ser
+utilizadas, desde que tenham suporte às buscas por dados geoespaciais.
+Novas experimentações proporcionarão o enriquecimento da base de conhecimento
+com o refinamento das consultas para implementar um sistema eficiente para avaliar o grau
+de certificação LEED de projetos de edificação. Além disso, outras informações, como
+construções certificadas no entorno e outras informações externas sobre materiais, podem
+ser incorporadas à base de dados para atendimento aos demais critérios para avaliação.
+Finalmente, espera-se que futuras aplicações similares do protótipo possam fazê-lo
+evoluir e colaborar na avaliação de projetos construtivos como a autorização de construção
+nas prefeituras, entre outras avaliações que exigem análises complexas.
