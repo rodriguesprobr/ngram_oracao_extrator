@@ -1,0 +1,349 @@
+USO DE TECNOLOGIAS DA INFORMAÇÃO PARA ANÁLISE
+DE RELEVÂNCIA USANDO “CROWDSOURCING”
+
+
+Resumo: Este trabalho analisa os conceitos fundamentais de recuperação da informação e propõe
+uma ferramenta que usa o poder das multidões que a conexão eletrônica em rede propiciou e cujo
+fenômeno inicialmente apenas perceptível para o código livre agora penetrou em outras áreas como
+a administração, o ativismo político social, o marketing. Este recrutamento on-line ficou conhecido
+pelo nome de crowdsourcing. Uma área sensível a estas mudanças é a Ciência da Informação, onde a
+relevância de documentos é importante. Anteriormente era feita somente por especialista porém agora
+se propõe ao uso do crowdsourcing. Neste sentido, o objetivo do texto é comentar tais conceitos e
+apresentar uma ferramenta para avaliação de relevância denominada TERCO. A ferramenta proposta
+retorna as avaliações de relevância sobre textos, artigos e publicações em um arquivo ao usuário
+com o contexto XML, permitindo que também ele se torne um disseminador. Pode-se dispor desta
+ferramenta em torno de qualquer comunidade discursiva que queira se tornar colaboradora na análise
+e no processo de relevância de documentos.
+Palavras-chave: Tecnologias da Informação, Relevância, Crowdsourcing.
+1. INTRODUÇÃO
+As tecnologias tornaram o conhecimento, de mero apêndice da produção geral da sociedade,
+em uma força de trabalho central e imprescindível e que o processo de conexão global promoveu,
+tornando-a uma fonte de desenvolvimento.
+Este paradigma, no aspecto da informação, detém uma característica social importante que
+permite a reorganização da força de trabalho, integrando-a de modo a formar um todo com o trabalho
+manual (que era antes dividido em diversas unidades estanques), originando um capitalismo cognitivo
+(BOUTANG, 2007).
+Surgem a partir disto novas práticas interativas, que estimulam a criação de colaborações,
+propiciando um fluxo e aumentando a integração entre trabalhos (LE COADIC, 2003), gerando uma
+inteligência coletiva (LEVY, 1999) e instrumentos capazes de tomar decisões em conjunto.
+Estes aspectos possibilitam a produção e utilização intensiva de informação, tornada um
+requisito essencial em qualquer empresa ou instituição (pública ou privada), incluindo as “multidões”
+como força cognitiva.
+O desenvolvimento das tecnologias da informação coloca o conhecimento como fonte de
+valor e de poder e provoca profundas alterações na organização do trabalho (TOFFLER, 1990), com
+
+a passagem do modelo conhecido como taylorista-fordista para o modelo chamado de especialização
+flexível (MACHADO, 1993).
+Há agora uma ênfase na capacidade de mudar de especialidade, chamada em termos
+educacionais de transversalidade. Assim, este conceito de flexibilidade implica em mudança do
+processo educativo, das relações sociais entre gêneros e idades, e dos sistemas de valores (SCHAFF,
+1995), e uma revalorização de todas as pessoas, que fazem parte desta multidão.
+A sociedade atual, agora chamada de: sociedade pós-industrial (LYOTARD, 2003), sociedade
+informática (SCHAFF, 1995), sociedade do conhecimento (TOFFLER, 1990), sociedade “tecnizada”
+(MACHADO, 1993) ou sociedade em rede (CASTELLS, 2003), apresenta uma nova forma social
+onde o poder das multidões (crowdsourcing) (HOWE, 2009), e a entrada do conhecimento (força
+produtiva), valorizam o trabalho imaterial (HARDT, 2005), pelo uso e aplicação da subjetivação do
+trabalho (GORZ, 2005), no assim chamado: capitalismo cognitivo (COCCO, 2003).
+O papel que desempenha a internet e o desenvolvimento de conteúdos através da web
+(MARTINEZ USERO, 2007), ainda que polêmico em torno de aspectos de relevância e validação
+destes conteúdos e o fato de historicamente ocupado pela Recuperação da Informação, tornam
+inegável que esta mudança altere a força de produção, não apenas do conhecimento, mas de todo
+o trabalho produtivo que, de alguma forma, está vinculado a ele. Esta é a ligação entre o aspecto
+da discussão em torno do crowdsourcing e sua relação com a importante área da Recuperação da
+Informação (RI).
+Há uma nova relação onde todos podem ser atores e ativos, conforme conceito de Castells
+(2003, p.8):
+“A Internet é um meio de comunicação que permite, pela primeira vez, a
+comunicação de muitos com muitos, num momento escolhido, em escala
+global. Assim como a difusão da máquina impressora no Ocidente criou o
+que McLuhan chamou de a ‘Galáxia Gutemberg’, ingressamos agora num
+novo mundo de comunicação: a Galáxia da Internet”.
+Isto não seria possível sem movimentos na web que tornam a disseminação da informação
+possível e aberta - além das necessidades de indexação da documentação (MARTINEZ UBERO,
+2006).
+A organização do conhecimento de forma a incorporá-lo no produto faz emergir o conceito de
+“trabalho imaterial”, porém a avalanche de informações nem sempre é organizada segundo critérios
+de relevância e certificação em contextos (HERNANDEZ e outros, 2007).
+Quem financia estes projetos inicialmente foram pessoas e organizações públicas interessadas
+neste tipo de desenvolvimento. Em 2006, Michael Sullivan criou o termo crowdfunding para
+coletar fundos através das redes eletrônicas; há iniciativas para financiar blogs e jornalismo
+(CROWDFUNDING, 2009), mecanismos de micro empréstimos para pequenos negócios, como por
+exemplo, para o terceiro-mundo, como oferecidos pela organização Kiva (KIVA, 2011).
+
+A preocupação na qual se concentram não só pesquisadores, mas projetistas de sistemas,
+cientistas da informação e também algumas empresas é como organizar todo este “produto” gerado
+desta sociedade em redes, e que garanta alguns fatores essenciais dentro do princípio da relevância.
+Nesse sentido, os testes de Cranfield para indexadores em linguagens naturais (CLEVERDON, 1997)
+fizeram uma proposta levando em consideração os seguintes aspectos:
+•	 Selecionar os mais importantes conceitos, sendo registrados na linguagem natural dos
+documentos;
+•	 Listar os termos simples de cada um dos conceitos; e
+•	 Combinar as formas diferentes de um mesmo conceito (usando chaves lógicas).
+Propostas de ambientes multimodais, incluindo multimídias, multi-linguagens em formas
+livres de contexto podem ser formas de recuperação de informação (INGWERSEN; JÄVELIN, 2005).
+Nestes ambientes está implícito um contexto onde os objetos de informação são interoperáveis
+tendo entidade física em alguma mídia em sistemas de RI.
+A figura 1 ilustra estes tipos de ambientes de informação:
+
+Figura 1 - Recuperação de informação em diversos níveis
+(Fonte: Ingwersen e Järvelin, 2005).
+
+Na figura 1, as estruturas intra-objetos estão relacionadas aos signos então nelas definidos,
+como os tipos feitos no contexto inter-objetos: (1) podendo haver outros ambientes com estruturas e
+signos diferentes produzindo um contexto inter-objetos; (2) o conjunto do contexto inter-objetos é o
+que produz um “Framework de Componente Cognitivo” definido por Ingwersen & Järvelin (2005), e
+que cria a possibilidade de uma sessão contexto (3).
+Este conjunto ambiente e frameworks produzidos tecnicamente estão dentro de uma primeira
+camada contexto “social”, das “tarefas sociais”, das “mídias” utilizadas, dos conceitos adquiridos e
+do ambiente emocional (4). Esse, por sua vez, está dentro do ambiente “societário” que permite esta
+
+Ambientes on-line que envolvam a descrição semântica de conteúdos - por isto esta Web
+é chamada Web Semântica - devem envolver a metalinguagem de descrição de conteúdos XML
+(eXtende Markup Language) e uma sintaxe que estruture os dados desta linguagem em um contexto
+Inter-objetos de documentos que estejam no acesso on-line, embora a RDF (Resource Definition
+Format) seja a mais conhecida e utilizada, a linguagem XSD (XML Schema Definition) já é um
+padrão recomendado desde 2001 pelo W3C.
+Neste aspecto, o objetivo do texto é comentar os conceitos de relevância e crowdsourcing como
+subsídio ao desenvolvimento de sistema que ofereça à área da Ciência da Informação um modelo de
+avaliação de textos, artigos e publicações. É enfatizado um modelo para realização de testes através da
+ferramenta denominada: TERCO (TERC On-line), disponível on-line (www.wlinfo.com.br/TERCO).
+Fundamenta-se a modelagem da ferramenta em base teórica e metodológica descrita a seguir.
+2. AS ESTRUTURAS INTER-OBJETOS
+
+A escrita certamente não é inata. Entretanto, a escrita pode ser internalizada e tornar-se um hábito
+da mente. O que é natural parece mais intimamente e obviamente humano. Por essa razão não queremos
+insistir no fato de que a escrita é uma tecnologia; queremos que a habilidade da escrita seja natural. Nós
+gostamos de nossas ferramentas e máquinas, mas também gostamos da ideia de que podemos existir sem
+elas. Isolar nossa tecnologia nos dá a sensação de autonomia e nos permite reafirmar a diferença entre
+o natural e o meramente artificial. Desde o tempo de Rousseau, muita da hostilidade dirigida contra a
+moderna tecnologia foi enraizada na crença de que, conforme nossa tecnologia se torna mais complexa,
+nós nos tornamos criaturas de nossas próprias criações. (BOLTER, 1991, p. 36-37, tradução nossa).
+A organização de busca e consultas fundamentadas na Ciência da Informação agora devem supor
+estruturas Inter-objetos. No cenário em que muitos documentos estão on-line e uma grande parte em acesso
+aberto, especialmente os documentos acadêmicos e científicos, tais estruturas assumem importância.
+Assim, além de estudos de relevância que poderiam ser feitos a partir de uma grande força
+tarefa (recrutada entre alunos, professores e outros voluntários que queiram exercer voluntariamente
+este tipo de trabalho), também os documentos e estruturas devem supor uma nova relação entre
+usuário/produtores de conhecimento e os objetos.
+Várias definições de relevância podem ser encontradas no campo da Ciência da Informação,
+destacando duas historicamente conhecidas:
+•	
+
+Uma medida da informação veiculada por um documento de consulta (GOFFMAN,
+1964);
+•	 Um critério usado para quantificar o fenômeno que envolve indivíduos (usuários) julgando
+relações, utilidade, importância, o grau de: correspondência, proximidade, adequação,
+pertinência, valor ou serem munidos de documentos ou representações de uma exigência
+de informação, necessidade, causa, declaração, descrição da pesquisa, tratamento, etc.
+(REES, 1966).
+GT8	2601
+
+infraestrutura físico-técnica (5). Infraestrutura que está dentro de um contexto histórico (6). Importante
+notar que esta etapa interage diretamente com os níveis do “Framework de Componente Cognitivo”.
+Neste contexto inter-objetos, na camada denominada “interação”, é possível inserir novos
+conceitos de critérios de relevância semi-automáticos a partir da linguagem XML, gerando mensagens
+automáticas de contextos, ao mesmo tempo em que sugerem testes de consultas aos leitores e autores;
+a estrutura de documentação OAI (Open Archives Initiative) auxilia neste caso (MUCHERONI;
+CABRAL, 2009).
+A recuperação da informação, conceito clássico em Ciência da Informação, incorpora o conceito
+de relevância e de busca de dados, que se modificou profundamente a partir do desenvolvimento da
+Web (BAEZA-YETES; RIBEIRO-NETO, 1999); entretanto, há uma necessidade de se recuperar
+conceitos tais como: relevância e validade de documentos on-line na Web.
+3. A RELEVÂNCIA E O USO DO CROWDSOURCING
+A partir do trabalho de Sperber e Wilson (1986), os critérios de relevância passam a ser
+detalhados com base no estudo da comunicação humana firmada na ideia fundamental de que as
+informações comunicadas possuem uma garantia de relevância e onde aparecem as ideias de contextos,
+graus de compreensão e sua relação com a cognição.
+O conceito de relevância é uma temática que compartilha com muitas características comuns
+com o campo dos Sistemas de Recuperação da Informação (SRI), em especial a multidisciplinaridade.
+As discussões envolvem basicamente a falta de consenso sobre a natureza e significado da relevância
+(não existe um único tipo de relevância) e a forma de operacionalizar em desenho e avaliação dos
+sistemas de informação (SALVADOR OLIVAN, 2008).
+A figura 2 ilustra de forma sistematizada estes tipos:
+ 
+
+Figura 2. Tipos de relevância: recursos e representação pelo usuário.
+(Fonte: SALVADOR OLIVAN, 2008)
+
+Nesse sentido, se distingue quatro dimensões de relevância como:
+
+
+1)	 Formada por recursos de informação: informação, documento, e representação do
+documento;
+2)	 Formada pela representação do problema do usuário: necessidade de informação real,
+necessidade de informação percebida, necessidade de informação expressada em
+linguagem natural, estratégia de busca na linguagem do SRI;
+3)	 Formada por três componentes em cada uma das entidades descritas nas duas
+primeiras dimensões: tema (a área temática de interesse do usuário), tarefa (atividade
+realizada pelo usuário com os documentos recuperados), e contexto (envolve tudo
+relacionado com o tema e tarefa, que influem em como se realiza a busca e a avaliação
+dos resultados); e,
+4)	 Representada pelo intervalo de tempo que transcorre desde o surgimento da necessidade
+da informação até sua solução.
+As possíveis relações entre as diferentes entidades contidas nas quatro dimensões
+apresentadas mostram os diferentes tipos de relevância existentes. O processo torna-se mais
+complexo quando se considera quem avalia a relevância: usuário, sistema, especialista no tema ou
+intermediário. Quem avalia pode restringir os tipos de relevância medidos ou utilizados. Assim, por
+exemplo, só o usuário pode determinar a relevância de um documento para suas necessidades de
+informação real ou percebida.
+Segundo Saracevic (2007), os tipos de relevância podem ser resumidos, de acordo com área
+e motivações em:
+	Relevância do sistema (ou algorítmico): relação entre a consulta e os objetos da
+informação (documentos) de um sistema recuperado ou não recuperado, por um
+determinado procedimento ou algoritmo.
+	Relevância temática: relação entre o tema expressado em uma consulta e o tema
+coberto pelos documentos recuperados.
+	Relevância cognitiva ou pertinência: relação entre o estado de conhecimento e a
+necessidade de informação cognitiva de um usuário e os documentos recuperados.
+	Relevância situacional ou utilidade: relação entre a situação, tarefa ou problema e os
+documentos recuperados.
+	Relevância afetiva ou motivacional: relação entre as intenções, objetivos e motivações
+de um usuário e os documentos recuperados.
+Sumariamente, para os objetivos deste texto, relevância significa estabelecer um critério de
+validação para ambientes de recuperação da informação.
+Anteriormente, este processo era uma tarefa difícil e cara por implicar no pagamento de
+pessoas dispostas a realizarem alguns testes. O procedimento era feito por um conjunto de voluntários
+recrutados entre graduandos, profissionais aposentados, e bibliotecários com disponibilidade de lerem
+cuidadosamente documentos e verificar a relevância através de alguns testes.
+O processo era custoso (pessoas deviam ser pagas) e limitado (encontrar pessoas com
+tempo disponível), havendo, também, a necessidade de conhecimento para realizar os testes,
+o que requeria um grupo de especialistas interessados em manter o processo de relevância da
+informação.
+Assim, construídos os aspectos de relevância como um dos fundamentos de Recuperação da
+Informação, e estabelecida a possibilidade do uso da “multidão”, analisa-se agora sua evolução.
+Com o início do TREC em 1992, foi possível pensar em uma avaliação parcial de documentos
+em textos completos. Não é possível imaginar que, toda vez que o documento é lido, ele seja analisado,
+então foi pensada uma abordagem onde a cada N documentos lidos uma avaliação é feita, o que se
+denominou TREC (Experiment and Evaluation in Information Retrieval) (VOORHEES, 2007).
+Entretanto, era processo caro, devido ao pagamento de avaliadores. Alguns trabalhos atuais
+discutem a eficiência destes métodos em ambientes contextuais, conforme apresentado na figura 2
+(SARACEVIC, 2007).
+No estudo de Saracevic há discussão sobre a forma como as pessoas se comportam acerca
+de relevância. Demonstra que a maioria não tem critérios contextuais, o que não é uma surpresa.
+Até porque pessoas com o tempo livre não é o mesmo que habilitadas.
+Outros estudos sobre a questão têm explorado o comportamento do usuário como um sinal
+de avaliação. O simples clique do usuário não pode ser utilizado para avaliar a qualidade de uma
+pesquisa, uma vez que a falta de um clique pode indicar tanto uma satisfação com a informação, como
+não consegue dizer sobre sua importância (JOACHIMS; RADLINKSKI, 2007), e sua evolução com
+a web (ROSE, 2004) e em redes sociais (OLIVEIRA; IRVING, 2008).
+Assim, deve-se pensar em uma terceira abordagem usando a Rede, conforme proposta por
+Alonso, Rose e Stewart (2008), numa técnica chamada TERC (Technique for Evaluating Relevance
+by Crowdsourcing), que adapta um experimento para avaliar a inteligência coletiva na rede (BARR;
+CABRERA, 2006) e sendo utilizado pela Amazon em um procedimento chamado MTurk (AMAZON,
+2009).
+Howe (2006), cunhou o termo crowdsourcing em artigo para revista Wired, onde descreve
+tarefas que são terceirizadas para um grande grupo de pessoas ao invés de executados por um
+funcionário (HOWE, 2009). Desta forma, crowdsourcing pode ser visto como convite aberto às
+pessoas para resolver um problema ou realizar uma tarefa que até envolva um valor monetário em
+troca de tal serviço.
+O crowdsourcing proposto tem estilo “Web 2.0” por prever que, a partir do aumento da
+participação interativa de um grande número de pessoas on-line, cada pessoa poderá optar pela adoção
+da ferramenta através da mensagem XML recebida. Uma vez cadastrada no sistema, poderá também
+sugerir questões que possam ser avaliadas quanto à relevância.
+
+
+4. Ferramenta de Relevância – Proposta
+A ferramenta proposta neste trabalho é uma extensão para o TERC, que é um processo de
+disseminação do teste pela Web. É denominada TERCO (TERC On-line), e pode efetivamente
+explorar a potencialidade do conceito de multidão, na Web.
+A ferramenta comentada está disponível on-line (www.wlinfo.com.br/TERCO). A finalidade
+é possibilitar que o usuário gere o seu próprio teste, customizando-o em seu repositório pessoal de
+documentos. Com base na pergunta que ele queira formular e utilizando o formato proposto pelo
+TERC, gera-se um código XML com a questão, sendo enviada ao e-mail do usuário como resposta.
+O formato proposto para o TERCO é semelhante ao do TERC, com o campo DTD CDATA [[
+questão ]] variável, de acordo com a proposta do usuário.
+Os campos do XML para o TERCO, adaptado de TERC são:
+<Questao>
+<QuestaoIdentificador>Questao1</QuestaoIdentificador>
+<DisplayNome>Questao 1:</DisplayNome>
+<NecessarioE>true</NecessarioE>
+<QuestaoConteudo>
+<ConteudoFormatadoPeloUsuario><![CDATA[
+O seguinte texto é relevante para capitalismo cognitivo ?]]>
+</ConteudoFormatadoPeloUsuario>
+</QuestaoConteudo>
+<RespostaSpecification>
+<SelecaoResposta>
+<SugestaoEstilo>radiobutton</SugestaoEstilo>
+<Selecoes>
+<Selecao>
+<SelecaoIdentificador>ir</SelecaoIdentificador>
+<Text>Irrelevante</Text>
+</Selecao>
+<Selecao>
+<SelecaoIdentificador>mr</SelecaoIdentificador>
+<Text>Pouco relevante</Text>
+</Selecao>
+<Selecao>
+<SelecaoIdentificador>fr</SelecaoIdentificador>
+<Text>Muito relevante</Text>
+</Selecao>
+<Selecao>
+<SelecaoIdentificador>hr</SelecaoIdentificador>
+<Text>Altamente relevante</Text>
+</Selecao>
+</Selecoes>
+</SelecaoResposta>
+</RespostaSpecification>
+</Questao>
+
+A questão gera, além da mensagem em XML, um código HTML, que pode ser usado pelo
+usuário para disponibilizar em seu repositório. Já, no exemplo abaixo, é apresentada na figura 3 a
+interface do TERCO:
+
+ 
+
+Figura 3. O ambiente TERC On-line (TERCO).
+
+O ambiente de desenvolvimento foi construído em PHP (Hypertext Pre-Processor), que é uma
+linguagem de script adequada para o desenvolvimento Web, sendo open-source. O aplicativo, em
+breve, terá todo o código disponibilizado. Na consolidação de desenvolvimento foi realizado um teste
+inicial com 32 alunos de graduação do curso de Biblioteconomia da Universidade de São Paulo, que
+resultou promissor para desenvolvimento do ambiente.
+A tabela a seguir tem apenas o efeito dos testes iniciais. O ambiente de validação depende de
+um ambiente mais amplo que possa inserir o crowdsourcing.
+Tabela 1. Teste de relevância feito para um conceito de “capitalismo cognitivo”.
+Conceito
+
+Irrelevante
+
+Pouco
+
+Relevância
+No. Usuários
+
+Muito
+
+Altamente
+
+X
+2
+
+5
+
+20
+
+5
+
+O ambiente deverá incorporar ferramentas para permitir a colaboração de diversos grupos
+independentes na realização de seus próprios testes de relevância.
+A validação do ambiente depende de um amplo repositório multimodal de documentos que
+está em fase de construção, sendo proposta de um projeto correlato.
+4 CONCLUSÕES PRELIMINARES
+A tradição da Ciência da Informação na Recuperação da Informação é significativa, como
+prova a força de eventos como o TREC.
+A preocupação de pesquisadores, projetistas de sistemas, e cientistas da informação com a
+
+organização da informação gerada pela sociedade em rede, leva ao desenvolvimento de conceitos
+baseados em princípios de relevância; princípios estes que subsidiam a proposta deste texto de
+estabelecer um critério de validação para recuperação da informação. Neste sentido, é destacado
+o conceito do crowdsourcing para descrever tarefas que podem envolver grupos de pessoas na sua
+execução.
+A proposta descrita apresenta a ferramenta denominada TERC, destinada à realização de testes
+de relevância no ambiente da web. Baseada no conceito da “multidão”, opera com a participação das
+pessoas para resolver um problema ou realizar uma tarefa.
+Desta maneira, a ferramenta proposta, além de realizar testes de relevância, permite ao usuário
+incluí-la em algum ambiente ou, ao menos, gerar seu próprio teste on-line.
+O recurso tem o estilo “Web 2.0” de interatividade por envolver usuários on-line e a facilidade
+de adoção. Espera-se que o contato e uso da ferramenta, bem como a discussão sobre a mesma,
+estimule seu próprio aperfeiçoamento.
