@@ -1,0 +1,409 @@
+
+SOCIAL4SCIENCE: UMA FERRAMENTA INOVADORA PARA COMPREENDER A INTERAÇÃO
+COM PUBLICAÇÕES CIENTÍFICAS NAS MÍDIAS SOCIAIS
+Modalidade: Trabalho Completo
+Resumo: Com o crescente uso das mídias sociais, tornou-se cada vez mais importante entender como
+as publicações científicas são disseminadas e discutidas nestas plataformas online. A análise desses
+dados de interação e circulação da pesquisa científica tem sido investigada nos estudos de altmetria e
+pode fornecer informações valiosas sobre como a ciência é percebida e compartilhada pelo público
+em geral. Este trabalho tem como objetivo propor uma plataforma para a coleta e análise de dados
+sociais relacionados a publicações científicas, com foco na plataforma de compartilhamento de
+vídeos, o YouTube. Através da coleta de dados do YouTube, a plataforma busca entender como as
+publicações científicas são divulgadas e discutidas nas mídias sociais. Na solução desenvolvida e
+denominada Social4Science, é possível obter dados sociais do YouTube e correlacionar com dados
+científicos de publicações, permitindo a análise de várias métricas. Essa abordagem viabiliza a
+identificação de tendências e padrões nas discussões sobre as publicações científicas nas mídias
+sociais. Os resultados obtidos demonstraram que a plataforma proposta é bastante promissora ao
+proporcionar uma compreensão mais aprofundada da interação entre a ciência e o público, ela
+também abre possibilidades para futuros estudos nessa temática. Compreender como as publicações
+científicas são recebidas e debatidas nas mídias sociais é fundamental para a comunicação científica e
+para estabelecer pontes entre a comunidade científica e o público em geral. A plataforma proposta
+contribui para essa compreensão, permitindo que pesquisadores e profissionais da área identifiquem
+oportunidades de engajamento e desenvolvam estratégias efetivas para a divulgação científica.
+Palavras-chave: produção científica; mídias sociais; altmetria; dados abertos; bibliometria.
+
+1 INTRODUÇÃO
+O compartilhamento das descobertas e o processo de divulgação científica
+desempenham um papel fundamental no avanço social e cultural. É essencial estabelecer
+uma comunicação eficaz entre a comunidade acadêmica e a sociedade, uma vez que o
+conhecimento e a pesquisa têm o propósito de beneficiar a sociedade como um todo.
+Portanto, é crucial que a forma como os resultados são transmitidos esteja alinhada com as
+necessidades e expectativas do público, de modo a estabelecer uma relação sólida e
+relevante entre a ciência e a sociedade em geral (NETO, 2018).
+Nesse contexto, o YouTube tem se mostrado uma plataforma de grande relevância
+para a divulgação científica na Internet. Como o maior site de compartilhamento de vídeos
+do mundo, ele abriga uma ampla variedade de conteúdo, abrangendo diversas áreas e
+temáticas. No Brasil, em particular, o YouTube possui um público expressivo e engajado,
+tornando-se um ambiente propício para a divulgação científica alcançar uma ampla
+audiência (DA FONSECA e BUENO, 2021).
+A disseminação da ciência por meio do YouTube possibilita a criação de vídeos
+educativos, debates, entrevistas e demonstrações práticas, promovendo a interação e o
+diálogo entre os pesquisadores e o público interessado.
+Para os autores Reale e Martyniuk (2016), a divulgação científica por meio do
+YouTube é uma excelente ferramenta para democratizar o conhecimento científico.
+A análise de artigos científicos mencionados em vídeos do YouTube oferece a
+oportunidade de coletar uma ampla gama de dados relevantes. Esses dados podem incluir o
+título do artigo científico, os nomes dos autores, o nome do periódico em que o artigo foi
+publicado, o ano de publicação e o número de citações recebidas, entre outros aspectos de
+
+interesse. Essas informações são importantes para compreender a interação entre a
+plataforma digital e a produção científica, bem como para examinar o impacto e a
+disseminação da pesquisa científica nas mídias sociais.
+A extração desses dados pode fornecer visões sobre as tendências de citação, as
+áreas de pesquisa mais mencionadas e os tópicos mais abordados nos vídeos científicos do
+YouTube. Essa análise também permite explorar a conexão entre a divulgação científica e o
+arcabouço acadêmico, identificando a relevância e a influência dos artigos científicos
+mencionados. Ao examinar as citações nos vídeos, é possível identificar potenciais lacunas
+entre a pesquisa científica e sua divulgação pública, destacando áreas que merecem maior
+atenção na comunicação científica. Portanto, a extração de dados de artigos científicos
+mencionados em vídeos do YouTube representa uma abordagem importante para entender a
+relação entre a produção científica e seu alcance na esfera digital, contribuindo para uma
+compreensão mais abrangente da disseminação do conhecimento científico e suas
+interações com o público em geral.
+Por exemplo, é possível identificar tendências emergentes mencionadas nos vídeos,
+destacando os assuntos de maior destaque e relevância na divulgação científica online.
+Ainda, é possível avaliar a influência de autores e revistas, identificando aqueles que são
+mais mencionados e reconhecidos na plataforma. Essa análise permite compreender melhor
+a dinâmica da disseminação da pesquisa científica no ambiente digital.
+Outro aspecto importante é a análise da relação entre a popularidade dos vídeos no
+YouTube e o número de citações recebidas pelos artigos científicos mencionados nesses
+vídeos. Essa correlação pode revelar a influência dos vídeos online na disseminação e no
+reconhecimento da pesquisa acadêmica. A compreensão dessa relação contribui para uma
+visão mais completa da interação entre a divulgação científica e o impacto da pesquisa.
+A análise dos dados coletados pode revelar lacunas na comunicação científica,
+indicando áreas em que há uma desconexão entre a produção científica e sua divulgação
+online. Essas lacunas podem direcionar esforços para melhorar a comunicação e o
+engajamento do público, promovendo uma maior compreensão e apreciação da ciência.
+Diante do exposto, este estudo tem como objetivo geral a proposição de uma
+plataforma computacional inovadora para a coleta, tratamento e análise de dados científicos
+em mídias sociais. É importante ressaltar que o termo "mídias sociais" é adotado aqui em
+detrimento do termo "redes sociais digitais", pois abrange de maneira mais abrangente as
+
+plataformas online que possibilitam a criação e compartilhamento de conteúdo, além das
+interações e conexões entre os usuários.
+A plataforma proposta denominada Social4Science visa preencher uma lacuna
+significativa na pesquisa científica, fornecendo uma ferramenta eficiente para explorar o
+vasto universo das mídias sociais e compreender como as informações científicas são
+disseminadas, discutidas e percebidas pelo público em geral. Com a coleta e análise dos
+dados provenientes dessas plataformas, é possível obter resultados valiosos sobre as
+tendências, padrões e interações relacionadas à ciência.
+Além disso, a plataforma abrange uma ampla gama de funcionalidades que permitem
+a identificação de influenciadores, a análise do impacto e da relevância das publicações
+científicas, a detecção de temas emergentes, entre outras análises importantes. Com base
+nesses dados, os pesquisadores poderão tomar decisões embasadas, desenvolver estratégias
+de divulgação mais eficazes e aprimorar a comunicação entre a comunidade acadêmica e a
+sociedade.
+Portanto, Social4Science representa uma abordagem significativa para explorar o
+potencial das mídias sociais no contexto da pesquisa científica. Ela oferece uma visão
+abrangente e aprofundada das interações entre ciência e sociedade, impulsionando a
+divulgação científica, promovendo um diálogo mais inclusivo e estabelecendo uma sólida
+ponte entre a academia e o público em geral.
+O intuito da ferramenta é coletar e analisar dados das mídias sociais, como o
+YouTube, com o objetivo de compreender como as publicações científicas são disseminadas
+e discutidas nessas plataformas. Especificamente, buscamos investigar as características dos
+vídeos publicados no YouTube que fazem referência a um DOI (Digital Object Identifier),
+identificando tendências e padrões relevantes.
+Por meio da coleta de dados do YouTube e da aplicação de técnicas de análise, este
+trabalho visa obter resultados sobre a forma como a ciência é comunicada e discutida nesse
+ambiente online. Ao analisar as características dos vídeos que mencionam DOIs, podemos
+entender melhor como a informação científica é transmitida, quais tópicos são abordados e
+como o público interage com esse conteúdo.
+Indicadores de atenção online têm sido debatidos no contexto de estudos
+altmétricos, que focam na compreensão do impacto social de resultados de pesquisas na
+web social (ARAÚJO, 2020). Essas análises podem ser úteis para pesquisadores, editores de
+
+
+periódicos e outros profissionais envolvidos na divulgação científica, pois podem ajudar a
+compreender melhor como a ciência é percebida e compartilhada pelo público em geral e a
+identificar oportunidades para aumentar a visibilidade das publicações.
+Estudos desenvolvidos com essas abordagens mais contextuais estão crescendo na
+literatura e sinalizam a preocupação no campo altmétrico em contribuir para o
+aprofundamento da análise e investigação de onde e como os artigos são utilizados por
+diversas comunidades que interagem com os artigos online (ARAÚJO, 2020).
+2 METODOLOGIA
+Este trabalho utilizou o portal da Altmetric1 por meio da plataforma Altmetric
+Explorer como ferramentas para realizar a busca de publicações científicas que foram citadas
+em vídeos publicados no YouTube. Essa relação entre os vídeos e os artigos científicos é
+estabelecida quando um vídeo menciona um artigo utilizando o DOI (Digital Object
+Identifier), que geralmente é incluído na descrição do vídeo.
+A utilização do DOI como identificador único permite vincular de forma precisa um
+vídeo específico a um artigo científico correspondente. Ao realizar a busca no portal da
+Altmetric por vídeos no YouTube que mencionam DOIs, foi possível identificar e coletar os
+dados para as análises e o estudo das interações entre a mídia social e a pesquisa científica.
+Essa abordagem de buscar referências de artigos científicos em vídeos do YouTube
+por meio do DOI é uma forma eficaz de identificar a presença e o alcance da ciência nessa
+plataforma. A plataforma Altmetric Explorer oferece recursos que facilitam a coleta e o
+tratamento dos dados, possibilitando a realização de análises detalhadas sobre as
+características dos vídeos e as citações dos artigos científicos.
+A partir desta relação extraída da Altmetric, contendo um arquivo com Identificador
+do vídeo e o DOI de uma publicação, todo o processo de extração dos dados é iniciado. A
+plataforma Social4Science recebe esta relação como entrada e dá início a todo o processo de
+coleta e análise dos dados, dividido em dois segmentos:
+1.
+
+Análise Social: coleta de dados dos vídeos do YouTube.
+
+2.
+
+Análise Bibliométrica: coleta de dados dos artigos científicos.
+
+A arquitetura da Plataforma Proposta pode ser observada na Figura 1.
+
+1
+
+https://www.altmetric.com/
+
+
+
+Figura 1 – Arquitetura geral da Plataforma Social4Science
+
+
+
+Fonte: Os autores (2023)
+
+O processo de coleta e tratamento dos dados realizado pela plataforma se inicia com
+a entrada de um arquivo fornecido pela Altmetric, contendo os identificadores dos vídeos e
+os DOIs dos artigos científicos. Esses DOIs são utilizados na etapa de "Análise Bibliométrica",
+enquanto os identificadores dos vídeos são utilizados na etapa de "Análise Social".
+A etapa de "Análise Bibliométrica" consiste na utilização dos DOIs dos artigos
+científicos para obter informações relevantes sobre as publicações, como título, autores,
+periódico de publicação, ano de publicação e número de citações recebidas. Esses dados
+bibliométricos são essenciais para compreender a relevância e o impacto dos artigos
+científicos mencionados nos vídeos do YouTube.
+Por sua vez, a etapa de "Análise Social" utiliza os identificadores dos vídeos para
+explorar os aspectos sociais e de interação relacionados aos vídeos que citam os artigos
+científicos. Essa análise social pode incluir a identificação de tendências, a análise da
+popularidade dos vídeos, a avaliação das interações dos usuários, como curtidas,
+compartilhamentos e comentários, e a identificação de influenciadores ou canais relevantes
+na divulgação científica.
+Ao separar as etapas de análise bibliométrica e análise social, a plataforma permite
+uma abordagem abrangente e aprofundada na compreensão do impacto e da disseminação
+da ciência nas mídias sociais, especialmente no YouTube. Combinando informações
+bibliométricas e dados sociais, é possível obter informações importantes sobre como as
+publicações científicas são recebidas, discutidas e compartilhadas nessa plataforma,
+contribuindo para o avanço da divulgação científica e para a compreensão das interações
+entre a ciência e a sociedade
+Na Análise Social (1) os dados dos vídeos são coletados via uma Application
+Programming Interface (API) pública do Youtube, quando são gerados alguns extratos de
+dados. Eles são utilizados para o cálculo de diversas métricas e podem ser exportados para
+outras
+
+ferramentas
+
+de
+
+análises
+
+e visualizações, permitindo outras formas de
+
+aprofundamento.
+Como exemplo destes extratos, destacam-se os conjuntos contendo dados
+quantitativos dos vídeos, como por exemplo, quantidade de visualizações, quantidade de
+comentários e curtidas de cada vídeo, bem como, extratos contendo dados dos canais em
+que os vídeos foram publicados, das redes de interações identificadas a partir dos
+
+comentários de cada vídeo, extratos das descrições dos vídeos, das transcrições de cada
+áudio e, por fim, um conjunto de dados padronizados no idioma inglês de todos os
+comentários extraídos.
+Já na Análise Bibliométrica (2), o conjunto dos DOI é verificado via API, a fim de
+validá-los. Caso seja um DOI válido, seus dados são enviados para a API da OpenAlex2,
+recuperando, desta forma, informações sobre o artigo em questão, como por exemplo, seu
+título, autores, ano de publicação, resumo, palavras-chave, periódico de publicação, dentre
+outros. Visando complementar os dados uma nova requisição do mesmo DOI é enviada para
+a API da OpenCitations3, recuperando as citações do artigo.
+Todo este conjunto de dados são armazenados em extratos de dados que também
+são objeto de análises por diversas métricas implícitas na própria plataforma e são
+disponibilizados em formatos que possam ser importados por outras ferramentas de análise
+e visualização.
+Os dados quantitativos desempenham um papel fundamental na plataforma,
+permitindo a realização de diferentes tipos de ranqueamento e a análise de correlações
+entre as Análises Sociais e as Análises Bibliométricas. Essas medidas quantitativas fornecem
+insumos valiosos sobre a popularidade, engajamento e alcance dos vídeos e das publicações
+científicas mencionadas neles.
+Por outro lado, os conjuntos de dados que contêm informações textuais dos vídeos,
+como títulos, comentários, descrição e transcrição, são correlacionados com os dados
+textuais das publicações científicas, como títulos, resumos e palavras-chave. Nesse contexto,
+são adotadas medidas de correlação, como a distância de Levenshtein ou o cálculo da
+similaridade do cosseno, para explorar as relações entre os textos.
+A distância de Levenshtein é uma métrica que calcula a diferença entre duas
+sequências de caracteres, como títulos de vídeos e títulos de publicações científicas. Essa
+medida permite avaliar a similaridade ou dissimilaridade entre os textos, fornecendo
+informações sobre a proximidade temática entre os vídeos e as publicações.
+A similaridade do cosseno, por sua vez, é uma medida que quantifica a similaridade
+entre dois vetores de palavras, como os termos presentes nos comentários dos vídeos e as
+
+2
+
+https://openalex.org/
+
+3
+
+https://opencitations.net/
+
+
+palavras-chave das publicações científicas, permitindo identificar associações semânticas e
+relações entre os textos.
+Ao utilizar essas medidas de correlação, a plataforma Social4Science pode revelar
+conexões entre os conteúdos dos vídeos e das publicações científicas, identificar padrões
+temáticos e explorar como as informações são transmitidas e discutidas nas mídias sociais.
+Dessa forma, a combinação de dados quantitativos e textuais proporciona uma
+análise abrangente e enriquecedora, permitindo compreender tanto os aspectos
+quantitativos quanto os textuais envolvidos na disseminação e na discussão das publicações
+científicas no YouTube.
+Como um estudo de caso inicial foram coletados da Plataforma Altmetric em março
+de 2022 um conjunto contendo 65.534 DOI´s que possuíam na época citações de vídeos do
+Youtube. Deste conjunto de DOI´s foram verificadas diversas características das publicações
+científicas, considerando a análise do tipo de publicação, verificou-se que a maioria era de
+Artigos (94,9%), seguido em menor quantidade por Livros (3%) e Capítulos de Livros (1%).
+Ressalta-se ainda um total de 45 Conjuntos de Dados que também eram referenciados.
+3 RESULTADOS
+A análise social envolve a análise de dados dos vídeos, como o número de curtidas,
+visualizações e comentários. Por outro lado, a análise bibliométrica abrange dados
+quantitativos dos artigos, como a validação do DOI, o número de citações recebidas por
+outros artigos e a quantidade de vídeos que mencionam o artigo em questão. A partir desses
+dados, é possível identificar tendências e padrões nas discussões sobre publicações
+científicas nas mídias sociais. Por exemplo, podemos determinar quais publicações são mais
+populares nessas plataformas, quais tópicos geram mais discussões e quem são os principais
+influenciadores nesse contexto.
+Por meio das análises bibliométricas, e levando em consideração a data de coleta dos
+dados, foi possível apresentar de forma cronológica o período de publicação dos artigos que
+foram mencionados nos vídeos (Figura 2).
+
+
+Figura 2 – Período de publicação dos artigos mencionados
+
+Fonte: Os autores (2023)
+
+Após uma análise dos dados, constata-se que o artigo mais antigo identificado possui
+data de publicação em 1980. A partir dessa referência, é possível observar um crescimento
+significativo na quantidade de artigos científicos ao longo do tempo, com uma tendência
+ainda mais acentuada a partir do ano 2000. É nesse período que o uso do DOI em artigos
+científicos se torna mais comum.
+A partir de 2006, nota-se um aumento significativo na quantidade de artigos
+científicos que são mencionados no Youtube, alcançando seu ponto máximo em 2018. Esse
+crescimento pode ser atribuído a uma série de fatores, como o avanço da tecnologia e das
+ferramentas de pesquisa, o acesso mais amplo à informação científica e o aumento da
+colaboração entre pesquisadores em escala global e principalmente na utilização das mídias
+sociais como mecanismo para divulgação dos resultados das pesquisas.
+Foi possível ainda determinar a representatividade dos principais periódicos nos quais
+os artigos foram publicados. Essa análise teve como objetivo quantificar os artigos
+publicados em cada periódico, destacando aqueles que foram mais mencionados nos vídeos
+do YouTube durante o período analisado (Figura 3).
+
+
+Figura 3 – Representatividade dos periódicos dos artigos referenciados nos vídeos
+
+Fonte: Os autores (2023)
+
+É possível observar a representatividade de alguns periódicos de prestígio, como a
+Nature, o American Journal of Clinical Nutrition, o Plos One, o Nutrients, o Journal of
+Strength & Conditioning Research e a Science, entre outros. Esses periódicos são
+reconhecidos internacionalmente por sua qualidade editorial e pelo rigor científico de suas
+publicações.
+É interessante notar que determinadas áreas do conhecimento têm uma maior
+utilização do YouTube como ferramenta de divulgação de artigos científicos. Isso pode ser
+atribuído a diversos fatores, como a natureza dessas áreas, que podem ser mais facilmente
+transmitidas por meio de vídeos. Algumas áreas podem ter uma demanda maior por
+comunicação direta e acessível, especialmente quando se trata de tópicos de interesse
+público (Figura 4).
+A utilização do YouTube como plataforma de divulgação científica nessas áreas
+permite uma comunicação mais dinâmica e interativa, proporcionando uma experiência de
+aprendizado mais envolvente. Os vídeos podem incluir demonstrações práticas, entrevistas
+com especialistas, debates e análises de artigos científicos, entre outros conteúdos que
+despertam o interesse e a curiosidade do público.
+
+
+Figura 4 – Áreas predominantes dos artigos mencionados
+
+Fonte: Os autores (2023)
+
+Utilizando a classificação das áreas do conhecimento dos artigos, com base nos dados
+coletados, é possível observar uma grande concentração em duas áreas principais: Ciências
+Médicas e da Saúde, com 69% dos artigos analisados, e Ciências Biológicas, com 11,5%. Essas
+duas áreas representam aproximadamente 80% de todo o conjunto de artigos estudados.
+Essa concentração nas áreas de Ciências Médicas e da Saúde não é surpreendente,
+uma vez que essas áreas estão diretamente relacionadas à saúde humana e têm um impacto
+significativo na vida das pessoas. A divulgação científica nessas áreas é especialmente
+relevante, pois permite que informações importantes sobre tratamentos médicos, avanços
+na pesquisa e prevenção de doenças sejam compartilhadas com o público em geral.
+A área de Ciências Biológicas também apresenta uma concentração significativa de
+artigos mencionados no YouTube. Isso pode ser explicado pela importância desses estudos
+para compreender a vida e os organismos vivos. Os tópicos relacionados à biologia, como
+genética, evolução, ecologia e biotecnologia, despertam interesse e curiosidade em muitas
+pessoas, o que pode contribuir para a disseminação desses conteúdos no YouTube.
+
+
+É importante destacar que, embora haja uma concentração nessas duas áreas
+principais, outros campos do conhecimento também estão presentes nos artigos
+mencionados no YouTube, embora em menor proporção.
+Diversas outras análises bibliométricas também foram realizadas, como por exemplo
+a validação dos DOI que são citados, objetivando verificar a real existência da publicação e,
+após esta etapa, a coleta e análise dos dados contidos nos títulos, resumos, palavras-chave,
+bem como, informações do número de citações desses artigos por outras publicações. E
+ainda, dados dos periódicos em que foram publicados, como fator de impacto e Qualis.
+Todos estes dados são automaticamente coletados por API públicas de diversas fontes e de
+forma automática.
+As análises sociais são baseadas em informações extraídas dos vídeos publicados no
+YouTube que mencionam um DOI. Essa abordagem concentra-se nas informações obtidas
+diretamente da plataforma por meio da utilização da API pública do YouTube para a
+requisição de dados. Todo o processo de extração de dados do YouTube é automatizado a
+partir da lista inicial fornecida, em que os identificadores dos vídeos são extraídos e as
+requisições são feitas na API do YouTube.
+Foi possível observar nos dados coletados como os vídeos estão classificados em
+categorias. Tais categorias são referentes aos canais em que estes vídeos são publicados
+(Figura 5).
+Figura 5 – Categoria dos canais em que os vídeos são publicados
+
+Fonte: Os autores (2023)
+
+Observa-se que a maioria dos canais que apresentam vídeos mencionando
+publicações com DOI estão categorizados principalmente como Educação, Pessoas e Blogs, e
+Ciência e Tecnologia. Uma hipótese para a maior representatividade da Categoria Educação
+
+pode estar relacionada a aulas de disciplinas ou divulgação de resultados de estudos. Para
+uma compreensão mais aprofundada dessa categorização e seu impacto, é relevante analisar
+a representatividade desses canais, levando em consideração o número de inscritos, a
+quantidade de vídeos publicados e a data de registro do canal no YouTube, uma vez que
+essas informações podem fornecer resultados adicionais e enriquecer as análises.
+Considerando ainda os dados da Análise Social, são estabelecidas redes de
+comentários por meio da plataforma desenvolvida. Os comentários de cada vídeo são
+analisados e as conexões entre os canais são identificadas. Dessa forma, por meio de um
+conjunto de comentários, é possível analisar as interações entre os canais, levando em
+consideração os comentários que são feitos ou recebidos por eles. Essa abordagem de
+análise de redes permite obter resultados importantes sobre a dinâmica das interações entre
+os canais no contexto dos comentários.
+Além das redes caracterizadas, são realizadas diversas outras análises quantitativas
+que agregam informações relevantes. São considerados dados como a quantidade de
+visualizações, comentários, curtidas, duração e idioma dos vídeos, entre outros. Essas
+métricas fornecem insumos valiosos sobre o alcance, o engajamento e as características dos
+vídeos, contribuindo para uma compreensão mais abrangente da sua relevância e impacto
+na plataforma.
+Os conteúdos dos vídeos também são objeto de estudo, abrangendo elementos como
+o título, a descrição e a transcrição do áudio. Esses elementos são de suma importância, pois
+viabilizam diversas outras análises que buscam correlacionar o conteúdo dos vídeos com os
+dados dos artigos científicos, que também são coletados, como título, resumo e
+palavras-chave. Essas análises permitem uma compreensão mais aprofundada das temáticas
+abordadas nos vídeos e a identificação de relações entre o conteúdo dos vídeos e o
+conteúdo dos artigos científicos mencionados, contribuindo para uma análise abrangente e
+contextualizada da divulgação científica
+4 CONSIDERAÇÕES
+A plataforma Social4Science proposta neste trabalho permite a coleta e análise de
+dados científicos em mídias sociais, fornecendo resultados valiosos sobre a divulgação e
+disseminação do conteúdo científico. Através da análise desses dados, é possível identificar
+tendências, padrões e lacunas de conhecimento nas discussões sobre publicações científicas
+
+nas mídias sociais. Essa ferramenta oferece informações importantes para pesquisadores e
+profissionais da área científica, permitindo ajustes nas estratégias de comunicação e
+promoção do conhecimento científico, estabelecendo uma conexão mais efetiva com o
+público em geral.
+Através dos dados coletados pela plataforma proposta, é possível estabelecer
+correlações significativas entre diferentes variáveis. Essas correlações fornecem uma
+compreensão mais aprofundada sobre como a popularidade de um vídeo no YouTube está
+relacionada às características do artigo científico mencionado, considerando fatores como
+área de pesquisa, tipo de publicação e país de origem. Essas análises permitem uma análise
+abrangente do impacto e da repercussão das publicações científicas nas mídias sociais,
+contribuindo para a compreensão do processo de disseminação e alcance do conhecimento
+científico.
+Todo o ferramental desenvolvido com o código fonte de todos os módulos do
+framework será disponibilizado em um repositório do GitHub para toda comunidade de
+interesse.

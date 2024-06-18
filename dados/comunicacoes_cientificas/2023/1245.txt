@@ -1,0 +1,357 @@
+
+PROPOSTA DE MODELO PARA RECUPERAÇÃO DE INFORMAÇÕES EM AMBIENTES DIGITAIS
+CONSIDERANDO O CONTEXTO DE USO
+Modalidade: Trabalho Completo
+Resumo: Oferecer informações adaptadas a diferentes contextos é um desafio na Ciência da
+Informação, especialmente em ambientes digitais com usuários heterogêneos. O rápido crescimento
+e a diversidade de dados, impulsionados pela interação entre sistemas, resultam no chamado Big
+Data, que agrava tal desafio. Diante desta diversidade, surgem dificuldades na concepção e oferta de
+instrumentos para recuperação de informações. A hipótese é que o uso de atributos de contexto de
+uso da informação pode melhorar a recuperação de informações e resolver tais problemas. Assim, o
+objetivo foi propor um modelo que utilize estes atributos para aprimorar as respostas de um sistema
+de recuperação de informações em tais ambientes. A pesquisa exploratória consistiu no estudo da
+literatura, na proposição do modelo e na análise de sua aplicação. Ao analisar a aplicação do modelo
+proposto, foi constatado que o uso de informações contextuais melhora a qualidade e eficácia da
+recuperação de informações em ambientes digitais. Estas informações, relacionadas ao contexto de
+uso e às interações dos usuários, podem ser aproveitadas para aprimorar os algoritmos
+computacionais utilizados na recuperação de informações.
+1. INTRODUÇÃO
+
+A Ciência da Informação (CI) enfrenta desafios na recuperação precisa e relevante de
+informações, considerando as demandas específicas dos usuários. As Tecnologias Digitais de
+Informação e Comunicação (TDICs) intensificam essa questão, ampliando a produção e
+consumo de informações (MARQUESONE, 2016). Tais tecnologias, como a internet e
+dispositivos móveis, geram um volume significativo de dados em tempo real, em diversos
+formatos.
+Neste cenário, ambientes digitais associados ao chamado Big Data apresentam
+obstáculos no processamento e recuperação de informações. A falta de foco em perfis de
+usuários específicos pode comprometer a eficácia na obtenção de informações relevantes
+(BARLOW, 2013). Ferramentas baseadas em aprendizado de máquina, como o GPT, buscam
+otimizar essa recuperação, mas podem enfrentar limitações e perpetuar desafios sociais
+(ZUBOFF, 2021).
+Este estudo propõe que a consideração do contexto de uso da informação pode
+melhorar a recuperação de informações em ambientes digitais. Ao entender tal contexto, é
+possível fornecer informações mais alinhadas às necessidades dos usuários, promovendo
+acessibilidade. Assim, o objetivo principal é explorar como promover a recuperação de
+informações em ambientes digitais, especialmente aqueles com características de Big Data,
+que se distinguem dos sistemas de informação tradicionais devido aos seus contextos
+singulares de produção e uso de dados e informações.
+2. PROCEDIMENTOS METODOLÓGICOS
+Neste trabalho, os procedimentos metodológicos incluem o estudo de literatura,
+desenvolvimento de um modelo de sistema de recuperação de informações orientado ao
+contexto de uso da informação e apresentação subsequente da aplicação deste modelo. O
+objetivo foi avaliar a qualidade do modelo proposto na recuperação de informações mais
+alinhadas ao perfil e às necessidades de um perfil de usuário. As etapas da pesquisa foram as
+seguintes:
+1) Estudo de Literatura e Preparação do Referencial Teórico: Nesta etapa, foram consultados
+
+repositórios de teses e dissertações, como os das universidades USP, Unicamp, PUC,
+UNESP, além das bases de dados Base de Dados Referencial de Artigos de Periódicos em
+Ciência da Informação (BRAPCI), Web of Science, Elsevier, Instituto Brasileiro de
+Informação em Ciência e Tecnologia (IBICT), arXiv e Directory of Open Access Journals
+
+(DOAJ). O objetivo foi estabelecer uma base teórica sólida para o desenvolvimento do
+modelo proposto. Foram considerados os seguintes descritores para cada tópico de
+pesquisa Big Data, Dados Massivos, Business Intelligence, Data Value, Data Extraction,
+Inteligência Artificial, Machine Learning, Técnicas de Processamento de Dados, Sistemas
+Inteligentes, Recuperação da Informação, Information Retrieval, Information Retrieval
+Systems, Sistemas de Recuperação da Informação, Relevância da Informação, Pertinência
+da Informação, Information Relevance, Informação Útil, Sistemas de Informação, Sistemas
+de Recuperação da Informação, Information Systems and IS.
+2) Desenvolvimento de um modelo conceitual para recuperação da informação em
+
+ambientes informacionais digitais: A aplicação das técnicas de modelagem conceitual
+permitiu a implementação e teste do contexto de uso da informação em sistemas de
+recuperação de informações digitais, especialmente em ambientes de Big Data. Esta
+abordagem possibilitou avaliar o impacto da aplicação do contexto de usuário e uso na
+melhoria da conexão entre a busca e a recuperação de informações.
+3) Exposição de uma possível aplicação do modelo proposto: Nesta pesquisa, foi adotada
+
+uma metodologia que consistiu em aplicar e testar o modelo proposto em uma situação
+real. Para isso, utilizamos o SRI digital da Base de Dados Referencial de Artigos de
+Periódicos em Ciência da Informação (BRAPCI), uma base de dados de artigos em Ciência
+da Informação. Essa aplicação prática nos permitiu avaliar a eficácia do modelo na
+recuperação de informações que atendem às necessidades dos usuários.
+3. REFERENCIAL TEÓRICO
+Nesta seção, são apresentados os fundamentos teóricos que embasaram o
+desenvolvimento da pesquisa. O objetivo foi situar o objeto de estudo no contexto da Ciência
+da Informação, abordando suas particularidades e fornecendo suporte para a análise dos
+resultados obtidos.
+3.1 Aspectos gerais de sistemas de informação, sris digitais e big data
+Para uma compreensão das particularidades que impulsionaram o desenvolvimento
+deste estudo, é necessária um estudo da literatura que enfatize as diferenças entre os SIs
+clássicos e digitais, em função da transição de paradigma nos processos e operações entre
+estes sistemas, demandando a criação de novos métodos de processamento e recuperação
+
+de informações. Sistemas de informação desempenham papel no armazenamento,
+organização e compartilhamento de estoques de informação, que são recursos que
+armazenam registros feitos pelos usuários. Estes estoques são essenciais para preservar e
+transferir conhecimento, envolvendo práticas como seleção, codificação e classificação de
+informações (SMIT; BARRETO, 2002). A disponibilização destas informações aos usuários
+depende de fluxos de comunicação que buscam facilitar o acesso e qualificar a busca de
+acordo com as competências dos usuários, a partir de processos de recuperação de
+informações (TARAPANOFF, 2006).
+Enquanto sistemas de informação abrangem um conjunto organizado de elementos
+para coletar, armazenar, processar e distribuir informações, um sistema de recuperação de
+informação é um subconjunto que se concentra na busca e recuperação eficiente de
+informações relevantes dentro desse sistema (VICKERY; VICKERY, 2004). As regras de seleção
+e apresentação das informações armazenadas devem considerar as necessidades dos
+usuários e são definidas pela instituição responsável pelo estoque informacional (BARRETO,
+1994). Para a presente pesquisa interessa este tipo de SI, o SRI.
+A informação é apresentada ao usuário quando solicitada, considerando seu contexto
+de produção (SMIT; BARRETO, 2002). O usuário analisa a relevância e a pertinência da
+informação e, se for o caso, a utiliza para iniciar sua ação conforme sua abordagem inicial ao
+estoque de informações. Para fins de esclarecimento, a relevância é determinada pela
+correspondência dos termos de busca com os documentos da coleção (LIMA; CAMPOS,
+2022), enquanto a pertinência está relacionada à utilidade da informação para atender às
+necessidades dos usuários (ARAÚJO JÚNIOR, 2005; MANNING; RAGHAVAN; SCHÜTZE, 2008).
+A figura 01 ilustra o fluxo esperado em um sistema de informação clássico.
+Figura 01 - Fluxo Interno e os Fluxos Extremos da Informação
+Fonte: Smit e Barreto (2002, p. 14).
+
+Sistemas de recuperação de informação são classificados em físicos e digitais. Os
+sistemas digitais oferecem vantagens como acessibilidade e eficiência na busca (VICKERY;
+VICKERY, 2004). No entanto, os sistemas digitais, especialmente aqueles associados ao Big
+Data, operam de maneira distinta dos sistemas tradicionais. Nos sistemas tradicionais,
+políticas definidas orientam o armazenamento e apresentação de informações para públicos
+específicos. Em contraste, nos sistemas digitais, a relevância dos dados é determinada após
+sua estruturação e avaliação (BOYD; CRAWFORD, 2012). Esta diferença pode resultar em
+informações que não atendem plenamente às necessidades do usuário (DAVENPORT, 2014;
+DE MAURO; GRECO; GRIMALDI, 2016), impactando na relevância da informação recuperada
+em tais sistemas.
+Métodos de avaliação, como precisão e revocação, foram propostos para medir a
+relevância da informação recuperada (ARAÚJO JÚNIOR, 2005). Estas métricas, conforme
+descrito por Manning, Raghavan e Schütze (2008), são essenciais para avaliar a eficácia da
+recuperação de informações. O modelo proposto neste estudo sugere a inclusão do contexto
+de uso do usuário como uma variável relevante para aprimorar a recuperação de
+informações. Assim, cabe observação sobre os aspectos gerais dos usuários para
+compreensão de seus potenciais contextos.
+3.2 A noção de usuário da informação
+Segundo Sanz Casado (1994), o usuário da informação é definido como o indivíduo
+que busca informações para o auxiliar em suas atividades. A necessidade de informação
+surge quando o indivíduo se depara com uma situação ou problema que requer
+conhecimento ou orientação. Esta necessidade de informação é influenciada por fatores
+tanto internos quanto externos. Os fatores internos incluem conhecimentos prévios,
+curiosidade, valores, crenças e interesses, enquanto os fatores externos envolvem situações
+do cotidiano, problemas complexos que demandam solução e mudanças sociais, econômicas
+e tecnológicas (FIGUEIREDO, 1994).
+Le Coadic (2004) afirma que as necessidades e usos da informação são
+interdependentes e exercem uma influência complexa sobre o usuário, determinando seu
+comportamento e práticas. Portanto, o comportamento informacional é moldado pelo
+contexto no qual a necessidade de informação se manifesta, pelas habilidades e
+
+competências do usuário, e pela disponibilidade de acesso aos recursos de informação. O
+comportamento informacional abrange as atividades, estratégias e processos utilizados pelos
+indivíduos para buscar, acessar, avaliar e utilizar informações que atendam às suas
+necessidades (WILSON, 2000). Isto inclui a busca ativa e seletiva de fontes de informação,
+com o objetivo de encontrar dados relevantes para suas necessidades específicas. É
+importante salientar que o comportamento informacional ocorre em um contexto específico
+de uso da informação. Desta forma, é possível afirmar que características contextuais
+desempenham um papel fundamental na identificação do usuário da informação e de seu
+problema informacional.
+3.3 Contexto de uso e sistemas sensíveis à contexto (context-aware)
+Cabe ponderar que a definição de contexto não é tarefa simples, dado que há certa
+variação de entendimento a depender da abordagem adotada. Por exemplo, Pete Steggles
+(1999), em painel organizado por Abowd e Dey (1999), menciona que “qualquer descrição do
+mundo que pode ser relevante para um aplicativo conta como um ‘tipo de contexto’”
+(ABOWD; DEY, 1999, p. 5, tradução nossa). Na mesma linha, Sezer, Dogdu e Ozbayoglu
+(2018, p. 10), explicitaram que contexto pode ser
+[...] qualquer informação que possa ser utilizada para caracterizar a situação
+de uma entidade. Uma entidade é uma pessoa, lugar ou objeto considerado
+relevante para a interação entre um usuário e um aplicativo, incluindo o
+usuário e os próprios aplicativos.
+
+E, anteriormente, Foresti, Varvakis e Godoy Vieira (2016) define contexto como
+dados, informação, conhecimento, texto, ambiente, emissor e receptor. A norma NBR
+9241-11 (ABNT, 2021) destaca a importância do usuário, da tarefa, do equipamento e do
+ambiente na usabilidade. Talja, Heidi e Tarja (1999) abordam atributos objetificados e
+interpretativos, sendo os objetificados independentes e os interpretativos relacionados à
+mediação entre usuário e sistema. Foresti, Varvakis e Godoy Vieira (2016) identifica atributos
+linguístico/verbal, situacional e extralinguístico como partes do contexto. Johnson (2003)
+menciona atributos contingenciais e de enquadramento, enquanto Wersig e Windel (1985)
+consideram atributos técnicos e mentais.
+De maneira geral, a partir das referências consultadas, notam-se três campos de
+atenção relevantes para a recuperação de informações em relação aos atributos contextuais,
+considerando que estes estão relacionados à situação de uma entidade (SEZER; DOGDU;
+
+OZBAYOGLU, 2018): sociocultural, linguístico/simbólico/interpretativo (LSI) e cognitivo. O
+campo sociocultural abarca aspectos como a formação do indivíduo, sua interação com o
+ambiente e sua relação com a informação, incluindo fatores históricos, culturais e regionais
+que influenciam suas demandas informacionais. O campo LSI refere-se à percepção do
+mundo e à comunicação do usuário, envolvendo aspectos estéticos e subjetivos que moldam
+a seleção e apresentação da informação. Estes atributos são influenciados pela formação
+sociocultural, mas também por experiências pessoais. Por fim, o campo cognitivo está
+relacionado à linguagem e ao conhecimento prévio do usuário, sendo mais lógico e
+influenciado pelo idioma, jargões e problemas informacionais.
+Estes campos são essenciais para melhorar os sistemas de recuperação de
+informações, fornecendo informações mais adequadas ao usuário, considerando aspectos
+como forma, conteúdo e acessibilidade física e cognitiva. Dey (2000) propôs o uso de
+informações contextuais para projetar sistemas de informação mais consistentes, chamados
+de "context-aware" ou "context-awareness". Esta abordagem ajuda na seleção de estratégias
+que aprimoram a oferta de informações relevantes e pertinentes ao usuário, com base em
+seu contexto, e orienta o processo de recuperação de informações proposto neste trabalho.
+4. MODELO PROPOSTO
+Nesta seção, é apresentado o modelo desenvolvido para a recuperação de
+informações em ambientes digitais, utilizando atributos do contexto de uso como elementos
+de ligação entre as expressões de busca e os documentos armazenados.
+4.1 Conceito do modelo
+Nos SIs, os fluxos de informação incluem processos como seleção, entrada,
+classificação, armazenamento, recuperação e uso da informação (SMIT; BARRETO, 2002). Em
+ambientes digitais com grandes volumes de dados, a análise prévia dos documentos é
+inviável devido a limitações tecnológicas. Uma estratégia proposta é a vinculação posterior
+utilizando atributos contextuais de uso da informação, melhorando a recuperação de
+informações e estabelecendo uma relação efetiva entre a informação disponível e o usuário.
+A proposta de fluxo informacional em ambientes digitais aborda as preocupações da Ciência
+da Informação em relação aos SIs, especialmente a vinculação entre o estoque de
+informações e as necessidades potenciais do usuário (FROHMAN, 2008). Nos SIs, é
+
+importante realizar uma análise prévia dos documentos para determinar sua relevância e
+viabilidade de armazenamento. Isso envolve seleção, coleta, organização, classificação e
+indexação documental, permitindo a localização eficiente dos documentos em pesquisas
+futuras (FERNEDA, 2003; LIMA; CAMPOS, 2022; NOVELLINO, 1996). A figura 02 apresenta o
+novo fluxo informacional proposto, considerado para o desenvolvimento do modelo.
+Figura 02 - Fluxo informacional em ambiente digital com características de Big Data
+
+Fonte: Elaborado pelo autor, com base em Lima e Campos (2022).
+
+A seguir, é apresentada a operação do modelo com base no fluxo informacional
+proposto.
+4.2 Operação do modelo proposto
+O modelo é baseado na estrutura proposta por Barbosa e Silva (2010) sobre
+interfaces humano-computador (IHC), dividida em dois campos: execução e avaliação. O
+golfo de execução lida com a interação usuário-sistema, enquanto o golfo de avaliação
+apresenta a solução esperada e visa melhorar o processo. Considerando a importância da
+resposta do usuário para aprimorar os sistemas de recuperação de informações, conforme
+apontado por Ingwersen (1996), e a utilização dos contextos de uso da informação (ABOWD;
+DEY, 1999), o modelo é organizado da seguinte maneira: no golfo de execução, têm-se (1)
+captação dos atributos contextuais socioculturais, (2) captação dos atributos contextuais
+cognitivos, (3) criação do mapa contextual e comparação, (4) recuperação da informação e
+no golfo de avaliação, têm-se (5) avaliação das informações recuperadas, (6) atualização dos
+termos vinculadores, a fim de eventualmente vincular atributos aos documentos, como
+termos vinculadores.
+É importante destacar que o banco de dados do modelo, operando em ambientes
+digitais como o Big Data, armazena todos os documentos disponíveis (BOYD; CRAWFORD,
+
+
+2012). Durante o armazenamento, são utilizadas técnicas de aprendizado de máquina para
+identificar palavras-chave e termos frequentes no conteúdo dos documentos, que são
+vinculados através de uma relação endereço-índice em um banco de dados NoSQL colunar.
+Isto agiliza a identificação dos documentos e permite a atualização dos índices para facilitar o
+processo de recuperação.
+No processo de captura dos atributos contextuais socioculturais, são coletados e
+identificados dados relevantes, como local de pesquisa, local de nascimento, idioma,
+profissão, renda e religiosidade, por meio de um formulário preenchido pelo usuário. Esses
+dados são armazenados em seu perfil no sistema. Já os atributos contextuais cognitivos são
+capturados por meio da identificação de termos de busca específicos e expressões utilizadas
+pelo usuário na consulta ao sistema. Ambos os processos de captura dos atributos
+contextuais seguem os mesmos procedimentos técnicos. As informações coletadas são
+armazenadas em formato XML e organizadas em um banco de dados NoSQL específico para
+arquivos XML. A técnica de Knowledge Discovery in Texts (KDT) é utilizada para processar os
+dados, extraindo conhecimento, envolvendo pré-processamento de texto, extração de
+recursos e análise para identificar características relevantes. Sobre isso, Da Silva (2020),
+destacou que
+Extração de conhecimento é a forma pela qual - através de um algoritmo
+que utiliza algum padrão de inteligência - dados extraídos de bancos de
+dados, textos ou outras mídias são tratados e apresentados como
+informação a fim de gerar conhecimento e promover solução de problemas
+(DA SILVA, 2020, p. 163).
+
+O processo de criação do mapa contextual envolve a combinação dos dados
+socioculturais e cognitivos do usuário, comparando-os com os termos vinculadores dos
+documentos. Os documentos que possuem semelhança são associados às consultas para
+recuperação da informação. A recuperação da informação apresenta documentos com
+termos vinculadores em conformidade com os mapas contextuais. O modelo oferece
+diferentes formas de apresentação da informação e utiliza métodos computacionais para
+selecionar documentos relevantes. No processo de avaliação, o usuário classifica os
+documentos recuperados e os termos vinculadores são atualizados com base na consulta,
+visando aumentar a pertinência e a precisão dos documentos recuperados ao longo do
+tempo. A figura 03 apresenta a estrutura do modelo proposto, utilizando a linguagem gráfica
+do IDEF-0.
+
+Figura 03 - Processo de funcionamento do modelo proposto
+
+Fonte: Elaborado pelo autor
+
+5 RESULTADOS E DISCUSSÃO
+A pesquisa demonstrou a viabilidade do modelo proposto ao compará-lo
+conceitualmente com as operações do mundo real, resultando na identificação das
+potenciais vantagens e desvantagens em termos de uso e aplicação. Para isso, utilizou-se o
+sistema de recuperação de informações digital da BRAPCI como referência, uma base de
+dados online referencial que reuni informações bibliográficas e resumos de artigos científicos
+na área de Ciência da Informação. A BRAPCI é uma ferramenta importante para
+pesquisadores e profissionais nesse campo, e oferece acesso à um vasto acervo de
+conhecimento científico, atuando como ambiente informacional digital diverso o suficiente
+para análise (GABRIEL JÚNIOR, 2011).
+A figura 04 representa a integração necessária entre a base de dados da BRAPCI e o
+uso do modelo proposto. O banco de dados relacional da BRAPCI pôde ser espelhado em um
+banco de dados colunar do tipo NoSQL, permitindo assim que o modelo acesse os índices
+originalmente planejados no projeto da BRAPCI. Desta forma, o modelo pôde realizar as
+vinculações iniciais entre os índices e os links de documentos de acordo com seu
+procedimento de trabalho. Esse processo não interfere no uso atual da engine da
+ElasticSearch pelo sistema da BRAPCI.
+
+Figura 04 - Integração do modelo com o sistema da BRAPCI
+
+Fonte: Elaborado pelo autor, a partir do elaborado por Gabriel Júnior (2011)
+
+A comparação entre os processos de recuperação de informações atuais da BRAPCI e
+os propostos pelo modelo revelou diferenças significativas. O modelo proposto lida melhor
+com linguagem natural e considera aspectos cognitivos, melhorando a busca por
+informações relevantes, ao contrário da BRAPCI, que possui limitações nesse aspecto,
+conforme indicado como ideal por Araújo Júnior (2005). Além disso, o modelo permite
+buscas mais diversificadas e apresenta informações adicionais relevantes, enquanto a BRAPCI
+tende a ter uma abordagem de busca mais limitada, recuperando apenas documentos,
+superando problema apontado por Ingwersen e Jäverlin (2005). O modelo também se adapta
+a diferentes formatos de informação, atendendo às necessidades específicas dos usuários, e
+permite a contribuição dos usuários para a melhoria contínua do sistema. Isso resulta em
+uma apresentação de informações atualizadas com alta precisão e baixa revocação.
+O modelo proposto apresentou contribuições significativas para a Ciência da
+Informação ao introduzir um novo fluxo informacional adaptado a ambientes digitais,
+considerando as preocupações específicas da CI e o contexto de uso da informação,
+conforme apontado inicialmente por Smit e Barreto (2002) e Tarapanoff (2006) e Abowd e
+Dey (1999). Ele avançou na melhoria da relevância e pertinência da recuperação da
+informação ao utilizar atributos contextuais de uso da informação, em vez de depender
+exclusivamente de ferramentas estatísticas e matemáticas. O modelo também adaptou os
+princípios teóricos da Tecnologia da Informação, otimizando o fluxo informacional em
+ambientes digitais e se alinhando às teorias da CI, orientando a recuperação de informação
+ao usuário (FROHMAN, 2008).
+
+
+Uma das principais contribuições do modelo é a melhor vinculação entre a
+informação recuperada e um perfil específico de usuário, superando a falta de indexação de
+documentos em ambientes digitais. Entende-se que este processo é essencial para uma boa
+recuperação de informações (FERNEDA, 2003; LIMA; CAMPOS, 2022; NOVELLINO, 1996). Isto
+garante uma recuperação de informações mais precisa e direcionada, considerando as
+características individuais e preferências do usuário. Além disso, o modelo permite a
+atualização e retroalimentação do sistema de informação com base na avaliação da
+informação recuperada, ajustando-se e refinando-se com base nos padrões de busca e
+recuperação observados, alinhando-se com o proposto por Ingwersen (1996) sobre sistemas
+adaptáveis. Isto resulta em uma entrega de informações mais alinhada às necessidades dos
+usuários em ambientes digitais, especialmente aqueles caracterizados por Big Data.
+6. CONSIDERAÇÕES FINAIS
+Foi proposta uma atualização do fluxo informacional em ambientes digitais, utilizando
+atributos contextuais de uso da informação para melhorar a organização e conexão entre a
+demanda informacional, o usuário e o estoque de informações. Isto resultou em uma
+correspondência mais adequada entre os documentos recuperados e as necessidades dos
+usuários, aprimorando o sistema de informação como um todo.
+Foram identificados atributos contextuais de uso da informação, sendo sociocultural,
+linguístico/simbólico/interpretativo e cognitivo. Estes atributos forneceram uma visão
+abrangente dos elementos que influenciam o contexto de uso da informação em sistemas de
+informação e recuperação da informação, possibilitando o aprimoramento de ambientes de
+informação digitais. Apesar dos avanços, o modelo ainda enfrenta desafios que necessitam
+de testes e validação em diversos cenários. Por exemplo, em ambientes urbanos densos
+versus áreas rurais, ou em situações de alta demanda de dados versus baixa conectividade.
+As limitações tecnológicas atuais, como a capacidade de processamento de dispositivos
+móveis ou a velocidade de conexão em áreas remotas, também são fatores críticos a serem
+considerados. Além disso, para uma validação mais completa, é essencial realizar testes
+práticos, coletando dados reais dos usuários. As restrições do equipamento utilizado, como a
+durabilidade da bateria ou a sensibilidade dos sensores, também devem ser levadas em
+conta.
+
+Trabalhos futuros podem incluir a aplicação física do modelo em ambientes digitais
+com características de Big Data, a investigação da experiência do usuário e a usabilidade de
+sistemas e interfaces nos fluxos informacionais, o desenvolvimento de métodos
+automatizados de classificação e organização de informações, a promoção da acessibilidade
+informacional e a operacionalização física do modelo para validação. Estas iniciativas podem
+contribuir para o aprimoramento dos sistemas de informação digitais e impulsionar a
+pesquisa nessa área.
