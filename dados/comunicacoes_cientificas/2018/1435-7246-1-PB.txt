@@ -1,0 +1,1014 @@
+
+ENRIQUECENDO DADOS ABERTOS CONECTADOS DO QUALISBRASIL COM MELHORES
+PRÁTICAS W3C PARA PUBLICAÇÃO E CONSUMO DE DADOS NA WEB
+
+Modalidade da Apresentação: Comunicação Oral
+Resumo: A iniciativa de Dados Abertos Conectados incentiva o compartilhamento de conjuntos de
+dados conforme os princípios básicos (diretrizes e melhores práticas) estabelecidos pelo World Wide
+Web Consortium (W3C). Um desafio difundido pelo W3C é a promoção da interoperabilidade entre
+conjuntos de dados compartilhados, mediante a adoção de licenças, vocabulários e padrões. Um
+exemplo de compartilhamento de Dados Abertos Conectados é o grafo QualisBrasil, disponibilizando
+os recursos de dados do histórico do índice Qualis em pesquisas da Ciência da Informação. Todavia, a
+publicação do QualisBrasil é realizada mediante o uso do vocabulário SCOVO, que apesar de ser
+reconhecido por sua simplicidade, não é mais atualizado. Em face disso, esta pesquisa visa
+representar o grafo QualisBrasil com vocabulários recentes, conforme preconizado pelas melhores
+práticas do W3C. Especificamente, o grafo QualisBrasil é enriquecido com o vocabulário Data Cube,
+recomendado pelo W3C para publicação de dados multidimensionais. Como resultado, argumenta-se
+que ao adicionar a semântica do Data Cube ao QualisBrasil, contribui-se para a confiança, o reuso, a
+
+
+compreensão e a descoberta dos dados do referido grafo, ampliando as opções de interligação,
+interoperabilidade e processabilidade automatizada de seus recursos na web.
+
+Palavras-Chave: Web Semântica; Representação da Informação; Metadados; Armazenamento de
+Dados.
+
+1 INTRODUÇÃO
+Como uma plataforma atual de compartilhamento de dados, a Web Semântica
+(BERNES-LEE et al., 2001) tem-se configurado como um campo interdisciplinar de pesquisa e
+atuação, com aportes importantes da Ciência da Informação. Nesse contexto, vários
+pesquisadores têm estudado e aplicado a base conceitual da Web Semântica (FIGUEIREDO;
+ALMEIDA, 2017; SANTARÉM SEGUNDO, 2015; MOSTAFA; SANTARÉM SEGUNDO; SABBAG,
+2016; GABRIEL Jr, 2016; CATARINO, 2014; RAMALHO, 2015). Em seus trabalhos, os referidos
+autores discutem principalmente os desafios a serem sobrepostos no Brasil e a representação
+de dados com o uso de vocabulários e ontologias, visando a exploração informacional em
+vários domínios. Em suma, os trabalhos que exploram a Web Semântica se baseiam em
+diretrizes e melhores práticas reconhecidas internacionalmente. Uma das organizações
+promotoras dessas recomendações é o World Wide Web Consortium (W3C). Pontualmente,
+essa organização incentiva o uso de 35 Melhores Práticas (MPs 1-35), as quais repercutem em
+oito benefícios (W3C, 2018):
+▪
+
+Reuso (Reuse) - aumenta as chances de reutilização de dados publicados por
+consumidores, independentemente do domínio de aplicação.
+
+▪
+
+Compreensão (Comprehension) - com a publicação de conjuntos de dados e seus
+respectivos metadados, os seres humanos têm melhor entendimento da natureza,
+da estrutura e da semântica dos dados compartilhados.
+
+▪
+
+Interligação (Linkability) - por publicar os dados em consonância com os
+protocolos da Internet, possibilita-se a criação de relações (hiperlinks) entre
+recursos de dados (conjuntos de dados e itens de dados).
+
+▪
+
+Descoberta (Discoverability) - mediante os hiperlinks, autonomamente, os
+computadores descobrem os conjuntos de dados e navegam entre os recursos de
+dados, aferindo o conhecimento relacional entre os itens compartilhados.
+
+▪
+
+Confiança (Trust) - com a publicação de metadados de proveniência, os
+publicadores expressam como os conjuntos de dados são preservados ao longo do
+tempo.
+
+▪
+
+Acesso (Access) - utilizando os protocolos de acesso da Internet, promove-se a
+encontrabilidade e a exploração dos dados pelos agentes (humanos e de software).
+
+5092
+
+XIX ENCONTRO NACIONAL DE PESQUISA EM CIÊNCIA DA INFORMAÇÃO – ENANCIB 2018
+22 a 26 de outubro de 2018 – Londrina – PR
+
+▪
+
+Interoperabilidade
+
+(Interoperability)
+
+-
+
+permite
+
+que
+
+os
+
+dados
+
+sejam
+
+automaticamente convertidos em formatos abertos diversos (CSV1, JSON2, RDF3,
+XML4, entre outros).
+▪
+
+Processabilidade (Processability) - adicionalmente à interoperabilidade, a
+processabilidade permite que as aplicações computacionais processem os dados
+contidos na Web de Dados de forma automática.
+
+Cabe ressaltar que tais benefícios dão suporte à iniciativa de Dados Abertos
+Conectados - Linked Open Data - LOD (LOD, 2018). Essa iniciativa incentiva as atividades de
+publicação, uso e reuso de conjuntos de dados. Essas atividades podem ser guiadas pelas MPs
+estabelecidas pelo W3C (W3C, 2018). Para cada uma das 35 MPs propostas, associa-se: uma
+explicação do porquê da MP; resultados pretendidos com sua adoção; uma ou mais possíveis
+abordagens de implementação; exemplos de utilização por humanos e máquinas; como testálas; a evidência com requisitos relevantes; assim como quais são os benefícios obtidos com sua
+adoção.
+No contexto da Ciência da Informação, como exemplo de publicação de LOD, cita-se o
+grafo QualisBrasil disponível no endpoint <http://lod.unicentro.br/sparql/>. Este é um grafo na
+web de dados que disponibiliza o histórico dos dados do índice Qualis, no qual encontram-se
+índices de qualidade de periódicos científicos, permitindo sua utilização e interligação em
+pesquisas bibliométricas e cientométricas (RAUTENBERG et al., 2014).
+O grafo QualisBrasil é baseado na tabela de classificação do índice Qualis, atualmente
+disponibilizando 865.281 avaliações para o período 2005 a 2016 (RAUTENBERG; BURDA, 2016;
+RAUTENBERG; HILD; SOUZA, 2018). Em sua semântica, são utilizados o Padrão de Metadados
+Dublin Core5 e o Vocabulário SCOVO6 (RAUTENBERG et al., 2017). A Figura 1 apresenta uma
+avaliação, destacando o uso do Vocabulário SCOVO e seus recursos semânticos como
+scovo:Item, scovo:dimension e scovo:Dimension.
+
+1
+
+CSV é um acrônimo de Comma-Separated values
+JSON é um acrônimo de JavaScript Object Notation
+3
+RDF é um acrônimo de Resource Description Framework
+4
+XML é um acrônimo de eXtensible Markup Language
+5
+Disponível em: <http://dublincore.org/>
+6
+SCOVO é um acrônimo de Statistical Core Vocabulary. Disponível em: <vocab.deri.ie/scovo>
+2
+
+
+Figura 1. Avaliação de um periódico, destacando os recursos do Vocabulário SCOVO.
+
+Fonte: os autores.
+
+Apesar do grafo QualisBrasil ter sido desenvolvido conforme os princípios LOD, podem
+haver desafios na geração e no consumo de suas informações semânticas segundo as MPs
+propostas pelo Consórcio W3C. Um exemplo de MP a ser revista na publicação do grafo
+QualisBrasil é a MP15, a qual aponta ao uso de um vocabulário atual para representação dos
+recursos, considerando que o vocabulário SCOVO encontra-se atualmente depreciado para
+uso.
+Dessa forma, esta pesquisa tem como objetivo enriquecer os recursos do grafo
+QualisBrasil por meio de sua atualização com o vocabulário Data Cube, uma recomendação do
+W3C para publicação de dados multidimensionais.
+Nesse sentido, esse trabalho vem a contribuir na adoção de um subconjunto das 35
+MPs internacionais para publicação e consumo de recursos do índice Qualis. Com isso, tem-se
+a expectativa de proporcionar a interoperabilidade ao grafo QualisBrasil em conformidade aos
+vocabulários recomendados da W3C.
+2 MATERIAIS E MÉTODOS
+Esta seção é reservada à apresentação do vocabulário denominado The RDF Data Cube
+Vocabulary7 e do procedimento metodológico adotado no enriquecimento do grafo
+QualisBrasil com o referido vocabulário. Adicionalmente, é apresentado o processo de
+validação da modelagem desenvolvida.
+2.1 The RDF Data Cube Vocabulary
+O Data Cube (prefixo qb:) é um vocabulário difundido pelo W3C para publicar dados
+multidimensionais na web (DATA CUBE VOCABULARY, 2018). Os dados a serem publicados
+com este vocabulário têm sua semântica descrita conforme a Figura 2.
+
+7
+
+Disponível em: <https://www.w3.org/TR/vocab-data-cube/>
+
+
+Figura 2. Sumário dos termos chave e relacionamentos do Data Cube.
+
+Fonte: (DATA CUBE VOCABULARY, 2018).
+
+Pontualmente, um conjunto de dados é representado pelo recurso qb:Dataset, que é
+uma coleção de dados estatísticos correspondentes a uma estrutura definida. Os dados em um
+conjunto de dados podem ser descritos como pertencentes a um dos seguintes tipos:
+▪
+
+Observações – são os dados atuais, os valores medidos.
+
+▪
+
+Estrutura organizacional – para localizar uma observação em um modelo
+multidimensional é preciso especificar os valores de cada dimensão. De acordo
+com esses valores, as observações são recuperadas. Conjuntos de dados também
+podem ter estruturas organizacionais adicionais na forma de Slices, agrupando
+subconjuntos de observações dentro de um conjunto de dados.
+
+▪
+
+Metadados estruturais – tais metadados são fornecidos como atributos e podem
+ser anexados às observações individuais.
+
+▪
+
+Metadados de referência – estes descrevem o conjunto de dados como um todo,
+descrevendo a categorização do conjunto de dados, o publicador e um endpoint
+para acesso aos dados.
+
+O modelo multidimensional do Data Cube é organizado conforme um conjunto de
+dimensões, medidas e atributos. Coletivamente, estes são denominados componentes, os
+quais são descritos na sequência:
+
+▪
+
+Componente Dimensão (qb:DimensionProperty) - serve para identificação das
+observações. Um conjunto de valores para todos os componentes dimensão é
+suficiente para identificar uma simples observação.
+
+▪
+
+Componente Medida (qb:MesaureProperty) - representa o fenômeno sendo
+observado.
+
+▪
+
+Componente Atributo (qb:AttributeProperty) - permite quantificar e interpretar os
+valores observados. Também especifica por exemplo as unidades de medida, os
+fatores de escala, o status da observação, entre outros.
+
+Conforme o objetivo do trabalho, a modelagem do grafo QualisBrasil com o Data Cube
+é apresentada na Seção 3.1.
+2.2 Procedimento Metodológico
+No tocante ao enriquecimento do grafo QualisBrasil com o vocabulário Data Cube, o
+processo metodológico adotado nesta pesquisa é denominado Linked Data Lifecycle (AUER,
+2014), ou Ciclo de Vida de Dados Conectados. O referido ciclo de vida compreende oito
+estágios (Extração, Armazenamento/Consulta, Revisão Manual/Autoria, Interligação/Fusão,
+Classificação/Enriquecimento,
+
+Análise
+
+de
+
+Qualidade,
+
+Evolução/Reparação
+
+e
+
+Busca/Navegação/Exploração), os quais são executados de acordo com os requisitos exigidos
+em um projeto de publicação de dados em consonância aos princípios LOD. Neste sentido,
+para este trabalho de enriquecimento do grafo QualisBrasil com o vocabulário Data Cube, são
+executados os seguintes estágios:
+▪
+
+Extração – os dados primários em formato CSV foram modelados com o
+vocabulário Data Cube, associados a dados modelados com o vocabulário SCOVO,
+usando a ferramenta Sparqlify8.
+
+▪
+
+Armazenamento/Consulta – os recursos RDF são armazenados no servidor
+OpenLink Virtuoso9.
+
+▪
+
+Classificação/Enriquecimento – os recursos RDF modelados com SCOVO são
+enriquecidos semanticamente com o vocabulário Data Cube.
+
+8
+
+A Sparqlify é uma ferramenta disponibilizada na plataforma Linux e possui como característica principal a
+conversão de um arquivo CSV para um arquivo com recursos RDF, conforme um arquivo de configuração
+declarado segundo a linguagem Sparqlification Mapping Language – SML (SPARQLIFY, 2018).
+9
+A ferramenta OpenLink Virtuoso é um sistema universal para acesso, integração e gerenciamento de dados
+baseados no modelo RDF na web (VIRTUOSO, 2018).
+
+
+
+Busca/Navegação/Exploração – Como prova de conceito, consultas SPARQL são
+desenvolvidas para recuperar recursos de dados de um grafo de acordo com o
+vocabulário Data Cube.
+
+2.3 Consultas de Validação SPARQL ASK W3C
+Como forma de certificação da representação de recursos multidimensionais com o
+Data Cube, o W3C (DATA CUBE VOCABULARY, 2018) propõe um checklist de validação. Tal
+checklist contém 21 consultas SPARQL ASK (IC-1 até IC-21), as quais devem retornar false a
+cada teste de validação. Se a consulta SPARQL ASK for aplicada e retornar true (verdadeiro),
+significa que o grafo contém uma ou mais instâncias Data Cube que violam a correspondente
+restrição de integridade. Um exemplo da execução de um teste de validação SPARQL ASK é
+apresentado na Figura 3, onde:
+Figura 3. Consulta para verificar se todo Slice tem uma estrutura única (IC-9).
+
+Fonte: os autores.
+
+• Figura 3(A) - codifica uma consulta de integridade (IC-9), a qual verifica se todo
+qb:Slice tem uma estrutura única, atestando que cada qb:Slice tem exclusivamente
+um qb:sliceStructure associado.
+• Figura 3(B) – retorna o resultado da consulta. Neste caso, foi obtido false (falso),
+significando que o modelo não viola a referida restrição de integridade.
+3 DESENVOLVIMENTO
+Nesta seção é apresentada a modelagem do grafo QualisBrasil em consonância ao
+vocabulário Data Cube e a validação do modelo proposto mediante as 21 consultas SPARQL
+ASK (IC-1 até IC-21) como prova de conceito.
+3.1 Desenvolvendo o GRAFO QUALISBRASILQB
+
+
+
+Inicialmente, para a modelagem realizou-se um comparativo entre os vocabulários
+SCOVO (prefixo scovo:) e Data Cube (prefixo qb:), visando encontrar estruturas semânticas
+correlacionadas. Verificou-se que: i) um recurso do tipo scovo:Item corresponde a um recurso
+do tipo qb:Observation; e ii) um predicado scovo:dimension tem uma equivalência com o
+predicado qb:observation ou uma propriedade instanciada de qb:MeasureProperty. Diante
+disso, ao criar um qb:Observation no Data Cube compatível com um scovo:Item, alguns
+recursos scovo:dimension de um scovo:Item em particular são referenciados com predicados
+qb:observation a uma instância de qb:Observation. Baseando-se na representação do grafo
+QualisBrasil na Figura 1, essas atualizações são representadas no núcleo da Figura 4.
+Figura 4. Integração do grafo QualisBrasil modelado com o Vocabulário SCOVO no grafo
+QualisBrasilQB modelado com o Vocabulário Data Cube.
+
+Fonte: os autores.
+
+Outra atualização diz respeito ao uso do qb:Slice. Originalmente no grafo QualisBrasil,
+tinha-se o recurso scovo:Dimension para definir todas as dimensões de dados vinculadas a
+uma avaliação Qualis. Semanticamente no QualisBrasilQB, as dimensões são organizadas por
+qb:Slice para jornais, áreas de conhecimento e ano, excetuando-se a dimensão score que é
+representada como uma medida (por exemplo: A1, A2, ..., C), o que é realizado de acordo com
+o domínio da aplicação. Com isso, os score são recuperados ao especificar um subconjunto
+pertinente (os valores das propriedades para qb:Slices referentes aos recursos de Journal,
+KnowledgeField e YearEvaluation).
+A nível da semântica do modelo desenvolvido, outros recursos são definidos.
+Entretanto, devido ao nível de detalhamento, complexidade e abstração, sua representação
+gráfica não é abordada neste artigo. Pontua-se que também foram descritos os elementos
+qb:SliceKey,
+
+qb:DataStructureDefinition,
+
+qb:ComponentSpecification
+
+qb:ComponentProperty, incluindo seus relacionamentos.
+
+
+Adicionalmente, no grafo QualisBrasilQB criou-se um recurso qb:DataSet para
+representar o conjunto de dados mediante a definição dos seguintes metadados:
+• dc:description – usado para descrever a finalidade e o teor do conjunto de dados;
+• dc:issued – usado para descrever a data de publicação/atualização;
+• dc:license – define o endereço eletrônico do termo de licença de uso;
+• dc:publisher – especifica o publicador do conjunto de dados;
+• dc:title – nomeia o conjunto de dados;
+• rdfs:comment – usado similarmente ao dc:description; e
+• rdfs:label – usado similarmente ao dc:title.
+
+Propriedades
+
+Classes
+
+Quadro 1. Quadro resumo da atualização do grafo QualisBrasil com o Data Cube.
+Grafo QualisBrasilQB
+qb:DataSet
+qb:MeasureProperty [QualisQB:refScore]
+qb: Observation
+qb:Slice
+dc:description
+dc:issued
+dc:license
+dc:Publisher
+dc:title
+qb:dataSet
+qb:observation
+rdfs:comment
+rdfs:label
+Fonte: os autores.
+
+Grafo QualisBrasil
+scovo:dimension
+scovo:Item
+scovo:Dimension
+scovo:dimension
+-
+
+O Quadro 1 resume as atualizações realizadas, perfazendo: i) a correspondência
+conceitual entre os recursos existentes no grafo QualisBrasil para com o grafo QualisBrasilQB;
+e ii) o enriquecimento semântico do grafo QualisBrasilQB, ao especificar um recurso
+qb:DataSet e suas propriedades.
+3.2 VALIDANDO O GRAFO QUALISBRASILQB COM CONSULTAS SPARQL ASK W3C
+Como prova de conceito, foram aplicadas as 21 consultas SPARQL ASK de validação
+propostas pelo W3C para certificar a aderência da representação de um grafo RDF conforme
+os preceitos do modelo do Data Cube.
+Todas as 21 consultas SPARQL ASK executadas retornaram false (falso) devido a sua
+adequação ao Data Cube. Com isso, denota-se que não há violação do uso deste vocabulário
+para com o grafo QualisBrasilQB. O Quadro 2 sumariza os testes realizados. A cada consulta de
+
+
+
+validação SPARQL ASK (IC1-IC21) são apresentados: o código; o título; a descrição; a
+adequação ao grafo QualisBrasilQB; e o resultado.
+Quadro 2. Restrições de Integridade W3C aplicadas no grafo QualisBrasilQB (IC1-IC21).
+CONSULTA
+
+TÍTULO
+
+DESCRIÇÃO
+
+IC-1
+
+Todo qb:Observation tem
+Conjunto de
+exatamente um qb:DataSet
+dados único
+associado.
+
+IC-2
+
+ADEQUAÇÃO
+
+RESULTADO
+
+Os dados do grafo QualisBrasilQB
+são observações relacionadas ao
+respectivo conjunto de dados.
+
+False
+
+DSD único
+
+Todo qb:DataSet tem
+exatamente um
+qb:DataStructureDefinition
+associado.
+
+O conjunto de dados tem
+exatamente uma definição de
+estrutura de dados.
+
+False
+
+IC-3
+
+DSD inclui
+medidas
+
+Todo
+qb:DataStructureDefinition
+deve incluir no mínimo uma
+medida declarada.
+
+A definição de estrutura dos
+dados inclui a medida Score.
+
+False
+
+IC-4
+
+Toda dimensão declarada em
+Todas as dimensões possuem um
+Dimensões um qb:DimensionProperty
+respectivo rdfs:range declarado
+tem intervalo deve ter um rdfs:range
+baseado no modelo SCOVO.
+declarado.
+
+False
+
+IC-5
+
+Dimensões Toda dimensão com intervalo No grafo QualisBrasilQB não
+Concept tem skos:Concept deve ter um
+foram declaradas dimensões com
+code lists
+qb:codeList.
+o intervalo skos:Concept.
+
+False
+
+IC-6
+
+Somente
+atributos
+podem ser
+opcionais
+
+Os únicos componentes de um
+qb:DataStructureDefinition
+No grafo QualisBrasilQB não
+que podem ser assinalados
+como opcionais usando
+foram declarados atributos.
+qb:componentRequired são
+atributos.
+
+False
+
+IC-7
+
+Slice Keys
+devem ser
+declarados
+
+Todo qb:SliceKey deve ser
+associado com um
+qb:DataStructureDefinition.
+
+Toda chave Slice é associada à
+definição da estrutura dos dados.
+
+False
+
+IC-8
+
+Todo qb:componentProperty
+em um qb:SliceKey deve
+Slice Keys
+também ser declarado como
+consistentes
+um qb:component da
+com DSD
+qb:DataStructureDefinition
+associada.
+
+Todos os componentes de
+propriedades em uma chave Slice
+foram declarados como
+componentes da definição da
+estrutura de dados.
+
+False
+
+IC-9
+
+Única
+Cada qb:Slice deve ter
+estrutura de exatamente um
+Slice
+qb:sliceStructure associado.
+
+Todo Slice tem sua respectiva
+chave Slice.
+
+False
+
+IC-10
+
+Dimensões
+Slice
+completas
+
+Todo qb:Slice deve ter um
+valor para toda dimensão
+declarada em seu
+qb:sliceStructure.
+
+Todo Slice tem sua respectiva
+chave Slice com seu respectivo
+componente de propriedade.
+
+False
+
+IC-11
+
+Todas as
+dimensões
+requeridas
+
+Toda qb:Observation tem um
+Toda dimensão está declarada na
+valor para cada dimensão
+declarada em seu
+Observação com seu respectivo
+qb:DataStructureDefinition
+valor.
+associado.
+
+IC-12
+
+Nenhuma
+Nenhuma de duas
+Não há duplicação de
+observação qb:Observation no mesmo
+Observações.
+duplicada
+qb:DataSet deve ter o mesmo
+
+False
+
+False
+
+5100
+
+XIX ENCONTRO NACIONAL DE PESQUISA EM CIÊNCIA DA INFORMAÇÃO – ENANCIB 2018
+22 a 26 de outubro de 2018 – Londrina – PR
+CONSULTA
+
+TÍTULO
+
+DESCRIÇÃO
+ADEQUAÇÃO
+valor para todas as dimensões.
+
+RESULTADO
+
+IC-13
+
+Atributos
+requeridos
+
+Toda qb:Observation tem um
+valor para cada atributo
+Não existem componentes
+declarado que é marcado
+requeridos.
+como requerido.
+
+False
+
+IC-14
+
+Todas as
+medidas
+presentes
+
+Em um qb:DataSet que não usa
+uma dimensão Measure então
+Nesse caso existe uma medida
+cada qb:Observation individual
+declarada que é o Score.
+deve ter um valor para cada
+medida declarada.
+
+False
+
+IC-15
+
+Em um qb:DataSet que usa
+uma dimensão Measure então
+Dimensão de
+cada qb:Observation deve ter Os valores da medida Score são
+medida
+um valor para a medida
+atribuídos a Observação.
+consistente
+correspondente a seu dado
+qb:measureType.
+
+IC-16
+
+Simples
+medidas em
+uma
+Observation
+de dimensão
+Measure
+
+IC-17
+
+Em um qb:DataSet que usa
+uma dimensão Measure então
+Todas as
+se existe uma Observation para
+medidas
+alguma combinação de
+Não há Observações que
+presentes na
+dimensões não-medidas deve possuam valores de medidas que
+dimensão
+ter outras Observations com os não estejam na medida Score.
+medida do
+mesmos valores de dimensões
+cubo
+não-medidas para cada uma
+das medidas declaradas.
+
+False
+
+IC-18
+
+Se um qb:DataSet D tem um
+Links de
+qb:slice S, e S tem um
+conjuntos de
+qb:Observation O, então o
+Todos os links são consistentes.
+dados
+qb:DataSet correspondente a
+consistentes
+O deve ser D.
+
+False
+
+IC-19
+
+Códigos a
+partir de
+code list
+
+Se uma dimension property
+tem uma qb:codeList, então o
+valor de dimension property Não são usadas code lists.
+em toda qb:Observation deve
+estar na code list.
+
+False
+
+Códigos a
+partir da
+hierarquia
+
+Se uma dimension property
+tem um
+qb:HierarchicalCodeList com
+um qb:parentChildProperty
+non-blank, então o valor
+daquela dimension property Não são usadas code lists.
+em toda qb:Observation deve
+ser alcançável a partir da raiz
+da hierarquia usando zero ou
+mais saltos ao longo dos links
+qb:parentChildProperty.
+
+False
+
+IC-20
+
+Em um qb:DataSet que usa
+uma dimensão Measure então
+cada qb:Observation deve
+Os valores da medida Score
+somente ter um valor para
+possuem somente um valor
+uma medida (pela IC-15 isto atribuído em sua Observação.
+será a medida correspondente
+a seu qb:measureType).
+
+False
+
+False
+
+CONSULTA
+
+IC-21
+
+TÍTULO
+
+Códigos a
+partir da
+hierarquia
+(inverso)
+
+DESCRIÇÃO
+
+ADEQUAÇÃO
+
+Se uma dimension property
+tem uma
+qb:HierarquicalCodeList com
+qb:parentChildProperty
+inversa, então o valor daquela
+dimension property em toda
+Não são usadas code lists.
+qb:Observation deve ser
+alcançável a partir da raiz da
+hierarquia usando zero ou
+mais saltos ao longo dos links
+qb:parentChildProperty
+inversos.
+Fonte: os autores.
+
+RESULTADO
+
+False
+
+Em um endereço de Internet10 encontra-se disponível um relatório da execução das 21
+consultas SPARQL ASK (IC-1 até IC-21), aferindo a consonância do grafo QualisBrasilQB em
+relação ao modelo Data Cube.
+4 RESULTADOS E DISCUSSÃO
+Adicionalmente à modelagem do grafo QualisBrasil com o vocabulário Data Cube,
+nesta pesquisa foram adotadas algumas MPs (MP2, MP3, MP4, MP7, MP9, MP10, MP12,
+MP15 e MP34). Estas contribuem: i) no enriquecimento semântico do grafo QualisBrasil,
+resultando no grafo QualisBrasilQB; e ii) na agregação dos benefícios de Reuso, Compreensão,
+Interligação, Descoberta, Confiança, Interoperabilidade e Processabilidade de dados. Na
+sequência é descrito o subconjunto de MPs adotadas e sua aplicação ao grafo QualisBrasilQB
+com os respectivos benefícios obtidos:
+▪
+
+MP2 - Forneça metadados descritivos – esta MP diz respeito ao fornecimento de
+metadados que descrevem as características de conjuntos de dados. Para adoção
+desta MP, são definidos os metadados do qb:DataSet contendo: rótulo (rdfs:label),
+título (dc:title), comentário (rdfs:comment), descrição (dc:description), publicador
+(dc:publisher), data da publicação (dc:issued) e licença de uso (dc:license). Como
+benefícios obtidos com a adoção da MP2, destacam-se: i) o Reuso do grafo
+QualisBrasilQB por diversos grupos de consumidores de dados; ii) a Compreensão
+pelos agentes humanos da estrutura dos dados e metadados, seu significado e sua
+natureza; e iii) a Descoberta dos recursos do grafo QualisBrasilQB autonomamente
+pelos agentes de software.
+
+10
+
+Disponível em: <https://goo.gl/oq6Tc9>.
+
+
+▪
+
+MP3 - Forneça metadados estruturais – para sua adoção, deve-se fornecer
+metadados que descrevem o esquema e a estrutura interna de um conjunto de
+dados em um formato legível por máquina e sem erros de sintaxe. Para adoção da
+MP3, é feita a descrição dos dados do grafo QualisBrasil por meio de classes,
+relações e propriedades, considerando a semântica do vocabulário padronizado,
+atualizado e multidimensional Data Cube. Como benefícios a partir da MP3, além
+do Reuso e da Compreensão, corrobora o benefício da Processabilidade de
+recursos semânticos do grafo QualisBrasilQB por parte dos agentes de software.
+
+▪
+
+MP4 - Forneça informações sobre a licença dos dados – para adotar esta MP,
+deve-se fornecer um link ou uma cópia do acordo de licença que controla o uso dos
+dados. Para sua adoção, no qb:DataSet é descrita a licença de uso dos dados. No
+caso do grafo QualisBrasilQB, a licença adotada é a Creative Commons11. Adotando
+a MP4, como benefícios alcançados têm-se o Reuso e Confiança por parte dos
+consumidores de dados do grafo QualisBrasilQB.
+
+▪
+
+MP7 - Forneça um indicador de versão – esta MP sugere a declaração de um
+número de versão ou data para cada conjunto de dados. Para adotar esta MP, é
+fornecida a data de publicação do conjunto de dados por meio do metadado
+dc:issued em qb:DataSet. Em consonância à MP4, a MP7 também repercute nos
+benefícios de Reuso e Confiança.
+
+▪
+
+MP9 - Use URIs persistentes como identificadores de conjuntos de dados – esta
+MP propõe a identificação de cada conjunto de dados por um URI12 persistente,
+cuidadosamente escolhido. Para adotar a MP9, URIs do grafo QualisBrasilQB
+disponíveis no endpoint <http://lod.unicentro.br/QualisBrasilQB/> são mantidos
+persistentes juntamente com as URIs do grafo QualisBrasil. Como benefícios com a
+adoção da MP9, além do Reuso; a Interligação entre recursos de dados do grafo
+QualisBrasilQB; a Descoberta dos recursos semânticos por agentes de software; e a
+Interoperabilidade possibilitando que o grafo QualisBrasilQB seja utilizado por
+diversos sistemas.
+
+▪
+
+MP10 - Use URIs persistentes como identificadores dentro de conjuntos de dados
+– esta MP propõe o uso de URIs persistentes de outros conjuntos de dados sobre o
+
+11
+12
+
+Disponível em: <https://br.creativecommons.org>
+Acrônimo de Uniform Resource Identifier
+
+
+
+mesmo recurso para que sejam procurados e mais dados sejam descobertos. Para
+adotar a MP10, foi feita a integração entre o grafo QualisBrasil, desenvolvido com o
+vocabulário SCOVO e o grafo modelado com o vocabulário Data Cube, sendo
+mantidas suas URIs persistentes, resultando no grafo QualisBrasilQB, a partir do
+endpoint <http://lod.unicentro.br/QualisBrasilQB/>. Para geração das URIs
+persistentes, foram seguidas as regras conforme (RAUTENBERG et al., 2017). No
+caso da MP10, obtém-se os mesmos benefícios da MP9, sendo, o Reuso; a
+Interligação; a Descoberta; e a Interoperabilidade de seus recursos semânticos.
+▪
+
+MP12 - Use formatos de dados padronizados legíveis por máquina – é proposto
+por meio desta MP que os dados sejam disponíveis em um formato de dados
+padronizado, legível por máquina, sendo adequado ao seu uso pretendido ou
+potencial. A linguagem padrão adotada para a geração de dados semânticos a
+partir do grafo QualisBrasilQB usando o vocabulário Data Cube é a RDF, a qual
+especifica os dados na forma de triplas RDF, considerando um Sujeito, um
+Predicado e um Objeto (SPO), facilitando a legibilidade por máquinas. Como
+benefícios obtidos com a MP12, destacam-se: o Reuso e a Processabilidade
+automatizada do grafo QualisBrasilQB.
+
+▪
+
+MP15 - Reuse vocabulários – esta MP propõe o uso de termos compartilhados a
+partir de vocabulários, preferencialmente os padronizados, para codificar dados e
+metadados. Vocabulários padronizados podem ser consultados no repositório
+Linked Open Vocabularies (LOV)13. O vocabulário padronizado escolhido para uso é
+o Data Cube (prefixo qb:), recomendado pelo W3C para modelagem de dados
+estatísticos multidimensionais. Possui 15 classes e 21 propriedades, sendo usado
+atualmente em 25 conjuntos de dados14. Com a adoção da MP15, obtém-se como
+benefícios: o Reuso, a Processabilidade, a Interoperabilidade, a Compreensão, e a
+Confiança dos consumidores de dados no grafo QualisBrasilQB.
+
+▪
+
+MP34 - Siga termos da licença – para sua utilização, deve-se encontrar e seguir os
+requerimentos de licença a partir do publicador original do conjunto de dados. Para
+adotar a MP34, o grafo QualisBrasilQB possui os mesmos termos da licença
+Creative Commons usada pelo grafo QualisBrasil. No caso da adoção da MP34, os
+
+13
+14
+
+Disponível em: <https://lov.linkeddata.es/dataset/lov/>
+Disponível em: <https://www.w3.org/TR/vocab-data-cube/>
+
+
+
+benefícios nesse caso são os mesmos das MP4 e MP7, sendo o Reuso do conjunto
+de dados e a Confiança nos dados pelos consumidores de dados no grafo
+QualisBrasilQB.
+O Quadro 3 sumariza o mapeamento entre os benefícios obtidos com a adoção do
+subconjunto de MPs adotadas no grafo QualisBrasilQB.
+Quadro 3. Quadro resumo do mapeamento dos benefícios W3C alcançados perante a adoção das
+MPs.
+MELHORES
+PRÁTICAS
+
+BENEFÍCIOS
+Reuso
+
+Compreensão
+
+Interligação
+
+Descoberta
+
+Confiança
+
+Acesso
+
+Interoperabilidade
+
+Processabilidade
+
+MP 02
+MP 03
+MP 04
+MP 07
+MP 09
+MP 10
+MP 12
+MP 15
+MP 34
+Fonte: os autores.
+
+Dos oito benefícios que podem ser alcançados a partir da adoção das MPs, o benefício
+de Acesso é o único que ainda não foi obtido. Todavia, este pode ser alcançado com a adoção
+de outras MPs que estão fora do escopo deste trabalho.
+5 CONSIDERAÇÕES FINAIS
+No contexto da Web Semântica, apesar do grafo QualisBrasil ter sido desenvolvido
+conforme princípios de Dados Abertos Conectados, podem haver desafios na geração e no
+consumo de seus recursos segundo as Melhores Práticas W3C. Um exemplo de MP que pode
+ser atualizada no grafo QualisBrasil é a MP15. A referida MP sugere o uso de vocabulários
+padronizados e recomendados internacionalmente. Nesse trabalho, o grafo QualisBrasil é
+atualizado com o vocabulário multidimensional Data Cube. Isso permite a melhoria na geração
+de dados cientométricos no grafo QualisBrasil, aumentando as possiblidades de reuso de seus
+recursos na web de dados.
+Nesse sentido, nessa pesquisa é apresentado o enriquecimento semântico do grafo
+QualisBrasil com a adoção de um subconjunto de Melhores Práticas internacionais,
+descrevendo os benefícios alcançados com a adoção de cada uma das MPs.
+
+
+
+Especificamente, quanto à adoção das MP2 e MP3, respectivamente, são
+disponibilizados metadados descritivos e estruturais, descrevendo as características do
+conjunto de dados, aumentando o Reuso, a Compreensão, a Descoberta e a Processabilidade
+dos dados.
+Quanto à MP4, no qb:DataSet é fornecida a licença de uso dos dados. Em relação à
+MP34, a versão proposta do grafo QualisBrasilQB segue os mesmos termos da licença adotada
+originalmente no grafo QualisBrasil. Tais MPs resultam nos benefícios de Reuso e Confiança
+dos dados.
+Para a adoção da MP7, é fornecido a descrição da data de publicação por meio do
+metadado dc:issued no qb:DataSet. Isso permite sua legibilidade por agentes (humanos e
+máquinas), resultando nos benefícios de Reuso e Confiança do conjunto de dados.
+Ao adotar as MP9 e MP10, objetiva-se manter as URIs persistentes do grafo
+QualisBrasil que foram modelados anteriormente com o vocabulário SCOVO com as URIs da
+versão proposta com o Vocabulário Data Cube. Isso resulta nos benefícios de Reuso,
+Interligação, Descoberta e Interoperabilidade do grafo QualisBrasilQB.
+Quanto à adoção da MP12, os dados RDF do grafo QualisBrasil são armazenados no
+grafo
+
+QualisBrasilQB,
+
+no
+
+servidor
+
+OpenLink
+
+Virtuoso,
+
+a
+
+partir
+
+do
+
+endpoint
+
+<http://lod.unicentro.br/QualisBrasilQB/>, possibilitando a elaboração de consultas SPARQL
+para geração de novos conhecimentos. Dessa forma obtém-se os benefícios de Reuso e
+Processabilidade.
+Com a adoção da MP15, o objetivo é enriquecer semanticamente o grafo QualisBrasil
+com o vocabulário multidimensional Data Cube por este ser um modelo de referência W3C.
+Com a adoção da MP15, obtém-se os benefícios de Reuso, Processabilidade, Compreensão,
+Confiança e Interoperabilidade dos recursos de dados.
+Assim, foi realizada a integração do grafo QualisBrasil modelado com o vocabulário
+SCOVO com a representação por meio do vocabulário multidimensional amplamente
+difundido pelo W3C denominado Data Cube. Como resultado, disponibiliza-se na web o grafo
+RDF
+
+QualisBrasilQB, a partir do qual o consumidor de dados pode escolher em qual
+
+vocabulário pode realizar as consultas SPARQL.
+Dessa forma, contribui-se para a geração de consultas mais ricas semanticamente e
+atualizadas, aumentando a confiança, o reuso, a compreensão e a descoberta dos dados do
+
+
+
+grafo QualisBrasilQB, ampliando-se as opções de interligações, interoperabilidade e
+processabilidade automatizada de seus recursos na web de dados.
+Ressalta-se que o uso do vocabulário Data Cube para representação de dados
+multidimensionais é uma recomendação atual do W3C. Entretanto, a semântica deste
+vocabulário é complexa e abstrata, demandando um maior esforço para sua compreensão e
+consequente utilização em comparação com a representação com o vocabulário SCOVO.
+Como trabalhos futuros, sugere-se a geração de um modelo Data Cube que não
+mantenha o vocabulário SCOVO para identificar qual a implicação quanto à realização das
+consultas RDF. Também sugere-se a modelagem do grafo QualisBrasil com o vocabulário
+Model for Tabular Data and Metadata on the Web (MODEL, 2018) com o objetivo de
+comparar as diferentes modelagens quanto ao reuso facilitado aos recursos.

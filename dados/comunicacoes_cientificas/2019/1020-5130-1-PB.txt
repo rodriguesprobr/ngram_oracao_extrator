@@ -1,0 +1,650 @@
+
+INTERFACE PARA USUÁRIO DE AMBIENTE VIRTUAL DE APRENDIZAGEM: REQUISITOS
+VIRTUAL LEARNING ENVIRONMENT USER INTERFACE: REQUIREMENTS
+Modalidade: Trabalho Completo
+Resumo: Os ambientes virtuais de aprendizagem são ferramentas amplamente utilizadas na
+disponibilização de conteúdos didáticos. Estes ambientes são caracterizados pela ausência física de
+professor/tutor e o ponto de contato com tais conteúdos é uma interface disponível na tela de um
+equipamento digital. Porém, a apropriação desses conteúdos é condição necessária para que os alunos
+(usuários) possam operacionalizar com os mesmos. Assim, tendo os usuários (alunos/aprendizes)
+como protagonistas dos processos de ensino-aprendizagem, neste trabalho, foram investigados os
+requisitos que devem ser considerados no projeto e implementação de interfaces digitais para
+usuários de ambientes virtuais de aprendizagem, uma vez que estas interfaces realizam a mediação e
+auxiliam na apropriação da informação pelo usuário. Trata-se de pesquisa de abordagem qualitativa e
+natureza exploratória, desenvolvida com base na análise de literatura e estudo de caso de um
+ambiente virtual de aprendizagem utilizado em disciplinas de ensino técnico. Como um dos resultados,
+destaca-se a proposta de um guia para orientar a concepção de interfaces digitais visando favorecer a
+apropriação dos conteúdos disponibilizados em tais ambientes.
+Palavras-Chave: Mediação e apropriação da informação. Ambiente virtual de aprendizagem. Interface
+digital. Usuário da informação. Educação a distância.
+1 INTRODUÇÃO
+Contemporaneamente, nos processos de ensino-aprendizagem, as tecnologias da
+informação e comunicação (TICs) têm viabilizado a apresentação de conteúdos informacionais
+em diferentes formatos – por exemplo, textos, sons, imagens, movimentos, vídeos etc. Nestes
+processos, os referidos conteúdos são disponibilizados em plataformas denominadas
+ambientes virtuais de aprendizagem (AVAs) e são acessíveis com auxílio da internet (RAMOS,
+2015, p.52). Dessa forma, os AVAs possibilitam organizar e disponibilizar conteúdos
+informacionais utilizados em práticas do processo de ensino-aprendizagem, com acesso
+individual, controlado por identificação e senha, independente de tempo e espaço, o que
+também oferece um ambiente particular e privado a cada usuário1. As informações são
+acessadas a partir de uma interface digital e esta é o ponto de contato do usuário com os
+referidos conteúdos. Nota-se que a mesma interface desempenha papel de elemento
+mediador e espera-se que esta facilite a apropriação da informação pelos usuários. Tal
+interface, nesse sentido, oferece um “espaço de trocas” –– conforme proposto por MartínBarbero, (2015, p. 294) –– na tela do dispositivo utilizado pelo usuário.
+Diferentemente do que acontece nos processos de ensino-aprendizagem no modelo
+presencial, no caso dos AVAs, não se tem a presença física do professor (ou tutor). Assim, uma
+das características exigidas é que os conteúdos disponibilizados sejam cognitivamente
+acessíveis. O que impõe determinados desafios na produção desses conteúdos, uma vez que
+cada aluno/usuário possui referenciais próprios, os quais tendem a influenciar na apropriação
+da informação. Logo, parte-se do pressuposto que, ao oferecer conteúdos cognitivamente
+acessíveis, facilitar-se-á a apropriação destes pelos usuários. Para tanto, buscou-se identificar
+os requisitos que devem ser considerados no projeto e implementação de interfaces digitais
+para usuários de AVAs, compreendendo que estas interfaces realizam a mediação e auxiliam
+na apropriação da informação por estes usuários (alunos/aprendizes).
+Por um lado, diversas pesquisas (BARRETO, 2002; BARRETO, 2008; RAMOS, 2015;
+BACICH e MORAN, 2015; SENGUPTA e DASGUPTA, 2017), desenvolvidas na intersecção das
+áreas Educação, Informação e TICs, privilegiam aspectos pedagógicos e/ou tecnológicos. Por
+
+1
+
+Neste trabalho, o termo “usuário” foi utilizado analogamente aos termos “aluno” e “aprendiz” (que são termos
+utilizados na área de Educação) e o conceito de “interagente” proposto por Corrêa (2014). Assim, o termo
+“usuário” refere-se ao sujeito que interage com a informação e o sistema de informação.
+
+
+outro, percebe-se a necessidade de tratar o assunto considerando também a apropriação da
+informação no contexto dos AVAs. Para tanto, foram estudadas referências das áreas de
+Comunicação e Ciência da Informação (CI), objetivando compreender os usuários de AVAs e
+as relações que estes estabelecem com o sistema e os conteúdos disponibilizados.
+Como objetivo, destaca-se o de sistematizar os requisitos em um guia para orientar o
+projeto e a implementação de interfaces digitais para usuários de AVAs, de forma que estas
+auxiliem na apropriação da informação por estes usuários. Para tanto, foi necessário:
+compreender os processos da educação mediada por TICs em AVAs; identificar e caracterizar
+os usuários de AVAs; investigar os desafios presentes na apropriação da informação por meio
+de interfaces digitais em processos de ensino-aprendizagem.
+2 REFERENCIAL TEÓRICO
+Com buscas em bases de dados, foram levantados e estudados os pressupostos
+teóricos para o desenvolvimento deste trabalho. Primeiro, buscou-se compreender o conceito
+de informação (BUCKLAND, 1991; SMIT e BARRETO, 2002; LE COADIC, 2004; CAPURRO e
+HJØRLAND, 2007) e como este se relaciona com os conteúdos disponibilizados via AVAs.
+Ressalta-se que os mesmos conteúdos têm o potencial de gerar conhecimento, mas este
+potencial é validado somente no futuro, com o uso (SMIT e BARRETO, 2002). Também,
+observa-se que a oferta de informação – privilegiando forma, conteúdo e acessibilidade – é
+pensada tendo em mente o potencial usuário. Dessa forma, esta seção foi organizada em: (a)
+AVAs; (b) usuário da informação; e (c) mediação e apropriação da informação em AVAs.
+
+a) Ambiente Virtual de Aprendizagem (AVA)
+Os AVAs constituem plataformas para viabilizar práticas da educação mediada por
+TICs, apresentando recursos e possibilidades que suscitam formas diferentes de ensinoaprendizagem, produção de conteúdos e usos da informação.
+
+
+Figura 1: Visão geral do contexto de uso de AVA entre os atores do processo de ensino
+AMBIENTE VIRTUAL DE APRENDIZAGEM
+Interface
+Professor
+
+Alunos
+
+Contexto de
+produção
+pedagógica com
+foco no tema a ser
+ensinado.
+
+Aplicação
+Contextos
+individuais.
+Repositório
+
+Fonte: RODRIGUES (2018, p.52).
+
+Na Figura 1, é apresentado um esquema de AVA, dividido em três camadas (interface,
+aplicação e repositório), onde todos os usuários (professores e alunos) interagem com o
+sistema por meio da interface, enviando e recebendo informações, por meio de recursos
+computacionais e de comunicação disponíveis na camada de aplicação, a qual trata as
+informações com base em regras de negócio. As informações são armazenadas no repositório,
+para acesso pelos usuários. Evidencia-se, portanto, que é a partir da interface dos AVAs que
+os usuários (alunos) têm acesso à informação e entram em contato com outros usuários
+(alunos e professores) durante o processo de ensino-aprendizagem, buscando a construção
+do conhecimento de maneira autônoma. Barreto (2002) atribui essa autonomia do usuário à
+interatividade que, quando modifica o fluxo usuário-tempo-informação, liberta este usuário
+do sincronismo cotidiano (a presença num dado local e em determinado momento). Barreto
+(2002) aponta que a interconectividade reposiciona a relação usuário-espaço-informação, o
+que faz do usuário seu próprio tutor, em função de suas necessidades.
+Ramos (2015, p.52) define AVA como:
+[...] um suporte informático, um software com recursos que permitem
+configurar, no espaço virtual, um continente no qual se circunscrevem
+conteúdos e relações de ensino-aprendizagem. Suas principais
+características seriam: acesso restrito para o usuário não cadastrado;
+ferramentas voltadas predominantemente para o ensino-aprendizagem;
+hierarquia entre os participantes; presença de um ou mais tutores que
+auxiliam e controlam as atividades. (RAMOS, 2015, p.52).
+
+Visando atender às necessidades do usuário, Sengupta e Dasgupta (2017) destacam a
+importância de os AVAs serem compatíveis com um padrão confiável para garantir a
+
+qualidade, referindo-se a critérios de usabilidade, acessibilidade e interoperabilidade,
+presentes em padrões internacionais para o desenvolvimento de aplicações baseadas na web.
+Adicionalmente, os usuários de AVAs também precisam ser assistidos de forma individual,
+respeitando-se “sua cultura, suas memórias cognitivas e sua odisseia particular” (BARRETO,
+2008, p.4). Para isto, faz-se necessário compreender estes usuários e suas necessidades.
+b) Usuário da Informação
+O usuário de AVA, principal ator do processo de ensino-aprendizagem é identificado
+como “aluno” na área de Educação e como “usuário” nas áreas de TICs e CI. Embora cada área
+identifique este ator com diferentes termos, neste trabalho, este ator foi analisado na
+perspectiva da CI, optando pelo uso do termo “usuário” para se referir ao aluno.
+A partir dos conceitos apresentados pelos autores Sanz Casado (1994) e GonzálezTeruel (2005), no contexto de uso dos AVAs, é possível visualizar que o professor, para a
+produção do conteúdo didático, privilegia o contexto coletivo (usuários potenciais). No
+entanto, o usuário (aluno), ao recepcionar a informação, encontra-se no contexto individual
+(usuário real). Isto implica que uma informação destinada ao usuário potencial pode ter
+diferentes significados para usuários reais, pois estes têm papel ativo no processo de ensinoaprendizagem. Uma vez que, quando se busca uma informação, tais usuários trazem consigo
+um contexto singular com saberes, valores, crenças e conhecimentos teóricos ou empíricos
+que influenciam na recepção da informação buscada. Logo, nota-se que o usuário constrói o
+significado da informação quando consegue interpretá-la e esta interpretação depende do
+contexto, no momento em que este usuário recebe a informação.
+O contexto em que estes usuários se encontram e a relação que estabelecem com o
+AVA, influenciam na apropriação da informação. Por isto, não é suficiente apenas reconhecêlo nas definições dos autores (WERSIG e NEVELING, 1975; GUINCHAT e MENOU, 1994; SANZ
+CASADO, 1994; CHOO, 2003; ZANAGA e LISBOA, 2009) e conhecer suas características.
+Conforme aponta Quiroz Velasco (2012), também é necessário conhecer o contexto de uso da
+informação e o comportamento informacional deste usuário, bem como entender como se dá
+a recepção da informação e a interação com esta, incluindo o sistema e outros usuários.
+Considerando que, conhecendo o contexto de uso e o comportamento informacional
+dos usuários é possível adequar o processo de mediação em interfaces de AVAs e, por
+
+conseguinte, potencializar a capacidade deste usuário se apropriar das informações que lhe
+são apresentadas, neste trabalho, foi desenvolvido um estudo de usuários (González-Teruel,
+2005). Em tal estudo foram abordados: (1) habilidades no uso de recursos tecnológicos
+básicos; (2) autonomia no cumprimento de prazos; (3) preferências de modos de interação;
+(4) dificuldades no uso do AVA e seus recursos; (5) satisfação com a interface do sistema; (6)
+interfaces de outros sistemas de informação ou de comunicação que apreciam; e (7) aspectos
+que influenciam na apropriação da informação recebida via web.
+c) Mediação e Apropriação da Informação por Usuários de AVAs
+Se por um lado, no AVA, pressupõe-se que ocorrem transferência e recepção de
+informações pelos usuários e diferentes mediações, por outro, para viabilizar as referidas
+interações, faz-se necessário considerar os elementos/instrumentos que favoreçam a
+mediação neste ambiente. Nessa perspectiva, Signates (1998) aponta que,
+as fontes de mediação são várias: cultura, política, economia, classe social,
+gênero, idade, etnicidade, os meios, as condições situacionais e contextuais,
+as instituições e os movimentos sociais. Também se origina na mente do
+sujeito, em suas emoções e suas experiências. Cada uma dessas instâncias é
+fonte de mediações e pode também mediar outras fontes. (SIGNATES, 1998,
+p.44).
+
+Martín-Barbero (2015, p.294) sugere a mediação como “um lugar” onde ocorre uma
+aproximação do espaço de produção ao espaço de recepção. Dessa forma, o conceito de
+mediação adotado neste trabalho tem como base o conceito proposto por Martín-Barbero
+(2015) que, de maneira muito resumida, é caracterizado por um “espaço de trocas”. No caso
+particular do AVA, o referido espaço de trocas é viabilizado, principalmente, a partir da tela
+do sistema disponível ao usuário em um equipamento digital. Esta tela (interface digital)
+representa o ponto de contato deste usuário com os conteúdos informacionais e é o local
+onde se desenvolvem as interações, seja com estes conteúdos ou com outros usuários. Nesse
+sentido, a interface desempenha papel de elemento mediador. Em contrapartida, a interação
+é um dos elementos de mediação e assegura as trocas (intercâmbio de informações/sentidos),
+com o intuito de viabilizar a apropriação a partir de uma relação de ensino-aprendizagem.
+Para Smolka (2000, p.28), “o termo apropriação refere-se a modos de tornar próprio,
+de tornar seu; também, tornar adequado, pertinente, aos valores e normas socialmente
+estabelecidos” [itálicos de Smolka (2000, p. 28)]. Quando o usuário percebe significado na
+
+informação e reconhece-a como útil para seu contexto, evidencia-se a acessibilidade cognitiva
+e, por conseguinte, a apropriação é viabilizada, ou seja, a mudança do estado de
+conhecimento. Este é o conceito de apropriação adotado neste trabalho, uma vez que, tanto
+os conteúdos informacionais, quanto as ferramentas de interação com tais conteúdos são
+planejadas e disponibilizadas nos AVAs, a partir de uma interface digital para o
+usuário/aprendiz.
+Isto implica que, para apropriação da informação, faz-se necessária a mediação entre
+o usuário e a informação. Assim, a interface digital para usuários de AVAs, como “espaço de
+trocas”, deve propiciar uma “conversa” entre o sistema e o usuário, que, como já mencionado,
+é onde o usuário tem contato com o conteúdo informacional. Portanto, entende-se que a
+interface digital, não pode cercear a ação do usuário, mas orientá-lo considerando aspectos
+cognitivos. Isto mostra que o contexto delineia o espaço de trocas e, por conseguinte, os
+conteúdos informacionais devem ser adaptados às necessidades do usuário, proporcionando
+um espaço empático que encoraja sua autonomia nos processos de ensino-aprendizagem.
+Dessa forma, a compreensão da interface a partir das múltiplas mediações pode contribuir
+para a criação de um espaço de interação bidirecional, pressupondo que a partir da relação
+usuário-interface é possível extrair elementos para pensar diferentes estratégias para
+apresentação de um conteúdo que seja cognitivamente acessível.
+3 PROCEDIMENTOS METODOLÓGICOS
+Diante da necessidade de se investigar os desafios presentes na construção de
+interfaces digitais para usuários de AVAs, de modo que esta interface auxilie na apropriação
+da informação pelo usuário, neste trabalho, utilizou-se uma abordagem qualitativa e de
+natureza exploratória, caracterizada por pesquisa bibliográfica e estudo de caso. Para tanto,
+a pesquisa foi dividida em três etapas: (1) preparação do referencial teórico, com os conceitos
+presentes na literatura, para subsidiar o estudo de caso; (2) desenvolvimento de um estudo
+de caso, em um AVA, utilizado como suporte para a oferta de uma disciplina destinada a
+alunos do curso técnico em administração; e (3) sistematização de uma proposta de requisitos
+para a construção de interfaces digitais para usuários de AVAs.
+
+
+
+1ª etapa) Preparação do referencial teórico
+Partindo da questão norteadora deste trabalho e objetivos estabelecidos, nesta
+primeira etapa, o referencial teórico foi elaborado com base nos procedimentos propostos
+por Machi e McEvoy (2012): (1) seleção do tema; (2) levantamento de literatura; (3)
+desenvolvimento de argumentações; (4) análise da literatura; (5) leitura crítica e reflexiva da
+literatura; e (6) redação do referencial. Particularmente neste trabalho, a elaboração do
+referencial teórico fez parte dos procedimentos metodológicos, uma vez que tal preparação
+teve como base o conjunto de seis passos aqui expostos. Nesse sentido, destaca-se, dentre
+as contribuições obtidas a partir deste referencial, a compreensão de conceitos e fenômenos
+– na perspectiva da CI – que envolvem os processos de ensino-aprendizagem mediados por
+TICs, especialmente os AVAs.
+2ª etapa) Estudo de caso
+Nesta outra etapa, foi realizado um trabalho de campo para se conhecer a realidade
+que cerca o uso de AVAs. Como caso para estudo, foi selecionada uma disciplina ministrada
+com aulas presenciais, as quais são complementadas com atividades desenvolvidas na
+modalidade a distância, com suporte de um AVA. O trabalho de campo propiciou a obtenção
+de conjuntos de dados que representam o estudo de usuários e seus respectivos
+comportamentos informacionais, a fim de validar as conjecturas apresentadas no referencial
+teórico e identificar o conjunto de requisitos para se elaborar o guia para construção de
+interfaces digitais para usuários de AVAs, de acordo com o objetivo desta pesquisa.
+Adicionalmente à visão de Severino (2016) sobre pesquisa exploratória, a visão de Yin
+(2015) indica o estudo de caso quando é necessário descrever ampla e profundamente algum
+fenômeno social complexo, em que as principais questões são “Como?” e “Por quê?”; existe
+pouco ou nenhum controle sobre os eventos comportamentais; estuda-se um fenômeno
+contemporâneo em seu contexto real; e uma nova perspectiva é necessária (YIN, 2015).
+Foi selecionada a plataforma www.salainterativa.net que é utilizada por um dos
+autores para apoio ao ensino em disciplina, cujo tema é administração financeira, visto que a
+situação-problema abordada nesta pesquisa é evidenciada no cotidiano da disciplina, o que
+
+possibilitou refletir sobre a gestão e manutenção de sistemas de informação especializados,
+em ambientes digitais como é o caso dos AVAs. De modo complementar, foi possível refletir
+sobre a circulação e mediação da informação nesses ambientes, cuja finalidade é auxiliar nos
+processos de ensino-aprendizagem.
+Em uma etapa inicial, foi aplicado um questionário, como pré-teste, a 58 usuários da
+plataforma selecionada, os quais compuseram uma amostra inicial baseada em voluntários
+que se dispuseram a responder o referido questionário. Estes usuários eram alunos do 3º ano
+do ensino técnico. Assim, foi realizada a coleta de dados possibilitando observar a necessidade
+de: (1) esclarecer ao usuário que o foco é um determinado curso; (2) reeditar questões
+adotando um vocabulário de fácil compreensão pelos usuários; e (3) adicionar um Termo de
+Consentimento Livre e Esclarecido, com apresentação do propósito da pesquisa evidenciando
+os compromissos e objetivos de uso das informações solicitadas. Em termos dos aspectos
+estudados, o questionário incluiu: (1) habilidades do usuário no uso de computador; (2)
+autonomia; (3) dificuldades no uso da plataforma; (4) interface digital para usuários do
+sistema e; (5) apropriação da informação. Dentre os objetivos, buscou-se determinar – a partir
+da perspectiva do usuário – de que forma ocorre o ensino-aprendizagem apoiado por AVAs,
+no intuito de identificar os principais problemas, lacunas e outros fatores que podem
+influenciar no processo de apropriação da informação pelos usuários.
+Tendo validado o instrumento de coleta de dados, a amostra de usuários estudados
+contemplou duas turmas de 3º ano do ensino técnico profissionalizante do ano de 2018. Para
+coleta, tabulação/análise e interpretação dos dados, com base no referencial teórico, foram
+adotadas estratégias para realização de estudos de usuários, na perspectiva do usuário. Para
+isto, a partir dos pressupostos teóricos apresentados por González-Teruel (2005), buscou-se
+desenvolver o estudo de usuários para auxiliar a responder perguntas como: Quais barreiras
+devem superar para acessar as informações de que precisam? Quais fatores individuais,
+sociais, econômicos ou políticos os condicionam na busca de informações? Que grau de
+satisfação o usuário tem com o uso de AVAs como um sistema de informação especializado?
+O questionário foi disponibilizado a uma parcela (amostra) da população que compõe
+o estudo de caso, a qual foi baseada na disponibilidade dos respondentes. Os dados obtidos
+foram tabulados, sendo que as questões objetivas foram analisadas pela quantidade de
+respostas a cada item e a questão dissertativa teve suas respostas sumarizadas, buscando-se
+
+um padrão para identificar e categorizar as respostas com maior relevância. Para contornar as
+limitações da amostra, foram utilizadas outras técnicas de coletas de dados, dentre elas:
+reunião de grupo focal, observação direta e consulta aos logs do AVA.
+3ª etapa) Sistematização da proposta
+Finalizada a análise dos dados na etapa anterior, os elementos e requisitos
+encontrados foram examinados à luz dos referenciais teóricos e objetivos deste trabalho. Em
+seguida, os mesmos elementos e requisitos foram sintetizados em forma de diagrama,
+possibilitando ter uma visão geral do contexto de uso de AVAs na perspectiva da CI.
+Após uma melhor compreensão dos requisitos identificados, complementarmente,
+buscou-se compreender os aspectos técnicos para alicerçar soluções sem a necessidade ou
+dependência de inovações na área da Computação. Dessa forma, buscou-se referenciais na
+área de Engenharia de Software, os quais foram estudados e permitiram organizar os
+requisitos em dois grupos: funcionais e não funcionais, o que permitiu conferir a aplicabilidade
+dos requisitos identificados.
+Com as informações detalhadas sobre cada requisito, elaborou-se um guia para criação
+de novas interfaces digitais para usuários de AVAs, atendendo ao objetivo deste trabalho. Este
+guia, auxiliará na construção de interfaces digitais para usuários, para novos cursos
+suportados por AVAs, de maneira que a interface ofereça melhores condições para
+apropriação da informação pelo usuário.
+4 RESULTADOS E DISCUSSÃO
+Os resultados, analisados à luz do referencial teórico, foram sintetizados com base nos
+aspectos investigados, apontando aqueles que não apresentam problemas, outros que podem
+ser melhorados, outros ainda que apresentaram problemas e requisitos não atendidos. Os
+aspectos analisados foram: habilidades; autonomia; interação; dificuldades na utilização da
+plataforma; interface; interfaces favoritas e aspectos para apropriação. Uma síntese de cada
+um desses aspectos é descrita a seguir:
+
+
+a) Habilidades básicas: Para Guinchat e Menou (1994), a satisfação do usuário está
+relacionada com o esforço empreendido na utilização de um dado sistema de informação. Os
+resultados mostram que os alunos receberam apenas o endereço do ambiente, usuário e
+senha para acesso, e conseguiram utilizar o sistema sem qualquer registro de dificuldade,
+dispensando a apresentação da plataforma e seu funcionamento.
+
+b) Autonomia: Verificou-se que 99% dos usuários cumpriram os prazos das atividades
+propostas, alguns poucos o fizeram mediante motivadores, como notas. Para Barreto (2002),
+esta autonomia está relacionada à liberdade e interconectividade que permitem ao usuário
+ser seu próprio tutor.
+c) Interação: Os usuários rejeitaram o meio de comunicação disponível no AVA
+(mensagens e fórum), uma vez que já têm um meio de comunicação instantânea de uso
+cotidiano. A comunicação entre os participantes aconteceu por diversas vezes, embora não
+por meio do AVA. Isto confirma o pressuposto de Quiroz Velasco (2012), o qual destaca que
+os jovens têm estilo de aprendizagem fundado na interatividade mas, também, confirma o
+pressuposto de AMIEL, OREY e WEST (2011) sobre o fato de se o recurso disponibilizado não
+atender requisitos socioculturais, o mesmo pode ser rejeitado.
+d) Dificuldades na utilização da plataforma: Os resultados mostraram dificuldades
+relacionadas à ergonomia (em relação à forma de apresentação da informação) e
+compreensão concernente aos aspectos sociolinguísticos e socioculturais. Isto levou à
+reflexão sobre os pressupostos de Orozco Gomez (1991) e Signates (1998), relacionados à
+mediação cognitiva e os pressupostos de AMIEL, Orey e West (2011, p.118) que provocam uma
+reflexão sobre o dilema de adequar ou não o conteúdo.
+e) Interface: A interface da plataforma utilizada não sofreu rejeição de nenhum dos
+respondentes, mas foram levantados requisitos na pesquisa qualitativa que podem tornar a
+interface “mais atrativa” e favorecer a apropriação. Para analisar este aspecto, os resultados
+foram confrontados com os pressupostos de Sheneiderman (2006), por sua abordagem de
+tecnologia humanística e os pressupostos de Zaharias (2011), quanto à usabilidade. Isto
+validou o que Fonseca e Fernandes (2017) propõem, enfocando as vantagens e desvantagens
+da modalidade de ensino.
+
+f) Interfaces favoritas: O resultado apontou dois sites como favoritos. No entanto, a
+pesquisa qualitativa revelou que os usuários nunca acessaram estes sites, na verdade eles
+acessaram os conteúdos informacionais (videoaulas) que estes sites disponibilizam nas redes
+sociais, não os sites propriamente ditos. Isto demonstrou que houve um viés relacionado à
+forma de apresentação da informação buscada pelos usuários e não propriamente ao site
+como era o intuito da pesquisa, ratificando a afirmação de Yin (2015, p.124) ao dizer que
+“qualquer achado ou conclusão do estudo de caso é, provavelmente, mais convincente e
+acurado se for baseado em diversas fontes diferentes de informação”.
+De modo complementar, os instrumentos de coleta de dados qualitativos ajudaram a
+identificar as interfaces favoritas e a conferir os pressupostos de Guinchat e Menou (1994),
+relacionados à satisfação do usuário com o serviço de informação e os pressupostos de
+Shneiderman (2006) e Zaharias (2011) relacionados à aspectos da tecnologia.
+g) Aspectos para apropriação: Os usuários tiveram contato – por meio do AVA – com
+conteúdos informacionais de diferentes formas (textos, vídeos, áudio e slides apresentados
+em aula presencial) para acesso em qualquer dia/hora e tarefas elaboradas com diferentes
+estratégias pedagógicas como: questões (de múltipla escolha, escolha única, verdadeiro/falso
+e associativas), uso de cronômetro, feedback segmentado por desempenho, revisão com
+gabaritos, prazos definidos no sistema, comunicados via interface ou mensagens, e calendário
+de tarefas. Cada usuário se apropria da informação de maneira singular/única delineada pelo
+seu contexto individual e considerando que o contexto de cada usuário varia de acordo com
+suas condições emocionais, cognitivas e situacionais (CHOO, 2003). Como resultado, verificouse a necessidade de disponibilizar recursos para anexar ou transcrever as anotações;
+apresentar orientações para busca da mesma informação em outras fontes, caso o usuário
+tenha esta necessidade; e sempre dispor da possiblidade de impressão e/ou download do
+conteúdo informacional para atender eventuais necessidades. Estes requisitos remetem às
+múltiplas mediações apresentadas por Signates (1998).
+
+A análise dos resultados permitiu perceber – na perspectiva da CI – elementos da
+relação entre os usuários e o AVA, como mostra a Figura 2.
+Cada elemento desta relação usuário-AVA está presente no processo de aprendizagem
+do aluno quando interage com o sistema. Dessa forma, todos os elementos participam do
+
+processo de apropriação da informação, os quais orientam o projeto de uma interface que
+considera os aspectos relativos ao contexto do usuário.
+
+Figura 2 : Representação dos elementos envolvidos na relação entre usuário e AVA
+Relação Usuário  AVA
+
+Contexto
+do Usuário
+
+Interface (Espaço de trocas)
+
+Apresentação
+
+Conteúdo didático
+
+Habilidades
+
+Informação
+Interação
+
+Competências
+
+Acessibilidade
+• Física
+• Cognitiva
+
+Conteúdo
+
+Forma
+
+Colaboração
+
+Fonte: RODRIGUES (2018, p.108).
+
+Analisando cada um dos elementos, com base nos dados coletados e segundo os
+referenciais teóricos, identificou-se os requisitos buscados nesta investigação. Estes requisitos
+mostram o que os usuários esperam do AVA. Assim, foram classificados como funcionais e não
+funcionais conforme conceitos abordados por Pressman (2011) e Sommerville (2014), por
+representarem condições que impactam na apropriação da informação pelo usuário e que,
+portanto, influenciam na arquitetura do AVA.
+Dessa forma, foram classificados como requisitos funcionais aqueles que tratam das
+funcionalidades e serviços do sistema, prevendo as ações/reações em situações específicas de
+uso. Foram classificados como requisitos não funcionais aqueles que não estão propriamente
+relacionados às funcionalidades do sistema, mas são necessários para que o sistema atenda
+plenamente às necessidades dos usuários de modo que as tarefas sejam realizadas com
+completude (PRESSMAN,2011) e (SOMMERVILLE, 2014). Assim, os requisitos identificados em
+cada elemento da Figura 2 estão classificados e são descritos no Quadro 1.
+
+
+Quadro 1 – Requisitos para concepção de interfaces digitais para AVA, na perspectiva do usuário.
+Elemento
+Requisitos Funcionais
+1. Notificar o usuário sobre um novo conteúdo ou tarefa.
+2. Notificar o usuário sobre os prazos.
+Competências
+3. Notificar, em área específica no lado direito da interface do curso,
+novos conteúdos/tarefas.
+4. Apresentar, no lado direito da interface principal, calendário/agenda
+com compromissos do usuário com o curso.
+5. Destacar informações recentes.
+Apresentação
+6. Atender convenções tecnológicas.
+Acessibilidade física
+7. Conteúdo (em nova janela; possibilidade para download e impressão).
+Acessibilidade
+8. Conteúdo em formato que possibilite anotações.
+cognitiva
+Interação
+9. Recurso de comunicação instantânea de uso cotidiano do grupo.
+Elemento
+Requisitos Não Funcionais
+10. Informações descritas em tela não devem ser extensas.
+Apresentação
+11. Acrescentar orientações para casos de problemas previsíveis.
+Interação
+12. Propostas de interação vinculadas a um estímulo.
+Colaboração
+13. Produção do conteúdo pelos próprios usuários.
+Acessibilidade física
+14. Conteúdo leve (de rápido carregamento/download).
+15. Conteúdo (aspectos socioculturais e sociolinguísticos).
+Acessibilidade
+cognitiva
+16. Conteúdo Breve (curta duração/extensão).
+Habilidades
+17. Habilidades básicas para uso do computador/internet.
+Interface
+18. Versão para dispositivos móveis.
+Fonte: adaptado de RODRIGUES (2018, p.113-127).
+
+Observa-se que apenas os requisitos 9 e 18, dependem essencialmente de inovação
+tecnológica para serem atendidos no contexto de produção e todos os demais requisitos já
+podem ser contemplados. Para isto, pensando no fluxo do processo da oferta de um curso por
+meio AVA, estes requisitos foram sintetizados em um guia-rápido, que representa uma
+proposta de requisitos que se pretendeu elaborar neste trabalho. Este guia, considera o
+atendimento aos requisitos para um curso com as mesmas características do curso
+selecionado para este estudo. Ou seja, considera a caracterização do AVA, do público e da
+disciplina selecionada.
+A partir destas informações, a configuração do curso se deu com: publicação de
+conteúdos informacionais que já haviam sido discutidos em aula presencial, conteúdos
+informacionais adicionais em diferentes formatos (texto, vídeo, áudio); atividades de
+questionário envolvendo diferentes tipos de questões; e atividade de interação utilizando o
+recurso de fórum de discussão. Assim, privilegiando os requisitos identificados como
+
+importantes para auxiliar na apropriação da informação no ensino via AVAs, o guia é
+apresentado na Figura 3.
+
+Figura 3: Guia para projeto e implementação de interfaces digitais para usuários de AVAs
+1) Interface principal do
+AVA
+Atender convenções
+tecnológicas
+
+2) Interface do curso
+
+3) Introduzir usuários
+
+4) Operacionalização do
+curso
+
+1.a.) Posicionar Menus
+funcionais à esquerda
+(menus de navegação,
+configuração e
+utilitários).
+
+2.a.) Criar uma área de
+notificação à direta da
+tela.
+
+3.a.) Certificar-se que os
+usuários têm habilidades
+básicas.
+
+4.a.) Publicar novo
+conteúdo conforme
+procedimento 2.c, ou
+nova tarefa conforme
+procedimento 2.d.
+
+1.b.) Posicionar espaço
+informativo à direita:
+calendário/agenda de
+tarefas;
+
+2.b.) Dividir a área de
+conteúdo (centro da tela)
+em períodos.
+
+3.b.) Encaminhar aos
+usuários as informações
+de acesso.
+
+4.b.) Notificar usuários.
+
+2.c.) Publicar conteúdo:
+nomear com poucas
+palavras; destacar como
+recente; apresentar em
+nova janela; permitir
+download; permitir
+impressão.
+2.d.) Publicar Tarefa:
+nomear com poucas
+palavras; destacar como
+recente; adicionar às
+instruções, orientações
+para casos de problemas
+previsíveis; apresentar na
+mesma janela
+(embutida);
+eliminar distrações
+(omitir opções funcionais
+da esquerda e opções
+informativas à direita da
+tela); limitar tempo e
+tentativas.
+Fonte: Rodrigues (2018, p.129).
+
+Este guia para a criação de interfaces para usuários de AVAs considera que estas
+interfaces devem ter como base as relações: usuário – conteúdo informacional – contexto de
+uso, favorecendo o uso das potencialidades que o sistema oferece, priorizando o sentido e o
+significado da informação para este usuário. Estas relações consideram a contemporaneidade
+
+dos alunos, suas competências culturais e seu cotidiano, tendo como base o conceito de
+mediação defendido por Martín-Barbero (2015). Estas mesmas relações aperfeiçoam as
+interações usuário-AVA, de modo que a interface seja de facto um elemento mediador no
+processo ensino-aprendizagem.
+Cada requisito apresentado no guia está vinculado a um elemento da relação usuárioAVA, apresentado no Quadro 1. Estes, por sua vez, são relacionados às múltiplas mediações
+(OROZCO GÓMEZ,1991; SIGNATES, 1998; FUJINO, 2000; CHOO, 2003), possibilitando
+visualizar o contexto de uso do AVA a partir das múltiplas mediações como mostra a Figura 4.
+
+Figura 4: Contexto de uso do AVA a partir das múltiplas mediações
+Cultural
+
+Professor
+
+Individual
+
+Tecnológica
+Múltiplas
+Mediações
+
+Aluno
+Necessidades
+
+Conteúdo
+Contexto de
+produção
+
+Contexto de Uso
+Situacional
+
+Institucional
+Conteúdo
+adequado
+Interface
+
+Espaço de
+
+Interação
+e
+Apropriação
+
+Trocas com
+acessibilidade
+cognitiva
+
+Fonte: Rodrigues (2018, p.132)
+
+
+Neste novo contexto (FIGURA 4), imagina-se que o usuário tenha melhores condições
+para construir uma relação mais amistosa com o sistema, por meio de um espaço de trocas
+(interface), o qual tende a evoluir amparado em elementos como segurança e confiabilidade
+da informação, os quais são requisitos importantes para assegurar o uso do sistema, conforme
+destacado por Shneiderman (2006).
+5. CONCLUSÃO E CONSIDERAÇÕES FINAIS
+Este trabalho propiciou a compreensão do processo de aprendizagem via AVAs, na
+perspectiva da CI, e a identificação do usuário e seu contexto. O estudo de caso – como
+método escolhido para se investigar os desafios presentes na apropriação da informação a
+partir de interfaces digitais, em ambientes de ensino-aprendizagem – possibilitou aplicar
+técnicas de coleta de dados, observar os fenômenos, os elementos do processo e
+dificuldade/barreiras enfrentadas pelo usuário no processo de busca e apropriação da
+informação. Com a análise dos dados coletados, foram identificados os elementos e requisitos
+para projeto de uma interface que valoriza o contexto do usuário, dando origem à proposta
+apresentada e sintetizada em um “Guia para projeto e implementação de interfaces digitais
+para usuários de AVAs” (FIGURA 3), em resposta à problemática que deu início a este trabalho
+sobre quais requisitos devem ser considerados no projeto e implementação de interfaces
+digitais para usuários de AVAs, compreendendo que estas interfaces realizam a mediação e
+auxiliam na apropriação da informação pelo usuário (aluno/aprendiz).
+Como instrumento, o guia orienta o contexto de produção para uma interface, com a
+qual o usuário terá maior afinidade e, portanto, favorecerá sua interação com a informação e
+entre outros usuários, valorizando assim a independência de tempo e do espaço, bem como
+possibilitando a atribuição de significados à informação apresentada e favorecendo o
+processo de apropriação da informação.
+Ao atingir os objetivos desta pesquisa, conclui-se que os esforços dos usuários para
+entender o ambiente virtual de aprendizagem e obter informações relevantes para gerar
+novos conhecimentos, podem ser mitigados quando se entende que a interface, como
+elemento mediador, pode auxiliar na apropriação, se concebida levando-se em conta os
+requisitos oriundos do contexto do usuário.
+
+Dessa forma, proporciona-se um ambiente que “atrai e cativa” o usuário numa
+experiência agradável, ao se mimetizar um “espaço de trocas” ou “espaço de mediação”
+(MARTÍN-BARBERO, 2015). Com isto, espera-se que tal interface contribua para o aumento da
+capacidade e melhoria das condições para apropriação da informação pelos usuários de AVAs.
+Como limitação do estudo, o guia proposto considera o atendimento aos requisitos em
+um curso com as mesmas características do curso selecionado para este estudo. Ou seja, devese lembrar da apresentação do caso, observando-se a caracterização do AVA, do público e da
+disciplina selecionada. E que, a partir destas informações, a configuração do curso se deu com:
+publicação de conteúdos informacionais que já haviam sido discutidos em aula presencial,
+conteúdos informacionais adicionais em diferentes formatos (texto, vídeo, áudio); atividades
+de questionário envolvendo diferentes tipos de questões; e atividade de interação utilizando
+o recurso de fórum de discussão.
+Entende-se que estudos futuros voltados ao desenho universal de interfaces, ou sobre
+interfaces para recursos educacionais abertos em AVAs, poderão contribuir para dar
+continuidade a este trabalho. Em complemento, novas possibilidades estão surgindo com a
+inteligência artificial (IA) que pode ser um recurso para reconhecimento de padrões no
+processo de ensino-aprendizagem, favorecendo, por exemplo, identificar o desenvolvimento
+cognitivo, aspectos emocionais e contribuir para melhoria do processo de mediação de
+conteúdos objetivando informação relevante e apresentação adequada. Isto demandará
+aprofundamentos no tema e intersecções com outras áreas de conhecimento.
+

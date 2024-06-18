@@ -1,0 +1,146 @@
+
+DADOS GOVERNAMENTAIS NA REDE LINKED OPEN DATA: INICIATIVAS NAS ESFERAS
+PÚBLICAS BRASILEIRAS
+Modalidade: Resumo Expandido
+Resumo: Trata de projetos envolvendo instituições públicas brasileiras no compartilhamento de
+seus dados com os cidadãos. Objetiva identificar iniciativas governamentais que estão propondo a
+abertura de seus dados na rede Linked Open Data. Para análise deste cenário, foi realizada uma
+pesquisa bibliográfica, de caráter qualitativo e exploratório em publicações da Ciência da Informação.
+Os resultados indicam uma baixa adesão ao padrão recomendado, podendo acarretar problemas no
+aspecto de interoperabilidade. Busca-se em pesquisas futuras o estudo de iniciativas que estão
+fazendo uso de ontologias como meio de modelar semanticamente seus dados na intenção de
+alcançar um nível de maturidade satisfatório na rede.
+
+Palavras-Chave: Dados Abertos Governamentais; Linked Open Data; Ontologias; Web Semântica.
+
+1 INTRODUÇÃO
+Dados abertos interligados ou Linked Open Data (LOD) constitui-se num movimento de
+integrar e compartilhar dados abertos heterogêneos na rede com o apoio das tecnologias da
+Web Semântica utilizando-se de diferentes fontes (datasets) para compor uma rede global de
+dados interligados acessíveis por produtores e consumidores na busca de novos
+conhecimentos (BERNERS-LEE, 2006; BIZER; HEATH; BERNERS-LEE, 2009). Várias comunidades
+vêm aderindo a essa iniciativa, destacando a do governo eletrônico que objetiva compartilhar
+dados com os cidadãos buscando democratizar a transparência de suas atividades e serviços
+prestados. Para tal, investem no desenvolvimento de linguagens com padrões preconizados
+pelo World Wide Web Consortium (W3C) para representar e organizar semanticamente seus
+dados neste ambiente (SCHANDL et al., 2011).
+No escopo da Web Semântica, dentre as linguagens e tecnologias acessíveis, o padrão
+mais conhecido e utilizado é o XML (eXtensible Markup Language). Ainda que o padrão XML
+tenha se tornado bastante popular, logo se percebeu que somente esse padrão não é
+suficiente para permitir a correta interpretação das informações por um sistema
+informatizado. Tal limitação pode acarretar deficiências nas buscas e na interoperabilidade
+entre sistemas. Alternativas estão sendo propostas para este problema pelo W3C no projeto
+da Web Semântica que tem como objetivo fornecer um conjunto de padrões abertos para
+operar junto a recursos heterogêneos, no sentido de promover sintaxe e métodos comuns
+para favorecer a interoperabilidade. Uma dessas alternativas é a adoção de ontologias
+(GUARINO, 1998; GUIZZARDI, 2005; ALMEIDA, 2013) para a compatibilização de conceitos
+encontrados em bancos de dados dos mais diversos tipos na Web.
+As ontologias apresentam-se como possibilidades de representação de conhecimento
+em sistemas de informação na medida em que buscam organizar e padronizar conceitos,
+termos e definições aceitas por uma comunidade particular. Várias linguagens baseadas em
+XML (ALLEMANG; HENDLER, 2008) têm sido propostas para representar ontologias como RDF
+(Resource Description Framework), RDF Schema e OWL (Ontology Web Language); além da
+linguagem de consulta para dados modelados em RDF, a SPARQL (Simple Protocol and RDF
+Query Language). Tais tecnologias permitem que a máquina interprete as marcações com
+semânticas bem definidas e necessárias para garantir, por exemplo, que o anotador e o
+
+
+consumidor da anotação compartilhem o mesmo significado perante um recurso, premissa
+básica para uma boa prática de LOD.
+A prática de LOD no âmbito governamental adquire uma nova dimensão, em especial
+pela grande capacidade dos governos em centralizar e coletar uma vasta gama de dados e
+informações sensíveis a toda uma sociedade. Na última década, organizações, governos,
+pesquisadores e especialistas dedicaram-se no aprofundamento do tema dados abertos
+governamentais e na consolidação de suas definições (OPEN GOVERNMENT DATA, 2007).
+Berners-Lee (2009) afirma que dados governamentais devem ser disponibilizados na
+Web por três motivos: (i) aumenta a conscientização dos cidadãos sobre as funções do
+governo, permitindo maior responsabilização; (ii) contribui com informações valiosas sobre o
+mundo; e (iii) permite que o governo, o país e o mundo funcionem de maneira mais eficiente.
+Recomenda, assim, um sistema de ranking (5-STAR, 2015) ou modelo cinco estrelas, como é
+referenciado na literatura, que ajuda a diagnosticar o nível de abertura de dados dos órgãos
+públicos, fornecendo degraus alcançáveis para se chegar a níveis mais refinados de dados
+abertos.
+No Brasil, os dados abertos no âmbito governamental consolidaram-se nos últimos
+anos nos portais eletrônicos de transparência do Brasil, podendo ser verificada nos três
+poderes da União, Estados, Distrito Federal e Municípios. Esse fenômeno está intimamente
+relacionado a alguns marcos regulatórios, como a Lei da Transparência (BRASIL, 2009), em
+especial com a publicação da Lei de Acesso a Informação (BRASIL, 2011) e recentemente com
+o decreto Nº 8.777, de 11 de maio de 2016, responsável por instituir a Política de Dados
+Abertos do Poder Executivo Federal (BRASIL, 2016).
+A inserção de dados abertos governamentais dentro da rede LOD favorece uma Web
+com informações e significados bem definidos e com soluções adequadas para os problemas
+de recuperação de dados, interoperabilidade e compartilhamento de informações do governo,
+permitindo que tanto as pessoas quanto as máquinas possam compreender o significado de
+uma informação. Nesse sentido, a presente pesquisa procura compreender qual o nível atual
+de maturidade do movimento LOD para o contexto de dados abertos governamentais nas
+esferas públicas brasileiras. Assim, o artigo objetiva identificar iniciativas de projetos que estão
+propondo a abertura de dados governamentais na rede semântica LOD de modo que em
+pesquisa futura seja possível o aprofundamento em dados científicos mais abrangentes e
+
+
+consolidados visando a um estudo comparativo entre projetos envolvendo dados abertos
+governamentais no contexto brasileiro.
+A presente seção contextualiza o tema e traça o objetivo da pesquisa. A seção 2 faz
+uma explanação sobre os fundamentos metodológicos empregados no delineamento da
+pesquisa. A seção 3 apresenta o resultado em estruturas sinópticas frente ao objetivo do
+trabalho. E a seção 4 faz as considerações finais abrindo espaço para pesquisas futuras.
+2 METODOLOGIA DE PESQUISA
+O presente trabalho demonstra o resultado preliminar de uma pesquisa em
+andamento a qual foi delineada em duas etapas para a sua concretização. A primeira etapa
+consistiu em uma análise qualitativa, de caráter exploratório, na qual se realizou uma pesquisa
+bibliográfica entre junho e agosto de 2019 com o propósito de coletar dados sobre o cenário
+de dados abertos governamentais no Brasil. Foram localizados projetos nessa perspectiva em
+artigos consultados nos Anais do Encontro Nacional de Pesquisa em Ciência da Informação
+(Enancib), um dos principais eventos científicos nesse campo no país, e em revistas nacionais
+classificadas na categoria Qualis no mesmo campo científico. O recorte de periodicidade dos
+artigos foi definido entre 2013 e 2019, pois se considerou um cenário de dados abertos
+governamentais no país atualizado e verossímil, adequando-se com a proposta da pesquisa.
+Na segunda etapa foram analisados os dados coletados nos artigos selecionados,
+utilizando-se a técnica de análise de conteúdo (BARDIN, 2011) que adota como estratégia a
+elaboração de categorias de análise de conteúdo para fins de extração e análise dos dados.
+Desse modo, as seguintes categorias de análise sobre os projetos foram elaboradas a partir de
+inferências sobre os documentos analisados: (i) Escopo: propósito ou finalidade do projeto
+analisado; (ii) Tecnologias utilizadas: linguagens e ferramentas empregadas no tratamento dos
+dados; (iii) Modelagem de dados: forma de organização e representação desses dados; (iv)
+Formato de dados: forma pela qual os dados estão codificados e disponibilizados; e (v) Meios
+de acesso: forma de se obter contato com os dados.
+3 RESULTADOS: PROJETOS DE DADOS ABERTOS GOVERNAMENTAIS NO BRASIL
+O Quadro 1, em anexo, a seguir sintetiza o resultado da coleta e análise dos dados
+inerentes às iniciativas de projetos voltados à publicização de dados governamentais nas
+esferas públicas brasileiras.
+
+Os resultados preliminares frente à análise dos projetos exibida no Quadro 1 apontam
+a baixa adesão do governo brasileiro em disponibilizar seus dados abertos de forma
+compatível com o que é recomendado para o movimento LOD. A situação se torna
+insatisfatória ao constatar que a preocupação com a padronização é nula nas demais esferas
+governamentais do país. Predominam os exemplos de disponibilização de dados sem
+estruturação e em formatos (HTML, CSV, PDF) incapazes de serem interligados com outros
+conjuntos de dados. Na categoria “modelagem de dados”, as iniciativas para organização e
+representação dos dados em sua maioria são baseadas em uma modelagem relacional de
+bancos de dados, cuja semântica não é tão bem tratada como no caso dos modelos
+conceituais baseados em ontologias (GUARINO, 1998; GUIZZARDI, 2005), o que pode acarretar
+problemas associados ao aspecto de interoperabilidade entre sistemas e bases de dados.
+Finalmente, remetendo-se ao modelo cinco estrelas, percebe-se que as iniciativas
+brasileiras preocupam-se nesse momento em satisfazer até o nível três, ou seja, disponibilizar
+os dados na Web em formatos não-proprietários. Essa atitude ainda é insuficiente para atingir
+o nível de maturação exigido pelo movimento LOD, em que os dados devem ser identificados
+por URI’s e disponibilizados em formatos que permitam sua interligação com outros datasets.
+4 CONSIDERAÇÕES FINAIS
+Torna-se imperativo destacar a importância do papel das ontologias no movimento
+LOD. Evain e Bürger (2011) afirmam que o elemento-chave para uma integração bem sucedida
+de dados está na adoção de ontologias como um meio formal de descrever seus conteúdos e
+características técnicas. Conforme assinalam alguns autores (CORDEIRO et al., 2011; SCHANDL
+et al., 2011), os esquemas disponíveis da nuvem LOD não são suficientes para uma atribuição
+semântica satisfatória aos dados, pois não compreendem um modelo conceitual adequado
+para representar parte de suas realidades, a saber: i) falta de descrição conceitual nos
+conjuntos de dados; ii) ausência de links nos esquemas de dados (para e entre mídias); iii) falta
+de expressividade semântica na representação de dados; e iv) falta de endereçamentos para
+descrição de fragmentos multimídia.
+A constatação exposta acima reforça a ideia da importância no uso de ontologias de
+domínio bem fundamentadas (GUIZZARDI, 2005) no movimento LOD para fornecer uma
+descrição conceitual para os dados a fim de melhorar a compreensão humana e a atribuição
+
+semântica às máquinas. Dessa forma, como pesquisa futura pretende-se concentrar no
+aprofundamento do estudo de iniciativas (a princípio brasileiras) que estão fazendo uso de
+ontologias como meio de modelar semanticamente seus dados, ampliando o universo de
+discussão sobre o nível de maturidade desses dados disponibilizados na rede semântica LOD.

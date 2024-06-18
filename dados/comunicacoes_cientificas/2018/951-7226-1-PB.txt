@@ -1,0 +1,559 @@
+
+MUSEU DO ÍNDIO: ESTUDO DE CASO DO PROCESSO DE MIGRAÇÃO E ABERTURA DOS
+DADOS LIGADOS SEMÂNTICOS DO ACERVO MUSEOLÓGICO COM O SOFTWARE LIVRE
+TAINACAN
+Modalidade da Apresentação: Comunicação Oral
+Resumo: O trabalho apresenta um estudo de caso de migração da documentação do acervo
+museológico do Museu do Índio para o software livre Tainacan. O Museu do Índio é uma importante
+instituição pública federal brasileira ligada a Fundação Nacional do Índio criada em 1953 e possuí
+como missão a preservação e promoção do patrimônio cultural dos povos indígenas. Desta forma, o
+presente trabalho tem como objetivos apresentar e descrever os resultados obtidos a partir de 07
+passos metodológicos que envolvem desde a análise técnica dos acervos, a coleta de informações,
+tratamento da informação até a migração da solução atual. Os resultados evidenciam o trabalho
+quantitativo de tratamento da informação, reduzindo os problemas técnicos sintáticos,
+normalização, reconciliação e desambiguação, chegando a reduzir, em média, em torno de 20% a
+variabilidade dos valores presentes nos metadados utilizados. Ressalta-se também os resultados
+obtidos na etapa de enriquecimento da informação por meio de recursos semânticos de
+reconciliação dos nomes das etnias indígenas com a plataforma Wikidata, chegando ao resultado em
+torno de 90% dos nomes identificados, conectando o acervo com outros recursos da Wikipédia e
+descrições multilíngues das etnias. Por fim, apresenta-se os resultados obtidos na interface gráfica e
+os ganhos em potencial para os usuários interessados no acervo do museu.
+
+Palavras-Chave: Tainacan; Wikidata; Museu do Índio; Acervos em rede, Repositório digital.
+
+1 INTRODUÇÃO
+O Museu do Índio é uma importante instituição pública federal brasileira ligada a
+Fundação Nacional do Índio (FUNAI). Criado em 1953, o museu tem como missão
+Preservar e promover o patrimônio cultural dos povos indígenas por meio
+de pesquisa, documentação, divulgação e diversas ações de fortalecimento
+de suas línguas, culturas e acervos, prioritariamente aqueles em situação de
+vulnerabilidade (MUSEU DO ÍNDIO, 2018).
+
+O museu possui um dos mais importantes acervos relacionados à cultura indígena no
+país
+Tem sob sua guarda documentos relativos à maioria das sociedades
+indígenas contemporâneas, constituídos de 15 mil 840 peças etnográficas e
+15 mil 121 publicações nacionais e estrangeiras, especializadas em
+etnologia e áreas afins. Seus diversos serviços são responsáveis pelo
+tratamento técnico de 76.821 registros audiovisuais e 833.221 documentos
+textuais de valor histórico e contemporâneo (MUSEU DO ÍNDIO, 2018).
+
+Trata-se, portanto, de uma instituição de grande valor cultural para um país como o
+Brasil, apresentando não apenas uma grande riqueza de seu acervo, como os números acima
+denotam, mas também uma variedade informacional por se tratar de uma instituição que
+congrega os papéis de arquivo, museu e biblioteca. Dessa forma, convive cotidianamente
+com grande complexidade informacional, envolvendo diferentes tecnologias de organização
+do acervo, tais como padrões de metadados, regras de catalogação, linguagens
+documentárias, bases de dados, técnicas de digitalização de acervo, entre outros. Gerenciar
+tal complexidade impõe desafios das mais variadas ordens, sobretudo em relação às práticas
+
+
+de gestão de acervos que facilitem sua integração e interoperabilidade, permitindo com que
+os usuários possam se beneficiar do acesso a essa documentação de maneira simples e
+objetiva.
+Martins, Silva e Carmo (2017) apontam, mapeando as principais iniciativas
+internacionais de organização de acervos digitais, que se consolida no cenário mundial
+práticas de gestão de acervos que se integram em rede a partir do compartilhamento e
+adoção coletiva de padrões e normas que visam publicar informação semântica a partir dos
+mesmos princípios. Novos modelos de governança têm surgido nesse cenário, produzindo
+experiências e resultados significativos de valorização da cultura pela adoção de novas
+práticas de publicação da informação em rede. A agregação dos serviços em pontos
+unificados de acesso facilita a vida do usuário e valoriza o reuso dos objetos digitais que se
+tornam acessíveis em uma única interface.
+Diversos estudos têm apontado que práticas ligadas a web semântica e aos dados
+abertos ligados vêm sendo utilizadas como estratégias para interconexão de acervos e
+aumento da disponibilidade das informações em ambiente de rede para instituições
+culturais (MARCONDES, 2012; MARCONDES, 2016; CONEGLIAN; SEGUNDO, 2017).
+No entanto, os caminhos e as etapas técnicas necessárias para a produção de acervos
+integrados em rede de forma semântica é ainda algo que carece de pesquisas e da
+documentação das experiências práticas já realizadas. Há desafios técnicos e organizacionais
+que precisam ser superados para que a organização dos acervos possa avançar nessa
+direção. Os problemas vão desde a produção original da documentação dos acervos, na falta
+de padrões claros estabelecidos e regras de catalogação compartilhadas, até aos softwares
+utilizados por muitas instituições que ainda não estão preparados para lidar com as
+informações disponíveis e enriquecidas de forma semântica, além da disponibilização de
+dados abertos.
+Foi visando ampliar a pesquisa a respeito desse cenário que no ano de 2014 o
+Ministério da Cultura dá início ao projeto Tainacan (MARTINS et al., 2017). Agregando o
+Instituto Brasileiro de Museus (IBRAM) no ano de 2015, o Tainacan vem se tornando um
+software livre que tem por objetivo facilitar a publicação de acervos digitais em rede das
+instituições de cultura, sobretudo dos museus. O Tainacan está em processo de implantação
+em diversas instituições públicas, tais como o Museu Histórico Nacional, o Museu da
+República, o Museu Villa Lobos, a Fundação Nacional de Artes (FUNARTE), entre outros.
+
+
+Dessa maneira, no ano de 2017, o Museu do Índio, interessado em participar da rede
+de instituições que têm experimentado o Tainacan como uma tecnologia de apoio a
+organização de seus acervos digitais em rede, iniciou um projeto de implantação na
+instituição. A presente pesquisa visa relatar as etapas metodológicas de execução desse
+trabalho de implementação, sobretudo, visando compreender quais as etapas técnicas e
+como elas devem ser encadeadas para potencializar o acesso aos acervos de cultura na
+direção dos dados ligados e padrões semânticos.
+2 DESENVOLVIMENTO
+2.1 O acervo digital do Museu do Índio: diagnóstico da situação atual
+O museu possui um acervo digital vasto que integra as diferentes áreas da
+documentação, envolvendo a sua biblioteca, arquivo e museu. No entanto, há diferentes
+tecnologias e soluções digitais em uso atualmente, fazendo com que tanto a navegação e
+usabilidade pelos diferentes conteúdos se torne diferente a cada tipologia de acervo, bem
+como a capacidade de integração dos acervos para a disponibilização de uma busca
+integrada ao usuário fique comprometida, dificultando o acesso e a compreensão do
+conjunto da documentação já digitalizada e disponível em rede. Deixa-se de utilizar, dessa
+maneira, importantes recursos técnicos que tanto podem valorizar como facilitar o acesso
+ao acervo aos seus usuários de interesse. Apresenta-se no quadro 01 as diferentes
+tecnologias em uso para os acervos digitais do museu.
+Quadro 01: Tecnologias em uso para os acervos digitais do Museu do Índio.
+Acervo
+
+Link
+
+Itens
+
+Tecnologia
+
+Museológico
+
+http://base2.museudoindio.gov.br/cgi-
+
+19.865
+
+Software PHL
+
+bin/wxis.exe?IsisScript=phl82/003.xis&ci
+
+(documentos)
+
+par=phl82.cip&acv=002&pft=decorado&l
+ang=por&tmp=/tmp/filecYOOPm
+Bibliográfico
+
+http://base2.museudoindio.gov.br/cgi-
+
+20.208
+
+bin/wxis.exe?IsisScript=phl82/003.xis&ci
+
+(documentos)
+
+Software PHL
+
+par=phl82.cip&acv=003&pft=decorado&l
+ang=por&tmp=/tmp/filecYOOPm
+Arquivístico
+
+http://www.docvirt.com/docreader.net/d
+
+Bibliográfico
+
+ocmulti.aspx?bib=museudoindio&pagfis=
+
+Arquivístico
+
+http://basearch.museudoindio.gov.br/
+
+623.960 (páginas)
+
+Software Docpro
+
+0 (documentos)
+
+Software ICA-AtoM
+
+Fonte: Dados da pesquisa.
+
+
+
+Vale dizer que para além das tecnologias na quadro 01, o museu utiliza uma outra
+tecnologia (software Joomla1) para o gerenciamento de conteúdo do seu site institucional,
+sendo por meio do acesso a esse ambiente que um usuário consegue localizar os acervos
+digitais e acessar suas páginas. São, portanto, 4 tecnologias diferentes em uso, gerando 4
+bancos de dados diferentes, interfaces gráficas, formas de navegação e modos de
+organização da informação em questão. A diferença nessas tecnologias inclui a formação dos
+links de acesso aos conteúdos, sendo que alguns sequer utilizam o domínio institucional do
+museu (tecnologia Docpro), o que certamente gera impactos na indexação e agregação
+desse conteúdo em mecanismos de busca na Internet, como Google, Yahoo e Bing,
+ampliando a dispersão do conteúdo e dificultando a busca integrada mesmo por meio de
+mecanismos externos aos sistemas de informação do museu.
+Outro ponto importante a destacar é o uso de diferentes tecnologias para acervos do
+mesmo tipo, estando, por exemplo, parte do acervo bibliográfico na tecnologia PHL e
+Docpro, gerando fragmentações no espaço informacional que são de difícil integração na
+experiência de uso e no tratamento de dados pelos interessados em pesquisa nesses
+acervos. O problema inclusive se expressa na forma de contagem da informação, sendo que
+algumas soluções apontam o número de documentos e outras o número de páginas,
+dificultando a geração de uma mesma métrica para contabilização dos documentos
+disponibilizados. Por fim, um outro problema apresentado pelas soluções atualmente em
+uso é a dificuldade de navegação no acervo por usuários que não tenham uma busca
+específica a ser realizada e tenham por objetivo explorar o acervo para conhecer as
+coleções, os conteúdos indexados e compreender melhor as possibilidades de exploração
+nos dados que as ferramentas ofertam. Para ilustrar, apresenta-se na figura 01 a tela de
+entrada do acervo museológico no software PHL.
+
+1
+
+http://www.museudoindio.gov.br/. Acesso em: 23 de jun. 2018.
+
+
+Figura 01: Tela de entrada do acervo museológico no software PHL.
+
+Fonte: Dados da pesquisa.
+
+Percebe-se na figura 01 que o sistema apenas oferece um campo de busca como
+alternativa para o usuário encontrar conteúdos no acervo, não havendo a disponibilização
+de formas de navegação de exploração livre nos documentos digitais, por exemplo, por meio
+de uma navegação facetada que apresente diferentes perspectivas a respeito dos
+documentos descritos ou a ordenação dos conteúdos por meio de algum tipo de filtragem,
+tais como ordem alfabética e data de entrada.
+Por fim, os sistemas atualmente em uso no museu não ofertam nenhuma
+funcionalidade técnica para disponibilidade de dados abertos e ligados a partir das
+possibilidades de descrição semântica da informação e conexão dos acervos com padrões
+internacionalmente utilizados. Os dados dos acervos não podem ser baixados localmente
+nas máquinas dos usuários, dificultando a capacidade de processar esses dados, produzir
+análises e sínteses da informação que são potencialmente interessantes e necessárias para
+pesquisadores interessados na identificação de padrões e cruzamentos dos dados do acervo
+com outras bases de dados.
+É considerando esse cenário de alta fragmentação dos acervos, pouca usabilidade na
+navegação e capacidade de exploração dos conteúdos autonomamente por parte dos
+usuários, além das poucas possibilidades de consumo dos dados em formatos abertos e
+semânticos, que o museu se interessa por novas tecnologias que possam suprir essas
+deficiências ampliando o potencial de uso da informação cultural de alto valor social
+disponibilizada em seus acervos. É nesse contexto que surge a plataforma Tainacan. Na
+
+
+
+presente pesquisa, o trabalho descreve exclusivamente o processo de migração da
+documentação referente ao acervo museológico.
+2.3 Metodologia
+A realização de um processo de migração e abertura de uma base de dados envolve
+diferentes etapas técnicas que precisam ser executadas de forma consequente e articulada.
+Envolve diferentes procedimentos de tratamento da informação, desde o entendimento das
+estruturas organizacionais da informação atualmente utilizadas na instituição até os
+princípios técnicos de conversão dessas estruturas em outras formas de representação e
+organização da informação, passando pela mudança de padrões técnicos, limpeza,
+tratamento, normalização, entre outras etapas. Para isso foram realizadas 07 etapas
+metodológicas de trabalho da informação que são descritas a seguir.
+1. Análise: realiza-se levantamento das características técnicas dos acervos,
+procurando identificar padrões de metadados utilizados, políticas de direitos
+autorais, políticas de digitalização, regras de catalogação em uso, linguagens
+documentárias, tipologia do acervo, informações técnicas dos softwares, bases de
+dados e formas de arquivamento dos conteúdos digitalizados. Além disso, esse é
+um momento fundamental do trabalho de análise e diálogo em conjunto com as
+instituições acerca do que elas possuem de recursos digitais que podem se tornar
+dados abertos de interesse público e que possam ser publicados na Internet
+como coleções visitáveis. É aqui que se identificam catálogos e instrumentos de
+organização da informação internas da instituição que podem ser potencialmente
+interessantes ao seu público e que ainda não foram publicados;
+2. Coleta: os dados de interesse para migração são extraídos da solução atual e
+disponibilizados em formato tratável pela equipe técnica;
+3. Tratamento: são realizados procedimentos técnicos de normalização, limpeza,
+correção de problemas sintáticos e preparação dos dados visando melhoria de
+desempenho nos processos de busca e recuperação da informação;
+4. Enriquecimento: são identificados os elementos semânticos na estrutura dos
+dados que podem ser descritos utilizando ontologias e sistemas de referenciais
+
+amplamente utilizados pela comunidade internacional de dados ligados, tais
+como DBpedia2, Wikidata3, VIAF4, entre outros;
+5. Migração: os dados tratados e enriquecidos são migrados para uma nova base de
+dados no sistema Tainacan, a partir do qual poderá ser publicado na Internet e
+acessado pelos usuários;
+6. Validação e formação: os técnicos de documentação do museu navegam,
+realizam operações de busca e recuperação da informação de maneira a
+identificar eventuais problemas de migração e identificar necessidades de
+correção nos dados nas etapas anteriores. Aproveita-se também para formar os
+técnicos na tecnologia utilizada bem como nos procedimentos técnicos
+informacionais para manter a nova estrutura e fluxo informacional de gestão das
+coleções;
+7. Difusão e colaboração em rede: o acervo é finalmente aberto e disponibilizado
+para os usuários utilizarem e fornecerem impressões, comentários e colaborarem
+em diferentes etapas de contribuição aos acervos, a depender dos interesses da
+instituição em se abrir a esse tipo de diálogo com seus usuários.
+Vale dizer que para o presente trabalho serão apresentados apenas os resultados das
+etapas de 1 a 5 por conta do escopo do artigo e limitação de espaço, ficando as demais para
+trabalhos futuros.
+2.4 Resultados
+Os trabalhos junto ao Museu do Índio tiveram início em fevereiro de 2018, quando se
+realizou a etapa de análise dos acervos. Foram realizados dois dias de diálogo com os
+técnicos do museu, onde importantes recursos informacionais foram identificados. Iniciouse pela base de dados utilizada para registro das informações do acervo museológico, o
+software PHL. Em relação ao padrão de metadados, o museu utilizava para sua catalogação
+o MARC da maneira como era ofertado pelo software PHL em uso, realizando adaptações de
+significado semântico dos metadados. Do total de metadados oferecidos, o museu utilizava
+19 campos. No quadro 02, pode-se ver os metadados utilizados, o significado semântico
+atribuído pelo museu aos mesmos, a quantidade de registros identificados com o respectivo
+2
+
+https://wiki.dbpedia.org/. Acesso em 24 jul. 2018.
+http://wikidata.org/. Acesso em 24 de jul. 2018.
+4
+https://viaf.org/. Acesso em 24 de jul. 2018.
+3
+
+
+
+campo catalogado e a taxa relativa de preenchimento do metadado em relação ao total de
+registros.
+Quadro 02: Metadados utilizados e frequência de uso pelos registros da base de dados do Museu
+do Índio.
+
+Fonte: Dados da pesquisa.
+
+Em relação às linguagens documentárias em uso para catalogação, foram
+identificados dois instrumentos utilizados pelo museu: o Tesauro de Cultura Material dos
+Índios no Brasil (MOTTA e OLIVEIRA, 2006) e o Dicionário do Artesanato Indígena (RIBEIRO,
+1988). Ambos são utilizados para compor os metadados v048 (referência bibliográfica), v061
+(notas gerais) e v071 (categoria). Vale ressaltar que os termos utilizados nos metadados
+eram inseridos manualmente pelos técnicos do museu a partir da pesquisa nas fontes de
+informação mencionadas, sem controle terminológico pelo software em uso. Tal recurso de
+indexação acabou gerando problemas de normalização e padronização dos termos, como se
+verá a seguir.
+Em relação às regras de catalogação, a equipe técnica produziu um manual de
+preenchimento da ficha catalográfica buscando padronizar como cada metadado deveria ser
+preenchido, facilitando o controle sintático e semântico do trabalho de catalogação. Esse
+material se mostrou de fundamental importância para o processo de coleta da base de
+dados, considerando que os técnicos puderam checar as informações coletadas e revisar se
+
+as mesmas apresentavam as informações esperadas conforme o manual indicava, facilitando
+o reparo de erros técnicos de importação e exportação de dados.
+Em relação à política de digitalização, o museu possui um amplo trabalho de
+tratamento do acervo. Dos 19.775 itens do acervo identificados na base de dados, 8.949
+(45,3%) já se encontrava com referência direta aos arquivos digitais em alta definição dos
+objetos. O museu estima que 50% do seu acervo se encontra digitalizado.
+A respeito da tecnologia de base de dados e arquivamento da informação,
+identificou-se que o sistema PHL não apresentava base de dados relacional possível de
+coletar na infraestrutura de servidores do museu, dado que seu servidor de banco de dados
+é o WWWisis©Bireme. Tal fato apresentou desafio técnico para a etapa de coleta da
+informação, considerando que os dados tiveram de ser exportados em XML a partir de uma
+funcionalidade técnica do software. A exportação resultou em dois arquivos em formato
+texto estruturados no padrão XML com as informações dos 19 campos utilizados pelo
+museu. Os arquivos possuíam o tamanho de 51,4MB e 4,7MB, contendo o primeiro os
+metadados descritivos e o segundo os administrativos.
+Já na etapa de tratamento, os dados coletados foram analisados para verificar sua
+estrutura e a adequação dos arquivos XML para posterior conversão. Utilizou-se o software
+XML Viewer Plus5 para analisar as eventuais inconsistências estruturais dos arquivos. Foi
+utilizada a função validar, que verifica se todas as tags XML estão corretamente dispostas e
+se existe algum caractere que cause interferência na estrutura do documento, tais como
+caracteres especiais que podem provocar quebra de linha e prejudicar uma etapa de
+conversão de dados. Os problemas encontrados tinham três características em comum e
+suas respectivas soluções: 1 – tags de links mal formadas "<Link>Descrição</a>" foram
+organizados, onde faltou a abertura ou fechamento da tag foi corrigido; 2 – caractere "&"
+com interferência no documento foram substituídos por “e”; 3 – caracteres "<", ">" no meio
+de textos sem indicação de tags, com interferência na leitura do XML foram removidos.
+Entende-se que os problemas encontrados se devem a dificuldade do sistema antigo em
+exportar seus dados, já que alguns dos caracteres inseridos nas informações de
+caracterização dos objetos do museu foram confundidos com tags ou interferiram na leitura
+
+5
+
+XML Viewer Plus – http://www.alexnolan.net/software/freexmleditor.htm . Acesso em 24 de jul.
+2018.
+
+
+
+do documento, além disso, os links das imagens foram exportados com falhas de abertura
+ou fechamento de tags, impedindo que os dados fossem obtidos corretamente.
+A partir da validação dos arquivos XML foi desenvolvido um código de programação
+na linguagem Python6, para ler especificamente a estrutura do arquivo XML exportado pelo
+PHL e estruturar os dados no formato tabular, onde as tags de atributos são transformadas
+em colunas e os valores dentro dessas tags armazenados em células.
+Uma vez os arquivos corrigidos estruturalmente e convertidos em formato de fácil
+tratamento, adotou-se o software OpenRefine7 para analisar eventuais problemas de
+normalização, reconciliação e desambiguação dos termos de indexação e explorar os
+demais metadados em busca de se identificar padrões que poderiam ser facilmente
+corrigidos de maneira semiautomática pelas funcionalidades disponíveis no software. Foram
+utilizadas várias estratégias para tratamento dos dados, visando, sobretudo, melhorar a
+qualidade da documentação já existente em relação ao acervo do museu e facilitar os
+processos de busca e recuperação da informação. As técnicas utilizadas para cada campo de
+metadados descritos no quadro 02 foram: limpeza de espaços em branco iniciais, remoção
+de espaços em branco consecutivos, padronização de separador de textos (havia diferentes
+formatos, tais como “,”, “;”,”/” entre outros), normalização dos termos em caixa baixa,
+aplicação dos algoritmos de agrupamento que, segundo Stephens (2018), “encontram
+grupos de diferentes valores que são formas alternativas de representação da mesma coisa”,
+transferência de metadados para os campos corretos quando foram encontradas
+ocorrências em campos trocados, separação de metadados para compor campos múltiplos
+quando foi identificado que duas ou mais informações estavam agrupadas de forma
+incorreta em um campo e, por fim, reconciliação para dados normalizados (caso de
+nomenclatura das etnias indígenas, onde houve normalização das entradas). No quadro 03,
+observa-se o resultado do trabalho de tratamento de dados produzido com o OpenRefine,
+ressaltando a porcentagem de redução de termos obtida após a execução de todas as
+técnicas listadas acima.
+
+6
+
+Link do Código disponível em:
+https://github.com/LuisMDlab/projeto_base_museus/edit/master/xml_to_Csv.py. Acesso em 24 jul.
+2018.
+7
+Open Refine – www.openrefine.org. Acesso em 24 jul. 2018.
+
+
+Quadro 03: Redução do número de termos dos metadados do acervo museológico do Museu do
+Índio.
+
+Fonte: Dados da pesquisa.
+
+É importante ressaltar que há 11 metadados nos quais se obteve uma redução de
+50% ou mais no número de termos utilizadas na catalogação dos objetos. É um resultado de
+destaque, uma vez que essa redução representa a resolução de problemas técnicos
+sintáticos da informação descritiva e agrupa conceitos que representavam a mesma
+informação mas estavam escritos de formas ligeiramente diferentes, a ponto de serem
+identificados de forma semiautomática pelos algoritmos de agrupamento. Na média, podese dizer que houve uma redução de 17% dos termos da base de dados de documentação
+como um todo. Esse resultado traz impactos na capacidade de melhoria de uso do sistema
+pelos usuários, que passam a ter maior precisão e confiabilidade nos resultados quando
+executam ações de busca e recuperação da informação. Vale ressaltar que para as duas
+últimas ocorrências do quadro 03, a terminologia étnica e descritores secundários, houve
+
+
+
+aumento do número de termos por conta da separação de termos que estavam
+anteriormente agrupados, permitindo com que eles fossem descritos em campos múltiplos e
+não todos juntos em um mesmo campo de texto. Entende-se que essa etapa de tratamento
+representa uma contribuição técnica de alta relevância para a discussão dos procedimentos
+técnicos da documentação museológica para área.
+Uma vez a informação tratada tecnicamente na etapa descrita acima, passou-se a
+etapa de enriquecimento. A importância dessa etapa consiste no trabalho de identificar as
+possíveis formas de ligar os dados em trabalho com outras fontes de informação, ampliando
+o valor de uso da informação na medida em que conecta os registros em redes semânticas a
+partir de padrões públicos e amplamente utilizados. Novamente, utilizamos o software
+OpenRefine a partir da funcionalidade de reconciliação com a base semântica Wikidata para
+essa etapa. Entende-se que a Wikidata vem se transformando numa importante referência
+internacional para interconectar diversos sistemas de indexação e controle de autoridades
+semânticos atualmente em uso (ERXLEBEN et al., 2014). Há importantes iniciativas no
+mundo dos acervos museológicos se utilizando da mesma estratégia, tendo inclusive por
+protagonista a iniciativa de agregação de acervos digitais de museus, galerias, bibliotecas e
+arquivos da União Européia, a Europeana, que realizou no ano de 2017 uma chamada
+pública (EUROPEANA, 2017) incentivando as instituições a publicarem seus vocabulários na
+Wikidata, entendendo que ações como essa poderiam trazer benefícios a comunidade de
+instituições guardiãs de acervos no compartilhamento e reconciliação de seus vocabulários,
+beneficiariam a Wikidata, pois possibilitaria o enriquecimento dessa base de conhecimento
+público tornando-a mais robusta e por fim, beneficiariam a Europeana por possibilitar o
+acesso a conhecimento mais especializado sobre sobre os seus acervos por meio da
+wikidata. Dessa forma, entende-se a Wikidata como um dos maiores agregadores disponível
+publicamente para reconciliação com vocabulários controlados dos mais diferentes tipos,
+envolvendo desde conceitos de áreas específicas de conhecimento, como o caso de uma
+pesquisa sobre genética que se vale da plataforma como uma importante fonte de
+desambiguação de conceitos (BURGSTALLER-MUECHLBACHER, 2016), e até o controle de
+autoridades de nomes de organizações, países, artistas, entre outros.
+A aplicação da etapa de enriquecimento na base do Museu do Índio se deu, como
+etapa inicial de experimentação, a partir do metadado v043-Nome da Etnia. O objetivo era
+encontrar na Wikidata os códigos que representassem o nome das etnias indígenas e
+
+
+
+dessem acesso aos demais conteúdos ali disponíveis, tais como outras propriedades a
+respeito das etnias: variações na forma de escrita do nome, tamanho da população,
+geolocalização, endereço das páginas na Wikipédia nas diferentes línguas que descrevem
+verbetes para a respectiva etnia, entre outros. Vale dizer que a Wikidata é um sistema que
+lida com a informação de maneira multilíngue, facilitando com que se possa encontrar a
+mesma informação descrita e representada em várias linguagens a partir de um único código
+de controle do conceito representado. Dessa maneira, esperava-se, por meio desta etapa,
+ter acesso a rede de descrição de verbetes das etnias indígenas em várias línguas,
+enriquecendo a documentação do museu com essa diversidade de informações e referências
+para uma rede especializada de informação técnica, além de identificar um metadado da
+documentação do museu com um identificador reconhecido internacionalmente. Esse é um
+passo fundamental na direção da abertura da documentação no formato dados ligados
+semânticos, etapa a ser realizada em pesquisa futura, mas que já se preparava nesse
+momento de enriquecimento da informação.
+Como exemplo, observa-se nas figuras 02 (nomes alternativos), 03 (outros
+identificadores internacionais que se referem a esse mesmo conceito) e 04 (verbetes de
+diferentes línguas disponíveis na Wikipedia sobre o conceito) informações disponíveis na
+Wikidata sobre a etnia Caiapó, identificador Q1028240, que, uma vez identificada na base do
+museu, dá acesso ao enriquecimento de todas essas informações na base.
+Figura 02: Nomes alternativos ao conceito Caiapós.
+
+Fonte: Wikidata.
+
+
+Figura 03: Outros identificadores internacionais representando o conceito Caipós.
+
+Fonte: Wikidata.
+
+Figura 04 – Verbetes em várias línguas descrevendo o conceito Caiapós na Wikipedia.
+
+Fonte: Wikidata.
+
+Ao produzir a conexão da base do museu com a Wikidata, passa-se a ter acesso a
+toda essa informação disponível, que pode ser incorporada em metadado específico na
+documentação do acervo e apresentada ao usuário quando de seu acesso aos registros. Vale
+ressaltar que na figura 03, pode-se também utilizar esses identificadores internacionais para
+fornecer outros links a outras bases de dados que possam conter informações relevantes ao
+conceito representado. Do total de 265 termos de nomes de etnias existentes na base,
+conforme dados do quadro 03, encontrou-se na Wikidata 232 (87,5%), permitindo que uma
+taxa bastante elevada de etnias pudessem ser enriquecidas com as referências apresentadas
+
+
+pela Wikidata, conforme se apresentou nas figuras acima. Entende-se que essa contribuição
+à documentação do museu o coloca em outro paradigma informacional, fazendo com que
+se torne de fato uma informação interoperável em rede, permitindo dialogar com bases de
+controle de autoridades internacionais, abrindo as portas para que novos produtos e
+serviços informacionais possam ser gerados a partir dessa conexão.
+Finalizados os trabalhos de enriquecimento dos dados, passou-se à etapa de
+migração, última etapa a ser apresentada na presente pesquisa, quando os mesmos são
+transferidos para o software livre Tainacan e disponibilizados em ambiente web. Os dados
+foram importados utilizando-se a API pública do Tainacan, a partir da configuração prévia
+dos tipos de metadados a serem utilizados em uma nova coleção. Além disso, foram
+configuradas as facetas que serviriam de estratégia de navegação e recuperação da
+informação do acervo. As informações técnicas sobre como proceder a instalação e
+migração dos dados realizadas nesta etapa podem ser encontradas em Martins et al. (2017).
+Apresenta-se na figura 05 o resultado final da migração e disponibilização da documentação
+do acervo no software livre Tainacan.
+Figura 05: Documentação do Museu publicada no software livre Tainacan.
+
+Fonte: Dados da pesquisa.
+
+
+
+Observa-se na figura 05 algumas características da interface gráfica proposta pelo
+Tainacan: as facetas para filtro e navegação ao lado esquerdo da tela, o acesso aos objetos
+digitais no corpo central da página, diferentes funcionalidades de visualização dispostas na
+barra de cima dos objetos, tais como a forma de ordenação dos itens, a forma de
+visualização e a barra de busca simples e avançada. Com isso, conclui-se a descrição dos
+resultados obtidos.
+3 CONSIDERAÇÕES FINAIS
+O presente trabalho apresentou os resultados obtidos na realização de 05 etapas
+técnicas de preparação da documentação do acervo museológico do Museu do Índio para
+sua disponibilização na Internet por meio do software livre Tainacan. O trabalho teve como
+preocupação demonstrar em detalhes os procedimentos técnicos realizados bem como os
+resultados obtidos em cada etapa visando, sobretudo, ressaltar a importância da realização
+desse tipo de trabalho para que se possa obter resultados de melhor qualidade da
+informação quando de sua disponibilização em ambiente de rede para acesso público.
+Expressivos resultados foram obtidos na etapa de tratamento de dados, quando se
+pode reduzir os problemas sintáticos, má formação e erros de catalogação presentes na
+documentação. Tal etapa terá efeito significativo na realização de tarefas de busca e
+recuperação da informação, melhorando precisão e a qualidade dos resultados, permitindo
+aos usuários encontrar corpus de documentos mais precisos. Espera-se investigar tais efeitos
+em trabalhos futuros.
+Já na etapa de enriquecimento, o resultado obtido de mais de 85% de conexão dos
+nomes das etnias indígenas com a plataforma Wikidata traz não apenas resultados imediatos
+de enriquecimento da documentação museológica, mas gera a possibilidade da produção de
+novos serviços e produtos informacionais. De imediato, a informação apresentada no
+Tainacan pode oferecer os links encontrados para as páginas na Wikidata e na Wikipedia
+referentes a cada etnia indígena nas várias línguas presentes, permitindo com que os
+usuários possam navegar nessa informação de maneira sistematizada a partir da
+documentação do museu. É um complemento que facilita e complementa os recursos de
+pesquisa ofertados pelo acervo digital. Como perspectiva futura, tal ação permite ao museu
+se conectar a Wikidata de várias formas, por exemplo, enviando parte do seu acervo para
+ser disponibilizado na Wikimedia Commons, tornando-se disponível para ilustrar verbetes
+
+das etnias indígenas das várias línguas presentes na Wikipedia, ampliando a capacidade de
+difusão e reuso dos conteúdos digitais disponíveis em seu acervo.
+
+Além disso, essa
+
+estratégia aponta um caminho para integração dos próprios acervos internos da instituição,
+agregando biblioteca, arquivo e museu a partir do compartilhamento das mesmas
+referências semânticas controladas por meio da Wikidata. Pretende-se explorar em
+pesquisas futuras outras possibilidades de conexão do acervo digital do museu disponível no
+Tainacan com as soluções Wikimedia.
+Por fim, o Tainacan se mostra uma ferramenta que apresenta grande potencial de
+oferecer solução aos principais problemas apresentados na seção de diagnóstico da situação
+atual do museu. Em relação ao cenário de alta fragmentação dos acervos o software permite
+integrar diferentes coleções e formatos de documentação, em relação a pouca usabilidade
+na navegação do software atual e a baixa capacidade de exploração dos conteúdos
+autonomamente por parte dos usuários, o Tainacan oferta interface com navegação
+facetada e diferentes formas de visualização da informação, por último, em relação às
+poucas possibilidades de consumo dos dados em formatos abertos e semânticos, a solução
+atual apresentou um caminho simples, mas que se vale da capacidade de reconciliar dados
+da documentação do museu com a Wikidata e apresentá-los ao usuário no Tainacan como
+informação incorporada digitalmente em metadado específico e modelado para esse fim.
+Entende-se que esse caminho técnico de trabalho com a documentação relativa ao
+acervo do museu, visando sua migração e abertura para acesso público na web, amplia seu
+valor de uso e sua capacidade de se socializar em rede, apoiando o trabalho social e político
+que compete ao Museu do Índio na preservação e promoção do patrimônio cultural
+indígena.

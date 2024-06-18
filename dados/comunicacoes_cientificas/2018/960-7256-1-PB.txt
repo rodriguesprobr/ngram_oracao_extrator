@@ -1,0 +1,244 @@
+
+DETECÇÃO DE VÍNCULOS EM RELATÓRIOS DE INTELIGÊNCIA FINANCEIRA
+
+Modalidade da Apresentação: Pôster
+Resumo: A Polícia Federal tem, entre suas competências, analisar os Relatórios de Inteligência
+Financeira (RIF), gerados pelo Conselho de Controle de Atividades Financeiras (COAF). Essa análise
+verifica se existe algum indício de crime de lavagem de dinheiro e, se for o caso, inicia uma
+investigação. Essa análise é realizada de forma manual e, dependendo da experiência que o analista
+possui, pode obter resultados discrepantes. Para minimizar esse problema e tornar mais ágil essa
+análise, esse projeto vem propor que esse trabalho seja realizado de forma automatizada, utilizando
+as técnicas de Mineração de Texto, Processamento em Linguagem Natural e Aprendizado de Máquina.
+A ideia é que o analista, após o COAF enviar o RIF, que é um arquivo em formato PDF, submeta esse
+arquivo a um sistema computacional que faça sua leitura detalhada e retorne as informações contidas
+no relatório, como entidades, operações, valores, datas e vínculos entre as entidades. As informações
+encontradas serão armazenadas em uma de base dados e disponibilizadas de forma estruturada para
+que o analista possa submeter os vínculos detectados a uma ferramenta de diagramação e análise de
+redes. Além disso, a organização e armazenamento dessas informações, também irá permitir o
+cruzamento dos vínculos de diversos RIFs e manter o seu histórico.
+Palavras-Chave: Lavagem de dinheiro; Relatório de Inteligência Financeira; Mineração de texto;
+Processamento em linguagem natural; Aprendizado de máquina.
+
+
+1 INTRODUÇÃO
+A Polícia Federal é uma das principais autoridades competentes responsáveis pela
+investigação de crimes de lavagem de dinheiro. Recebe do Conselho de Controle de Atividade
+Financeiras (COAF) o Relatório de Inteligência Financeira (RIF), que relata as transações
+suspeitas (COAF, 2015). Atualmente as áreas de inteligência da PF analisam o RIF de modo
+manual e identificam entidades1, valores e operações realizadas (POLÍCIA FEDERAL, 2013).
+Essas informações são tabuladas, permitindo a sua leitura por ferramentas de Análise de
+Vínculos e a geração de diagramas de relacionamentos entre as entidades, facilitando a
+detecção de Organizações Criminosas.
+Figura 1: Detecção de Vínculos.
+
+Fonte: Elaborado pelo autor.
+
+Esse trabalho vem propor que a leitura do RIF e detecção dos vínculos2 a serem
+tabulados sejam realizadas de modo automatizado, através da utilização de técnicas de
+Mineração de Texto, facilitando e padronizando o trabalho de análise do RIF.
+
+1
+
+Pessoas Físicas ou Jurídicas.
+No contexto do Relatório de Inteligência Financeira, vínculos são as ligações entre as
+entidades informadas concretizadas através de algum tipo de operação financeira.
+2
+
+
+2 LAVAGEM DE DINHEIRO
+Podemos entender por lavagem de dinheiro como “a atividade de investir, ocultar,
+substituir ou transformar e restituir o dinheiro de origem ilícita aos circuitos econômicofinanceiros legais, incorporando-o a qualquer tipo de negócio como se fosse obtido de forma
+lícita”, (CALLEGARI, 2001 apud LUSTOSA, 2009). Outra definição sobre o termo diz que se trata
+de uma “forma genérica de referir-se ao processo ou conjunto de operações de ocultar a
+origem de dinheiro ou dos bens resultantes das atividades delitivas e integrá-los no sistema
+econômico ou financeiro, em operações capazes de converter o dinheiro sujo em dinheiro
+limpo”, (LUSTOSA, 2009).
+A lavagem de dinheiro é um processo complexo no qual pode ser identificado três
+fases, ocultação, dissimulação e integração. Somente no fim da década de 1980 foram
+tomadas medidas concretas para o combate da lavagem de dinheiro em âmbito internacional.
+Capitaneada pela ONU, foi realizada a Convenção de Viena em 1988, com o objetivo de
+combater o tráfico internacional de entorpecentes (ONU, 1988). E em 1989, a cúpula do G-73,
+que foi realizada em Paris, criou o Grupo de Ação Financeira contra a Lavagem de Dinheiro e
+o Financiamento do Terrorismo - GAFI/FATF, com o objetivo de elaborar políticas de proteção
+ao sistema bancário e às instituições financeiras e identificar suas vulnerabilidades.
+Em 1998, no Brasil foi promulgada a lei 9.613 chamada de “Lei de Lavagem de Capitais”
+ou também de “Lei de Lavagem de Dinheiro” com o intuito de disponibilizar uma lei específica
+para esse tipo de crime e também adequar o país à Convenção de Viena e às recomendações
+do GAFI (OBREGON, 2001). Essa lei também instituiu a criação do Conselho de Controle de
+Atividade Financeiras (COAF) que tem como função a prevenção e combate à lavagem de
+dinheiro e ao financiamento do terrorismo. O COAF atua em conjunto com diversos órgãos e
+entidades financeiras com o objetivo de evitar a utilização desses diversos setores sejam
+usados nas práticas de lavagem de dinheiro e, quando detectam operações atípicas4 realizadas
+pelos seus usuários, têm a obrigação de informar ao COAF. O controle deve ser realizado não
+apenas sobre as pessoas físicas, mas também em qualquer empresa, grupo ou conglomerado
+(MARQUES, 2014).
+
+3
+
+Grupo dos sete países mais ricos do mundo – Alemanha, Canadá, Estados Unidos, França,
+Itália, Japão e Reino Unido.
+4
+O Banco Central do Brasil define um rol de hipóteses de operações suspeitas através das
+cartas-circulares 2.826/1998 e 3.098/2003.
+
+Recebida a comunicação de operações suspeitas, o COAF realizará a análise para
+detectar se existem evidências de crime de lavagem de dinheiro e, se realmente forem
+detectadas, será feito um intercâmbio de informações com as autoridades competentes
+(MARQUES, 2014), conforme é disciplinado pelo artigo 15 da Lei nº 9.613/1998: “O COAF
+comunicará às autoridades competentes para a instauração dos procedimentos cabíveis,
+quando concluir pela existência de crimes previstos nesta Lei, de fundados indícios de sua
+prática, ou de qualquer outro ilícito” (BRASIL, 1998).
+São consideradas as autoridades competentes para receberem os informes do COAF o
+Ministério Público Federal, o Ministério Público do Estado respectivo e a Polícia Federal, os
+quais poderão proceder com o bloqueio da operação financeira suspeita, iniciar uma
+investigação criminal e, se for o caso, propor a ação penal (ARAS, 2007). O informe
+disponibilizado pelo COAF às autoridades competentes é chamado de Relatório de Inteligência
+Financeira (RIF). Podemos observar abaixo, as etapas percorridas por esse processo, que
+também é conhecido como “Inteligência Financeira”.
+Figura 2: Processo de Inteligência Financeira.
+
+Fonte: Elaborado pelo autor.
+
+3 DETECÇÃO DE VÍNCULOS NO RIF PELA POLÍCIA FEDERAL
+No âmbito da Polícia Federal, o RIF será recebido pela área de repressão a crimes
+financeiro, a qual realizará uma avaliação preliminar para indicar qual será a delegacia
+responsável pela análise do documento. Estando na delegacia específica, o RIF deverá ser
+analisado minuciosamente para detectar se existem os indícios necessários para retratar uma
+prática criminosa e, consequentemente, a instauração de um procedimento investigativo
+formal (POLÍCIA FEDERAL, 2013). O RIF é um documento em formato PDF – Portable Document
+
+Format, e é escrito em linguagem natural, não estruturado, com relatos descritos pelos
+analistas do COAF de onde deverão ser extraídos as referências aos possíveis vínculos.
+Dependendo do nível de complexidade do RIF, a análise poderá ser realizada apenas
+com a sua leitura e, nos casos mais complexos, os vínculos detectados deverão ser
+armazenados em planilhas eletrônicas ou em banco de dados e, posteriormente, a utilização
+de softwares analíticos para a análise desses vínculos.
+Na fase de detecção e tabulação de vínculos, é essencial que seja realizada com o maior
+grau de precisão possível pois, caso contrário, irá comprometer uma correta análise na fase
+posterior. Assim, esse estudo propõe uma solução automatizada para leitura do RIF e
+detecção dos vínculos, que são as entidades e eventos identificados utilizando principalmente
+técnicas de Text Mining (Mineração de Textos), Natural Language Processing (Processamento
+de Linguagem Natural) e Machine Learning (Aprendizado de Máquina) e posterior
+armazenamento dos resultados em base de dados estruturada.
+A Mineração de Textos consiste na extração de informações úteis em textos não
+estruturadas escritos em linguagem natural e envolve várias áreas da informática como
+mineração de dados, aprendizado de máquina, recuperação de informação e linguagem
+computacional, para poder transformar os textos analisados em algo compreensível para o
+computador (MACHADO et al., 2010). A metodologia proposta por Aranha, Vellasco e Passos
+(2007), divide a mineração de textos em cinco etapas distintas: extração, pré-processamento,
+transformação, mineração e análise.
+O Processamento de Linguagem Natural (PLN), em sentido amplo, tem a função de
+realizar a comunicação entre o computador e a linguagem humana tratando, no nível
+computacional, os seus diversos aspectos, como sons, palavras, sentenças e discursos, sendo
+considerados os seus formatos e referências, estruturas e significados, contextos e usos. Essa
+comunicação poderá ocorre nos diversos níveis de entendimento ou geração, fonético,
+morfológico, sintático, semântico e pragmático (GONZALEZ; LIMA, 2003).
+E Aprendizado de Máquina é uma área da Inteligência Artificial cujo objetivo é o
+desenvolvimento de técnicas computacionais sobre o aprendizado bem como a construção de
+sistemas capazes de adquirir conhecimento de forma automática. Um sistema de aprendizado
+é um programa de computador que toma decisões baseado em experiências acumuladas por
+meio de solução bem-sucedida de problemas anteriores (Michalski, et. all, 2013).
+
+
+4 METODOLOGIA
+A mineração de texto realizada no RIF deverá identificar, extrair as informações e
+estruturá-las conforme o padrão exemplificado na tabela abaixo:
+Tabela 1: Informações do RIF tabuladas.
+
+Fonte: Elaborado pelo autor.
+
+As informações então serão armazenadas em banco de dados, conforme modelo de
+entidade e relacionamento proposto abaixo, permitindo que possam ser acessadas
+posteriormente, realizar cruzamentos entre diversos RIFs e pesquisas sobre as entidades
+identificadas.
+Figura 3: Modelo de Entidade e Relacionamento.
+
+Fonte: Elaborado pelo autor.
+
+Os testes iniciais para a mineração de texto no RIF foram realizados com a biblioteca
+SpaCy 5, que possui um modelo em português, pt_core_news_sm. A biblioteca SpaCy tem um
+analisador sintático (parser) que realiza a análise de um texto e determina sua estrutura
+gramatical. Primeiro utilizamos a biblioteca Pdfminer6 para transformar o documento PDF em
+
+5
+6
+
+https://spacy.io/
+https://pypi.org/project/pdfminer/
+
+arquivo texto. Posteriormente, utilizamos o analisador sintático da biblioteca SpaCy para
+identificar as entidades CPF, CNPJ, Localidade e Data (em dois formatos, por extenso ou com
+barras). Com os primeiros resultados obtidos, alimentamos à biblioteca SpaCy com os seus
+próprios resultados de treinamento, com o intuito de melhorar a acurácia.
+
+5 RESULTADOS
+Os resultados preliminares da fase de mineração de texto do documento RIF, utilizando
+a biblioteca SpaCy e as realimentações, podem ser observados na tabela 1. As métricas
+avaliadas foram: i) a quantidade de palavras marcadas corretamente como entidade, ii) a
+quantidade de palavras marcadas indevidamente como entidade e iii) a quantidade de
+entidade omitidas. Foram utilizados 4 modelos diferentes para realizar a mineração do texto:
+● Modelo 1 - modelo original disponibilizado no SpaCy, versão utilizada 2.0.0;
+● Modelo 2 - modelo gerado com base no original, acrescido do treino de 500
+iterações dos 'dados de treino' e 20 iterações nos dados dos arquivos de
+Localidades;
+● Modelo 3 - modelo gerado com base no original, acrescido do treino de 20
+iterações dos 'dados de treino';
+● Modelo 4 - modelo em branco, acrescido do treino de 20 iterações dos 'dados de
+treino'.
+Os resultados podem ser vistos na Tabela 1. O Modelo 1 teve acurácia de 14%, enquanto
+o Modelo 2 não conseguiu nenhuma marcação. Os modelos Modelo 3 e Modelo 4 tiveram
+uma performance superior às demais, obtendo acurácia de 43% e 50% respectivamente.
+Notadamente, houve um avanço na acurácia, de acordo com a mudanças no modelo original
+da biblioteca SpaCy. Entretanto, mesmo utilizando a biblioteca SpaCy com as alterações
+realizadas foi insatisfatória para o cumprimento do objetivo de retirar as entidades do texto.
+
+Tabela 1: Resultados da Identificação.
+Acertos(%)
+
+Erros de
+Marcação (%)
+
+Erros por
+Omissão (%)
+
+Modelo 1
+
+14
+
+53
+
+33
+
+Modelo 2
+
+0
+
+3
+
+97
+
+Modelo 3
+
+43
+
+33
+
+24
+
+Modelo
+
+Modelo 4
+
+50
+45
+Fonte: Elaborado pelo autor.
+
+5
+
+6 CONSIDERAÇÕES FINAIS
+Podemos concluir que, teoricamente a proposta de automatização na detecção de
+vínculos é viável, mas na prática o modelo em português da biblioteca SpaCy ainda deixa muito
+a desejar. Os modelos treinados, apesar de uma melhor performance, também não são
+satisfatórios. Serão necessários mais aprimoramentos com os treinamentos, pesquisa de
+outras alternativas de modelos em português ou mesmo mudar a estratégia utilizada,
+realizando pesquisas heurísticas para alguns tipos padrões de entidades.

@@ -1,0 +1,804 @@
+
+
+O ARCHIVEMATICA E OS ASPECTOS DE CONFIABILIDADE DA RESOLUÇÃO Nº 43 DO
+CONSELHO NACIONAL DE ARQUIVOS: ENFOQUE COMPARATIVO
+
+
+Modalidade: Trabalho Completo
+Resumo: A preservação digital está cada vez mais presente nos sistemas de informação para lhes
+garantir longevidade, e assim, aos seus objetos digitais, promovendo confiabilidade à informação, seja
+ela nascida no ambiente virtual ou não. Normas e condutas são criadas no intuito de possibilitar o que
+chamamos de certificação de confiança aos repositórios, cujos elementos são basilares para a
+completeza de seu funcionamento. A Resolução nº 43 do Conselho Nacional de Arquivos, estabelece
+diretrizes para implementação de repositórios digitais confiáveis, sendo o software Archivematica um
+dos focos desta pesquisa. Objetivamos analisar o Archivematica a partir das perspectivas arquivísticas
+dos requisitos da seção de Gerenciamento do documento digital da referida Resolução.
+Metodologicamente, utilizamos o método comparativo, propositura que serviu para expor o grau de
+compatibilidade entre essas duas variantes: Archivematica-Resolução nº 43. Apresenta também
+caráter descritivo, documental com abordagem qualitativa. De acordo com as análises realizadas na
+seção Gerenciamento do documental digital e seus tópicos, os resultados permitem afirmar que todos
+os requisitos foram contemplados pelo Archivematica, encontrando-se de acordo com o que prescreve
+a Resolução nº 43. Concluimos que as características e funcionalidades do Archivematica à luz da
+Resolução nº 43 foram cumpridas e todos os elementos da seção dessa diretriz se encontram previstos
+no software, daí poder-se caracterizá-lo como um Repositório Arquivístico Digital Confiável.
+Palavras-Chave: Archivematica; Conselho Nacional de Arquivos; Repositório Arquivístico Digital
+Confiável; Resolução nº 43.
+1 INTRODUÇÃO
+O final da década de 1990 do século passado se caracteriza pela transição da
+informação em suporte analógico para o digital. Nesse contexto, Lèvy (2008) refere que as
+forma de pensar e conviver na Era da Informação estão sendo reformuladas pelas tecnologias
+da inteligência, transformando a relação homem-trabalho, pois a própria compreensão do
+viver no mundo atual depende da metamorfose dos dispositivos de informação em suas
+diferentes tipologias.
+Tais transformações também afetaram os métodos aplicados nos arquivos, bibliotecas
+e museus, demandando dos profissionais a ampliação de competências e habilidades para a
+realização de suas atividades laborais, para além de tornar imperativo a esses especialistas o
+domínio dos sistemas de gerenciamento da informação digital frente às suas demandas.
+Ademais, grandes avanços ocorreram no que se refere aos processos de organização,
+representação, gestão da informação e documental face aos sistemas informatizados, cujo
+emprego encontrou eco no software livre. Para a área da Arquivologia, especificamente,
+existe um número considerável desses tipos de dispositivos disponíveis, responsáveis por
+abarcar todo o ciclo dos documentos: corrente, intermediário e permanente.
+Nessa perspectiva, destaca-se o software para repositório digital: Archivematica.
+Optou-se por este por ser considerado um Repositório Arquivístico Digital Confiável (RDCArq), o que possibilita às instituições preservarem a autenticidade e integridade de seus
+registros digitais em longo prazo. Sua composição é ligada a diretrizes e normas, como: o
+
+
+Reference Model for an Open Archival (OAIS), Trustworthy Repository Audit & Certification:
+Criteria and Checklist (TRAC) e a Organization for Standardization (ISO) 16363:2012, existindo
+tutorial traduzido e adaptado à realidade brasileira por meio da Resolução nº 43 do Conselho
+Nacional de Arquivos (CONARq).
+Esta comunicação é parte de dissertação, na qual adentrou-se os aspectos de
+funcionalidades e características do referido software, assim como nos requisitos de
+confiabilidade da Resolução nº 43 do CONARq, que estabelece diretrizes para implementação
+de repositórios digitais confiáveis. Tal diretiva está dividida em três seções: 1. Infraestrutura
+organizacional; 2. Gerenciamento do documento digital; 3. Tecnologia, infraestrutura técnica
+e segurança. Nos debruçamos sobre a segunda seção, cuja atribuição indica que o
+gerenciamento dos documentos de um repositório digital precisa estar de acordo com o
+modelo de referências OAIS.
+O problema que norteia esta pesquisa diz respeito ao Archivematica, pois
+questionamos se as características e funções do software atendem aos postulados
+preconizados pela Resolução nº 43 do CONARq.
+Para responder a esse questionamento pretendemos: a) analisar o Archivematica a
+partir das perspectivas arquivísticas dos requisitos da seção de Gerenciamento do documento
+digital da Resolução nº 43 do CONARq; b) verificar se as funcionalidades do Archivematica
+estão de acordo com o Guia do usuário e sua página eletrônica; c) caracterizar o referido
+sistema; d) verificar se suas funções preenchem os requisitos ditados pela Resolução nº 43.
+Salientamos que a opção pela referida normativa se deu por esta envolver as necessidades
+referentes à confiabilidade da informação em repositórios digitais.
+Dessa forma, destaca-se que o objeto e fenômeno informação é ponto basilar de
+investigação entre CI e Arquivologia, uma vez que tratam dessa propriedade como elemento
+constituinte para suas atuações. Silva e Ribeiro (2008) afirmam que as duas áreas, desde a sua
+constituição, tiveram por essência a preocupação com a análise do conhecimento gerado pela
+sociedade, especialmente na dimensão tecnológica sob a ótica dos sistemas de informação
+digital, os quais possibilitam a eficiência, o acesso, a difusão e a confiança da informação, no
+intuito de dirimir os aspectos que envolvem sua insegurança.
+
+
+2 PRESERVAÇÃO DIGITAL: MODELO DE REFERÊNCIA OAIS/SAAI: NORMA ISSO
+14721:2003/15427:2007
+Com a evidência do ambiente digital e das TIC, o que se entendia por preservação
+passou a ganhar conotação diferente das ideias tradicionais, pois a preocupação de conservar
+e proteger a informação em um objeto não palpável tornou-se desafio imediato para os que
+trabalhavam com o gerenciamento informacional.
+Ferreira (2006) enfatiza que o material digital carrega consigo um problema de
+estrutura, através de um fator assaz elementar: a obsolescência. Dessa forma, Santos e Flores
+(2015, p. 203-204) tecem considerações sobre os procedimentos estruturais e operacionais
+de preservação digital:
+A preservação digital é composta por procedimentos de manutenção, que
+podem ser denominados estruturais e por procedimentos de preservação
+dos componentes, os quais podem ser denominados como operacionais. Os
+procedimentos estruturais se referem aos estágios iniciais, definindo
+questões como a infraestrutura, normas, escolha de padrões,
+financiamentos e definição de metadados. Já os procedimentos operacionais
+se referem a atividades que objetivam a preservação física, lógica e
+intelectual dos documentos digitais através de ações como a migração, a
+emulação e o encapsulamento.
+
+Para tanto, os objetos digitais são aqueles cuja informação é representada por uma
+sequência de dígitos binários (linguagem computacional). Segundo Ferreira (2006) existe uma
+anatomia que compõe tal objeto, o tipo físico (o que o hardware é capaz de interpretar),
+lógico (software responsáveis por preparar o objeto digital ao receptor humano), conceitual
+(documentos, livros, filmes, fotografias etc.) e experimentado (experiência/interpretação
+humana).
+Ademais, variadas estratégias de preservação digital são utilizadas no que concerne à
+informação, entre as principais utilizadas para Ferreira (2006) estão: a emulação - baseada na
+utilização de software, designado emulador, capaz de reproduzir o comportamento de uma
+plataforma de hardware e software, em outra que a partida seria incompatível; migração transferência periódica de material digital de uma dada configuração de hardware/software
+para uma outra, ou de uma geração de tecnologia para outra subsequente; e encapsulamento
+- que preserva, juntamente com o objeto digital, toda a informação necessária e suficiente
+para permitir o futuro desenvolvimento de conversores, visualizadores ou emuladores.
+Em paralelo observamos a ISO 14721:2003 (OAIS), modelo conceitual que identifica
+componentes funcionais para um sistema de informação de preservação da informação digital
+
+
+em longo prazo. Seu objetivo é facilitar a compreensão de conceitos para o arquivamento de
+objetos digitais, independentemente da tipologia documental, mais ainda, tem a possibilidade
+de ser adotado por instituições que pretendem padronizar os formatos de arquivo (FONTANA
+et al., 2014).
+Traduzido e adaptado no Brasil, o OAIS é padronizado pela ABNT NBR 15472:2007,
+conhecida como Sistema Aberto de Arquivamento de Informação (SAAI) (ABNT NBR 15472,
+2007). Tal dispositivo pode ser compreendido como mecanismo de organização de informação
+de pessoas e sistemas, com a responsabilidade de preservar informação e torná-la disponível
+à comunidade de forma contínua - por longo prazo - atribuição designada para se preocupar
+com os impactos de mudanças tecnológicas, incluindo suporte a novas mídias, formato de
+dados, ou mudanças na comunidade usuária (ABNT NBR 15472, 2007). No Brasil, um arquivo
+OAIS é interpretado e representado pelo RDC-Arq da Resolução nº 43 do CONARq, conforme
+afirma Gonçalez (2017).
+A Figura 1 mostra a composição dos principais fluxos de informação do modelo
+OAIS/SAAI, o qual conecta as entidades, identificando os caminhos de comunicação em ambas
+as direções em um repositório (tanto no Produtor como no Consumidor).
+Figura 1: Entidades funcionais do OAIS/SAAI.
+
+Fonte: ABNT NBR 15472 (2007, p. 19).
+
+O produtor é classificado como uma entidade externa ao repositório que se
+responsabiliza pela submissão do material. Esse material de submissão é o arquivo, entendido
+aqui como Pacote de Submissão de Informação (SIP).
+No processo de submissão ou incorporção (admissão/ingestão), o repositório torna-se
+responsável por garantir à integridade da informação recebida. Nesta mesma fase se produz
+
+
+toda a informação descritiva que suporte a descoberta e localização do material depositado.
+Essa informação, também denominada metainformação, é armazenada e gerida pelo
+componente de gerenciamento de dados. Dessa forma, o material a preservar é denominado
+Pacote de Informação de Arquivo (AIP)1 e será conservado no arquivamento ou repositório de
+dados. O componente de admissão constitui a interface entre o arquivo OAIS/SAAI e os
+produtores de informação.
+No que tange ao planejamento de preservação, este se encarrega das políticas de
+preservação, que é responsável por monitorar o ambiente externo ao repositório, as
+tendências comportamentais da sua comunidade de interesse ou identificar formatos que se
+encontram obsoletos.
+O componente de acesso, por sua vez, estabelece a comunicação entre o
+arquivamento ou repositório e sua comunidade de interesse, ou seja, o conjunto de usuários.
+Este componente facilita a descoberta e localização dos objetos digitais, bem como o seu
+preparo para a entrega ao usuário.
+Os pacotes levados ao consumidor são denominados de Pacotes de Informação e
+Disseminação (DIP). O último componente, administração do sistema, se responsabiliza pelas
+operações cotidianas de manutenção, principalmente na monitorização dos processos no
+interior do arquivamento. Esse interage com todo o restante, de modo a assegurá-los o
+correto funcionamento.
+3 DIRETRIZES PARA IMPLEMENTAÇÃO DE REPOSITÓRIOS ARQUIVÍSTICOS DIGITAIS
+CONFIÁVEIS (RDC-Arq): RESOLUÇÃO Nº 43 DO CONARq
+A Resolução nº 43 de 04 de setembro de 2015, altera a Resolução do CONARq de nº
+39, de 29 de abril de 2014, e vem “estabelecer diretrizes para a implementação de repositórios
+digitais confiáveis, na transferência e recolhimento de documentos arquivísticos digitais para
+instituições arquivísticas dos órgãos e entidades integrantes do SINAR”.
+As mudanças entre essas Resoluções ocorreram na nomenclatura, pois tais
+modificações foram representadas pelos termos Repositórios Arquivísticos Digitais Confiáveis,
+acrescida da sigla “RDC-Arq", ficando assim: Repositórios Arquivísticos Digitais Confiáveis -
+
+1
+
+Os pacotes de informações para conceber a confiabilidade dos repositórios devem estar de acordo com o
+modelo de referência OAIS, e se tipificam em três, os quais têm nomenclatura usual em inglês: Submission
+Information Package(SIP), Archival Information Package (AIP), Dissemination Information Package (DIP).
+
+
+RDC-Arq, acrônimo inexistente na Resolução nº 39 (GONÇALEZ, 2017). A autora afirma ainda,
+que os repositórios arquivísticos se diferenciam dos demais pela especificidade, ou seja: o
+cumprimento de seus requisitos assegura o armazenamento e acesso em longo prazo.
+Dessa forma, a Resolução nº 43 está dividida em três partes. Na primeira divisão, foca
+em conceitos referente ao documento de arquivo digital, SIGAD e RDC-Arqs. O SIGAD tem
+como finalidade gerenciar os documentos digitais em fase corrente e intermediária,
+garantindo o controle de seu ciclo para o cumprimento da destinação e manutenção da
+autenticidade e relação orgânica (BRASIL, 2011).
+Em fase permanente, os documentos são dependentes de eficiente sistema
+informatizado que apoie o tratamento técnico adequado, incluindo arranjo, descrição e
+acesso, de forma a assegurar a manutenção da autenticidade e da relação orgânica desses
+documentos (CONSELHO..., 2015).
+Nesse sentido, em 2007, passou a funcionar o relatório TRAC, apresentando um
+conjunto de critérios e um checklist para a certificação de repositórios digitais confiáveis. Esse
+mesmo documento serviu de base para a elaboração da norma ISO 16363:2012, a qual lista
+os critérios que um repositório digital confiável deve atender. O CONARq pautou-se nessa
+norma ISO para a criação dos requisitos da Resolução nº 43 (GONÇALEZ, 2017).
+A ISO 16363:2012 viabiliza auditoria, avaliação e certificação dos repositórios digitais.
+Ou seja, aponta a documentação necessária para o cumprimento de auditoria: os requisitos
+dos auditores para o processo de certificação de confiança relacionado ao repositório. A
+norma possui três categorias que abrangem 105 critérios: Infraestrutura organizacional;
+Gerenciamento de objetos digitais e Infraestrutura; e Gestão de riscos de segurança
+(CONSULTATIVE..., 2012). Sua finalidade é avaliar a responsabilidade da gestão dos objetos
+digitais de um repositório. Gonçalez (2017) reitera que as interfaces dos repositórios
+possibilitam não somente o acesso rápido e confiável, mas conectam seus serviços e coleções
+às comunidades usuárias.
+Os requisitos apresentados na segunda parte da Resolução nº 43 definem-se em nível
+conceitual e devem ser cumpridos no desenvolvimento de um repositório, envolvendo todos
+os tipos de materiais digitais, inclusive os documentos arquivísticos (CONSELHO..., 2015).
+Representado pela seção de Gerenciamento do documento digital está subdividida em: a)
+Admissão (captura de documentos digitais); b) Admissão (criação do pacote de
+arquivamento);
+
+c)
+
+Planejamento
+
+da
+
+preservação;
+
+d)
+
+Armazenamento
+
+e
+
+
+preservação/manutenção do AIP; e) Gerenciamento e informação; f) Gerenciamento de
+acesso.
+Seu objetivo é indicar que o gerenciamento dos documentos deve estar de acordo
+com o modelo de referência OAIS, que estabelece a formação de pacote de informação dos
+documentos digitais (informação de conteúdo) e seus metadados (informação de
+representação).
+4 SOFTWARE ARCHIVEMATICA
+A incumbência do Archivematica é armazenar a documentação em formato digital, de
+acordo com os padrões exigidos de preservação. Por possuir código aberto, funciona sob a
+licença do Affero General Public License (GNU 3.0) e licença Creative Commons (AtribuiçãoCompartilhamento), os quais permitem liberdade de copiar, distribuir e modificar sistemas.
+Costa et al., (2016, p. 14-15, grifo nosso) descrevem sucintamente esse sistema:
+Archivematica é um sistema de preservação digital de software livre,
+gratuito e de código aberto projetado para manter os dados baseados
+em padrões de preservação digital e o acesso em longo prazo para
+coleções de objetos digitais. O Archivematica é desenvolvido com o
+gerenciador de conteúdo AtoM, sistema baseado na web para acesso
+aos seus objetos digitais, reconhecido arquivisticamente como uma
+plataforma de descrição, difusão e acesso.
+
+O formato de software livre do Archivematica configura-se como eficiente estratégia
+de preservação digital, pois a obsolescência tecnológica é uma preocupação atual em relação
+à condição dos documentos digitais. Outra vantagem é sua interoperabilidade2, uma vez que
+cria vias de comunicação com outros tipos de software desde que os códigos dos sistemas
+estejam disponíveis. Isto se dá, por exemplo, entre o AtoM e o Archivematica de maneira
+fluida (JORENTE et al., 2016).
+Como forma de corroborar a criação do Archivematica Costa e Castro (2016, p. 113,
+grifo do autor) relatam:
+Foi desenvolvido pela empresa canadense Artefactual Systems, tendo a
+colaboração de algumas instituições e projetos: da UNESCO, por meio do
+Memory of the World's – Subcommittee on Technology; do Arquivo Municipal
+da cidade de Vancouver – Canadá; da Biblioteca da Universidade de British
+Columbia - Canadá; do Arquivo Central de Rockefeller - Canadá; do Arquivo
+da Universidade Simon Fraser University - Canadá, e de outros
+colaboradores.
+2
+
+Capacidade de um sistema (informatizado ou não) de se comunicar com outro sistema (semelhante ou não),
+utilizando de padrões abertos ou ontologias através de plataformas de hardware e software.
+
+
+Os requisitos para o desenvolvimento do Archivematica, desde sua gênese, foram
+elaborados na base de diálogo permanente dentro de sua comunidade (RODRIGUES, 2015). E
+dessa forma, utiliza o OAIS como referência de preservação, além de outros padrões de
+metadados: Metadata Encoding Transmission Protocol (METS), Preservation Metadata:
+Implementation Strategies (PREMIS) e Dublin Core. Além disso, o Archivematica realiza,
+automaticamente, a migração ou conversão de formatos dos documentos digitais
+armazenados para preservação digital, e apresenta um diferencial: a possibilidade de
+construção de um planejamento para preservação (JORENTE et al., 2016).
+Destaca-se a utilização de três pacotes distintos: o SIP pelo produtor a um OAIS para
+construção de um ou mais AIP, o DIP, derivado de um ou mais AIP, recebido pelo consumidor
+em resposta a uma requisição dirigida ao OAIS.
+Atualmente, a utilização do Archivematica pelas instituições brasileiras vem crescendo
+timidamente e ainda é recente (FONTANA et al., 2014; JORENTE et al., 2016). Supomos que
+tal fator seja uma das razões para a escassez de literatura em língua portuguesa.
+5 METODOLOGIA
+A questão central que norteia a condução deste estudo está diretamente relacionada
+com o software livre Archivematica (suas características e funcionalidades) avaliado à luz dos
+requisitos preconizados pela Resolução de nº 43 do CONARq, o que compõe o objeto de nossa
+investigação.
+Utilizamos o método comparativo acostados em autoras como Marconi e Lakatos
+(2003), as quais situam tal estratégia para fazer comparações de grupos ou variáveis, podendo
+ser utilizado nas diferentes etapas da pesquisa, ou seja: nos estudos descritivos pode analisar
+a analogia ou, ainda, os elementos de uma estrutura e apontar a ausência ou presença desses
+elementos.
+Segundo os objetivos, trata-se de uma pesquisa descritiva, cuja finalidade é
+pormenorizar situações, acontecimentos e feitos, retratando como se dá a manifestação dos
+fenômenos (DESLANDES, 2009; GOMES, 2004), proporcionando intuições de soluções,
+descrição de comportamentos, fatos e variáveis, o que se encontra em consonância com a
+análise do Archivematica em relação à sua composição, estruturação e funcionalidades,
+mediante os requisitos da Resolução nº 43.
+
+
+
+Quanto ao delineamento, caracteriza-se como documental, pois teve fundamento em
+materiais registrados, no caso em evidência, a Resolução em questão. Segundo Prodanov e
+Freitas (2013), a pesquisa documental se destaca quando organiza informações que se
+encontram dispersas, conferindo-lhe uma nova importância como fonte de consulta. De
+acordo com a natureza possui abordagem qualitativa, analisando a tríade observaçãodescrição-sistematização, dando significado aos requisitos postulados pela Resolução nº 43,
+na verificação da compatibilidade dessas premissas com as características do Archivematica.
+A segmentação das funções do Archivematica está elencada em oito guias ou painéis
+projetados(as) por uma interface na web direcionada à perspectiva do usuário final:
+Transferência (Transfer), Ingerir (Ingest), Armazenamento Arquivístico (ArchivalStorage),
+Planejamento de Preservação (Preservation Planning), Acesso (Access), Administração
+(Administration). Lista de pendências (Backlog) e Avaliação (Appraisal). Os seis primeiros estão
+dispostos no Guia do Usuário Archivematica na versão 1.6 e os dois últimos em seu site oficial
+(versão 1.8) (ARTEFACTUAL, [201-]); COSTA et al., 2016). Cada um possui atribuição específica
+e complementar, nas quais iremos melhor descrever na análise dos resultados.
+A pesquisa também teve como fonte de análise o Guia do Usuário e o site3 do
+Archivematica.
+Destacamos que esses registros estão legitimados por instituições de influência
+nacional e internacional na área da Ciência, Tecnologia e Educação, como por exemplo, o
+Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT) e a Organização das Nações
+Unidas para a Educação, a Ciência e a Cultura (UNESCO), refletido em publicações na área da
+TI-CI-Arquivologia. Dessa forma, sistematizamos os dados coletados no Quadro 1 para análise
+dos resultados.
+Quadro 1: Cumprimento dos requisitos do Archivematica à luz da Resolução nº 43.
+Seção
+Gerenciamento do
+documento digital
+
+a)
+
+Tópico
+
+Descrição do
+tópico
+
+Cumpre os
+requisitos
+
+Admissão (captura de documentos digitais)
+
+Definição de
+cada tópico
+
+Sim / Não
+
+b) Admissão (criação do pacote de arquivamento)
+c) Planejamento da preservação
+d) d) Armazenamento e preservação/manutenção do AIP
+e) Gerenciamento de informação
+f) Gerenciamento de acesso
+Fonte: Elaborado pelo autor (2019).
+3
+
+Disponível em: http://livroaberto.ibict.br/bitstream/123456789/1063/4/Manual-Archivematica.pdf.
+
+
+Elaboramos o Quadro 1 de acordo com os dados coletados da Resolução 43. Assim, na
+aba “Seção” está inserida o requisito central que analisamos; no “Tópico”, os elementos
+contidos no Gerenciamento do documento digital a serem cumpridos pelo Archivematica; na
+“Descrição do tópico”, os conceitos e definições de cada tópico, e por fim, no “Cumprimento
+dos requisitos por parte do Archivematica” verificamos se os mesmos estão em consonância,
+através da opção “sim” ou “não”.
+6 RESULTADOS E DISCUSSÕES
+Para analisar os elementos de confiabilidade da Resolução nº 43 do CONARq nesta
+seção, fazemos referência às diretrizes do Gerenciamento do documento digital. Destacamos
+que todas as informações aqui analisadas e expostas estão descritas no Guia do Usuário
+Archivematica e em sua página eletrônica.
+Como resultado, relacionamos no Quadro 2, o cumprimento dos requisitos já
+destacados, por meio dos seguintos pontos: Seção, Item, Tópico, Descrição do Tópico e
+Cumprimento dos requisitos por parte do Archivematica, mostrando a comparação entre a
+citada diretiva; e características e funcionalidades do referido software.
+Quadro 2: Cumprimento dos requisitos do Archivematica à luz da Resolução nº 43 do CONARq
+Seção
+
+Tópico
+
+Gerencia a) Admissão (captura de
+mento
+documentos digitais)
+documen
+to do
+digital
+
+b) Admissão (criação
+do pacote de
+arquivamento)
+c) Planejamento
+preservação
+
+da
+
+d) Armazenamento e
+preservação/manutençã
+o do AIP
+c) Gerenciamento de
+informação
+
+Descrição do tópico
+
+Cumpre os
+requisitos
+
+Consiste na entrada dos documentos e seus metadados
+no repositório digital. Os requisitos de admissão variam
+dependendo do tipo de material, do contexto legal e da
+relação entre o produtor de documento e o repositório.
+Independentemente dessas variações, pode-se afirmar
+que a admissão se inicia com o recebimento de um SIP,
+que é convertido em AIP, e termina quando um AIP está
+seguro no repositório, incluindo a criação de cópias de
+segurança.
+O repositório deve completar o processo de admissão,
+criando um pacote de informação apropriado para
+arquivamento (AIP), com toda a informação recebida
+do produtor.
+Um repositório digital deve fazer o planejamento da
+preservação dos documentos sob sua custódia, a fim de
+enfrentar os problemas trazidos pela obsolescência
+tecnológica e fragilidade do suporte.
+Um repositório deve atender a um conjunto de
+condições para garantir o bom desempenho da
+preservação de longo prazo dos AIPs.
+Uma funcionalidade essencial de um repositório digital
+confiável é o gerenciamento da informação, aqui
+entendido como a gestão das informações descritivas
+
+Sim
+
+Sim
+
+Sim
+
+Sim
+
+Sim
+
+
+
+d) Gerenciamento de
+acesso
+
+(metadados) dos documentos admitidos no
+repositório. O principal objetivo desses metadados é
+apoiar o acesso e a recuperação dos documentos, e vão
+além das informações descritivas mais usuais (autor,
+título, data), envolvendo outras informações
+descritivas úteis aos usuários, tais como tamanho do
+arquivo disponível para download ou informação sobre
+a aplicação necessária para ler o arquivo
+Todo repositório deve produzir pacotes de
+disseminação de informação (DIP).
+
+Sim
+
+Fonte: Adaptado do Conselho... (2015).
+
+A seção de Gerenciamento de documento para um repositório digital confiável deve
+estar estabelecida pelo modelo de referência OAIS e com a formação de pacotes de
+informação (SIP, AIP, DIP), envolvendo documentos digitais (informação e conteúdo) e seus
+metadados (informação de representação) (CONSELHO..., 2015).
+O tópico “a” se caracteriza pela admissão de documentos e metadados no repositório
+(entrada). No caso do Archivematica, seu percurso ocorre com o que está disposto na
+Resolução nº 43. Inicia-se com o recebimento de um SIP, que pode ser convertido em AIP,
+incluindo a criação de cópias de segurança, e após o DIP. Dessa forma, apresentam-se os
+requisitos gerais a serem cumpridos pelo repositório, cuja adequação deve ser avaliada de
+acordo com a missão e as necessidades de cada repositório:
+Quadro 3: Requisitos a serem cumpridos por um repositório de acordo com sua necessidade
+1
+2
+3
+4
+5
+6
+7
+8
+
+Identificar as propriedades do documento que serão preservadas (ex.: o conteúdo, layout, tabela de
+cor, resolução da imagem, canais de som etc.);
+Especificar claramente a informação que deve estar associada ao documento (metadados associados) no
+momento da sua submissão;
+Ter mecanismos para autenticar a origem dos documentos que estão sendo admitidos no repositório, de
+forma a garantir sua proveniência;
+Ter procedimentos para verificar a integridade do SIP, o que pode ser feito por meio de procedimentos
+automatizados e/ou checagem humana;
+Ter o controle físico (controle completo dos bits) dos documentos transmitidos com cada SIP, a fim de
+preservá-los;
+Fornecer ao produtor/depositante relatórios do andamento dos procedimentos durante todo o processo
+de admissão;
+Demonstrar em que momento a responsabilidade pela preservação do documento submetido (SIP) é
+formalmente aceita pelo repositório;
+Ter registros de todas as ações e processos administrativos que ocorrem durante o processo de
+admissão e são relevantes para a preservação
+Fonte: (CONSELHO..., 2015, p. 14).
+
+Podemos afirmar que o Archivematica consegue englobar todos os itens acima, pois
+identifica e especifica as propriedades dos documentos digitais, sobretudo, os
+admitidos/submetidos, expondo o tipo, formato, metadados e no ato do download, a
+
+
+visualização dos arquivos, (imagético, audiovisual, convencional), bem como o controle de
+ações em andamento dos pacotes de informação através de microsserviços.
+Observamos as funcionalidades do software em questão, a exemplo da guia de
+Transferência (processo de transformar qualquer conjunto de objeto de digital ou diretório
+em um SIP à guia de Administração) responsável pela configuração dos componentes do
+aplicativo e gerenciamento dos usuários, uma painel de controle (COSTA et al., 2016).
+O tópico “b” menciona a admissão, como a criação de um AIP, a fim de garantir que o
+pacote de informação recebido do produtor e verificado pelo repositório, seja convertido para
+o formato de arquivamento (AIP). Para tanto, um repositório deve atender aos seguintes
+requisitos:
+Quadro 4: Diretrizes a serem cumpridas por um repositório na criação de AIP.
+1
+
+2
+
+3
+
+4
+
+Descrever cada classe de informação (texto estruturado, imagem matricial, banco de dados, imagem
+em movimento e outras) a ser preservada pelo repositório, e como ela está implementada – essa
+descrição deve apontar os componentes-chave do AIP: o documento arquivístico, sua informação de
+representação (informação estrutural e semântica) e as várias categorias de informação descritiva de
+preservação (fixidade, proveniência e contexto), e ainda como esses componentes se relacionam;
+Descrever minuciosamente as diferentes classes de informação e como os AIPs são implementados, nos
+casos em que a especificidade daquelas classes exigir ações de preservação diferentes (por exemplo, a
+imagem TIFF que é processada por um sistema pode necessitar de ações de preservação diferentes das
+ações necessárias à imagem TIFF que é apresentada para o olho humano);
+Descrever como os AIPs são construídos a partir dos SIPs, ou seja, apontar todas as transformações
+pelas quais passarão os documentos e os metadados submetidos, e os metadados a serem adicionados
+no momento da formação do AIP;
+Ser capaz de demonstrar se os SIPs foram aceitos e transformados em um AIPs integralmente ou em
+parte, ou ainda se foram recusados;
+
+5
+
+Atribuir aos AIPs, identificadores que sejam únicos, persistentes e visíveis aos gestores e auditores, de
+acordo com padrões reconhecidos (por exemplo: Handle System, DOI, URN, PURL);
+
+6
+
+No caso de o documento já possuir um identificador único, a ele atribuído no SIP, o repositório deverá
+mantê-lo no AIP, ou criar um outro identificador, que deverá ser associado, de maneira persistente, ao
+do SIP;
+
+7
+
+Ter acesso a ferramentas amplamente reconhecidas para apoiar o monitoramento dos componentes
+digitais dos documentos, tais como diretórios de formatos de arquivos (ex.: PRONOM – base de dados
+com registro de formatos mantida pelo arquivo nacional do Reino Unido) e registros de outras
+informações de representação;
+
+8
+
+Registrar, em um banco de dados local, a informação de representação dos documentos admitidos,
+quando essa informação não estiver disponível nas ferramentas mencionadas no ponto anterior;
+
+9
+
+Registrar metadados de preservação associados aos documentos admitidos, de maneira a apoiar sua
+integridade, localização, legibilidade e proveniência, dentre outros;
+
+10
+
+Ter procedimentos para testar se os documentos são compreensíveis pela comunidade-alvo e, em caso
+negativo, adequá-los às necessidades dessa comunidade (ex.: documentos voltados para deficientes
+visuais);
+
+13
+
+XX ENCONTRO NACIONAL DE PESQUISA EM CIÊNCIA DA INFORMAÇÃO – ENANCIB 2019
+21 a 25 de outubro de 2019 – Florianópolis – SC
+
+11
+
+Verificar a completude e a correção de cada AIP no momento em que é gerado, isto é, no momento em
+que o SIP é convertido em AIP;
+
+12
+
+Ter um mecanismo independente para verificar a integridade do conjunto do seu acervo, ou seja,
+verificar que todos os documentos previstos foram, de fato, admitidos no repositório, justificando
+possíveis lacunas;
+Documentar todas as ações relevantes à preservação dos documentos e que estão relacionadas à
+criação do AIP.
+Fonte: (CONSELHO..., 2015, p. 14-15).
+
+13
+
+Os itens elencados possuem uma estrutura voltada ao percurso do AIP. Tal composição
+também está compreendida com os preceitos do Archivematica, principalmente no que diz
+respeito às características das guias Ingerir, Armazenamento Arquivístico e Plano de
+Preservação, por onde perpassa o SIP, executando vários microsserviços no AIP.
+Desse modo, destacamos que os mecanismos de representação da informação terão
+maior expressividade nas guias citadas, pois já passaram pela fase de submissão de
+informação e estão no processo de arquivamento, partindo para o acesso. As funções do SIPAIP referentes à criação, percurso, relação e implementação no repositório, atingem o caráter
+de confiança nos documentos digitais arquivísticos quando passam pela conferência e
+aprovação dos microsserviços (COSTA et al., 2016).
+O tópico “c” enfatiza a importância do planejamento da preservação em um
+repositório digital, como enfrentamento da obsolescência tecnológica e fragilidade do
+suporte. Esse planejamento deve ser feito a partir de uma política de preservação digital, ser
+bem documentado e incluir o que consta do Quadro 5:
+Quadro 5: Política de preservação digital da Resolução nº 43 do CONARq.
+1
+2
+
+3
+4
+
+Estratégias de preservação bem definidas e periodicamente atualizadas, apontando e detalhando cada
+procedimento a ser adotado, como, por exemplo, a normalização de formatos;
+Mecanismos para monitoramento e notificação quando alguma informação de representação dos
+documentos no repositório estiver se tornando obsoleta ou inviável (ex.: um formato de arquivo que
+esteja entrando em desuso, um suporte que esteja no final de sua vida útil);
+Mecanismos de mudanças do plano de preservação como resultado do monitoramento;
+Fornecimento de evidências sobre a eficácia do plano de preservação.
+Fonte: (CONSELHO..., 2015, p. 15-16).
+
+Dessa forma, reiteramos o cumprimento por parte do Archivematica em relação a esse
+tópico. No que tange ao plano político, tem-se a guia Plano de Preservação, demonstrando a
+importância e o papel da normalização para formatos de preservação e acesso por meio da
+admissão, os quais possibilitam que arquivos originais sejam mantidos na permissão de ações
+futuras, tais como a emulação e migração (ARTEFACTUAL, [201-]; COSTA et al., 2016).
+
+
+
+Bem verdade que os mecanismos de Plano de Preservação são monitorados por seus
+usuários, ademais as políticas utilizadas nesse software são consistentes, pois foram
+planejadas pelo Format Policy Registry (FPR) e PRONOM, alinhadas à TRAC e de acordo com a
+norma ISO 16363:2012.
+O tópico “d” elenca o armazenamento, preservação e manutenção de um AIP. Significa
+dizer que um repositório deve atender a um conjunto de condições para garantir o bom
+desempenho da preservação em longo prazo dos AIPs, conforme se descreve o Quadro 6.
+Quadro 6: Condições de estratégias de preservação digital.
+1
+2
+
+3
+4
+5
+
+Utilização das estratégias previstas no planejamento da preservação, que podem ser várias e devem ser
+registradas nos metadados de preservação;
+Atender minimamente a dois aspectos da preservação digital – os cuidados com armazenamento (controle
+dos suportes, dos formatos e da localização de cópias) e a eventual necessidade de migração (atualização
+de suportes e conversão de formatos);
+Preservação do documento digital (informação de conteúdo do AIP) originalmente admitido no
+repositório e daquele resultante da última migração;
+Monitoramento constante da integridade dos AIPs, por meio do registro de metadados de fixidade e de
+logs de checagem dessa integridade (por exemplo, checksum);
+Registro de todas as ações de preservação realizadas nos AIPs.
+Fonte: (CONSELHO..., 2015, p. 16).
+
+Após a análise, verificamos que todos os tópicos se encontram de acordo com as
+funcionalidades do Archivematica. Note-se que, para o armazenamento dos documentos,
+alguns cuidados são requeridos, dentre estes: a atribuição de metadados, tipos de políticas,
+formatos, cópias e backups. Tal sistema atende às premissas de preservação quando diz
+respeito a preocupação com a obsolescência tecnológica, que se utiliza de estratégias que não
+só permitem a migração de suporte ou formato, mas também a emulação, encapsulamento,
+refrescamento etc. Logo, corrobora com os elementos de autenticidade relacionados aos
+pacotes de informação, os registros, os metadados de preservação adequados e os checksums
+(código de verificação para conferir a integridade de um arquivo).
+O tópico “e” mostra que o gerenciamento da informação é uma funcionalidade
+essencial do repositório digital confiável, assim entendida como gestão das informações
+descritivas (metadados), os quais possuem como elemento principal a recuperação da
+informação. De maneira geral, as informações descritivas mais comuns são: autor, título e
+data. Entretanto, em se tratando de repositórios e documentos, outros itens são
+acrescentados, como: tamanho do arquivo ou quaisquer outras necessárias para lê-los. O
+gerenciamento da informação descritiva envolve os seguintes aspectos relacionados no
+Quadro 7.
+
+
+Quadro 7: Aspectos de gerenciamento da informação descritiva.
+1
+
+2
+
+Metadados mínimos que permitam a busca e localização dos documentos – esses metadados devem
+ser identificadores conhecidos pela comunidade-alvo de usuários (ex.: número de matrícula do servidor
+público, título de livro numa biblioteca, número de processo);
+Captura ou criação dos metadados mínimos pelo repositório, durante o processo de admissão, e
+associação desses metadados ao AIP correspondente;
+
+3
+
+Integridade referencial entre os AIPs e sua informação descritiva (metadados), ou seja, todo AIP deve ter
+uma informação descritiva, e toda informação descritiva deve apontar para um AIP;
+
+4
+
+Permanência da integridade referencial, mesmo no caso de quebra temporária da relação entre o AIP e
+seus metadados descritivos – nesse caso, o repositório deve ser capaz de restaurar a relação rompida.
+Fonte: (CONSELHO..., 2015, p. 16).
+
+As guias do Archivematica possuem partes específicas que fazem menção aos
+metadados. Na guia Backlog, por exemplo, o usuário pode explorar arquivos visualizando-os
+na forma de relatório. Em outra analogia tem-se os padrões de metadados como Dublin core
+e PREMIS, que fornecem descrição para livro, jornal e afins, mantendo sua autenticidade,
+funcionando como instrumento de recuperação da informação, o que torna íntegro os AIPs
+originais e suas cópias de segurança.
+O tópico “f” diz respeito ao Gerenciamento de acesso, ou seja, todo repositório tem
+que produzir pacotes de disseminação da informação (DIPs). Atendendo aos seguintes
+requisitos do Quadro 8.
+Quadro 8: Requisitos para o gerenciamento de acesso DIP.
+1
+2
+
+3
+
+4
+
+5
+6
+
+7
+
+8
+
+Divulgação, para a comunidade de usuários, das opções disponíveis de acesso aos documentos e de
+entrega;
+Implementação de uma política de registro dos acessos ocorridos que esteja de acordo com as
+necessidades de controle desses acessos, tanto da parte do repositório como dos produtores dos
+documentos nele admitidos;
+Concessão de acesso a cada AIP, para os usuários autorizados e da forma devida (ex.: autorização de
+“somente leitura”, ou acesso a um número limitado de itens por período), em conformidade com o acordo
+estabelecido entre o repositório e o produtor/depositante;
+Documentação e implementação de políticas de acesso (identificação e autenticação de usuários), em
+conformidade com os acordos estabelecidos entre o repositório e o produtor/depositante – essas políticas
+de acesso podem variar, desde a isenção da necessidade de identificação de usuário até o controle rígido
+da identificação e autenticação do usuário;
+Registro de falhas de controle de acesso (como, por exemplo, um acesso indevidamente negado) e uso
+desse registro para avaliar eventuais falhas no sistema de segurança;
+Demonstração de que o processo que gera o DIP atende completamente à requisição do usuário (ex.: se
+o usuário pediu um conjunto de documentos, receberá o conjunto completo; se ele pediu um documento,
+receberá apenas este único documento);
+Demonstração de que o processo que gera o DIP está correto em relação ao pedido do usuário (ex.: se o
+repositório oferece imagens nos formatos JPG e PNG, o usuário deve receber, dentre esses, o formato que
+solicitou);
+Demonstração de que todos os pedidos de acesso resultam em uma resposta de aceitação ou rejeição;
+
+
+
+9
+
+garantia da autenticidade dos DIPs, por meio da entrega de cópias autênticas dos originais ou da
+viabilidade de rastreamento auditável da relação entre o DIP e o objeto original – para isso, um repositório
+deve ser capaz de demonstrar o processo de construção do DIP a partir de um AIP
+Fonte: (CONSELHO..., 2015, p. 17).
+
+A guia de Acesso explica o DIP de maneira pormenorizada, pois é nela que o usuário
+carrega o pacote de informação e o armazena para uso futuro. Quando o DIP é preparado, o
+Archivematica tem a função de movê-lo para o diretório de UploadDIP, ou seja, o envio para
+uma plataforma de acesso, se preciso for. As seguintes plataformas de descrição suportam
+uploads de DIPs: AtoM, ArchivesSpace, CONTENTdm e Archivists’ Toolkit etc. (COSTA et al.,
+2016).
+O guia de instalação e de usuário do Archivematica deixam claro que tais sistemas de
+descrição precisam ser interoperáveis, observando o compromisso com as políticas de
+registros e de preservação, neste último, a normalização. Após esta tarefa, o SIP é executado
+através do processamento da documentação, ou seja: submissão, geração de arquivo METS,
+indexação, geração do DIP e de acondicionamento do AIP. Todas as alterações que acontecem
+são documentadas e dispostas pelos aspectos da normalização para a preservação e acesso:
+criação de cópias de preservação dos objetos e cópias de acesso que serão utilizadas para
+gerar o DIP (COSTA et al., 2016).
+A análise pormenorizada desta seção permite afirmar que todos os requisitos foram
+contemplados pelo Archivematica, encontrando-se de acordo com o que prescreve a
+Resolução n. 43.
+7 CONSIDERAÇÕES FINAIS
+Por possuir característica com conotação plural, a CI permite o intercâmbio com vários
+domínios científicos. Nessa perspectiva, a preservação digital é temática discutida no âmbito
+de diferentes áreas como a Arquivologia, Administração, Contabilidade, Direito, dentre
+outras, respeitando o contexto e a necessidade de cada instituição, conforme corrobora
+Fontana et al. (2014).
+Nessa perspectiva, a implementação de estratégias para a preservação digital, não se
+baseia apenas no armazenamento de informações, mas na manutenção dos suportes,
+formatos, hardware e software. Para tanto, é imprescindível a adoção de tratamento técnico
+dos objetos digitais em seus níveis, indo além do físico, por isso a capacidade de acessar
+
+
+documento ao longo do tempo vai além da conservação dos suportes para garantir sua
+integridade (RODRIGUES, 2015).
+Na análise desses preceitos, compreendemos que os software podem se caracterizar
+como instrumentos voltados à construção de sistemas de informações dedicados a um espaço
+confiável através do tripé gerenciamento-armazenamento-acesso. Tem-se então os RDC-Arqs,
+especificamente o Archivematica, que recebe respaldo da Resolução nº 43 do CONARq para
+certificação da autenticidade e integridade de documentos digitais.
+Apresentamos tal diretiva no intuito de comparar seu conjunto de elemento, definido
+por requisitos de confiabilidade que um repositório precisa adotar. Ratifica Gonçalez (2017),
+que os estudos dos RDC-Arqs ainda são poucos na vertente da certificação, pois as discussões
+na área da CI são mais frequentes no que se refere à curadoria digital e à utilização de
+software. Assim, a Resolução nº 43 serve como âncora para dar visibilidade à Arquivologia e
+aos arquivistas.
+Apesar do Archivematica ter maior visibilidade internacional, existe ainda um desafio
+a ser superado: seu uso no Brasil. Esta afirmativa se baseia no fato da escassez da literatura
+brasileira sobre a temática até a presente momento. Ressaltamos que o software se configura
+como eficiente estratégia de preservação digital, com vantagem da interoperabilidade para
+criar vias de comunicação com outros tipos de dispositivos, já empregados por arquivos,
+biblioteca, museus e instituições de ensino.
+Dessa forma, pode-se sugerir o seu emprego, ou sua adoção pelos vários tipos de
+entidades brasileiras em razão do baixo custo caracterizado pela contratação de profissionais
+aptos a manuseá-lo, a exemplo dos tecnólogos da informação e arquivistas; pela
+autenticidade e integridade da informação posta nos sistemas de informação; por possuir
+certificação de diretivas nacionais e internacionais de preservação digital nos padrões
+arquivísticos indicados pelo ICA e por ser um sistema livre e garantir a confiabilidade dos
+documentos.
+Conclui-se que a análise das características e funcionalidades do Archivematica à luz
+da Resolução nº 43 foram cumpridos em sua totalidade, ou seja, todos os elementos da
+segunda Seção desta diretriz se encontram previstos no software, o que nos permite
+caracterizá-lo como um RDC-Arq.

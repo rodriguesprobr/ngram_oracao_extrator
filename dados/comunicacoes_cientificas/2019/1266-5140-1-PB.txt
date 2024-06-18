@@ -1,0 +1,557 @@
+
+PERFIL DE APLICAÇÃO DE METADADOS BASEADO EM FRBR E RDA
+METADATA APPLICATION PROFILE BASED ON FRBR AND RDA
+
+Modalidade: Trabalho Completo
+Resumo: No domínio bibliográfico foi desenvolvido o modelo conceitual Functional Requirements for
+Bibliographic Records (FRBR) e a proposta das orientações Resource Description and Acess (RDA) para
+a descrição de recursos, a fim de atender as necessidades de informação no cenário tecnológico
+vigente. O objetivo dessa pesquisa foi o estudo dos FRBR e RDA, no intuito de identificar o estado da
+arte sobre as tendências do domínio bibliográfico e se os mesmos podem ser aplicados em
+repositórios institucionais digitais. O aporte teórico e metodológico da Revisão Sistemática da
+Literatura (RSL) propiciou o mapeamento e a identificação de elementos-chave para responder à
+questão de pesquisa. A proposta de criação de um perfil de aplicação de metadados baseado em
+FRBR e RDA em repositórios institucionais digitais foi desenvolvida a partir da extração de requisitos
+teóricos e metodológicos mapeados pela literatura científica internacional. Acredita-se que o perfil
+proposto se apresenta como um ponto de partida para o desenvolvimento de ferramentas e de
+aplicações que aproximem o domínio bibliográfico dos repositórios institucionais digitais.
+Palavras-Chave: Domínio bibliográfico. FRBR. RDA. Repositórios institucionais digitais. Revisão
+Sistemática da Literatura. Perfil de aplicação de metadados. Informação e Tecnologia.
+
+1 INTRODUÇÃO
+A produção, o tratamento, a representação e a recuperação de informação
+extrapolaram os limites dos processos de trabalho e das estruturas de armazenamento
+convencionais dos dados.
+O crescimento da Internet como meio de disponibilização de informação e de
+conhecimento, sob diversos formatos e suportes, reforça ainda mais a importância da
+prática da representação da informação, suportando a identificação, a avaliação e o uso de
+informação, sendo essas atividades essenciais para que o conhecimento se torne disponível,
+acessível e operacional. (MARCONDES, 2001).
+Refletindo a iniciativa ao livre acesso à informação, se contextualizam os repositórios
+institucionais digitais, ambientes informacionais de tecnologia aberta, provedores de acesso
+livre a documentos eletrônicos, que gerenciam, armazenam e disseminam a produção
+científica de uma instituição.
+Pesquisadores da área da Ciência da Informação sempre se preocuparam com o
+desenvolvimento e o aperfeiçoamento de padrões e de modelos de estrutura e de conteúdo
+que permitam maior qualidade e confiabilidade na representação, no armazenamento e na
+posterior disseminação da informação, de maneira a estudar os conceitos, os procedimentos
+e os métodos de descrição que garantam uma adequada recuperação da informação.
+Nessa pesquisa serão abordadas as tendências do domínio bibliográfico para o
+tratamento descritivo da informação, destacando os Requisitos Funcionais para Registros
+Bibliográficos (FRBR), um modelo conceitual baseado na modelagem entidaderelacionamento que facilita a organização de registros bibliográficos e possibilitam catálogos
+mais funcionais, otimizando os processos de busca e de recuperação da informação.
+Também são destacadas as orientações do Resource Description and Access (RDA), no
+português “Descrição de Recursos e Acesso”, uma iniciativa para orientação da descrição de
+recursos, proposta em meio a atualização dos códigos de catalogação.
+Visto que o modelo conceitual FRBR e as orientações RDA foram construídos de
+maneira a contemplar recursos tanto analógicos quanto - e principalmente - digitais,
+procurou-se compreendê-los no contexto dos ambientes e dos esquemas de metadados
+existentes, em especial os repositórios institucionais digitais e o esquema de metadados
+utilizado nestes, o padrão Dublin Core.
+
+
+Dessa maneira, questiona-se em que medida o modelo conceitual FRBR e as
+orientações RDA podem ser aplicados em repositórios institucionais digitais, na perspectiva
+da Ciência da Informação.
+A metodologia dessa pesquisa foi construída e realizada através do método de
+Revisão Sistemática da Literatura (RSL), um tipo de investigação que contribui para a
+identificação e análise crítica das pesquisas relevantes, na definição de estratégias de busca
+e critérios de análise e seleção do referencial teórico para responder questões de pesquisa
+específicas.
+Considera-se que o domínio bibliográfico pode contribuir no repasse de seus
+conceitos, métodos, metodologias e instrumentos para a otimização da modelagem dos
+repositórios institucionais digitais, oferecendo interfaces mais amigáveis e interativas aos
+usuários, propiciadas pela camada intangível do sistema nas atividades de descrição e de
+representação dos dados e dos recursos informacionais de maneira padronizada.
+2 DOMÍNIO BIBLIOGRÁFICO: MODELOS E ESQUEMAS DE DESCRIÇÃO PARA A
+REPRESENTAÇÃO DE RECURSOS INFORMACIONAIS
+As tecnologias disponíveis trouxeram uma nova forma de criar, reproduzir,
+armazenar e gerenciar a informação. Dessa maneira, ocorre, como apontado por Alves e
+Santos (2013) a unificação estratégica das tecnologias da informática com os métodos
+oriundos do Tratamento Descritivo da Informação (TDI), o que culmina no desenvolvimento
+de novos modelos de representação que atenda às necessidades de informação e ao cenário
+tecnológico vigentes.
+Buscando ajuste e equilíbrio, a Catalogação procura, em sintonia com
+expectativas de controle bibliográfico de recursos informacionais
+disponíveis nos mais diversos ambientes informacionais, implementar
+maior velocidade na evolução e adaptação dos formatos bibliográficos, na
+compreensão e no planejamento de catálogos, com o propósito de
+ampliação das opções de apresentação de registros bibliográficos e de
+busca de recursos, oferecendo estrutura para interoperabilidade entre
+ambientes informacionais, levando em conta objetos diversificados de
+informação e ambientes cooperativos e heterogêneos. (FUSCO, 2011, p.
+10).
+
+Pesquisadores da área da Ciência da Informação sempre se preocuparam com o
+desenvolvimento e o aperfeiçoamento de padrões e de modelos de estrutura e de conteúdo
+
+
+que permitam maior qualidade e confiabilidade na representação, no armazenamento e na
+posterior disseminação da informação. Dessa maneira, os metadados e os padrões de
+metadados são apontados como a solução para solucionar as questões da recuperação da
+informação.
+2.1 Padrão de metadados Dublin Core e perfis de aplicação de metadados
+Uma das mais importantes iniciativas relacionadas à utilização e à disseminação de
+padrões de metadados é o padrão Dublin Core (DC), criado em 1995, inicialmente projetado
+para a localização de recursos na Web.
+Destaca-se, nessa pesquisa, que o padrão Dublin Core não foi concebido
+originalmente para atender às necessidades específicas do domínio bibliográfico, justamente
+por sua utilização ser voltada à localização de recursos na Web, porém está contemplado no
+universo bibliográfico.
+Tal padrão de metadados visa à descrição de objetos em formato digital, englobando
+textos, imagens, vídeos, arquivos de som e até mesmo páginas da Web e é idealizado para
+que autores e/ou criadores sem conhecimento acerca de catalogação e indexação possam
+descrever, representar e disseminar seu próprio trabalho. É, portanto, um padrão
+caracterizado por sua ampla flexibilidade, o que justifica sua utilização pelos repositórios
+institucionais em todo o mundo.
+De acordo com Coyle e Baker (2009), quando se trata de metadados, um só
+“tamanho” não serve para todos. As necessidades de comunidades e de aplicações
+específicas acerca de metadados são muito diversas. O resultado é uma grande proliferação
+de formatos de metadados, mesmo em aplicações que têm necessidades em comum.
+Nesse contexto, foram desenvolvidos perfis de aplicações de metadados,
+que consistem em elementos de dados extraídos de um ou mais esquemas de metadados,
+otimizados para uma aplicação específica. (HEERY; PATEL, 2000).
+Diante desse cenário, a Dublin Core Metadata Initiative (DCMI) desenvolveu os Perfis
+de Aplicação de Dublin Core, em inglês Dublin Core Application Profiles (DCAP).
+Coyle e Baker (2009), explicam que um DCAP é um documento (ou conjunto de
+documentos) que descreve os metadados usados em uma aplicação específica. Para isso, um
+DCAP: descreve o que uma comunidade deseja realizar com sua aplicação (Requisitos
+
+
+Funcionais); caracteriza os tipos de objetos descritos pelos metadados e seus
+relacionamentos (Modelo de Domínio); enumera os termos a serem usados e as regras para
+seu uso (Perfil de Conjunto de Descrição e Diretrizes de Uso); e define a sintaxe da máquina
+que será usada para codificar os dados (Diretrizes de Sintaxe e Formatos de Dados).
+Percebe-se, portanto, que o desenvolvimento de perfis de aplicação de metadados,
+em especial voltados ao padrão Dublin Core, pode contribuir para uma melhor
+representação da informação.
+Além dos padrões e perfis de aplicação de metadados, faz-se necessário estudar as
+ferramentas, os modelos, as tecnologias e as práticas de catalogação no contexto
+contemporâneo.
+2.2 Requisitos Funcionais para Registros Bibliográficos (FRBR)
+Ao longo de oito anos, desde os anos de 1990, pesquisadores da IFLA (International
+Federation of Library Associations and Institutions) desenvolveram os Requisitos Funcionais
+para Registros Bibliográficos (FRBR), sendo o relatório final publicado em 1998. (MORENO;
+ARELLANO, 2005).
+O contexto que antecede a confecção dos FRBR é marcado por pressões
+econômicas que conduziam as instituições para o exercício de uma
+catalogação cada vez mais simplificada ou com custos cada vez mais
+reduzidos. Surgiu então uma preocupação com a criação de registros
+bibliográficos que reduzissem os custos da catalogação, mantendo o
+consenso sobre a composição do registro e sem perder de foco a
+necessidade do usuário, a diversidade de suportes da informação e os
+contextos de utilização dos registros bibliográficos. (FUSCO, 2011, p. 81).
+
+Os FRBR surgiram com dois objetivos principais: 1) fornecer uma estrutura para
+relacionar os dados registrados às necessidades dos usuários; 2) recomendar um nível básico
+de funcionalidade para registros bibliográficos. (IFLA, 2009).
+Para a definição dos FRBR foram consideradas as tarefas básicas realizadas pelos
+usuários dentro do contexto do acesso aos registros bibliográficos nos catálogos, conforme
+proposto pela IFLA (2009), a saber:
+a) encontrar materiais que correspondam aos critérios estabelecidos pelo usuário;
+b) identificar uma entidade;
+c) selecionar uma entidade adequada às necessidades do usuário;
+d) adquirir ou obter acesso à entidade.
+
+Os FRBR têm como finalidade aperfeiçoar a construção dos registros
+bibliográficos, a catalogação e, por consequência, os catálogos. Foram
+criados para estabelecer conceitos sobre os muitos tipos de materiais
+descritos nas bases de dados pertencentes a uma biblioteca ou unidade de
+informação e tornar os catálogos automatizados mais usualmente
+simplificados aos olhos do usuário e a promover compatibilidades
+internacionais sobre seus usos, de modo a tornar a recuperação de
+registros bibliográficos cada vez mais eficiente e universal, auxiliando no
+reexame dos princípios fundamentais do tratamento descritivo da
+informação (FUSCO, 2011, p. 11).
+
+Os FRBR propõem um modelo conceitual para catálogos bibliográficos. Tratam de
+uma proposta de modelo comum para facilitar a organização de registros bibliográficos, por
+meio da modelagem entidade-relacionamento. De acordo com Silva e Santos (2012), o
+modelo E-R tem por objetivo descrever os objetos de um domínio (entidades), que possuem
+características (atributos) e se relacionam com outras entidades.
+Entidade é aqui compreendida como uma “coisa” ou um “objeto” no mundo real que
+pode ser identificada de forma unívoca em relação a todos os outros objetos. (ASSUMPÇÃO;
+SANTOS, 2013)
+As entidades FRBR são divididas em três grupos. Nessa pesquisa, utilizamos as
+ponderações de Tillett (2004) e Oliver (2011) em relação aos grupos.
+O Grupo 1 diz respeito às entidades que são produtos de trabalho intelectual ou
+artístico. São elas: Obra, Expressão, Manifestação e Item. O relacionamento entre as
+entidades do Grupo 1 é exposto na Figura 1.
+Figura 1: Relacionamento entre entidades do Grupo 1
+
+Fonte: Assumpção (2012)
+
+O Grupo 2 representa as entidades responsáveis pelo conteúdo intelectual ou
+artístico, pela sua produção e disseminação. São essas: Pessoa e Entidade coletiva. Apesar de
+não estar definida nos FRBR, a entidade “Família” é também considerada como uma
+entidade do Grupo 2 (IFLA, 2016). As entidades do Grupo 2 se relacionam com as entidades
+do Grupo 1 como apontado na Figura 2.
+Figura 2: Relacionamentos entre entidades do Grupo 1 e 2
+
+Fonte: Assumpção (2012)
+
+As entidades do Grupo 3 representam o conjunto de temas que expressam diferentes
+entendimentos dos assuntos de uma obra. São elas: Conceito, Objeto, Evento e Lugar.
+Também podem ser incluídas nesse grupo as entidades dos grupos 1 e 2, por poderem ser
+também assuntos de obras. Na Figura 3, demonstra-se exemplos de relacionamentos entre a
+entidade Obra e entidades do Grupo 3.
+Figura 3: Relações de assunto
+
+Fonte: Assumpção (2012)
+
+
+Cada uma das entidades definidas no modelo FRBR é associada a um conjunto de
+características ou atributos. Os atributos das entidades auxiliam o usuário nas tarefas de
+encontrar, identificar, selecionar e obter um recurso informacional.
+Os relacionamentos servem como veículo para representar as ligações entre uma
+entidade e outra, e assim, como meio de auxiliar o usuário a “navegar” pelo universo
+representado em uma bibliografia, catálogo ou banco de dados bibliográfico. (IFLA, 2009).
+Além dos modelos conceituais desenvolvidos para a construção de catálogos digitais,
+faz-se necessário o aprimoramento de regras e esquemas de descrição que possibilitem a
+convergência ao ambiente digital. Nesse sentido, a integração dos FRBR numa proposta de
+criação de um código de catalogação, que substitua o AACR2r, tem sido estudada e
+pesquisada pela comunidade científica, denominada Resource Description and Access (RDA).
+2.3 Resource Description and Access (RDA)
+Percebe-se um investimento na Catalogação Descritiva, numa tentativa de se criar
+modelos e estruturas capazes de atender às exigências da descrição no contexto digital e as
+necessidades dos usuários, uma dessas propostas consiste no Resource Description and
+Access (RDA), que vem a ser uma tendência no desenvolvimento de códigos de catalogação.
+O RDA inicialmente projetado com a nomenclatura AACR3, foi criado com o objetivo
+de revisar os princípios do Código de Catalogação Anglo-Americano (AACR2) e ser o seu
+sucessor (JOINT STEERING COMMITTEE FOR DEVELOPMENT OF RDA, 2018).
+O RDA possui diretrizes e instruções que abrangem a descrição e o acesso de todos os
+recursos digitais e analógicos, resultando em registros que podem ser usados em uma
+variedade de ambientes digitais (como a Internet, OPACs da Web etc.).
+De acordo com Oliver (2011), o objetivo do RDA é facilitar o processo de descrição de
+recursos seguindo um processo de decisão lógica, sendo projetado para ser fácil de usar e
+gerar registros que contenham dados relevantes e importantes para os usuários.
+As orientações RDA estão divididas em duas partes: 1) registro dos atributos das
+entidades e 2) registro dos relacionamentos entre as entidades.
+O RDA analisa dados em registros bibliográficos na perspectiva de como eles são
+utilizados e apresenta um modelo conceitual (FRBR) que identifica as entidades no universo
+
+
+
+bibliográfico que são de interesse do usuário (obras, itens, pessoas etc.), os atributos dessas
+entidades e suas relações entre si.
+As orientações RDA também proporcionam vantagens à representação da
+informação, pois aproxima o usuário das linguagens de catalogação da descrição de
+recursos, tornando-a menos complexa e promovendo maiores possibilidades de integração
+das necessidades informacionais e das tecnologias atuais.
+Ainda conforme Assumpção e Santos (2013), a adoção do RDA de maneira a desfrutar
+de todo seu potencial atualmente não se constitui simplesmente como uma escolha
+administrativa. Antecedendo essa adoção, faz-se necessário o planejamento, a modelagem e
+a construção de catálogos que possam refletir a base entidade-atributo-relacionamento
+presente nos modelos conceituais FRBR e FRAD, de modo que, tendo sido adotado o RDA,
+possa ser feito uso de todo seu potencial.
+É essencial compreender como as ferramentas, os instrumentos, os conceitos, os
+métodos e os processos advindos da Catalogação Descritiva podem e poderão atuar e
+ressignificar a forma de descrição dos dados nos ambientes informacionais.
+3 PERCURSO METODOLÓGICO: REVISÃO SISTEMÁTICA DA LITERATURA (RSL)
+A Revisão Sistemática da Literatura (RSL) caracteriza-se como um método de revisão
+da literatura que garante à pesquisa científica maior confiabilidade e reprodutibilidade, pois,
+de acordo com Briner e Denyer (2012, p. 112, tradução nossa):
+[...] aborda uma questão específica, utiliza métodos explícitos e
+transparentes para realizar uma pesquisa detalhada de literatura e
+avaliação crítica de estudos individuais, e desenha conclusões sobre o que
+atualmente conhecemos e não conhecemos sobre um determinado tópico
+ou questão.
+
+A RSL consiste em uma revisão bibliográfica acrescida de etapas e de critérios
+rigorosos que garantem a qualidade e a reprodutibilidade dos documentos obtidos.
+As revisões sistemáticas também aderem a um conjunto de princípios fundamentais:
+- Sistemáticas/organizadas: revisões sistemáticas são conduzidas de acordo
+com um sistema ou método que é projetado especificamente para resolver
+a questão que a revisão está sendo definida para responder.
+- Transparentes/explícitas: o método utilizado na revisão é explicitamente
+indicado.
+- Replicáveis/atualizáveis: como em muitas formas de pesquisa primárias, o
+método e a forma como são relatadas devem ser suficientemente
+
+detalhados e claros, de modo que outros pesquisadores possam repetir a
+revisão ou atualizá-la.
+- Sínteses/resumos: as revisões sistemáticas reúnem de maneira
+estruturada e organizada os resultados da revisão, a fim de resumir a
+evidência relacionada à questão de revisão. (BRINER; DENYER, 2012, p. 114,
+tradução nossa).
+
+A Revisão Sistemática proposta nessa pesquisa foi dividida em três etapas principais,
+a saber: 1) planejamento, contemplando a realização de uma revisão bibliográfica, como
+forma de familiarização com a temática estudada e preenchimento do protocolo de busca;
+2) condução, que consistiu na busca em bases de dados e na aplicação dos critérios de
+inclusão e de exclusão; 3) extração de dados.
+Como ferramenta instrumental para o processo de realização da Revisão Sistemática
+proposto por essa pesquisa, foi utilizado o software StArt1 (State of the Art through
+Systematic Review), desenvolvido pelo Laboratório de Pesquisa em Engenharia de Software
+(LaPES), do Departamento de Ciência da Computação da Universidade Federal de São Carlos
+(UFSCar). O apoio de uma ferramenta computacional é imprescindível para dar maior
+qualidade, agilidade e facilitar a aplicação da RSL.
+Uma das etapas mais importantes da RSL é o preenchimento do protocolo de busca,
+que inclui as bases de dados que serão consultadas, as palavras-chave a serem utilizadas, os
+critérios de inclusão e de exclusão de trabalhos e os dados que serão extraídos dos
+documentos selecionados.
+Quadro 1: Protocolo da Revisão Sistemática da Literatura
+Campo
+Objetivo
+
+Questão principal
+População
+Intervenção
+Controle
+Resultados
+
+Aplicação
+
+Palavras-chave e
+1
+
+Preenchimento do campo
+Compreender à luz da Revisão Sistemática da Literatura, a aplicabilidade dos modelos
+conceitual FRBR e das orientações da proposta RDA, estabelecidos no domínio
+bibliográfico, em repositórios institucionais digitais (RIs).
+É possível aplicar os modelos conceituais estabelecidos no domínio bibliográfico e as
+orientações estabelecidas pelo RDA em repositórios institucionais?
+Iniciativas de aplicação do modelo conceitual FRBR e da proposta RDA em repositórios
+institucionais digitais.
+Como são tratadas e discutidas as possibilidades de aplicação do FRBR e da proposta
+RDA em repositórios institucionais nos trabalhos recuperados.
+Artigos de bases de dados da área da Ciência da Informação.
+Identificar estudos que abordem a aplicação do modelo conceitual FRBR e da proposta
+RDA em repositórios institucionais. Identificar possíveis requisitos para a aderência dos
+RIs aos modelos conceituais do domínio bibliográfico e às orientações propostas pelo
+RDA.
+Contribuição para a área da Ciência da Informação em relação às formas de representar
+a informação e a modelagem de dados, aplicando em repositórios institucionais as
+novas possibilidades no âmbito da Catalogação Descritiva.
+A string de busca utilizada em todas as bases de dados foi definida como: (“Digital
+
+Disponível em: <http://lapes.dc.ufscar.br/tools/start_tool>. Acesso em: 20 jan. 2019.
+
+sinônimos
+
+Definição de
+critérios de busca
+Idioma
+Métodos de
+pesquisa
+
+Lista de fontes
+
+Critérios de
+seleção (inclusão
+e exclusão)
+
+Definição de
+tipos de estudos
+Seleção inicial
+Avaliação de
+qualidade dos
+estudos
+Forma de
+extração de
+dados
+Sumarização de
+resultados
+
+repositories” OR "Repositories" OR "Institutional repositories") AND (“FRBR” OR
+“Functional Requirements for Bibliographical Records” OR “RDA” OR “Resource
+Description and Access”).
+Trabalhos indexados em periódicos da área da Ciência da Informação
+Inglês; Português; Espanhol.
+Leitura do título e resumo dos documentos; aplicação dos critérios de inclusão e
+exclusão; leitura da introdução e conclusão dos documentos; leitura do documento
+completo nos casos em que as análises anteriores se mostrarem inconclusivas para a
+seleção.
+As bases de dados consultadas e utilizadas foram:
+- Web of Science
+- Library and Information Science Abstracts (LISA)
+- Library, Information Science & Technology Abstracts with full text (ISTA)
+- Information Science & Technology Abstracts (LISTA)
+Os critérios de seleção foram definidos como (I) para inclusão e (E) para exclusão.
+(I) Abordar a aplicação do modelo conceitual FRBR em ambientes digitais.
+(I) Abordar aplicação das orientações do RDA em ambientes digitais.
+(I) Abordar a implementação do RDA e/ou do FRBR especificamente em repositórios
+digitais.
+(I) Tratar de possíveis requisitos ou modelos para a aderência ao RDA e ao FRBR em
+ambientes ou repositórios digitais.
+(E) Documento não acessível ou não localizado integralmente.
+(E) Não estar nos idiomas especificados.
+(E) Não abordar a aplicação do RDA em repositórios.
+(E) Não abordar a aplicação do modelo FRBR em repositórios.
+Trabalhos indexados nas bases de dados consultadas.
+Não se aplica à pesquisa.
+Uma avaliação minuciosa da qualidade dos documentos será feita a partir da análise da
+metodologia dos trabalhos recuperados e aceitos após a Revisão Sistemática.
+Enfoque dos documentos; aplicação do RDA em repositórios; aplicação do modelo
+conceitual FRBR em repositórios; contribuições do domínio bibliográfico para os
+repositórios; considerações finais.
+Após extração de dados, realizada seguindo o roteiro proposto no campo “Information
+Extraction Fields”, os dados serão agrupados em quadros de acordo com a categoria de
+análise, os resultados semelhantes serão agrupados permitindo a realização de uma
+análise quantitativa e também a elaboração de inferências que permitiram responder a
+pergunta de pesquisa.
+Fonte: Elaborado pelos autores (2019).
+
+Após definido o protocolo de busca e o planejamento da mesma, partiu-se para a sua
+execução, realizando as buscas nas bases de dados selecionadas. Em cada uma das bases de
+dados utilizou-se a string de busca definida no protocolo. Nessa etapa, a quantidade total de
+trabalhos recuperados entre as bases de dados selecionadas foi de 275 (duzentos e setenta
+e cinco) artigos.
+Em seguida, foram aplicados os critérios de inclusão e de exclusão, a partir de uma
+leitura criteriosa e objetiva da introdução, com atenção para o título, o resumo e os
+
+
+objetivos, a metodologia e a conclusão dos trabalhos identificados. Os artigos duplicados (ou
+seja, contendo mesmo título, autor e ano de publicação) foram identificados e rejeitados.
+Após a etapa da seleção e extração, foram aceitos um total de 25 (vinte e cinco)
+artigos, que correspondem à 9% da amostra. A quantidade de 35 (trinta e cinco) artigos
+(13%) estavam duplicados e 215 (duzentos e quinze) artigos, correspondentes à 78% da
+amostra, foram rejeitados.
+Figura 4: Documentos aceitos, duplicados e rejeitados
+
+Fonte: dados da pesquisa (2019).
+
+A quantidade de documentos recuperados condizentes à proposta de pesquisa fora
+relativamente baixa, indicando pouca bibliografia disponível acerca da temática da pesquisa.
+Essa constatação pode significar que o tema ainda não esteja sendo amplamente discutido e
+estudado na área da Ciência da Informação, ou ainda, não está disponibilizado nas principais
+bases de dados da área que foram exploradas por essa pesquisa, portanto, justifica a
+importância dessa pesquisa.
+Pode-se observar que os estudos referentes à correspondência das tendências do
+domínio bibliográfico - em especial o modelo conceitual FRBR e orientações RDA – no
+contexto dos repositórios digitais institucionais surgiram em baixa quantidade após a revisão
+sistemática realizada por essa pesquisa, conferindo a necessidade de compreender e
+explorar mais o contexto.
+Diante da leitura detalhada dos trabalhos recuperados e selecionados pela RSL, podese considerar o FRBR como uma ferramenta imprescindível para a atividade da catalogação
+
+
+descritiva, diante dos avanços tecnológicos e das necessidades dos usuários e dos ambientes
+digitais contemporâneos.
+Também pode-se considerar o RDA como um esquema mais vantajoso para a
+representação da informação atualmente, por sua aderência e adequação ao contexto
+digital, refletindo também na modelagem dos registros e dos catálogos bibliográficos
+provenientes do modelo conceitual FRBR.
+A RSL propiciou a descoberta de exemplos práticos de aplicação, tanto do modelo
+conceitual FRBR como das orientações RDA em ambientes informacionais digitais, apontados
+como tecnologias computacionais e informacionais, de acordo com os estudos recuperados.
+Acredita-se que os estudos das tendências do domínio bibliográfico e sua aplicação
+em ambientes digitais, em especial os repositórios institucionais digitais, possa trazer
+grandes contribuições para a atividade da catalogação descritiva e da representação da
+informação.
+4 MODELO CONCEITUAL FRBR E ORIENTAÇÕES RDA: APLICAÇÃO EM REPOSITÓRIOS
+Como objetivo principal dessa pesquisa, buscou compreender o modelo conceitual
+FRBR e as orientações RDA no contexto dos esquemas dos repositórios institucionais digitais.
+Conforme destacado por Cerrao e Castro (2018), o esquema de metadados utilizado
+em repositórios institucionais nas universidades federais brasileiras é o Dublin Core (DC).
+É possível relacionar diversos elementos do padrão Dublin Core ao modelo FRBR.
+Elementos como título e data, por exemplo, servem como atributos de diversas entidades,
+configurando um trabalho complexo e que demanda bastante atenção nos estudos de
+mapeamento e correspondência ao modelo FRBR.
+A modelagem da estrutura Dublin Core, presente nos RIs, aproxima os elementos DC
+das entidades FRBR, qualificando os registros e individualizando-os a partir dos atributos
+específicos associados às entidades correspondentes.
+Ainda, a respeito da estrutura semântica dos registros, o preenchimento dos valores
+dos elementos deve seguir as instruções presentes nas sessões correspondentes do RDA.
+Após considerar e entender que é possível a aplicação do modelo conceitual FRBR e
+das orientações RDA em repositórios institucionais digitais, a pesquisa resgata os conceitos
+de perfis de aplicação de metadados, desenvolvendo um perfil de aplicação voltado para
+registros de repositórios institucionais, pautado no padrão de metadados Dublin Core.
+
+
+O perfil de aplicação proposto nesse estudo corresponde a diretrizes e requisitos a
+serem seguidos, como um ponto de partida na aplicação em repositórios institucionais.
+Para a elaboração do perfil de aplicação de metadados, fora utilizado como exemplo
+um artigo depositado no repositório institucional da Universidade Federal de Sergipe (UFS),
+intitulado “Qualidade da assistência de enfermagem na percepção de puérperas”2.
+Figura 5: Perfil de aplicação de metadados baseado em FRBR e RDA
+
+Fonte: Elaborado pelos autores (2019).
+2
+
+Disponível em: <https://ri.ufs.br/handle/riufs/967>. Acesso em: 02 jun. 2019.
+14
+
+XX ENCONTRO NACIONAL DE PESQUISA EM CIÊNCIA DA INFORMAÇÃO – ENANCIB 2019
+21 a 25 de outubro de 2019 – Florianópolis – SC
+
+Nesse perfil de aplicação, fora proposta a estrutura do repositório institucional de
+maneira a desmembrar as entidades Obra, Manifestação e Expressão, separadas
+“hierarquicamente” em uma única interface.
+O elemento “Qualidade da assistência de enfermagem na percepção de puérperas”
+trata da obra, que é um conceito abstrato, uma “criação” mental. Essa obra possui duas
+expressões distintas: texto em português e texto em inglês. Traduções/mudanças de idioma
+são consideradas expressões distintas. Isso quer dizer que a mesma “ideia” do autor resultou
+em dois tipos de trabalho diferentes.
+Cada expressão possui a sua manifestação, que configura o suporte, ou a espécie
+documental. A manifestação trata da materialização das expressões de uma obra. O
+elemento item corresponde a um único exemplar, referente a uma manifestação. Esse
+exemplar constará no repositório e poderá ser acessado por um usuário.
+Nesse perfil de aplicação, a aplicação da iniciativa RDA está refletida no conteúdo, ou
+melhor, na descrição dos elementos do registro. É importante ressaltar que todos os
+registros do perfil de aplicação proposto deverão seguir as instruções e diretrizes das
+sessões do RDA correspondentes. Sendo assim, a estrutura semântica do perfil e os valores
+dos metadados são pautados no RDA.
+O perfil de aplicação também deve atender as possibilidades de relacionamentos
+entre entidades FRBR, tais como:
+a) Obra - é realizada por - Expressão
+b) Expressão - está contida em - Manifestação
+c) Manifestação - é exemplificada por - Item
+d) Obra - é criada por - Pessoa, entidade coletiva ou família
+e) Manifestação - é produzida por - Pessoa, entidade coletiva ou família
+f) Expressão - tem uma tradução – Expressão
+
+O perfil de aplicação proposto nessa pesquisa tem como um dos principais objetivos
+fornecer uma interface onde todos os registros referentes a cada entidade são interligados e
+podem ser acessados em uma única interface, como já explicado, e com “abas” referentes a
+cada um deles para que possam ser apresentados separadamente.
+
+
+
+Para que essa visualização seja possível, seria necessário estruturar a interface do
+repositório em abas, onde cada aba mostrasse o registro de entidades FRBR diferentes.
+A busca e a recuperação de informações podem ser aprimoradas pelo modelo
+conceitual FRBR e pelas orientações RDA, pois além de prover uma estrutura organizada dos
+atributos das entidades, o uso do conceito de entidade-relacionamento auxilia a relacionar
+as entidades de forma ampla e precisa. Dessa forma, usuários podem realizar buscas de
+forma mais eficiente, encontrando objetos relacionados com maior facilidade.
+Os registros pautados no padrão Dublin Core, como no caso dos repositórios
+institucionais, são caracterizados pela simplicidade, são passíveis de customização e de
+extensibilidade, possibilitando que as comunidades que o adotam possam adequá-lo de
+acordo com as necessidades dos usuários, além de promover interoperabilidade e serem
+reconhecidos e utilizados mundialmente (SOUZA; BEZERRA; COSTA, 2016).
+5 CONSIDERAÇÕES FINAIS
+A aplicação do FRBR e do RDA em repositórios institucionais digitais, como discutido
+nessa pesquisa, amplia a capacidade semântica dos sistemas de busca, no que diz respeito
+ao desenvolvimento de interfaces mais intuitivas e os aproximam mais das necessidades
+contemporâneas dos usuários, contribuindo para uma melhor representação e posterior
+recuperação da informação.
+As possibilidades de aplicação do FRBR e do RDA podem e devem ser ampliadas,
+repensando principalmente a atividade da catalogação descritiva em outros domínios de
+aplicação. Para tanto, o perfil de aplicação proposto nessa pesquisa demonstra as
+potencialidades de uso dos métodos, dos instrumentos, das metodologias e dos conceitos
+oriundos do domínio bibliográfico e o diálogo cada vez mais necessário com domínios
+heterogêneos, com dados abertos e conectados.
+Destaca-se que esse perfil de aplicação de metadados baseado em FRBR e RDA
+apresenta-se como um ponto de partida para o desenvolvimento, a modelagem e a
+construção de repositórios institucionais digitais com dados abertos, conectados e
+interoperáveis, propiciados pelo domínio bibliográfico. Os repositórios institucionais digitais
+ao adotarem os conceitos, os métodos, as metodologias, os instrumentos, os esquemas de
+descrição, os modelos e as tecnologias do domínio bibliográfico poderão compartilhar, usar
+
+
+e reutilizar dados com mais consistência, confiabilidade e com rigor, propiciados pelos
+aspectos da padronização das formas de representação.
+O mapeamento do estado da arte do tema estudado e a proposta de elaboração de
+um perfil de aplicação de metadados evidenciam o caráter tecnológico e inovador desse
+trabalho.
+Essa pesquisa corrobora com Arakaki (2017), que destaca que a evolução dos
+instrumentos de representação no domínio bibliográfico acarretará numa nova transição
+para a Catalogação Descritiva. Baseados principalmente nos modelos conceituais (FRBR e
+FRAD), as diretrizes RDA e os conceitos da Web Semântica, o processo de catalogação e os
+catálogos atravessam e ainda atravessarão mudanças fundamentais para otimizar a busca e
+recuperação das informações na Web.
+Acredita-se que essa pesquisa possa contribuir para a reflexão mais cuidadosa no
+estabelecimento de recomendações teóricas e metodológicas oriundas do domínio
+bibliográfico e sua aplicação na construção e na modelagem de repositórios institucionais
+digitais mais acessíveis e interoperáveis, na promoção da Ciência, do conhecimento, da
+tecnologia e da inovação na sociedade contemporânea.
