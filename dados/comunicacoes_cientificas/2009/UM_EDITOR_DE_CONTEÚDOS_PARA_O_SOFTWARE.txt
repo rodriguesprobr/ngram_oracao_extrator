@@ -1,0 +1,530 @@
+UM EDITOR DE CONTEÚDOS PARA O SOFTWARE OJS/SEER: otimizando a atualização de edições/fascículos de revistas eletrônicas
+
+
+RESUMO
+A crescente migração de revistas científicas impressas (no Brasil e no mundo) para o
+ambiente eletrônico, tem levado grande quantidade de editores científicos a procurarem por
+soluções que agilizem e otimizem suas atividades, em especial a inserção da coleção
+retrospectiva e corrente (edições/fascículos na íntegra). Observando o padrão de
+importação/exportação de dados e a DTD (Document Type Definition) utilizada pelo software
+OJS (Open Journal Systems), foi projetado e implementado um editor de conteúdo
+(Violet/OJS) para geração de arquivos XML. Customizado para atender as especificidades de
+distintas revistas; a partir de uma interface web; o editor pode indexar integralmente os
+metadados de uma edição/fascículo (seções, idiomas, documentos, arquivos, suplementos etc)
+de suas coleções, gerando o arquivo XML para posterior importação diretamente no OJS. Este
+artigo apresenta a finalidade e a descrição desse ambiente de edição de conteúdo, detalhando
+sua estrutura, tabelas de relacionamento e funcionalidades, bem como evidencia seu potencial
+de uso e próximos desenvolvimentos.
+Palavras-chave: Editor de conteúdo. OJS – Open Journal System. SEER – Sistema de
+Editoração Eletrônica de Revistas. Revistas eletrônicas. DTD de edições. Conteúdo em XML.
+
+1 INTRODUÇÃO
+Com o desenvolvimento da internet e, mais especificamente da web, surgem diversas
+iniciativas visando disponibilizar revistas científicas em websites. No entanto, decorrente dos
+movimentos internacionais OAI (Open Archives Initiative) e OA (Open Access)1, aparecem
+distintos softwares para gerenciamento de conteúdo, especificamente voltados para a
+
+automação do processo editorial da revista e publicação de suas edições/fascículos, geração de
+metadados descritivos seguindo normas internacionais, indexação na fonte, navegação em
+distintos idiomas, recursos de disseminação seletiva de informação dentre outras
+características. Podem ser citados os sistemas SciELO, OJS (no Brasil conhecido como
+SEER), Redalyc dentre outros.
+Frente às possibilidades de interoperabilidade, gestão integrada e, portanto, maior
+visibilidade e acessibilidade oferecida por tais sistemas, tanto as instituições de fomento à
+pesquisa como a própria comunidade científica passam a incentivar a migração das revistas
+impressas e/ou em websites para estes novos modelos. No Brasil, especificamente, temos hoje
+cerca de 2206 revistas no Scielo e 4507 utilizando somente o OJS/SEER. Vale lembrar que
+desde 2005 o Scielo utiliza a ferramenta do processo editorial do OJS (SANTOS, 2005).
+Nesta migração duas intensas atividades afloram: (1) a primeira é a mudança de cultura
+da comunidade científica, no sentido de que a adoção de tais sistemas passa a exigir dos
+editores, avaliadores, autores e gestores o desenvolvimento coordenado de suas atividades e
+um treinamento e capacitação no uso das ferramentas; e (2) a segunda é a estruturação do
+portal da revista com a inserção de todas as normas, políticas, regras e respectivas coleções
+(retrospectivas e correntes).
+As demandas e possibilidades de inserção de coleções retrospectivas são distintas
+conforme o sistema utilizado. Especificamente para o OJS/SEER, têm-se as seguintes formas:
+(a) submissão convencional dos documentos (um a um), onde o editor passaria por todas as
+etapas do processo editorial proposto pelo sistema, assumindo os distintos papéis exigidos
+de autor, avaliador, editor, revisor, leiuate etc.
+(b) uso da funcionalidade de “publicação agilizada8” onde a inserção dos artigos (previamente
+avaliados, revisados, aprovados, formatados e publicados) é feita, individualmente e
+fascículo a fascículo, mas sem passar pelas diversas etapas editoriais do sistema.
+(c) importação direta de arquivo XML contendo todo o conteúdo da edição/fascículo, com os
+metadados completos, idioma definido e link para captura automática dos documentos em
+
+
+texto completo, associados a cada edição/fascículo. É o processo recomendado pelos
+desenvolvedores do referido software.
+Os dois primeiros processos, o tradicional ou recorrendo-se à funcionalidade
+mencionada, são morosos, exigem tempo e recursos humanos, além de resultar na duplicação
+dos arquivos, o arquivo original (corresponde aquele submetido pelo autor para avaliação, o
+qual no sistema passa a ser identificado como -SM) e o arquivo de publicação (que
+corresponde ao documento final, já aprovado, revisado, formatado e pronto para publicação,
+cujo código de identificação no sistema é -PB).
+Já o terceiro processo, elimina a duplicidade de arquivos (pois, deste modo, o sistema
+aceita apenas o arquivo de publicação final) e minimiza o tempo de publicação, mas exige
+conhecimento técnico específico para a preparação do respectivo arquivo XML.
+Embora existam diversos editores XML gratuitos e disponíveis na internet (XML
+Cooktop, Peter's XML editor, Bonfire Studio, Microsoft Notepad XML) não se encontra um
+que seja intuitivo, simples e que elimine a apresentação das tags necessárias para a construção
+do arquivo XML, mas que atrapalham a compreensão de usuários inexperientes neste tipo de
+documento. Editores comerciais (por exemplo, o OXIGEN[1], XMetal[2] ou XMLSpy[3]) têm
+custo, não apenas da versão de uso, mas de atualizações do software e do número de usuários
+simultâneos, o que pode inviabilizar esta opção em muitos ambientes. Ou seja, inexiste um
+sistema gerador de arquivo XML, que possa ser utilizado facilmente por pessoas leigas no
+assunto, independente de seu grau de conhecimento de formatos XML, do sistema
+operacional adotado e das especificidades do OJS/SEER para a construção do arquivo.
+Foi pensando nesta atividade de inserção, no sistema OJS/SEER, de coleções que não
+necessitam passar pelo processo editorial, que surgiu o projeto Violet/OJS junto ao Portal
+Univerciencia de Revistas de Acesso Aberto em Ciências da Comunicação, coordenado pelo
+grupo de pesquisa CEDUS9 da ECA/USP. Este projeto visa implementar um sistema de
+edição de conteúdos onde, a partir de uma interface web, usuários leigos podem inserir
+metadados e texto completo de conteúdos referentes a edições/fascículos inteiros de revistas e
+gerar arquivos XML configurados no padrão DTD10 do OJS/SEER, para posterior atualização
+de suas coleções diretamente no software. Este artigo descreve este projeto Violet/OJS,
+passando pela contextualização do ambiente em que foi concebido, descrevendo seus objetivos, estrutura, interfaces do usuário, potencial de aplicação, tabelas de relacionamento e
+funcionalidades, bem como potencial de uso e futuros desenvolvimentos.
+
+2 O PROJETO UNIVERCIENCIA E O CONTEXTO DE USO DO OJS/SEER
+Desde 1999, a equipe do CEDUS vem pesquisando a situação da produção científica
+brasileira em Ciências Sociais, enfocando especificamente a disciplina de Ciências da
+Comunicação, visando gerar metodologias e ferramentas de trabalho que auxiliem tal
+comunidade a gerenciar e produzir/publicar conhecimento a partir de plataformas
+padronizadas e normalizadas internacionalmente, ganhando assim interoperabilidade,
+visibilidade e acessibilidade. Dentre seus inúmeros projetos, iniciou em 2003 a pesquisa e
+implementação de metodologias especificas para revistas eletrônicas. O primeiro produto
+gerado foi o Portal REVCOM de Revistas Eletrônicas de Ciências da Comunicação em
+parceria com a PORTCOM, e que a partir de setembro de 2008 migrou para o Portal
+Univerciencia.org em parceria direta com editores científicos de revistas de programas de
+pós-graduação, associações de pesquisadores, núcleos de pesquisas e cursos de graduação na
+área em foco. O Portal Univerciencia Revistas (2008) tem como objetivo
+contribuir para o desenvolvimento da pesquisa em ciências da comunicação
+favorecendo o acesso aberto e irrestrito ao conhecimento gerado na área.
+Deste modo, objetiva: (a) aumentar a visibilidade, a acessibilidade e a
+credibilidade nacional e internacional da publicação científica em ciências da
+comunicação produzida pelos parceiros institucionais. (b) colaborar para o
+aumento do impacto da produção científica da área, atuando diretamente no
+processo de comunicação científica, organizando e integração coleções
+locais, regionais, nacionais ou internacionais de periódicos científicos em
+ciências da comunicação.
+
+Atuando junto a editores de 22 revistas brasileiras e/ou portuguesas da área (dados de
+jun.2009), sua equipe de gerenciamento tem se deparado com duas situações recorrentes: (1) o
+constante interesse de editores em incluir o conteúdo completo de suas coleções
+retrospectivas; (2) a dificuldade apresentada por certos editores em assumir totalmente o
+processo editorial proposto o sistema OJS/SEER e abandonar os websites que construíram,
+por vezes com bastante esforço e dedicação. Neste caso, percebe-se o desejo de continuar
+utilizando suas ferramentas iniciais e, recorrer ao OJS/SEER apenas para publicar seus
+conteúdos (ou seja, incluir suas edições/fascículos já publicadas) e usufruir as inúmeras
+vantagens no que se refere à interoperabilidade e indexação.
+
+
+A busca de soluções para agilizar e facilitar a tarefa de inserção de conteúdos no OJS,
+resultou na identificação do Portal YDJ (York Digital Journals)14 da York University, Canadá,
+implementado exclusivamente para que os editores das revistas da própria universidade
+criassem seus respectivos arquivos XML. Com base nesta iniciativa, na análise da DTD do
+próprio OJS/SEER15, na experiência da equipe na geração de arquivos XML manualmente
+para a alimentação do Portal Univerciencia e pensando na facilidade de uso por editores não
+versados em XML, foi projetado o Violet/OJS agregando-lhe uma série de funcionalidades e
+relacionamentos.
+3 A DTD DE EDIÇÕES DO OJS/SEER
+Para melhor contextualizar a discussão sobre a estrutura proposta para o Violet/OJS e
+também sobre a DTD de edições do OJS/SEER, alguns conceitos prévios são necessários,
+como linguagem de marcação, XML (eXtensible Markup Language) e a própria definição de
+DTD.
+Segundo Almeida (2002, p.5),
+historicamente, usa-se a palavra marcação para descrever anotações ou
+marcas em um texto, que tem por objetivo dar instruções ao desenhista ou
+datilógrafo sobre a maneira como uma parte do texto deveria ser
+representada. Como exemplos, pode-se citar um sublinhado ondulado que
+indicaria negrito, símbolos especiais para passagens a serem omitidas ou
+impressas com uma fonte especial, dentre outras. Como a formatação e a
+impressão de textos se tornaram automatizadas, o termo foi estendido para
+todos os tipos de códigos de marcação em textos eletrônicos.
+
+A marcação (tags) em textos eletrônicos, carrega também o objetivo de tornar explícita a
+forma como tal conteúdo deve ser interpretado. Desse modo, por “linguagem de marcação”,
+entende-se “um conjunto de convenções utilizadas para a codificação de textos. Uma
+linguagem de marcação deve especificar quais marcas são permitidas, quais são exigidas,
+como se deve fazer distinção entre as marcas e o texto e qual o significado da marcação”
+(ALMEIDA, 2002, p.6).
+Uma das linguagens conhecidas para conteúdo eletrônico é a XML, (EXtensible Markup
+Language), criado pelo W3C (World Wide Web Consortium16) em fevereiro de 1998. Parecida
+com a linguagem HTML, foi projetada para transportar dados (com foco no conteúdo), não
+para mostrar dados (com foco em como o dado é apresentado). Criada para estruturar,
+arquivar e transportar informação em formato de texto puro, garante independência de software e de hardware e facilita o compartilhamento dos dados. Ainda Almeida (2002, p.7),
+menciona que entre os objetivos estabelecidos na especificação da linguagem XML pela W3
+Consortium estão as seguintes características:
+ser diretamente utilizável na internet; ser legível por humanos; possibilitar
+um meio independente para publicação eletrônica; permitir a definição de
+protocolos para troca de dados pelas empresas (independentemente da
+plataforma de hardware e software); facilitar às pessoas o processamento de
+dados.
+
+Uma importante característica adicional mencionada por Almeida (2002) ao XML é
+permitir ao autor do documento, a definição de suas próprias marcas, conferindo-lhe
+“habilidades” semânticas que possibilitam melhorias significativas em processos de
+recuperação e disseminação da informação. A este conjunto de marcas, estabelecidas pelos
+respectivos autores, intitula-se DTD (Document Type Definition), a qual define a estrutura do
+documento com a lista dos elementos aceitos e seus atributos.
+Seguindo uma determinada DTD, cada arquivo XML contém a descrição do seu próprio
+formato. Esta descrição pode estar dentro do próprio arquivo XML ou, se extensa, deve estar
+em um arquivo separado, indicando-o logo em suas primeiras linhas. Dentre as diversas DTD
+definidas pelo software OJS, a que serviu de base para o desenvolvimento do Violet/OJS foi a
+referente a importação de artigos e edições (apresentada no anexo 01).
+4 O VIOLET/OJS - EDITOR DE CONTEÚDOS PARA O AMBIENTE OJS
+O desenvolvimento do editor de conteúdos Violet para o ambiente OJS ocorreu em seis
+etapas distintas: (a) definições conceituais; (b) avaliação da experiência acumulada pela
+equipe CEDUS; (c) modelagem conceitual, (d) estrutura da base de dados, (e) interface do
+usuário, (f) implementação do software; a saber:
+4.1 Definições conceituais
+Visando atender e ser útil a distintas equipes editoriais (independente do seu grau de
+familiaridade com XML e DTD) e a diversas revistas (independente da quantidade e
+qualidade da estrutura de suas edições/fascículos, seções, documentos e idiomas) optou-se por
+desenvolver um editor que atendesse as seguintes características:
+(a) interface web, de maneira que o software possa ser acessado via browser, portanto,
+recorrendo a um ambiente familiar ao usuário;
+
+(b) portabilidade, ou seja que pudesse facilmente ser utilizado em qualquer computador com
+acesso à internet, independente do sistema operacional (Macintosh, Unix-like, Windows);
+(a) design gráfico simples, uso de vocabulário pertinente ao cotidiano das equipes editoriais e
+dicas de apoio ao preenchimento dos campos;
+(b) transparência para os conceitos de DTD, XML, tags e afins, de maneira que um usuário
+leigo possa gerar seu próprio arquivo XML sem conhecer o que isto seja;
+(c) recursos e funcionalidades de apoio, ao usuário, no decorrer do processo para permitir a:
+1) transferência de metadados em tantas sessões quantas sejam necessárias, respeitando
+seus tempos e dificuldades para encontrar o material da edição/fascículo, 2) o trabalho em
+várias edições simultaneamente, 3) a entrada de dados com recursos de preenchimento
+automático nos metadados; 4) visualização da evolução do trabalho de maneira a evitar
+duplicações indevidas ou esquecimento de itens – árvore da edição/fascículo.
+(d) recurso de email para envio do arquivo XML ou de salvar na máquina local;
+(e) desenvolvimento modular, de maneira que o editor possa evoluir em etapas, cada uma
+delas bem consolidada e testada, segundo as necessidades dos usuários.
+4.2 Avaliação da experiência acumulada: diagnóstico
+Com base nos problemas e dificuldades encontrados nos experimentos de elaboração do
+arquivo XML recorrendo a editor de texto puro, foram identificadas algumas características
+básicas e essenciais para que sua importação no OJS ocorresse efetiva e facilmente. São elas:
+4.2.1 No que se refere a estrutura17 do XML:
+•
+
+
+ÁRVORE DE ELEMENTOS DO ARQUIVO – obedece a convenção normalizada de símbolos
+(sem símbolo, ?, + e *)18 e é composta de detalhes sobre a composição dos dados
+
+Um documento XML é composto por duas partes: (a) cabeçalho: contém a Declaração XML (que define a
+versão do XML e a codificação utilizada) e as Instruções de Processamento (que podem vir definidas
+internamente no arquivo ou serem referenciadas por um arquivo externo na declaração DOCTYPE); (b) e árvore
+de elementos: um nó raiz abarca elementos e elementos-filhos, e em todos pode haver conteúdo texto e/ou
+atributos (cujos valores devem obrigatoriamente estar entre aspas) e devem ter uma marcação de fechamento.
+18
+Pela definição do W3C (2008), numa DTD o símbolo + caracteriza elementos que podem aparecer um número
+qualquer de vezes, mas deve aparecer pelo menos uma vez; * representa elementos opcionais que podem
+aparecer qualquer número de vezes (zero ou mais vezes); ? expressa elementos opcionais, mas que se usados,
+
+referentes a edições (ISSUE no linguajar do OJS), seções (SECTION), documentos
+(ARTICLES) e autoria (AUTHOR) e arquivos (GALLEY ou HTMLGALLEY). Exemplo
+para o elemento ISSUE
+<!ELEMENT issue (title+, description*, volume?, number?, year?, cover*, date_published?,
+(access_date | open_access)?, section+)>
+
+Com base na definição da árvore de elementos da DTD para artigos e edições do OJS
+(anexo 01), evidencia-se que o programa deverá gerar um encadeamento para que o usuário
+informe quantas seções quiser para cada edição/fascículo; que cada seção poderá conter vários
+documentos; que cada artigo listará quantos autores forem atribuídos ao texto e carregará
+quantos arquivos estejam associados.
+4.2.2 No que se refere ao conteúdo do arquivo XML
+•
+
+CONVENÇÃO PARA INSERÇÃO DE DATAS: muito embora o OJS possa capturá-las
+conforme o uso da região (portanto DD-MM-AAAA para o Brasil) o XML deve registrar
+todas as datas no formato americano, ou seja, YYYY-MM-DD.
+
+•
+
+FORMATO DOS CONTEÚDOS: o arquivo XML não aceita textos em HTML para não
+confundir com a sintaxe das marcações XML. Caso existam, elas deverão
+obrigatoriamente, estar encapsuladas dentro da sintaxe CDATA que diz ao interpretador
+para ignorar e copiar ipsis literis o que estiver dentro dessa marcação especial. Por
+exemplo:
+
+•
+<abstract locale="pt_BR">
+<![CDATA[<div style="font-size: 10pt; font-family: Verdana; text-align: justify;">]]>Este
+resumo, após a importação, será apresentado em fonte Verdana tamanho 10, justificado, sem os
+textos entre os caracteres de maior/menor, inclusive.<![CDATA[</div>]]>
+</abstract>
+
+•
+
+CARACTERES ESPECIAIS: cinco caracteres especiais devem ser obrigatoriamente
+referenciados de maneira não usual para que não sejam interpretados como ações a serem
+trabalhadas pelo XML. São eles:
+
+•
+
+
+IDIOMAS SUPORTADOS PELO OJS: No arquivo XML, o idioma deve obedecer à sintaxe da
+coluna Locale, conforme tabela abaixo, incluindo a definição de maiúsculas e minúsculas,
+
+devem aparecer uma única vez e a ausência de símbolos denota elementos que obrigatoriamente devem
+aparecer uma vez.
+
+senão um erro será gerado na importação. Os idiomas definidos no arquivo XML deverão
+ser os mesmos definidos para a revista onde será importado:
+
+
+DATAS NO OJS – trata-se de um tema complicado tendo em vista que existem diversos
+campos destinados a elas, a saber:
+Data de publicação de uma edição/fascículo – refere-se à data em que a edição/fascículo
+foi publicada.
+Data de publicação de um documento - data em que o artigo foi aprovado pelos
+avaliadores.
+Acesso aberto - a tag <open_access/> indica que um artigo ou uma edição/fascículo é de
+acesso aberto. No caso de artigo, para liberar apenas alguns de uma dada edição/fascículo,
+basta declarar a tag <open_access/> para cada um deles. No caso da edição/fascículo,
+pode-se usar, para melhor entendimento, a tag <access_date>YYYY-MMDD</access_date> para indicar a data específica em que deve se tornar de acesso aberto.
+
+•
+
+•
+
+NOME DE SEÇÃO - esta tag dependerá muito do cuidado com que o usuário preencha este
+campo. Uma seção preenchida erroneamente fará com que o OJS interprete que o usuário
+está criando uma nova seção e não necessariamente interprete que o usuário cometeu algu
+erro de digitação.
+ARQUIVOS ASSOCIADOS AO ARTIGO – a sintaxe para importação dos arquivos associados a
+uma edição/fascículo, não permite indicar um arquivo da máquina local. Existem duas
+opções: ou indicar a URL onde o arquivo está localizado ou embutir o conteúdo do
+arquivo em formato base64. Gerar em formato base64 elimina os problemas inerentes ao
+arquivamento (disponibilidade de espaço, disponibilidade do servidor web, problemas de
+hardware e outros), porém, o tamanho final do arquivo gerado, além do espaço ocupado,
+torna impraticável o manuseio e a possibilidade de efetuar mudanças sobre este arquivo.
+4.2.3 No que se refere a cuidados especiais
+
+•
+
+IDENTIFIÇÃO DO ARQUIVO - como o arquivo XML gerado pode ser importado para
+qualquer revista dado que não há uma tag específica para indicar a que revista dada
+edição/fascículo se refere, o usuário deve cuidar para garantir que está na revista certa.
+
+•
+
+IMPORTAÇÃO DO ARQUIVO - na sintaxe genérica, indica-se o mime-type do arquivo
+referente ao texto completo e/ou suplementar conforme a extensão informada pelo
+usuário. Os tipos aceitos são: jpg, png, gif, bmp, tiff, doc, xls, ppt, rtf, pdf, html, htm,
+mpeg, mp3, wav, avi, wmv, swf.
+
+4.3 Modelagem conceitual do violet/ojs
+
+A partir de uma interface web, o Violet/OJS leva o usuário a editar seu conteúdo na
+seqüência do processo editorial proposto pelo OJS, recuperando o ambiente que já está
+familiarizado. Ademais, busca utilizar os termos e palavras próprias de seu dia-a-dia,
+mascarando as convenções que obrigatoriamente deverão estar explicitadas no arquivo final.
+Portanto, inicia suas atividades a partir de um estágio de autenticação do usuário, para então
+abrir a tela de criação/seleção e descrição da edição/fascículo a ser trabalhada, a seguir partese para a definição das seções componentes da referida edição/fascículo, dos documentos
+relacionados a cada seção, depois respectivas autorias, seguida da definição dos arquivos
+associados e, finalmente, geração do arquivo XML no formato OJS. Tal processo poderá ser
+repetido “n” vezes de acordo com o número de idiomas utilizados por sua revista. A figura 1,
+a seguir, representa o que foi descrito.
+AUTENTICAÇÃO
+
+
+
+Figura 1 – Modelo Conceitual do Violet/OJS
+
+ARQUIVO XML PADRÃO OJS
+
+Como valor agregado, o sistema busca orientar o usuário no passo a passo, gerando
+automaticamente, na lateral esquerda da tela, uma árvore mostrando o andamento da
+edição/fascículo. Sempre que conveniente, o sistema fornece dicas e sugestões para
+preenchimento dos campos. Em todos os formulários, a tela se inicia com uma caixa de
+seleção que permite ao usuário escolher o idioma do conteúdo; embora o Violet/OJS aceite
+todas as opções de idiomas, a importação no OJS somente reconhecerá os idiomas aceitos
+
+pela revista (configurados pelo editor-gerente). Os campos obrigatórios são destacados pelo
+"*" padrão corrente na web, porém, há algumas inferências que não podem ser descritas em
+tela, mas que serão avaliadas pelo Violet/OJS no momento de iniciar a criação do arquivo
+XML – por exemplo: é obrigatória a existência de pelo menos um arquivo associado a cada
+documento. O usuário contará com um menu de Help, que incluirá, além da operação do
+sistema e da descrição dos campos, uma FAQ com questões trazidas pelos usuários. A
+qualquer tempo o usuário poderá retirar-se do sistema utilizando a função Logout.
+4.4 Modelagem da base de dados
+O banco de dados do Violet/OJS está estruturado em 30 tabelas interligadas em sete
+grandes grupos destinados a descrição dos metadados de conteúdos, a administração do
+sistema e funcionalidades comum a todas as tabelas. A saber:
+
+
+Os valores neste banco de dados podem ser inteiros (INT), caracteres (VARCHAR),
+booleanos lógicos (BOOLEAN) ou TEXT. Os campos seguiram a definição do tipo e
+tamanho do banco de dados do OJS.
+A estrutura e os respectivos relacionamentos para o Violet/OJS, implementados com
+base no diagrama DER/Diagrama Entidade Relacionamentos (EER/Extended Entity
+Relationship Model), estão representados na Figura 2, a seguir.
+
+4.5 Interface do usuário final
+4.5.1 Autenticação
+A entrada ao sistema ocorre da maneira usual: bastando informar o nome de usuário e
+senha. É possível ao usuário definir se dará entrada a uma edição/fascículo nova ou selecionar
+alguma já em andamento para sua finalização ou revisão. O sistema arquiva apenas a última
+versão, sobrepondo os dados anteriores, e, por questões de segurança, permite apenas uma
+sessão por usuário. (Figura 3).
+
+Figura 3 – Autenticação do usuário
+
+4.5.2 Características da edição/Fascículo
+O idioma padrão é o português e o usuário pode selecionar inglês, espanhol, francês e
+italiano. Nas próximas versões do Violet/OJS, pretende-se incluir todos os demais idiomas
+aceitos no OJS, permitir configuração do idioma padrão e a seqüência em que os demais
+
+idiomas são apresentados. Apesar de estar visível o nome extenso do idioma, o software
+cuidará de gravá-los como são entendidos no OJS: pt_BR, en_US, es_ES, fr_CA, it_IT.
+Após a inserção de dados no idioma padrão, existe a opção de "Salvar e inserir
+metadados em outro idioma". Neste caso, o sistema automaticamente limpará os campos que
+podem ser alterados pelo idioma e posicionará o usuário na caixa de seleção do idioma. Este
+processo pode repetir-se para cada um dos idiomas aceitos pela revista. A subsequente entrada
+de dados (seções, documentos e autores) será a apresentada no sumário após importação do
+arquivo XML e publicação da edição/fascículo. As ações de “Sair" e “Salvar” são seguidas
+de confirmação. (Figura 4).
+
+Figura 4 – Características da edição
+
+4.5.1 Autenticação
+A entrada ao sistema ocorre da maneira usual: bastando informar o nome de usuário e
+senha. É possível ao usuário definir se dará entrada a uma edição/fascículo nova ou selecionar
+alguma já em andamento para sua finalização ou revisão. O sistema arquiva apenas a última
+versão, sobrepondo os dados anteriores, e, por questões de segurança, permite apenas uma
+sessão por usuário. (Figura 3)
+4.5.2 Características da edição/Fascículo
+
+O idioma padrão é o português e o usuário pode selecionar inglês, espanhol, francês e
+italiano. Nas próximas versões do Violet/OJS, pretende-se incluir todos os demais idiomas
+aceitos no OJS, permitir configuração do idioma padrão e a seqüência em que os demais
+idiomas são apresentados. Apesar de estar visível o nome extenso do idioma, o software
+cuidará de gravá-los como são entendidos no OJS: pt_BR, en_US, es_ES, fr_CA, it_IT.
+Após a inserção de dados no idioma padrão, existe a opção de "Salvar e inserir
+metadados em outro idioma". Neste caso, o sistema automaticamente limpará os campos que
+podem ser alterados pelo idioma e posicionará o usuário na caixa de seleção do idioma. Este
+processo pode repetir-se para cada um dos idiomas aceitos pela revista. A subsequente entrada
+de dados (seções, documentos e autores) será a apresentada no sumário após importação do
+arquivo XML e publicação da edição/fascículo. As ações de “Sair" e “Salvar” são seguidas
+de confirmação. (Figura 4).
+Nesta interface, o usuário descreve as seções correspondentes à edição/fascículo em que
+está trabalhando. A entrada do título da seção é seguida de uma explicação sobre sua
+fidedignidade, pois se estiver diferente daquela registrada na configuração da revista (seja por
+erro de digitação ou diferença de letras, sem considerar maiúsculas e/ou minúsculas), o
+sistema interpretará que deve criar uma nova seção. (Figura 5)
+
+Figura 5 – Definição de Seção
+
+4.5.4 DOCUMENTOS
+Inserção de metadados relativos aos documentos associados com a seção selecionada
+(na etapa anterior, se é o caso de uma nova edição/fascículo, ou, na caixa de seleção, para uma
+edição/fascículo previamente existente). Contém os principais metadados utilizados para a
+recuperação temática dos documentos, portanto, seu adequado preenchimento é fundamental.
+Um campo importante nesta interface é a data de aprovação do documento pelo processo de
+avaliação pelos pares. A indicação para acesso aberto por documento, depende da data para
+tornar livre o acesso à edição/fascículo. Se a edição/fascículo é de acesso aberto, a questão
+não tem sentido, porém, se a edição/fascículo é liberada depois de um determinado período,
+mas se deseja liberar um ou mais documentos, tal decisão deve constar do arquivo XML.
+(Figura 6)
+
+Figura 6 – Metadados dos documentos
+
+4.5.5 Autoria
+Relaciona o autor ou autores do documento. Recomenda-se informar o nome da mesma
+maneira que o autor é citado para evitar ambigüidades. O e-mail é um campo importante,
+obrigatório e deve ser válido. É obrigatório que o arquivo XML contenha a informação do
+autor principal, assim caso não seja informado, o sistema vai assumir que é primeiro autor
+citado. (Figura 7)
+
+Figura 7 – Metadados de autoria
+
+3.5.6 Arquivos
+Respeitando o padrão do OJS, o Violet/OJS aceita os mesmos formatos já descritos. Ao
+selecionar e transferir um arquivo, o Violet/OJS reconhece e sugere a extensão para o campo
+de rótulo, porém possibilita a alteração caso necessário. O Violet/OJS aceita os arquivos
+associados ao documento de duas maneiras: ou o arquivo está disponível em um servidor de
+páginas HTML (e neste caso basta indicar o link para este endereço), ou o arquivo está na
+máquina do usuário e será preciso deixá-lo em um servidor de páginas HTML – isto porque a
+opção de incluir o arquivo como base64 foi descartada nesta etapa de planejamento do
+projeto. Ao trazer o arquivo para o Violet/OJS este cuidará internamente de gerar um
+endereço válido para o arquivo XML de importação. Nas situações em que o Violet/OJS
+arquiva os documentos no servidor, convencionou-se conservá-los por 30 dias contados a
+partir da sua última atualização. (Figura 8)
+
+Figura 8 – Inclusão de arquivo(s)
+
+O recurso para incluir arquivos suplementares, acessíveis através das Ferramentas de
+Leitura foi deixado para uma segunda etapa do desenvolvimento.
+Ao encerrar-se um ciclo de inserção de seções, documentos, autores e arquivos, o
+sistema oferece a possibilidade de visualizar a edição/fascículo, antes de gerar o XML.
+
+Figura 9 – Árvore da Estrutura da Edição
+
+(Figura 9)
+
+4.5.7 Gerar arquivo XML
+Este é o propósito de todo o trabalho até aqui: gerar um arquivo que permita ao editor de
+uma revista disponibilizar edições retrospectivas de maneira facilitada. Nesta altura o
+programa tem várias críticas a verificar: garantir que exista pelo menos uma seção, que esta
+tenha pelo menos um documento, o qual pertença a pelo menos um autor e que aponte pelo
+menos para um arquivo. Além destas verificações, o sistema precisa efetuar uma conversão
+das entradas, reconhecendo: 1) trechos em HTML que precisam ser encapsulados para que
+não sejam confundidos pelo plugin de importação como tags XML; 2) caracteres especiais
+que precisam ser convertidos de maneira que o XML não efetue nenhuma ação sobre eles; 3)
+formato das datas, do padrão brasileiro (dd/mm/aaaa) para o padrão americano (yyyy/mm/dd)
+e 4) extensões associadas aos arquivos para o mime-type conveniente.
+Ao ser gerado o arquivo XML, o sistema oferece duas opções de entrega: 1) envio por email, ou 2) listar o arquivo na página do próprio navegador de maneira que o usuário possa
+salva-lo em local desejado. (Figuras 10)
+
+Figura 10 - Arquivo XML enviado por mail e opção de gravar em uma pasta
+
+3.6 Implementação do violet/ojs
+O Violet/OJS foi desenvolvido a partir do editor Violet19, proposto inicialmente para
+ambientes de Recursos Educacionais Abertos (OER, Open Educacional Resources)
+(Mucheroni e Alcyr, 2009). Em linguagem PHP, é para ser utilizado de maneira independente
+do ambiente OJS, em servidor web Apache 2.2 ou superior, PHP5.2 ou superior, banco de
+dados MYSQL versão 5.1 ou superior. Ainda se encontra em fase beta e, assim que
+considerado como consistente pela equipe será registrado como mais uma ferramenta aberta
+de código fonte livre. A base DTD utilizada corresponde a versão 2.2.2 do OJS.
+5 CONSIDERAÇÕES FINAIS
+Conforme detectado no dia-a-dia com editores da Comunicação e revendo relatos na
+literatura (Dias; Delfino Jr e Silva, 2007; Dru, s.d) a inserção de conteúdos via arquivo XML
+no OJS é uma atividade que demanda bastante tempo, paciência, recursos, revisão dos
+metadados, conhecimento tecnológico de linguagem XML, domínio das características do
+sistema OJS e conhecimento detalhado de sua DTD de edições. Por outro lado, a demanda de
+revistas brasileiras e internacionais migrando para este sistema vem crescendo aceleradamente
+e, mesmo que venha a se estabilizar é de se esperar que sejam encontradas novas aplicações
+para o software (extramuros acadêmicos).
+O Violet/OJS sendo uma ferramenta auxiliar no trabalho de edição de conteúdo XML
+poderá ter ampla utilidade neste contexto. Embora inicialmente gerado e concebido a partir
+das necessidades evidenciadas pelo Portal Univerciencia, é intenção dos autores torná-lo
+disponível publicamente para uso quer seja por meio de download e instalação em locais de
+trabalho distintos, quer seja utilizando a versão instalada no próprio servidor do
+CEDUS/ECA/USP para uso independente. Como passo futuro e, caso seja de interesse do
+PKP, a equipe poderá estudar formas de torná-lo um plugin a ser inserido no próprio OJS para
+uso mais amplo, otimizando e compartilhando a experiência acumulada. Alinhada ao
+movimento internacional de acesso aberto e software livre, a equipe disponibilizará tal
+sistema após estabilizado.
+O desenvolvimento deste nos possibilitou identificar (e buscar soluções) certa
+divergência entre as atividades do editor do periódico quando inserindo coleções completas
+via submissão convencional ou publicação agilizada e via arquivo XML, quer seja em relação
+19
+
+Violet project, Disponível em: www.sourceforge.net project Violet, 2009.
+
+às distintas datas (de avaliação, de publicação e acesso aberto) quer seja referente à
+quantidade de arquivos a serem anexados como documento primário (não como suplementar).
+Tal descoberta oportunizou agregar valor vantajoso ao editor Violet/OJS que evidencia ao
+editor o problema orientando-o quanto aos procedimentos para corrigir erros posteriores,
+como tornando claro na interface em que momento o rótulo “DATE_PUBLISH” se refere à
+data de publicação da edição/fascículo e quando se refere à data de aprovação final do
+documento pelo corpo de avaliadores.
+Outro valor agregado oferecido pelo sistema, além da facilidade, agilidade e
+portabilidade de uso, se refere à evidência clara de todos os metadados descritivos dos
+documentos disponíveis no OJS, independente da configuração atual da revista. Portanto, com
+o uso deste sistema, o editor poderá preenchê-los todos e assim tais informações ficarão
+disponíveis tanto no recurso de “VER METADADOS” inserido nas ferramentas de leitura,
+como principalmente ficarão disponíveis para coleta (harvester) por provedores de serviços.
+Desta forma, o Violet/OJS atua também na melhoria da qualidade dos metadados a serem
+recuperados e disponibilizados à comunidade.

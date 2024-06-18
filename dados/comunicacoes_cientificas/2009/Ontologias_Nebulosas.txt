@@ -1,0 +1,129 @@
+Ontologias nebulosas no suporte a mineração de dados
+
+
+RESUMO
+O projeto de pesquisa, em âmbito de doutorado, tem como objetivo o aprimoramento
+de tecnologia de suporte à detecção, análise e combate a fraudes fiscais no Imposto Sobre
+Serviços de Qualquer Natureza – ISSQN - a partir de recuperação e processamento de grande
+volume de dados dispersos em bases de dados relacionais. O projeto propõe a exploração dos
+vínculos da Ciência da Informação com aspectos da cognição humana e de técnicas de
+recuperação e de mineração de dados oriundas da Ciência da Computação, com o objetivo de
+se obter uma adequada representação e recuperação do conhecimento através de ontologias.
+Para tal, partirá do estudo, comparação, aprimoramento e desenvolvimento de ontologias
+fuzzy que apresentam a vantagem de permitir uma elaboração e representação simultânea de
+aspectos simbólicos e aspectos quantitativos de uma área de domínio. A representação do
+conhecimento de determinado domínio possibilitada pelas ontologias fuzzy será integrada ao
+Tamanduá, software desenvolvido e patenteado pela Universidade Federal de Minas Gerais,
+que é ferramenta de mineração de dados, permitindo simulações, testes e mensurações dos
+resultados obtidos. Este projeto busca contribuir com o campo de Ciência da Informação ao
+promover o levantamento e a discussão do estado da arte em ontologias, em especial
+ontologias fuzzy, ao promover o desenvolvimento original dessas ontologias, sua
+aplicabilidade e integração com recuperação e mineração de dados. O projeto explora a
+convergência das habilidades desenvolvidas por três diferentes instituições. A Escola de
+Ciência da Informação da UFMG, o Departamento de Ciência da Computação da UFMG e a
+Secretaria Municipal de Finanças da Prefeitura de Belo Horizonte.
+PALAVRAS-CHAVE
+ontologias fuzzy, mineração de dados, mecanismos de inferência, causalidade
+
+1. Introdução: objetivos e problemas de pesquisa.
+A pesquisa de doutorado envolve o uso de ontologias no suporte a processos de
+mineração de dados. Ontologias serão usadas em fase de pré-processamento de dados
+resultantes das consultas aos bancos de dados, e pós-processamento das regras de associação
+obtidas no processo de mineração.
+Optou-se por trabalhar com ontologias nebulosas para podermos lidar com categorias
+que apresentam condições de fronteira vagas, difusas, mal definidas, como as que se
+encontram nos juízos oriundos de avaliações de categorias do direito, de termos da linguagem
+e de potencialidades inerentes a atos humanos. Ontologias nebulosas apresentam a vantagem
+de permitir uma elaboração e representação de aspectos conceituais, simbólicos, qualitativos e
+abstratos de uma área de domínio. Também apresentam a vantagem de lidar,
+simultaneamente, com aspectos quantitativos, concretos ou numéricos dessa mesma área de
+domínio. A representação do conhecimento de determinado domínio, possibilitada pelas
+ontologias nebulosas com suas respectivas regras de inferência, serão integradas à mineração
+de dados. O sistema resultante será submetido a simulações, testes e mensurações dos
+resultados obtidos.
+Então, especificamente, há de se resolver os seguintes problemas:
+1. A modelagem e representação de conhecimento de um domínio através de
+ontologias nebulosas.
+2. A integração dessa ontologia a mecanismos e ferramenta de mineração de dados
+pré-existente, no caso o Tamanduá, projeto desenvolvido pelo Departamento de
+Ciência da Computação da UFMG (DCC) na área de mineração de dados. O
+sistema Tamanduá é uma plataforma patenteada de serviços de mineração de dados
+para apoio à gestão e decisão governamentais.
+3. O suporte da ontologia às tarefas de classificação e filtragem dos dados de entrada
+ao mecanismo de mineração de dados, e dos dados de saída da mineração. As
+tarefas de classificação e filtragem serão realizadas a partir da análise das entidades
+e respectivas relações, a fim de se obter os resultados mais relevantes, tanto das
+consultas, quanto das regras de associação resultantes do processo de mineração.
+
+4. A avaliação da eficiência desse método, dentro dos critérios de cobertura e precisão
+da informação recuperada, será realizada através da comparação da mineração de
+dados sem o suporte de ontologias.
+O estudo de caso abrange dados de transações econômicas registradas pela Prefeitura
+Municipal de Belo Horizonte para fins de verificação de incidência, fiscalização e arrecadação
+de recursos vinculados ao ISSQN – Imposto Sobre Serviços de Qualquer Natureza. A
+mineração de dados suportada por ontologias nebulosas deverá ser capaz de detectar práticas
+eventuais e sistêmicas de evasão, sonegação, elisão e fraude fiscal.
+
+Com base nessas informações, as ações fiscais são direcionadas, facilitando e otimizando o trabalho dos
+agentes fiscais em suas atuações externas.
+A presente pesquisa apresenta relevância para os trabalhos de detecção e combate a
+fraudes exercidas por várias entidades do Poder Público, dentre elas, as auditorias tributárias
+municipais, estaduais e federais, previdência pública, Polícia Federal e Banco Central.
+
+2. Fundamentação teórico-metodológica.
+No âmbito da pesquisa citada, os trabalhos em andamento envolvem a construção de
+duas ontologias nebulosas e respectivos mecanismos de inferência. Ver Figura 1 abaixo.
+A primeira ontologia será construída a partir de base de dados (bancos de dados
+relacionais). Na sua construção, poderão ser utilizadas ferramentas de engenharia reversa para
+a geração semi-automática de ontologias que será editada e consolidada usando-se a
+ferramenta Prótegé. Ela será utilizada em nível de pré-processamento, à etapa de mineração
+de dados, do resultado das consultas às bases de dados relacionais. A ferramenta de extração
+semi-automática de ontologias a ser utilizada será avaliada, dentre algumas disponíveis na
+Web e de acesso gratuito.
+A segunda ontologia será construída a partir de base de dados semi-estruturados ou
+não estruturados, constituída de documentos de análise e procedimentos de inteligência fiscal
+e de conhecimentos de contexto/fundo, focada na semântica das regras de associações a serem
+destacadas pela ferramenta de mineração de dados Tamanduá. Ela será utilizada em nível de
+pós-processamento, à etapa de mineração de dados, do resultado dessa mineração, constituída
+pelas regras de associação descobertas pelo mecanismo de mineração. Neste aspecto, há as
+importantes referências que tratam das relações parte-todo (mereologia e mereotopologia),
+relações de causalidade, Min-Max, tipo Cambridge etc., que serão úteis na construção dessa ontologia que irá auxiliar-nos na avaliação semântica das associações resultantes da
+mineração.
+As ontologias e respectivos mecanismos de inferências serão construídos com base na
+teoria de sistemas nebulosos e o referencial metodológico de desenvolvimento, em princípio,
+será a metodologia Methontology. A Methontology enfatiza o compartilhamento, reutilização
+e desenvolvimento de protótipos em ontologias e prevê a utilização da ferramenta Prótegé.
+
+
+Figura 1. Visão panorâmica das tarefas envolvidas na pesquisa.
+
+3. Contribuições esperadas, informando no âmbito social.
+Esse trabalho de pesquisa reveste-se de ampla relevância social por buscar solução que se
+constitua instrumento de promoção da justiça e equidade tributária através do
+aperfeiçoamento do sistema fiscal, da prevenção e do combate à fraude e à evasão fiscal.
+Busca o incremento dos recursos, a serem disponibilizados para a sociedade, através da
+devida inclusão na esfera da incidência tributária de fatos geradores de impostos que, mediante dissimulação, sonegação ou omissão fogem do alcance tributário. Essa fuga
+beneficia indevidamente agentes econômicos com o aumento de sua disponibilidade
+econômica, afetando a livre concorrência no mercado, favorecendo, ainda mais, a terrível
+concentração de renda que persiste em nosso país. De outro lado, sua devida inclusão
+promove a eqüidade, a justiça fiscal e o aprimoramento na distribuição da renda.
+
+4. Direções de pesquisa.
+O desenvolvimento das ontologias baseia-se em diferentes abordagens que se fundam em
+distintos pressupostos lógicos e filosóficos. Podem-se destacar ao menos três grandes vias que
+orientam seu desenvolvimento. Primeiro, as ontologias formais de linha fenomenológica
+baseadas nos trabalhos filosóficos de Brentano e Husserl, representados, em especial, no
+campo da Ciência da Informação, por Barry Smith e Nicola Guarino. Segundo, as ontologias
+formalizadas baseadas em técnicas de representação desenvolvidas no âmbito da Inteligência
+Artificial, representadas, em especial, no campo da Ciência da Informação, por John Sowa.
+Terceiro, as ontologias formalizadas baseadas nos desenvolvimentos da Primeira Filosofia
+Analítica, de índole mais logicista e formalista, e da Segunda Filosofia Analítica, de índole
+mais pragmática e contextualista, representadas em trabalhos esparsos. Essas três vias
+propõem visões distintas que se refletem no desenvolvimento de metodologias, métodos e
+abordagens de problemas práticos. A questão da vaguidade, por exemplo, relacionada às
+ontologias nebulosas, recebe tratamentos diferentes, conforme a via adotada.
+O discernimento dessas vias, com a elucidação de suas vantagens e desvantagens,
+adequabilidade e resultados alcançados é fundamental para o entendimento das soluções até
+então adotadas e para a proposição de novas soluções e, mesmo, novas vias de
+desenvolvimento de soluções.
+

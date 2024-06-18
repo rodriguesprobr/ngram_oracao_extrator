@@ -1,0 +1,495 @@
+MODELOS CONCEITUAIS DE DADOS COMO PARTE DO
+PROCESSO DA CATALOGAÇÃO: PERSPECTIVA DE USO
+DOS FRBR NO DESENVOLVIMENTO DE CATÁLOGOS
+BIBLIOGRÁFICOS DIGITAIS
+
+
+Resumo: O processo de catalogação ocupa-se dos registros bibliográficos, enquanto suporte
+de informação, servindo como base para a interoperabilidade entre ambientes informacionais,
+levando em conta objetos diversificados de informação e bases cooperativas e heterogêneas.
+Dentre as principais propostas da área de catalogação estão os FRBR - Functional Requirements
+for Bibliographic Records, que constituem novos conceitos nas regras de catalogação. Os FRBR
+mostram um caminho na reestruturação dos registros bibliográficos de maneira a refletir a estrutura
+conceitual de persistência e buscas de informação, levando em conta a diversidade de usuários,
+materiais, suporte físico e formatos. Neste contexto, o objetivo deste artigo é refletir e discutir, a partir
+de uma arquitetura conceitual de ambientes informacionais, baseada nos FRBR e na Modelagem
+Entidade-Relacionamento, o processo de catalogação no contexto do projeto de catálogos utilizando
+a metodologia computacional de Modelagem Conceitual de Dados, considerando a evolução dessa
+área no âmbito da Ciência da Informação em relação ao contexto da representação da informação com
+vistas ao uso e à interoperabilidade de todo e qualquer recurso informacional, que vise a preencher a
+lacuna entre o projeto conceitual de um domínio de aplicação e a definição dos esquemas de metadados
+das estruturas de registros bibliográficos. A modelagem de dados possibilita uma visão não linear dos
+elementos descritivos de um item bibliográfico e permite uma eficiente transmissão das mensagens
+contidas nas representações e a otimização do acesso e uso de ambientes catalográficos, por meio
+da intersecção entre os itens bibliográficos e as necessidades informacionais dos usuários. Nesse
+sentido, o processo de catalogação deve ser ampliado adicionando a ele a de definição das estruturas
+conceituais de representação dos itens bibliográficos e, para tanto, o profissional catalogador necessita
+buscar essas ferramentas que possibilitam um melhor desenvolvimento da área da catalogação.
+Palavras-chave: Catalogação. FRBR. Modelagem de Dados.
+
+
+1 INTRODUÇÃO
+No cenário contemporâneo as informações digitais fazem parte do universo de bases
+informacionais e necessitam de estruturas de representação e mecanismos de acesso e entre elas podemse citar publicações avulsas e periódicas, enciclopédias virtuais, bibliotecas digitais e repositórios
+institucionais e temáticos. As estruturas de representação e os mecanismos de acesso provocam
+uma evolução na gestão, na modelagem e no uso da informação em meio digital e nesse contexto a catalogação, enquanto geradora do Tratamento Descritivo da Informação (TDI) e construtora
+de formas de representação dos recursos informacionais, passa a ser associada à usabilidade da
+informação digital, aos metadados, às ontologias no uso das taxonomias, à modelagem de dados e
+conteúdos, ao projeto de banco de dados e à recuperação e descoberta de recursos informacionais.
+Esse cenário caracteriza-se pela indissociabilidade entre informação e tecnologia e, neste
+contexto, o conceito de biblioteca foi ampliado para uma organização provedora de informação
+diversificando-se, por exemplo, em bibliotecas digitais e repositórios institucionais, nesta tese,
+denominada unidade de informação.
+A crescente introdução de padrões que procuram adequar a organização da informação
+às novas realidades, a publicação de regras, recomendações e estudos que apontam tendências e
+perspectivas da catalogação atual, constitui reflexo da evolução do conceito da catalogação que se
+tornou inegavelmente mais complexa e ampliada, com a rápida transformação dos formatos, padrões,
+funções, opções de exibição e busca, bem como, com algumas mudanças fundamentais, como as
+expectativas de controle bibliográfico (BAPTISTA, 2006).
+São inúmeros e imensos os desafios no sentido de articular os avanços técnicos da
+Biblioteconomia tradicional com as novas possibilidades inseridas pela tecnologia. Exige-se cada vez
+mais um profissional hábil e capacitado para atuar em novos processos, bem como, se faz necessário o
+desenvolvimento de estudos mais aprofundados de novas metodologias de catalogação direcionadas
+ao tratamento da informação digital.
+O processo de catalogação ocupa-se dos registros bibliográficos de documentos, enquanto
+suporte de informação, servindo como base para a interoperabilidade entre ambientes informacionais,
+levando em conta objetos diversificados de informação e bases cooperativas e heterogêneas. Segundo
+Lourenço (2005, p. 21)
+A visão do código de catalogação, como fonte de consulta para a resolução de
+processos de representação, ressalta o papel deste instrumento como manancial de
+experiência prévia acumulada, preservando-se tipos e características do incontável
+número de itens que serviu para proporcionar paulatinamente a criação das regras
+hoje sistematizadas. Ressalta-se, entretanto que o conhecimento não é estático e novas
+necessidades sempre surgem impulsionando a atualização dos referidos instrumentos.
+
+A catalogação continua sofrendo mudanças em sua natureza e processos, o que gera novos
+desafios e revisão das necessidades e conhecimento sobre essas mudanças. As novas tendências da
+catalogação, como por exemplo, os FRBR - Functional Requirements for Bibliographic Records
+(Requisitos Funcionais para Registros Bibliográficos) e FRAD - Functional Requirements Authority
+Data (Requisitos Funcionais para Dados de Autoridade), tomam autores clássicos e regras já
+estabelecidas, como os princípios de Cutter, base para a introdução de novos conceitos. Portanto,
+a estas tendências, todo conhecimento já adquirido nas estruturas bibliográficas deve ser mantido.
+Entretanto, deve ser expandido e novas tecnologias devem ser implementadas a partir dessa base
+conceitual já estabelecida e conhecida.
+
+Alguns desafios são postos para o processo da catalogação, como a representação dos
+diversos tipos de materiais que surgem a partir das novas tecnologias e a interoperabilidade de bases
+informacionais heterogêneas. Essa complexidade deve ser abstraída do usuário, estabelecendo uma
+sólida teoria e compreensão das necessidades dos usuários, com a preservação de documentos digitais
+para acesso futuro e a definição de um nível de padronização que permita um nível global de cooperação.
+Para tais desafios é necessário que os profissionais da Ciência da Informação discutam várias
+questões sobre a organização do conhecimento registrado e sua representação nas mais diferentes
+formas e práticas.
+Os FRBR agem como um modelo de referência e, portanto, operam no nível conceitual, não
+levando a análise dos requisitos ao nível necessário para um modelo físico de dados. Esta característica
+é bem estabelecida conforme afirmação, “[...] demasiado abstratos e genéricos para ser um modelo de
+dados: nenhuma base de dados prática poderia realmente ser desenvolvida exclusivamente baseada
+naquelas entidades, atributos e relacionamentos que são definidos nos FRBR” (IFLA, 2006).
+Isto leva à necessidade da reflexão e pesquisa para o desenvolvimento de padrões e modelos
+conceituais e lógicos de implementação utilizando esses requisitos.
+As implementações dos FRBR se dão em um modelo de dados lógico e físico qualquer,
+valendo-se do seu modelo conceitual, que é baseado no modelo E-R que trabalha somente no âmbito
+conceitual.
+Os aspectos atuais da catalogação levam a análises mais complexas no desenvolvimento
+de ambientes informacionais de mediação do conhecimento. As regras dos FRBR mostram um
+caminho na reestruturação dos registros bibliográficos de maneira a refletir a estrutura conceitual de
+persistência e buscas de informação, levando em conta a diversidade de usuários, materiais, suporte
+físico e formatos.
+A utilização de uma arquitetura para ambientes informacionais tendo como base um modelo
+conceitual de requisitos bibliográficos pode corroborar a idéia de que o processo de catalogação
+sofreu uma evolução, passando da descrição para a representação de recursos informacionais sempre
+com vistas às expectativas e necessidades do usuário e a interoperabilidade de todo e qualquer recurso
+informacional. Considerando esta idéia, o papel do profissional da catalogação amplia-se de modo
+que este deve determinar não somente os elementos a serem representados, mas também participar da
+elaboração do modelo de dados a ser implementado para persistir as informações desses elementos.
+O processo estabelecido a partir do ato de elaborar a representação de um objeto e
+descrever seu conteúdo, tornando-o recuperável com vistas ao uso encontra nos FRBR elementos
+que fortalecem o objetivo da elaboração de catálogos, aprimorando e introduzindo nesse processo
+uma nova perspectiva sobre a estrutura e as relações dos registros bibliográficos. A compreensão e
+adoção dos FRBR podem direcionar os responsáveis por códigos de catalogação, os fornecedores de
+sistemas de informação e os próprios catalogadores a repensarem seus produtos objetivando a atender
+as necessidades dos usuários. Todavia, é importante destacar que os FRBR não se constituem em um
+
+novo código de catalogação, mas provoca impactos sobre sua revisão e construção de novos códigos
+e na definição de catálogos.
+Além desses aspectos, a atividade específica da catalogação passa a fazer parte de um
+processo mais amplo e complexo com a introdução de novos materiais digitais e suas especificidades
+(por exemplo: objetos tridimensionais e documentos multimídia, estruturados e semi-estruturados),
+a crescente demanda por integração de ambientes informacionais e a inserção de teorias vindas de
+outras áreas como da Ciência da Computação.
+Neste sentido, o objetivo desta pesquisa é refletir, a partir de uma arquitetura conceitual,
+lógica e de persistência de ambientes informacionais, baseada nos FRBR e na Modelagem EntidadeRelacionamento e estendido pelo uso dos conceitos da Orientação a Objetos, o processo de catalogação
+no contexto do projeto de catálogos utilizando a metodologia computacional de Modelagem Conceitual
+de Dados, considerando a evolução dessa área no âmbito da Ciência da Informação em relação ao
+contexto da representação da informação com vistas ao uso e à interoperabilidade de todo e qualquer
+recurso informacional, que vise a preencher a lacuna entre o projeto conceitual de um domínio de
+aplicação e a definição dos esquemas de metadados das estruturas de registros bibliográficos.
+No intuito de criar uma infra-estrutura de implementação de ambientes informacionais
+automatizados na área da catalogação que permita que desenvolvedores e pesquisadores da Ciência
+da Informação possam utilizá-la no processo de análise, projeto e implementação de sistemas
+de informação de catálogos e unidades de informação, há a necessidade da utilização de uma
+recomendação que visa a nortear e a padronizar a estrutura dos registros bibliográficos.
+2 O USO DA MODELAGEM CONCEITUAL DE DADOS NA CATALOGAÇÃO
+A metodologia usada é derivada da ampliação do conceito da catalogação vista como um
+processo subdividido em duas fases:
+1.	 O projeto do catálogo: fase em que o catalogador baseado em necessidades e requisitos
+informacionais define as estruturas dos objetos e elementos de representação e seus
+relacionamentos;
+2.	 A descrição do objeto documentário: fase em que o catalogador realiza a entrada de dados
+em um registro baseado em um padrão de metadados e a definição dos pontos de acesso
+deste registro com base em normas de catalogação.
+Com base na questão apresentada por Santos (1995, p.35), a seguir:
+É preciso concentrar esforços para que a disciplina Representação Descritiva deixe
+de ser encarada como um recurso meramente técnico da Biblioteconomia, em que
+o treino da redação de fichas catalográficas serão suficientes para capacitar um
+profissional ao desempenho de sua função em um sistema de informação. Providências
+imediatas são necessárias para modernizar e expandir o preparo do bibliotecário no
+que se refere a catalogação. É importante que se pense na reformulação do conteúdo
+e da metodologia da disciplina de Representação Descritiva, para ser assimilada de
+forma coerente pelo aluno. É preciso que ele compreenda o papel da catalogação
+e conheça sua relação e inter-relação no contexto informacional de um sistema. É
+necessário, enfim, se desmistificar a idéia de que o fazer da catalogação seja um
+produto absoluto e completo que se encerra nele mesmo.
+
+Contempla-se a reflexão da extensão do processo de catalogação no que tange a etapa de
+projeto de um catálogo, no qual o profissional da informação detém as competências necessárias para,
+com seus conhecimentos prévios de representação tradicional, planejar e implementar modelos de
+dados, utilizando-se de métodos conceituais de modelagem.
+Diante disso, apresenta-se o conceito de projeto de catálogo contemplando métodos e regras
+já estabelecidas na área da representação da informação sob os aspectos e requisitos dos FRBR e
+FRAD, somados a modelos oriundos da área da Ciência da Computação que estudam o tratamento da
+informação no âmbito conceitual, lógico e de persistência.
+2.1 Bases Para o Projeto de um Catálogo
+A catalogação tem como objetivos principais a descrição e a recuperação dos itens bibliográficos
+em ambiente centralizado ou interoperável. Assim, para atender esses objetivos, comumente são
+utilizadas regras de catalogação (e.g. AACR2) e padrões de metadados (e.g. MARC) como requisitos
+informacionais básicos para construção dos catálogos.
+O profissional que projeta um catálogo tem como fontes básicas das necessidades informacionais
+do ambiente informacional e seu acervo:
+•	 A Representação Descritiva;
+•	 A Definição dos Pontos de Acesso;
+•	 A Definição dos Dados de Localização.
+Baseado nesses requisitos funcionais, o projetista do catálogo define, então, os elementos que
+farão parte dos metadados do catálogo (Fig. 01).
+
+Independente de o profissional catalogador participar do processo de construção do banco
+de dados do ambiente digital, esses elementos de descrição, acesso e localização terão que ser
+representados neste banco de dados e, para isto, o profissional da computação utilizará esses elementos
+como base para a construção do modelo de dados.
+Excluindo as etapas de modelagem lógica e física do banco de dados, na construção de um
+catálogo digital que utiliza como suporte um banco de dados relacional, a especificação conceitual
+(Modelagem Conceitual) da representação dos elementos de descrição, acesso e localização deve
+fazer parte do processo de construção do projeto do catálogo.
+2.2 Aplicação da Modelagem Conceitual no Projeto de Catálogos
+Normalmente o processo de catalogação não considera a representação conceitual dos
+elementos que farão parte dos metadados do catálogo, ficando a critério de um profissional da Ciência
+da Computação fazer o mapeamento dos elementos definidos pelo catalogador numa estrutura
+conceitual de entidade, atributos e relacionamentos entre os Itens bibliográficos.
+É na Modelagem Conceitual que se desenvolvem modelos de representação das informações
+de um domínio como um acervo físico ou digital e esta idéia é compartilhada por outros autores
+dentro da área da Ciência da Informação.
+Segundo Delsey (1997, p.1), “num nível teórico e prático, vários estudiosos especulam o
+desejo de (re)conceituar as estruturas utilizadas para registrar e armazenar dados bibliográficos com
+uma visão de exploração das tecnologias atualmente disponíveis”.
+A Modelagem Conceitual pode auxiliar e melhorar o processo de desenvolvimento de ambientes
+informacionais digitais baseados no conceito de catalogação e a sua utilização nos FRBR corroborou
+essa idéia, como afirma Delsey (1997, p.3) “nos ajudar a reexaminar os princípios fundamentais que
+estão por trás do código de catalogação e a fixar direções para seu desenvolvimento futuro”.
+Métodos de modelagem desempenham um papel importante como recurso metodológico para
+as áreas que têm fenômenos ligados à informação e conforme Burt & Kinnucan (1990), profissionais da
+Ciência da Informação podem encontrar nas técnicas de modelagem um mecanismo útil para capturar
+e comunicar seus conhecimentos sobre fontes de informação e sobre padrões de comportamento de
+quem busca informação.
+Levando em consideração os processos da Modelagem Conceitual de Dados, a utilização
+somente de regras de catalogação como o AACR2 e/ou de um padrão de metadados como o
+MARC21, para modelar a estrutura conceitual e de persistência de um banco de dados de um sistema
+informatizado de catalogação, pode levar a algumas anomalias de informação como, por exemplo:
+redundância de dados; inconsistência de dados; anomalias de exclusão, inclusão e modificação.
+Isso ocorre porque padrões de metadados como o formato MARC têm uma estrutura linear
+em suas estruturas de registros, ou seja, um modelo bidimensional de atributo-valor e determinam
+o formato de entrada e de intercâmbio de dados, sem determinar o conceito de domínio dos objetos
+representados com seus relacionamentos.
+
+A forma de representação dos elementos de representação de Itens bibliográficos influencia a
+qualidade da informação nos processos de armazenamento, busca e recuperação dessas informações,
+e deve, portanto, fazer parte do processo de construção de catálogos digitais. A utilização de um
+padrão de metadados que tem como principal objetivo a entrada de dados e a interoperabilidade e não
+considera questões de qualidade de persistência da informação e, por isso, muitos ambientes digitais
+de informação que foram baseados somente nesses padrões apresentam problemas tanto nos processos
+de manipulação de dados quanto na recuperação das representações dos Itens bibliográficos.
+Com objetivo de desenvolver um ambiente informacional que atenda as necessidades
+informacionais de usuários e unidades de informação e que também atenda os requisitos de qualidade
+da informação, é demonstrado na Fig. 02, um modelo de processo de catalogação contendo os
+requisitos e metodologias para desenvolvimento de um catálogo digital.
+
+Figura 02 – Modelo de Processo de Catalogação
+
+Nesta proposta os requisitos de informação que farão parte do escopo do ambiente informacional
+são formados pelo produto da representação descritiva, pontos de acesso, dados de localização,
+códigos e regras de catalogação e pelos padrões de metadados para manter compatibilidade com
+outros ambientes informacionais numa estrutura de interoperabilidade.
+Esses requisitos gerarão um conjunto de elementos e propriedades de informação que podem ser
+definidos como a especificação dos requisitos funcionais e não funcionais de informação do catálogo.
+Utilizando o conceito da Modelagem Conceitual por meio da metodologia do Modelo E-R,
+faz-se um mapeamento desses elementos de informação para a estrutura de entidades, atributos e
+relacionamentos pré-definidos dos FRBR, que já contém um modelo conceitual para registros
+bibliográficos sem chegar ao nível de implementação. Ou seja, nesse modelo de processo de
+catalogação proposto, o catalogador irá implementar um modelo conceitual de nível mais baixo de
+abstração, deixando toda a estrutura de informação pronta para o profissional da Computação somente
+mapear esta estrutura para um banco de dados. Essa idéia é corroborada por Delsey (1997, p. 2-3)
+O maior ganho com a modelagem lógica da estrutura do AACR é que ajuda na
+mudança de enfoque no processo de catalogar as entidades ou objetos que procuramos
+representar nos nossos catálogos, passando das regras específicas para as suposições
+operacionais e princípios das regras e da estrutura formal do registro catalográfico
+para a estrutura lógica que está por trás dos dados no registro. A disciplina do próprio
+exercício de modelagem nos obrigaria a clarear nossos pensamentos a respeito dos
+conceitos que integram a lógica do código.
+
+A Modelagem Conceitual pode trazer grandes contribuições às pesquisas na área de Ciência
+da Informação e tem uma grande importância na especificação de catálogos digitais, pois:
+•	 Permite disponibilizar as informações de forma estruturada e eficiente;
+•	 Evita a redundância de informações e aumenta a confiabilidade dos ambientes
+informacionais;
+•	 Define um planejamento que deverá ser seguido pela equipe de catalogadores;
+•	 Possibilita a reutilização de artefatos produzidos em outros catálogos e
+•	 Facilita o desenvolvimento do ambiente digital e a manutenção do catálogo.
+E nesta circunstância, a documentação gerada servirá de meio de comunicação entre a equipe.
+3 CONSTRUÇÃO DO MODELO CONCEITUAL DE DADOS BASEADO NOS FRBR
+Nesta seção, demonstra-se o processo de construção de um modelo conceitual de dados de
+um catálogo bibliográfico baseado nos requisitos dos FRBR e no Modelo Entidade-Relacionamento.
+A construção deste modelo utiliza a notação gráfica E-R de Peter Chen (CHEN, 1976). Este
+modelo não esquematiza os atributos das entidades. A notação gráfica do software utilizado para
+diagramar as entidades e relacionamentos usa linhas duplas não tendo relação com entidades fracas
+da modelagem E-R.
+
+
+O modelo de dados mostrado na Fig. 03 tem como base as entidades do Grupo 1 dos FRBR
+e relacionamentos entre essas entidades. Bancos de dados de catálogos baseados nessas entidades
+mapeiam os elementos descritivos dos registros bibliográficos distribuídos em objetos informacionais
+(tabelas no Modelo Relacional e classes no Modelo Orientado a Objetos) gerados a partir dessas
+entidades e relacionamentos.
+Na Fig. 04 tem-se o modelo de dados conceitual de um catálogo bibliográfico baseado nas
+entidades e relacionamentos dos Grupos 1, 2 e 3 dos FRBR e das entidades do FRAD incorporadas
+aos FRBR.
+Este modelo contempla:
+•	 Entidades do Grupo 1;
+•	 Entidades do Grupo 2;
+•	 Entidades do Grupo 3;
+•	 Relacionamentos de responsabilidade entre as entidades do Grupo 1 e Grupo 2;
+•	 Relacionamentos de assunto do Grupo 1 com as entidades do Grupo 2 e Grupo 3;
+•	 Relacionamentos complementares do Grupo 1 e
+•	 Entidades Nome e Identificador do modelo FRAD incorporadas aos FRBR.
+Não foram especificados os atributos FRBR que são representados nas entidades especificadas.
+A definição dos atributos cabe ao projetista (catalogador) diante dos requisitos funcionais
+levantados no processo de construção do catálogo. Nesse contexto apresentam-se duas técnicas em
+relação à especificação dos atributos no projeto do catálogo:
+I)	 Definição dos atributos no modelo conceitual, cabendo ao projetista (catalogador) do
+modelo a definição dos atributos que serão utilizados para representar a entidade dentro
+do cenário, esses atributos tem como objetivos cumprir as user tasks, além de atender
+a outros requisitos levantados no processo de construção do catálogo. Essa técnica é
+chamada aqui de “modelagem estática de atributos”.
+II)	Definição de uma estrutura conceitual que permita ao catalogador, na parametrização
+do ambiente informacional para a construção do catálogo, definir os atributos que cada
+entidade bibliográfica irá conter, de acordo com as user tasks e os outros requisitos
+informacionais do cenário. Essa técnica é chamada aqui de “modelagem dinâmica de
+atributos”.
+A Fig. 05 mostra o modelo para representar a técnica da modelagem dinâmica de atributos
+que permite ao usuário catalogador definir para cada entidade bibliográfica os atributos que serão
+utilizados no momento de catalogar o objeto informacional.
+
+Figura 06 – Representação Gráfica da Modelagem Dinâmica de Atributos
+
+Neste caso, são definidos para cada instância da Entidade Bibliográfica, os atributos que serão
+utilizados nas interfaces de entradas de dados (entidade Tipo Atributo). Após essa definição, para cada
+instância de uma entidade bibliográfica, como Obra, podem ser criadas instâncias desses atributos
+pela entidade Atributo como mostrado na Fig. 06.
+
+Na Fig. 06 foram especificadas num cenário qualquer 3 instâncias para a entidade Tipo de
+Atributo referente à entidade Obra. Para a instância o1 da entidade Obra foram definidos para os tipos
+de atributos ta1 e ta2, os valores a1 e a3 respectivamente, para a instância o2 foram definidos para os
+atributos ta1, ta2, ta3, os valores a2, a4 e a5 respectivamente.
+Nesta perspectiva de projeto, fica a critério do catalogador definir na implantação de um
+ambiente informacional de um catálogo especificar os atributos que serão utilizados para representar
+
+
+cada entidade bibliográfica e isso deixa de ser papel do projetista catalogador.
+Outro requisito de extrema importância em projetos de catálogos atuais é criar uma camada
+de interoperabilidade com outros sistemas computacionais baseados em padrões de metadados, neste
+contexto considerar que o modelo possa permitir uma integração com diferentes tipos de padrões de
+metadados traz uma característica de flexibilidade e de extensibilidade ao possibilitar à Unidade de
+Informação a liberdade de escolher integrar seus registros bibliográficos em diferentes formatos e
+padrões de metadados.
+Para definição dos requisitos que demonstram um meio para existir no modelo, a integração
+com padrões de metadados, foram utilizados os estudos de Delsey (2006) que analisa e mapeia
+modelos FRBR com o padrão de metadados MARC 21. A partir desse estudo foram adicionadas
+no modelo as condições para que os elementos de dados do catálogo pudessem ser integrados com
+elementos de dados de padrões de metadados.
+Para os FRBR, o registro bibliográfico é entendido no seu sentido mais amplo, cobrindo uma
+série de funções, não só elementos descritivos como também pontos de acesso, como assunto, por
+exemplo, elementos de organização e notas. Os atributos FRBR, portanto, nem sempre são similares
+aos elementos de metadados do MARC, podendo estar distribuídos em mais de um campo e subcampo
+(MORENO, 2006).
+Nesse contexto, para criar a possibilidade de integração dos elementos bibliográficos do
+catálogo com elementos de dados de padrões de metadados é necessária a associação de entidades,
+relacionamentos e atributos estáticos do modelo, ou seja, que foram projetados fazendo parte do
+esquema do projeto, assim como, com os atributos dinâmicos que são estabelecidos pelo catalogador
+na implantação do ambiente informacional do catálogo.
+Na Fig. 07, está a visão do modelo proposto para implementar a funcionalidade de integração
+com os padrões de metadados. Para tanto foi definida uma entidade para especificar os padrões
+de metadados que a Unidade de Informação irá trabalhar e para cada padrão são relacionados os
+elementos de metadados utilizados para integrar com o catálogo. Para integrar esses elementos às
+informações do esquema, foi criado um relacionamento entre as entidades Elemento Metadados e
+Entidade com cardinalidade “muitos-para-muitos” e nesse relacionamento são definidos os atributos
+“relacionamento”, “atributo”, “subcampo” e posição do elemento de metadados.
+
+Figura 07 – Integração com padrões de metadados
+
+Para os atributos dinâmicos, cada elemento de dados do padrão de metadados é relacionado
+com os tipos de atributos criados pelo catalogador para representar as entidades bibliográficas
+indicando, caso seja necessário, o subcampo e posição no registro bibliográfico.
+De acordo com o Delsey (2006), a relação entre os atributos FRBR e o elementos de dados
+MARC se diferenciam, às vezes, pela forma do objeto, portanto, foi associada a entidade Forma ao
+relacionamento entre as entidades Tipo Atributo e Elemento Metadados.
+Essa relação, vista na Fig. 07, entre os atributos dinâmicos e os elementos de metadados
+definidos pelo catalogador na implantação do catálogo deve ser feita também em todas as entidades,
+atributos e relacionamentos do modelo que tenham ligação com os elementos dos padrões de
+metadados.
+Catálogos e sistemas computacionais baseados nesse modelo levam, na implantação do
+ambiente informacional, o catalogador a definir os atributos a serem utilizados para representar as
+entidades bibliográficas e a relacionar esses atributos com elementos de metadados dos padrões a
+serem utilizados.
+A riqueza dos relacionamentos entre as entidades e dos atributos que representam essas
+entidades tem influência direta na capacidade que um ambiente informacional, baseado nesse modelo,
+
+
+terá de possibilitar aos usuários do catálogo condições de navegar no universo bibliográfico a fim de
+conseguir atender suas expectativas informacionais.
+Nesta pesquisa procurou-se representar as possibilidades de relacionamentos entre as entidades
+bibliográficas encontradas no relatório FRBR e a normalização dos atributos transformando-os como
+entidades associadas às entidades bibliográficas. A definição de atributos segue o nível básico de
+funcionalidades descrito nos FRBR para atender as user tasks.
+A redução de um diagrama E-R em tabelas segue as seguintes regras:
+I)	 Toda entidade é convertida numa tabela ou relação, se E é um conjunto de entidades com
+atributos a1, a2,..., an, E será representada por uma tabela E com n colunas distintas, cada
+um correspondendo a um atributo de E, cada linha da tabela corresponde a uma entidade
+(instância) do conjunto de entidades E.
+Uma relação r(R) é uma relação matemática de grau n nos domínios dom(A1), dom(A2),
+
+..., dom(An), que é um subconjunto de um produto cartesiano dos domínios que definem
+R, sendo:
+dom(A1): domínio do atributo a1;
+dom(A2): domínio do atributo a2;
+...
+dom(An): domínio do atributo an;
+Produto Cartesiano: dom(A1) X dom(A2) X ... X dom(An);
+Relação R = subconjunto de dom(A1) X dom(A2) X ... X dom(An);
+Grau de R = n (número de atributos do esquema da relação).
+
+II)	Define-se um atributo identificador sintético para identificar unicamente (chave primária)
+as instâncias das tabelas.
+Conceitualmente, entidades e relacionamentos são distintos, mas como no diferenciá-los
+num banco de dados? Para conjunto de entidades essa distinção é realizada por meio de
+uma superchave que é o conjunto de um ou mais atributos que permitem identificar uma
+entidade das demais.
+Se K é uma superchave, qualquer conjunto de atributos que contenha K é uma
+superchave, no entanto, uma superchave pode conter atributos desnecessários. O que
+importa para o projeto são as superchaves menores possíveis, ou seja, aquelas em que
+nenhum subconjunto é superchave, nesse caso, são chamadas de chaves candidatas.
+Existindo mais de uma chave candidata na relação, o projetista escolhe dentre estas a
+chave que será utilizada como mecanismo principal para identificação de uma entidade
+como única, essa chave candidata escolhida é chamada de chave primária;
+
+
+III)	 Para os relacionamentos com cardinalidade “um-para-muitos”, coloca-se o atributo que
+forma a chave primária da relação “um” como atributo formando a chave estrangeira na
+relação “muitos”, criando, assim, um relacionamento lógico entre as relações.
+Uma chave estrangeira é o mecanismo utilizado pelos bancos de dados para implementar
+relacionamentos entre tabelas e o conceito de integridade referencial. Dois conjuntos
+de atributo C e D compatíveis em que existe uma ordem entre os atributos de ambos os
+domínios tal que o primeiro atributo de C tenha o mesmo domínio do primeiro atributo
+de D, o mesmo valendo para os segundos atributos, assim por diante. Uma chave
+estrangeira, então, pode ser definida com um conjunto de atributos D R1 que não é
+chave em R1, é compatível com outro conjunto de atributos C Rk que é a chave primária
+da relação Rk;
+IV)	 Para os relacionamentos muitos-para-muitos, cria-se uma relação a partir desse
+relacionamento e os atributos que formam a chave primária de cada relação é levada à
+relação criada formando cada um deles uma chave estrangeira que relacionará a relação
+formada com as relações do relacionamento.
+Se R é um conjunto de relacionamentos envolvendo os conjuntos de entidades E1, E2,...,
+En; se (Ei) é o conjunto de atributos que forma a chave primária para o conjunto de
+entidades Ei; se R possui atributos descritivos chamados {r1, r2,...,rm}, R será representado
+por uma tabela com o seguinte conjunto de atributos:
+
+A partir desse modelo lógico, esquemas de bancos de dados (modelos físicos) podem ser
+construídos, gerando, assim, catálogos digitais baseados em bancos de dados relacionais com os
+requisitos dos FRBR.
+
+CONCLUSÕES
+A lacuna entre a estrutura conceitual dos FRBR e a implementação das representações
+lógicas e de persistência de um catálogo bibliográfico digital e os aspectos atuais da catalogação,
+que levam a análises mais complexas no desenvolvimento de estruturas de representação, enquanto
+geradora do Tratamento Descritivo da Informação que envolve a modelagem e a gestão dos recursos
+informacionais, foram os elementos motivadores e norteadores para o desenvolvimento desta pesquisa,
+a qual propõe a reflexão e a defesa da ampliação do conceito da catalogação e a extensão do papel do
+catalogador nessa ampliação do processo de construção de catálogos bibliográficos digitais.
+No que concerne ao seu papel nos estudos atuais sobre o tema da representação no campo da
+Ciência da Informação e, da Catalogação em especial, para os propósitos desta pesquisa e a proposta de um modelo de construção de projetos de catálogos bibliográficos, pode-se afirmar que os FRBR
+não devem ser considerados isoladamente. Toda e qualquer análise deve ser feita considerando a
+relação existente entre eles e as regras de catalogação, os formatos e padrões de metadados e os
+modelos conceituais de dados, assim como, a interoperabilidade nesses ambientes.
+O Modelo E-R, utilizado pelos FRBR, permite que se realizem estudos na área de
+representação da informação e possibilita o aperfeiçoamento, do ponto de vista da persistência das
+informações, das estruturas dos esquemas dos registros, aumentando a riqueza das possibilidades de
+acesso aos documentos que satisfaçam as tarefas do usuário e aperfeiçoando, assim, a automação de
+catálogos em unidades de informação. Pode-se considerá-los como uma ferramenta importante para
+a modelagem de dados no sentido de desenvolver projetos de catálogos que conduzam às normas e
+padrões biblioteconômicos estabelecidos a satisfazer as necessidades atuais dos usuários no uso de
+catálogos digitais.
+Em relação aos requisitos de representação de um registro bibliográfico, o relatório final do
+Grupo de Estudos FRBR da IFLA, mostra-se como um padrão para a construção de modelos referenciais
+de registros bibliográficos, mas sua estrutura de entidades, relacionamentos e cardinalidades de
+relacionamentos e de atributos não podem ser tomadas como exaustiva na modelagem de dados,
+pois eles são baseados no Modelo Entidade-Relacionamento, mas não contemplam todas as suas
+regras e normas na construção de projetos conceituais. Porém, a existência desse relatório mostra
+aos catalogadores um caminho para o desenvolvimento de projetos de catálogos e comprova que o
+conhecimento prévio do profissional especialista da área de Tratamento Descritivo e Temático da
+Informação utilizando um conjunto de metodologias de representação, torna o desenvolvimento de
+modelos de dados de catálogos mais aderente em relação às demandas informacionais dos usuários,
+trabalho este que anteriormente ficava a cargo de um profissional da área da Computação.
+Para tanto, é necessário que o profissional catalogador estenda a sua atuação ampliando
+também o conceito de catalogação que passa da descrição para a representação de recursos
+informacionais sempre com vistas às expectativas e necessidades do usuário e a interoperabilidade de
+todo e qualquer recurso informacional e, conseqüentemente, agrega-se ao processo da catalogação a
+modelagem das estruturas bibliográficas no desenvolvimento de modelos conceituais que servirão de
+base para a construção de esquemas de banco de dados.
+Constata-se que o Modelo Entidade-Relacionamento é uma metodologia que pode ser
+absorvida no processo do Tratamento Descritivo da Informação como ferramenta para melhorar a
+comunicação do catalogador com os profissionais da área da computação no desenvolvimento de
+sistemas informatizados de catálogos bibliográficos propondo para estes todo o modelo conceitual
+das estruturas de persistência dos registros bibliográficos.
+Nesse contexto, regras e práticas de modelagem devem ser utilizadas pelo catalogador atuando
+como projetista do catálogo fazendo com que anomalias sejam retiradas do projeto e requisitos de
+qualidade da informação sejam homologadas no modelo. No caso do modelo proposto vale ressaltar que o diagrama entidade-relacionamento resultante
+do processo de modelagem serve como base para a construção de projetos físicos (esquemas) de
+banco de dados de catálogos bibliográficos baseados nas estruturas dos FRBR, entretanto, a maior
+contribuição está no detalhamento do processo de construção do modelo demonstrando o uso dos
+requisitos presentes nos FRBR, comprovando que o catalogador de posse de seu conhecimento
+prévio de regras de catalogação tem condições de assumir a responsabilidade de projetar a estrutura
+conceitual de um catálogo bibliográfico.
+A modelagem de dados possibilita uma visão não linear dos elementos descritivos de um
+item bibliográfico e permite uma eficiente transmissão das mensagens contidas nas representações
+e a otimização do acesso e uso de ambientes catalográficos, por meio da intersecção entre os Itens
+bibliográficos e as necessidades informacionais dos usuários. Nesse sentido, o processo de catalogação
+deve ser ampliado adicionando a ele a responsabilidade de definição das estruturas conceituais de
+representação dos Itens bibliográficos e, para tanto, o profissional catalogador necessita buscar essas
+ferramentas que possibilitam um melhor desenvolvimento da área da catalogação.
+Essa ampliação do processo de catalogação permite a expansão do papel do catalogador
+que passa a desempenhar atividades que até então ficavam a cargo do profissional da Computação,
+como por exemplo, a modelagem conceitual do catálogo. Tendo em vista que o catalogador é o
+profissional especializado para identificar as necessidades em todos os níveis de usuários e que a
+estrutura do catálogo influencia o processo de busca da informação, esta pesquisa procurou, a partir da
+demonstração da construção de modelos conceituais de dados, como parte do processo de catalogação,
+baseada na perspectiva de uso dos FRBR no desenvolvimento de catálogos bibliográficos digitais,
+ressaltar a importância do papel do catalogador no desenvolvimento de ambientes informacionais de
+catálogos bibliográficos digitais, bem como, apresentar um processo de catalogação mais eficaz, que
+vise facilitar o encontro, a identificação, a seleção e a obtenção de conteúdos informacionais.

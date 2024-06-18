@@ -1,0 +1,421 @@
+ONTOLOGIA DE IMAGENS DO DOMÍNIO DA NEFROLOGIA A PARTIR DOS
+ATRIBUTOS VISUAIS E VERBAIS DOS LAUDOS E PRONTUÁRIOS DE
+PACIENTES 
+
+
+RESUMO
+As imagens do campo da saúde estão em grande destaque, pois constituem extensão do corpo
+humano, inclusive com os movimentos após a captura de um órgão doente ou não. Elas
+possibilitam novas descobertas sobre o estado de saúde de uma pessoa e, conseqüentemente,
+um acerto maior nas investigações diagnósticas e no tratamento das patologias. São fontes de
+informação de suma importância para esse campo de conhecimento e, portanto, necessitam de
+tratamento informacional. Uma das alternativas é a construção de ontologia, conceito oriundo
+da filosofia platônica e aristotélica, reaparecendo, ressignificado, no campo das Ciências
+Cognitivas, como ferramenta para o tratamento, a organização, a recuperação e a gestão da
+informação. A literatura mostra que ontologias têm sido construídas em pesquisas de vários
+campos de saberes. Apesar disso, não encontramos qualquer ontologia contemplando a
+nefrologia. Esse fato nos motivou a realizar uma pesquisa, no âmbito do Projeto/Universal,
+com objetivo básico de construir uma ontologia de imagem desse domínio de conhecimento,
+dando ênfase às nefropatias, visando ao mapeamento, a recuperação e a gestão de imagem em
+ambiente eletrônico. Apresentamos uma ontologia de imagem do domínio da nefrologia a
+partir da análise dos discursos das anotações dos prontuários de pacientes e dos laudos. O
+estudo empírico foi realizado no Serviço de Arquivamento Médico e Estatística (SAME) do
+Hospital Universitário Walter Cantidio- Universidade Federal do Ceará. A construção desta
+ontologia deu-se em dois momentos: primeiramente utilizamos o software Protégé Universidade Stanford-, no qual construímos a ontologia de textos verbais. Em seguida,
+importamos essa ontologia para o software Active Media Software - Ontology Based
+Annotation system -Universidade Sheffield- a fim de construir aquela referente ao texto não
+verbal (imagem). Os resultados mostram que a união desses dois softwares é de fundamental
+importância para a construção de ontologias de textos verbal e não verbal.
+Palavras-Chave: Imagem do contexto da saúde. Ontologia de imagem. Terminologia da Nefrologia.
+
+1 INTRODUÇÃO
+Ao longo da história as imagens visuais – sejam artísticas ou não, digam respeito a
+desenhos, fotografias, radiografias, ressonâncias e quadros-, desempenham, cada vez mais,
+papel fundamental na sociedade. Entretanto, nem sempre nossos órgãos sensoriais são capazes 
+de sentir e compreender o que elas nos dizem, tanto é que muitas vezes olhamos uma imagem
+dada e nos questionamos sobre o que ela quer dizer, para que ela serve? Porém, como
+argumenta Bentes Pinto (2009), no contexto da linguagem, do simbólico, da ciência, aí, sim,
+vamos compreender que todas as imagens servem para nos dizer ou comunicar algo. As
+imagens são constituídas, entre outras coisas, por um conjunto de textos, frases, enunciados,
+portadores de informações. Com outras palavras, é possível dizer que a imagem pode ser
+percebida como enunciação e como texto narrativo, vez que ela expõe, se expressa e narra
+algo - sem dizer- e enuncia o objeto enunciado, para alguém.
+No campo da saúde, também não é diferente, as imagens surpreendem a pessoa
+comum, que, como se diz no popular, a vê, porém, não a enxerga, pois, raramente identifica
+um órgão, um músculo, e muito menos, uma doença. Isso desperta nosso interesse em estudar
+as imagens desse campo de conhecimento, como um documento de base para essa área, não a
+fim de que possamos senti-las e, sejamos capazes de perceber o que elas nos dizem, pois não
+somos expertos no campo da radiologia e muito menos somos da área de saúde. Porém, na
+perspectiva de compreendê-las, enquanto um texto particular que precisa ser tratado e
+representado por intermédio de seus atributos visuais (cor, textura e forma) e/ou verbais
+(palavras) a fim de facilitar a recuperação de seu conteúdo. Na área da saúde, o acesso a
+informações textuais não verbais (imagéticas) é fundamental e perpassa, entre outras coisas,
+pela questão do tratamento informacional da imagem, pois, elas se constituem no patrimônio
+de nossa saúde, juntamente com os demais textos verbais que compõem os prontuários.
+O projeto “Construindo ontologia de imagens do campo da saúde a partir dos atributos
+visuais, dos laudos e prontuários de pacientes visando a preservação e a recuperação de
+informações–Universal/CNPQ” vem ao encontro dessas reflexões. Neste projeto de pesquisa
+nos interessamos pelo objeto de estudo denominado ontologia de imagens do domínio das
+nefrologia, tendo por base os laudos e os prontuários dos pacientes. Porém, a implantação de
+qualquer tipo de pesquisa exige alguma forma de planejamento, de ações para que se torne
+viável o capital nele investido. Pensando nesta perspectiva, formulamos o seguinte
+questionamento que orientou os rumos deste trabalho: como planejar e construir uma
+ontologia de imagens visuais do domínio da nefrologia a partir dos laudos e dos prontuários,
+visando ao mapeamento de informações e a recuperação de imagem no meio eletrônico? Com
+a finalidade de responder a essa indagação, e contribuir com soluções teórico- práticas para a
+construção de ontologias, é que foi proposta a pesquisa cujos resultados apresentamos nesta
+comunicação e que tem como objetivos básicos: planejar e construir uma ontologia de
+imagem do domínio da nefrologia visando a representação e a recuperação de imagem em
+
+ambiente eletrônico; mapear a terminologia de domínio da nefrologia visando a construção da
+ontologia; definir as propriedades, os axiomas e os indivíduos a fim de que seja possível
+estabelecer as instanciações dos conceitos; mapear as imagens do domínio da nefrologia
+visando a construção de ontologias a partir dos laudos e dos prontuários. É, pois nessa
+perspectiva que esta comunicação se insere.
+
+2 REPRESENTAÇÃO ONTOLÓGICA DE IMAGENS VISUAIS NO CAMPO DA
+SAÚDE
+2.1 Considerações sobre as imagens visuais no campo da saúde
+Atualmente, os especialistas da área de saúde, médicos e dentistas, por exemplo, se
+beneficiam de uma variedade de imagens (ressonância magnética, imagem nuclear, raios X,
+ecografias) e, consequentemente, de uma quantidade enorme de informações multimodais e
+digitais. Essas imagens visuais são fundamentais para o diagnóstico, para a pesquisa e para o
+ensino. Sua contribuição nesse domínio de conhecimento veio à tona a partir da invenção do
+Raio-X pelo físico William Konrad Roentgen, nos anos 1895. Os avanços da física e das
+pesquisas no campo da informática em saúde, engenharia eletrônica, entre outros campos,
+possibilitaram a produção de equipamentos e softwares para a geração de informações em
+suporte digital. Alem de outras invenções e inovações, a combinação do Raio –X com a
+informática deu nascimento ao scanner que “fotografa” nosso corpo digitalizando-o, em
+muitos casos, o fragmentando e fazendo-o transparente. Nesse sentido, Fridman (2000, 17)
+diz que
+os seres humanos são narrados, editados, definidos e inseridos em
+linguagens de cores, sons e movimentos em uma duplicação da experiência
+que não é mais uma distorção; [...] o contato visual com tudo o que é
+humano navega em narrativas midiáticas que preenchem a subjetividade
+contemporânea de coleções de sensações e impressões fugidias.
+
+Corroborando, Bentes Pinto (2009), afirma que, independentemente de campos de
+conhecimentos, cores, formas, textura e as tecnologias eletrônicas e digitais adquirem
+importância vital para esse campo, uma vez que por seu intermédio é possível se chegar à
+imagem mais profunda do corpo humano em busca de encontrar a “certeza para um
+diagnóstico ou ainda para uma investigação científica sobre cada órgão dos sentidos” (p. 20).
+Um exemplo emblemático desse fato são as imagens do cérebro que “mostram cada ação e
+reação diante do “toque” sensitivo a fim de que uma realidade seja percebida. É o corpo
+visível, transparente e aberto -sem corte-”, não no sentido artístico da embriaguez proposto
+por Nietzsche (2000, p. 70), no qual a imagem ou outra manifestação artística, não demanda
+que os espectadores se atenham aos conceitos de "verdadeiro" e "não-verdadeiro".
+
+Contrariamente, a isso, no “âmbito da saúde a imagem busca o ‘verdadeiro’ e o ‘nãoverdadeiro’, seja para identificar, conhecer a verdade e ter certeza de que uma doença existe
+ou, ainda, para negá-la” (BENTES PINTO, 2009, P.23). Em outras palavras, a imagem no
+campo da saúde, também tem por objetivo básico oferecer o acesso a informação eficaz.
+Na área de saúde, a imagem é vista como a extensão do corpo humano, inclusive com
+os movimentos após a captura de um órgão doente ou não, possibilitando novas descobertas
+sobre o estado de saúde de uma pessoa e, conseqüentemente, um acerto maior nas
+investigações diagnósticas e no tratamento das patologias. Nessa categoria de imagens em
+movimento, as novas tecnologias possibilitam o registro que há mais de três décadas era
+impossível. Essa área dispõe de máquinas mais potentes e especializadas para capturar interna
+e externamente cada um dos elementos que constituem os vários órgãos do corpo humano
+com suas respectivas especificidades. É o caso das imagens referentes ao cérebro e aos
+neurônios ou aquelas que apresentam a corrida dos espermatozóides em busca do óvulo para
+formar o ser biológico que, atualmente, parece deixar de pertencer à família “hominídea” para
+fazer parte de uma nova família, aquela dos “homivirtual” (BENTES PINTO, 2009). Portanto,
+cada vez mais se percebe que as imagens desempenham papel de destaque nesse campo, uma
+vez que constituem a memória interna do corpo, porque, comunicam, ou não, os sintomas e os
+signos das doenças. Em determinadas situações, somente por meio delas é possível se chegar
+a alguma conclusão sobre as queixas da pessoa doente. Mais do que nunca, são consideradas
+como fontes de informações ímpares, são as “musas” que apresentam contribuições decisivas
+para a conclusão e a qualidade dos diagnósticos, auxiliando na rapidez do tratamento dos
+sujeitos acometidos por alguma doença.
+Os aparatos maquínicos, cada vez mais sofisticados, possibilitam reproduzir o corpo
+que, conforme Katia Canton (2002, p. 226-7), é o simulacro das descobertas cientificas “da
+réplica, do sentido que se instaura de sua própria ausência, nos excessos de informação que se
+espalham pelos espaços informatizados do mundo pós-industrial.[...] O corpo orquestra um
+jogo multifacetado de conteúdos, manipula materialidade e emoções[...]”. Ora, embora essa
+autora trate da imagem no contexto das Artes, suas reflexões também contemplam as imagens
+digitais/eletrônicas do campo da saúde que, estão em plena expansão. Todos os dias são
+produzidas uma infinidade de imagens, ecografia, radiografia, tomografias, ressonância
+magnética, Raio-X etc. e, também, outros exames que têm como produtos as imagens. São as
+“novas imagens” que ultrapassam o campo estético e ganham outros ares, inclusive de provas,
+quando de algum procedimento não adequado. Nesse sentido, Friedman e Friedland (2000,
+apud GALVÃO, 2000, p. 18) dizem que em dezembro de 1896 um médico foi condenado por
+
+um juiz, devido a prática indevida da Medicina. Nesse episódio um estudante de Direito move
+uma ação, pois, “[...] tendo uma fratura da perna esquerda, foi aconselhado pelo médico a
+realizar exercícios, o que provocou desalinhamento ósseo, documentado pelo exame
+radiológico”.
+Além dessa constatação, as imagens se destacam como um dos principais temas de
+pesquisa não apenas para a área da Saúde ou da Informática, mas, também, para o campo da
+Ciência da Informação, somente para citar alguns deles. Esse último campo de conhecimento
+busca, entre outras coisas, estudar o fenômeno informação, independentemente do suporte e
+da forma em que ela se apresente, levando em consideração o comportamento e a propriedade
+da informação, as maneiras de tratá-la, armazená-la, acessá-la, utilizá-la e gerenciá-la. É nesse
+contexto que, mais do que nunca, as imagens se configuram como uma das fontes de
+informação mais utilizadas na contemporaneidade. Mesmo com todo o excesso e a
+importância dessas fontes, a exemplo do que acontece com os textos verbais, a dificuldade
+para o acesso é infinitamente maior. Constatando essas dificuldades, pesquisadores investem
+em estudos que possam oferecer melhores formas não somente de acessar (ao senso da
+informática) as imagens, porém, na perspectiva de utilizá-la, de se servir dela para dirimir
+duvidas aprimorar conhecimentos, como é o caso da saúde, mas, também, na publicidade, na
+educação, no direito, entre outras coisas.
+2.2 Algumas palavras sobre ontologia
+Não é demais dizer que embora com gênese na filosofia antiga em que é percebida
+como sendo originária da metafísica e cujo senso leva à busca pela essência do ser (Platão,
+Aristóteles, Porfírio e seus seguidores). Conforme defende Bentes Pinto(2006), a partir do
+final do século XX, o conceito de ontologia reaparece ressignificado no campo das Ciências
+Cognitivas, com uma nova semântica que visa dar uma “nova face” às informações
+divulgadas no território do ciberespaço. Com essa plástica, a ontologia tem como finalidade a
+colaboração e a transmissão de conhecimentos visando ao tratamento, organização,
+recuperação e gestão de informações com maior valor agregado, à medida que busca a
+essência nas informações ofertadas como respostas as demandas dos usuários. Para tanto, é
+estruturada em uma teia com fluxos de “nós” ligando vários textos (verbais e/ou não verbais)
+a fim de que o sentido tenha a possibilidade do virtual, quer dizer, do vir- a- ser.
+Na contemporaneidade a ontologia é vista sob vários olhares, passando pela
+representação do conhecimento, redes semânticas, mapas e grafos conceituais, mas, sua
+popularidade está mesmo no domínio do tratamento, representação, recuperação e gestão de
+
+informações no contexto da web semântica. No campo das Ciências Cognitivas, de um modo
+geral, a ontologia constitui um modelo estruturado por noções de domínio, classes, subclasses
+– de primeira, segunda, terceira... n ordem-, propriedades, axiomas, indivíduos que possuem
+relações entre si. Se tomarmos como exemplo a área da nefrologia, um paciente representa
+uma noção de domínio com uma série de atributos correspondentes aos dados de
+identificação, anamnese, evolução etc., que são relacionadas entre si a fim de que seja
+construído um senso correspondente ao estado de saúde do paciente.
+No campo da Inteligência Artificial, Gruber (1993), diz que a ontologia é “uma
+especificação formal, explícita e compartilhada de uma conceitualização”. Nas Ciências
+Cognitivas, a construção de ontologias se forma por meio de conhecimentos estruturados em:
+classes, relações, funções, propriedades, axiomas, instâncias e indivíduos. Nessa perspectiva,
+a ontologia se aproxima da estrutura dos sistemas de classificação, cabeçalhos de assuntos e
+tesauros há muito tempo estudados e construídos nas práticas da Biblioteconomia e da
+Ciência da Informação. Esses dois campos de conhecimentos foram pioneiros nas análises de
+imagens a fim de representar o seu conteúdo informacional, por meio do texto verbal. Quando
+se fala em ontologia no contexto da Ciência da Informação, refere-se a representação
+informacional de um domínio por meio dos conceitos terminológicos ou classes e subclasses
+apresentando-se as relações hierárquicas e associativas existentes entre eles a fim de que
+sejam estruturadas as bases de conhecimentos ou knowledge base, visando a recuperação e a
+gestão de informações. A classe principal possui uma árvore de subclasses e suas respectivas
+propriedades de conceitos (slots ou roles) que descrevem os atributos referentes aos conceitos,
+podendo ter restrições em seus valores (facets). Por exemplo, a classe de nefrologia
+representa todas as doenças do rim. Enquanto que as nefropatias especificas constituem as
+instâncias desta classe.
+Também no contexto das Ciências Cognitivas, mais especificamente na Ciência da
+Computação e na Ciência da Informação, o conceito de ontologia evoluiu, ultrapassando o
+texto verbal, inclusive, já sendo repensada no contexto do texto não verbal – imagem, devido
+a grande proliferação deste tipo de documento e de sua polissemia, principalmente após o
+surgimento da indexação automática adotando os atributos visuais da imagem, como é o caso
+dos sistemas Content Based Image Retrieval (CBIR). Todas as tentativas de tratamento
+informacional de imagens são oriundas das primeiras experiências realizadas, manualmente,
+por bibliotecários, tomando por base as idéias de Erwin Panofsky para a análise descritiva de
+imagens, levando em conta os níveis pré-iconográfico, iconográfico e iconológico. Porém,
+não podemos esquecer que a imagem pode ser vista como uma grande frase, composta por
+
+vários textos referentes aos atributos visuais de textura, forma e cor, portanto, representar seu
+conteúdo somente por meio de vocabulários, não será possível uma recuperação eficaz.
+No Brasil, essa tecnologia foi introduzida pela professora Johanna Wilhelmina Smit,
+na década de 1996 e posteriormente utilizada por outros pesquisadores do campo da Ciência
+da Informação e da Informática. Em se tratando de ontologia de imagens merecem destaques
+a ontologia proposta por Alex Sandro Santos Miranda em sua Dissertação de Mestrado
+(CI/UNB) que construiu uma ontologia de imagem a partir das categorias de Shatford (1986)
+que são oriundas de Panofsk e contemplam os seguintes elementos: quem, que, quando, onde
+e sobre. Também, citamos, ainda, a Tese de Doutorado de Ramon Alfredo Moreno que
+construiu uma ontologia de prontuários e de imagens do SAME do Instituto do Coração
+(INCOR) do Hospital das Clínicas (HC) da Faculdade de Medicina da Universidade de São
+Paulo (USP).
+No campo da saúde, devido ao avanço acelerado de imagens, oriundas das mais
+modernas ferramentas de capturas de imagens, percebeu-se a necessidade de se desenvolver
+alternativas visando o armazenamento e transmissão de imagens médicas digitais. Assim, no
+ano de 1983 a American College of Radiology (ACR) e a National Electrical Manufacturers
+Association (NEMA) formaram conjuntamente um comitê para desenvolver uma norma
+universal tendo como resultado o Digital Imaging and Communications in Medicine
+(DICOM). A principal finalidade desta norma é organizar e padronizar os cabeçalhos das
+imagens médicas, independentemente dos fabricantes e das modalidades de Ressonância
+Magnética(RM) e Tomografia Computadorizada (TC) ou outros tipos de imagens.
+A gênese das ontologias de imagens é oriunda da indexação manual de imagens
+baseadas no modelo de Panofsky (pré-iconográfico, iconográfico e iconológico) e mais
+recentemente dos sistemas de indexação e recuperação de informação baseados em CBIR.
+Trata-se de uma ontologia não mais baseada em palavras, mas nos atributos visuais de cor,
+forma e textura, visando a recuperação de imagens baseada em conteúdo, como um nível
+intermediário, que integra os descritores de baixo nível aos de alto nível.
+No âmbito da saúde existem algumas ontologias de textos verbais e raras dedicadas ao
+texto não verbal ou imagens em particular. Entre essas ontologias destacamos aquela
+desenvolvida pelo grupo de pesquisa Visages em Rennes na França. Trata-se de uma
+ontologia de imagem do domínio da neurologia, denominada de OntoNeuroBase (TEMAL et
+al., 2006). Também, citamos a ontologia de imagem desenvolvida pelo grupo de pesquisa
+Greyc (Caen) de Renouf et al. (2007).
+
+3 MATERIAL E MÉTODOS
+Para a concretização desta pesquisa, como em qualquer outra, fizemos o levantamento
+bibliográfico a fim de identificarmos o “estado da arte”, referente à ontologia e também para
+mapearmos os conceitos do domínio da nefrologia a fim de que pudéssemos estruturar a taxonomia e
+construir a OntoNefro. As pesquisas foram feitas em documentos impressos e eletrônicos, destacandose livros, artigos de periódicos e outras fontes terminológicas, quais sejam: Classificação Internacional
+de Doenças (CID 10), Descritores em Ciências da Saúde (DECS), Medical Subject Headings (MeSH),
+Unified Medical Language System (UMLS), bem como nas bases de dados referenciais e de textos
+completos do Portal de Periódicos da CAPES. Buscamos, ainda, outras ontologias consagradas
+exclusivamente a nefrologia, a fim de que pudéssemos reutilizá-la, pois uma das propostas ontológicas
+é o seu reuso de ontologias existentes a fim de que se forme uma rede de conceitos referentes a um
+domínio, quer dizer ao final se teria um mapa conceitual desse domínio. Contudo, somente
+encontramos ontologias versando sobre o sistema respiratório e endócrino escapando a delimitação do
+domínio de classe que estávamos buscando, ou seja, especificamente a nefrologia. A principal
+utilidade dessa fase foi para mapearmos os conceitos do domínio referentes a nefrologia. Esse
+mapeamento foi feito de forma manual e, em seguida, planejamos a taxonomia que foi construída no
+software Protégé.
+O Protégé é um Projeto desenvolvido pelo Knowledge Modeling Group (KMG) da Faculdade
+de Medicina do Departamento de Informática Médica (SMI - Stanford Medical Informatics) da
+Universidade de Stanford. Trata-se de uma ferramenta tecnológica que possibilita a construção e a
+edição de ontologias, através da descrição das classes, das propriedades, dos axiomas, dos indivíduos e
+das instanciações concernentes aos termos de um determinado domínio do conhecimento para o
+sistema Web semântica. Nas ontologias, as classes são conceitos de domínio, sendo constituídas por
+um conjunto de elementos com propriedades similares e ordenadas segundo hierarquias taxonômicas,
+que incluem superclasses e subclasses herdeiras de suas propriedades. Nesse modelo de estruturação
+do conhecimento são, também, apresentadas as instanciações dessas classes, denominadas de
+indivíduos. Utilizando o Protégé descrevemos as propriedades e os atributos das classes, instâncias e
+constantes que especificam restrições de informações adicionais sobre as propriedades. É possível
+também especificar os axiomas, considerados como verdades absolutas, sendo baseados em frames construções em blocos de uma base de conhecimento. Usa a arquitetura de meta classes, cujas
+instâncias também são classes- templates usados para definir novas classes em uma ontologia. Com a
+ferramenta Protégé formalizamos e implementamos, de modo automatizado, os componentes
+ontológicos do domínio da nefrologia com base na Web Ontology Language (OWL).
+Para nortear a construção da OntoNefro adotamos a methontology. Essa metodologia consiste
+na sistematização das etapas de construção de sistemas de representação baseados em conhecimentos,
+que foi desenvolvida pela professora Gómez-Perez e Cocho (2002) e sua equipe do Departamento de
+Inteligência Artificial da Faculdade de Informática da Universidade Politécnica de Madri, que também
+
+se encontra em acesso livre na Internet. Conforme Cocho, Lópeze Gómez-Perez(2003); durante o
+processo de construção de uma ontologia é necessário levar em conta as atividades de aquisição do
+conhecimento, integração, avaliação, documentação e gerenciamento de configuração (grifo
+nosso). Esses autores defendem, também, que tal metodologia é de grande valia para auxiliar o
+planejamento e a construção de ontologias, uma vez que permite a especificação, a conceitualização, a
+formalização, a implementação e a manutenção da ontologia. A methontology se estrutura em três
+atividades principais: gerenciamento, desenvolvimento e suporte que, por sua vez, se subdivide em
+suas respectivas subatividades. Visando ao melhor entendimento essas atividades, apresentaremos
+resumidamente cada uma delas.
+No caso da OntoNefro, adotamos a Methontology, iniciando pela fase de gerenciamento, quer
+dizer, executamos as atividades de planejamento, controle e garantia de qualidade. Nessa fase de
+planejamento definimos como tarefas a busca e o levantamento bibliográfico, o tempo de execução
+dessa tarefa -entre maio e agosto de 2008. Em relação às atividades de desenvolvimento, elaboramos a
+especificação, conceitualização, formalização, implementação e manutenção. Nosso interesse na
+construção da OntoNefro contempla duas finalidades, uma é poder nos aprofundarmos sobre a
+tecnologia da construção do conhecimento no âmbito das ontologias e, a outra visa a uma aplicação
+prática para o tratamento, recuperação e gestão de informação junto ao Serviço de Arquivo Médico e
+Estatística (SAME) do Hospital Universitário Walter Cantídio (HUWC) da Universidade Federal do
+Ceará. Ou seja, seus usuários finais serão os clientes do HUWC, quer dizer, os pacientes, a equipe de
+saúde, os gestores do SAME e os pesquisadores, de modo geral. Também almejamos que a OntoNefro
+possa ser reutilizada por outros construtores de ontologias desse domínio. Na conceitualização
+estruturamos o domínio de conhecimento em um modelo conceitual a partir da estruturação da árvore
+taxonômica da nefrologia, da definição das propriedades, axiomas, indivíduos e instâncias. A partir
+dessa conceitualização foram gerados os esquemas e metadados em linguagens computacionais do tipo
+XML, OWL etc. bem como dos metadados XML Schema, RDF Schema, a fim de que a ontologia
+possa ser visualizada, manipulada e divulgada na WEB. Pelo fato de a ontologia ser aberta a revisões,
+a fase de manutenção permitiu a atualização e a correção constante da OntoNefro, além de possibilitar,
+ainda, o reuso e a atualização por outros interessados desde que estes disponham da competência
+necessária relativa ao domínio coberto pela ontologia, inclusive no que se refere a terminologia,
+conceitos e relações(figura-1).
+
+Figura-1- Arquivo OWL gerado dinamicamente pelo Protégé
+
+Em relação à ontologia de imagem, o Protégé ainda não disponibiliza uma ferramenta
+em que possamos associar uma imagem a um valor relacionado ao atributo (paciente),
+contudo permite carregar uma imagem no escopo da taxonomia, podendo, posteriormente, ser
+exibida em formato HTML através de um plug-in nativo denominado OwlDoc, com suas
+possíveis relações conforme exemplificado nas figuras 2 e 3
+
+Figura-2 Ontologia da nefrologia construída no software Protégé Figura 3: Codificação da ontologia da nefrologia em.
+formato HTML
+
+Assim, buscamos na Internet algum software livre para que fosse possível
+implementar a OntoNefro a partir das imagens. Encontramos vários softwares livres e
+optamos pelo AKTive Media - Ontology based annotation system, desenvolvido pela
+Universidade Sheffield (http://nlp.shef.ac.uk/wig/tools/aktivemedia). Trata-se de um software
+
+desenvolvido em plataforma Java, tendo como objetivo a anotação de imagens baseada em
+ontologia, conforme mostrado na figura-4.
+
+Figura-4 Interface da ontologia de imagem.
+Fonte: AKTive Media – Ontology based annotation system
+(http://www.dcs.shef.ac.uk/~ajay/html/cresearch.html)
+
+A primeira ação do programa consiste em selecionar a ontologia que servirá de base
+para a indexação das imagens. Para isso, o usuário deverá selecionar a opção load ontology,
+na aba file. Depois de carregada a ontologia no topo à esquerda, é possível iniciar as
+anotações de instâncias e atributos da imagem nos campos de entrada de texto, também à
+esquerda, logo abaixo da ontologia em exibição. A identificação e recuperação da imagem se
+efetiva por meio da atribuição de palavras-chave que identificam cada imagem ou ao seu
+conjunto, podendo, neste caso, ser vinculado a categorias, como exames de raio X,
+ultrasonografia, laudo e etc. Para atribuir palavras-chave, o usuário deverá clicar com o botão
+direito sobre a imagem já selecionada, e digitar as palavras representativas da imagem em
+exibição(Figura-5).
+
+Figura-5- Caixa para inserção de textos e/ou palav
+Fonte: AKTive Media – Ontology based annotation system
+http://www.dcs.shef.ac.uk/~ajay/html/cresearch.html
+
+4 RESULTADOS
+Para a construção de ontologias no contexto das Ciências Cognitivas, é necessário
+construir uma taxonomia. Assim, a taxonomia foi constituída no Protégé sendo representada
+pelas classes e subclasses. Para a OntoNefro, definimos uma grande classe “mãe” como sendo
+“OntoNefro”. Esta classe é constituída pela classe “Conceito de domínio”, que por sua vez
+tem cinco subclasses: “Anatomia”, “Atores”, “Fisiologia”, “Histologia, “Sistema urinários”,
+com seus respectivos herdeiros estruturados em 25 subclasses. Essas subclasses deram origem
+a mais 38 subclasses que se encontram apresentadas em arborescência na figura-6.
+
+Após a estruturação das classes e subclasses, explicitamos, ainda, 22 propriedades, a
+fim de estabelecer os relacionamentos associados a suas respectivas classes e
+subclasses(figura 7).
+
+Figura-7 OntoNefro - propriedades
+Fonte: Pesquisa in loco
+
+Para instanciarmos os indivíduos, optamos apenas pelos pacientes e médicos, esses
+últimos conforme suas especialidades, a fim de que fosse apresentada a relação entre
+indivíduos de modo que fosse possível aos médicos visualizar os pacientes, prontuários,
+imagens e laudos em uma tela e poder fazer comparações para poder inferir seu parecer a
+respeito do estado de saúde do referido paciente. Na figura-8, apresentamos o resultado.
+
+Figura-8 OntoNefro-Plugin das instanciações.
+Fonte: Pesquisa in loco
+
+No que se refere à ontologia de imagem, a experimentação se efetivou no software
+AKTIVE, após termos carregado a ontologia do texto verbal construída no Protégé. Os
+resultados comprovam que é possível se construir esse tipo de ontologia fazendo o reuso de
+outra, conforme apresentado na figura-9 .
+
+Figura-9 Exemplo da ontologia de imagem por meio do reuso da ontologia do texto verbal
+Fonte: Pesquisa in loco
+
+5 ALGUMAS REFLEXÕES CONCLUSIVAS
+Neste artigo apresentamos uma ontologia do domínio da nefrologia levando em conta
+o texto verbal dos prontuários e dos laudos assim como também das imagens visuais.
+Demonstramos todo o processo de construção de ontologias ficando explicito que as
+ontologias utilizando palavras e imagens podem ser articuladas de modo a produzir resultados
+positivos para uma dada aplicação fazendo com que os sistemas de recuperação possam
+oferecer respostas com maior eficácia. Neste sentido, expressamos algumas reflexões
+conclusivas acerca da construção da OntoNefro visando a representação e a recuperação de
+informações no ambiente eletrônico. No que diz respeito à agregação de valor semântico e
+representacional ao conhecimento hospedado no ciberespaço entendemos que essa ontologia é
+de grande valia, posto que possibilita a construção de redes semânticas estruturadas em
+classes, subclasses, propriedades, axiomas e instanciações. Assim, a partir da ontologia é
+possível mapear toda a terminologia de um domínio especifico tendo como resultado uma
+base de conhecimento na qual podem ser observadas todas as relações existentes entre os
+conceitos.
+
+Modelamos e estruturamos conceitualmente o domínio da nefrologia. As classes,
+subclasses, propriedades, axiomas e instanciações foram conceituadas e implementadas na
+ferramenta Protégé. Foram definidas duas grandes classes “OntoNefro”e “Domínio de
+Conceito”, tendo sido implementadas somente 50 subclasses que herdam a sua linhagem
+semântica (Figura-10). Também, foram definidas apenas 22 propriedades, 13 indivíduos e 8
+axiomas. Diante desses resultados, consideramos que nossos objetivos foram alcançados. Em
+relação a pesquisa empírica com os especialistas do domínio do objeto de estudo, ainda não
+foi efetivada, conforme preceitua um dos princípios da construção de ontologia. Esclarecemos
+que a OntoNefro está aberta para reuso por aqueles interessados nesse tema.
+
+Figura-10-Owl Viz –com a taxonomia da OntoNefro
+Fonte: Pesquisa in loco
+
+No que concerne à ontologia de imagem associada aos textos verbais dos prontuários e
+dos laudos, concluímos que os recursos disponíveis no software Protégé, apesar de ser um
+aplicativo amplamente referenciado para a construção de ontologias, sua interface não
+possibilita o carregamento das imagens bem como a associação destas à ontologia. No
+entanto, permite que os metadados gerados sejam exportados para softwares de tratamento
+ontológico de imagens, no caso da presente pesquisa, o software AKTIVE. Os resultados
+obtidos por meio da experimentação neste programa foram bastante satisfatórios à medida que
+complementam os recursos disponíveis no Protégé.
+
+

@@ -1,0 +1,746 @@
+Análise da usabilidade de interface de repositório institucional: enfoque nos
+princípios ergonômicos
+
+Resumo: Apresenta parte de uma pesquisa desenvolvida pelo Departamento de Ciência da Informação da Universidade Estadual de Londrina, que tem por objetivo a análise de interfaces de repositórios institucionais. O
+repositório selecionado como amostra da pesquisa foi o RepositoriUM da Universidade do Minho de Portugal.
+Para a análise do repositório foram utilizados dois instrumentos de coletas de dados: um primeiro para a descrição e caracterização do repositório e, um segundo, para a avaliação dos critérios ergonômicos por meio da aplicação da ferramenta Ergolist desenvolvida pelo Laboratório de Ergonomia em Informática (LABIUTIL) da Universidade Federal de Santa Catarina. Os resultados obtidos demonstram que alguns critérios ergonômicos não
+foram aplicáveis para a análise de sistemas projetados em ambiente web, porém a ferramenta se mostrou relevante para subsidiar, conjuntamente com outros critérios, a criação de um instrumento único para a análise de interfaces de repositórios institucionais.
+Palavras-chave: Repositórios Institucionais. Interface. Usabilidade. Critérios Ergonômicos.
+
+1 PREÂMBULO
+O presente artigo é resultante de parte de uma pesquisa realizada no Departamento de
+Informação da Universidade Estadual de Londrina (UEL) que tem como objetivo principal
+propor diretrizes para o desenvolvimento de uma política de gestão da informação para a produção intelectual da UEL. Tal pesquisa abrange questões que perpassam diferentes etapas da
+gestão da informação, com a intenção de elaborar uma proposta de repositório institucional.
+A sistemática de trabalho definida para o desenvolvimento da pesquisa compreendeu
+sua subdivisão em metas, não necessariamente subseqüentes, dadas as suas características de
+imbricação e concomitância, a saber: 1) identificação e monitoramento da produção intelectual da UEL; 2) estudo das políticas de gestão da informação dos principais repositórios nacionais e internacionais; 3) identificação e avaliação dos canais de distribuição da produção intelectual da UEL; 4) estudo dos processos de organização do conhecimento na UEL; 5) investigação de espaços e atores da informação da UEL; 6) avaliação de periódicos institucionais
+(portal de periódicos e periódicos específicos) e, 7) estudo das interfaces presentes nos repositórios abertos de instituições acadêmicas nacionais e internacionais.
+O desenvolvimento da sétima meta orienta-se ao estudo de interfaces de repositórios
+abertos e, para tanto, foi realizado um levantamento teórico para a observância de aspectos
+que condizem com a Arquitetura da Informação, a Ergonomia, Usabilidade, Interação Homem-Computador (IHC), entre outros.
+Dada a diversidade de áreas que se reportam ao tema de avaliação de interfaces na literatura, o grupo concentrou o estudo teórico da meta em questão em três áreas distintas, que
+trazem aspectos relevantes ao objeto de análise, compondo a interdisciplinaridade característica da Ciência da Informação: as Ciências Cognitivas, a Ciência da Computação e a Comunicação. Acredita-se que a fusão entre os diferentes olhares voltados ao objeto de estudo, bem
+como as discussões provenientes dessas áreas, contribuem de diversas formas para a compreensão do processo de interação entre o usuário e o computador. Essa colaboração pode ser
+percebida pela elaboração da estrutura e layout gráfico que sustenta o repositório, ou por intermédio das mensagens simbólicas e textuais e elementos icônicos que auxiliarão os usuários
+na melhor compreensão e uso do repositório.
+Visando à consolidação de um rol de requisitos para a projeção da interface de um repositório institucional, a meta buscou a validação de alguns critérios para a avaliação de interfaces por meio da realização de um teste-piloto aplicado à análise do Repositório da Universidade do Minho, de Portugal – RepositoriUM, teste que se caracteriza como o foco principal
+deste artigo.
+O RepositoriUM é um repositório institucional baseado na filosofia de acesso livre à
+informação e consolidado na plataforma DSpace. Cumpre frisar que o RepositoriUM é a primeira iniciativa, em nível mundial, de um repositório de língua portuguesa a entrar em funcionamento com a utilização da plataforma DSpace, um software código-fonte aberto originalmente desenvolvido por meio de uma parceria entre o Massachusetts Institute of Technology (MIT) e a Hewlett-Packard (HP).
+Pertencente à Universidade do Minho (UM), de Portugal, o RepositoriUM tem como
+objetivo a promoção do acesso à produção intelectual da instituição, reunindo em um único
+espaço o conjunto das publicações científicas da UM. Destarte, esse repositório garante a preservação da memória intelectual da instituição e contribui para o incremento da sua visibilidade.
+Implantado em 2003, esse repositório contempla cerca de 30 tipos de documentos em
+formato digital, a saber: anais de eventos, artigos, revistas, dissertações, livros, patentes, monografias, teses, palestras, relatórios, resumos e outros.
+O conteúdo do repositório está organizado por comunidades e coleções que correspondem à estrutura da universidade (centros e departamentos). O auto-arquivamento dos documentos digitais que compõem o acervo do RepositoriUM é permitido somente aos autores
+da instituição devidamente cadastrados e autorizados.
+
+2 INTERFACE: a importância de se ater a critérios e requisitos para a projeção de repositórios
+
+As iniciativas de arquivos abertos em instituições universitárias têm provocado uma
+importante ruptura histórico-conceitual quanto a um olhar da sociedade freqüentemente lançado
+à academia em que, por vezes, esta é vista como um organismo isolado de atividades intramuros. Através do desenvolvimento de repositórios de arquivos abertos, as universidades passam a
+externalizar de forma mais ampla sua produção intelectual e tornam acessíveis os conteúdos
+gerados por seus pesquisadores e docentes aos diferentes setores sociais interessados.
+Os repositórios de arquivos abertos se destinam a armazenar e recuperar os objetos
+digitais e a facilitar o acesso a tais objetos. Para tanto, obtêm sustentação nos seguintes aspectos: 1) possibilidade de auto-arquivamento do conteúdo pelo próprio autor; 2) maior transparência no processo da produção intelectual e maior agilidade no processo de divulgação
+desta produção e; 3) interoperabilidade como forma de garantir a fluidez na comunicação e no
+acesso aos conteúdos (TRISKA; CAFÉ, 2001).
+Os repositórios digitais podem ser conceituados como sistemas de informação que visam armazenar, preservar, divulgar e prover acesso à produção intelectual de comunidades
+científicas, constituindo-se em conjuntos de documentos coletados, sistematizados e disponibilizados eletronicamente. De acordo com Tomaél e Silva ([2008]), os repositórios podem ser
+tipificados, embora de forma não-excludente, pelas seguintes categorias: 1) quanto aos objetivos; 2) quanto ao conteúdo; 3) quanto aos tipos de documentos (diversidade); 4) quanto ao
+tipo de administração; 5) quanto às tipologias de documentos digitais; 6) quanto à natureza da
+informação e, 7) quanto aos sistemas de avaliação.
+Dentre as qualificações propostas pelas autoras, interessa-nos abordar a modalidade
+que abrange os repositórios quanto ao tipo de conteúdo, por ser a categoria que congrega os
+repositórios de uma instituição universitária e esta pesquisa se concentrar no estudo de implantação de repositório vinculado a tal tipo de instituição.
+Os repositórios institucionais são geralmente multidisciplinares e destinados à produção
+de uma instituição específica, podendo agregar produções acadêmico-científicas, técnicas e administrativas (TOMAÉL; SILVA, [2008]). Neste sentido, o que caracteriza essa tipologia de
+repositório é o fato de ser orientada para a informação produzida no ambiente das instituições,
+sendo desenvolvida, implementada e mantida por elas.
+A estrutura de um repositório, dada a diversidade de informações armazenadas e a heterogeneidade da comunidade usuária - em que pese aos diversos níveis individuais de experiência de uso, áreas de formação, eficácia no uso do computador, conhecimento ou domínio do
+tema - torna a projeção da interface uma atividade complexa.
+Analisar e projetar interfaces não são atividades triviais. Aproximar a interface de um
+sistema, software, página web ou repositório institucional às expectativas da comunidade usuária ou tornar esse processo de uso o mais intuitivo possível e com assegurada usabilidade
+supõe amplo estudo de requisitos e de critérios do sistema e de seus usuários potenciais.
+Após a realização de leituras tendo como referência autores das áreas da Comunicação, Ciência da Computação e Ciências Cognitivas - para citar apenas alguns: Ribeiro (2008),
+Agner e Silva (2007), Almeida Júnior (2007); Ferreira e Souto (2006), Zumpano (2005), Borges (2003), Vega (2000), Oliveira e Baranauskas (1999), Dias (1994; 2000) - o grupo chegou
+a uma definição consensual sobre interface, considerando que esta pode ser entendida como a
+superfície que proporciona a interação homem-computador (IHC) buscando conectá-los de
+forma lógica e/ou física, visando à mediação da informação entre dois sistemas.
+Cabe ressaltar ainda, que os avanços referentes à análise e à definição de parâmetros
+para a projeção de interfaces privilegiam a interdisciplinaridade e sustentam-se na premissa da
+mediação, pois estas deixam de ser interações meramente H-C e passam a ser interações H-H
+através do computador, nas quais se estabelece um processo comunicativo.
+A interação homem-computador passa por uma ação de identidade que o homem estabelece com o mundo real, ou seja, o usuário consegue interagir com um sistema quando a “máscara” desse sistema lhe é familiar ou de fácil compreensão. Isto não quer dizer, necessariamente, que essa “máscara” tenha que conter elementos que agradem ao usuário, mas é fundamental que faça parte de seu contexto. Ribeiro (2008, p.35) enfatiza que o termo foi cunhado em meados dos anos 1980 para se entenderem as articulações entre capacidades e limitações humanas no que diz respeito à interação com sistemas computacionais e de se decifrarem
+os processos psicológicos do ser humano quando interage com computadores.
+Quando pensamos em desenvolver um sistema que agregue diversos formatos de informação, temos que pensar primeiramente qual será a comunidade que terá acesso a essas
+informações e para qual fim, de forma que, ao utilizar esse sistema, o usuário possa ter segurança sobre o que está por de trás da “máscara” por ele percebida, sendo necessária a avaliação e a implementação de uma interface que, polifórmica, englobe as diversas facetas e atente
+para os diversos fenômenos associados ao seu uso. Ademais, a interface deve conter elementos de comunicação que possam interagir com eficiência para atender às necessidades do usuário que está acessando o sistema, levando em conta os aspectos cognitivos desses usuários.
+A análise desta superfície de interseção entre dois espaços distintos (usuário e computador), que exerce a função de dispositivo intermediário capaz de fazer relacionar e interagir e de tornar comunicáveis o homem e a máquina, merece importante atenção quando da
+discussão do desenvolvimento de sistemas de informação.
+Dias (1994) enumera algumas associações entre a interface e o processo de comunicação, versando sobre a interface como algo necessariamente dependente do utilizador e do contexto da utilização, e como uma relação que se estabelece no curso do ato de interação. A ação
+do utilizador é associada ao contexto do processo de interação, influenciando as estratégias de
+resolução da tarefa do utilizador.
+Percebe-se então que o desenvolvimento da interface de um sistema é mais complexo
+do que se supõe. Os elementos que serão planejados não passam apenas por um bom layout,
+mas por todo o projeto, que terá relação direta com o sistema que está por de trás da “máscara” percebida pelo usuário.
+
+2.1 O desafio da projeção de interfaces e os princípios ergonômicos
+A projeção de um sistema necessita estar balizada pelos preceitos da arquitetura da informação, da ergonomia e da usabilidade e, concomitantemente, pelas peculiaridades do público a que se destina, respeitando-se o nível de experiência dos usuários e suas características
+de instrução, entre outros aspectos.
+Segundo Galitz (2002) citado por Ferreira e Souto (2006, p. 190), “a melhor interface
+é aquela que não é notada, que leva os usuários a se focalizarem na informação e na tarefa,
+sem que percebam o mecanismo usado para apresentar a informação e desenvolve a tarefa”.
+Muito embora existam teorias e metodologias norteadoras para a análise e projeção de
+interfaces, há uma reconhecida dificuldade no fechamento e adoção de uma metodologia única para se observar um fenômeno reconhecidamente tão complexo como o é a interação homem-computador.
+Myers (1993) aponta essa dificuldade em seu artigo que identifica diversas questões
+referentes à dificuldade de projetar e implementar interfaces de interação homem-máquina.
+Com vistas à projeção da interface, o autor destaca os seguintes aspectos: 1) dificuldade em
+entender as tarefas e os usuários; 2) complexidade das tarefas e aplicações; 3) grande variedade de aspectos e requisitos envolvidos no processo; 4) insuficiência das teorias e métodos para
+a solução de problemas; e, 5) dificuldade de se realizar um projeto iterativo.
+A despeito das dificuldades arroladas por Myers (1993) e do reconhecimento de que a
+projeção e a implantação de interfaces são atividades complexas, esta etapa não pode prescindir de uma avaliação criteriosa. Entre os inúmeros autores que apresentam formas de avaliar
+interfaces está Jakob Nielsen.
+Nielsen ficou conhecido por ser um dos precursores nos estudos acerca da projeção de
+interfaces, pois foi quem criou o termo usabilidade. A usabilidade pode ser compreendida
+como a conjugação de teorias da computação, psicologia e ergonomia. A expressão, que substitui o termo amigável (user-friendly), constitui-se como uma ciência que investiga a condição
+de facilidade de uso e entendimento da interface de um sistema.
+Outro termo freqüentemente associado à projeção de interfaces é a Ergonomia. Etimologicamente derivado das fusão das palavras gregas ergon (trabalho) e nomos (regra), este
+termo foi cunhado em 1857, pelo polonês Wojciech Jastrzebowski, que publicou uma obra
+sobre o ensaio de ergonomia ou ciência do trabalho baseada nas leis objetivas da ciência da
+natureza. Posteriormente, quase um século após a publicação da obra, a ergonomia veio a se
+desenvolver como uma área de conhecimento humano, sendo que durante a II Guerra Mundial
+houve uma concentração sistemática de esforços entre a tecnologia e as ciências humanas e
+biológicas para o estudo do homem e de suas relações e funções com o trabalho (VIDAL,
+[1998]).
+A Ergonomia, no contexto das ações humanas, recebeu várias aplicações no estudo do
+esforço e do trabalho humano, das capacidades humanas, das características que afetam a
+concepção de equipamentos, sistemas e postos de trabalho. Com os avanços da informática,
+essa ciência assumiu posição de destaque no que tange à consolidação de critérios, métricas e
+parâmetros para avaliação do uso de sistemas de computador e para análise da IHC.
+Existem diversos instrumentos e direcionamentos com relação à análise ergonômica de
+interfaces. Uma delas é a ferramenta em língua portuguesa e on-line denominada Ergolist, a
+qual foi proposta pelo Laboratório de Utilizabilidade da Informática (LabIUtil) da Universidade Federal de Santa Catarina (UFSC). Segundo o site do LabIUtil
+(http://www.labiutil.inf.ufsc.br/), a opção pelo termo “utilizabilidade” ao invés de “usabilidade” deve-se ao fato de que o primeiro é oriundo da tradução da expressão "utilisabilité" quando ainda o termo “usability” ainda não era difundido no Brasil (UNIVERSIDADE..., 2000).
+
+3 PROCEDIMENTOS METODOLÓGICOS
+
+Durante a fase de levantamento das diversas iniciativas de repositórios institucionais
+vinculados a universidades, selecionou-se o RepositoriUM como amostra da pesquisa pelo fato
+de este ser o primeiro repositório a utilizar em língua portuguesa o DSpace, software de ampla
+adesão por iniciativas nacionais e internacionais no que tange ao acesso livre à informação.
+Consubstanciado na literatura pesquisada, foi elaborado um formulário com o objetivo
+de, num primeiro momento, caracterizar e analisar o repositório selecionado tendo como norte
+os requisitos caracterização do repositório e aspectos de usabilidade da interface. O primeiro
+requisito buscou levantar as seguintes informações: o software utilizado, o protocolo de metadados utilizado, os formatos de arquivos suportados, os tipos de documentos digitais contemplados, os indícios de participação na filosofia de acesso livre e as informações relativas ao processo de cadastro e de auto-arquivamento. O segundo, relativo à usabilidade da interface, buscou analisar os seguintes pontos: recursos de pesquisa, recursos auxiliares de busca, recursos de
+interatividade, idiomas, linguagem, legibilidade, layout, acessibilidade e recursos de mídia.
+Adicionalmente a este instrumento, com vista a complementar a análise do RepositoriUM do ponto de vista ergonômico de usabilidade de interface, a pesquisa utilizou a supracitada ferramenta Ergolist. Tal ferramenta foi selecionada por ser um instrumento completo, objetivo e
+validado por meio de testes para análise de interfaces de diferentes sistemas.
+A Ergolist é um sistema de listas de verificação de qualidades ergonômicas de softwares
+desenvolvido em 1997, com o apoio da Fundação Softex. O Ergolist caracteriza-se como uma
+ferramenta dinâmica e iterativa que oferece ao usuário um retorno sobre a avaliação executado
+por meio da função “laudo final”, um glossário para esclarecimento de alguns termos, além de
+prestar informações adicionais a cada item, composto por exemplificação.
+Tais qualidades ergonômicas para análise de interfaces apontadas pelo Ergolist são avaliadas tomando-se como base os princípios propostos por Bastien e Scapin (1993), descritos no
+quadro a seguir:
+Presteza
+
+Verificação de que o sistema informe e conduza o usuário durante a interação.
+
+Agrupamento por localização Verificação de que a distribuição espacial dos itens traduza as relações entre as
+informações.
+Agrupamento por formato
+
+Verificação dos formatos dos itens como meio de transmitir associações e diferenças.
+
+Feedback
+
+Avaliação da qualidade do feedback imediato às ações do usuário.
+
+Legibilidade
+
+Verificação da legibilidade das informações apresentadas nas telas do sistema.
+
+Concisão
+
+Verificação do tamanho dos códigos e termos apresentados e introduzidos no
+sistema.
+
+Ações Mínimas
+
+Verificação da extensão dos diálogos estabelecidos para a realização dos objetivos
+do usuário.
+
+Densidade Informacional
+
+Avaliação da densidade informacional das telas apresentadas pelo sistema.
+
+Ações Explícitas
+
+Verificação de que seja o usuário quem comanda explicitamente as ações do
+sistema.
+
+Controle do Usuário
+
+Avaliação das possibilidades de o usuário controlar o encadeamento e a realização
+das ações.
+
+Flexibilidade
+
+Verificação de que o sistema permita personalizar as apresentações e os diálogos.
+
+Experiência do Usuário
+
+Avaliação de que usuários com diferentes níveis de experiência tenham iguais
+possibilidades de obter sucesso em seus objetivos.
+
+Proteção contra erros
+
+Verificação de que o sistema ofereça as oportunidades para o usuário prevenir
+eventuais erros.
+
+Mensagens de erro
+
+Avaliação da qualidade das mensagens de erro enviadas aos usuários em dificuldades.
+
+Correção de erros
+
+Verificação de que as facilidades oferecidas para que o usuário possam corrigir os
+erros cometidos.
+
+Consistência
+
+Avaliação de ser mantida uma coerência no projeto de códigos, telas e diálogos
+com o usuário.
+
+Significados
+
+Avaliação de que os códigos e denominações sejam claros e significativos para os
+usuários do sistema.
+
+Compatibilidade
+
+Verificação da compatibilidade do sistema com as expectativas e necessidades do
+usuário em sua tarefa.
+Quadro 1 – Princípios ergonômicos.
+Fonte: Baseado em (UNIVERSIDADE..., 2000).
+
+Vale ressaltar que a utilização dos instrumentos citados não incluiu testes e mensuração distintos, levando-se em conta os diferentes níveis de experiência e tipos de usuários –
+muito embora o critério experiência do usuário tenha sido incorporado à análise –, pois tal
+utilização se deu de forma conjunta pelos membros da meta do grupo da pesquisa. A escolha
+desta estratégia de análise justifica-se pelo fato de a pesquisa estar em um estágio de averiguação de metodologias e requisitos para a avaliação e elaboração de um instrumento de análise da instituição, para ser aplicado, posteriormente, de forma mais ampla, na consolidação
+do repositório institucional da UEL.
+A análise foi realizada no período de 12 a 19 de maio de 2008, sendo que os resultados
+a serem relatos refletem a estrutura e composição do repositório neste período.
+
+4 APRESENTAÇÃO E ANÁLISE DOS RESULTADOS
+
+A aplicação do primeiro instrumento para a análise do RepositoriUM possibilitou identificar as seguintes características descritas no Quadro 2.
+
+CARACTERIZAÇÃO DO REPOSITÓRIO
+
+Nome do Repositório
+Endereço eletrônico
+Instituição que coordena/financia
+Área(s) de atuação do RI
+Protocolo e padrão de metadados
+Ano de criação
+Software que utiliza
+Formatos de arquivos que suporta
+
+Total de documentos disponibilizados no RI
+
+Indícios de participação do repositório na iniciativa Open Access
+
+Indicação tipologias de documentos e as áreas de aplicação que
+congrega de forma explícita
+Tipos de documentos disponíveis
+
+Necessidade cadastro prévio para
+acesso ao conteúdo do RI
+
+RepositoriUM
+http://repositorium.sdum.uminho.pt/
+Universidade do Minho
+Multidisciplinar (áreas cobertas na Universidade do Minho)
+Dublin Core (DC)
+2003
+LusoDSpace (versão portuguesa do DSpace)
+Preferencialmente Portable Document Format (PDF), porém aceita
+qualquer formato/extensão de arquivo MSWord em qualquer versão,
+LaTeX e PostScript.
+Embora o site apresente link para as estatísticas de acesso e
+download de documentos e o título dos arquivos recentemente depositados no repositório na homepage, não expõe o montante total de
+documentos depositados. São apresentadas as estatísticas de documentos por departamento e tipo de material. A soma de todas as
+tipologias de documentos de todas as áreas/departamentos resulta
+num total de 7.537 documentos.
+Na caixa de busca existem duas consultas-padrão “Acesso Livre ao
+Conhecimento” apresenta um link para a iniciativa de arquivos abertos, esclarecendo a filosofia e a participação do repositório no movimento. Porém, a logomarca do projeto OAI não aparece na página
+principal do repositório.
+O link “Comunidades e Coleções” agrupa os tipos de documentos
+por centros e departamentos da Universidade do Minho.
+“actas” em congressos/seminários, artigos em revistas internacionais e
+nacionais, artigos/papers, capítulo/artigo em livros internacionais e
+nacionais, comunicações, comunicação e conferência nacional e internacional/ publicada e não publicada, dissertação de mestrado, “lições
+convidadas”, livros, livros de actas, monografias, outras publicações,
+palestra convidada, patentes, prova de aptidão pedagógica e conhecimento científico, publicação pedagógica, relatórios, relatório técnico/científico, resumos, revistas, revista comunicação e sociedade,
+sistema de comunicação e comunicações, tese de doutoramento, textos
+em volumes de “actas” de encontros científicos nacionais e internacionais, trabalhos de investigações.
+A submissão/depósito depende de cadastro e de liberação de autorização. Alguns arquivos são de acesso restrito para consulta e dependem de solicitação específica.
+ASPECTOS ASSOCIADOS À USABILIDADE DA INTERFACE
+
+Tipos de cadastros/acesso
+
+Recursos de pesquisa para acessar
+fontes no repositório
+Recursos auxiliares à busca de
+documentos
+
+A consulta é aberta, porém é necessário o cadastramento para acesso
+às funções de auto-arquivamento. Somente pessoas da Universidade
+do Minho ou interligadas às unidades orgânicas da universidade
+podem arquivar mediante concessão prévia.
+Busca simples/rápida e avançada com operadores booleanos.
+
+Listas (título, assunto, autor e data), Glossário de termos relacionados ao OAI no link “Copyright”; Guias (Utilização Geral, AutoArquivo, Consulta e Inclusão de novas comunidades), Instruções de
+uso ou Ajuda FAQs.
+Interatividade do usuário
+Apesar de permitir o acesso ao documento na íntegra, o repositório
+utiliza poucos recursos de interação. A seção de comentários que
+permite uma maior interatividade está localizado de forma não estratégica e de difícil visualização.
+Idiomas
+Permite alteração dos menus de consulta para inglês, francês e espanhol.
+Linguagem
+A linguagem é considerada adequada, pois os termos utilizados e os
+jargões são apropriados à comunidade acadêmico-científica.
+Legibilidade
+As cores são adequadas embora alguns rótulos estejam em cinza
+muito claro, o que pode dificultar a legibilidade de informações. O
+tamanho das fontes está adequado, com exceção de algumas informações em nota de rodapé do site (comentários, estatísticas do repositório) que estão em tamanho muito inferior, prejudicando a localização dessas informações no site. A composição das tipologias de
+fontes está coerente, pois as informações estão descritas em uma
+mesma família de fonte.
+Layout
+O site apresenta uma aparência clara e sem o uso de excessivo de
+muitos logos, ícones e imagens, que poderiam caracterizar poluição
+visual.
+Recursos de Mídia
+Não foram localizados recursos de mídia (fotos, filmes, som).
+Acessibilidade
+Não foram localizados recursos para deficientes auditivos ou visuais
+no site analisado.
+Quadro 2 – Características e aspectos de usabilidade observados no RepositoriUM.
+
+Posteriormente à aplicação do formulário que possibilitou concentrar as características
+relatadas acima, a pesquisa prosseguiu com a aplicação do Ergolist, sendo que, conforme demonstrado na Tabela 1, algumas questões que compunham determinados critérios foram consideradas não aplicáveis, pelo fato de o instrumento contemplar critérios que podem ser estendidos a diversas modalidades de sistemas de computador e com aplicações distintas.
+
+Tabela 1: Relação de critérios observados na análise ergonômica da interface do RepositoriUM
+Critérios
+Presteza
+Agrupamento por localização
+Agrupamento por formato
+Feedback
+Legibilidade
+Concisão
+Ações Mínimas
+Critérios
+Densidade Informacional
+
+Total de questões
+17 (100%)
+11 (100%)
+17 (100%)
+12 (100%)
+27 (100%)
+14 (100%)
+5 (100%)
+Total de questões
+9 (100%)
+
+Questões em
+conformidade
+3 (17,65%)
+3 (27,3%)
+2 (11,77%)
+6 (50%)
+18 (66,66%)
+7 (50%)
+3 (60%)
+Questões em
+conformidade
+2 (22,22%)
+
+Questões em nãoconformidade
+0 (0%)
+3 (27,3%)
+1 (5,88%)
+1 (8,33%)
+0 (0%)
+1 (7,14%)
+0 (0%)
+Questões em nãoconformidade
+2 (22,22%)
+
+Questões não
+aplicáveis
+14 (82,35%)
+5 (45,4%)
+14 (82,35%)
+5 (41,67%)
+9 (44,44%)
+6 (42,86%)
+2 (40%)
+Questões não
+aplicáveis
+5 (55,56%)
+
+Ações Explícitas
+Controle do usuário
+Flexibilidade
+Experiência do usuário
+Proteção contra erros
+Mensagem de erros
+Correção de erros
+Consistência
+Significados
+Compatibilidade
+Total
+
+4 (100%)
+4 (100%)
+3 (100%)
+6 (100%)
+7 (100%)
+9 (100%)
+5 (100%)
+11 (100%)
+12 (100%)
+21 (100%)
+194 (100%)
+
+0 (0%)
+3 (75%)
+0 (0%)
+2 (33,3%)
+1 (14,4%)
+0 (0%)
+0 (0%)
+7 (63,7%)
+10 (83,4%)
+3 (14,3%)
+70 (36%)
+
+0 (0%)
+0 (0%)
+3 (100%)
+3 (50%)
+3 (42,8%)
+0 (0%)
+0 (0%)
+0 (0%)
+1 (8,3%)
+2 (9,5%)
+20 (10,3%)
+
+4 (100%)
+1(25%)
+0 (0%)
+1(16,7%)
+3 (42,8%)
+9 (100%)
+5 (100%)
+4 (36,3%)
+1 (8,3%)
+16(76,2%)
+104 (53,7%)
+
+Pela Tabela 1 nota-se que, do total geral de questões pertencentes às categorias de critérios que compõem o Ergolist, houve uma incidência de mais da metade (53,7%) de questões
+não aplicáveis à analise do repositório, sendo que alguns critérios foram anulados justamente
+por nenhuma das questões (ações explícitas, mensagens de erro e correção de erro) ter sido
+considerada aplicável à avaliação. Esses critérios foram desconsiderados, integralmente, durante o processo de análise, pois, na percepção do grupo, refletiam aspectos relacionados à
+avaliação sistemas não projetados para o ambiente web. Portanto, dentre os 18 critérios apenas 15 foram validados para a análise do RepositoriUM.
+Ainda com relação aos critérios que obtiveram altos índices de questões não aplicáveis, verificamos pela Tabela 1 que “presteza”, “agrupamento por formato”, “densidade informacional” e “compatibilidade” apresentaram mais de 50% de questões desconsideradas
+pela análise.
+Das 90 questões que foram consideradas aplicáveis, 36% receberam parecer positivo
+após a análise do RepositoriUM e as demais apresentaram não-conformidade com os parâmetros de avaliação propostos pelo Ergolist.
+O Apêndice A apresenta, por subdivisão de cada um dos critérios validados, as questões avaliadas como em conformidade, assim como as não-conformes. A coluna “comentários” reflete a avaliação e as percepções obtidas no processo de análise.
+Como é possível constatar pelo quadro em apêndice, ainda que em menor incidência,
+alguns requisitos apresentaram questões em não-conformidade, merecendo destaque o critério
+de flexibilidade, que na avaliação recebeu parecer negativo para todas as questões. Verificamos que não foram constatados elementos que permitissem flexibilidade e/ou customização
+de funções do repositório, tais como a personalização da busca.
+Por outro lado, todos os itens considerados aplicáveis ao critério “consistência” foram
+considerados conformes. Tal fato permite afirmar que a navegabilidade pela interface do repositório, em suas diferentes telas, condiz com os parâmetros de qualidade propostos pelo
+Ergolist.
+A aplicação dos instrumentos para análise do RepositoriUM permitiu constatar que
+ambos mantêm relação de complementaridade, visto que o primeiro serviu para resgatar elementos de caracterização e de observação quanto à usabilidade do repositório, embora esta
+última de forma subjetiva, enquanto o Ergolist forneceu subsídios para uma análise pontual e
+objetiva dos requisitos ergonômicos.
+
+5 CONSIDERAÇÕES FINAIS
+A meta da pesquisa, que tem como objetivo estudar as interface sde repositórios abertos de instituições acadêmicas nacionais e internacionais, analisou o Repositório da Universidade do Minho de Portugal (RepositoriUM) por meio de instrumentos para avaliação de interfaces. O primeiro, desenvolvido pelos membros da meta, concentrou-se na detecção de algumas características e aspectos de usabilidade; o Ergolist, o segundo instrumento, teve como
+objetivo confrontar os parâmetros ergonômicos com a interface apresentada pelo repositório.
+Considera-se que os instrumentos adotados podem funcionar de forma complementar,
+e embora grande parcela das questões pertencentes aos requisitos apontados pelo Ergolist tenha sido considerada como não-aplicáveis para a análise de repositórios, dada a sua característica mais genérica, não se exclui a possibilidade de esta ferramenta ser adaptada às necessidades do foco da pesquisa.
+A partir da seleção dos critérios ergonômicos apontados como relevantes para a análise da interface de repositórios identificados por meio deste teste-piloto, buscamos a consolidação de um instrumento próprio que contemple os requisitos de qualidade para a projeção de
+interfaces de repositórios institucionais. Não obstante, diante de tais esclarecimentos, entendese que há necessidade de testar e validar outros instrumentos, buscando justamente aproveitar
+os elementos considerados apropriados para a análise de interfaces de repositórios em ambiente web.
+Os repositórios institucionais emergiram da necessidade de organizar e sistematizar a
+produção intelectual de instituições de ensino e pesquisa, sendo que indicadores e políticas
+nacionais e internacionais para acesso livre à informação sinalizam a tendência crescente de
+projetos que envolvam a consolidação de repositórios digitais.
+Dado o volume de informações que os repositórios institucionais congregam, bem como a diversidade dos usuários que os acessam, estudos que visem à análise de interfaces de
+repositórios são fundamentais para uma melhor IHC e para que os repositórios sejam compatíveis com expectativas e necessidades do usuário em sua tarefa no que tange ao acesso à informação.
+
+Apêndice A – Critérios Ergonômicos validados por meio da análise
+Critérios
+
+Presteza
+
+Questões em conformidade
+
+1) Posicionamento do título; 2) Rótulos identificativos; 3)
+Indicadores de continuação de listas longas.
+
+Agrupamento
+por Localização
+
+1) Agrupamento de dados segundo critério lógico; 2)
+Organização das listas de seleção segundo ordem lógica; 3)
+Opções mutuamente exclusivas ou interdependentes estão
+agrupadas e separadas das demais.
+
+Agrupamento
+por formato
+
+1) Diferença visual dos rótulos com relação aos dados a
+que são associados; 2) Emprego de formatação diferenciada para destacar palavras ou noções importantes.
+
+Feedback
+
+Legibilidade
+
+Questões não conformes
+
+1) Fornecimento de feedback para as ações do usuário; 2)
+Fornecimento de informação sobre o processo de impressão; 3) Realce visual dos itens selecionados em uma lista;
+4) O sistema define o foco das ações para objetos recém
+criados/abertos.
+
+1) Áreas livres separam grupos lógicos; 2) Grupos de
+objetos de controle e de apresentação estão alinhados
+vertical e horizontalmente; 3) Largura mínima de 50 caracteres para os mostradores de texto; 4) Separação dos parágrafos de texto; 5) Pouca ocorrência do uso exclusivo de
+maiúsculas; 6) Minimização do uso de negrito; 7) Minimização do uso do recurso sublinhado; 8) Uso de linhas em
+branco para separar tabelas; 9) Listas de dados alfabéticos
+justificados à esquerda; 10) Simplicidade das linhas empregadas para enquadramento e segmentação de menus;
+
+1) Critério lógico para agrupamento
+das opções dos painéis de menu; 2)
+Opções do painel de menu estão ordenadas segundo algum critério lógico;
+3) Disposição dos grupos de botões
+dispostos em coluna à direita ou em
+linha e abaixo dos objetos associados.
+
+1) Aplicação de sinais sonoros para
+alertar os usuários em apresentações
+visuais.
+
+1) Fornecimento de informação sobre
+processamentos demorados.
+
+Comentários
+Os títulos do repositório estão justificados e alinhados à esquerda, as
+representações icônicas (imagens) que substituem os rótulos de dados
+são descritos ao contato com o cursor, Listas de título, assunto, autor e
+data estão em conformidade.
+Somente a listagem de comunidades e coleções não obedece a essa
+sistemática, sendo que os itens estão descritos ao longo da página o
+que requer o uso da barra de rolagem do navegador.
+Os dados estão organizados segundo um critério lógico de apresentação, embora elementos icônicos não estejam dispostos em posição
+estratégica e coerente; as listas de seleção de conteúdo seguem a
+ordenação alfabética e nos casos das opções mutuamente exclusivas
+ou interdependentes, há uma separação das demais. As três questões
+que receberam parecer negativo dizem respeito à ordenação das opções dentro dos painéis painel de menu que não seguem critérios e
+agrupamentos lógicos, bem como os grupos de botões que não estão
+dispostos em coluna à direita ou em linha e abaixo dos objetos associados.
+Os rótulos são distintos por cores, tamanhos de fontes e por posicionamento. A formatação de algumas palavras e noções importantes
+está em negrito, itálico, sublinhado e/ou em tamanhos de fontes e
+famílias de fontes diferenciadas.
+Para as ações de interação, como a exemplo dos comentários, o repositório oferece feedback imediato. Embora não haja um gerenciador
+específico do repositório em processo de impressão, há integração
+com o gerenciamento de impressão do sistema operacional. O repositório apresenta realce por cores quando da seleção de um item pertencente a uma lista.
+O repositório informa, nos casos de ações interativas, o resultado do
+processo (mensagem e busca). O repositório focaliza as ações para
+objetos recém abertos, por meio da identificação do item selecionado.
+A disposição dos elementos dos grupos lógicos está separada respeitando-se espaçamentos e áreas livres. O uso exclusivo de maiúsculas
+é evitado, bem como o uso excessivo de negrito, somente siglas são
+representadas em caixa-alta e somente as classes principais de dados e
+os itens selecionados estão em negrito.
+
+Legibilidade
+
+11) Separação das bordas dos menus com relação ao texto;
+12) Minimização do uso de abreviaturas nos menus; 13)
+Opções somente com inicial em maiúscula; 14) Numeração
+alfabética segue alinhamento à esquerda; 15) Separação
+das barras de menu horizontal por 2 caracteres; 16) Rótulos
+dos campos com letra inicial maiúscula e as subseqüentes
+em minúsculas; 17) Legibilidade dos ícones; 18) Uso de
+rótulos textuais quando da possibilidade de ambigüidade
+de ícones.
+
+Concisão
+
+1) Apresentação de defaults para acelerar a entrada de
+dados; 2) Concisão dos nomes das opções de menu;
+3)Economia de uso de ícones no espaço de telas; 4) Brevidade das denominações; 5) Extensão das abreviaturas; 6)
+Concisão dos rótulos; 7) Na entrada de dados alfanuméricos o sistema considera letras maiúsculas e minúsculas.
+
+Ações Mínimas
+
+1) Possibilidade de utilizar recursos simples e rápidos para
+a navegação; 2) Existência de botão default em agrupamento de botões; 3) Concepção da estrutura de menus
+busca minimizar os passos para seleção de ações.
+
+Densidade
+Informacional
+
+1) Densidade informacional reduzida; 2) Número de janelas reduzidas evitando sobrecarga e desconcentração do
+usuário; 3) Apresentação ativa somente das opções necessárias.
+
+1) Altura máxima de 9 linhas nas listas
+de seleção e combinação; 2) Minimização dos movimentos oculares (distribuição dos objetos principais segundo uma linha em Z)
+
+Controle do
+Usuário
+
+1) Terminar um diálogo a qualquer instante; 2) Interromper
+ou retornar um diálogo a qualquer instante; 3) Reiniciar um
+diálogo a qualquer instante.
+
+1) Informação sobre bloqueio de comando para interromper uma ação.
+
+Flexibilidade
+
+1) Permissão para reaproveitamento e
+para alterações de valores definidos
+para entradas anteriores
+
+1) Possibilidade de modificar ou eliminar itens irrelevantes pelo usuário;
+2) É permitido personalizar o diálogo;
+3) Alterar ou personalizar valores
+definidos por default.
+
+Os valores defaults são oferecidos no campo de busca (pesquisa rápida) da página inicia, indicando possíveis conteúdos de interesses dos
+usuários. Os nomes/rótulos do repositório são concisos são facilmente
+compreendidos. Há pouca quantidade de ícones e os existentes são
+pequenos, não ocupando demasiadamente as telas do repositório. As
+denominações são breves de forma que o usuário do repositório não
+se perde e facilmente consegue memorizar os caminhos de acesso. As
+poucas abreviaturas existentes são curtas. A partir de testes por meio
+da ferramenta de pesquisa, verificou-se que o repositório não distingue letras maiúsculas de minúsculas para as atividades de busca/consulta.
+O repositório permite o uso da tecla TAB para navegação entre links e
+campos de um formulário. Os botões de navegação, como a exemplo
+da busca avançada, geram uma diferenciação no botão de maior possibilidade de escolha pelo usuário. O menu principal é fixo o que
+diminui os passos para navegabilidade no repositório.
+O layout do repositório, de modo geral, é bem enxuto e minimalista.
+Poucas janelas adicionais são abertas durante a navegação, porém ao
+acessar os elementos padrões de consulta rápida indicados na homepage
+do repositório são abertas janelas que não mantêm elos por meio de
+hiperlinks. Nem todas as listas de seleção apresentam até 9 linhas de
+altura. Embora grande parte dos elementos essenciais do repositório esteja
+projetada seguindo-se uma distribuição em Z, vale a pena ressaltar que os
+itens “comentários” e “estatísticas do repositório” estão localizados no
+rodapé do repositório em tamanho de fonte reduzido.
+Por se tratar de um repositório projetado em ambiente web e com
+estrutura de hiperlinks, a navegação é controlada pelo usuário inclusive pelos recursos do navegador.
+Não foram constatados elementos que permitissem flexibilidade e
+customização de funções do repositório.
+
+
+Critérios
+
+Experiência
+do Usuário
+
+Proteção contra erros
+
+Consistência
+
+Significados
+
+Compatibilidade
+
+Questões em conformidade
+
+Questões não conformes
+
+1) Possibilidade de deslocamento com rapidez; 2) Ações
+equivalentes são disponibilizadas pelo sistema.
+
+1) Formas variadas de apresentação; 2)
+Reconhecimento de conjunto de sinônimos na linguagem de comando; 3)
+Possibilita vários comandos antes da
+confirmação de acesso.
+
+1) Apresentação adequada na separação de menus
+
+1) O sistema informa sobre perda de
+dados; 2) O sistema emite sinais sonoros para entrada de dados incorretos; 3)
+O sistema solicita confirmação de
+ações em duplicidade.
+
+1) A organização das janelas é mantida consistente de uma
+tela para outra; 2) Uma mesma tecla de função aciona a
+mesma opção de uma tela para outra; 3) Os ícones são
+diferentes, mas possuem o mesmo significado de uma tela
+para outra; 4) A localização dos dados é mantida consistente de uma tela para outra; 5) Os formatos de apresentação
+dos dados são mantidos consistentes de uma tela para
+outra; 6) As áreas de entrada de comandos estão na mesma
+posição de uma tela para outra; 7) Os rótulos estão na
+mesma posição em relação aos campos a associados.
+1) As denominações de títulos estão de acordo com o que
+representam; 2) Os títulos das páginas de menu são distintos entre si; 3) Os títulos das páginas de menu são combináveis ou componíveis; 4) As denominações das opções de
+menu são familiares ao usuário; 5) O vocabulário utilizado
+em rótulos é familiar ao usuário; 6) O vocabulário utilizado
+em rótulos é familiar ao usuário evitando palavras difíceis;
+7) O vocabulário utilizado em rótulos é orientado a tarefa
+utilizando jargão técnico da área; 8) Os cabeçalhos de
+colunas de dados são significativos e distintos; 9) O sistema adota códigos significativos ou familiares aos usuários
+e, 10) As abreviaturas são facilmente distinguíveis umas
+das outras, evitando confusões geradas por similaridade.
+1) As telas são compatíveis com o padrão do ambiente; 2)
+As frases que identificam um evento correspondem ä
+seqüência temporal dos eventos e, 3) Os eixos de um gráfico apresentam escalas numéricas.
+
+Comentários
+O deslocamento foi considerado rápido tomando-se como base a disposição dos menus e sua existência em todo o repositório, porém a agilidade
+de acesso está diretamente relacionada à velocidade de conexão uma vez
+que o repositório está projetado em ambiente web. O sistema permite um
+rápido acesso a todas as opções apresentadas na interface tendo como
+ações equivalentes a s funções do teclado (Tab e Enter).
+A organização dos menus é de fácil reconhecimento do usuário, sendo
+que há separação adequada entre áreas selecionáveis de um painel de
+menu de modo a minimizar as ativações acidentais. Os demais requisitos
+não foram identificados no repositório.
+
+O repositório permite a navegação em diferentes telas, mas o menu principal está sempre presente na interface o que facilita a navegabilidade.
+
+1) Os títulos do menu são explicativos
+
+Os rótulos utilizados foram considerados apropriados para o repositório
+sendo distintos e, portanto, não ocasionando confusões ao usuário. O
+vocabulário dos rótulos foi considerado pertinente ao público a que se
+destina, refletindo a natureza da escolha a ser feita durante o acesso. As
+abreviaturas não são excessivas e as existentes são distinguíveis, o que
+evita possíveis confusões.
+
+1) Ilustrações e animações são usadas
+para completar as explicações do texto.
+
+Há reconhecida compatibilidade do padrão de layout das telas do repositório (fontes, cores, etc.). As frases que indicam ações aos usuários estão
+em conformidade com a seqüência temporal ex: “Seleccione uma comunidade ou colecção para aceder à respectiva página”. Nos casos em que
+são apresentados gráficos “Estatísticas do RepositoriUM” os eixos apresentam-se em escala numérica.
+
+
+

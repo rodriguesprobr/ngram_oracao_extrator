@@ -1,0 +1,746 @@
+UMA PROPOSTA DE DIRETRIZES PARA O PROJETO DE PORTAIS DE INFORMAÇÃO
+
+RESUMO
+O crescente uso de informação em ambientes virtuais ampliou o problema de Gestão de
+Recursos de Informação, pois acabou por impulsionar a discussão sobre sua solução na
+direção da tecnologia. Este relato apresenta a síntese de uma pesquisa que propõe um
+realinhamento de foco na direção da epistemologia, na medida em que estuda o processo de
+planejamento, entendimento e representação em portais de informação, com destaque especial
+para o uso de Análise de Domínio e sua posterior estruturação segundo a Arquitetura da
+Informação. O quadro teórico apresentado usou pressupostos da Arquitetura da Informação e
+de Metodologias de Gerenciamento de Projetos. A exploração dos temas ligados à Análise de
+Domínio e ao entendimento da relevância, foi complementada com abordagens investigativas
+orientadas a usuários, por meio do uso de Sense-Making e Elicitação de Requisitos. Passando
+do entendimento para a representação, abordou-se o uso de meta-informação, sistemas de
+classificação e uso de lógica para representação. A partir deste quadro, organizaram-se os
+fundamentos teóricos que deram origem às diretrizes candidatas, à luz de disciplinas da
+Ciência da Informação e Ciência da Computação. O método de pesquisa empregado foi de
+natureza qualitativa, fazendo o uso de análise bibliográfica e documental. O resultado obtido
+foi uma relação de diretrizes que auxiliam no planejamento, especificação e desenho lógico de
+projetos de portais de informação, revelando caminhos interdisciplinares para entendimento,
+representação e estruturação de informação, fazendo uso dos princípios da Análise de
+Domínio e Arquitetura da Informação.
+Palavras chave: Análise de Domínio. Arquitetura da Informação. Necessidade de
+Informação. Representação de Informação. Portal de Informação. Elicitação de Requisitos.
+Sense-Making. Metadados.
+
+1 INTRODUÇÃO
+O tratamento e uso da informação pela sociedade têm se modificado nas três últimas
+décadas, como conseqüência do surgimento de novos modelos sociais, econômicos ou
+tecnológicos. Estes modelos promoveram uma mudança de paradigma tão importante quanto
+à invenção da imprensa, ou ainda, quanto à própria revolução industrial. Percebemos que a
+informação evoluiu de um fato simples e corriqueiro, que possuía repercussão limitada, para
+algo que está se tornando cada vez mais um conhecimento que aufere poder. A expressão
+“poder” deve ser entendida no seu sentido mais amplo, como, por exemplo, usar o
+conhecimento para angariar vantagens econômicas.Nesta direção, Lytle (1986) nos diz que a gestão com sincronismo entre os
+componentes de informação e tecnológicos, acarreta reflexos e melhorias para a gestão de
+negócios. Portanto, não basta apenas sabermos como organizar de maneira eficaz a produção
+de bens, na sua relação com o capital e trabalho, mas é preciso também envidar esforços na
+direção de organizar e estruturar este novo insumo para a formação de riquezas nas
+instituições (EVERNDEN; EVERNDEN, 2003).
+Dentro deste contexto, a entrada de componentes tecnológicos na discussão sobre
+Gestão da Informação catalisou um outro processo de transformação, pois as tecnologias
+tornaram mais ágeis a disseminação e o intercâmbio de informações. O amplo uso de espaços
+informacionais2 na Internet (KOBAYASHI; TAKEDA, 2000), onde um conjunto de dados e
+informações pode estar disponível imediatamente durante 24 horas por dia e 7 dias por
+semana, aliado aos conceitos de portais corporativos (TERRA; GORDON, 2002) que reúnem
+a coleção dos espaços informacionais e facilitam as atividades de gestão destes espaços,
+fertilizaram ainda mais o processo de mudança que já estava em curso.
+Na área de Ciência da Informação, o uso do tema Portais para a organização e
+disseminação de informações pode ser um importante aliado, pois apresenta um processo de
+trabalho que nos auxilia na Gestão de Informações para o ambiente Web de uma empresa ou
+organização. Dias (2001) introduz uma série de conceitos sobre o tema Portais, fazendo uma
+excelente revisão dos assuntos e endereçando para a possibilidade de utilizar os Portais como
+interfaces dos usuários às informações corporativas.
+Por outro lado, a delimitação do contexto segundo o uso de documentos, conduziu a
+pesquisa para o estabelecimento de algumas definições que foram úteis para o
+desenvolvimento da proposta de diretrizes. Documentos são meios cujo objetivo histórico
+sempre esteve voltado para comunicar e armazenar o conhecimento. Estas características
+podem ser entendidas como atividades do âmbito da comunicação, uma vez que diferentes
+documentos podem ter diversos significados, permitindo várias interpretações, dependendo do
+contexto em que estiverem inseridos. O conceito de Informação pode ter seu significado
+associado ao próprio documento, ou ainda ao conhecimento relacionado ao conteúdo deste,
+ambos participantes de um domínio específico (HJØRLAND, 1998).
+Esta breve introdução apresentou questões sobre abordagens que vêm sendo utilizadas
+para tentar resolver o problema da Gestão da Informação em sítios Web. Contudo, percebemos que estas abordagens tiveram uma visão setorizada do problema sem observar o
+problema de maneira integrada e interdisciplinar. Principalmente nos últimos quinze anos,
+todos os esforços foram bastante influenciados pelos aspectos tecnológicos, deixando em
+segundo plano as questões metodológicas envolvidas nas atividades de Gestão de Informação.
+Na pesquisa aqui apresentada, partiu-se do pressuposto que o processo de organização de
+informações em portais de informação deve ser conduzido segundo um método de trabalho,
+ou ainda segundo uma metodologia3.
+Ademais, especialmente no âmbito da montagem de uma Arquitetura da Informação, o
+método de desenvolvimento de pesquisas ligadas ao entendimento e representação de
+necessidades de informação deve ser conduzido segundo as etapas de: planejamento
+estratégico; criação; entendimento e mapeamento; captura e coleta; seleção e tratamento
+(LIMA-MARQUES; MACEDO, 2006).
+Com base nas considerações anteriores, formulou-se a estruturação das atividades de
+análise bibliográfica para levantamento de insumos na pesquisa. O entendimento das
+necessidades de informação e sua posterior representação são componentes importantes para o
+projeto de ambientes de informação, pois permitirão a busca e recuperação nestes ambientes.
+Assim, usando o arcabouço teórico apoiado nos pilares de entendimento, representação e
+Arquitetura da Informação, buscou-se extrair diretrizes candidatas para a concepção da
+proposta de metodologia. Ademais, a proposta de montagem de uma Arquitetura da
+Informação e a indicação de sua correlação com projeto de sítios web, veio ao encontro de
+outro tema de igual importância para a pesquisa: o conceito de Projeto.
+Segundo uma visão histórica, as definições de projetos sempre estiveram mais ligadas
+às áreas de Engenharia, onde existiam projetos diversos, para a construção de prédios, pontes,
+aviões, carros, navios e equipamentos eletrônicos. Já na modernidade, o tema
+desenvolvimento de projetos começou a criar novos laços e passou a fazer parte de outras
+áreas de conhecimento, contribuindo para a organização de novos empreendimentos em
+diversos campos de estudo.
+Por fim, faz-se necessário observar que o principal insumo que deu início a esta
+instrumentação, culminando com a geração do produto da pesquisa, passa pelo uso de
+direcionadores, ou ainda, de diretrizes. Assim, nos apoiamos em algumas definições para
+formular a proposta de produto, pois Campos (1996) registra A. Uma diretriz consiste de uma meta e das medidas prioritárias e
+suficientes para se atingir esta meta. Diretriz = Meta + Medidas. B. Medidas
+são meios ou métodos específicos para se atingir a esta meta. [..] F. As
+diretrizes são estabelecidas para resolver problemas. (CAMPOS, 1996, p.
+49, 50).
+
+Baseando-se nestas definições foi possível deduzir que uma diretriz deve ser
+formulada por meio de uma asserção objetiva, apoiada em conjunto de procedimentos, meios
+ou métodos para alcançá-la. Portanto, esta foi a estruturação de produto adotada na concepção
+dos resultados de pesquisa.
+A seguir, será apresentada uma síntese da fundamentação teórica que serviu de fonte
+para a identificação das diretrizes candidatas. Ao final deste relato, está apresentada a relação
+de diretrizes e o uso destas no campo empírico utilizado na pesquisa.
+2 A ETAPA DE ENTENDIMENTO DAS NECESSIDADES DE INFORMAÇÃO
+A tarefa de reunir diretrizes candidatas a partir de um conjunto de autores, se iniciou
+junto aos elementos do domínio, onde, para tratar o tema “necessidades de informação”,
+formulou-se, dentro da visão interdisciplinar proposta para a pesquisa, analisar alguns pontos
+de apoio identificados como essenciais para dar conta do desafio “entender as necessidades de
+informação dos usuários”. São eles: a Análise de Domínio, Sense-Making e Elicitação de
+Requisitos.
+No âmbito da Ciência da Informação, em síntese, a análise de domínio trata a
+delimitação e a compreensão do conjunto de informações de um dado contexto, por meio do
+entendimento de padrões de comunicação e da relevância. Para Hjørland e Albrechtsen
+(1995), alguns temas estudados no campo da CI, tais como: uso de estratégias para
+classificação de assuntos, vocabulários controlados e estudos de usuários, podem ser
+entendidos como um tipo de Análise de Domínio. Estes autores continuam e observam que a
+teoria da classificação pode sustentar o estudo em um determinado domínio sob análise.
+Por outro lado, ao trabalhar com domínios especialmente no âmbito da análise de
+documentos, é preciso destacar a atividade para análise de assuntos destes documentos.
+Segundo a abordagem domínio-analítica, um documento pode servir para diferentes grupos de
+usuários que podem utilizá-lo para propósitos diversos. Sendo assim, os assuntos não devem
+ser identificados a partir de visões individualistas, nem tampouco com visões generalistas ou
+universalizadas, mas sim devem refletir os interesses dos grupos de usuários de sistemas de
+informação, que estão sob análise no domínio em estudo (HJØRLAND, 1992)
+
+De maneira a auxiliar a delimitação do domínio, foi necessário buscar apoio em outro
+campo essencial para o desenvolvimento da Análise de Domínio: o conceito de relevância de
+informações, pois existe a necessidade de identificar de maneira clara os limites do contexto
+do assunto que está sob análise (RIBEIRO, 2001). Nesta direção, a relevância passou a ter um
+papel de destaque ns processos de aquisição, organização, armazenamento, preservação,
+comunicação, interação e uso de informação, principalmente quando estas atividades são
+executadas e apoiadas por Sistemas Automatizados para a Recuperação da Informação. Estes
+sistemas foram desenvolvidos para, segundo uma visão ainda preliminar, responder com
+informação potencialmente relevante para as pessoas. Assim é possível vislumbrar dois
+mundos interagindo: o mundo da TI, com a relevância de categoria sistêmica; e o mundo das
+Ciências Sociais, com a relevância de categoria de percepção do indivíduo (SARACEVIC,
+2007a).
+Outro ponto que nos auxiliou na identificação de direcionadores para realizar a
+delimitação do domínio, foi a possibilidade de utilizar alguns modelos para mensuração da
+relevância (GREISDORF, 2003; PRIETO-DIAZ, 1990), que permitiram tornar prescritivo o
+processo de identificação dos componentes do domínio em análise, facilitando a identificação
+das diretrizes candidatas.
+Já no âmbito da Ciência da Computação, a Análise de Domínio é um método usado
+em desenvolvimento de sistemas e engenharia de software, tendo como objetivo principal
+auxiliar na reutilização de componentes de sistemas de informação. Este trabalho é
+desenvolvido pelo Analista de Domínio que procura identificar, capturar, organizar e
+representar toda a informação relevante em um domínio4. Esta informação relevante será
+utilizada no desenvolvimento de sistemas, com o objetivo de torná-la reutilizável quando da
+criação de novas aplicações (PRIETO-DIAZ, 1990).
+Prieto-Diaz continua e afirma que vários tipos de informação são gerados ao longo do
+processo de desenvolvimento de sistemas, desde a fase de análise de requisitos até a geração
+de programas em código fonte5. Estas informações são agregadas ao conhecimento do
+domínio em conjunto com os novos requisitos para o sistema atual, bem como para os
+requisitos identificados para o sistema futuro. Especialistas e analistas de domínio identificam
+4
+
+A informação relevante pode ser extraída dos sistemas existentes no domínio, do conhecimento que os
+especialistas do domínio disponibilizam, das normas e procedimentos, bem como do reflexo que as tendências
+tecnológicas podem acarretar no domínio.
+5
+Programa em código fonte é o conjunto de instruções que serão compiladas e/ou interpretadas, para que possam
+ser entendidas por computador em linguagem de máquina.
+
+as informações relevantes e fazem a síntese destas. Com o suporte de um engenheiro de
+domínio, o conhecimento é organizado e agrupado sob a forma de modelos de domínio e com
+padrões e coleções de componentes reutilizáveis. Um dos objetivos da Análise de Domínio é
+tornar toda esta informação disponível para ser reutilizada6.
+A visão de criação de instrumentos para enriquecimento da abordagem de Análise de
+Domínio passou pela análise, entendimento, formulação e exteriorização de uma situação.
+Esta visão nos levou à incorporação em nossa proposta de trabalho a abordagem apresentada
+por Dervin. A interpretação e compreensão do mundo exterior devem ser obtidas por meio da
+observação, pois esta observação nos levará aos sentidos interiores cognitivos relacionados
+com as ações e atitudes (DERVIN, 1998). O uso de alguns direcionadores propostos por
+Dervin pode ser um instrumento que permitiu, segundo uma visão mais pragmática, construir
+o sentido sobre uma série de situações do cotidiano que estão, frequentemente, em processo
+de mudança.
+Segundo outra abordagem proposta para a pesquisa, na visão de Goguen (1994), a
+maioria das informações desejadas pelos Analistas de Requisitos7 está presente e disponível
+no contexto social de usuários e gerentes, para ser extraída por meio de entrevistas e
+questionários. Os sistemas, funcionalidades, entidades e associações, devem funcionar com
+sinergia, colaborando para atender aos objetivos estabelecidos para este contexto.
+Kontoya e Somerville (1998) apresentam uma série de técnicas para realizar o trabalho
+de investigação de requisitos. De maneira análoga ao que foi proposto por Goguen, Kontoya e
+Somerville também apontam para a realização de entrevistas e análise documental, mas
+observam que talvez seja necessário complementar estas entrevistas com o uso de outras
+abordagens investigativas. Para isto, os autores apresentam, dentre várias outras técnicas, a
+construção de cenários que simulam as interações entre os usuários e os sistemas, o uso de
+protótipos para apoiar a experimentação destes cenários e o processo de observação com
+análise social do contexto (chamadas de etnografia8).
+Ainda no terreno das técnicas para investigação dos requisitos, Robertson e Robertson
+(1999) observam que é possível utilizar técnicas para a construção de cenários com o uso de
+
+6
+
+A estratégia de reuso de software deve ser definida sempre a partir do contexto onde o engenheiro de sistemas
+desenhou e construiu o componente original.
+7
+Em nota de rodapé Goguen esclarece que esta responsabilidade é do Analista de Sistemas, contudo, ele se
+refere a este novo perfil como forma de destacar a importância do tema.
+8
+Kontoya e Somerville (1998) relatam que tanto os cientistas sociais quanto antropologistas tem utilizados
+técnicas de observação que podem ser chamadas de etnografia (trad. do autor para “ethnography”)
+
+análise documental9. Estes autores também apresentam uma técnica baseada em registros de
+requisitos em cartões em branco10 que são entregues para os participantes da reunião de
+levantamento. Ao final destes encontros os cartões são recolhidos, reunidos para análise com
+posterior consolidação e registro dos resultados.
+Embora as visões apresentadas para o entendimento das necessidades de informação
+não esgotem o assunto, estas visões contribuíram para a formulação do produto da pesquisa e
+auxiliaram a entender as coisas do mundo, delimitando o domínio sob análise.
+3 A ETAPA DE REPRESENTAÇÃO DAS NECESSIDADES DE INFORMAÇÃO
+Após a reunião das diretrizes sobre o entendimento, passamos então ao próximo
+desafio: iniciar a coleta de diretrizes candidatas para efetuar a representação deste domínio.
+Nesta direção, buscamos apoio em alguns temas identificados como essenciais para dar conta
+da pesquisa. São eles: Gerência de Recursos de Informação (GRI); uso de metainformação;
+óticas diferenciadas e níveis de representação fazendo uso da lógica; estruturação e
+categorização da informação.
+Segundo uma visão histórica, na década de 80 surge a disciplina de Gerência de
+Recursos de Informação, que tem por objetivo promover a gestão de todas as informações
+corporativas, tanto as obtidas por meio automatizado quanto por meio manual, além de
+observar todos os métodos de comunicação e apresentação de informações que são utilizadas
+na condução dos negócios. A definição de recurso de informação, que pode ser usada tanto no
+plural quanto no singular dado o amplo espectro de utilização que a definição permite, é
+entendida como o conjunto de fontes onde a informação é criada e trabalhada, tendo como
+objetivo final, que esta seja reutilizada em apoio aos negócios (LEVITAN, 1982).
+Em uma análise da definição apresentada por Levitan, pode-se inferir que existe um
+grande nível de atualidade nestes registros, pois se percebe que as necessidades de gestão de
+portais de informação que foram apontadas no tópico introdutório deste relato, estão explícitas
+na definição de GRI, o que permitiu estender as conclusões da pesquisa apresentada neste
+relato, na direção da Gestão de Informação.
+A coleta das diretrizes candidatas sobre o uso de metainformação partiu do
+entendimento das discussões sobre metadados. Estas discussões surgiram na década de 80,
+impulsionadas pela teoria de Bancos de Dados em ambiente eletrônico e no âmbito da Ciência
+9
+
+O termo original utilizado por Robertson e Robertson é “Document Archeology”.
+Conhecida como “snow card” ou ainda “white card”
+
+10
+
+da Computação. Entretanto, ao tratar deste tema é preciso registrar que os profissionais que
+trabalham com informação, desde museólogos, arquivistas e bibliotecários, sempre
+trabalharam com metadados para criar registros sobre informação.
+Com uma variedade de formatos e propostas para estruturação, os metadados podem
+ser um tema chave para impulsionar o desenvolvimento da Web Semântica (HODGE, 2005),
+pois este uso poderá trazer um melhor suporte ao processo de gestão e recuperação da
+informação no ambiente Web. Auxiliando o público interessado em conhecer os recursos de
+informação que estão disponíveis na rede, os metadados podem suprir uma deficiência
+existente na atualidade, a ausência de “informação” sobre a informação (BREITMAN, 2005).
+A visão trazida por Gilliland-Swetland (2000) sobre classificações para metadados,
+nos auxiliou no estabelecimento de diretrizes para a representação de itens documentais. O
+quadro apresentado a seguir traz uma síntese destes tipos:
+Tipo
+Administrativo
+
+Definição
+Exemplo
+Metadados
+utilizados Registros de coleta e aquisição
+para
+gerenciar
+os Direitos de reprodução (Copyright)
+recursos de informação
+Registros sobre requisitos de acesso
+Informações sobre localização
+Controle de versão de itens documentais
+Trilhas de auditoria
+Descritivo
+Metadados
+utilizados Registros de catalogação
+para
+descrever
+ou Registro sobre informações para recuperação
+identificar os recursos de Indexadores especiais
+informação
+Elos de ligação e hyperlinks entre recursos
+relacionados
+Registros e anotações de usuários
+Técnico
+Metadados
+sobre Registros sobre documentação de hardware e
+aspectos
+técnicos, software
+estruturais
+e
+de Registros sobre a digitalização, taxas de
+comportamento
+dos compressão e formatos
+recursos de informação
+Registros sobre segurança e necessidade de
+autenticação e/ou assinatura digital
+Preservação
+Metadados relacionados Registros sobre as condições físicas dos
+à preservação de recursos recursos
+de informação
+Registros sobre ações para preservação digital
+(atualizações temporais e necessidade de
+migração)
+Utilização
+Metadados sobre os tipos Registros sobre versões em uso
+e níveis de uso dos Registros sobre contabilizações de acesso
+recursos de informação
+para “rank”
+Quadro 1: Tipos de metadados
+
+Assim, dependendo do objetivo da metarepresentação, podemos adotar determinadas
+referências no contexto do uso de informação na Web. As diretrizes candidatas deste tema,
+surgiram, principalmente, em decorrência das principais referencias utilizadas para descrever
+estes recursos de metainformação, que foram relacionadas a seguir:
+Dublin Core: Este se tornou um padrão para metadados registrado como padrão ANSI
+(ANSI/NISO Z39.85) e norma ISO 15836-2003 (BREITMAN, 2005). A partir do ano de
+1995, com a criação e promoção deste padrão, a temática passou a fazer parte integrante do
+vocabulário da Ciência da Informação e em especial das bibliotecas (SANTIAGO, 2004).
+Composto por 15 elementos considerados como núcleo da proposta Dublin Core, este padrão
+cobre as características de metainformação em nível administrativo, descritivo e técnico.
+RDF: Resource Description Framework é um formalismo para descrição de recursos
+que pode ser descrito em XML11. Permite o processamento e a interpretação por máquinas,
+com utilização em diferentes áreas de aplicação: descrição de recursos de informação e seus
+componentes, elaboração de mapas de navegação e estruturação de sítios, comércio
+eletrônico, etc. Para Peis et al. (2006) , o uso da tecnologia baseada em RDF e Web Semântica
+facilita o processo de DSI (Disseminação Seletiva de Informações). O uso destas tecnologias
+permite trabalhar de maneira mais eficiente com a informação e o conhecimento, trazendo
+melhorias para os serviços DSI. Esta proposta pode cobrir as características administrativas,
+descritivas, técnicas, de preservação e uso.
+EAD: Encoded Achive Description possibilita a descrição e estruturação de
+documentos, além de prover mecanismos que são utilizados na busca de documentos
+utilizando tecnologias não proprietárias de hardware e software, tal como XML (SEXTON;
+TURNER, 2002). Permite aos arquivistas implementarem as bases do conceito da
+proveniência, bem como, desenvolver as descrições que podem facilitar nas pesquisas pela
+internet (FREAN, 2003). Possibilita o registro de informações sobre a autoria e sobre o
+conteúdo do arquivo, além disto, ele permite a criação de metadados para material
+arquivístico descrevendo não só as coleções completas, mas também todas as partes desta
+coleção (SEXTON; TURNER, 2002). O conjunto de marcadores e as características para
+implementação estão descritas detalhadamente no sítio da Biblioteca do Congresso
+Americano12. Esta proposta pode cobrir as características administrativas, descritivas,
+técnicas, de preservação e uso.
+11
+12
+
+Extended Markup Language – linguagem para descrição de marcadores em páginas Web
+TAGs disponíveis em http://www.loc.gov/ead/tglib/element_index.html
+
+e-ping: Os esforços do governo que têm buscado agregar referências ao uso de dados e
+informação está materializado no projeto e-ping. Os trabalhos do projeto estão estruturados
+em padrões de interoperabilidade e, principalmente, na Lista de Assuntos do Governo (LAG),
+no Catálogo de Padrões de Dados (CPD) e no Padrão de Metadados do Governo (e-pmg).
+Este último tem como base o padrão Dublin Core (YAMAOKA, 2007).
+e-arq: Outro esforço relacionado ao tema da pesquisa está em desenvolvimento pela
+CTDE (Câmara Técnica de Documentos Eletrônicos do CONARQ – Conselho Nacional de
+Arquivos) e materializado na proposta de esquema para metadados do e-arq versão 1.0.
+Atualmente já existe proposta para este esquema, contudo, esta proposta não foi alvo de
+análise na pesquisa, uma vez que surgiu posteriormente ao desenvolvimento do trabalho.
+Vale lembrar que existem várias outras referências para embasar o desenvolvimento
+de pesquisas neste tema. A escolha dos temas apresentados (Dublin Core e RDF, além de
+EAD) se deu em função do papel que as duas primeiras têm em relação às propostas do
+Governo Eletrônico Brasileiro. Já a proposta de EAD foi incorporada a este rol em função
+das características dos documentos arquivísticos presentes no campo empírico da pesquisa.
+A identificação de diretrizes candidatas para a representação lógica partiu da
+compreensão da lógica formal e passou pela estruturação e categorização de informação.
+Nesta direção, entendemos que seria preciso reunir diretrizes que pudessem auxiliar no uso de
+informação que estivesse armazenada em qualquer meio computadorizado. Assim, a pesquisa
+buscou investigar a elaboração de descrições precisas e bem formuladas, uma vez que estes
+ambientes computadorizados foram projetados e construídos para lidar com assertivas lógicas
+e formalismos estruturados com rigor matemático. O uso de lógica proposicional13 com
+sentenças e predicados14, o uso de silogismos15, além de ontologias16, são definições
+importantes na formulação de qualquer proposta para representação do conhecimento
+(SOWA,2000).
+Sowa continua e afirma que, de maneira complementar a percepção do observador,
+outras características podem ser verificadas no estabelecimento de diferenças e semelhanças
+13
+
+Em lógica e matemática, uma lógica proposicional (ou cálculo sentencial) é um sistema formal no qual as
+fórmulas representam proposições, que podem ser formadas pela combinação de proposições atômicas usando
+conectivos lógicos.
+14
+Em lógica, o predicado é um termo ou conjunto de termos atribuíveis.
+15
+A realização mais famosa de Aristóteles como lógico é sua teoria da inferência, tradicionalmente chamada de
+silogismo. Inferência é feita a partir de premissas e tendo como conclusão uma sentença categórica.
+16
+Ontologia é uma teoria lógica cujos padrões requerem uma conceitualização.
+
+entre elementos de um contexto, principalmente: o propósito da representação, o grau de
+utilização destes elementos pelos usuários e as ferramentas disponíveis para auxiliar a
+mensuração deste grau de uso, em relação ao propósito.
+Como forma de ilustrar a abordagem proposta anteriormente, foi possível verificar em
+Lima-Marques e Macedo (2006) um modelo de arquitetura da informação que convalida o uso
+de algumas diretrizes candidatas levantadas. Este modelo registra em três níveis de
+representação os processos básicos do ciclo da informação, conforme figura a seguir (Figura
+1):
+CONTEXTO
+
+CONTEUDO
+ARMAZENAMENTO
+CAPTURA
+
+FONTES
+DE
+INFORMAÇÃO
+
+ORGANIZAÇÃO
+REPRESENTAÇÃO
+
+COMUNICAÇÃO
+
+SISTEMA DE
+INFORMAÇÃO
+
+USO
+
+Figura 1: Proposta de modelo de arquitetura a informação (LIMA-MARQUES; MACEDO,
+2006, p. 249).
+
+Outro aspecto importante é a representação dos atributos nos níveis escolhidos, para
+isto, faz-se necessária a escolha do tipo de especificação. O uso de especificações informais,
+onde o problema é descrito em linguagem textual, mas sem a preocupação em relatar detalhes
+necessários para a operacionalização, pode ser adequado para representações de alto nível de
+abstração17. Entretanto, este tipo ocasionará um esforço maior para sua interpretação, uma vez
+que este processo irá requerer um conhecimento prévio sobre o assunto.
+
+Já o uso de
+
+especificações formais, onde o problema é descrito em linguagem textual, mas com a
+incorporação de lógica e regras para a realização da tarefa em análise, pode ser mais
+apropriado para representações mais próximas dos níveis lógicos e de implementação18
+(SOWA, 2000).
+
+17
+18
+
+Tal como no nível de contexto.
+Tal como nos níveis de conteúdo e uso.
+
+A identificação das diretrizes candidatas para tratar a estruturação e categorização,
+passou pelo entendimento dos esquemas de classificação que foram criados na tentativa de
+representar os assuntos presentes nos documentos.
+Em uma visão histórica, os processos de organização do conhecimento sempre
+estiveram relacionados com as atividades de Bibliotecários, Filósofos, Educadores e
+posteriormente para Documentalistas e Cientistas da Informação. Com a evolução dos perfis
+profissionais e da própria natureza do conhecimento, surgiram outros interessados,
+principalmente os Especialistas em IA (Inteligência Artificial), Desenvolvedores de Sistemas
+Especialistas e de Hipertextos. Os sistemas de classificação são sistemas conceituais que são
+construídos a partir de elementos e características também conceituais (DAHLBERG, 1993).
+Em síntese, a teoria da classificação proposta por Ranganathan trata os diferentes
+aspectos relacionados à sistemática de classificação e às unidades de conhecimento. Os
+elementos que compõem a teoria são: unidades classificatórias, características, categorias
+fundamentais e facetas (CAMPOS, 2001).
+Assim, é possível propor formas de representação e categorização que, usando os
+princípios no campo da classificação documentária, sejam adequadas aos propósitos da
+pesquisa. Ademais, Prieto-Diaz e Freeman (1987) corroboram esta proposta quando
+propuseram para o processo de reuso de software os princípios de classificação que são
+utilizados na biblioteconomia, bem como uma proposta de classificação facetada para
+componentes de sistemas automatizados. Em síntese, Prieto-Diaz e Freeman afirmam:
+O esquema facetado proposto é baseado no pressuposto que coleções de
+componentes reutilizáveis são muito amplas e com crescimento contínuo,
+além de existirem vários agrupamentos de componentes similares mesmo em
+classes muito específicas. (PRIETO-DIAZ; FREEMAN, 1987, p. 9)
+
+4 DESENVOLVENDO A ARQUITETURA DA INFORMAÇÃO EM UM DOMÍNIO
+A visão de Lima-Marques e Macedo sobre a Arquitetura da Informação pode ser
+convalidada a partir do relato de Hourican (2002). No entendimento de Hourican, Richard
+Saul Wurman19 estava em busca de como as informações eram colhidas, organizadas e
+apresentadas de maneira significativa para urbanistas, arquitetos e engenheiros, que são
+responsáveis pelo tratamento das informações em ambientes urbanos e pelo planejamento dos
+canais de transportes. Com a evolução e o desenvolvimento do assunto, a Arquitetura da
+Informação teve sua área de atuação estendida e também passou a ser aplicada com o objetivo
+19
+
+Wurman foi um dos precursores no desenvolvimento do tema Arquitetura da Informação.
+
+de atender aos moradores destes ambientes urbanos, possibilitando que estes pudessem fazer
+uso desta organização da informação.
+O conceito de Arquitetura da Informação reúne dois termos bastante amplos, a
+“Arquitetura” e a “Informação”. O primeiro endereça para questões Arquiteturais ou de
+Arquitetura, onde, desde a antiguidade, uma área do conhecimento estuda, planeja e organiza
+os espaços em acordo com os requisitos de seus usuários, sempre procurando trabalhar com
+medidas apropriadas e colocando os objetos no devido espaço, com elegância e de maneira
+harmoniosa. Isto inclui o olhar segundo uma visão de perspectiva, tanto geométrica quanto
+espacial, além de contar com simetria em relação ao todo. Por último, segundo aspectos de
+economicidade de seus elementos e materiais (VITRUVIUS, 1960). O segundo endereça para
+a definição de Informação, que, por si só, enseja estudo específico, pois a informação é objeto
+complexo que merece destaque em qualquer ramo do conhecimento. No âmbito da pesquisa
+ora retratada, foi utilizada a abordagem para definir informação desenvolvida em Ribeiro
+(2001), pois esta trata a informação como o insumo para a geração do conhecimento, como
+elo entre o pensamento e as atitudes, e por fim, como um conjunto de dados dotados de
+relevância e propósito.
+A identificação das diretrizes candidatas no âmbito da Arquitetura da Informação foi
+desenvolvida a partir dos conceitos preconizados por Zachman (1987) e Sowa e Zachman
+(1992), que observavam, principalmente, o uso de diferentes óticas utilizadas na concepção da
+arquitetura de um mesmo produto. Evernden (1996) estendeu conceitos de Zachman para o
+ambiente de informação, trazendo diferentes visões – organizacional, de negócios e
+tecnológica – e criou o grande mapa para gerar a arquitetura de Informação. Este mapa é
+composto por 8 fatores (categorias, entendimento, apresentação, evolução, conhecimento,
+responsabilidade, processo e metainformação), que são construídos a partir do diagnóstico do
+uso de informação nas organizações (EVERNDEN; EVERNDEN, 2003).
+Trazendo a influência dos aspectos tecnológicos, Rosenfeld e Morville (2002)
+direcionam seu trabalho para a estruturação e avaliação de ambiente Web. Observando
+aspectos de usabilidade e recuperação de informação, estes autores continuam e descrevem
+também com bastante clareza alguns princípios norteadores para o desenvolvimento de
+projetos de sítios Web. O esboço de uma arquitetura da Informação passa, necessariamente,
+pela organização de seus componentes: o contexto, o conteúdo e os usuários, com todos estes
+elementos relacionados ao domínio sob análise. Estes servem para auxiliar na definição de
+grandes categorias que poderão ser utilizadas na preparação e no arcabouço da Arquitetura.
+
+Conforme observado anteriormente, o conjunto de definições trazidas por Hourican
+(2002) também iluminou o caminho de pesquisa, pois incorporou um conjunto de aspectos
+práticos obtidos a partir da implementação de projetos. As diretrizes identificadas no trabalho
+deste autor caracterizam a Arquitetura da Informação como resultado de um processo de
+trabalho, centrado em aspectos de uso, busca e recuperação. A Arquitetura da Informação
+começa a se desenvolver partindo-se para o entendimento da Estrutura, Pessoas, Processos e
+Ferramentas.
+Como na atualidade o grande desafio é tratar o conjunto de informações disponíveis
+no ambiente Web, o foco da pesquisa foi relacionar diretrizes para auxiliar na organização
+deste ambiente. Nesta direção, o desafio foi definir exatamente que elementos do domínio são
+necessários para desenhar a Arquitetura da Informação de uma empresa, uma vez que os
+usuários deverão interagir diretamente com muitos destes componentes.
+As contribuições obtidas em Haverty (2002) nos indicaram que a proposta de
+elaboração de uma Arquitetura tem início em metas e objetivos de alto nível, contudo, o
+detalhamento deste trabalho deve ser conduzido de maneira indutiva e surge a partir do
+entendimento das necessidades de informação do usuário. Haverty continua e observa que a
+Arquitetura da Informação precisa incorporar representações por meio de diagramas, como
+forma de facilitar o entendimento do problema.
+Outro autor que trouxe contribuições para as diretrizes candidatas foi Dillon (2002).
+Este autor observa que Arquitetura da Informação é um termo usado para descrever o
+processo de projeto, implementação e melhoria de espaços informacionais que necessitam ser
+aceitos pela sociedade. Para dar conta deste objetivo, Dillon observa que esta disciplina
+necessita de um novo perfil profissional que deve combinar o papel de gerencia de projetos,
+conhecimento técnico em ciência da computação e teoria organizacional. A Arquitetura da
+Informação deve ser planejada para cobrir todas as informações disponíveis na empresa,
+podendo ser utilizada com dois enfoques: Arquitetura da Informação compacta e Arquitetura
+da Informação ampliada. A primeira contempla o processo de definição dos metadados e
+vocabulário controlado para o domínio. A segunda já trata do processo de planejamento por
+completo, definindo espaços informacionais em múltiplos níveis.
+Por fim, foram reunidas diretrizes candidatas trazidas por outros autores, dentre eles
+Toms, Burke, Large, Beheshti e Cole, além de Watson et al., Frappaolo, Schlier e por último
+Newman, que cobriam principalmente, os processos de implementação prática de uma
+Arquitetura da Informação (RIBEIRO, 2008).
+
+5 A METODOLOGIA
+O processo de concepção do trabalho partiu da análise bibliográfica da literatura nos
+campos da Ciência da Informação e da Ciência da Computação, onde se procurou identificar e
+extrair diretrizes candidatas para dar conta do objetivo traçado para a pesquisa. Em seguida as
+diretrizes eram classificadas, segundo o seu objetivo percebido, para serem enquadradas nas
+fases a seguir:
+Fase de Planejamento: foram classificadas como diretrizes desta fase as que
+satisfaziam aos seguintes critérios:
+•
+
+A diretriz contribui para o dimensionamento do trabalho (identificação do domínio
+ainda em nível abstrato, quantificação do esforço, identificação da complexidade,
+identificação de perfis envolvidos e equipe, além do próprio escopo do projeto
+abrangendo fronteiras, tarefas e o que não está inserido no projeto - não escopo);
+
+•
+
+A diretriz contribui para a investigação do por que da necessidade do produto a ser
+desenvolvido, buscando uma definição clara das prioridades e dos objetivos de
+desenvolvimento do portal;
+
+•
+
+A diretriz contribui para a verificação do alinhamento do trabalho com as metas,
+objetivos e políticas relacionadas ao contexto sob análise.
+
+Fase de Elaboração: foram classificadas como diretrizes desta fase as que satisfaziam
+aos seguintes critérios:
+•
+
+A diretriz contribui para o entendimento do trabalho (análise de domínio,
+especificação das necessidades de informação dos usuários e detalhamento da
+estratégia que será adotada para o levantamento);
+
+•
+
+A diretriz contribui para a sistematização da criação e gestão de espaços
+informacionais e conteúdo;
+
+•
+
+A diretriz contribui para a captura e formalização da informação.
+
+Fase de Desenho Lógico: foram classificadas como diretrizes desta fase as que
+satisfaziam aos seguintes critérios:
+
+•
+
+A diretriz contribui para a representação lógica da informação bem como de suas
+conexões com outros contextos e domínios (detalhes de representação e
+metadados);
+
+•
+
+A diretriz contribui para as atividades de organização e armazenamento da
+informação;
+
+•
+
+A diretriz contribui para viabilizar a disponibilização e o posterior uso da
+informação.
+
+As diretrizes para desenho físico e implantação não foram descritas, pois não era alvo
+da pesquisa apresentar diretrizes para tratar a implantação de projetos de sítios Web. Após a
+classificação e organização das diretrizes candidatas, realizou-se o trabalho de consolidação
+das diretrizes, eliminado-se as redundâncias e agregando-se os direcionadores que poderiam
+ser descritos em nível mais geral.
+6 O PRODUTO FINAL DA PESQUISA
+A seguir é apresentado um quadro contendo o conjunto de diretrizes gerado. Em cada
+bloco de diretrizes está descrito o objetivo para o qual as diretrizes foram formuladas. As
+diretrizes são apresentadas sob a forma de sentenças. Cada sentença possui um código para
+facilitar referências.
+Fase
+Planejamento
+
+Objetivo
+Auxiliar no planejamento e
+investigação do por que da
+necessidade do portal a ser
+desenvolvido, buscando uma
+definição
+clara
+sobre
+a
+motivação e a definição do
+escopo do trabalho.
+
+Diretrizes
+DP1 – Delimite o contexto: Missão,
+Metas, Objetivos, Patrocínio, Políticas,
+Cultura e Tecnologias
+DP2 – Estabeleça as responsabilidades
+associadas ao projeto
+DP3 – Estabelecer um plano de
+comunicação
+DP4 – Identifique tanto o domínio a ser
+analisado quanto os usuários
+DP5 – Defina a abordagem para investigar
+o domínio
+DP6 – Levante e analise os trabalhos que
+foram desenvolvidos anteriormente
+DP7 – Procure identificar os ativos de
+informação de forma alinhada aos
+objetivos de negócio da organização
+DP8 – Procure utilizar no projeto o
+modelo de referência proposto pela Web
+Semântica
+
+Fase
+Objetivo
+Especificação Auxiliar na definição do portal
+de informação por meio do
+entendimento do conteúdo que
+será alvo de projeto, delimitando
+o domínio e especificando de
+maneira detalhada os elementos
+que deverão compor o portal.
+
+Desenho
+Lógico
+
+Auxiliar na estruturação e
+organização da representação do
+conteúdo, da navegação e das
+meta-informações, de forma a
+permitir o uso e recuperação de
+maneira efetiva no portal.
+
+Diretrizes
+DE1 – Levante de maneira detalhada o
+conteúdo do domínio
+DE2 – Uso da relevância de informações
+para auxiliar a identificação dos
+elementos do domínio
+DE3 – Procure mensurar intensidade das
+relações entre os elementos do domínio
+DE4 – Defina critérios para auxiliar os
+usuários na mensuração da relevância.
+DE5 – Elabore um modelo preliminar
+contendo uma representação gráfica dos
+elementos do domínio, bem como de suas
+associações.
+DE6 – Complemente o entendimento
+sobre os elementos do domínio utilizando
+abordagens orientadas para os usuários.
+DD1 – Organize e classifique os
+conteúdos, fazendo o uso de metateorias
+DD2 – Identifique responsáveis pelo
+projeto e pelos conteúdos
+DD3 – Identifique necessidades de
+recuperação e mecanismos de busca
+DD4 – Use metadados
+DD5 – Represente a navegação
+DD6 – Represente o conteúdo
+DD7 – Use a visão da Arquitetura
+
+Quadro 2: o produto final da pesquisa
+
+7 AS CONCLUSÕES DA PESQUISA
+Além da relação de diretrizes, entendidas aqui como o produto gerado pela pesquisa,
+também faz parte do trabalho um conjunto de conclusões sobre a aplicação das diretrizes no
+campo empírico. A seguir, apresentamos uma síntese destas conclusões.
+A aplicação das diretrizes de planejamento foi fundamental para evitar mudanças de
+rumo desnecessárias, uma vez que todo o novo elemento que era incluído no campo empírico
+foi verificado à luz de contribuições para a missão e o objetivo identificado. Além disto, as
+fronteiras e interfaces do trabalho (em essência o domínio) foram bem delimitadas, ficando
+explícitas as responsabilidades e a forma de divulgação do andamento do projeto.
+Com a aplicação das diretrizes de especificação foi possível explorar os fluxos de
+informação e comunicação. O uso da visão de contexto proposta por Prieto-Diaz trouxe uma
+abordagem homogênea para a exploração do campo empírico. Os itens investigados estavam
+
+presentes em um diagrama de fácil entendimento, pois os envolvidos tinham um
+conhecimento prévio do formalismo adotado. Representações gráficas preliminares foram
+geradas e o uso de diagramas de casos de uso foi essencial para complementar o
+entendimento. Cabe ressaltar que o uso de mensuração de relevância necessita de novas
+aplicações em outros campos empíricos, pois como os processos de negócio eram específicos,
+além dos dados e informações serem conhecidos de maneira profunda pelos usuários, os
+critérios deixaram de ser subjetivos e passaram a ser uniformes entre os participantes. Tanto
+estes critérios quanto o grau de importância dado a cada critério, foram percebidos como
+homogêneos entre os usuários. Entretanto, foi possível utilizar as deduções e inferências sobre
+relevância na análise de evolução do portal de informação. O uso das características
+apresentadas em Saracevic (2007b), tais como: informação para auferir qualidade ao
+conteúdo, formato, validade e atualidade, foram identificadas como importantes para a
+formulação de propostas sobre as futuras versões do portal.
+Com a aplicação das diretrizes de desenho lógico, foi possível realizar a segmentação
+em subdomínios. Estes subdomínios estavam alinhados com as sistemáticas de classificação,
+onde a categoria fundamental Tempo auxiliou na categorização dos elementos. Outras
+categorias também foram utilizadas na identificação de facetas para o esquema de
+classificação. A existência de glossário dos termos e dicionários de dados para o domínio sob
+análise convalidou o processo indutivo para agregação de categorias, pois permitiu a análise
+das características específicas de cada elemento. Foi possível formular proposta para
+identificação de metadados, tanto administrativos e descritivos quanto para preservação. Esta
+diretriz viabilizou o debate entre o corpo técnico e os usuários, para a identificação de
+metadados que permitissem o uso de representação na Web, por meio de indexadores e
+representação de documentos digitalizados (captura, indexação e armazenamento para
+posterior recuperação).
+Ficou clara a necessidade de mais experimentos, pois com o campo empírico utilizado
+não foi possível esgotar todas as alternativas associadas às diretrizes formuladas.
+Por outro lado, ao propor metodologias de trabalho, ou seja, ao investigar métodos e
+técnicas, não podemos nos furtar de observar os papéis e responsabilidades, que podem ser
+considerados como um desdobramento de um dos objetivos já atendidos. Outro aspecto
+fundamental na proposição de uma metodologia é o sequenciamento das etapas e atividades,
+que devem ser derivadas das diretrizes propostas. Tanto este sequenciamento, quanto a associação entre estas etapas e atividades com os papéis e responsabilidades, são produtos
+intermediários de uma metodologia que foram apontados como trabalhos futuros da pesquisa.
