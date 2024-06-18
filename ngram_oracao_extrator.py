@@ -2,8 +2,8 @@ import os
 import threading
 
 import util
-from sql import ano_inserir, comunicacao_cientifica_inserir, excluir_dados, comunicacao_cientifica_analisar
-from thread import processar_comunicacao_cientifica
+from util.sql import ano_inserir, comunicacao_cientifica_inserir, excluir_dados, comunicacao_cientifica_analisar
+from util.thread import processar_comunicacao_cientifica
 
 if util.get_config("excluir_dados") is True:
     util.log("Excluindo Dados.")
