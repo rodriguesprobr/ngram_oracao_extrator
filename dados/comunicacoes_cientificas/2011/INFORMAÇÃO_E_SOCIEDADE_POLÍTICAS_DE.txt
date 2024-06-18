@@ -1,0 +1,513 @@
+INFORMAÇÃO E SOCIEDADE: POLÍTICAS DE
+PRESERVAÇÃO E DISPONIBILIZAÇÃO DE DADOS SOBRE
+A SEGURANÇA PÚBLICA EM MOÇAMBIQUE
+
+
+Resumo: o presente trabalho é síntese da dissertação do mestrado em Ciência da Informação, na
+qual se baseou em uma abordagem qualitativa para obter a descrição detalhada de fenômenos e
+comportamentos, através de dados com maior riqueza de detalhes e profundidade, colhidos por meio
+de vários métodos, em um processo do estudo de caso da Polícia da República de Moçambique
+(PRM), no que concerne a preservação e disponibilização de informações sobre a segurança pública
+para a sociedade. Neste contexto, objetivou-se analisar a criação do modelo de banco de dados para a
+gestão de informações em prol da segurança pública a partir dos conceitos da Ciência da Informação
+e descrever os elementos da arquitetura da informação para o ambiente da segurança pública.
+Basicamente, a fundamentação teórica esteve inculcada tanto nas percepções sobre os processos
+de criação de banco de dados orientados por Machado, Oliveira, Silberschatz e Sudarshan, como
+nos processos e metodologias da arquitetura da informação para ambientes digitais de Morville e
+Rosenfeld. Também se atentou à análise das políticas públicas de Meny e Thoenig e à Constituição
+e legislação que regula a segurança pública em Moçambique. O estudo culminou com a criação
+de um modelo de banco de dados que poderá ser usado pela organização para a preservação de
+dados produzidos no seu funcionamento e do ambiente informacional digital, por meio do qual se
+pode disponibilizar informações e prestar serviços de atendimento à sociedade, permitindo a sua
+participação direta na gestão e reforma de políticas sobre a segurança pública no país.
+Palavras-chave: Banco de dados. Ambiente informacional digital. Segurança pública.
+
+INTRODUÇÃO
+As tecnologias de informação e comunicação que desde a origem da humanidade acompanharam
+o seu processo evolutivo, com a Internet ganham uma propulsão quantitativa e qualitativa de comunicação
+e organização entre diferentes atores sociais. Neste sentido, os órgãos administrativos são cada vez mais
+inseridos em uma das características do pós-modernismo sobre a velocidade ou instantaneidade na
+troca de informações e prestação de serviços públicos. O tema “informação e sociedade: políticas de
+preservação e disponibilização de dados sobre a segurança pública em Moçambique” se insere neste
+cenário, desdobrando-se como síntese da dissertação do mestrado em Ciência da Informação, concluída
+nos primórdios do ano de 2011. A partir da abordagem qualitativa, interpretam-se e compreendemse os diferentes fenômenos, dados e ações relacionados à segurança pública, visando notabilizar o
+processo de preservação e, por conseguinte, disponibilização e recuperação no âmbito da informação e
+construção do conhecimento sobre a matéria, em Moçambique.
+O estudo partiu de uma reflexão crítica sobre o defasamento da atual política de defesa e segurança
+em uso no país que culmina com a desvalorização de diversos aspectos que a atual era da sociedade
+da informação impera sobre qualquer ator social, mormente o foco sobre o digital e a ubiqüidade da
+informação, no que tange à satisfação das necessidades informacionais do usuário. Os serviços de
+informação para a sociedade devem pautar pela legitimidade inerente a cada estágio vivido por essa
+sociedade, para tal, os estudos de usuários que segundo Figueiredo (1994, p.7), são “investigações que
+se fazem para saber o que os indivíduos precisam em matéria de informação, ou então, para saber
+se as necessidades de informação estão sendo satisfeitas de maneira adequada”, são imprescindíveis
+para o processo de construção do conhecimento pela sociedade, baseada na reflexão crítica sobre
+os conteúdos apreendidos. Por isso na atualidade, disponibilizar a informação para a sociedade
+implica levar a cabo um conjunto de medidas que potencializem a democratização do acesso e o uso
+estratégico da informação, com recurso às novas tecnologias de informação e comunicação, em prol
+da massificação situacional aliada à vivência quotidiana na comunidade de inserção.
+Um dos principais desafios para o avanço da democracia é o desenvolvimento contínuo das
+ferramentas de interação entre governo e sociedade (MAZONI, 2011). Neste sentido, ao lado dos governos
+eletrônicos surge o conceito de dados abertos governamentais numa injunção para a disponibilidade de
+dados para a sociedade, com a observância dos oito princípios prescritos pelo OPENGOVDATA, a saber:
+serem completos, primários, atuais, acessíveis, compreensíveis por máquinas, não discriminatórios, não
+proprietários e livres de licenças ou qualquer tipo de controle.
+Para colmatar a situação descrita, o trabalho notabilizou a criação de um modelo de banco de
+dados para a preservação das informações produzidas no âmbito da segurança pública e o desenho de um ambiente informacional digital, através do qual se possa recuperar os conteúdos armazenados para
+a sociedade. Deste modo, o estudo foi delimitado para a Polícia da República de Moçambique (PRM),
+um organismo público que entre outras funções, garante a ordem, segurança e tranqüilidades públicas,
+o respeito pelo Estado de Direito e a observância estrita dos direitos e liberdades fundamentais dos
+cidadãos1. De realçar que no contexto geral, a defesa da ordem e segurança também é incumbida à
+sociedade em geral e a outros órgãos responsáveis pela aplicação da lei, como defesa do consumidor,
+saúde pública, defesa civil, gestão de calamidades, entre outros2.
+POLÍTICAS PÚBLICAS
+As políticas públicas são ações governamentais que visam coordenar os meios disponíveis e
+as atividades dos entes privados para a satisfação do bem público. São determinados pelo sistema de
+governo, mas coordenadas com o envolvimento de diversos atores sociais, como públicos (políticos
+e burocratas), privados (individuais, coletivos e sindicatos), internacionais (Organizações não
+Governamentais) e sociedade civil (igrejas, mídia e líderes carismáticos), em observância dos princípios
+de legalidade, transparência e eficiência. A sua definição se sujeita a posteriores programas, planos e
+metas para o seu cumprimento.
+Meny e Thoening (1992), consideram que o ciclo de uma política compreende as fases
+de identificação do problema, de formulação de soluções alternativas, de tomada de decisão, de
+implementação da decisão e de avaliação dos resultados. No caso concreto de Moçambique, a atual
+política de defesa e segurança carece da avaliação que possa conduzir à reforma ou ajuste à atual
+conjuntura política, econômica e social, pois se mostra defasada na medida em que foi aprovada pela
+Lei nº 17/97, de 1 de Outubro, para responder o momento que se vivia. Muitos aspectos demandados
+pelo advento da Web tanto no cenário do “modus operandi” criminal, como da resposta à sociedade
+se mostram descobertos pela referida política e por outros programas do governo.
+Como se referenciou anteriormente, a garantia da segurança pública na atual era digital passa
+pela adoção de serviços de informação ou relações públicas que permeiam e encorajam a participação
+do cidadão. Ademais, as relações públicas segundo Bravo (1998), constituem parte da ciência social, na
+sua essência, um diálogo e uma arte, visando permitir a troca de opiniões, de sentimentos e de desejos
+entre pessoas situadas em níveis diferentes, sanando conseqüências negativas de incompreensão, ódio
+e desunião. Daí a importância de criação de infra-estruturas tecnológicas para o intercambio de dados,
+incentivando a participação da sociedade em todos os contextos sobre a segurança pública que podem
+alicerçar a tomada de decisões. Uma nova política ou programa sobre dados abertos governamentais
+só se torna efetivo quando haja um banco de dados para a preservação de informações, com normas
+explícitas para o intercâmbio de dados, dicionário de semântica ou vocabulário controlado de termos
+da área e mecanismos de visualização e processamento de dados em ferramentas de livre acesso para a sociedade. A participação da sociedade neste sentido garante a intervenção e enriquecimento das
+políticas do governo, permitindo o crescimento exponencial da área da segurança pública no país.
+BANCO DE DADOS
+O banco de dados segundo Oliveira (2004, p. 57), é “uma coleção organizada de dados e
+informações que pode atender às necessidades de muitos sistemas, com um mínimo de duplicação, e
+que estabelece relações naturais entre dados e informações”. Através do banco de dados, armazenamse dados, criando um sentido inicial de informações que poderão ser utilizadas na sua natureza ou
+processadas pelos sistemas de informação em outras informações para satisfazer várias necessidades
+da organização. O banco de dados é uma extensão do memex, a memória auxiliar que segundo
+Vannevar Bush operaria por associação, visando à recuperação da informação, pois o memex é
+é um dispositivo no qual qualquer indivíduo armazena todos os seus
+livros,
+registros e comunicações, e que é mecanizada, para que possa ser
+consultado com extrema velocidade e flexibilidade. É um complemento
+ampliado íntimo de sua memória (BUSH, 1945, p.6, tradução nossa).
+Contudo, conforme o autor chama atenção, para o aspecto da construção do conhecimento
+vale o pensamento criativo da sociedade e não o pensamento repetitivo da máquina, por isso, a
+Ciência da Informação desempenha um papel preponderante na criação de estruturas lógicas que
+auxiliam a sociedade na recuperação dos dados preservados, através de relacionamentos, cabeçalhos
+de assunto, listas controladas, listas de anéis de sinônimos, taxonomias, esquemas de classificação
+alfanuméricos, tesaurus, ontologias e folksonomias. Aliás, este papel interventivo da Ciência da
+Informação é enfatizado por Saracevic (1992) ao destacar o papel diferencial da área no cenário das
+relações de interdisciplinaridade, pela preocupação com aspectos sociais e humanos que transcendem
+a tecnologia.
+Além da estrutura de armazenamento em si, um Sistema Gerenciador de Banco de Dados
+(SGBD), como conjunto formado por dados inter-relacionados e softwares, é usado na definição
+de estruturas para o armazenamento, mecanismos para a manipulação e segurança de dados
+(SILBERSCHATZ et al., 2006).
+Um sistema gerenciador de banco de dados é caracterizado por compacidade, rapidez,
+integração e redundância, compartilhamento, segurança e padronização de dados, isto é, garante
+a disponibilidade de dados não repetitivos, seguros, que podem ser acessados rapidamente pelos
+usuários para as suas necessidades.
+Para a criação do modelo de banco de dados para a preservação de informações sobre a segurança
+pública em Moçambique no que tange à criminalidade, o estudo baseou-se no funcionamento atual da
+Polícia da República de Moçambique, ilustrado pelo organograma da figura 1.
+O Comando-Geral, conforme o organograma da figura 1, é composto pelo próprio Comando,
+pelos Conselhos da PRM e pelo Conselho de Ética e Disciplina; pelas Direções de Ordem e Segurança
+
+Pública, de Investigação criminal, de Pessoal e Formação e de Logística e Finanças, bem como pelo
+Comando das Forças Especiais e de Reserva, pelos Departamentos de Estudos, Informação e Plano; de
+Informação Interna e de Relações Públicas, incluindo o Gabinete do Comandante e a Secretaria-Geral.
+COMANDANTE GERAL
+
+Gabinete do
+Comandante
+Geral
+
+Direção de Ordem
+e Segurança
+Pública
+
+VICE-COMANDANTE
+GERAL
+
+SERVIÇOS SOCIAIS
+
+CONSELHO DA PRM
+
+CONSELHO DE ÉTICA E
+DISCIPLINA
+
+Secretaria Geral
+
+Departamento de
+Estudos,
+Informação e Plano
+
+Departamento de
+informação
+Interna
+
+Departamento de
+Relações
+Públicas
+
+Direção de
+Investigação
+Criminal
+
+Comando das
+Forças Especiais
+e de Reserva
+
+Direção de
+Pessoal e
+Formação
+
+Direção de
+Logística e
+Finanças
+
+Departamento de
+Operações
+
+Departamento de
+Instrução e
+Investigação
+
+Força de
+Intervenção
+Rápida
+
+Depto de Administração e Gestão
+de Pessoal
+
+Departamento de
+Administração e
+Logística
+
+Departamento de
+Proteção
+
+Departamento da
+Técnica
+Criminalística
+
+Força de Guarda
+Fronteira
+
+Departamento de
+Formação
+
+Departamento de
+Finanças
+
+Departamento de
+Trânsito
+
+Depto de Arquivo e Registro
+Operativo
+
+Força de
+Proteção de
+Responsáveis
+
+Departamento de
+Infra-estruturas
+
+Departamento de
+Comunicações e
+Informática
+
+Depto de Coordenação com a
+INTERPOL
+
+Força de Proteção Marítima,
+Lacustre e
+Fluvial
+
+Departamento de
+Saúde
+
+Departamento de
+Administração
+Prisional
+Departamento de
+Florestas, Fauna
+Bravia e Meio
+Ambiente
+
+Figura 1: Organograma do Comando Geral da PRM.
+Fonte: Decreto nº 27/99, de 24 de Maio.
+
+A Direção de Ordem e Segurança Pública (DOSP), conforme o art. 13º do Decreto nº 27/99,
+de 24 de Maio, é responsável pela prevenção e combate ao crime, pelo funcionamento normal das
+instituições e circulação de pessoas e bens, pela patrulha, pela recepção de queixas e denúncias, entre
+outras ações. Na prossecução destes objetivos, coordena as atividades de diversos Departamentos,
+incluindo o de Trânsito que zela pela segurança rodoviária. A Direção de Investigação Criminal (DIC),
+conforme o art. 14º do mesmo Decreto tem a missão de investigar crimes e instruir os respectivos
+processos, sob a direção do Ministério Público e o Comando das Forças Especiais e de Reserva, por
+sua vez, tem a missão de intervir em situações especiais de manutenção da ordem pública.
+Embora não estejam incluídos no organograma, os Comandos Provinciais constituem unidades
+da PRM com uma estrutura semelhante a do Comando Geral, representando o Comando Geral em
+cada Província. Os Comandos Distritais, por sua vez, representam a base da hierarquia do comando.
+Compõem-se de Secções que representam as Direções em outros níveis, de esquadras/delegacias, dos
+postos policiais e dos destacamentos das Forças Especiais e de Reserva.
+
+MODELAGEM DE DADOS
+Um modelo de dados é um conjunto de conceitos usados na descrição de estruturas lógicas
+e físicas do banco de dados, ou seja, define abstrações que facilitam ao usuário a compreensão e
+organização de todos os objetos de dados existentes em um contexto e necessários para a aplicação
+desse banco de dados. Silberschatz et al. (2006, p.5) consideram o modelo de dados como “coleção
+de ferramentas conceituais para descrever dados, relações de dados, semântica de dados e restrições
+de consistência” e acrescenta que existem quatro categorias de modelos de dados, a saber: modelo
+relacional, modelo de entidade – relacionamento, modelo de dados baseado em objeto e o modelo
+de dados semi-estruturados. No caso do estudo, baseou-se no modelo de entidade – relacionamento
+(MER) ilustrado no diagrama da figura 2, produzido no software SmartDraw.
+
+Figura 2: Diagrama entidade – relacionamento (DER).
+Fonte: Elaborado pelo autor com base no contexto do funcionamento atual da PRM
+
+O diagrama contém dez entidades relacionadas entre si, com os respectivos atributos necessários
+para a especificidade de informações a serem usadas pelos sistemas de informação ou para o auxílio
+à tomada de decisões. Os atributos de cada entidade são representados através de bolinhas, sendo as
+de maior tonalidade da cor referentes à chave primária de cada entidade, ou seja, o atributo único que
+não pode ser repetido nas tabelas de modo a garantir a integridade dos dados.
+A entidade DOSP representa a Direção de Ordem e Segurança Pública no nível central,
+Provincial e Distrital e tem uma relação de coordenação 1 para n com os Departamentos (DEPTO),
+isto é, cada DOSP coordena vários Departamentos; enquanto que cada Departamento é coordenada
+apenas por única Direção. Na entidade DEPTO se encontram representados todos os Departamentos
+(Proteção, Trânsito e Proteção de Florestas e Fauna Bravia) e Destacamentos das Forças Especiais
+(Intervenção Rápida, Guarda Fronteira, Proteção de Responsáveis e Proteção Marítima, Lacustre e
+Fluvial) que intervêm diretamente nas ocorrências criminais. Igualmente, encontra-se representado o
+Departamento de Incêndios que também registra várias ocorrências no âmbito das suas competências.
+Cada departamento, por sua vez, coordena as delegacias/esquadras da sua área de jurisdição,
+por isso o relacionamento também é 1 para n. Cada delegacia faz o registro das ocorrências e controla
+as patrulhas escaladas diariamente. As patrulhas e as delegacias são compostas por funcionários que
+registram as ocorrências, classificadas de acordo com o tipo de cada fato. As ocorrências produzem
+diversos tipos de danos humanos e materiais e a sua tramitação é controlada no âmbito da resposta
+policial. Qualquer pessoa pode ser vítima ou autor de alguma ocorrência, incluindo os próprios
+funcionários da organização que intervêm nas mesmas.
+O Diagrama de Estrutura de Dados (DED) ilustrado na figura 3 mostra a articulação dos dados
+no banco, direcionada através de setas e cada entidade corresponde a uma tabela no nível físico do
+banco de dados. Os relacionamentos n para n implicam a transformação do relacionamento em uma
+entidade que igualmente será representada por uma tabela. Neste sentido, os relacionamentos afetação
+e participação, no modelo físico, são tabelas com chaves estrangeiras referentes às duas entidades
+com as quais se relacionam, respectivamente, totalizando dezesseis tabelas do banco de dados.
+
+Figura 3: Diagrama de estrutura de dados (DED).
+Fonte: Elaborado pelo autor com base no modelo entidade - relacionamento.
+LINGUAGEM SQL
+A Structured Query Language (SQL) ou linguagem estruturada de pesquisa teve sua gênese no
+início dos anos 70 nos laboratórios da IBM por forma a demonstrar as vantagens do modelo relacional
+de Edgar Frank Codd, publicado através do artigo Relational Model of Data for Large Shared Data
+Banks – modelo relacional de dados para grandes bancos de dados. O seu melhoramento na consulta
+e manipulação de dados levou o American National Standard Institute (ANSI) a torná-la padrão de
+linguagem em ambiente relacional, através do padrão SQL-86, seguida da SQL-99 e da versão mais
+recente, a SQL-2003 (MACHADO, 2004, p.315).
+A linguagem SQL é usada para a definição, manipulação, controle, transação e consulta de
+dados.
+A linguagem de definição de dados, segundo Silberschatz et al. (2006), garante a definição da
+estrutura e organização dos dados armazenados e suas relações, ou seja, é formada por um conjunto
+de comandos que permitem a definição e modificação dos esquemas das tabelas. A cláusula not
+null significa que o campo não deve ser nulo, em detrimento de ser a chave primária ou do valor
+das informações que irá conter. Deste modo, para a aplicação no sistema gerenciador de banco de
+dados Interbase 6. Open Edition – 6.0.20, usou-se a seguinte linguagem para criar as tabelas DOSP
+e DEPTO.
+CREATE TABLE DOSP
+(cod_DOSP char (10) not null primary key,
+Nome varchar (80) not null)
+CREATE TABLE DEPTO
+(cod_DEPTO char (12) not null,
+Nome varchar (60) not null,
+Provincia varchar (30) not null,
+Cod_DOSP char (10) not null REFERENCES DOSP (cod_DOSP) ON UPDATE CASCADE,
+Primary key (cod_DEPTO))
+
+	
+O mesmo processo foi observado em relação às restantes tabelas do banco de dados. A
+linguagem de manipulação de dados é um subconjunto de comandos para inserir, remover e modificar
+informações das tabelas. No caso do estudo, foram simuladas algumas informações, consubstanciando
+uma amostra da metodologia da operatividade policial. Por exemplo, para a manipulação das tabelas
+DOSP e DEPTO usaram-se as seguintes linguagens:
+Insert into DOSP
+VALUES (‘DOSP200’, ‘Comando da Cidade de Maputo’);
+Insert into DOSP
+VALUES (‘DOSP300’, ‘Comando da Província de Maputo’);
+Insert into DOSP
+VALUES (‘DOSP400’, ‘Comando da Província de Gaza’);
+Insert into DOSP
+VALUES (‘FER500’, ‘Comando da Província de Inhambane’);
+Insert into DOSP
+GT8	2473
+
+VALUES (‘FER200’, ‘Comando das Forças Especiais e de Reserva da Cidade de Maputo’);
+Insert into DOSP
+VALUES (‘FER1200’, ‘Comando das Forças Especiais e de Reserva da Província de Niassa’);
+Insert into DOSP
+VALUES (‘SPB900’, ‘Serviço Provincial de Bombeiros de Tete’)
+Insert into DEPTO
+VALUES (‘DPP200’, ‘Depto de Proteção’, ‘Maputo - Cidade’, ‘DOSP200’);
+Insert into DEPTO
+VALUES (‘DPP300’, ‘Depto de Proteção’, ‘Maputo - Província’, ‘DOSP300’);
+Insert into DEPTO
+VALUES (‘DPT400’, ‘Depto de Trânsito’, ‘Gaza’, ‘DOSP400’);
+Insert into DEPTO
+VALUES (‘FIR200’, ‘Força de Intervenção Rápida’, ‘Maputo - Cidade’, ‘FER200’);
+Insert into DEPTO
+VALUES (‘FPMLF500’, ‘Força de P. Marítima, Lacustre e Fluvial’, ‘Inhambane’, ‘FER500’);
+Insert into DEPTO
+VALUES (‘FGF1200’, ‘Força de Guarda Fronteira’, ‘Niassa’, ‘FER1200’);
+Insert into DEPTO
+VALUES (‘DI900’, ‘Depto de Incêndios’, ‘Tete’, ‘SPB900’)
+	
+Criadas as tabelas e inseridos os valores dos registros, o modelo do banco de dados apresentase conforme ilustra a figura 4:
+
+Figura 4: Modelo do banco de dados da PRM.
+Fonte: Elaborado pelo autor com base no sistema Interbase 6. Open Edition – 6.0.20.
+ARQUITETURA DA INFORMAÇÃO PARA AMBIENTES DIGITAIS
+O estudo também visava o desenho de um ambiente informacional digital, através do qual a
+PRM pode disponibilizar as informações, tanto para os próprios funcionários, como para a sociedade
+em geral, de modo a contribuir com as suas reflexões críticas no processo de revitalização da área da
+segurança pública no país.
+A expressão “arquitetura da informação”, segundo Lima-Marques e Macedo (2006), foi
+cunhada pela primeira vez em 1976 pelo arquiteto Richard Saul Wurman numa conferência organizada
+pelo Instituto Americano de Arquitetos, motivado pela necessidade de reunir, organizar e apresentar
+a quantidade e variedade de informações para maior e melhor acesso ao usuário. A arquitetura da
+informação é:
+a combinação dos sistemas de organização, rotulagem, busca e
+navegação em websites e intranets; o desenho estrutural de ambientes
+informacionais compartilhados; a arte e ciência de estruturar produtos
+de informação e experiências que permitam usabilidade, além da
+facilidade e relevância para encontrar as informações (ROSENFELD;
+MORVILLE, 2006, p.4, tradução nossa).
+A arquitetura da informação garante o findability ou a encontrabilidade que segundo Morville
+(2005, tradução nossa), se resume na qualidade de um objeto ser facilmente localizável ou um sistema
+ser navegável. Equivale dizer que não basta que as informações necessárias estejam armazenadas
+no banco de dados se o usuário não for capaz de localizá-las com facilidade e recuperá-las para
+a sua necessidade específica. Ademais, de acordo com Stewart (2008), o findability pode ter um
+impacto negativo na tomada de decisão, pois decisões críticas podem ser adiadas porque a informação
+encontrada, se houver, está incompleta ou conflitante ou pior ainda, más decisões podem ser decretadas
+quando nem teriam sido consideradas se a informação necessária fosse encontrada.
+Os processos e metodologias de uma arquitetura da informação de acordo com Rosenfeld e
+Morville (2006, tradução nossa), seguem um programa que implica, em uma primeira instância, o
+desenho do projeto, através das fases da pesquisa, estratégia, design e implementação e, posteriormente,
+a administração.
+ELEMENTOS DA ARQUITETURA DA INFORMAÇÃO
+Segundo Rosenfeld e Morville (2006, tradução nossa), a arquitetura da informação é composta
+pelos sistemas de organização, rotulagem, navegação e busca. Os sistemas de organização são
+baseados em esquemas de organização da informação (alfabética, cronológica ou geográfica) para
+definir os tipos de relacionamento entre itens de conteúdos e grupos. Para garantir a acessibilidade, o
+conteúdo pode ser agrupado por tópicos, tarefas, público ou mesmo por nuvens de tags gerados pelo
+usuário durante a navegação. Também incluem estruturas de organização da informação hierárquica,
+em hipertexto ou em links. Os sistemas de rotulagem são baseados no uso de etiquetas ou rótulos em
+forma de texto ou de ícones para transmitir um significado. As etiquetas auxiliam o entendimento do
+usuário sobre os esquemas de organização do ambiente e, por conseguinte, auxiliam-no na navegação,
+por isso, devem ser claros para serem facilmente compreendidos pelos mesmos. Os sistemas de
+navegação são baseados em elementos que fornecem o contexto e flexibilidade ao usuário para
+compreender a sua localização no ambiente e projetar o seu trajeto (banner, menu, conteúdo, mapa do
+site, índice e guias). Finalmente, os sistemas de busca permitem a localização e acesso aos conteúdos
+informacionais armazenados no ambiente.
+Um sistema de busca é constituído pela interface da busca, através da qual o usuário formula
+a consulta; pela linguagem da consulta que inclui operadores booleanos and, or e not e operadores de
+proximidade, como ao lado e próximo; pelos otimizadores da consulta, como corretores ortográficos
+e dicionário de sinônimos; pelos recuperadores de algoritmos; pelo motor de busca propriamente
+dito; pelo conteúdo, normalmente armazenado em um banco de dados e pela resposta (ROSENFELD;
+MORVILLE, 2006, tradução nossa).
+De salientar que devido ao crescimento de ambientes informacionais digitais, aliado à
+ambigüidade da linguagem que norteia os sistemas de classificação e do termo relevância no
+julgamento dos documentos recuperados, a Ciência da Informação vai proporcionar uma contribuição
+significativa, não só através de elementos invisíveis da arquitetura, como vocabulários controlados,
+tesauros e metadados, como também pela exploração de aspectos que norteiam o comportamento de
+busca dos usuários, para o aprimoramento da consulta através de termos variantes ou sinônimos. O
+processamento em linguagem natural enquanto conjunto de técnicas para a análise dos documentos
+em níveis lingüísticos vai permitir a normalização de variações lingüísticas e garantir a indexação
+automática de documentos produzidos pela organização.
+A exploração das técnicas da representação da informação que se enquadram no núcleo
+epistemológico da Ciência da Informação enquanto mediação, propiciam uma riqueza de detalhe de
+informações descritivas sobre o objeto e o contexto, garantindo o findability dos recursos necessários
+à satisfação das necessidades de informação da sociedade.
+No caso vertente deste estudo, os processos e metodologias não foram observados devido
+à exigüidade de fundos para o deslocamento e pesquisa na organização em estudo. O desenho do
+projeto do website baseou-se na experiência do autor, adquirida durante o vinculo laboral enleado com
+a instituição em estudo. Contudo, tratando-se de um modelo, a sua implementação será antecedida
+pelos processos de divulgação, discussão e enriquecimento do projeto, nos quais será evidencia a
+metodologia proposta pelos autores citados.
+O planejamento do modelo iniciou com o esboço do layout no software Adobe fireworks CS3,
+observando os elementos da arquitetura referenciados e a dimensão de 955x600 pixels para que a
+página fosse adequada aos monitores atuais com a resolução de tela de 1024 x 768 pixels. Também
+
+se usou a Hypertext Markup Language (HTML) ou linguagem de marcação de texto, através de uso
+de tags para indicar as partes da página e produzir diferentes efeitos no navegador, como tabelas,
+linguagens de extensão (dia da semana, dia do mês, login, etc.), permitindo a disponibilização de
+conteúdo mais internacionalizado e acessível. Para garantir a interpretação pela semântica da página
+por qualquer dispositivo, como celular, usou-se a eXtensible Hypertext Markup Language (XHTML),
+na versão 1.0 transitional, de modo a permitir o uso de etiquetas antigas. O desenvolvimento, a
+montagem, a diagramação, a manutenção, gerenciamento e publicação, foram feitos no software
+Adobe Dreamweaver CS3.
+	
+O modelo é composto por dezenove páginas (home, mapa do sítio, perguntas mais freqüentes,
+quem somos, onde estamos, documentação, esquadra eletrônica, galeria de média, a PRM aconselha,
+a PRM comunica, formulários, links importantes, fale conosco, polícia de proteção, polícia de
+trânsito, polícia de investigação criminal, força de intervenção rápida, força de guarda fronteira e
+bombeiros). Todas as páginas contêm a mesma estrutura do cabeçalho, menus e rodapé, variando
+apenas o conteúdo, por isso para a sua arquitetura optou-se pelo uso de template (modelo).
+DELEGACIAS VIRTUAIS COMO SERVIÇOS CÉLERES PARA A SOCIEDADE
+As delegacias virtuais são serviços disponibilizados através da Internet que muitos
+países vêm adotando com vista a promover uma maior interação com o cidadão e flexibilizar
+respostas às diversas necessidades em prol da segurança pública. Neste sentido e de acordo com
+os Websites das delegacias virtuais do Estado do Rio de Janeiro e da Secretaria da Segurança
+Pública do Estado de São Paulo, através das mesmas, o cidadão pode apresentar queixas,
+informes, denúncias ou sugestões, registrar alguns tipos de ocorrências e comunicar o extravio
+de documentos, assim como fazer consultas sobre documentos recuperados, a partir de qualquer
+ponto de acesso à rede de Internet. Elas surgem como melhores alternativas à segurança pública,
+não só pela modernização das corporações policiais, como também pela redução da burocracia,
+informação à sociedade e aumento da resposta policial, requisitos fundamentais da reforma do
+setor público exigidos pelas políticas atuais da Administração Pública.
+Uma das linhas de atuação das delegacias eletrônicas que o modelo do ambiente informacional
+ilustrado na figura 5 se propõe é a divulgação de informações para a autodefesa do cidadão, de
+endereços, telefones e horários de funcionamento de serviços de atendimento ao cidadão, de
+procedimentos em casos de delitos ou outro tipo de incidentes, bem como a apresentação de propostas
+de legislação para a punição de criminosos nos casos em que haja lacunas na lei, portanto, uma
+contribuição significativa na reformulação das políticas públicas.
+Além das diversas informações que poderão ser obtidos do banco de dados, através do ambiente
+informacional, uma contribuição significativa do modelo para a sociedade consiste na criação do
+boletim eletrônico, por meio do qual o cidadão poderá fornecer os dados pessoais, dados e detalhes da ocorrência, simplificando a burocracia e o tempo de espera nas delegacias físicas, para efeitos de
+queixas, denúncias e participações.
+
+CONCLUSÕES
+A criação do banco de dados e a arquitetura de um ambiente informacional digital vão
+impulsionar a sistematização e incremento do conhecimento na área da segurança pública em
+Moçambique, tanto pela preservação das informações produzidas na organização em diferentes
+coleções de documentos digitais em vários formatos, mídia e conteúdo, como pela viabilização da
+disponibilidade, localização e acesso às mesmas, através dos sistemas de organização, rotulagem,
+navegação e busca. Os esquemas e estruturas de organização que definem as características comuns
+das informações para o seu agrupamento lógico e os tipos de relações entre essas informações e seus
+grupos, respectivamente, vão desempenhar um papel importante na indexação e etiquetagem para
+melhor recuperação da informação do banco de dados. Ademais, o ambiente informacional digital,
+além de simplificar a burocracia nas delegacias mediante o provimento de serviços on-line, também
+vai garantir a interação contínua e reiterada entre a polícia e o cidadão, transmitindo confiança na
+ação policial. Indubitavelmente, o ambiente servirá de local aberto e apropriado para o exercício da
+democracia, de direito e de liberdade de expressão para a sociedade.
+A Ciência da Informação vai reduzir a ambigüidade que caracteriza qualquer sistema de
+representação e recuperação da informação, agregando ao projeto uma possível ontologia aplicada
+à área de segurança pública e explorando as diversas dimensões que corporizam a representação
+do problema do usuário, de modo a garantir a eficiente e efetiva apropriação da informação pela
+sociedade.
+Os sistemas de informação que permitem o processamento e análise do grande volume de dados
+armazenados por diferentes níveis de detalhes e objetivos organizacionais, por um lado, vão propiciar
+a tomada de decisões céleres e, por outro, extrair comportamentos, associações e previsões para o
+desenvolvimento de algoritmos visando à produção do conhecimento na PRM e, por conseguinte,
+fundamentar o processo de reforma das políticas públicas em matéria de segurança. Neste contexto,
+relatórios específicos sobre ocorrências policiais por delito, tempo e espaço poderão ser acessados
+pela sociedade e por outras áreas de conhecimento para fundamentar pesquisas acadêmicas. Do
+mesmo modo, documentos e legislação sobre várias matérias policiais podem ser baixados para uso
+da sociedade.

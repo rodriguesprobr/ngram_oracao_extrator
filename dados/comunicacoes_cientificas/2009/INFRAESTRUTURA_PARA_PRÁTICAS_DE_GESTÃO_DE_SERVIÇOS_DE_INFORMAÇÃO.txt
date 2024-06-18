@@ -1,0 +1,560 @@
+INFRAESTRUTURA PARA PRÁTICAS DE GESTÃO DE SERVIÇOS DE INFORMAÇÃO BASEADOS EM AMBIENTES ELETRÔNICOS
+
+
+RESUMO
+Este trabalho apresenta uma proposta de construção de uma infraestrutura para estudo de
+práticas e ferramentas de gestão aplicadas em serviços de informação especializados baseados
+em ambientes eletrônicos. Parte-se do pressuposto que a mudança do paradigma de acesso
+para o de apropriação da informação cria o desafio de se pensar em novos ambientes que
+possibilitem mediações gerenciais mais adequadas para viabilizar o acesso, compartilhamento
+e uso da informação, bem como apoio pedagógico necessário para orientar o usuário na
+exploração dos recursos disponíveis nos sistemas. A área Médica tem sido utilizada como
+campo de pesquisa empírica e o departamento de radiologia como caso de uso, em função de
+suas características inter e multidisciplinar, bem como pela heterogeneidade dos seus
+potenciais usuários e respectivas demandas. Esta área tem se mostrado um ambiente propício
+para aplicar os conceitos de Ciência da Informação, contemplando a organização de
+informações clínicas e o acesso a estas informações utilizando ferramentas computacionais. A
+primeira versão do projeto tem sido testada como um protótipo. Tal implementação tem
+mostrado que a criação de repositórios sobre dados clínicos em ambientes de rede, utilizando
+o modelo de dados proposto neste trabalho, aponta para uma solução relevante no que tange
+a gestão de serviços em ambientes eletrônicos.
+Palavras-chave: serviços de informação especializados; ambientes eletrônicos; informação
+clínica.
+
+1 INTRODUÇÃO
+A informação é tida como um fenômeno de comunicação presente em todas as áreas
+do conhecimento e tem seu valor em função do contexto, interesse e grau de competência do
+receptor sobre o assunto (Dias, 2005). Sua relevância apresenta-se no uso e depende do valor
+que o indivíduo ou organização lhe confere, bem como aos produtos e serviços de
+informação, que atualmente constituem binômio inseparável.
+Com o aumento da produção e maior necessidade de informação, a partir da década de
+1950, tornou-se premente a demanda por instrumentos organizacionais e políticas de
+estruturação de redes e serviços de informação. Desde então, a gestão da informação foi
+ocupando espaços e é, nos dias atuais, considerada uma das atividades essenciais na chamada
+era do conhecimento ou sociedade da informação. Em parte, isto se deve aos substanciais desenvolvimentos das tecnologias de informação e comunicação, que alteraram e alteram não
+somente a maneira como indivíduos e organizações realizam suas tarefas mas, também, a
+forma como as concebem (Kenski, 2008).
+Como as tecnologias estão em constante mudança, o estado permanente de
+aprendizagem é conseqüência natural do momento social e tecnológico contemporâneo. Isto,
+aliado à crescente velocidade das alterações no universo informacional e às facilidades de
+acesso a este universo, exige atualização constante por parte dos indivíduos (provedores e
+usuários), objetivando melhores ofertas e condições de uso das informações.
+Milanesi (2002, p. 109-110), elencando observações relativas ao contexto dos serviços
+de informação contemporâneos, menciona:
+Os serviços de informação, com o desenvolvimento dos computadores,
+movimentaram-se, como prioridade, da organização em si para a
+identificação do público e a capacidade de entendê-lo. O profissional tornase menos um engenheiro da organização e passa a ser mais estrategista da
+disseminação de acordo com as necessidades detectadas. Ele cria e
+desenvolve processos técnicos a partir da capacidade que ele tem de perceber
+seu público. A organização não existe em si, mas subordina-se às
+características do público.
+
+Atualmente, um desafio instigante consiste em oferecer um serviço de informação que
+seja adaptável ao contexto, necessidades e interesses dos usuários, de modo que estes possam
+explorar eficientemente os conjuntos de informação, visando ampla e consistente apropriação.
+Tal demanda exige que o serviço de informação seja planejado com características especiais.
+Em outras palavras, é como se este serviço fosse “polimórfico”, de modo a poder ser
+apresentado de diferentes formas ao mesmo usuário ou grupo de usuários, em função do
+contexto de uso e necessidades informacionais.
+Neste trabalho, a área piloto para aplicação desta proposta é a área Médica, na qual
+diferentes profissionais, com objetivos específicos e em função de seus papéis (atribuições
+profissionais), fazem uso do mesmo conjunto de informações para o desenvolvimento de suas
+tarefas, extraindo conhecimentos e significados diferentes a partir de um mesmo conjunto de
+informações. Em tal cenário, é importante salientar que o planejamento do serviço de
+informação, com especial atenção aos usuários, deve considerar as tecnologias de informação
+e comunicação como forma de viabilizar a criação de espaço ou ambiente que ofereça
+condições para os melhores aproveitamento e uso.
+2 O CONTEXTO DA PESQUISA
+
+As mudanças que ocorrem no ambiente organizacional onde situam os serviços de
+informação, provocadas pelo impacto das tecnologias de informação e comunicação, afetam a
+oferta e demanda desses serviços, obrigando os profissionais de informação a repensarem as
+mediações gerenciais necessárias para assegurar condições adequadas para apropriação da
+informação pelo usuário.
+O projeto de pesquisa que deu origem a este trabalho teve como principal motivação a
+possibilidade de aplicação dos conceitos e teorias da Ciência da Computação à Ciência da
+Informação, objetivando melhoria nas condições de ensino e pesquisa das atividades de gestão
+nos processos de organização, tratamento, e recuperação de informações em ambientes
+eletrônicos. Foi desenvolvido um estudo teórico-metodológico visando a criação de um
+protótipo para testar o acesso e uso das informações clínicas, especialmente num Serviço de
+Radiologia Médica. Partiu-se do pressuposto que este tipo de serviço oferece oportunidade
+para refletir sobre a concepção de serviços especializados de informação em ambientes
+eletrônicos e o desenvolvimento de recursos informacionais, pois atende profissionais de
+diversas especialidades. Estes com interesses em imagens médicas, mas a partir de
+perspectivas de uso diferenciadas. Deste modo, o protótipo, uma vez testado, poderá ser
+utilizado também como ambiente de aprendizagem para alunos de Biblioteconomia e
+Documentação.
+Considerando, especificamente, o campo de aplicação do presente trabalho, a título de
+exemplo, cabe citar o trecho de uma matéria publicada na revista Época, onde Frutuoso
+(2007) relata o seguinte sobre uma consulta médica:
+O paciente diz onde dói, descreve alguns sintomas e pergunta se é grave. O
+médico junta os pedaços de informação, examina o doente [diga-se
+paciente], relembra lições do passado, confronta mentalmente suas
+impressões com casos semelhantes que já passaram pelo consultório e – em
+poucos minutos – profere o diagnóstico [diga-se a hipótese diagnóstica]. Na
+maioria das vezes, um nome tão intimidador que o paciente acha melhor não
+perguntar mais nada. Daí em diante, segue-se um monólogo. O médico exibe
+seu conhecimento em meia dúzia de frases cifradas, dá uns conselhos
+paternais e rabisca uma receita ilegível. (Grifo nosso)
+
+Os termos destacados representam algumas das principais etapas do processo de coleta
+e organização de informações que compõem o prontuário de um paciente. Adicionalmente,
+estas informações são subsídios para solicitação de exames (laboratoriais ou baseados em
+imagens). E tais informações também irão compor a história clínica do paciente descrita em
+seu prontuário (MASSAD; MARIN; AZEVEDO NETO, 2003).
+
+O evento relatado por Frutuoso (2007) é repetido diversas vezes ao dia em instituições
+de assistência à saúde. O que gera um considerável e rico volume de informações clínicas e
+estas necessitam ser organizadas, armazenadas, recuperadas e utilizadas. Dentre as diferentes
+abordagens metodológicas utilizadas no ensino da Medicina, uma delas é o aprendizado
+baseado em casos ou problemas (Boud e Feletti, 1999). Tanto que, usualmente, um
+profissional recorre à lembrança de casos semelhantes para propor tratamentos.
+Considerando como objetivos o diagnóstico e tratamento da patologia, as imagens
+radiológicas (ou imagens médicas) constituem instrumento de grande valia nos processos de
+inferência diagnóstica e acompanhamento de tratamentos (Santos, 2006). Contudo, somente
+as imagens não são suficientes para estabelecer o diagnóstico. A correta interpretação destas
+pode depender de conhecimento a priori, como informações sobre os sintomas (queixa e
+duração), a história pregressa da atual moléstia, em alguns casos os resultados de exames
+laboratoriais, bem como a experiência pessoal e profissional do radiologista. O produto dessa
+interpretação é o laudo que, de forma geral, é composto por: achados (o que foi observado);
+discussão (o significado dos achados e seus impactos); conclusão (o diagnóstico sugerido) e
+key images (imagens significativas e/ou regiões de interesse).
+Deste modo, o nível de apropriação da informação contida numa imagem radiológica
+depende de “status” de conhecimento do usuário. Por outro lado , se a tecnologia tem sido a
+grande aliada na multiplicação de possibilidades de uso simultâneo dessas imagens,
+independente das fronteiras geográficas, são os processos documentários que englobam os
+fluxos de organização e de representação documentários que vão permitir qualificar o acesso
+às informações radiológicas, pelos diferentes usuários e em contextos de uso também
+diferenciados.
+
+3 REFERENCIAL TEÓRICO
+As mais recentes abordagens epistemológicas da Ciência da Informação orientam a
+visualizá-la não mais como uma evolução ou extensão das ciências e técnicas da
+documentação no seu sentido amplo. Há a necessidade de considerá-la como ciência inter-,
+trans-, e/ou pluri- ou multidisciplinar (LE COADIC, 2004). Smit e Barreto (2002) definem
+Ciência da Informação como:
+Campo que se ocupa e se preocupa com os princípios e práticas da criação,
+organização e distribuição da informação, bem como com o estudo dos
+fluxos da informação, desde sua criação até sua utilização, e sua transmissão
+ao receptor, por meio de uma variedade de canais.
+
+Complementando esta definição, Saracevic (1999) menciona que “ao efetuar [o
+cientista da informação], na prática, o seu trabalho, demonstra particular [e potencial]
+interesse em aproveitar as vantagens da moderna tecnologia da informação”. A definição de
+Smit e Barreto e a complementação de Saracevic não só evidenciam a importância da Ciência
+da Informação como suporte profissional e de investigação frente à “avalanche de
+conhecimento”, como indicam a atenção e necessidades criadas em função da “revolução
+tecnológica” presente nos dias atuais. Esta visão é compartilhada por Le Coadic (2004) ao
+citar duas características contemporâneas e que marcam o futuro da informação: sua explosão
+quantitativa e a implosão do tempo para sua comunicação.
+Relacionado às questões de organização, porém com vistas à recuperação de
+informação, a revolução tecnológica, por meio das tecnologias de informação e comunicação,
+tem proposto temas como Web Semântica (FEITOSA, 2006) e Folksonomia (CATARINO;
+BAPTISTA, 2007), com o intuito de refinar a indexação, atribuir significado à informação e
+propor novas formas para organizar e compartilhar documentos.
+No âmbito da gestão de serviços de informação, sejam estes os denominados
+“tradicionais” ou os “virtuais”, os esforços de tratamento da informação devem ser
+direcionados para atender às necessidades informacionais de uma demanda cada vez mais
+crescente e diversificada de seus usuários. Permeia nesta atividade o desafio da administração
+da incerteza: mudanças rápidas de negócios e conhecimentos; crescimento das organizações e;
+atividades que exigem pessoas de diversas competências (BARRETO, 2005).
+No processo de atendimento às necessidades do usuário na busca de informação, o
+gestor do serviço – visando aperfeiçoamentos e melhoria contínua – tem a incumbência de
+observar seletivamente a grande quantidade de sinais criados em um ambiente dinâmico,
+interpretar as mensagens confusas e perceber indícios de danos às suas atividades e objetivos
+(CHOO, 2003). Isto indica que o gestor, de posse dos conceitos e teorias da Ciência da
+Informação, deve conduzir a integração da dimensão humana, social e tecnológica da
+informação, interagindo com diferentes áreas do conhecimento. Neste processo de integração
+surge a figura do mediador da informação, em função da necessidade de interface apropriada
+para negociação entre o usuário e o serviço de informação.
+Conforme proposto por Almeida Júnior (2008), a mediação empregada no âmbito dos
+serviços de informação transcende o conceito de algo que possibilita a relação entre dois
+pontos separados por obstáculos e/ou empecilhos. O conceito deve contemplar a interação,
+num processo que estabelece interfaces entre: tecnologia, conteúdos e sujeitos sociais
+
+(usuários e profissionais da informação). Em princípio,
+
+tal processo tem suporte na
+
+identificação e satisfação das necessidades informacionais de usuários.
+O principal objetivo das interações dos usuários com um serviço de informação é a
+obtenção de informação com o intuito de superar estados anômalos de conhecimento e
+ascender a outro patamar. Em tal aspecto temos, nos dias atuais, um conjunto de ações
+denominado Gestão da Informação, entendida no âmbito da Ciência da Informação, como a
+gestão do conhecimento explícito, de modo que nas corporações a proposta consiste em
+fornecer instrumentos para organização do capital intelectual, de modo que os usuários
+possam ter condições para
+se apropriar adequadamente das informações e convertê-las em
+conhecimento [...] num ambiente marcado pela constante diminuição do
+ciclo de vida dos produtos e pela crescente demanda de investimentos em
+pesquisa, desenvolvimento e engenharia. (FUJINO, 2007 p. 225).
+
+O trinômio documento – informação – usuário, na contextualização tradicional do
+serviço de informação (SOUZA, 2007), indica como objetivo final a satisfação do usuário.
+Evidentemente, as ações referentes ao tratamento da informação é um processo meio para se
+atingir este objetivo. Assim, a eficiência do serviço será medida pela adequação do processo
+de tratamento da informação, tendo como referenciais: a natureza da informação (o que);
+recuperação da informação (para que); tratamento e processamento da informação (como) e;
+o papel social da informação (contexto de uso). Estas mesmas questões permeiam os
+repositórios de dados clínicos,
+De acordo com Shneiderman (2003), os primeiros trabalhos de computação tinham por
+objetivo demonstrar o que o computador poderia fazer; os atuais abordam o que o usuário
+pode fazer. Isto indica que as “tecnologias de sucesso” são aquelas que estão em harmonia
+com as necessidades dos usuários e devem suportar o desenvolvimento de atividades que
+enriqueçam suas experiências. Logo, as tecnologias de informação e comunicação são
+melhores apreciadas quando seus usuários experimentam as sensações de segurança, controle
+e conhecimento da situação. Tal aspecto subsidia a sensação de prazer no uso da tecnologia.
+Assim, do ponto de vista da Ciência da Computação, é importante considerar a
+contribuição dos aspectos conceituais e metodológicos
+
+para criação de um ambiente
+
+eletrônico no qual o usuário se sinta confortável para expressar suas necessidades
+informacionais e encontre direcionamentos que apontam respostas para suas questões.
+
+4 MATERIAIS E MÉTODOSEste trabalho representa a proposta e sua materialização para tornar disponível um
+ambiente computacional para o desenvolvimento de estudos de gestão e organização de
+serviços de informação, com suporte e mediação baseados em tecnologias de informação e
+comunicação. Partimos da integração de conceitos e princípios da Ciência da Informação e da
+Ciência da Computação, incluindo modelos de interface homem-máquina, inteligência
+artificial, contextualizando suas aplicações na área médica, especialmente na discussão de
+diagnóstico clínico por imagens e processamento de imagens médicas.
+Para o desenvolvimento deste trabalho, temos utilizado como caso de estudo e uso o
+Instituto de Radiologia, pertencente ao complexo do Hospital das Clínicas da Faculdade de
+Medicina da Universidade de São (InRad-HCFMUSP). Trata-se de uma instituição pela qual,
+anualmente, passam dezenas de estudantes (residentes) de Radiologia Médica, em diferentes
+estágios. A proposta inicial teve origem na necessidade de organizar e preparar materiais que
+pudessem ser utilizados em aulas e treinamentos em Radiologia, bem como na documentação
+e arquivamento de casos clínicos tidos como raros e “interessantes” para a área Médica e que
+estes casos pudessem ser amplamente utilizados em aulas e treinamentos.
+Inicialmente, optou-se por construir um repositório de dados sobre imagens médicas
+de diferentes modalidades e informações associadas a estas. Entretanto, durante as reuniões de
+observação e grupo focal que objetivavam o levantamento e análise dos requisitos para o
+repositório, percebeu-se que somente as imagens e os laudos (informações observadas nas
+imagens) não seriam suficientes para os propósitos do trabalho. O que é chamado de
+informações associadas envolve um conjunto de dados compõem a história clínica do
+paciente. Em parte, os dados que compõem o referido conjunto estão contidos em seu
+prontuário médico.
+Tradicionalmente, as instituições de assistência à saúde mantêm um serviço de
+documentação, denominado Serviço de Arquivo Médico e Estatística (SAME), cujas
+atribuições, entre outras, resumem-se a:
+
+
+Manter o arquivo de prontuários dos pacientes, bem como o arquivo de registros
+de óbitos, exames laboratoriais e exames baseados em imagens;
+
+Disponibilizar os prontuários dos pacientes aos profissionais de saúde, para o
+desenvolvimento da assistência, ensino e pesquisa;
+
+Facilitar o acesso, do paciente ou a quem de direito, a resultados de exames e
+informações clínicas que forem necessárias para continuidade do tratamento ou
+resolver questões legais;
+
+Garantir a padronização do prontuário do paciente arquivado, com o apoio da
+diretoria clínica, técnica e da administração da instituição.
+
+Os diversos profissionais envolvidos na assistência à saúde e com diferentes
+formações, cada qual com interesses específicos, acessam informações clínicas para o
+desenvolvimento de suas tarefas. Embora a área Médica, em especial a Radiologia, possua
+elevado grau de desenvolvimento tecnológico, há boas oportunidades para desenvolver
+trabalhos visando oferecer conjuntos de técnicas e metodologias para organizar, analisar,
+descrever, intercambiar e prover acessos às informações clínicas. O diferencial destacado
+neste trabalho refere-se ao uso de técnicas de mediação baseadas no contexto do usuário.
+4.1 Visão Conceitual
+O projeto foi iniciado com o estudo de usuários e suas necessidades informacionais
+frente a um Serviço de Radiologia Médica, por meio de observações, entrevistas e grupo
+focal. Neste estudo, foram privilegiados os seguintes grupos de usuários (com maior atividade
+no serviço): médicos assistentes (radiologistas), biomédicos especialistas em imagens
+médicas, tecnólogos em radiologia, graduandos em Medicina, residentes, preceptores e
+clínicos gerais.
+Considerando os aspectos de uso e necessidade, este estudo tratou de identificar o que
+os indivíduos necessitam em matéria de informação, seus interesses e hábitos, a partir do
+encorajamento a explicitar (e/ou esclarecer) suas necessidades informacionais. Esta atividade
+compreendeu: (1) determinar os documentos requeridos pelos usuários; (2) descobrir seus
+hábitos/estratégias para obter informações; (3) como as informações são pesquisadas e
+recuperadas; (4) estudar o uso que é feito dos documentos e; (5) as políticas para acesso e uso
+das informações (quem pode fazer o que, quando, onde e como). Com o estudo, foi possível
+verificar os níveis e tipos das necessidades dos usuários e, a partir disso, criar um conjunto de
+ações especificamente voltadas para estes níveis e tipos.
+A partir das informações coletadas foi proposto o modelo conceitual da infraestrutura
+(Figura 1), o qual apresenta a visão conceitual do ambiente proposto neste trabalho, com
+destaque aos seguintes fluxos de informação: (1) profissionais da área Médica; (2) moderador;
+(3) usuários e (4) profissionais da Ciência da Informação. Uma vez que o serviço oferecerá
+condições para que diversos profissionais insiram informações no repositório, o moderador –
+na verdade um grupo de especialistas – tem a incumbência de avaliar e revisar os documentos
+submetidos para armazenamento. Tal revisão tem a finalidade de reduzir a presença de
+
+inconsistências das informações clínicas submetidas para armazenamento, bem como
+assegurar a qualidade destas.
+
+Figura 1 – Visão conceitual da infraestrutura
+
+Basicamente, o ambiente aqui proposto é composto por quatro componentes
+principais. São eles:
+• Repositório de Documentos Clínicos (ou base de dados sobre casos clínicos):
+Este é o principal componente e tem por finalidade tornar disponível e
+acessível uma base de dados sobre casos clínicos, incluindo imagens médicas
+de diferentes modalidades e informações clínicas. O repositório prioriza a
+correlação dos achados dos exames com os dados clínicos dos pacientes,
+permitindo a criação de um acervo (memória) sobre os casos clínicos
+diagnosticados e tratados;
+• Interface para disponibilização de conteúdos: É o componente que oferece
+ferramentas de gerência dos materiais disponibilizados para os diferentes
+contextos de uso;
+• Interface para acesso a outros sistemas e repositórios de dados: Este
+componente faz a integração da infraestrutura com sistemas de informações
+
+clínicas ou bases de dados clínicos externas à infraestrutura deste trabalho, bem
+como, serviços auxiliares e outras funcionalidades que dizem respeito à
+expansão do ambiente aqui apresentado.
+Objetivando tornar as discussões de casos clínicos mais dinâmicas, temos trabalhado
+na criação de um novo componente denominado Serviço de teleconferência. Este componente
+representa a criação de um recurso colaborativo, sobre o qual profissionais da área Médica
+(radiologistas, assistentes, residentes, preceptores, etc.) ou estudantes podem trocar
+experiências e interagir em tempo real (reuniões clínicas). Esta funcionalidade tem por
+objetivo oferecer, individualmente, a cada usuário, um canal multimídia interativo que
+viabiliza a troca de experiências e informações sobre exames clínicos, rompendo as barreiras
+de tempo e distância;
+Todos os componentes são tratados como serviços disponíveis na infraestrutura.
+Assim, a integração entre estes e os novos módulos é realizada por meio de trocas de
+mensagens padronizadas (protocolo de comunicação), mimetizando solicitações de serviço.
+Todos os usuários, inclusive os autores de casos clínicos e moderadores acessam as
+ferramentas por meio de um portal. Um serviço de controle de acessos baseado em papéis
+(Motta e Furuie, 2003) faz a autenticação do acesso de cada usuário, bem como informa, a
+partir do nome de acesso (login) e senha, quais operações estão disponíveis ao usuário quando
+este acessar o ambiente.
+4.2 Requisitos Técnicos e Funcionais
+Devido à abrangência dos propósitos do trabalho, faz-se necessário o cumprimento de
+uma série de requisitos, tanto técnicos quanto operacionais. A seguir, são elencados alguns
+dos principais requisitos observados:
+• Acesso oferecido a um grande número de usuários;
+• Versionamento e atualizações dos conteúdos dos repositórios;
+• Segurança das informações clínicas (inclui anonimização);
+• Modelo de revisão por pares dos materiais armazenados;
+• Aspectos legais da informação (Robredo, 2005, p. 8): propriedade intelectual,
+direitos autorais dos materiais disponibilizados, sigilo e privacidade das
+informações clínicas;
+• Resposta a requisições em tempo mínimo;
+
+• Controle das operações que podem ser realizadas pelos diferentes usuários, de
+forma a assegurar o controle de acesso e suas autorizações (quem pode fazer o
+que, quando, onde e como?);
+• Flexibilidade na apresentação das informações, tanto em função do tipo de
+dispositivo, quanto da natureza (mídia) da informação;
+• Escalabilidade, tanto na expansão da infraestrutura, quanto em quantidade e
+variedade dos serviços oferecidos;
+• Facilidade e praticidade de uso.
+Com relação ao sigilo e privacidade, em função da natureza das informações clínicas,
+o armazenamento e uso dessas informações têm seguido as normas dos Comitês de Ética na
+Pesquisa, bem como as determinações do Conselho Federal de Medicina (CFM).
+4.3 Arquitetura do Repositório de Imagens Médicas e Informações Relacionadas
+Objetivando o compartilhamento de dados, bem como o crescimento da infraestrutura,
+para implementação do repositório, adotamos uma abordagem de base de dados distribuída,
+caracterizada por uma arquitetura que viabiliza a separação/replicação física e a integração
+lógica de porções dos diferentes repositórios de dados clínicos. Adicionalmente, a arquitetura
+foi projetada de modo a suportar pesquisa e recuperação de informações a partir de outras
+bases de dados clínicos com acesso público. Por exemplo: MIRC-RSNA1, myPACS.net2,
+BIRN3 e MAMOGRID4. Tais bases são amplamente utilizadas pela comunidade de
+Radiologia Médica e, em termos de repositório, possuem características similares ao que é
+apresentado neste trabalho, porém não utilizam seus conjuntos de dados para a realização de
+estudos acerca da gestão e uso das informações clínicas em diferentes contextos.
+
+Figura 2 – Visão geral do modelo distribuído
+
+De modo geral, a idéia central é que este ambiente funcione como um “barramento”,
+onde os vários repositórios (sites) são conectados (Figura 2). Todos os sites são visíveis por
+meio de um servidor de páginas de Internet, mimetizando um portal, por meio do qual os
+usuários acessam de forma transparente os conteúdos dos sites. Além de realizar a integração
+dos diversos locais de armazenamento, a arquitetura também suporta a pesquisa e recuperação
+de dados a partir dos repositórios de dados sobre imagens médicas conectados à infraestrutura
+aqui proposta.
+Esta abordagem tem permitido que diferentes grupos possam criar seus próprios
+repositórios de dados (sites), com total controle sobre a organização dos conteúdos. Contudo,
+é condição que cada site esteja conectado à infraestrutura geral, viabilizando o
+compartilhamento dos conteúdos em toda a infraestrutura.
+Cada site é um repositório autônomo provido de todas as funcionalidades (Figura 1).
+Objetivando a escalabilidade dos serviços, cada site é subdividido em componentes de serviço
+que realizam tarefas específicas. Os principais componentes são: (1) gerenciador de metainformações; (2) controle de acessos baseado em papéis; (3) sistema de gerenciamento de
+arquivos em disco; (4) ferramentas de editoração, pesquisa e recuperação; (5) ferramenta para
+validação e certificação dos materiais submetidos; (6) repositório de interfaces de software
+para acesso a outras bases de imagens médicas; (7) broker para interrogar outras bases de
+dados clínicos e (8) servidor de páginas de Internet.
+A arquitetura proposta ainda contempla um serviço de controle de acessos central que
+autentica os acessos, avaliza as operações permitidas, conjuntos de dados que podem ser
+recuperados, contextos e controles de sessões. Em nossa abordagem, a arquitetura e a
+infraestrutura como um todo possuem as seguintes características: escalabilidade, autonomia
+de cada repositório, extensibilidade (adição de novos serviços/funcionalidades na forma de
+plug-ins) e controle de versão dos componentes da aplicação e conteúdo dos sites.
+4.4 Modelo de dados
+O armazenamento de imagens médicas é mais do que criar uma estrutura (repositório)
+capaz de armazenar informações pictoriais (Cho, 1993). Inclui o armazenamento de um
+conjunto de informações associadas a estas imagens. Exemplificando, para análise completa
+de um estudo clínico (exame com imagens) faz-se necessária uma variedade de informações,
+incluindo: (a) condições do paciente e informações demográficas; (b) condições da realização
+do estudo; (c) características da imagem gerada e (d) técnica e parâmetros utilizados na
+aquisição.
+Neste trabalho, na criação do modelo de dados para imagens médicas e informações
+associadas também foram considerados: (1) organização de múltiplos repositórios; (2) coleção
+de documentos multimídia; (3) dicionários clínicos para codificação de patologia e anatomia;
+(4) técnicas para descrição dos conjuntos de dados; (5) remoção de informações
+identificativas e ferramentas para edição de imagens e (6) suporte a documentos DICOM
+Structured Report (Clunie, 2005).
+4.5 Implementação
+Este trabalho tem o propósito de que as diferentes atividades sejam realizadas por
+meio de um Portal na Internet. O desenvolvimento (implementação) está baseado no uso de
+software de livre: Java (J2EE, EJB, JDBC, JSP), Xerces XML e o gerenciador de banco de
+dados PostgreSQL versão 8.0. A instalação e operação têm sido realizadas em equipamentos
+de baixo custo (equipamentos de uso doméstico/convencional).
+A expectativa é que os serviços oferecidos possam crescer em termos de quantidade e
+variedade. Dessa forma, a infraestrutura vem sendo modelada e implementada utilizando
+interfaces de software, padrões públicos e abertos de comunicação e suporte a Web Services
+(Deitel et al., 2003). Tecnicamente falando, a preocupação em utilizar interfaces de software
+(definidas de acordo com os requisitos do ambiente), bem como o uso de padrões públicos e
+abertos e o suporte a Web Services, deve-se à necessidade de criação de uma solução flexível,
+
+considerando a longevidade e abrangência do projeto, bem como a possibilidade de integração
+aos trabalhos previamente desenvolvidos por outros grupos de pesquisa da Ciência da
+Informação. Esta mesma infraestrutura poderá ser a base para o desenvolvimento de novas
+funcionalidades.
+As etapas da construção da base de dados são resumidas em: (1) desenvolvimento de
+infraestrutura de repositórios distribuídos de dados clínicos; (2) interface de software para
+suporte de componentes na forma de plug-ins; (3) ferramentas de autoria, busca e
+recuperação; (4) serviço de controle de acessos; (5) ferramenta para validação e certificação
+dos materiais submetidos, (6) repositório de interfaces de software e broker para recuperar
+dados a partir de outras bases e (7) customização e integração dos conjuntos de dados a um
+gerenciador de conteúdos.
+Cada site implementa um modelo cliente-servidor baseado em três camadas: (1)
+persistência, (2) aplicação e (3) apresentação. Um servidor central garante a funcionalidade da
+aplicação como um portal. Por razões de segurança, este servidor também é responsável pelo
+registro e autenticação dos usuários e bases conectadas à infraestrutura, bem como pelo
+recebimento das requisições de pesquisa e sua distribuição entre os pares.
+A inserção dos materiais pode ser iniciada numa sessão, finalizar esta sessão e, em
+outro momento, continuar a edição do ponto onde foi interrompida. Os materiais nessas
+condições podem ser visualizados pelos demais usuários, porém com o status “em
+elaboração”. Somente quando o usuário-autor finaliza é que este será encaminhado para
+revisão, passando a ser visualizado com status “em avaliação”. Após a revisão do moderador,
+o status poderá ser: “aprovado”, “rejeitado” ou “com pendências”. Neste último, o material
+volta para o autor e o status passa a ser “em revisão”, até que ele o submeta novamente para
+avaliação.
+O conjunto de operações – inserção, exclusão e disparar processamento remoto – é
+oferecido a certos usuários por meio de políticas definidas no serviço de controle de acessos.
+5 PRIMEIROS RESULTADOS
+Os processos de produção, tratamento e disseminação da informação têm sido temas
+amplamente discutidos nos dias atuais, quando se constata a mudança de paradigma da posse
+da informação para o acesso nas diferentes áreas do conhecimento. Nessas discussões,
+subsistem as reflexões sobre ciência e tecnologia no sentido amplo, sobre os principais
+agentes geradores e difusores de informação científica e tecnológica e, sobretudo, aspectos
+relacionados à gestão de serviços especializados de informação (Fujino, 2004).
+
+A premissa fundamental é que o ambiente aqui proposto possa crescer em termos de
+serviços/funcionalidades, volumes de dados, usuários e campos de aplicação. Alguns dos
+produtos e subprodutos obtidos ao longo do desenvolvimento desta proposta são:
+• Laboratório para ensino-aprendizagem em gestão de Serviços de Informação em
+ambientes eletrônicos, compreendendo o desenvolvimento de criação de coleções em
+ambientes eletrônicos, vinculando atividades de organização, armazenamento e
+recuperação de informações, práticas de uso de padrões e metadados para intercâmbio
+de informações;
+• Base de dados sobre casos clínicos de diferentes patologias, cujo conteúdo possa ser
+utilizado no ensino, seja em Radiologia, ou outra especialidade médica, bem como o
+uso em atividades de ensino;
+• Repositório de documentos e aulas;
+• Arquivo e documentação de protocolos de tratamentos e análise de dados clínicos;
+• Disponibilidade de um ambiente para práticas de atividades de educação continuada,
+sejam estas individuais ou colaborativas.
+6 DISCUSSÃO
+Cabe mencionar que não se trata de um projeto específico para a área Médica ou de
+Ciência da Computação, embora haja o suporte provido pelas tecnologias de informação e
+comunicação. O que se pretende é suscitar algumas das principais características intrínsecas
+dos serviços de informação destinados à área Médica, onde são exigidas ações diferenciadas
+em termos de planejamento, organização, gerenciamento de recursos humanos, serviços
+oferecidos, atendimento aos usuários e políticas de acesso e uso das informações. De forma a
+demonstrar a flexibilidade, os conceitos tratados nesta proposta também poderão ser
+utilizados em outros tipos de serviço de informação, como é o caso de museus e os serviços
+de bibliotecas especializadas, bem como em outros projetos de caráter pedagógico do ensino
+de Biblioteconomia e Documentação. Em termos de possíveis impactos desta proposta,
+considerando-se ensino, pesquisa e extensão, pode-se destacar:
+
+
+Relevância técnico-acadêmico-científica: atualmente, não existe um modelo geral,
+claro e eficaz de concepção de sistemas de gestão do conhecimento disponível, o qual
+viabilize a seleção adequada de informações relevantes num certo contexto. Porém, a
+disponibilidade de uma infraestrutura abrangente e escalável, em termos de serviços
+oferecidos e conjuntos de dados disponíveis, pode viabilizar o estudo, a criação e o
+
+uso de instrumentos e metodologias para auxiliar na transmissão e aquisição de
+conhecimentos. Com as devidas restrições, esta mesma infraestrutura poderá ser um
+campo de testes e aplicação de instrumentos e metodologias propostos por outrem.
+
+
+Relevância sócio-econômica: Um dos grandes desafios encontrados na gestão de
+instituições de assistência médica é a gestão dos recursos financeiros. E, sem dúvida, o
+uso adequado dos recursos materiais (equipamentos e seus insumos) é conseqüência
+da experiência e conhecimentos acerca da melhor utilização destes – o que depende de
+instrumentos (aprendizado e uso adequados de informações).
+
+
+
+Integração de serviços à comunidade: a extensão universitária, por meio de
+treinamentos e programas de educação continuada, prevê a oferta das funcionalidades
+deste projeto ao público externo à Universidade.
+Complementarmente, a seleção deste caso tem se mostrado adequada por oferecer
+
+possibilidade
+
+de
+
+aplicação
+
+teórico-metodológica
+
+de
+
+conceitos
+
+fundamentais
+
+da
+
+Biblioteconomia e Documentação, à medida em que destacam duas características
+contemporâneas da informação médica: explosão quantitativa e implosão do tempo para
+comunicação. Outro aspecto motivador é a possibilidade de reflexão e observação dos
+comportamentos dos diferentes usuários, o que permitirá a compreensão de suas dificuldades
+e subsídios para a concepção de dispositivos que permitam transformar os atuais “serviços de
+ajuda” baseados em dicas para operação do sistema em serviços de apoio pedagógico para
+aprendizagem informacional.
+
+
+7 CONSIDERAÇÕES FINAIS
+Atualmente, as instituições criam e mantêm suas próprias bases de dados, com
+diversas informações sobre suas atividades. Tais informações que compõem a memória da
+instituição necessitam ser acessadas e utilizadas, em diversos contextos, por usuários com
+interesses, necessidades e motivações também diversos. E esta é a principal razão de ser de
+qualquer serviço de informação: o atendimento aos usuários. O desafio é maximizar a
+satisfação dos usuários. Tal satisfação pode ser um dos principais parâmetros – se não o
+principal – para estimar a qualidade dos serviços. Evidentemente, a satisfação do usuário está
+pautada em elementos bastante subjetivos.
+Certamente, os serviços de informação na forma tradicional (não digital) coexistirão
+por um bom tempo com o que é proposto atualmente, a partir da exploração do potencial de
+uso das tecnologias. Objetivando melhorias na qualidade dos serviços, várias iniciativas têm
+
+sido propostas, as quais almejam auxiliar no cumprimento dos objetivos da Ciência da
+Informação e Documentação e, sobretudo, auxiliar nas tarefas de administração dos serviços
+de informação e criar ambientes mais adequados à produção e uso da informação.
+Com o maior uso das redes de computadores e tecnologias de informação, as
+informações passaram a existir num novo tempo e espaço. Tempo e distância deixaram de ser
+limitações para o acesso e uso de informações. A posse da informação cede lugar para o
+acesso a esta.
+
+Conseqüentemente, aspectos como segurança, confidencialidade, confiabilidade, autenticidade e disponibilidade, entre outros, também necessitam ser
+considerados e tratados de modo especial pelos gestores dos serviços de informação.
+A área Médica, tanto do ponto de vista das características técnico-científicas como
+área inter e multidisciplinar, como do ponto de vista do atendimento da demanda social e das
+características dos potenciais usuários (profissionais e usuários dos sistemas de saúde),
+configura-se como campo de pesquisa empírica para a Ciência da Informação com
+oportunidade para realização de investigações relacionadas às mediações gerenciais em
+serviços de informação especializados. A realidade contemporânea, caracterizada pela
+expansão dos limites para além das fronteiras físicas ou materiais, induz ao desafio de
+repensar a formação do profissional da informação, como gestor de serviços em ambientes
+eletrônicos, não como um concorrente de outros profissionais, mas como um profissional que
+terá que repensar sua atuação e competência para mediar situações com usuários conectados
+ao sistema via interfaces eletrônicas.

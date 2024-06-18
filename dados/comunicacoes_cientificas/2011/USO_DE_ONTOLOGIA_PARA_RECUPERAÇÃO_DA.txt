@@ -1,0 +1,206 @@
+USO DE ONTOLOGIA PARA RECUPERAÇÃO DA
+INFORMAÇÃO DISPONIBILIZADA EM VÍDEOS POR MEIO
+DE INDEXAÇÃO MULTIMODAL
+
+Resumo: Recuperar informação disponibilizada em vídeos longos pode ser uma experiência demorada.
+A recuperação da informação em vídeos apresenta alguns problemas, pois é realizada, principalmente,
+através das descrições textuais feitas pelos usuários. O objetivo desta pesquisa é promover, com
+maior índice de precisão (Cleverdon,1962), a recuperação da informação disponibilizada em vídeos
+por meio da indexação multimodal e uso de ontologia. Foi desenvolvida uma ontologia de domínio,
+associada com uma indexação multimodal para avaliação da precisão em um sistema de recuperação
+da informação audiovisual. Observou-se nos experimentos um aumento significativo da precisão
+nas configurações que utilizaram a ontologia para recuperar informação audiovisual. A utilização de
+uma ontologia de domínio da Doutrina Espírita alinhada a indexação multimodal, em um sistema de
+recuperação de trechos de vídeos de palestras sobre esse tópico, permitiu melhorar a eficiência do
+mesmo em termos de precisão.
+Palavras-chave: Recuperação da Informação Audiovisual. Indexação Multimodal. Ontologia.
+1 INTRODUÇÃO
+A World Wide Web já se tornou uma grande biblioteca virtual, onde a informação sobre qualquer
+assunto está disponível a qualquer hora e em qualquer lugar, com ou sem custo, e em diferentes
+formatos como textos, áudios, vídeos, etc.
+No atual estágio da internet, a quantidade de informação e conteúdo disponibilizado por meio
+de vídeos vem crescendo a cada dia. Segundo dados da ComScore, somente em setembro de 2010,
+foram realizadas 10,6 bilhões de buscas no Google. O site do Yahoo chegou a receber 2,7 bilhões de
+buscas no mesmo período.
+No âmbito dos conteúdos multimídias, o esforço volta-se para conseguir a recuperação
+da informação com eficiência através desses motores de busca e outras ferramentas automáticas.
+Repositórios de vídeos e de imagens estão entre os sites mais acessados da Internet. O YouTube, que
+oferece busca e compartilhamento de vídeos, já é o terceiro site mais acessado do mundo, segundo
+Alexa, The Web Information Company.
+
+Diante de tal realidade, encontrar a informação precisa no YouTube é uma tarefa desafiante
+devido ao tamanho do repositório e à sua grande base de dados textuais (Sureka et al, 2010).
+Assim, Brascher (2002) afirma que:
+A necessidade de recuperação de informações armazenadas em grandes
+repositórios de informação disponíveis na Internet e de responder com maior
+precisão às buscas realizadas diretamente pelos usuários finais, têm levado a
+um esforço no sentido de adicionar informação semântica às páginas Web.
+(BRASCHER, 2002,p.1).
+Os sistemas de recuperação da informação atuais dependem do uso de termos de indexação na
+busca para obter os documentos relevantes. Sendo as coleções de documentos indexadas com base no
+conteúdo textual, os documentos não textuais (imagens, vídeos) dependem de uma indexação manual
+(associação de termos de indexação) após a interpretação de seu conteúdo.
+Um método para melhorar a recuperação seria indexar o conteúdo visual e o áudio, e usar
+formas mais elaboradas de extração do significado. O sistema de recuperação deve ser capaz de
+processar documentos e criar descrições que relacionem os objetos, usando palavras, ontologias
+subjacentes e a análise audiovisual.
+Avançar para além da recuperação de texto requer a análise de segmentos de áudio e vídeo. De
+que forma a utilização de descritores audiovisuais, conjuntamente com ontologias de domínio, poderá
+auxiliar na recuperação da informação disponibilizada em videos?
+Essa preocupação pode-se apresentar nos termos seguintes: como armazenar
+e manipular (processar, gerir) o conhecimento nos sistemas de informação, de
+maneira formalizada de tal modo feita que possa ser usada por mecanismos
+para realizar uma tarefa determinada?. (ROBREDO, 2005).
+	
+O objetivo dessa pesquisa é promover, com maior índice de precisão, a recuperação de uma
+informação específica existente em um repositório de vídeos por meio da indexação multimodal e uso
+de ontologia.
+2 FUNDAMENTAÇÃO TEÓRICA
+Nesta seção são apresentados os conceitos teóricos sobre indexação audiovisual,
+multimodalidade e ontologia, estabelecendo uma base para a verificação proposta neste trabalho.
+2.1 Indexação da Informação Audiovisual
+Com o excesso de informação já existente, somada às milhares que são produzidas diariamente
+no contexto da web, enfrentamos questões sérias relativas a organização e recuperação do conteúdo,
+e a indexação é um fator determinante para que um usuário que busca por informação recupere
+documentos que satisfaçam suas necessidades.
+
+
+A informação audiovisual, de acordo com Barreto (2007), apresenta grandes desafios relativos
+ao armazenamento, indexação, formulação de consultas e recuperação de conteúdo semântico. Para
+o autor, um caminho seria a construção de sistemas híbridos, com indexação automática e análise de
+conteúdo supervisionada, pois existem sérias limitações ao uso de indexadores manuais, uma vez
+que requerem anotação individual, dificultando seu uso em grandes repositórios de informação, e
+que sofrem influência tanto do domínio de aplicação quanto do conhecimento da pessoa que realiza
+a tarefa.
+Segundo Lancaster (2004),
+A capacidade de armazenar, em formato digital, em bases de dados, qualquer
+tipo de imagem, e especialmente de poder acessar milhões delas na Rede,
+causou impressionante ressurgimento do interesse por imagens em geral, e,
+em particular, por modos de indexá-las (LANCASTER, 2004, p.214).
+Para Barreto (2007, p.20) a recuperação eficaz do conteúdo visual e sonoro só é possível
+com uma indexação significativa e discriminante, e que deve estar relacionada com intenções e
+procedimentos do usuário quando faz a consulta no ambiente real.
+Tal afirmação indica que o usuário é fator determinante para a indexação, e que esta deverá
+ser baseada em suas necessidades informacionais. A precisão da busca no processo de recuperação
+da informação vai demonstrar a utilidade do sistema, utilidade esta determinada pelo usuário, como
+percebemos nas palavras de Araújo Júnior (2005),
+O papel da precisão em um processo de busca e recuperação da informação
+é dar a noção exata se o que está sendo recuperado na base de dados é útil ao
+usuário. Desta conclusão uma série de decisões poderão mudar os rumos de
+qualidade da resposta que se obtém nos sistemas de recuperação da informação
+(ARAÚJO JR, 2005).
+2.2 Indexação Multimodal
+Analisando a partir da perspectiva geral do sistema, a multimodalidade é a capacidade do
+sistema para se comunicar com o usuário ao longo de diferentes tipos de canais de comunicação e
+extrair e transmitir um significado automaticamente (O’Halloran, 2004). Outra perspectiva, é a visão
+que a multimodalidade dos meios de comunicação de vídeo é a capacidade de um autor para expressar
+uma ideia pré-semântica, através da combinação de um layout com um conteúdo específico, usando
+pelo menos dois canais de informação, onde os canais podem ser visuais, auditivos ou textuais (Snoek
+e Worring, 2005).
+Como o sistema está utilizando várias técnicas de indexação de vídeos, a qualidade dessas
+técnicas irá certamente afetar a qualidade das informações de saída. A aplicação de técnicas
+multimodais e processos de avaliação podem ajudar a reduzir este problema.
+
+
+2.3 Ontologia
+Ontologia é uma descrição formal e explícita de uma conceitualização compartilhada (Gruber,
+1996). Já outros autores acreditam que ontologia é uma teoria lógica que fornece um relato explícito e
+parcial de uma conceitualização (Guarino e Giaretta, 1995). Essa forma de organizar o conhecimento
+visa descrever estruturas conceituais de domínios específicos, e tornar viável o uso do vocabulário
+compartilhado de uma maneira coerente e consistente.
+As ontologias são estruturadas de tal maneira que permitem um considerável
+ganho de qualidade quando empregadas num sistema de classificação. Elas
+oferecem maiores possibilidades estruturais (classes; instâncias; parte-todo;
+pai-filho; etc.) das que são oferecidas por outros sistemas, como por exemplo,
+thesauri. A ideia é que o índice, criado a partir de estruturas conceituais geradas
+por meio do resultado de extensa análise de linguagem natural, apresente um
+melhor desempenho para as respostas às consultas de usuários. (DUQUE,
+2006).
+Uma das características principais das ontologias é que elas permitem compartilhar informações
+de um domínio, podendo ser utilizada por diversas aplicações. Um requisito para compartilhamento
+é a padronização da linguagem de representação. Nesse sentido, existem diversas linguagens que
+surgiram para a representação de ontologias que podem ser utilizadas (Corcho e Gómez-Pérez, 2000).
+A Web Ontology Language, OWL (McGuinness e Harmelen, 2003), é uma recomendação apresentada
+pela W3C como uma linguagem de ontologias para a web. OWL aumenta a expressividade da
+linguagem pois permite identificar restrições de propriedade, de equivalência, e quantificadores.
+Objetivando aumentar a precisão no processo de busca e recuperação da informação contida
+em vídeos, utilizando uma ontologia OWL e a indexação multimodal, propomos uma arquitetura
+inovadora, apresentada na seção a seguir.
+3 ARQUITETURA
+	
+O protótipo construído combina muitos tópicos discutidos na investigação de recuperação da
+informação audiovisual, como ontologia, a multimodalidade, a indexação de imagens e indexação de
+áudio. O protótipo foi baseado em uma solução aberta desenvolvida na linguagem java para integrar,
+posicionar, arquivar, e distribuir gravações/apresentações audiovisuais que utilizam slides como
+apoio. O processo do uso de ontologia para recuperação de informação audiovisual por meio de
+análise multimodal incluiu os seguintes passos:
+1.	 Segmentação do vídeo e indexação da imagem: Um dos módulos do protótipo criado possui a
+característica de segmentar os vídeos a cada novo slide identificado. A partir da segmentação
+do vídeo e identificação dos slides foi possível utilizar o Reconhecimento Óptico de Caracteres
+(OCR) para extrair o conteúdo imagético. O protótipo utiliza a tecnologia de OCR alinhada
+
+
+a um dicionário pré-definido do Português Brasileiro para aumentar a taxa de acerto no
+reconhecimento das palavras. Assim, além de segmentar em clips de vídeo, todas as palavras
+constantes nos slides dos palestrantes nos vídeos foram indexadas de forma sincronizada.
+2.	 Indexação do áudio: O áudio foi outro canal de comunicação indexado nesta pesquisa, e
+apesar de existirem algumas propostas, modelos, projetos e até soluções abertas para
+indexação automática do áudio, utilizamos a indexação manual. Esta escolha deve-se pela
+necessidade de adaptação computacional com o protótipo, o que demanda maior complexidade
+computacional. Assim, fizemos a indexação manual e adicionamos as palavras indexadas ao
+protótipo. O protótipo contém as palavras resultantes da indexação multimodal. É importante
+salientar que as palavras indexadas foram relacionadas em sincronia com a ordem na qual
+aparecem nos slides ou foram pronunciadas nos vídeos.
+3.	 Utilizando a ontologia: Recentemente, ontologias têm sido utilizadas na recuperação da
+informação para melhorar a revocação e a precisão. Sua principal utilização está relacionada
+com a expansão da consulta, que consiste em incrementar os termos relacionados pela
+ontologia com os termos da consulta. Utilizamos o Método 101 (Noy; McGuinness, 2001)
+no desenvolvimento da ontologia deste trabalho. A ontologia aborda conceitos relativos à
+Doutrina Espírita, com foco nos conceitos utilizados e difundidos atualmente. O propósito
+da ontologia é realizar o mapeamento dos conceitos da Doutrina Espírita para integração
+com o protótipo, que foi implementado para auxiliar na recuperação da informação. Deste
+modo, a ontologia procurou definir, de forma não ambígua, todos os conceitos e relações deste
+domínio. A ontologia desenvolvida foi usada com o intuito de expandir a rede semântica e
+diminuir ambiguidades.
+4 RESULTADOS PRELIMINARES
+Realizou-se um experimento objetivando a verificação de coerências na utilização de
+Multimodalidade e Ontologia em um Sistema de Recuperação de Informação Audiovisual. Nesse
+experimento foram utilizadas 6 horas de vídeos produzidos em língua portuguesa, e parte da coleção
+da televisão do Conselho Espírita Internacional. Para a realização do experimento, utilizou-se duas
+configurações distintas: uma somente com a indexação multimodal (Completa) e a outra com uso da
+ontologia associada à indexação multimodal (Completa_Onto).
+Foram realizadas consultas à coleção, utilizando palavras-chave desejadas pelo usuário, e
+avaliação dos cinco primeiros documentos retornados pela busca das duas configurações, de acordo
+com a relevância do documento para a consulta. Para viabilizar esta comparação, utilizamos como
+métrica avaliativa o índice de precisão, uma medida objetiva e consagrada desde a sua proposta por
+Cleverdon (1962).
+
+
+Gráfico 1 – Resultado de Precisão do experimento comparando as configurações Completa e
+Completa_Onto
+
+Fonte: Dados da Pesquisa
+No gráfico 1 observam-se os resultados de Precisão obtidos tanto para a configuração
+Completa quanto para a configuração Completa_Onto. Os resultados de Precisão apresentados
+pela Completa_Onto foram em média 18,51 % (dezoito, cinquenta e um por cento) superiores
+aos resultados apresentados pela configuração Completa nas consultas realizadas no experimento.
+Existem 4 consultas em que a configuração Completa, sem o uso da ontologia, obteve maior precisão
+que a configuração Completa_Onto. Nesse caso específico, o uso da expansão semântica apresentou
+documentos irrelevantes devido ao sentido da consulta estar diferente do determinado nas relações
+da ontologia.
+5 CONCLUSÕES
+A utilização de uma ontologia de domínio da Doutrina Espírita alinhada à indexação multimodal,
+em um sistema de recuperação de trechos de vídeos de palestras sobre esse tópico, permite melhorar
+a eficiência do mesmo em termos de índice de precisão.
+Este trabalho consistiu na elaboração de um sistema de recuperação de informação (RI) que
+utiliza ontologias e indexação multimodal. O uso de ontologias para recuperação da informação
+disponibilizada em vídeos mostrou-se promissor. Alguns dos termos utilizados na versão da ontologia
+descrita são dependentes do contexto no qual será feito uso das informações, e isto deve ser melhor
+avaliado em futuras versões da ontologia.
+O tamanho da coleção é um fator importante no desenvolvimento e, principalmente, na
+avaliação de sistemas de RI. A variedade de consultas que podem ser feitas é muito grande, e o sistema
+termina, em muitos casos, trazendo respostas não muito relevantes, pois não conta com respostas
+adequadas para a consulta do usuário. O conjunto de vídeos utilizado no teste ainda é pequeno. Isso
+faz com que um único documento irrelevante recuperado ou, um único documento relevante não
+recuperado, afete consideravelmente a precisão do sistema.
+

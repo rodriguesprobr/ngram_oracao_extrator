@@ -1,0 +1,487 @@
+Um modelo para o conhecimento médico em artigos científicos
+
+Resumo: Artigos científicos publicados em formato digital se constituem em bases de conhecimento científico,
+em especial na Medicina. Um obstáculo para o processamento semântico desse conhecimento por computadores
+é o fato de que, apesar do formato digital, estas bases de conhecimento são voltadas para leitura e processamento
+do seu conteúdo por pessoas. Propõe-se um modelo de publicação e registro para representar o conhecimento
+contido em artigos científicos em Medicina em formato “inteligível” por programas. Segundo o modelo, artigos
+científicos seriam publicados não só em formato textual legível por pessoas, mas também como ontologias,
+representando o conhecimento específico contido em cada artigo. O modelo inicial foi obtido a partir de aportes
+teóricas de Metodologia Científica e Filosofia da Ciência e da análise de 75 artigos científicos em Medicina. O
+conteúdo de conhecimento científico de um artigo é associado à proposições que caracterizam fenômenos ou o
+estabelecimento de relações entre fenômenos. O modelo permite que programas “agentes de software” processem
+o conteúdo de cada artigo, viabilizando a recuperação semântica de informações, a avaliação da coerência, a
+identificação de lacunas no conhecimento científico e de novas descobertas.
+Palavras-chave: Publicações eletrônicas. Representação do conhecimento. Ontologias. Comunicação científica.
+
+1. Introdução
+Desde que foi ultrapassado o período de cultura oral com a invenção da escrita, por muitos
+séculos o conhecimento humano, em especial, o conhecimento científico, esteve registrado em
+documentos.
+Estamos no limiar de uma transformação profunda nos meios de que dispõe a humanidade
+para registro, guarda e disseminação do conhecimento. Hoje não só podemos registrar este
+conhecimento em meio digital, armazenado nos dispositivos de memórias de massa, como
+também podemos disseminá-lo em larga escala através de redes de computadores. Um
+dispositivo como um “pen drive” consegue armazenar mais de 4 GB de dados, permitindo ter
+uma biblioteca gigantesca carregada no bolso. Mais significativo no entanto, do que estas
+questões, é que esse conhecimento não é mais somente codificado em formato textual, legível
+por pessoas, não somente em formato legível por programas, que por sua vez o tornam legível
+por pessoas, como documentos textuais em formato WORD ou PDF, mas, o que se constitui
+numa real novidade, também em formatos “inteligíveis” por programas, permitindo a estes
+graus crescente de “inferência”, “decisões” e “raciocínios” sobre o conteúdo desses
+documentos. Esta é a proposta do projeto Web Semântica (BERNERS-LEE, 2001).
+Uma das bases do projeto Web Semântica são as ontologias. Uma ontologia é um modelo
+informacional descrevendo e representando um conjunto de conceitos num domínio de
+conhecimento específico, estruturados e inter-relacionados entre si, de entendimento
+compartilhado em comum por uma comunidade de usuários. Conceitos são organizados em
+hierarquias de classes e possuem atributos e relações entre si. Uma ontologia é representada
+em linguagem “inteligível” por programas, “agentes de software”, e usada por estes para fazer
+inferências sobre os conceitos desse domínio. Quando às classes de um domínio de
+conhecimento específico que constituem uma ontologias são agregados representações de
+objetos individuais desse domínio, têm-se uma base de conhecimento. Existem muitas
+comunidades de usuários desenvolvendo ou utilizando ontologias, em especial na área
+Médica.
+A passagem do registro de conhecimentos do formato textual para formatos suscetíveis de
+serem “inteligíveis” por programas pressupõe novas formas de encará-lo. Questões óbvias e
+imediatas que se colocam são: o quê é o conhecimento? de quê é constituído? como pode ser
+sistematizado? como pode ser registrado num formato alternativa ao textual? Embora a
+maioria destas questões tenham sido colocadas há séculos pela Filosofia, a última questão é
+um problema totalmente novo e não era praticamente colocada enquanto a humanidade só
+conhecia a forma textual, mesmo que digital.
+O conhecimento codificado formato em “inteligível” por programas nos permite agenciálos em tarefas nas quais computadores-programas são claramente mais eficientes que nós.
+Para o uso em larga escala da tecnologia dos “agentes de software”, deve-se capturar o
+conhecimento científico hoje já registrado em meio digital mas ainda em formato textual e
+representa-lo também em formato “inteligível” por programas.
+A forma tradicional e institucionalizada através da qual a sociedade contemporânea
+registra e dissemina o conhecimento científico é através da publicação de artigos em
+periódicos. Trabalhamos há anos no projeto de registrar o conteúdo de artigos científicos
+publicados eletronicamente em formato “inteligível” por programas. Propusemos um
+ambiente Web de “software” que permita a publicação eletrônica dos artigos simultaneamente
+de forma convencional, como texto, e em formato de ontologia, conforme ilustrado na Figura
+1 a seguir. Este ambiente Web de “software” vai interagir com o autor através de um diálogo estruturado e da análise do texto do artigo, extraindo e registrando o conhecimento aí contido
+no formato de uma ontologia.
+
+Figura 1 – Ambiente Web de autoria/autopublicação
+Criamos um modelo para os elementos semânticos que constituem o conteúdo de
+conhecimento de um artigo, baseado fortemente nos elementos do Método Científico, na
+forma como eles aparecem em artigos científicos. O objetivo desse modelo é servir de base
+para a uma nova forma de publicar artigos, em formato de ontologias, de modo a tornar seu
+conteúdo “inteligível” por programas, permitindo assim que esses conteúdos sejam
+processados de uma forma muito mais sofisticada e útil que em programas convencionais de
+recuperação de informações, de banco de dados, de “data mining” ou de estatística.
+A proposta inicial do modelo se baseava na concepção de que o conhecimento científico
+consiste em propor e provar a existência de relações entre fenômenos, até então
+desconhecidas. É assim que Miller (1947) define o conhecimento científico: “The above
+remarks imply that science is a search after internal relations between phenomena”. Um
+fenômeno pode ser definido como “… an event or a process such as it appears to some human
+subject: it is a perceptible fact, a sensible occurrence” (BUNGE, 2004, p. 173).
+A construção desse modelo se deu a partir de um forte referencial teórico de Filosofia da
+Ciência e Metodologia Científica. Esse foi complementado e validado pela análise de um
+conjunto de 75 artigos científicos em Ciências da Saúde, que forneceu um material riquíssimo
+que permitiu aperfeiçoar o modelo e verificar na prática as nuances de como o conhecimento
+científico nesta área é registrado e comunicado. Este modelo foi formalizado numa Ontologia
+do Conteúdo de Conhecimento em artigos1. Futuros desenvolvimentos da pesquisa vão
+consistir em usar o modelo como base para a construção de um ambiente Web de
+autopublicação (COSTA, 2006) de artigos científicos e para o desenvolvimento de programas
+que comparem o conteúdo de artigos científicos registrados segundo o modelo com o
+conhecimento registrado em ontologias médicas como a UMLS – Unifyed Medical Language
+System2 com vistas a identificar novas descobertas científicas (MALHEIROS, 2005). A
+versão mais acabada desta proposta inicial esta descrita em Marcondes (2007).
+O modelo inicial no entanto deve ser aperfeiçoado a luz das conclusões da análise do
+último conjunto de artigos analisado. Trata-se de um conjunto de 15 artigos que, ao contrário
+dos conjuntos anteriores, guarda toda uma coerência interna e visíveis inter-relações entre si.
+São as chamadas “key publications”, do grupo de três pesquisadores, Elizabeth Blackburn,
+Carol Greider e Jack Szostak, agraciados com o Prêmio Albert Lasker de Medicina de 2006
+(http://www.laskerfoundation.org/index.html). Os artigos cobrem o período de 1978 a 1999 e,
+em seu conjunto, relatam a seqüência de marcos de conhecimento da descoberta da enzima
+telomerase (BLACKBURN, 2006), de seu papel fundamental na reprodução celular, sua
+influência em processos como de envelhecimento celular e surgimento de câncer. Os artigos
+guardam forte relação uns com os outros, mostrando claramente o processo de identificação
+inicial de um novo fenômeno, a agregação de novos conhecimentos de modo a caracterizá-lo
+cientificamente, até sua completa identificação e a investigação de suas relações com outros
+fenômenos. Os resultados da análise desses artigos mostraram fatos com os quais não
+tínhamos nos deparado até então com a análise do material anterior e que o nosso modelo não
+dava conta. A análise desse conjunto de artigos impôs portanto a revisão e aperfeiçoamento do
+modelo inicial, de modo a torná-lo mais completo, abrangente e robusto. Este é o objetivo do
+presente artigo.
+Ele esta estruturado assim: após esta introdução a seção 2 discute o quadro conceitual que
+embasa o modelo proposto; a seguir, a seção 3 discute os aspectos teóricos que embasam o
+modelo; a seguir, a seção 4 discute as novas características do conjunto de artigos referentes
+ao Prêmio Lasker 2006 que fizeram rever o modelo; a seção 5 a seguir apresenta o modelo
+revisto; finalmente a seção 6 apresenta conclusões e futuras direções de pesquisa. As figuras
+que ilustram o ambiente de autoria/autopublicação (Figura 1) e a Ontologia do Conteúdo de
+Conhecimento em Artigos Científicos Digitais (Figura 2) foram desenvolvidas pelos autores
+no sentido de tornar mais clara a proposta.
+2. Material e métodos
+Para a proposição do modelo foram buscados aportes teóricos de disciplinas como Ciência
+da Informação, em especial de Comunicação Científica, Metodologia da Ciência, Filosofia da
+Ciência e Ciência da Computação. Foram analisados 75 artigos em Medicina, subdivididos
+nos seguintes grupos: 20 artigos do periódico Memórias do Instituto Oswaldo Cruz, 20 artigos
+do periódico Brazilian Journal of Medical em Biological Research, ambos disponibilizados
+através do portal SciELO e escolhidos a partir da lista dos artigos mais consultados de ambas
+as publicações, disponível no “site” de cada uma das publicações; foram analisados ainda 20
+artigos sobre células-tronco, escolhidos a partir de três importantes artigos de revisão sobre o
+tema.
+Por fim, foram analisados 15 artigos entre as chamadas “key publications” do grupo de
+pesquisadores agraciados com o Prêmio Albert Lasker de Medicina do ano de 2006. O texto
+de Charlton (2006) indica que premiações científicas podem ajudar a identificar a elite da
+“ciência revolucionária”, usando as palavras de Kuhn, o que era de especial interesse para essa
+pesquisa.
+Para este último grupo, um procedimento metodológico foi ordenar os artigos
+cronologicamente (ver Anexo 1) e utilizar o artigo de 2006 em que os três agraciados com o
+Prêmio Lasker (BACKBURN, 2006) comentam a trajetória das pesquisas que culminaram com a descoberta da enzima telomerase, como um guia para orientação da leitura dos 15
+artigos que constituem as “key publications”.
+A análise procurava identificar fenômenos descritos no artigo ou o estabelecimento de
+relações entre fenômenos. Após a identificação de fenômenos e relações no texto de cada
+artigo, verificava-se se os conceitos correspondentes aos fenômenos e relações existiam na
+UMLS. Os resultados da análise eram registrados em formulário específico.
+A área de Medicina foi escolhida devido ao fato de que artigos científicos da área seguem
+um rígido padrão formal em seus textos, com seções definidas segundo o chamado padrão
+IMRAD – Introduction, Method, Results and Discussion -, recomendados pelo The
+International Committee of Medical Journals Editors3 para artigos científicos em periódicos
+biomédicos, facilitando assim a análise.
+3. Quadro conceitual
+O conhecimento científico conforme veiculado através de artigos de periódicos, consistem
+em formular “afirmações científicas”, sobre fenômenos (BUNGE, 2004, p. 173) ou sobre
+relações entre fenômenos (MILLER, 1947). As afirmações científicas, conforme será visto
+nos exemplos da seção 4, refletem um grau crescente de certeza, apropriação e
+enquadramento, do fenômeno científico e de suas inter-relações, no quadro conceitual ou
+sistema de conceitos que compõe o conhecimento num determinado domínio científico. Este
+grau crescente de certeza avança na direção do que Bungue (2004, p. 3) considera ser o
+objetivo da Ciência, ou seja, responder as “why questions”, buscar explicações para os
+fenômenos.
+As visões clássicas de como se faz ciência apresentadas pelos manuais de metodologia
+científica e pela Filosofia da Ciência em Popper (2001) e Hempel (1995), separam os
+procedimentos e o raciocínio empregados nas descobertas científicas da explicação
+metodológica dos fatos científicos. Existe toda uma ênfase nos aspectos lingüísticos, lógicos e
+formais da Ciência, que tem origem no positivismo lógico ainda no século XIX
+(MARCONDES, 2004).
+As visões situadas dentro da “lógica da justificativa”, sejam elas dos positivistas lógicos
+ou de seus críticos como Popper, são por demais formais e os exemplos analisados mostram
+que, numa área de pesquisa de ponta atual como a biologia celular, fornecem poucos subsídios
+para se compreender as práticas de pesquisa e descoberta que levaram à construções
+científicas que resultaram na descoberta da telomerase. Assim, o material por nós analisado,
+conforme será mostrado na Seção 4, apresenta bastante semelhança com as colocações de
+Atocha (2004), Klahr e Simon (1999) e Thargard (1993).
+A distinção entre “lógica da descoberta”, em oposição à “lógica da justificativa” é
+enfatizado em Atocha (2004), numa crítica às visões positivistas:
+An example is Reichenbach’s (1938) well-known opposition of ‘context of discovery’ versus
+‘context of justification’, which served as a basis for logical positivism. In this tradition, a
+fundamental assumption is that the methodology of science has logic as its tool and that it
+deals only with aspects of justification in scientific research. … The context of discovery is
+taken to be purely psychological. (ATOCHA, 2004, p. 340).
+
+Ou então:
+Reinchenbach’s distinction between the contexts of justification and of discovery has left out
+of its analysis – especially from a formal point of view – a very important part of scientific
+practice, that which includes issues related to the generation of new theories and scientific
+explanations, concept formation as well as aspects of progress and discovery in science.(ATOCHA, 2004, p. 341).
+
+Thargard, ao criticar tanto o método indutivo, privilegiado pelos positivistas lógicos,
+quanto o método hipotético-dedutivo de Popper, chamando a ambos de mitos:
+10.1.2. Two Methodological Myths
+What is the relation between theory and experiment? Most descriptions of science
+subscribe the one of the two following pictures of scientific practice.
+1. the hypothetico-deductive myth, which says that scientist begin with hypotheses and
+then do experiments to test then, or
+2. the inductivist myth, which says that scientists begin by doing experiments and then
+derive theories from the data. (THAGARD, 1993, p.176).
+In well-trod areas of investigation, it may be possible to form a Sharp hypothesis and then test
+it. But when novel topics are being pursued, researchers in psychology and other fields cannot
+always start with hypotheses sharp enough to be tested. Often some vague ideas will lead to
+the collection of some data, which then suggested a refinement of an existing hypothesis. Or
+results are very different from what was expected may spur abductive formation of a new
+hypothesis that can then be subject to further test. (THAGARD, 1993, p. 177).
+
+Klahr e Simon (1999) também criticam Popper e dão especial ênfase ao contexto da
+descoberta:
+In science there is an important, and extremely common, form of experiment, at times referred
+to somewhat dismissively as "exploratory," that is guided by no specific hypothesis to be
+tested, and no clear control condition, but only a vague and general direction of inquiry. The
+goal of exploratory experiments is to permit phenomena to appear that will invite exploration
+or suggest whole new forms of representation or generate new hypotheses.
+The contemporary literature on research methodology is dominated by the notion, promulgated
+by Popper (1959) among others, that the purpose of observation in general, and experiment in
+particular, is to test hypotheses in order either to falsify or validate them. In contrast to this
+position, we have argued that much of the important empirical work in science is undertaken -to use Reichenbach's phrase -- in the context of discovery rather than the context of
+verification (see Simon, 1973). That is, a major goal of empirical work in science is to discover
+new phenomena and generate hypotheses for describing and explaining them, and not simply
+to test hypotheses that have already been generated. Indeed, theories cannot be tested until they
+have been created, and creation takes place in the context of discovery, not verification.
+(KLAHR e SIMON, 1999, p. 8).
+
+Representar o conhecimento científico portanto, consiste em identificar e registrar as
+afirmações referentes a fenômenos e suas inter-relações refletindo também o processo de
+crescente certeza ou apropriação científica do fenômeno ao quadro conceitual de um domínio
+científico.
+Sendo os artigos textos, o conhecimento contido nelas necessariamente será expresso
+através da linguagem. Os artigos analisados, em seu conjunto, indicam que o conhecimento
+científico consiste pelo menos dois tipos de conteúdos: na identificação de fenômenos,
+apropriando-os cientificamente ao descrevê-los, reconhecendo-os, conhecendo-os, integrandoos ao quadro conceitual de determinado domínio do conhecimento; ou propondo relações
+entre fenômenos. Um fenômeno é apropriado cognitivamente, sintetizando sua descrição
+através de um conceito, uma representação mental sintética do fenômeno, expresso através da
+linguagem como um termo. Mas como se dá esse processo? Dalberg (1992, p. 65) propõe o
+seguinte processo para a geração do que ela chama de conceitos:
+The German philosophers Immanuel Kant (3) and Gottlieb Frege (4) inferred already the
+generation of concepts by predication. Our assumption that a concept is created by predicating
+about an object of concern, a socalled referent is rooted in the writings of these philosophers.
+Any predication about such a referent yields one characteristic of the concept of this referent.
+The sum total of such predications possible will compose the sum total of characteristics of a
+concept and thus determine the contents of a concept.
+
+
+
+4. Resultados
+A seguir um modelo para representar, em formato “inteligível” por programas, o
+conhecimento contido em artigos científicos em Medicina é proposto. São mostradas as bases
+do modelo, a partir do conteúdo dos artigos que constituem o campo empírico e de sua análise
+dentro do quadro conceitual descrito anteriormente.
+O processo de crescente caracterização e apropriação científica de um fenômeno e a
+identificação de relações entre esse fenômeno e outros é ilustrado nos seguintes exemplos:
+- No artigo mais antigo analisado do grupo referente ao Prêmio Lasker 2006, Blackburn,
+E.H. and Gall, J.G. (1978), vê-se esse aspecto da gradual caracterização de um novo
+fenômeno científico, não só no título, mas também nos objetivos do artigo, colocados no seu
+abstract: “The extrachromossomal genes coding for the ribossomal RNA in the ciliated
+protozoan Tetrahymena thermophila we studied with respect to sequences occuring at their
+termini” (BLACKBURN, 1998, p. 33).
+- Num artigo de revisão que mostra um quadro atual da pesquisa sobre telomerase, Cech
+(2004) afirma que o objetivo da pesquisa que conduziu a descoberta da telomerase seria
+identificar a entidade (termo por sinal, bastante usado na modelagem de ontologias)
+responsável pela replicação das extremidades dos cromossomos, até então desconhecida, não
+caracterizada, não integrada ao quadro do conhecimento existente até então: “Carol Greider, a
+graduate student in Liz Blackburn’s group at the University of California, Berkeley, had
+chosen an ambitious PhD thesis project: identify the molecular entity responsible for
+replicating chromosome ends.” (CECH, 2004, p. 273).
+- No mesmo artigo Cech (2004) esclarece que o objetivo das pesquisas de Greider e
+Blackburn no artigo que marca a descoberta da telomerase seria: “The identification and
+characterization of this new enzymatic activity was the subject of Greider and Blackburn
+(1985).”
+- Outro exemplo retirado de um artigo do mesmo grupo, mostra que a telomerase ainda
+não estava identificada como uma enzima (“a terminal transferase-like activity”) nem estava
+clara a sua relação com o processo de complementação dos telòmeros (“which adds the host
+cell telomeric sequence repeats onto recognizable telomeric ends”): “Based on all these
+considerations, the proposal was made that telomere replication involves a terminal
+transferase-like activity which adds the host cell telomeric sequence repeats onto recognizable
+telomeric ends”. (SHAMPAY et al, 1984), citado em Greider (1985, p. 405).
+- Num artigo subseqüente do mesmo conjunto, verifica-se um crescente apropriação
+científica do mesmo fenômeno. É identificada uma atividade enzimática de transferase,
+explicitada no título do artigo: Greider, C.W. and Blackburn, E.H. Identification of a specific
+telomere terminal transferase activity in Tetrahymena extracts. Cell v. 43, p. 405-413, 1985.
+- No mesmo artigo, segundo comentado na revisão de Cech, as autoras propõe, ainda com
+pouco grau de certeza, o enquadramento da atividade da telomerase dentro do quadro
+conceitual já conhecido: “The authors made the reasonable proposal that the activity might be
+related to known terminal transferases, such as the enzyme that adds CCA to the 3_ ends of
+transfer RNAs.” (CECH, 2004, p. 273).
+- Posteriormente esta atividade enzimática é identificada, ou seja, enquadrada no sistema
+de conceitos desse domínio científico específico, ou seja, numa classificação de substâncias, e
+essa enzima é finalmente batizada de telomerase com este nome:
+Greider, C.W. and Blackburn, E.H. The telomere terminal transferase of Tetrahymena is a
+ribonucleoprotein enzyme with two kinds of primer specificity. Cell v. 51, p. 887-898, 1987.
+
+
+- Posteriormente a atividade, função ou papel da telomerase como catalisador e molde no
+processo de sínteses e complementação das extremidades dos telómeros é identificada:
+Greider, C.W. and Blackburn, E.H. A telomeric sequence in the RNA of Tetrahymena
+telomerase required for telomere repeat synthesis. Nature v. 337, p. 331-337, 1989.
+- Ou então: “Our results indicate the involvement of such sequence-specific telomeric
+DNA-protein interaction in cell or nuclear division” (YU, 1990, p. 131).
+Posteriormente à caracterização do fenômeno da complementação das extremidades dos
+telômeros pela ação da enzima telomerase, começam a surgir propostas estabelecendo
+relações desse fenômeno com dois outros: a senescência celular, ou seja, o número finito de
+vezes que uma célula é capaz de se reproduzir, conseqüência do encurtamento progressivo dos
+telômeros a cada duplicação e da incapacidade da célula em complementá-los através da ação
+da telomerase, que conduz a morte celular; e a relação da telomerase com o câncer,
+identificado como um processo descontrolado de duplicação celular. Esses casos são descritos
+a seguir:
+- “These mutations also lead to nuclear and cell division defects, and senescence,
+establishing an essential role for telomerase in vivo” (YU, G.L, 1990, p. 126).
+Ou então, no artigo
+- Allsopp, R.C., Vaziri, H., Patterson, C., Goldstein, S., Younglai, E.V., Futcher, C.W.,
+Greider, C.W., and Harley, C.B. Telomere length predicts the replicative capacity of human
+fibroblasts. Proc. Natl. Acad. Sci. USA, v. 89, p. 10114-10118, 1992.
+Ou nos trechos, e no artigo seguinte: “This shortening has been proposed to play a role in
+signaling the cell cycle exit characteristics of senescent cells (14, 15), although a causal role
+has not been demonstrated.” (PROWSE, 1993, p. 1493). Nesse artigo os autores propõe a
+existência do que é chamado aqui de uma relação “fraca” ao afirmar que uma relação causal
+ainda não foi demonstrada. No outro trecho e no artigo é proposta uma relação entre a
+atividade da telomerase e o câncer: “It has been proposed that the finite cell division capacity
+of human somatic cells is limited by telomere length (10). This is consistent with reports that
+telomerase activity is often high in cancer and immortalized tissue culture cells”.
+(MCEACHERN, 1995, p. 403).
+E ainda no artigo:
+- Rudolph, K.L., Chang, S, Lee, H.W., Blasco, M., Gottlieb, G., Greider, C.W., and
+DePinho, R.A. Longevity, stress response, and cancer in aging telomerase deficient mice. Cell
+v. 96, p. 701-716, 1999.
+No artigo mais antigo analisado do grupo referente ao Prêmio Lasker 2006, Blackburn,
+E.H. and Gall, J.G. (1978), vemos esse aspecto da gradual caracterização de um novo
+fenômeno científico, não só no título, mas também nos objetivos do artigo, colocados no seu
+abstract: “The extrachromossomal genes coding for the ribossomal RNA in the ciliated
+protozoan Tetrahymena thermophila we studied with respect to sequences occuring at their
+termini” (BLACKBURN, 1998, p. 33).
+5. Um modelo para conhecimento médico em artigos científicos
+Artigos científicos distinguem-se pelo tipo de raciocínio que empregam ao conduzirem a
+argumentação acerca dos fenômenos discutidos. Existem artigos teóricos e artigos
+experimentais. Esta classificação é baseado em Hutchins (1997) e Gross (1990) e em textos a
+partir da visão de abdução em Pierce (1977), como processo de descoberta de novos “insights”
+em Ciência (HOFFMAN, 1997), (MAGNANI, 2001), (PAAVOLA, 2004).
+
+Artigos teórico-abdutivos se caracterizam por discutirem questões de maior abrangência.
+Analisam criticamente diversas hipóteses anteriores, mostrando suas fragilidades. Estes
+artigos são os que têm mais potencial de apresentarem contribuições para a Ciência, já que
+discutem ou questionam o paradigma vigente (KUHN, 2003). Sua contribuição é uma nova
+hipótese, indicando um novo caminho de pesquisa. O tipo de raciocínio empregado é o
+abdutivo ou seja, o “insight” sobre a solução de questões não explicadas na Ciência e a
+formulação de novas hipóteses de solucioná-las.
+Artigos experimentais constam necessariamente de um experimento empírico. Se
+dividem em exploratórios, dedutivos e indutivos. Se caracterizam por discutirem questões
+num escopo de abrangência limitado. Não discutem os rumos de uma teoria científica, mas se
+limitam a confirmá-la ou aperfeiçoá-la. Sempre trazem resultados experimentais.
+Artigos experimentais-exploratórios tem um caráter exploratório ao desvendar e buscar
+caracterizar um fenômeno, trabalhando na direção proposta por Dahlberg de formular e provar
+proposições que caracterizam um fenômeno,
+Artigos experimentais que utilizam o raciocínio dedutivo trabalham a partir de relações
+entre fenômenos já formuladas anteriormente, cujas referências vêem citadas, aplicando-as a
+testando-as e validando-as um contexto específico. Os artigos experimentais que utilizam o
+raciocínio indutivo se caracterizam por proporem e testarem novas relações entre fenômenos
+já razoavelmente caracterizados, com certo grau de originalidade, dentro do paradigma
+científico vigente.
+A estrutura textual dos artigos em Ciências da Saúde segue o padrão IMRAD, como já
+foi mencionado. Essa estrutura corresponde à “surface structure” de Chomsky (1981) e a
+microestrutura de Kintsh e Van Dijk (1972). Já os componentes semânticos num artigo, que
+compõe o modelo proposto, correspondem à “deep structure” de Chomsky e à macroestrutura
+de Kintsh e Van Dijk e são descritos a seguir.
+Um PROBLEMA expressa uma carência, insatisfação ou deficiência conceitual com o
+atual estado de conhecimento num domínio. Um PROBLEMA pode se desdobrar em
+OBJETIVOS de pesquisa e, eventualmente, na formulação mais precisa de uma QUESTÃO
+que endereça a deficiência conceitual; esta QUESTÃO pode ser referir a um FENÔMENO
+(nos artigos EXPLORATÓRIOS), ou a dois ou mais FENÔMENOS envolvidos numa
+RELAÇÃO_ENTRE_FENÔMENOS ou HIPÓTESE. Uma HIPÓTESE relaciona dois ou
+mais FENÔMENOS através de um TIPO-DE-RELAÇÃO.
+Um autor num artigo pode formular uma hipótese original – HIPÓTESE(o) ou tomar a
+hipótese prévia – HIPÓTESE(p) - de outros autores; neste caso uma ou mais citações
+referentes à HIPÓTESE(p) – CITAÇÕES(h) - são feitas. Um autor também pode analisar
+várias HIPÓTESEs(p) para mostrar que elas são insatisfatórias como soluções para o
+PROBLEMA e formular sua HIPÓTESE(o). Um artigo teórico se justifica simplesmente por
+propor uma nova HIPÓTESE(o).
+Da hipótese, num artigo experimental, deve ser derivado um EXPERIMENTO capaz de
+ser observável empiricamente. Em um artigo científico EXPERIMENTAL, significa ter
+RESULTADOS observados segundo determinada MEDIDA, em determinado CONTEXTO
+segundo determinada METODOLOGIA. Este CONTEXTO onde os FENÔMENO(s)
+relacionados na HIPÓTESE são observados pode ser desdobrado em AMBIENTE –
+comunidade ou instituição onde o fenômeno ocorre -, ESPAÇO - o lugar onde o fenômeno
+ocorre -, TEMPO ou época em que o fenômeno ocorre e GRUPO de indivíduos onde o
+fenômeno ocorre. Todo artigo também traz uma CONCLUSÃO, na forma de uma proposição
+sobre um fenômeno ou sobre RELAÇÕES_ENTRE_FENÔMENOS.
+
+
+Estes esquemas resultaram no modelo ou Ontologia do Conteúdo de Conhecimento em
+Artigos Científicos – OCCAC, também ilustrado na Figura 2:
+Classes: artigos TEÓRICOS
+tem componentes
+PROBLEMA
+HIPÓTESE(a)
+HIPÓTESE(o)
+CONCLUSÃO(ões) e
+artigos EXPERIMENTAIS
+Subclasses: artigos EXPLORATÓRIOS
+tem componentes
+PROBLEMA
+FENÔMENO
+EXPERIMENTO
+CONCLUSÃO(ões)
+artigos INDUTIVOS
+tem componente
+PROBLEMA
+HIPÓTESE(o)
+EXPERIMENTO
+CONCLUSÃO(ões) e
+artigos DEDUTIVOS
+tem componente
+PROBLEMA
+HIPÓTESE(a)
+EXPERIMENTO
+CONCLUSÃO(ões)
+COMPONENTES semânticos de artigos
+PROBLEMA
+Subcomponentes: OBJETIVOS
+QUESTÃO de pesquisa
+HIPÓTESE (prévia ou nova)
+Subcomponentes: FENÔMENO(S)
+TIPO-DE-RELAÇÃO
+REFERENCIAS (somente
+nas HIPÓTESES prévias)
+FENÔMENO (um, nos artigos EXPLORATÓRIO(s))
+Subcomponentes: PROPRIEDADE(s)
+EXPERIMENTO
+Subcomponentes: RESULTADOS (dados quantitativos)
+MEDIDA
+CONTEXTO
+Subcomponentes:
+ESPAÇO
+TEMPO
+GRUPO social
+CONCLUSÃO(ões)
+
+Figura 2 - Ontologia do Conteúdo de Conhecimento em Artigos Científicos Digitais
+A análise do seguinte artigo mostra como componentes semânticos de um artigo (neste
+caso a hipótese) seriam identificados e registrados segundo o modelo.
+- CAMARA, Geni NL, CERQUEIRA, Daniela M, OLIVEIRA, Ana PG et al. Prevalence of
+human papillomavirus types in women with pre-neoplastic and neoplastic cervical lesions in
+the Federal District of Brazil. Mem. Inst. Oswaldo Cruz. [online], v. 98, n. 7, Oct. 2003.
+3 passos:
+Passo 1 – Tipo de raciocínio identificado: experimental-dedutivo, ou seja, o artigo realiza
+um experimento para mostrar a prevalência de HPV, hipótese já formulada anteriormente por
+outro autor.
+Passo 2 – Elementos semânticos de conhecimento são identificados no texto, como a
+hipótese formulada pelo autor:
+Hipótese (anterior)
+Antecedente: HPV
+Tipo de Relação: causa
+Consequente: lesões cervicis pre-neoplasticas e neoplasticas
+Passo 3 – Cada um desses elementos é mapeado em termos ou relações da base de
+conhecimento pública, a UMLS, UMLS Semantic Network
+Papillomavirus, Human
+“Causes”, UMLS Semantic network relação R147
+Colonic Neoplasms
+6. Conclusões
+
+
+A Ciência da Informação vêm de uma longa tradição teórica, metodológica e prática que
+converge para muitas das questões atuais colocadas pela proposta da Web Semântica e para a
+construção de ontologias. Uma área de pesquisa recorrente na Ciência da Informação é o
+processamento semântico de informações por computadores, com contribuições já históricas
+como as de Shera (1957), Luhn (1960) e mais recentes como as de Gardin (2001) e Kajikawa
+(2006).
+A Ciência da Informação deve ir além de prover técnicas e metodologias para permitir
+acesso ao texto completo de artigos científicos em bibliotecas digitais e repositórios
+científicos. As metodologias atuais de indexação consistem em assinalar a registros
+bibliográficos palavras-chave ou termos de um vocabulário controlado isolados, sem nenhuma
+relação ou papel semântico entre si. Mas as pesquisas em CI relativas à importância das
+relações e seu papel semântico também já são históricas, como atesta a recente revisão de
+Khoo (2007).
+O modelo proposto, ao identificar tipos de relações (com sua semântica própria) e
+características dos fenômenos descritos num artigo, permite realizar inferências automáticas e,
+por exemplo, resolver consultas sofisticadas como:
+- que (outros) artigos (também) têm hipóteses relacionando HPV como causa de lesões
+pré-neoplásicas e neoplásicas em mulheres?
+- que artigos têm hipóteses relacionando outros fatores que não HPV como causa de
+lesões pré-neoplásicas e neoplásicas em mulheres?
+- que artigos identificam outras características relacionadas com a estrutura das
+extremidades das moléculas lineares de rDNA?
+- que artigos identificam características do fenômeno de replicação de telômeros que
+podem ser associadas a atividade enzimática?
+A implementação prática do modelo de registro do conteúdo de artigos científicos
+conforme descrito pressupõe o desenvolvimento de todo um conjunto de ferramentas de
+“software” que processem conteúdos estruturados segundo o proposto. Trata-se na verdade de
+um programa de pesquisa. Duas destas aplicações inicialmente visualizadas estão descritas em
+Malheiros (2005) e Costa (2006), e delineadas na Figura 1.
+O modelo mostra os benefícios de um formato semanticamente mais rico para o registro
+do conteúdo de artigos científicos, baseado em relações, viabilizando através delas que
+programas agentes de “software” realizem “inferências”. Com o apoio de ferramentas de
+“software” adequadas, o conteúdo de artigos científicos pode ser extraído como um
+subproduto do processo de autoria/autopublicação de artigos científicos pelos próprios
+autores, como hoje já é bastante quando autores submetem seus trabalhos a repositórios,
+publicações eletrônicas ou bibliotecas digitais. Isso resultará em publicações eletrônicas com
+um potencial de tratamento semântico de seu conteúdo por programas agentes de “software”
+muito mais rico do que hoje é possível nas publicações eletrônicas textuais.
+

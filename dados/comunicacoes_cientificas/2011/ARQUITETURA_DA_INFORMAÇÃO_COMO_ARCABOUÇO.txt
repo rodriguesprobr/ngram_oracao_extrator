@@ -1,0 +1,491 @@
+
+ARQUITETURA DA INFORMAÇÃO COMO ARCABOUÇO
+PARA A INTEGRAÇÃO DA TECNOLOGIADA
+INFORMAÇÃO COM OS PROCESSOS ORGANIZACIONAIS
+E A INFORMAÇÃO
+
+Resumo: Este estudo teve por objetivo disponibilizar um processo de modelagem da informação
+fundamentado nos conceitos, métodos e técnicas de Organização da Informação preconizadas pela
+Ciência da Informação (CI). Foram utilizadas duas abordagens metodológicas para a realização da
+pesquisa: a Metodologia de Sistemas Flexíveis (Soft Systems Methodology – SSM), para o ciclo da
+pesquisa e a Arquitetura de Método Unificado (Unified Method Architecture – UMA), para a construção
+do processo de modelagem da informação. A validação da modelagem proposta ocorreu por meio de
+um estudo de caso realizado em uma organização pública brasileira. A principal contribuição deste
+trabalho consistiu na disponibilização de uma Arquitetura da Informação (AI), materializada por
+meio de um repositório informacional corporativo, composto por objetos informacionais, metadados
+e os sistemas de organização do conhecimento (SOC), mais especificamente, tesauros, taxonomias
+e ontologias. Todos estes artefatos são harmoniosamente conectados. A modelagem da informação
+proposta, além de materializar uma AI, documenta os processos organizacionais, suas decomposições,
+os componentes de software que os automatizam e as informações manipuladas por ambos. Assim,
+a documentação gerada permite relacionar a informação organizacional, com os componentes de
+software implementados e com os processos organizacionais concebidos durante a modelagem do
+negócio, proporcionando a integração da Tecnologia da Informação (TI) com processos organizacionais
+e com a informação manipulada pelos processos e pelos softwares.
+Palavras-chave: Organização
+
+da Informação. Tecnologia da Informação. Processos Organizacionais.
+
+1 INTRODUÇÃO
+A informação é um componente intrínseco de quase tudo o que uma organização faz.
+Assim sendo, sem uma clara compreensão dos processos organizacionais e humanos pelos quais
+a informação se transforma em percepção, conhecimento e ação, as empresas não são capazes de
+perceber a importância de suas fontes de tecnologia da informação (CHOO, 2003).
+Normalmente, as informações transitam pelas organizações sem que se tenha plena consciência
+do seu impacto, valor ou custo. Para o controle adequado das informações de uma organização, tornase necessário buscar uma gestão efetiva da informação. (DAVENPORT, 1994).
+Choo (2003), conforme apresentado na Figura 1, sugere que a gestão da informação, seja vista
+como a administração de uma rede de processos que adquirem, criam, organizam, distribuem e usam
+a informação.
+
+
+Figura 1 - Modelo Processual de Gestão da Informação
+Fonte: Choo (2003)
+
+Nessa abordagem, a gestão da informação é analisada como um ciclo contínuo de seis
+processos correlatos:
+•	 Identificação das necessidades de informação;
+•	 Aquisição da informação;
+•	 Organização e armazenamento da informação;
+•	 Desenvolvimento de produtos e serviços de informação;
+•	 Distribuição da informação;
+•	 Uso da informação.
+Portanto, um modelo processual de gestão da informação proporciona o uso eficiente da
+informação. As reações de uma organização interagem com as ações de outras organizações, gerando
+novos sinais e mensagens, aos quais se deve atentar e, dessa forma, manter ciclos do uso da informação
+(CHOO, 2003).
+Na visão de Davenport (1998), os administradores precisam de uma perspectiva holística
+para o tratamento da informação nas organizações, para que possam assimilar alterações repentinas
+no mundo dos negócios e adaptarem-se às sempre mutantes realidades sociais. Essa abordagem foi
+denominada “Ecologia da Informação” e, além de exigir um modo holístico de pensar, fundamenta-se
+por meio de quatro atributos chave:
+•	 Integração dos diversos tipos de informação;
+•	 Reconhecimento de mudanças evolutivas;
+•	 Ênfase na observação e na descrição;
+•	
+
+Ênfase no comportamento pessoal e informacional.
+
+A ecologia da informação proposta por Davenport (1998), conforme apresentada na Figura 2,
+é composta por três ambientes: o informacional, o organizacional e o externo.
+
+
+Figura 2 - Modelo Ecológico para a Gestão da Informação
+Fonte: Davenport (1998)
+
+O ambiente informacional é o núcleo da abordagem e abrange os componentes mais críticos,
+que são:
+•	 Estratégia da informação: gira em torno da pergunta “o que queremos fazer com a informação
+nesta empresa?”;
+•	 Política da informação: envolve o poder proporcionado pela informação e as responsabilidades
+da direção em seu gerenciamento e uso;
+•	 Cultura e comportamento em relação à informação: esses dois fatores estão relacionados e são
+muito importantes na criação de um ambiente informacional bem-sucedido;
+•	 Equipe da informação: pessoas ainda são os melhores “meios” para identificar, categorizar, filtrar,
+interpretar e integrar a informação;
+•	 Processos de gestão da informação: esse componente mostra como o trabalho é feito e fornece
+uma descrição completa de como funciona cada parte do trabalho informacional;
+•	 Arquitetura da informação: é um conceito que pode abranger muitos significados, no entanto,
+na perspectiva ecológica, significa um guia para estruturar e localizar a informação dentro de uma
+organização.
+Já o ambiente organizacional, contém a posição global dos negócios, os investimentos em
+tecnologia e a distribuição física da informação.
+Por fim, o ambiente externo representa a necessidade de monitoramento para a adequação da
+organização ao que está acontecendo fora dela. Esse ambiente é composto por mercados de negócios
+em geral, mercados tecnológicos e mercados da informação.
+Nesse contexto, a pesquisa descrita não teve por objetivo implementar um modelo de gestão da
+informação específico e completo, no entanto, procurou-se disponibilizar um modelo de organização
+da informação compatível com os principais conceitos de gestão da informação, alinhado à visão
+holística segundo o modelo ecológico de Davenport (1998). Logo, o conceito de AI tornou-se o
+principal foco da pesquisa.
+
+2 PROBLEMA DA PESQUISA
+O armazenamento e o acesso à informação nos ambientes organizacionais foram
+significativamente facilitados com a evolução da Tecnologia da Informação e Comunicação (TIC)
+ocorrida nas últimas décadas. No entanto, conseguir reutilizar a informação existente nesses ambientes
+é um problema que se agrava, principalmente nas organizações orientadas a processos, que dependem
+de movimentos rápidos e eficientes da informação.
+Nessas organizações, apesar das informações geradas por um sistema muitas vezes servirem
+de insumo para outros, esses diferentes sistemas, em geral, estão dispersos e não apresentam nenhum
+tipo de conexão entre si. Na maior parte das vezes, os sistemas de informação são desenvolvidos
+isoladamente, o que normalmente dificulta ou impede o reuso de informações pelos demais sistemas
+da organização.
+Outro problema existente nas organizações consiste no fato de as metodologias de modelagem
+de processos e de engenharia de software, utilizadas para a modelagem e desenvolvimento de sistemas
+de informação computadorizados, não possuírem uma estratégia para documentar os aspectos
+semânticos da informação manipulada (VICTORINO; BRÄSCHER, 2009).
+Essas metodologias vêm evoluindo consideravelmente nos últimos tempos, porém ainda
+apresentam deficiências no que diz respeito ao tratamento da informação, se comparadas com os
+métodos e as técnicas utilizados pela CI.
+Nesse sentido, a questão da pesquisa é: Como organizar as informações organizacionais
+visando o seu compartilhamento entre sistemas de informação computadorizados?
+3 ARQUITETURA DA INFORMAÇÃO
+O termo ‘Arquitetura da Informação’ foi utilizado pela primeira vez pelo arquiteto Richard Saul
+Wurman, em 1976, que o definiu como a “ciência e a arte de criar instruções para espaços organizados”.
+O autor encara o problema de busca, organização e apresentação da informação como análogo aos
+problemas da arquitetura de construções que irão servir às necessidades de seus moradores (MACEDO,
+2005).
+Não há uma definição precisa sobre o que é ou o que constitui uma AI. Observa-se, dentre os vários
+pesquisadores que escrevem sobre o assunto, uma grande quantidade e diversidade de definições.
+Brancheau e Wetherbe (1986) afirmam que AI consiste em um plano para modelagem dos requisitos
+informacionais de uma organização, que provê um modo de mapear as informações necessárias à própria
+organização, relativas aos processos do negócio e à documentação de seus inter-relacionamentos.
+Rosenfeld e Morville (2002) propõem o modelo representado na Figura 3. Nesse modelo a AI é
+representada como a interseção de contexto, conteúdo e usuários. No espaço informacional de uma
+organização é necessário conhecer os objetivos do negócio da organização (contexto), estar consciente
+aprimoramento das buscas realizadas pelos usuários com a delimitação do contexto (VICTORINO;
+BRÄSCHER, 2009).
+Portanto, a AI provê uma visão integrada da informação que trafega entre os processos da
+organização.
+O processo de Modelagem da Informação é composto por um conjunto de metodologias
+usadas de maneira integrada para gerar a AI descrita anteriormente. A Figura 5 apresenta os alicerces
+desse processo.
+
+Figura 3 – Os Alicerces do Processo de Modelagem da Informação
+Fonte: Victorino (2011)
+
+A administração de dados gera os metadados; as metodologias para modelagem de processos
+registram os processos organizacionais; as metodologias para construção de tesauros geram tesauros;
+as metodologias para construção de taxonomias geram taxonomias; as metodologias para construção
+de ontologias geram ontologias e, finalmente, as metodologias para o desenvolvimento de sistemas de
+informação geram os componentes de software que são implementações dos processos organizacionais.
+A integração das metodologias de modelagem ocorre de maneira iterativa, ou seja, a modelagem
+de processos, a modelagem dos sistemas de informação e a modelagem da informação sofrerão vários
+refinamentos até se atingir o produto final.
+Essa abordagem integrada permite que a informação mapeada durante a modelagem de um
+processo seja manipulada por um componente de software relacionado ao processo.
+O processo de modelagem da informação proporciona a integração da TI com os processos
+organizacionais e as informações, tendo em vista que a documentação gerada permitirá relacionar
+os componentes de software implementados com os processos concebidos durante a modelagem do
+negócio e as informações manipuladas por ambos.
+4 OBJETIVO GERAL DA PESQUISA
+Esta pesquisa tem por objetivo geral desenvolver um processo de modelagem da informação
+para ser empregado, em conjunto com as metodologias de modelagem de processos e as metodologias da natureza e do volume de informações existentes e de sua taxa de crescimento (conteúdo), bem
+como, entender as necessidades e os processos de busca do público-alvo (usuários).
+
+Figura 4 - Modelo de Arquitetura da Informação
+Fonte: Rosenfeld e Morville (2002)
+
+Do exposto, vê-se que o foco da AI está na representação semântica da informação, na
+organização de sua armazenagem e na otimização de sua recuperação. Em um ambiente de AI
+planejado, a organização da informação torna-se um elemento de vital importância para a garantia da
+qualidade na recuperação da informação.
+A AI proposta nesta pesquisa é composta por usabilidade, metadados, tesauros, taxonomias e
+ontologias. A Figura 4 apresenta os alicerces desta AI.
+
+Figura 5 – Os Alicerces de uma Arquitetura da Informação
+Fonte: Victorino (2011)
+
+Conforme ilustrado na Figura 4, para acessar a informação, o usuário interage com interfaces
+implementadas de acordo com critérios de usabilidade.
+Assim sendo, os metadados descrevem o suporte e o conteúdo e servem como índices para a
+recuperação da informação. Os tesauros são utilizados para permitir ao usuário encontrar o termo que
+represente um determinado significado para o que procura.
+As taxonomias navegacionais
+são utilizadas para permitir que os usuários leigos naveguem pelo conteúdo do repositório e, por esse
+motivo, são criadas levando em conta o comportamento do usuário. Já as taxonomias descritivas
+auxiliam os especialistas em suas buscas por informações. Por fim, as ontologias permitem o
+
+
+de engenharia de software utilizadas para a modelagem e o desenvolvimento de sistemas de informação
+computadorizados.
+
+5 PROCEDIMENTOS METODOLÓGICOS DA PESQUISA
+A presente pesquisa classifica-se, quanto aos fins, como sendo qualitativa, metodológica e
+aplicada.
+Duas metodologias foram utilizadas para a sua realização, a Metodologia de Sistemas
+Flexíveis (Soft Systems Methodology - SSM) e a Arquitetura de Método Unificado (Unified Method
+Architecture - UMA). A SSM foi utilizada para o ciclo da pesquisa propriamente dito, no entanto no
+estágio 4 desta metodologia (Construção de Modelos Conceituais), tornou-se necessária a adoção de
+outra metodologia capaz de permitir a especificação de um processo de Modelagem da Informação.
+Para essa parte da pesquisa, foi adotada a UMA.
+
+5.1 Metodologia Utilizada para o Ciclo da Pesquisa
+A SSM foi desenvolvida na década de 60 pela equipe de Peter Checkland, do Departamento de
+Sistemas e Administração de Informações da Universidade de Lancaster (MARTINELLI; VENTURA,
+2005).
+A Metodologia de Sistemas Flexíveis possui sete etapas distintas:
+•	
+•	
+•	
+•	
+•	
+•	
+•	
+
+Estágio 1: situação-problema não estruturada;
+Estágio 2: situação-problema estruturada;
+Estágio 3: definições fundamentais dos sistemas relevantes;
+Estágio 4: construção de modelos conceituais;
+Estágio 5: comparação dos modelos conceituais (4) com a realidade (2);
+Estágio 6: identificação das mudanças desejáveis e possíveis;
+Estágio 7: ações para melhorar a situação-problema.
+
+Os estágios 1, 2, 5, 6 e 7 são atividades que envolvem as pessoas no mundo real e os estágios 3 e 4
+destina-se ao pensamento sistêmico.
+
+
+5.2 Metodologia Utilizada para a criação do Processo de Modelagem da
+Informação
+Para o desenvolvimento do processo de modelagem da informação proposto, foi escolhido o
+metamodelo utilizado pelo RUP, o Unified Method Architecture (UMA) (SHUJA; KREBS, 2007).
+A UMA é baseada nas seguintes separações fundamentais:
+•	 Separação de conteúdo de método versus a aplicação de conteúdo de método em
+processos;
+•	 Definição de um mecanismo de extensibilidade opcional no método para gerenciamento
+em grande escala de repositórios de método e de processo;
+•	 Separação de campos de descrição de método e orientação recomendados;
+•	 Separação de elementos semânticos de notação em diagramas do processo.
+A UMA separa o conteúdo do método e possui um núcleo reutilizável de sua aplicação em processos.
+O conteúdo do método descreve o que deve ser produzido, as habilidades necessárias requeridas e
+o detalhamento dele próprio, com explicações sobre como as metas de desenvolvimento específicas
+são atingidas, independentemente do posicionamento desses itens dentro de um ciclo de vida de
+desenvolvimento. Os processos obtêm esses elementos do método e os remetem para sequências
+semiordenadas, que são personalizadas para tipos específicos de projetos.
+6 O PROCESSO DE MODELAGEM DA INFORMAÇÃO E SUA DOCUMENTAÇÃO
+Modelagem da informação consiste em um conjunto de procedimentos, técnicas, ferramentas
+e documentos auxiliares que ajudam os profissionais de informação em seus esforços para representar
+o domínio observado e os objetos informacionais pertencentes a este domínio. A modelagem da
+informação contempla tanto a descrição física, características físicas do meio e do formato em que a
+informação está registrada, quanto à descrição do conteúdo informacional.
+Para a construção do processo de modelagem da informação foi escolhido o metamodelo UMA
+(SHUJA; KREBS, 2007), composto por disciplinas e fases. As disciplinas caracterizam o conteúdo
+do método, ou seja, documentam o que deve ser feito e as fases caracterizam a execução propriamente
+dita das atividades que compõem o método.
+A documentação das disciplinas é materializada por meio da construção de diagramas de
+atividades da UML (BOOCH et al., 2005), sendo que as atividades são detalhadas em tarefas, papéis
+e produtos de trabalho. Uma das principais vantagens dessa abordagem é permitir ao usuário do
+processo de modelagem da informação configurar as disciplinas de acordo com as necessidades da
+organização alvo. Assim, o processo torna-se flexível tratando de maneira diferente organizações com
+objetivos ou porte diferentes.
+As disciplinas do processo de modelagem proposto são:
+•	 Requisitos informacionais;
+•	 Análise da informação;
+•	 Implementação;
+•	 Validação;
+•	 Disponibilização.
+A disciplina requisitos informacionais descreve as atividades relacionadas ao levantamento das
+necessidades informacionais dos usuários. Sua finalidade é oferecer às pessoas que interagem com o
+domínio observado uma compreensão dos conceitos relevantes, estabelecer padrões de metadados e
+demarcar as fronteiras do domínio. Assim, esta disciplina proporciona uma compreensão dos conceitos
+de uma determinada área de atividade. A Figura 6 apresenta o fluxo de atividades desta disciplina.
+
+Figura 6 – Fluxo de Atividades da Disciplina Requisitos Informacionais
+Fonte: Victorino (2011)
+
+A disciplina análise da informação tem por finalidade transformar os requisitos informacionais
+em um conjunto de especificações de recursos para a representação da informação e do conhecimento.
+É durante esta disciplina que a AI será planejada e o Repositório Informacional Corporativo será
+projetado.
+Segundo Café et al. (2003), Repositório Institucional “é a reunião de todos os repositórios
+temáticos hospedados em uma organização”. Lynch (2003) afirma que um repositório institucional é
+como um conjunto de serviços que uma universidade oferece para os membros da comunidade, para
+o gerenciamento e a disseminação de materiais digitais criados pela instituição e pelos membros da
+comunidade. Os autores relatam que os repositórios institucionais têm emergido nas universidades,
+mas estão espalhados dentro de outros tipos de organizações educacionais, desde colégios até institutos
+de pesquisa.
+
+Do exposto, observa-se que existem objetivos em comum entre esses tipos de ambientes
+informacionais, como: armazenar, facilitar o acesso e disseminar informações. 	
+Estendendo esse conceito para abranger, além dos objetivos educacionais, os objetivos
+organizacionais, este trabalho usa o termo “Repositório Informacional Corporativo” para referenciar
+o local onde as informações das organizações e respectivas descrições estão armazenadas.
+A Figura 7 apresenta o fluxo de atividades da disciplina análise da informação.
+
+Figura 7 – Fluxo de Atividades da Disciplina Análise da Informação
+Fonte: Victorino (2011)
+
+A disciplina implementação define as estratégias para a materialização da AI planejada na disciplina
+Análise da Informação por meio da criação do Repositório Informacional Corporativo. A Figura 8
+apresenta o fluxo de atividades desta disciplina.
+
+Figura 8 – Fluxo de Atividades da Disciplina Implementação
+Fonte: Victorino (2011)
+
+	
+
+A disciplina validação identifica os passos a serem seguidos para que os metadados e dos
+
+sistemas de organização do conhecimento sejam validados. A Figura 9 apresenta o fluxo de atividades
+desta disciplina.
+
+Figura 9 – Fluxo de Atividades da Disciplina Validação
+Fonte: Victorino (2011)
+
+A disciplina disponibilização descreve as atividades que garantem que o produto da modelagem da
+informação será disponibilizado a seus usuários finais. A Figura 10 apresenta o fluxo de atividades
+desta disciplina.
+
+Figura 10 – Fluxo de Atividades da Disciplina Disponibilização
+Fonte: Victorino (2011)
+
+As fases do processo proposto são: iniciação, elaboração, construção e transição. A meta da fase de
+iniciação é identificar o escopo da modelagem da informação. Na fase de elaboração, a meta é validar
+a AI. Os SOC serão criados na fase de construção. Finalmente, na fase de transição, os produtos
+gerados nas fases anteriores serão disponibilizados integralmente para os usuários que passarão por
+treinamento quando for necessário.
+
+1.	 OS PRODUTOS DE TRABALHO MAIS IMPORTANTES RESULTANTES DO PROCESSO
+DE MODELAGEM DA INFORMAÇÃO SÃO O REPOSITÓRIO INFORMACIONAL
+CORPORATIVO, METADADOS E OS SOC, MAIS ESPECIFICAMENTE, TESAUROS,
+TAXONOMIAS E ONTOLOGIAS.
+A Figura 11 apresenta o “Repositório Informacional Corporativo”, para a materialização da AI
+apresentada anteriormente e sua conexão com os recursos utilizados na representação da informação e
+do conhecimento resultantes do processo de modelagem da informação. Esse repositório é composto
+por objetos informacionais gerados internamente; por objetos informacionais gerados externamente,
+porém copiados para o repositório; por referência a objetos informacionais externos; por metadados
+e por componentes dos SOC que devem ser persistidos.
+
+Figura 11 - Repositório Informacional Corporativo
+Fonte: Victorino (2011)
+
+Os objetos informacionais internos são compostos pelos objetos informacionais gerados internamente
+e pelos criados externamente, porém, nesse último caso, eles passam por um tratamento para se
+tornarem aderentes ao modelo interno da organização. Já as referências aos objetos informacionais
+externos à organização têm o objetivo de facilitar a recuperação das informações externas de interesse
+da organização, sem comprometer sua capacidade de armazenagem, pois seria inviável, para grandes
+organizações, por exemplo, armazenarem, em seus repositórios informacionais, todo o conteúdo de
+seu interesse disponibilizado na web.
+No repositório proposto observa-se, ainda, um repositório interno exclusivo para os metadados e os
+componentes dos SOC que devem ser persistidos.
+
+A Figura 12 detalha como os SOC foram representados em tabelas relacionais. O conteúdo da coluna
+“Item” da tabela “Termo” foi retirado do Glossário das Forças Armadas (BRASIL, 2007).
+A tabela “Termo” armazena o código do termo, sua grafia e sua conceitualização respectivamente nas
+colunas “Cod”, “Item” e “Conceito”.
+As tabelas “Ontologia”, “TaxonomiaNavegacional” e “Tesauro” armazenam os códigos dos termos
+que possuem associações e seus relacionamentos respectivamente nas colunas “TermoInicial”,
+“TermoFinal” e “Relacionamento”. Os relacionamentos são nomeados de acordo com o SOC
+representado, por exemplo, os tesauros terão relacionamentos “TA”, “TG” e etc. As ontologias têm
+os mais variados relacionamentos e as taxonomias navegacionais agrupam os termos de acordo com
+a percepção do usuário do domínio.
+
+Figura 12 – Modelo de Persistência da Classe “Termo” e seus Auto relacionamentos
+Fonte: Victorino (2011)
+
+Com o modelo representado na Figura 12 é possível, a partir de um determinado termo,
+encontrar outros termos relacionado por meio da materialização das ontologias, taxonomias e tesauros.
+7 O PROCESSO DE MODELAGEM DA INFORMAÇÃO E O FLUXO INFORMACIONAL
+NAS ORGANIZAÇÕES
+A Figura 13 apresenta uma abstração de uma organização orientada a processos provida de AI
+(lado esquerdo da figura) juntamente com o conjunto de processos proposto por Choo (2003) para a
+gestão da informação (lado direito da figura). O objetivo da figura é apresentar como essa proposta
+pode colaborar com a gestão da informação nas organizações e o integrando da TI com os processos
+organizacionais e as informações manipuladas.
+2.	
+
+Figura 13 – O Processo de Modelagem da Informação e o Fluxo Informacional nas Organizações
+Fonte: Victorino (2011)
+
+A camada 1 representa a organização no mundo natural, que pode ser entendida como um
+arranjo sistemático de duas ou mais pessoas que cumprem papéis formais e compartilham um
+propósito comum (Robbins, 2003).
+Na camada 2, a mesma organização é vista, metaforicamente, como fluxo e transformação, isso
+porque é constituída por processos e suas decomposições (macroprocessos, processos, subprocessos,
+etapas, atividades). Uma das ideias principais em comparar uma organização a fluxo e transformação
+é justamente a compreensão de que a mudança é peça fundamental no contexto organizacional
+(MORGAN, 2002).
+A camada 3 abrange a modelagem de serviços que são partes componentes de um processo
+organizacional. Essa camada consiste em uma estratégia para organizar as atividades em serviços
+dispostos em uma arquitetura, a fim de proporcionar flexibilidade e reuso. Esse é o ponto de partida
+para o planejamento da Arquitetura Orientada a Serviços (SOA).
+Para lidar com a complexidade das organizações orientadas a processos, nas camadas 2 e 3
+estão concentradas as atividades que envolvem a descoberta, o projeto e a entrega de processos de
+negócios adicionadas ao seu controle executivo, administrativo e supervisório. Essa abordagem é
+chamada BPM (Business Process Management) (BALDAM et al., 2007).
+Na camada 4 os serviços são implementados como componentes de software (mais comumente,
+serviços web), compondo os sistemas transacionais. A implementação e a forma de disponibilização
+desses serviços web materializam a SOA planejada na camada 3.
+A camada 5 representa a implementação das consultas analíticas que atenderão aos usuários
+gerenciais, caracterizando os sistemas de apoio à decisão.
+Assim, as camadas 4 e 5 representam a implementação dos produtos de tecnologia de
+informação e comunicação (TIC) para a automação da organização. Normalmente, o usuário final
+interage com essas camadas para obter as informações de seu interesse.
+Finalmente, localizado na parte inferior da Figura 13, o repositório informacional corporativo
+armazena os objetos informacionais utilizados pelos sistemas transacionais e de apoio à decisão, além
+dos metadados relativos aos macroprocessos, processos, subprocessos, etapas, atividades, serviços,
+serviços web e consultas analíticas.
+Outro componente do repositório informacional corporativo de fundamental importância é o
+repositório dos dados persistentes dos sistemas de organização do conhecimento (SOC), composto
+por tesauros, taxonomias e ontologias.
+É importante ressaltar que, durante todo o processo de modelagem em uma organização, desde
+a sua concepção até a sua automação, o repositório informacional corporativo é carregado com objetos
+informacionais, metadados, informações sobre o domínio no qual a organização está inserida e seus
+inter-relacionamentos. Nesse repositório pode-se encontrar informações a respeito dos objetivos da
+organização, seus processos, serviços, componentes de software e conceitos do domínio de atuação,
+proporcionando o elo de ligação entre as várias camadas de abstração de uma organização.
+No lado direito da Figura 13 estão representados os processos de gestão da informação
+preconizados por Choo (2003). Segundo o autor, a gestão efetiva da informação em uma organização
+inicia-se com os processos de Identificação das Necessidades de Informação e Aquisição da Informação.
+Esses dois processos são beneficiados pelo entendimento do propósito da organização (camada 1) e
+pelo mapeamento de seus processos utilizando técnicas de BPM (camadas 2 e 3). O processo de
+modelagem da informação proposto subsidia esses dois processos de gestão da informação por meio
+do registro dos metadados dos processos modelados, dos objetos informacionais manipulados e da
+contextualização de ambos.
+As técnicas de BPM também proporcionam maior flexibilidade às organizações, subsidiando
+o Comportamento Adaptativo.
+Os sistemas gerados com ferramentas de TIC constituem os principais produtos de informação
+consumidos pelos usuários finais, favorecendo os processos de Produtos/Serviços de Informação,
+Distribuição da Informação e Uso da Informação. O processo de modelagem da informação
+proposto documenta todos os objetos informacionais, os componentes de software e a semântica
+envolvidos, facilitando a busca por informação, realizada pelos usuários, para a solução de seus
+problemas.
+O processo Organização e Armazenagem da Informação, subsidiará quase todos os demais,
+tem seus resultados materializados por meio do repositório informacional corporativo.
+A modelagem da informação abordada também é compatível com a “Ecologia da Informação”,
+proposta por Davenport (1998). A proposta de modelagem contempla os quatro atributos chave,
+considerados fundamentais para uma abordagem ecológica, que são::
+
+•	 Integração de diversos tipos de informação: o repositório informacional corporativo armazena os
+diversos tipos de objetos informacionais existente em uma organização;
+•	 Reconhecimento de mudanças evolutivas: o repositório informacional corporativo pode ser
+configurado de acordo com as peculiaridades da organização e de seus sistemas de informações,
+possibilitando flexibilidade;
+•	 Ênfase na descrição: o repositório informacional corporativo armazena, também, a descrição do
+conteúdo e do suporte dos objetos informacionais de uma organização;
+•	 Ênfase no comportamento pessoal e informacional: os SOC, previstos na metodologia
+proposta, permitem contextualizar os objetos informacionais de uma organização, possibilitando o
+seu compartilhamento por sistemas distintos, bem como, facilitam a administração dos conteúdos
+informacionais e eliminam ou reduzem os significados múltiplos.
+Um importante aspecto a ser ressaltado é que esta pesquisa apresenta uma proposta de
+estruturação de uma AI, recurso previsto por Davenport em seu modelo ecológico.
+Observa-se que o processo de modelagem da informação apresentado, quando utilizado em
+uma organização orientada a processos, pode contribuir com os processos de gestão da informação
+propostos por Choo (2003) e proporcionar subsídios ao modelo ecológico concebido por Davenport
+(1998).
+Do exposto, pode-se concluir que o mapeamento dos relacionamentos entre os processos
+organizacionais, os componentes de software e os objetos informacionais em um ambiente
+organizacional fornece o arcabouço necessário para a integração dos processos organizacionais com
+a TI e com as informações manipuladas. Uma maneira eficaz de se criar este arcabouço é por meio
+da utilização de uma abordagem sistemática para a modelagem da informação fundamentada nos
+conceitos, métodos e técnicas de Organização da Informação preconizados pela CI.
+8 CONSIDERAÇÕES FINAIS E SUGESTÕES DE TRABALHOS FUTUROS
+Esta pesquisa originou-se devido aos vários óbices encontrados em projetos de desenvolvimento
+de sistemas de informações computadorizados e à dificuldade de identificação, recuperação e
+compartilhamento da informação. Teve por objetivo disponibilizar um processo de modelagem da
+informação para ser empregado, em conjunto com as metodologias de modelagem de processos e as
+metodologias de engenharia de software utilizadas para o desenvolvimento de sistemas de informação
+transacionais e de apoio à decisão, nas organizações dispostas em torno de seus processos.
+Verificou-se que a CI tem estudado o fluxo da informação nos mais variados ambientes,
+com critérios, princípios e métodos científicos. Esse fluxo, normalmente, é automatizado por meio
+do desenvolvimento de sistemas de informações computadorizados, utilizando metodologias de
+engenharia de software. No entanto, tais metodologias raramente utilizam os conceitos, métodos e
+técnicas da CI de maneira integrada e, geralmente, não levam em conta a influência das estruturas
+organizacionais.
+
+O produto de trabalho mais importante resultante do processo de modelagem da informação
+é a AI, que é materializada por meio do repositório informacional corporativo, composto por objetos
+informacionais, metadados e os SOC, mais especificamente, tesauros, taxonomias e ontologias. Todos
+esses artefatos são harmoniosamente conectados.
+No entanto, toda pesquisa apresenta limitações quem podem ser de ordem teórica ou de ordem
+prática. Sendo assim, em continuidade ao trabalho da pesquisa sugere-se uma dissertação de mestrado
+que contemple a :
+- Estensão da AI apresentada com a finalidade de orientar a organização da informação em
+diversas instituições públicas e privadas;
+- Construção de um protótipo levando em consideração as metodologias propostas, para a
+partir do repositório informacional, identificar a relevância da informação sob o ponto de vista de
+seus usuários;
+- Realização de estudos da interação de usuários com repositório informacional corporativo.
+O objetivo é compreender perfis e comportamentos com o propósito de projetar ambientes de acordo
+com suas necessidades informacionais e modos de interação.
+- Comparação da satisfação do usuário da informação antes e após a implantação da AI
+proposta.
+
