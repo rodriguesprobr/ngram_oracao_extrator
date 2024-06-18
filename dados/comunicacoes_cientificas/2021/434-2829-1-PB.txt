@@ -1,0 +1,299 @@
+
+VISUALIZAÇÃO DE DADOS E INFORMAÇÕES: MAPEAMENTO DAS CARACTERÍSTICAS
+INFORMACIONAIS DE FERRAMENTAS GEORREFERENCIADAS
+Modalidade: Resumo Expandido
+Resumo: Realiza análise das características de ferramentas nacionais utilizadas para apresentação de
+visualização de dados e informações georreferenciadas, entendidas como visualizadores, sob a
+perspectiva informacional. A partir do conjunto de 27 visualizadores coletados de forma indutiva e
+descritiva, o trabalho reflete sobre aspectos relacionados à descrição das ferramentas, os tipos de
+dados e metadados adotados e representados e as tecnologias utilizadas para gerar visualizações
+georreferenciadas. Reconhecendo a importância da visualização como um caminho para facilitar a
+compreensão e apropriação de informações por meio dos dados, sugere possibilidades de
+aproximação entre a Ciência da Informação e a temática abordada pelo estudo.
+Palavras-chave: visualização georreferenciada; metadados; avaliação.
+1 INTRODUÇÃO
+Sejam eles quantitativos, qualitativos, geográficos ou de outros tipos, interpretar e
+apreender informações estruturadas e consistentes a partir de dados envolve aspectos
+complexos. Do contato inicial com um conjunto de dados brutos até a identificação de
+informações que auxiliem na tomada de decisão ou na construção de novos conhecimentos,
+podem haver etapas robustas de tratamento e análise de dados pouco acessíveis e
+intuitivas.
+A maneira e o formato utilizado para apresentar dados pode impactar de forma
+positiva ou negativa na transmissão de informações (KOZAK, 2010). A associação dos dados a
+elementos gráficos e visuais possui potencial para facilitar a compreensão dos significados e
+mensagens (CAIRO, 2019). Nesse sentido, a visualização de dados contribui como uma área
+vinculada à análise de dados, que combina aspectos de computação gráfica, interação
+homem-computador, experiência do usuário e mineração de dados, com o intuito de auxiliar
+no entendimento dos dados (FREITAS et al., 2001)
+Nas últimas décadas, fatores como o aumento na disponibilização de dados por parte
+de instituições governamentais, não governamentais e plataformas corporativas, combinada
+com o fortalecimento da cultura de desenvolvimento e utilização de software de código
+livre, são aspectos apontados por Cairo (2019) como importantes para a popularização da
+oferta de visualização de dados. Diante das crescentes demandas pela análise e uso de
+dados, começaram a surgir ferramentas que auxiliam na compreensão e cruzamento de
+conjuntos de dados (PIERI, 2017). Assim, por meio de tais ferramentas, entendidas no
+presente estudo como visualizadores de dados e informações, busca-se fornecer aos
+usuários possibilidades interativas e mais intuitivas de acesso, interpretação e uso de dados.
+Ao combinar elementos visuais e de interação, a visualização agrega ao conjunto de
+dados valor informativo, facilitando a captação da mensagem a partir da análise da
+representação gráfica. A visualização de dados integra fundamentos de ciência e arte
+(WILKE, 2019) e pode assumir variadas formas de representação a depender das
+características do dado que precisa ser graficamente apresentado. Kozak (2010) destaca que
+o princípio geral dos dados gráficos é representá-los da forma mais eficiente para transmitir
+uma mensagem. Todos os detalhes e elementos utilizados na visualização devem cumprir
+com esse objetivo.
+
+Apesar da relevância que os aspectos gráficos possuem no contexto da visualização
+de dados, Hullman (2019, online) esclarece que “o propósito da visualização é o insight, não
+as imagens”. É fundamental que as visualizações e os visualizadores de dados proporcionem
+novas percepções e, para cumprir com tal objetivo, as visualizações elaboradas devem levar
+em consideração o tipo de dado apresentado. Dentre as tipologias existentes, encontram-se
+os dados geoespaciais, que estão relacionados a pontos e regiões físicas da superfície
+terrestre. Projeções, mapas e camadas são exemplos de visualizações geoespaciais (WILKE,
+2019).
+Um exemplo da importância da visualização de dados por meio de mapas pode ser
+obtido a partir da análise que Brody et al. (2000) fazem da descoberta do Dr. John Snow em
+1854. Naquele período, estava ocorrendo uma epidemia de cólera em Londres, que havia
+levado à morte mais de 500 pessoas em apenas 10 dias. O entendimento mais aceito pela
+comunidade da época era o de que a Cólera era transmitida pelo ar, mas Snow tinha uma
+hipótese diferente, a de que a transmissão se dava pela água. Ele, então, construiu um mapa
+que foi utilizado para mostrar o local de residência das pessoas que morreram, e que aquela
+região possuía um único fornecedor de água. O mapa construído foi fundamental para
+permitir que as pessoas tivessem o insight citado por Hullman (2019) e percebessem que a
+origem do contágio da doença era distinta da percepção inicial que se tinha.
+Castillo e Santos (2016) afirmam que a informação geográfica difere de outros tipos
+de informações e estabelece relação entre objetos e fenômenos com localizações espaciais
+específicas. Assim, por meio de representações gráficas, é possível observar a localização
+espacial de elementos situados no mundo real. Considerando essa especificidade da
+informação geográfica e diante dos aspectos mencionados sobre a visualização e os
+visualizadores, o presente trabalho se dedica a identificar quais são as características
+adotadas pelos visualizadores nacionais de dados e informações georreferenciadas.
+Quanto à sua natureza, o presente estudo é classificado a partir da combinação de
+duas estratégias de pesquisa, a qualitativa e a quantitativa. A essa abordagem dá-se o nome
+de métodos mistos. A pesquisa de métodos mistos pode ser construída a partir de uma
+estratégia explanatória sequencial, quando após a coleta de dados quantitativos há uma
+análise qualitativa dos mesmos (CRESWELL, 2010). Levando em consideração o universo de
+visualizadores georreferenciados nacionais, procurou-se definir um conjunto específico de
+características vinculadas aos sistemas de visualização a partir de três categorias
+
+
+
+norteadoras: descrição; dados e metadados; e tecnologias. Essas orientaram as etapas de
+coleta e análise dos dados, detalhadas nas seções seguintes.
+A coleta de dados foi realizada de forma indutiva e descritiva pelos pesquisadores,
+no período que compreende julho de 2019 a maio de 2021, por meio da identificação de
+termos vinculados à temática do trabalho em ferramentas de busca na Internet; em notícias
+divulgadas por meio eletrônico; e por meio da identificação de visualizadores mencionados
+na literatura consultada para desenvolvimento da pesquisa. O conjunto de visualizadores
+georreferenciados nacionais identificados durante a busca se limitou àqueles que possuíam
+mecanismos dinâmicos de seleção dos dados, ou seja, foram desconsiderados sistemas que
+apresentavam os mapas a partir de imagens estáticas, priorizando visualizadores que
+possibilitam a interação ativa com os usuários, característica apontada por Freitas et al.
+(2001) e que evidencia a importância de opções interativas em sistemas de visualização.
+Ao todo, foram identificados 40 visualizadores, mas após a aplicação dos critérios de
+seleção definidos na metodologia, a amostra de ferramentas analisadas passou a ser
+composta por 27 visualizadores de dados georreferenciados nacionais. Os dados oriundos
+deste estudo encontram-se disponíveis em um endereço online1.
+2 VISUALIZADORES GEORREFERENCIADOS DE DADOS E INFORMAÇÕES
+A primeira categoria verificada foi a de Descrição, que buscou observar aspectos que
+caracterizassem os visualizadores conforme o tipo de acesso disponibilizado aos usuários,
+tipo de instituição responsável, objetivo, idioma e data de desenvolvimento2.
+2.1 Tipo de acesso
+O tipo de acesso levou em consideração as possibilidades de navegação
+disponibilizadas aos usuários durante o manuseio das funcionalidades. Se verificada a
+necessidade de realização de cadastro ou solicitação obrigatória de login, o visualizador foi
+classificado como restrito. Na análise foi possível identificar que todos os sistemas
+disponibilizam acessos abertos, sem a necessidade de identificação por parte do usuário.
+
+1
+
+Os dados que subsidiaram este estudo podem ser acessados a partir do endereço:
+https://drive.google.com/drive/folders/1_GIlAgADnn_YK6axcYEf2Xi17eUHiTfD?usp=sharing
+2
+Coletada pela ferramenta Wayback Machine disponível em: https://archive.org/web/. Acesso em: 10 de maio
+de 2021.
+
+
+
+2.2 Objetivo e instituição responsável
+Desenvolvidos e mantidos em sua maioria por organizações públicas, 19 (70,4%), os
+objetivos dos sistemas variam entre publicizar os dados da própria instituição, os dados que
+ela tem a curadoria e disponibilizar os dados de terceiros. Com a análise dos ambientes,
+observou-se que cinco deles se caracterizam como agrupadores de dados produzidos por
+outras instituições ou coletados de forma colaborativa. Os outros 22 visualizadores são
+mantidos por insumos informacionais das próprias instituições e objetivam disseminar
+dados, apoiar a tomada de decisão e a formulação de políticas públicas.
+2.3 Idioma
+Apenas sete (25,9%) visualizadores possuíam recurso de tradução para o idioma
+inglês, sendo que um deles também para o espanhol. Esse é um indicativo de que não há
+interesse em ampliar o acesso aos dados para um público internacional, pelo menos por
+meio dessas ferramentas de visualização, já que se espera que estes mesmos dados possam
+estar disponíveis em outros ambientes por meio de repositórios que oferecem conteúdos
+em formato textual.
+2.4 Datas de desenvolvimento
+Desde 2011, quando o primeiro visualizador do Instituto Brasileiro de Geografia e
+Estatística (IBGE) passou a constar na plataforma da Internet Archive3, novos visualizadores
+de dados georreferenciados são indexados todos os anos. Em 2017, foram seis, mas como
+esta pesquisa não foi exaustiva na identificação de ferramentas de visualização, não é
+possível analisar se há tendência de crescimento no número desse tipo de ferramenta.
+Todavia, percebe-se que há uma consolidação das tecnologias e conceitos utilizados. O
+aprimoramento dos visualizadores georreferenciados é confirmado pelo número de registros
+de atualizações armazenados na base do Internet Archive, em média, 13 atualizações por
+ano para cada visualizador. Alguns, como o atlas da violência do Instituto de Pesquisa
+Econômica Aplicada (Ipea)4, registraram, em média, 49 atualizações por ano.
+
+3
+4
+
+Disponível em: http://web.archive.org/. Acesso em: jun. 2021.
+Disponível em: http://www.ipea.gov.br/atlasviolencia/. Acesso em: jun. 2021.
+
+
+
+3 DADOS E METADADOS GEOGRÁFICOS
+A análise dos dados e metadados apresentados pelos visualizadores identificados
+levou em consideração os tipos de dados em relação aos seus níveis de abertura e
+publicidade, além da tipificação quanto aos temas abordados pelos dados. Também foi
+analisada a natureza das fontes provedoras dos dados, que foram caracterizadas durante a
+coleta como públicas ou privadas. Quanto aos metadados, considerou-se os padrões que
+foram adotados.
+3.1 Tipos de dados
+A Open Knowledge Foundation (2012) aponta que dados abertos são aqueles que
+podem ser usados, reutilizados e distribuídos livremente por qualquer pessoa, no máximo,
+exigindo-se que a fonte seja citada ou que os dados sejam divulgados com a mesma licença.
+Entre os visualizadores analisados há consonância com os preceitos de dados abertos, visto
+dos 27 sistemas, apenas 3 não disponibilizaram seus dados. Quanto ao tipo, 15
+visualizadores apresentaram dados de fontes governamentais e 7 apresentaram dados de
+pesquisa. É possível destacar a necessidade de incremento na publicização de opções de
+visualização dos dados de pesquisa para que estes também sejam insumo para criação de
+novos produtos e serviços para a sociedade.
+3.2 Fontes de dados
+Entre os visualizadores analisados, 23 (85,1%) utilizam dados provenientes de fontes
+públicas. Este fato sinaliza que os visualizadores são utilizados para apresentar dados e
+informações que muitas vezes são produzidas pela própria sociedade ou, pelo menos,
+financiadas por ela. Logo, a disponibilização de ferramentas que apresentem estes
+conteúdos para a sociedade de maneira mais compreensível é uma forma de permitir que a
+população se aproprie de um bem comum.
+3.3 Padrões de metadados
+Dos sistemas analisados, 20 (74%) não utilizam ou não disponibilizam de forma
+explícita o padrão de metadados adotado. Tal porcentagem aponta a falta de atenção
+dedicada aos aspectos informacionais dos ambientes analisados, visto que os metadados
+influenciam a recuperação e reutilização de dados e informações.
+
+
+Dentre os sistemas que informam o padrão de metadados utilizado, foram
+identificados os seguintes: Géoclip, ISO 19115/2009, ISO 19139/2007, Metadados
+Geoespaciais do Brasil (MGB) e ArcGis Metadata. A falta da incorporação de padrões de
+metadados, em especial a do MGB, nos sistemas analisados, indica que conceitos
+informacionais importantes podem não ter sido considerados no momento do planejamento
+e desenvolvimento das ferramentas de visualização.
+Ao negligenciar a dimensão informacional de um sistema, perde-se a oportunidade
+de construir sistemas melhores, capazes de evoluírem e compartilharem avanços com outras
+plataformas. Isso provavelmente é reflexo da falta de envolvimento de profissionais da
+informação no desenvolvimento dos visualizadores de dados e informações, uma vez que
+tradicionalmente esta tarefa é delegada às pessoas da área de Tecnologia.
+4 TECNOLOGIAS PARA VISUALIZAÇÃO DE DADOS GEOGRÁFICOS
+Os visualizadores foram analisados com relação a aspectos tecnológicos relativos ao
+tipo de licença, software utilizados para estruturação do ambiente e sua adequação para
+diferentes plataformas de acesso, tais como computadores e dispositivos móveis. Também
+foram considerados questões sobre a implementação das tecnologias, ou seja, os recursos
+disponibilizados a partir dessa implementação.
+4.1 Tipo de licença
+Não há indicações claras com relação ao tipo de licença utilizado pelos visualizadores
+analisados. Em alguns, existe a sinalização da licença relacionada à ferramenta de mapa, que
+é uma parte do visualizador, mas não o contempla em sua totalidade. Sendo assim, o que se
+conclui é que esta não é uma preocupação das instituições que constroem tais ferramentas.
+4.2 Software utilizado
+Dos 27 ambientes analisados, 12 utilizavam tecnologias proprietárias, sendo seis o
+ArcGis e seis o Google Maps. Nove plataformas optaram por tecnologias livres, utilizando o
+OpenStreetMaps. Embora as duas tecnologias proprietárias, disponibilizadas pelo Google e
+pelo ArcGis, tenham um espaço semelhante entre os sistemas utilizados, a do Google
+oferece planos de utilização gratuita com limite de acessos, enquanto a outra depende da
+aquisição de licenças. Já o OpenStreetMaps permite autonomia total na implementação
+desse tipo de visualização.
+
+Embora a maioria dos sistemas analisados utilizem, em alguma medida, recursos de
+software livre, algumas plataformas analisadas optaram por incorporar também sistemas
+proprietários na construção de suas soluções. Nesse sentido, há uma incorporação de
+tecnologias livres e fechadas nas ferramentas analisadas, que embora proporcionem
+soluções mais completas, também pode representar um problema na disponibilização futura
+dos sistemas, exigidas por alguns tipos de licença. Entre as tecnologias mais utilizadas estão
+Leaflet e recursos tecnoinformacionais provenientes do Instituto Nacional de Estadística,
+Geografía e Informática do México (INEGI)5 e do Environmental Systems Research Institute
+(Esri)6.
+4.3 Dispositivos móveis
+De todos os visualizadores utilizados, 20 implementaram navegabilidade apropriada
+para dispositivos móveis. Não foram coletadas informações sobre a origem do acesso às
+ferramentas, mas estes dados indicam que há preocupação com o acesso realizado a partir
+de contextos em que a mobilidade é importante.
+Acredita-se que a grande quantidade de visualizadores adaptados para esse tipo de
+dispositivo é também fruto das tecnologias utilizadas. As três tecnologias de mapa, ArcGis,
+Google Maps e OpenStreetMaps, são adaptáveis para telas pequenas. Além disso, a
+incorporação do Leaflet, voltado para dispositivos móveis, mostra-se como um indicativo de
+que seria possível acessar as ferramentas de visualização a partir de diversos contextos
+tecnológicos.
+4.4 Recursos disponibilizados
+Os mapas analisados disponibilizaram o recurso de camadas, ou seja, imagens
+carregadas sobre um mapa. As camadas são responsáveis por atribuir um valor referenciado
+a determinada área. Nos visualizadores analisados, não se pôde encontrar recursos de
+construção dinâmica das imagens carregadas sobre os mapas, quando a partir da seleção de
+um indicador é possível realizar o carregamento de informações associadas àquela
+originalmente escolhida. Isso se deve, principalmente, pelo padrão utilizado para construção
+
+5
+
+Instituto Nacional de Estadística, Geografía e Informática do México. Disponível em:
+https://www.inegi.org.mx/servicios/ . Acesso em: jun. 2021.
+6
+Disponível em: https://www.esri.com/pt-br/home. Acesso em: jun. 2021.
+
+
+dos mapas. Nas ferramentas examinadas, o mapa é armazenado na forma como será
+exibido, o que dificulta a incorporação de outras informações complementares.
+5 CONCLUSÃO
+A proposta de apresentar dados e informações em interfaces gráficas é uma opção
+pela inclusão, uma vez que este tipo de visualização permite que mais pessoas
+compreendam as informações que podem ser extraídas de um determinado conjunto de
+dados (BRODY et al., 2000; HULLMAN, 2019). Quando se fala em dados georreferenciados, a
+proposta de utilizar visualizações gráficas é relevante, pois permite apresentar de forma
+inequívoca qualquer lugar, bem como o povo que nele habita, fazendo com que aqueles que
+acessam essas visualizações tenham condições de se envolver objetivamente com a história
+a ser contada.
+Ao analisar os visualizadores georreferenciados de dados e informações, percebeu-se
+que, para as instituições, a maior motivação para a construção desses sistemas é apresentar
+os dados e informações produzidas ou custodiadas pela própria organização, como
+observado em 22 dos 27 sistemas analisados. Justamente por isso, espanta o baixo número
+de visualizadores que possuem recursos de tradução para outros idiomas, apenas sete, uma
+vez que tal funcionalidade ampliaria a visibilidade dos dados e informações disponibilizados
+e representados graficamente.
+Com relação à não adoção de padrões de metadados por 20 dos 27 sistemas,
+ressalta-se uma grande deficiência no que diz respeito à organização e disseminação dos
+dados e informações. Sem a definição de padrões de metadados, qualquer tentativa de
+interoperabilidade de dados ou de indexação das informações será dificultada.
+No que tange às tecnologias utilizadas pelos visualizadores, observou-se a integração
+de tecnologias abertas e proprietárias, fato positivo no sentido de promover melhorias das
+ferramentas. Apesar disso, ao considerarmos que a maioria das plataformas são mantidas
+por instituições públicas, acredita-se que a utilização de tecnologias proprietárias possam ser
+um empecilho para o compartilhamento ou mesmo a manutenção futura das tecnologias
+fomentadas. De fato, embora os sistemas utilizem tanto software livre como dados públicos,
+não foi possível perceber a preocupação em fomentar a abertura das ferramentas
+analisadas, ou seja, os visualizadores se alimentam de um ecossistema aberto, mas não
+corroboram para que esse ecossistema incorpore as contribuições advindas do próprio
+visualizador de dados e informações desenvolvido. A falta de detalhamento das informações
+
+
+
+sobre os sistemas ou sobre os padrões adotados pelas ferramentas dificultam o seu
+reaproveitamento e sinalizam baixo interesse em se desenvolver uma comunidade capaz de
+contribuir com o desenvolvimento das plataformas de visualização analisadas.
+Apesar das limitações identificadas nos visualizadores, é inegável o papel relevante
+que tais ferramentas possuem na apresentação de informações, bem como a tendência de
+cada vez mais serem aprimoradas as formas como dados e informações são disponibilizados
+em mapas georreferenciados. Nesse sentido, vale ressaltar a importância da participação
+dos profissionais da Ciência da Informação (CI) nas discussões relacionadas à visualização de
+dados e informações, trazendo para a reflexão questões teóricas e conceituais da área, de
+forma a promover melhorias nos aspectos informacionais vinculados à concepção,
+implementação e uso de visualizadores. Compreende-se que a aproximação entre a CI e a
+visualização de dados permitirá que este recurso se torne ainda mais importante na
+apropriação e no entendimento de como os dados representam as histórias que são
+construídas por nossa sociedade.
