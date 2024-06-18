@@ -1,0 +1,852 @@
+
+PADRÕES PARA DOCUMENTAÇÃO DE RÉPLICAS DIGITAIS EM 3D: O CASO DE ESCULTURAS
+MODERNISTAS NO ESPAÇO PÚBLICO DO RIO DE JANEIRO
+Modalidade: Trabalho Completo
+Resumo: O artigo trata de instituições interessadas em tornar mais efetivo o acesso e a recuperação
+de informações por meio da aplicação das tecnologias digitais em 3D bem como das tecnologias para
+tratamento de dados na Web. Como estudo de caso, partiu-se da proposta de digitalização em 3D de
+esculturas públicas do período moderno situadas em espaços públicos na cidade do Rio de Janeiro,
+visando a criação de um repositório envolvendo as réplicas digitais produzidas a partir dessas obras
+digitalizadas. As réplicas digitais nesse contexto carecem de descrição em seus aspectos originais, de
+mídia e de conteúdo em 3D para a obtenção da documentação desses ativos. O artigo, assim,
+objetiva analisar potenciais vocabulários, incluindo padrões de metadados e ontologias, a fim de
+serem recomendados ao processo de documentação. Metodologicamente, a pesquisa foi classificada
+como sendo de natureza qualitativa, de caráter exploratório, descritivo e explicativo à luz de literatura
+científica já publicada e material empírico específico, o que a torna bibliográfica e documental.
+Apresenta os resultados da análise de padrões e vocabulários para documentação de patrimônio
+cultural e uma discussão sobre como se alinharam à natureza de metadados discutida na pesquisa.
+Conclui-se mostrando que a proposta para a documentação dos ativos apoiando-se no uso de padrões
+de metadados e ontologias bem fundamentadas e recomendadas por comunidades e entidades
+normativas se mostra diferenciada e estratégica na busca de soluções inteligentes para descrição de
+conteúdo multimídia no domínio de patrimônio cultural.
+Palavras-Chave: Acervos em Rede; Digitalização 3D; Padrões de Metadados; Ontologias.
+
+1 INTRODUÇÃO
+A demanda por integração e compartilhamento de dados heterogêneos na Internet
+tem despertado interesse em várias comunidades na publicação de seus dados em formato
+padronizado utilizando as tecnologias da Web Semântica. O Linked Open Data (LOD) ou dados
+abertos interligados é uma iniciativa vinculada a Web semântica (BERNERS-LEE; HENDLER;
+LASSILA, 2001) que fundamenta este cenário, possibilitando ligações entre dados de diferentes
+fontes na proposição de que novos conhecimentos possam ser gerados através do cruzamento
+desses dados em vários tipos de consultas personalizadas (BERNERS-LEE, 2006; BIZER; HEATH;
+BERNERS-LEE, 2009; SCHANDL et al., 2011; DOMINGUE; FENSEL; HENDLER, 2011). Dentre as
+comunidades que fazem uso, destacam-se: patrimônio cultural, multimídia, biologia, medicina,
+genoma, na adoção de conceituações comuns por meio de vocabulários semânticos na Web
+(SHADBOLT; HALL; BERNERS-LEE, 2006; SCHANDL et al., 2011). Tais comunidades desenvolvem
+linguagens com padrões preconizados pelo World Wide Web Consortium (W3C) para
+representar e organizar semanticamente seus dados na rede.
+O interesse deste artigo está nas instituições inseridas no contexto de patrimônio
+cultural, como bibliotecas, arquivos, museus, centros de documentação e memória, dentre
+outras, interessadas em tornar mais efetivo o acesso e a recuperação de informações por meio
+da aplicação das tecnologias. Nesse contexto, a presente pesquisa aproveitou-se da
+maturidade das tecnologias digitais em três dimensões (3D) bem como das de tratamento de
+dados na Web para possibilitar que as comunidades de patrimônio cultural tenham acesso
+aberto à documentação envolvendo objetos culturais.
+
+Como estudo de caso, partiu-se da proposta de digitalização em 3D de esculturas
+públicas do período moderno situadas em espaços públicos na cidade do Rio de Janeiro, que
+visa à criação de um repositório digital em rede envolvendo as réplicas digitais produzidas a
+partir dessas obras digitalizadas. O projeto foi idealizado por iniciativa de duas escolas da
+Fundação Getúlio Vargas (FGV): a Escola de Ciências Sociais da Fundação Getúlio Vargas
+(FGV/CPDOC1) e a Escola de Matemática Aplicada (FGV/EMAp2), unidas a colaboradores
+externos à instituição. O cenário evidencia o caráter interdisciplinar do projeto, que une
+tecnologia de dados e computação gráfica à expertise de documentação histórica.
+O propósito desse repositório é disseminar um detalhado conjunto de informações
+para o público em geral, pesquisadores e gestores ligados à preservação do patrimônio,
+permitindo, assim, conhecer e potencializar o uso desse acervo de bens culturais. Para tal, a
+pesquisa em si investigou, propôs e validou um fluxo de trabalho necessário para a
+documentação das obras de arte modernistas envolvidas no âmbito do projeto, a saber: i)
+identificação de monumentos e esculturas em espaços abertos na cidade do Rio de Janeiro; ii)
+produção das réplicas digitais em 3D, incluindo o processo de digitalização das obras; e iii)
+formas de acesso às réplicas digitais. Nesse cenário, as réplicas digitais carecem de descrição
+em seus aspectos originais, de mídia e de conteúdo em 3D para a obtenção da documentação
+desses ativos de patrimônio cultural, pensando em acesso e recuperação de informações
+relevantes e de interesse aos provedores de conteúdo e seus usuários finais.
+Constata-se, assim, que a criação de acervos em rede cresce em volume considerável
+com projetos de digitalização de coleções envolvendo objetos culturais (HILDEBRAND et al.,
+2010; PATTUELLI, 2011; WINER; ROCHA, 2013) que buscam ampliar a democratização do
+conhecimento cultural na Web, visando preservação, recuperação e conservação de
+patrimônios culturais (ARARIPE, 2004). Entretanto, ao que se percebe, o uso das tecnologias
+pela sociedade atual remete a questões da existência de múltiplos formatos, tópicos, línguas e
+linguagens, culturas e públicos-alvo (comunidades leigas e especialistas), o que promove
+desafios ao processo de produção, organização e disseminação de informação em função da
+descaracterização do formato de produção e consumo de informação associado a seus
+usuários. Para o campo de patrimônio cultural com interesse na publicização de seus acervos
+em rede, pode-se considerar como sendo um dos principais desafios (HYVÖNEN, 2012).
+1
+2
+
+FGV: Centro de Pesquisa e Documentação de História Contemporânea do Brasil. https://cpdoc.fgv.br/sobre
+FGV: Escola de Matemática Aplicada. https://emap.fgv.br/
+No campo da Ciência da Informação, em especial na área de Organização e
+Representação da Informação e do Conhecimento (DAHLBERG, 1993; HJØRLAND, 2003;
+ABBAS, 2010), as pesquisas se concentram na busca de melhorias aos sistemas de recuperação
+da informação, incluindo estudos sobre padrões de metadados, modelos conceituais e de
+referência, vocabulários controlados e ontologias para o tratamento descritivo e temático de
+documentos em várias mídias visando à necessidade de integração semântica e
+disponibilização global de recursos de informação na rede (IFLA, 1998; LE BOEUF, 2018;
+EUROPEANA, 2017; LEMOS; SOUZA, 2018).
+Desde a década de 90, a comunidade de Ciência da Informação vem pesquisando e
+fazendo uso de ontologias (VICKERY, 1997; ALMEIDA, 2013; SOERGEL, 2017) na busca de
+padronizar a linguagem envolvida no domínio e facilitar a comunicação entre usuários e
+máquina. Ontologias podem auxiliar o trabalho do profissional da informação no momento da
+representação dos documentos, pois são sistemas constituídos por um vocabulário e um
+conjunto de definições consensuais no âmbito de um domínio, que pode se apresentar em
+uma linguagem lógica. Esta, por sua vez, através de sua semântica formal, poderia eliminar
+contradições envolvendo as terminologias, os conceitos e as relações entre estes, resultando
+numa especificação não ambígua do domínio. Assim, podem ser usadas, por exemplo, para
+organização e controle da terminologia usada em metadados destinados a mídias diversas;
+além de auxiliar usuários na produção de descrições mais sistemáticas e consistentes por meio
+de conhecimento explícito acerca de um domínio. Tal modelo é referenciado na literatura
+como anotação semântica de documentos (UREN et al., 2005; BÜRGER et al., 2009;
+DOMINGUE; FENSEL; HENDLER, 2011; SILVA; SOUZA, 2014), o que os tornam inteligentes no
+sentido de possibilitar conhecimento sobre o conteúdo, viabilizando processamento pela
+máquina.
+Nessa perspectiva, este artigo objetiva analisar potenciais vocabulários, incluindo
+padrões de metadados e ontologias, a fim de serem recomendados ao processo de
+documentação das réplicas digitais em 3D, que são objeto de estudo do projeto
+FGV/CPDOC/EMAp elucidado anteriormente. Ressalta-se que a especificação de uso efetivo
+desses padrões e vocabulários é antes de tudo uma proposta de trabalhos futuros.
+O artigo encontra-se organizado como se segue. A presente seção contextualiza o
+cenário da proposta de documentação das réplicas digitais em 3D, problematiza a pesquisa e
+traça o objetivo do artigo. As seções 2 e 3 se incubem de apresentar embasamentos
+
+conceituais e empíricos úteis ao entendimento da pesquisa. A seção 4 descreve os aspectos
+metodológicos que fundamentaram o percurso da pesquisa, destacando as etapas do fluxo de
+trabalho proposto para documentar o processo de identificação, digitalização e acesso às
+réplicas digitais em 3D; além do método aplicado à identificação, à seleção e à análise de
+vocabulários adequados ao objetivo da pesquisa. A seção 5 apresenta os resultados,
+promovendo uma discussão sobre a natureza dos metadados frente a cada etapa do fluxo de
+trabalho aliada à indicação de potenciais vocabulários que poderiam se ajustar a cada uma
+dessas etapas. Finalmente, a seção 6 se encarrega de traçar as considerações finais e os
+direcionamentos futuros quanto à continuidade do projeto.
+2 DIGITALIZAÇÃO DE PATRIMÔNIO CULTURAL E PRODUÇÃO DE RÉPLICAS DIGITAIS EM 3D
+Um recurso digital de tipo multimídia contempla um documento composto que faz
+referência a vários tipos de objetos, tais como vídeo, texto, som, imagem, modelo em 3D,
+dentre outros, e que ainda pode ser dividido em partes que resultam em tipos de mídias
+específicos (SITARAM; DAN, 1999). Atualmente, objetos multimídia tornam-se onipresentes no
+lazer, no aprendizado, nas artes, na comunicação, no comércio, nas ciências, tomando
+formatos de arquivos digitais produzidos e disponibilizados geralmente em repositórios na
+Web. Um exemplo em patrimônio cultural seriam coleções digitais organizadas em bases de
+dados oriundas de museus e outras instituições responsáveis pela guarda e divulgação de
+obras de arte e documentos históricos.
+Adjeroh e Nwosu (1997) acrescentam que alguns tipos de dados multimídia como
+vídeo, áudio e sequências de animação possuem requisitos temporais que implicam
+diretamente na representação, armazenamento, transmissão, manipulação e apresentação do
+dado. De forma similar, imagens, modelos em 3D e vídeos possuem restrições espaciais em
+seus conteúdos no que diz respeito a relações espaciais entre objetos individuais pertencentes
+a uma imagem, a uma réplica digital em 3D ou a um quadro de um vídeo. Desse modo, na
+representação de objetos multimídia devem-se levar em consideração: i) relações espaciais
+entre elementos de interesse dentro do conteúdo; e ii) relações temporais na ocorrência de
+eventos dentro de um período de tempo.
+No contexto da presente pesquisa, uma réplica digital em 3D pode ser considerada um
+recurso digital multimídia por envolver composição de imagens estáticas, gráficos, possíveis
+textos, ou até mesmo sons. A réplica reproduz da forma mais abrangente possível as
+informações de um objeto físico, incluindo informações de forma, cor e textura. Esses recursos
+
+são de grande utilidade para a comunidade de patrimônio cultural, pois podem facilitar o
+compartilhamento de informações que são críticas para a salvaguarda e disseminação de tais
+objetos. Para Scopigno et al. (2017), o progresso dos sistemas ópticos, da fotografia digital e
+da computação visual disponibilizou uma série de tecnologias maduras para a produção de
+réplicas digitais em 3D, desde scanners de alto custo até câmeras comuns. Além das
+tecnologias digitais em 3D, as abordagens baseadas na Web já revolucionaram o tipo de
+acesso ao resultado dos esforços de digitalização (POTENZIANI et al., 2015; SCOPIGNO, et al.,
+2017; POTENZIANI et al., 2018). Repositórios baseados na Web, como o Sketchfab3 e o
+Scanthe World4, facilitam o compartilhamento de informações em 3D com um público mais
+amplo, motivando, portanto, uma variedade de usuários a se engajarem em esforços de
+digitalização.
+Na última década, uma grande quantidade de projetos tem focado na digitalização de
+ícones únicos ou um conjunto de artefatos associados a patrimônio cultural. Por exemplo,
+projetos como o 3DPetrie5, STARC6 e 3D-ICONS7, entre outros, investigaram a aplicação de
+tecnologias em 3D para documentação de patrimônio cultural. Scopigno et al. (2017) resumem
+o estado da arte dos desafios para essas iniciativas atuais de digitalização. Uma observação
+importante é o fato de que, apesar da disponibilidade de plataformas de compartilhamento,
+ainda há lacunas em abordagens estruturadas para gerar e agregar os resultados de um
+número considerável de iniciativas de digitalização em 3D. Isso inclui as réplicas digitais em 3D
+resultantes, bem como todo o conteúdo gerado durante o processo de digitalização.
+Informações sobre os metadados usados nesses projetos envolvendo tecnologias digitais em
+3D também são importantes de serem compartilhadas entre as comunidades de prática, em
+função da troca de experiências sobre padrões de descrição para esse tipo de recurso. Isso
+inclui metadados sobre os tipos de arquivos de mídia digital em 3D, metadados que
+descrevem a réplica digital em si e metadados que descrevem os artefatos no mundo real, o
+que promove benefícios em aspectos de acessibilidade e disponibilidade desses recursos em
+rede.
+
+3
+
+https://sketchfab.com/
+https://www.myminifactory.com/scantheworld/
+5
+MUSEUM P.: 3d petrie museum. https://www.ucl.ac.uk/3dpetriemuseum/3dobjects
+6
+STARC: Starc. http://public.cyi.ac.cy/starcRepo/explore/objects
+7
+3D-ICONS: 3d-icons. http://3dicons-project.eu/
+4
+
+
+O presente projeto de pesquisa focou em esculturas ao ar livre, colocadas em estradas,
+ruas, parques e outras áreas públicas do Rio de Janeiro, o que se denominou de ativos de
+patrimônio aberto. Estando em espaços públicos, os monumentos tornam-se abertos à
+sociedade desenvolvendo um senso comum de propriedade e responsabilidade de cuidar
+deles, o que remete à conservação do patrimônio. Os monumentos e esculturas pertencem ao
+contexto modernista brasileiro, movimento artístico que encontrou sua própria expressividade
+em arquitetura, paisagismo, arte, poesia e literatura. Por quase um século, a arquitetura
+moderna e pós-moderna brasileira além do paisagismo foram aclamados mundialmente. O
+foco na história moderna e contemporânea é assim justificado pela instituição alvo e o
+objetivo de longo prazo é a interpretação da escolha e colocação dos monumentos públicos
+em seu contexto histórico. A tecnologia surge como um meio para contar a história e não o
+objetivo em si.
+3 MODELOS PARA ANOTAÇÃO SEMÂNTICA DE RECURSOS EM REDE
+Um recurso de informação em ambientes digitais pode ser descrito por meio de
+modelos de anotação expressos em tags, atributos, relações e ontologias dentre os quais se
+caracterizam por seus níveis de complexidade estrutural (BÜRGER, 2009). Um elemento de
+anotação baseado em tag caracteriza-se por uma palavra chave não hierárquica ou termo livre
+associado a um recurso. Um elemento de anotação baseado em “atributo” é representado por
+um par <AN, AV>, em que AN é o nome do atributo e AV é o seu valor. Já o modelo de
+anotação de relação é uma extensão do modelo de atributos, permitindo o usuário interligar
+recursos através de links. Exemplos de aplicações seriam: a rede social Flickr e a base de
+conhecimento Wikidata.
+Apesar de serem modelos comumente usados no contexto da Web, as anotações
+oriundas de tags, atributos e relações ficam sujeitas a problemas de heterogeneidade
+semântica devido à natureza ambígua da linguagem natural, resultando em questões como (i)
+polissemia, (ii) sinonímia e (iii) fatores hierárquicos. Em (i) os elementos de anotação podem
+ter interpretação ambígua, por exemplo, o termo “história” pode ser usado para associar uma
+“breve descrição histórica do monumento” ou para representar “um tipo de disciplina”; essa
+situação pode reduzir a precisão na busca em um sistema de recuperação da informação. Em
+(ii), os elementos de anotação podem ser sintaticamente diferentes, mas com o mesmo
+
+significado, por exemplo, os nomes de atributos “é fotografia de” e “é monumento de” podem
+ser usados alternativamente por usuários e, portanto, deveriam ser ligados como atributos
+sinônimos. E em (iii), os termos usados na anotação e na busca são diferentes em suas
+especificidades, por exemplo, quando o usuário executa a busca com o termo “história da
+arte”, os recursos anotados com o termo “modernista”, caso não sejam vinculados, não serão
+encontrados no sistema.
+Os problemas supracitados geralmente são amenizados usando-se de instrumentos
+como vocabulários controlados (LANCASTER, 2004; ANSI, 2005) para identificar de forma
+unívoca e não ambíguos recursos ou documentos envolvidos em sistemas de recuperação de
+informação. Desse modo, no processo de anotação, o usuário utiliza elementos do vocabulário
+controlado (ex. termos, conceitos) para retirar ambiguidades dos termos destinados à
+descrição do recurso; já no processo de busca, o usuário produz uma consulta buscando o
+mesmo feito nos termos envolvidos a partir de elementos do vocabulário controlado e, em
+seguida, submete esta consulta a uma máquina de busca.
+Ontologias como modelo de anotações podem ser usadas como vocabulários
+controlados, no entanto numa perspectiva de tratamento semântico, o que permite um
+usuário descrever e interligar recursos existentes por meio de qualificadores (que podem ser
+explicitados por meio de axiomas formais) como conceitos, instâncias, propriedades e
+restrições mantidas entre tais recursos. O modelo é endereçado à anotação semântica de
+documentos, o que Shadbolt, Hall e Berners-Lee (2006) esclarecem ser uma abordagem
+subjacente aos conceitos preconizados pela Web Semântica no que tange ao fornecimento de
+significado à organização da informação por meio de conexões lógicas entre os termos, o que
+promove interoperabilidade entre sistemas. Assim, padrões internacionais relacionados a
+marcações de dados, a primitivas de modelagem e a linguagens de representação baseadas
+em eXtensible Markup Language (XML) são promovidos e mantidos pelo W3C para
+desenvolvimento de ontologias como Ontology Web Language (OWL), além do esquema de
+anotação Resource Description Framework (RDF).
+As ontologias podem ser usadas tanto para promover anotações sobre recursos,
+quanto para auxiliar o processo de anotação. No primeiro caso, usuários (ou grupos de
+especialistas) constroem ontologias para fornecer seus componentes (ex. classes, instâncias,
+relações) como elementos de anotação. No segundo caso, usuários fornecem elementos de
+anotação (de forma simples e transparente) e promovem ligações dessas anotações a fontes
+
+de conhecimento subjacentes a ontologias. Por exemplo, para evitar ambiguidade sobre a
+palavra “Monumento à Juventude Brasileira” oriunda de um texto, uma anotação semântica
+poderia relacioná-la a um elemento da ontologia que a identificasse na categoria
+“Monumento” bem como associá-la à instância “Modernismo” pertencente à categoria
+“História da Arte”. Desse modo “Monumento à Juventude Brasileira” não poderia ser
+referenciada de outra forma a não ser como um monumento pertencente à história moderna.
+Existem vários padrões de metadados, vocabulários controlados e ontologias
+existentes para a estruturação da informação utilizadas por instituições de patrimônio (SILVA;
+SOUZA, 2014). Como exemplos, têm-se o padrão de metadados VRA Core (Visual Resources
+Association Core Categories) (ABBAS, 2010) voltado à descrição de obras de cultura visual, bem
+como das imagens que as representam; os vocabulários controlados sobre objetos culturais do
+Instituto Getty8 mantidos através de contribuições de comunidades interessadas em suas
+temáticas; e o modelo CIDOC-CRM (International Committee for Documentation/Conceptual
+Reference Model) (LE BOEUF, 2018) representando uma ontologia formal que facilita a
+integração e intercâmbio de informações heterogêneas do patrimônio cultural.
+Na perspectiva desta pesquisa, uma ontologia volta-se principalmente a um ramo
+científico que busca endereçar soluções tecnológicas para o provimento de melhorias nos
+sistemas de recuperação da informação. Trata-se de iniciativas e esforços interdisciplinares na
+busca de minimizar ambiguidades em linguagem de modo que seu uso (por humanos e
+máquinas) possa ser partilhado para representar e recuperar conhecimento entre
+comunidades afins, fornecendo maior nível semântico ao esclarecer o significado pretendido
+de entidades do mundo. Tal ramo é denominado na literatura de “Ontologia Aplicada”
+(GUARINO, 1998; ALMEIDA, 2013), o qual agrega princípios teóricos da Ontologia Formal com
+demandas emergentes de organização da informação na sociedade como, por exemplo, na
+promoção de melhorias em linguagens de modelagem e modelos conceituais voltados à
+representação e organização de conhecimento de um dado domínio. A Web Semântica pode
+ser considerada uma dessas iniciativas que aplica teorias e técnicas oriundas da Inteligência
+Artificial, da Lógica e da Ontologia Formal para a concepção de linguagens de representação
+de recursos (em mídias diversas) como, por exemplo, OWL que permite inferências
+automáticas na Web.
+
+8
+
+http://www.getty.edu/research/tools/vocabularies/
+
+Embora pesquisas relacionadas com a apresentação de conteúdo em 3D na Web
+estejam em estágio maduro, conforme se pôde constatar nas elucidações exibidas na seção 2,
+a sua integração com tecnologias semânticas atuais ainda é uma área desafiadora e que
+carece de investigações. Ainda é tema de pesquisa o uso de ontologias que inclua a adição de
+anotações semânticas para as áreas de modelagem em 3D como, por exemplo, para descrever
+o que um tipo de geometria representa (exs.: número de vértices, número de faces, relações
+paramétricas).
+4 METODOLOGIA DE PESQUISA
+A presente pesquisa pode ser classificada segundo seu problema, seus objetivos e seus
+procedimentos técnicos para coleta e análise dos dados. Com base na abordagem do
+problema, esta pesquisa pode ser classificada como qualitativa, pois houve a necessidade de
+entender o fenômeno investigado do qual pouco se conhecia. Sendo assim, a determinação, a
+análise e a descrição dos métodos e das técnicas adequadas aos processos envolvidos na
+pesquisa foram possíveis através de um maior entendimento do fenômeno presente no
+domínio, a saber: digitalização em 3D e sua documentação inerente aos ativos de patrimônio
+cultural aberto.
+Com base em seus objetivos, esta pesquisa pode ser classificada em: i) exploratória,
+pois se investigou e aprimorou ideias sobre um assunto emergente envolvendo descrição
+semântica de documentos culturais e multimídia, incluindo modelos em 3D, em que se
+requereu uma investigação minuciosa na literatura e em casos específicos nessa perspectiva;
+ii) descritiva, pois se buscou levantar e descrever características do fenômeno investigado à luz
+da literatura e de material empírico específico; e iii) explicativa, pois a partir da natureza dos
+metadados identificada em cada etapa do fluxo de trabalho proposto para a documentação
+das réplicas digitais em 3D, foram indicados padrões e vocabulários potenciais ao processo de
+descrição desses ativos, e, por fim, explicada a razão pela qual foram recomendados.
+E em relação aos procedimentos técnicos para coleta e análise dos dados, esta
+pesquisa pode ser classificada como bibliográfica e documental, pois usou como fonte de
+consulta materiais já publicados na literatura científica: artigos, anais de congressos, relatórios
+técnicos de pesquisa, teses, dissertações, normas e fontes documentais subjacentes aos
+vocabulários elencados.
+
+Nas subseções que se seguem, são apresentados os passos metodológicos pelos quais
+a pesquisa foi organizada, tendo em vista a explicitação supracitada do fenômeno investigado.
+Assim, em 4.1 dá-se uma visão geral da metodologia proposta para identificação, digitalização
+e acesso aos ativos de patrimônio cultural trabalhados na pesquisa; e em 4.2 são apresentados
+os métodos e as técnicas usados na identificação, na seleção e na análise de vocabulários
+recomendados a cada etapa do fluxo de trabalho proposto em 4.1.
+4.1 Documentação dos ativos de patrimônio cultural
+A metodologia proposta para documentação dos ativos de patrimônio cultural aberto
+baseia-se na combinação de esforços especializados e liderados pela comunidade para a
+identificação, digitalização e acesso às réplicas digitais em 3D resultantes. A abordagem do
+projeto é baseada nas premissas de que os objetos e seus metadados de contexto são
+identificados usando-se uma abordagem, em parte, colaborativa. Pode-se fazer uso de
+abordagens participativas (RODRIGUEZ ECHAVARRIA; JANZON; WRIGHT, 2018), em que
+especialistas e membros da comunidade se reúnem para identificar o que é patrimônio,
+patrimônio histórico e do tempo presente e a relevância para as comunidades.
+Nesse sentido, um fluxo de trabalho (workflow, em inglês) foi proposto baseado no
+estudo do estado da arte envolvendo experiências em projetos de digitalização em 3D de
+ativos de patrimônio cultural aberto, conforme foi visto na seção 2. Esse workflow foi
+constituído de três importantes etapas, a saber: i) identificação dos ativos de patrimônio; ii)
+produção da réplica digital em 3D; e iii) acesso aos resultados da digitalização. Dado que o
+propósito desse workflow é documentar todo o processo envolvendo a digitalização dos ativos
+de patrimônio cultural aberto, a seguir essas três etapas são brevemente descritas para fins de
+embasamento ao processo de identificação e descrição acerca da natureza dos metadados
+subjacentes a cada fase envolvida.
+A primeira etapa “identificação dos ativos de patrimônio” teve como ponto de partida
+a identificação de um conjunto de monumentos que seria priorizado para a digitalização. Para
+tal, contou-se com o Inventário de Monumentos no Rio Janeiro9, produzido e curado por Vera
+Dias, arquiteta que trabalha na fundação responsável pela conservação dos monumentos. Ela
+coletou e publicou um inventário das esculturas públicas, bem como curiosidades baseadas
+
+9
+
+Inventario dos monumentos RJ. http://inventariodosmonumentosrj.com.br/
+
+em fontes históricas de vários monumentos, em uma iniciativa voluntária, posteriormente o
+trabalho foi compilado em um livro publicado na ocasião dos 450 anos da cidade do Rio de
+Janeiro. A Figura 1 mostra as 5 (cinco) esculturas públicas selecionadas para o processo de
+digitalização.
+Figura 1 – Conjunto de monumentos priorizado na digitalização
+
+Fonte: Fundação Getúlio Vargas.
+
+Os curadores priorizaram este conjunto de esculturas com base em vários critérios,
+incluindo restrições técnicas, relevância artística, contexto na cidade e considerações estéticas.
+O projeto em andamento está planejado para ter mais 17 (dezessete) réplicas digitalizadas até
+o final do presente ano.
+De acordo com a Figura 1, da esquerda para a direita temos as seguintes obras com
+suas respectivas informações de autoria e localização geográfica, cujos detalhes podem ser
+consultados no Inventário de Monumentos:
+
+a)
+
+Monumento à Juventude Brasileira: Bruno Giorgi (1905-1993) foi um renomado
+
+escultor brasileiro de descendência italiana. Localizada no Palácio Capanema, no centro da
+cidade.
+b)
+
+Mulher: Adriana Janacópulos (1892-1978) foi uma escultora brasileira de
+
+descendência grega. Localizada no Palácio Capanema, no centro da cidade.
+c)
+
+Evangelista Matheus: Alfredo Ceschiatti (1918-1989) foi um escultor brasileiro
+
+de descendência italiana. Localizada no Parque da Catacumba, na zona sul da cidade.
+d)
+
+Estrutura: Sergio Camargo (1930-1990) foi o artista mais jovem dentro desse
+
+conjunto inicial. Localizada no Parque da Catacumba, na zona sul da cidade.
+12
+
+XX ENCONTRO NACIONAL DE PESQUISA EM CIÊNCIA DA INFORMAÇÃO – ENANCIB 2019
+21 a 25 de outubro de 2019 – Florianópolis – SC
+
+E, por fim, a representação de fundo, de acordo com a Figura 1:
+
+e)
+
+Painel UFRJ: Roberto Burle Marx (1909-1994) foi um renomado arquiteto e
+
+paisagista brasileiro. Localizada no prédio da Faculdade de Arquitetura do campus principal da
+Universidade Federal do Rio de Janeiro, na Ilha do Fundão.
+
+A segunda etapa do workflow “produção da réplica digital em 3D” é baseada em
+ferramentas computacionais livres e de código aberto, incluindo aquisição de dados,
+processamento de imagens, produção e avaliação da réplica digital em 3D. Na fase de
+aquisição de dados, usou-se a técnica de fotogrametria (GONIZZI; GUIDI, 2013) terrestre e
+aérea (para esta última, caso fosse necessário), baseada em câmeras digitais comuns cujo
+propósito foi obter a medição da forma e da textura, além de propriedades fotométricas para
+representar a forma e a aparência do artefato digitalizado. Na fase de processamento dos
+dados adquiridos, foi usado um software de fotogrametria capaz de processar
+automaticamente conjuntos de dados de fotografias para fins de produção da réplica digital
+em 3D da forma mais fiel à realidade do artefato codificado em modelo tridimensional. Uma
+vez que o modelo em 3D tenha sido produzido, torna-se importante avaliar a qualidade do
+resultado, bem como documentar todo o processo de digitalização. Isso garantirá que o
+processo e seu resultado sejam transparentes para os usuários especialistas que precisam
+trabalhar com a manipulação dos dados.
+A terceira e última etapa do workflow “acesso aos resultados da digitalização” insere a
+possibilidade de se executar etapas de pós-processamento que podem ser usadas para
+transformar os dados em formatos específicos com o objetivo de fornecer acesso às réplicas
+digitais em 3D por meio de uma variedade de soluções (POTENZIANI et al., 2018), incluindo
+visualização baseada na Web, plataformas de Realidade Virtual, ortofotografias, e até mesmo
+produção de réplicas físicas com o uso de impressão em 3D. Além disso, do ponto de vista
+técnico, é possível adotar soluções que combinem a informação digital e os elementos físicos
+do ambiente, levando a discussão ao contexto da Realidade Aumentada.
+
+4.2 Identificação, seleção e análise de vocabulários para o processo de documentação
+
+
+Os métodos e as técnicas voltados à identificação, à seleção e à elaboração das
+categorias de análise envolvendo um conjunto de vocabulários foram oriundos da NeOn
+Methodology (SUÁREZ-FIGUEROA; GÓMEZ-PÉREZ; FERNÁNDEZ-LÓPEZ, 2012), um guia
+metodológico que orienta por meio de cenários, uma série de passos flexíveis para o
+desenvolvimento de vocabulários semânticos para a Web. A justificativa da escolha da Neon
+Methodology se deu em função de ser um guia metodológico atual, testado e validado em
+diferentes domínios, especialmente no domínio de anotação multimídia, além de ser oriundo
+de frameworks metodológicos amplamente aceitos em áreas maduras como Engenharia de
+Software e Engenharia do Conhecimento.
+Desse modo, os cinco procedimentos metodológicos descritos a seguir foram seguidos
+na condução desta pesquisa a partir da composição de alguns cenários propostos no guia: i)
+encontrar recursos de conhecimento, incluindo padrões de metadados e ontologias em fontes
+confiáveis e relacionadas ao domínio; ii) avaliar tais recursos seguindo critérios recomendados,
+como cobertura, precisão e consenso sobre o conhecimento e a terminologia usada no
+recurso; iii) selecionar os vocabulários mais apropriados frente aos recursos candidatos
+avaliados; iv) analisar minunciosamente os recursos de conhecimento obtidos e identificar
+seus elementos subjacentes de modo a criar representações em diferentes níveis de abstração
+(requisitos funcionais, esquemas conceituais, dentre outros); e v) representar os recursos em
+esquemas para fins de organização do conhecimento adquirido na etapa de análise.
+O primeiro passo foi proceder com um estudo de domínio por meio de fontes
+documentais, incluindo normas, artigos e bibliotecas de esquemas XML relacionados a
+padrões de metadados voltados especialmente para descrição multimídia, modelos
+tridimensionais em especial, que refletem obras de arte, isto é, documentos oriundos de
+patrimônio cultural. Os padrões de metadados ISO MPEG-7, Dublin Core e VRA Core foram
+selecionados como material de referência para aquisição de conhecimento sobre tais
+contextos. Evidenciou-se em revisão recente na literatura que grande parte das anotações
+envolvendo documentos multimídia e de patrimônio cultural se orienta por tais padrões
+(SILVA; SOUZA, 2014).
+O MPEG-710 teve sua origem no ano de 1998 e em 2001 tornou-se padrão
+internacional ISO/IEC 15938 sob responsabilidade do Moving Picture Experts Group. O padrão
+busca prover um vocabulário rico e comum para multimídia, incluindo descritores primitivos,
+10
+
+http://mpeg.chiariglione.org/standards/mpeg-7
+
+extraídos da própria mídia e, de alto nível, destinados à descrição semântica do conteúdo da
+mídia. Tal capacidade de abstração é que o diferencia de outros padrões de metadados
+(MARTÍNEZ; KOENEN; PEREIRA, 2002). Contudo, o gerenciamento do padrão torna-se difícil
+em função do tamanho e da complexidade na especificação de seus elementos. Além disso, a
+semântica envolvida na maioria de seus construtos encontra-se implícita pelo fato da
+utilização restrita de XML (linguagem baseada em sintaxe).
+O padrão de metadado Dublin Core11 teve sua origem na década de 90 quando a Web
+encontrava-se em sua fase de amadurecimento. Em uma discussão ocorrida em outubro de
+1994 na Conferência 2nd Annual World Wide Web em Chicago vislumbrou-se a necessidade de
+uma infraestrutura para habilitar descoberta de recursos na Web. O The Dublin Core Metadata
+Element Set (DCMES) tornou-se um padrão nacional em 2001 (ANSI/NISO Z39. 85) e um
+padrão internacional em 2003 (ISO 15386). Atualmente, esforços relacionados à integração do
+Dublin Core com a linguagem RDF é uma realidade. As comunidades Dublin Core Metadata
+Iniciative (DCMI) e Web Semântica focam na conversão de formato de metadado para
+vocabulário de metadado, isto é, uma coleção de propriedades definidas cuidadosamente
+para fins de uso na concepção de sentenças descritivas sobre recursos (também denominada
+namespaces). Tais mudanças refletiram na introdução da noção de Qualificadores Dublin Core
+(Qualified Dublin Core) com a finalidade de refinamento acerca dos recursos descritos.
+O padrão VRA Core12 foi desenvolvido pela primeira vez em 1996. A atual versão 4.0,
+lançada em 2007, é expressa como um esquema XML para suportar a interoperabilidade e a
+troca de registros do VRA Core. É um padrão de metadados reconhecido internacionalmente,
+usado tanto como um formato independente quanto como um esquema de extensão
+aprovado para o METS13 (Metadata Encoding and Transmission Standard) para objetos de
+patrimônio cultural, incluindo pinturas, desenhos, esculturas, arquitetura, fotografias, dentre
+outros. Atualmente, há uma iniciativa do VRA Core Oversight Committee14 (Core OC) em
+produzir uma ontologia em RDF baseada na versão XML Schema para que as descrições
+possam ser compartilhadas e interagir com outros recursos de linked data na Web, permitindo
+que os usuários encontrem mais facilmente imagens relevantes de objetos, locais e assuntos
+de patrimônio cultural.
+11
+
+http://www.dublincore.org/specifications/dublin-core/dcq-rdf-xml/
+https://www.loc.gov/standards/vracore/schemas.html
+13
+http://www.loc.gov/standards/mets/
+14
+http://vraweb.org/vra-core-rdf-ontology-available-for-review/
+12
+
+
+Os recursos ontológicos foram selecionados a partir de um estudo minucioso
+desenvolvido em Silva (2014) em que comparou nove propostas de ontologias para anotação
+multimídia fundamentadas em padrões de metadados ISO como o MPEG-7 e o Dublin Core.
+Tal estudo evidenciou características relevantes que poderiam (e deveriam) compor a
+conceituação dessas ontologias visando interoperabilidade e recuperação de recursos em rede
+semântica. O resultado do ranking de ontologias candidatas a reúso, produto dessa análise
+comparativa, evidenciou as ontologias mais proeminentes para o domínio de anotação
+multimídia, a saber: Media Ontology, COMM e M3 Multimedia.
+A Media Ontology é uma ontologia sobre mídia proposta no ano de 2009 por membros
+do W3C Media Annotation Working Group (STEGMAIER et al., 2009). O grupo busca melhorar
+a interoperabilidade entre esquemas de metadados para recursos de mídia na Web, tais como
+vídeo, áudio e imagem. A ontologia foi construída utilizando-se padrões metodológicos de
+engenharia de ontologias com propósito de definir um conjunto de propriedades de anotação
+centrais para descrever conteúdo multimídia, juntamente com um conjunto de mapeamentos
+entre os principais formatos de metadados em uso atualmente.
+A COMM ou Core Ontology for Multimedia foi desenvolvida no ano de 2007 por um
+grupo de renomados pesquisadores nas áreas Multimídia, Bibliotecas Digitais e Web
+Semântica (ARNDT et al., 2009). O propósito principal da COMM é fornecer uma conceituação
+fundamental para descrição multimídia cobrindo de maneira genérica um domínio em
+específico que lida com conteúdo desta natureza. A sua equipe de desenvolvimento
+reconhecendo as limitações semânticas do MPEG-7, mas levando em consideração que tal
+padrão é uma base de conhecimento multimídia consolidada na comunidade, realizou uma
+reengenharia buscando uma representação formal de descritores MPEG-7 com a mesma
+convenção terminológica.
+A M3 Multimedia foi desenvolvida no ano de 2012 como parte de uma ontologia
+abrangente (endereçada a vários domínios e idiomas) denominada M3 Ontology Network15,
+resultado de um projeto de pesquisa espanhol envolvendo entidades como Ontology
+Engineering Group (OEG16). O projeto denominado Buscamedia objetivou criar um mecanismo
+de busca semântica de recursos multimídia visando progressos nas áreas de semântica,
+produção audiovisual e distribuição de mídia. A equipe de desenvolvimento da M3 contou
+15
+
+http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/completedprojects/66-buscamedia/index.html
+http://www.oeg-upm.net/
+
+
+
+com renomados pesquisadores da Facultad de Informática da Universidad Politecnica de
+Madrid e do W3C Media Annotations Working Group.
+A organização da análise e dos resultados acerca dos vocabulários contou com a
+determinação de categorias (apresentadas no Quadro 1) elaboradas a partir de casos de uso
+em diversas experiências de projeto envolvendo critérios para o desenvolvimento de
+vocabulários semânticos, descritos no guia metodológico NeOn, além de categorias específicas
+para o propósito da pesquisa envolvendo tipologias de metadados.
+Quadro 1 - Categorias de análise aplicadas aos vocabulários
+Análise de conteúdo (estrutura dos vocabulários)
+Natureza dos metadados
+Relacionado a características da Obra em si e do contexto multimídia
+multimídia e da Obra em
+cobertas pelos vocabulários analisados, apoiando, assim, o processo de
+si
+uso e reúso.
+Linguagem de
+Relacionado à verificação da linguagem que representa os componentes
+representação
+(classes, propriedades, instâncias, axiomas, etc) dos vocabulários
+analisados.
+Claridade no código
+Relacionado à facilidade no entendimento do código; se as entidades
+contidas na estrutura seguem um padrão, se são claras e coerentes; se
+existem comentários; e se o código é documentado.
+Adequação a extração de
+Relacionado à facilidade de identificação e extração de partes do
+conhecimento
+conhecimento dos vocabulários analisados.
+Adequação a convenção
+Relacionado à verificação de regras associadas à determinação de
+de nomes
+nomes (terminologia) dos componentes.
+Anotações existentes na
+Relacionado à existência e à qualidade das anotações realizadas nos
+terminologia
+elementos da terminologia dos vocabulários analisados.
+Axiomas existentes na
+Relacionado à existência de axiomas nos elementos das ontologias
+terminologia
+analisadas, garantindo, assim, restrições acerca de suas interpretações.
+Fonte: elaborado pelos autores
+
+A primeira categoria “Natureza dos metadados multimídia e da Obra em si” carece de
+ser especificada por envolver características acerca de metadados usados na descrição de uma
+Obra e de seus desdobramentos digitais. Isso inclui metadados sobre os tipos de arquivos de
+mídia e seus objetos 3D, metadados que descrevem o objeto digital 3D em si e metadados que
+descrevem os artefatos no mundo real. Assim sendo, a organização dos elementos dos
+vocabulários analisados ocorreu em três categorias de tipos de metadados (com garantia
+literária), a saber: metadados independentes de conteúdo, metadados dependentes de
+conteúdo e metadados descritivos de conteúdo.
+A categoria metadados independentes de conteúdo é endereçada ao gerenciamento e
+a administração de recursos de informação e foi organizada em quatro subcategorias, a saber:
+i) criação e produção do recurso; ii) classificação do recurso; iii) informação sobre o recurso; e
+iv) uso do recurso. Em (i) têm-se características envolvendo a criação da Obra ou do conteúdo
+
+da mídia e de recursos a eles associados; em (ii) têm-se características destinadas à
+classificação da Obra ou de materiais audiovisuais, tais como gênero, assunto, propósito,
+idioma, além de classificação etária, orientação para pais e avaliação subjetiva; em (iii) as
+características são voltadas à Obra ou aos meios de armazenamento da mídia, incluindo
+formato, compressão e codificação do conteúdo audiovisual; e em (iv) as características
+refletem direitos de uso, registro e disponibilidade de uso e informação financeira acerca da
+Obra ou do conteúdo audiovisual.
+A categoria metadados dependentes de conteúdo foi organizada na subcategoria
+metadados visuais, em que seus conteúdos geralmente são extraídos automaticamente por
+algoritmos computacionais. Os metadados visuais cobrem características como cor, textura,
+forma, movimento, localização de regiões espaço temporais e reconhecimento de face (ou
+objetos) no conteúdo da mídia.
+A categoria metadados descritivos de conteúdo se caracteriza por associar entidades
+da Obra ou do conteúdo da mídia com entidades do mundo real e foi organizada nas seguintes
+subcategorias: i) segmentos de mídia; ii) semântica de conteúdo; e iii) personalização de
+conteúdo. Em (i) têm-se características relacionadas à estrutura de conteúdo em termos de
+segmentos de vídeo, imagem, modelo em 3D e áudio; em (ii) encontram-se características
+envolvendo objetos, eventos e noções do mundo real que podem ser abstraídos da Obra ou
+do conteúdo multimídia; e em (iii) agregam características de modos de personalização de
+conteúdo multimídia a fim de facilitar navegação, acesso e interação de usuários em relação
+ao consumo de conteúdo.
+5 RESULTADOS E DISCUSSÕES
+A presente seção apresenta os resultados da análise de vocabulários para
+documentação de patrimônio cultural em rede semântica e uma discussão sobre como se
+alinharam à natureza de metadados discutida na pesquisa. Os vocabulários foram
+selecionados a fim de serem usados ou reusados em projetos envolvendo a organização de
+informação no domínio de patrimônio cultural, em especial envolvendo réplicas digitais em
+formatos 3D. Nesse sentido, tornou-se possível justificar a proposição de uso a cada etapa do
+workflow delineado no âmbito do projeto FGV/CPDOC/EMAp.
+
+
+A partir das etapas de documentação, três diferentes grupos de metadados foram
+identificados e associados à natureza de metadados multimídia e da Obra em si, conforme é
+demonstrado no Quadro 2.
+Quadro 2 – Natureza de metadados vrs. etapas do workflow
+Natureza de
+metadados
+Independentes de
+conteúdo
+
+Etapa 1: o Objeto
+Mundo Real
+Criação, produção,
+classificação, informação
+e uso da Obra.
+
+Dependentes de
+conteúdo
+-
+
+Descritivos de
+conteúdo
+
+Aspetos semânticos da
+Obra (objeto como um
+todo ou em partes,
+evento, lugar, tempo em
+mundos narrativos)
+
+Etapa 2: a Réplica
+Digital em 3D
+Criação, produção,
+informação e uso da
+Réplica Digital em 3D.
+Características visuais
+primitivas extraídas por
+algoritmos
+computacionais como
+cor, textura, forma,
+movimento de câmera,
+localização de regiões e
+reconhecimento de
+objetos.
+
+-
+
+Etapa 3: o Objeto em
+3D
+Criação, produção,
+classificação, informação
+e uso do Objeto em 3D.
+
+-
+
+Segmentação visual,
+semântica de conteúdo,
+personalização de
+conteúdo, incluindo
+organização, navegação,
+acesso e interação de
+usuários em relação ao
+consumo.
+
+Fonte: elaborado pelos autores
+
+A etapa 1 “identificação dos ativos de patrimônio” demanda a descrição do artefato
+em si, representado pelo modelo em 3D, denominado aqui de Objeto Mundo Real (OMR). Em
+geral, esse objeto será a escultura pública ou o monumento localizado na cidade do Rio de
+Janeiro, mas também poderia ser uma pintura exibida num catálogo de museu. Desse modo,
+informações de classificação seriam úteis aos aspectos semânticos envolvidos (metadados
+descritivos de conteúdo). Metadados independentes de conteúdo também são necessários
+para descrever a autoria da Obra, o contexto cultural, a localização geográfica, a data da
+criação, as fontes de informações, o título, o período histórico, o material e as técnicas usadas
+na produção, os direitos autorais da Obra, dentre outros.
+A etapa 2 “produção da réplica digital em 3D” demanda metadados sobre o objeto de
+mídia, denominado aqui de Réplica Digital em 3D (RD3), contendo informações sobre arquivo,
+formato, tamanho, localização e software necessário. O conjunto de metadados nesse caso é
+dependente da técnica adotada para geração do modelo em 3D, que no caso dessa pesquisa
+foi a de fotogrametria. Mídia e objetos em 3D são arquivos digitais, que representam uma
+
+escultura, um edifício, um design, etc. Assim, o objeto de mídia genérico em conjunto com os
+objetos em 3D exige informações como formato, quantidade de objetos geométricos e escala
+para fins de composição e visualização do modelo. Em adição, um conjunto de metadados
+visuais dependentes de conteúdo (cor, textura, forma, dentre outros) também pode ser obtido
+automaticamente por meio de processamento de dados das fotografias envolvidas no
+processo de produção da réplica digital.
+Finalmente, a etapa 3 “acesso aos resultados da digitalização” demanda metadados
+para descrever o Objeto em 3D (O3D) pós processado para finalidades diversas, que vai desde
+informação sobre gestão e personalização desse tipo de recurso (título, descrição, assuntos
+chave, autoria do modelo em 3D, organização de coleções, etc.) até informação que retrata
+aspectos semânticos, como anotações de regiões de interesse, objetos, lugares, eventos e
+períodos envolvidos no contexto da réplica. Tais aspectos podem ser ligados a vocabulários
+semânticos (ou ontologias) específicos que retratam as entidades envolvidas, conforme
+poderá ser visto a seguir na análise dos vocabulários.
+Os padrões de metadados Dublin Core e VRA Core cobrem de maneira satisfatória a
+categoria metadados independentes de conteúdo, podendo ser usados nas três etapas do
+workflow na descrição do OMR, da RD3 e do O3D. Contudo, não foi verificado na análise de
+suas estruturas nenhum aspecto para cobertura de tipos de metadados dependentes de
+conteúdo. É válido destacar que ambos os padrões possuem qualificadores que ampliam a
+cobertura de seus elementos, o que agrega positivamente na estensibilidade de seus modelos.
+Possuem também extensões para linguagens de representação do W3C, como RDF, no intuito
+de estarem mais inseridos no contexto e na demanda de interoperabilidade da Web
+Semântica. No caso do Dublin Core, pelo fato de já existir uma versão consolidada em RDFS, o
+que parece, ainda, não ser uma realidade consolidada para o VRA, há condições de ligar
+entidades reais representadas nos conteúdos da mídia com vocabulários semânticos de
+domínios específicos disponíveis na rede. Assim, no que diz respeito aos metadados
+descritivos de conteúdo demandados nas etapas 1 e 3 do processo de workflow, uma parte
+envolvendo semântica de conteúdo pode ser coberta pelo Dublin Core.
+O padrão de metadados VRA Core parece ser o mais indicado para o processo de
+anotação das esculturas modernistas (etapa 1 do workflow). O conjunto de elementos
+constituinte de seu esquema fornece uma organização de categorias para a descrição da Obra
+(a escultura em si), da Imagem que a representa (fotografias das esculturas) e também da
+
+Coleção (conjunto de esculturas) da qual faz parte. O elemento relação também permite
+associar as três entidades conforme a necessidade. Contudo, acredita-se que num processo de
+anotação subsidiado por este padrão, a complementação com outros vocabulários (elencados
+nesta pesquisa) precisará ser feita no sentido de cobrir aspectos específicos envolvendo
+objetos retratados com técnicas tridimensionais, especialmente para os tipos de metadados
+envolvidos na documentação da etapa 2.
+O padrão de metadados MPEG-7 parece ser uma referência para a descrição das
+etapas 2 e 3 do processo de workflow, perpassando pelos arquivos digitais até os conteúdos
+multimídia. Na análise da norma e de seus esquemas constatou-se a sua abrangência nos
+aspectos de cobertura para: conteúdo semântico da mídia (contemplando categorias como
+objeto, evento, agente, lugar e tempo); segmentos de mídia em seus aspectos espaço
+temporais; e características extraídas do próprio conteúdo visual da mídia, como cor, textura,
+forma, localização de regiões e reconhecimento de face. Dentre os padrões de metadados
+estudados, o MPEG-7 é o único que contempla descritores voltados à descrição de
+características tridimensionais de objetos, tais como simetria, circularidade, localização de
+eixos, tamanho e orientação de segmentos consecutivos de bordas, pontos de curvaturas e
+ângulos de curvas. O padrão ainda cobre características multimídia voltadas à personalização
+de conteúdo, tais como organização de coleções, navegação, acesso e interação de usuários
+em relação ao consumo de conteúdo.
+O MPEG-7 ISO/IEC fornece um vocabulário rico de conteúdo geral para multimídia,
+entretanto a falta de semântica formal do padrão não garante que os metadados MPEG-7
+gerados por diferentes aplicações sejam mutuamente interpretados, causando sérios
+problemas de interoperabilidade nos processos de processamento e intercâmbio multimídia.
+Assim, vocabulários semânticos ou ontologias têm sido propostos para cobrir tal lacuna do
+MPEG-7, utilizando-se de modelagens mais sofisticadas para o tratamento semântico e
+consequentemente para a interoperabilidade almejada em ambientes abertos, como é o caso
+da Web. As ontologias elencadas nesse estudo são comentadas a seguir.
+A Media Ontology é a ontologia recomendada para os metadados independentes de
+conteúdo, úteis as três etapas do workflow envolvendo a documentação do OMR, da RD3 e do
+O3D. A recomendação se justifica pelo fato de esta ontologia possuir um índice de cobertura
+satisfatório em relação à ontologia COMM, conforme pode ser verificado no Quadro 3, em
+
+
+anexo. Já a M3 Multimedia pratica reúso da Media Ontology para essa categoria de
+metadados.
+As ontologias COMM e M3 Multimedia oferecem descritores que se alinham aos
+metadados dependentes de conteúdo, úteis em especial para a etapa 2 do workflow quando
+do processamento computacional dos dados para geração automática de metadados e
+consequentemente do modelo em 3D. Ambas apresentaram índices bem próximos para
+cobertura visual, em destaque para descritores envolvendo cor, textura, forma e localização
+de regiões. Metadados para descrever características em 3D podem ser encontrados nas duas
+ontologias, especialmente em aspectos visuais de forma.
+A ontologia COMM, por oferecer descritores organizados a partir de uma ontologia de
+fundamentação bem como de padrões de projeto multimídia, e ainda tratar diferenças
+semânticas entre o conteúdo e a realização da mídia, é a ontologia recomendada para os
+metadados descritivos de conteúdo, úteis às etapas 1 e 3 do processo de documentação. A
+arquitetura da conceituação da COMM é fundamentada na ontologia de alto nível DOLCE e em
+três padrões de projeto referenciados por esta, a saber: Description and Situation (D&S),
+Information and Realization Pattern e Data Value Pattern. Os padrões multimídia da COMM
+são estendidos do padrão D&S contemplando AnnotationPattern (padrão de anotação) e
+DecompositionPattern (padrão de decomposição). Além disso, os padrões multimídia atuam
+sob a semântica especificada no padrão Information and Realization que representa a
+distinção entre objetos de informação e realizações de informação, cuja separação torna-se
+relevante no sentido de fornecer uma distinção clara entre a semântica (conteúdo da
+mensagem) e o dado (formato do arquivo de mídia). Assim, anotações e decomposições
+podem envolver objetos de informação e realizações de informação. Os metadados voltados à
+semântica de conteúdo são geralmente ligados a instâncias de ontologias de domínio cujos
+rótulos semânticos são organizados na estrutura taxonômica de uma ontologia de
+fundamentação. Como a COMM se integra à ontologia de fundamentação DOLCE, esta
+consegue cumprir o papel de organizar rótulos semânticos advindos de ontologias de
+domínios específicos em entidades como evento, objeto, tempo, lugar etc., e, ainda, tratar de
+seus relacionamentos.
+Finalmente, o Quadro 3, em anexo, sintetiza o resultado das análises feitas nos padrões
+de metadados e nas ontologias multimídia com o propósito de orientar em decisões de uso e
+reúso envolvendo aspectos de suas estruturas.
+
+6 CONSIDERAÇÕES FINAIS
+Projetos envolvendo digitalização em 3D e documentação de ativos de patrimônio
+cultural fertilizam um campo de pesquisa emergente e interdisciplinar capaz de realizar a
+junção entre as áreas de Tecnologia da Informação e Comunicação e as Ciências Humanas,
+conhecido como Humanidades Digitais (LIU, 2012; KOLTAY, 2016), que, inclusive, dialoga de
+forma satisfatória com a Ciência da Informação com temáticas que vislumbram pesquisas em
+divulgação, acesso, recuperação e uso de informações culturais.
+Nessa perspectiva, este artigo traz contribuições significativas ao mapear e analisar
+potenciais vocabulários, incluindo padrões de metadados e ontologias, a fim de serem
+recomendados ao processo de documentação das réplicas digitais em 3D nessa primeira etapa
+do projeto FGV/CPDOC/EMAp. A utilização de metadados tanto para descrição das esculturas
+em si quanto para a descrição física e semântica de arquivos multimídia é a forma preconizada
+para ampliar a encontrabilidade e permitir a adequada inserção dos recursos informacionais
+em redes semânticas, tais como o LOD. Tanto atributos técnicos quanto características
+semânticas de alto nível podem constar dos metadados. A discussão sobre potenciais padrões
+que se ajustem à descrição de arquivos digitais envolvendo modelos em 3D e que enriquecem
+a documentação envolvendo obras de arte no espaço público do Rio do período modernista é
+inédita e de grande relevância histórica no contexto brasileiro, abrindo, assim, fronteiras que
+permitam levar as instituições de patrimônio cultural a se inserirem nas Humanidades Digitais.
+A proposta para documentação dos ativos de patrimônio cultural aberto apoiando-se
+no uso de padrões de metadados e ontologias multimídia bem fundamentadas e
+recomendadas por comunidades e entidades normativas como o W3C e a ISO/IEC se mostra
+diferenciada e estratégica na busca de soluções inteligentes para descrição de conteúdo
+multimídia processável por máquina e baseada em semântica. Assim, o primeiro conjunto de
+réplicas digitalizadas no projeto poderá ser descrito em seus aspectos de OMR, RD3 e O3D por
+meio dos vocabulários recomendados usando-se uma abordagem colaborativa envolvendo
+especialistas e membros da comunidade de patrimônio cultural.
+O acesso e o consumo das réplicas digitais por meio de um repositório vislumbram a
+necessidade de integração semântica e disponibilização global desses recursos multimídia em
+rede com o propósito de publicização de seus conceitos e relacionamentos no âmbito cultural,
+permitindo o compartilhamento e ligação entre vários acervos na Web. Nessa linha, o projeto
+
+FGV/CPDOC/Emap pretende disponibilizar para a comunidade um repositório digital que
+ofereça aos usuários acesso livre a coleções de monumentos e esculturas do período
+modernista provenientes do patrimônio público aberto localizado na cidade do Rio de Janeiro.
+No que diz respeito aos desdobramentos de trabalhos futuros, trata-se de um projeto
+em andamento e há muito espaço para futuras direções. As esculturas são obrigatoriamente
+identificadas para o projeto que segue a metodologia proposta. Historiadores e curadores
+trabalham na informação contextual e nos elos com outras bases de documentação, com o
+objetivo de aprimorar a narrativa do patrimônio moderno e contemporâneo no Rio de Janeiro.
+Encontra-se também em andamento, o estudo de uma plataforma para acesso e manipulação
+de metadados e ontologias que possa integrar a visualização multimídia e a manipulação de
+descritores advindos de vocabulários semânticos. Em sua continuidade, pretende-se utilizar
+um modelo conceitual abrangente de dados que busque promover alinhamento semântico
+entre os padrões recomendados, como Dublin Core, MPEG-7, VRA Core, COMM e Media
+Ontology, na intenção de integrar informações sobre as réplicas digitalizadas em seus aspectos
+de mídia e de conteúdo em 3D com os diversos acervos de instituições culturais disponíveis na
+rede semântica LOD.

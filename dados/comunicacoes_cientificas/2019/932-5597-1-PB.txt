@@ -1,0 +1,690 @@
+
+A POSSIBILIDADE DE VIOLAÇÃO DA PRIVACIDADE NO CONTEXTO DAS TRANSAÇÕES
+REGISTRADAS NA BLOCKCHAIN: ANÁLISE DOS DADOS DE TRANSAÇÃO DE CRIPTOMOEDAS
+Modalidade de apresentação: Trabalho Completo
+Resumo: O crescimento de transações de criptoativos vem se expandido em todo o Mundo,
+suportado pela Blockchain, projetada em 2008, considerada uma infraestrutura para transações de
+forma segura, por meio da atuação descentralizada de pontos que avalizam todas as transferências
+registradas no ambiente e evitam fraudes em transações. A estrutura vem servindo de base para
+transações diversas, considerando que registros são indeléveis e imutáveis, funcionando como um
+livro-razão. Não se sabe, no entanto, se realmente a infraestrutura proporcionaria anonimato e
+privacidade aos agentes ou utilizadores que realizam transações. O objetivo do artigo é, a partir da
+criação de uma carteira online e da realização de uma transação em criptomoeda bitcoin, solicitada
+de forma anônima, identificar quais dados e informações são gerados, custodiados, se dados
+sensíveis ou não e apurar se a partir dos mesmos é possível identificar agentes, utilizadores e
+responsáveis por transações. Como resultados, identificou-se que conquanto não identifique
+diretamente os utilizadores, em diversas fases da criação de uma aplicação para gestão de bitcoins e
+de uma transação são coletados e registrados dados que, correlacionados com outros dados e
+fontes, podem permitir a identificação de utilizadores e empresas integrantes de uma cadeira de
+transações na Blockchain, sendo possível violar a tão anunciada privacidade das referidas transações.
+Palavras-Chave: Criptomoedas; Blockchain; Privacidade; Informação; Dados.
+
+
+1 INTRODUÇÃO
+A Blockchain é considerada uma tecnologia emergente e que oferece suporte
+distribuído, confiável e seguro para a realização de transações entre utilizadores que não
+necessariamente tem confiança entre si, eliminando-se uma terceira parte de confiança. As
+transações em bitcoins tem sido objeto de inúmeras pesquisas nos últimos anos, sobretudo
+porque, amparadas pela estrutura Blockchain, impedem o double-spending ou o gasto
+duplicado, considerando que registra as transações de forma indelével em sua estrutura.
+A Blockchain é descrita por Satoshi Nakamoto (2008), que propõe uma rede P2P
+onde as transações com criptomoedas são recebidas pelos servidores (ou mineradores) que
+então operam uma decisão através do protocolo de consenso à base de desafios
+criptográficos sobre a ordem do armazenamento da transação no bloco.
+Dentre os diferenciais da Blockchain, a privacidade e anonimidade é referenciada,
+onde cada usuário gerencia suas próprias chaves e cada nó servidor armazena apenas
+fragmentos criptografados de dados de usuários, revelando transações até certo ponto
+anônimas, tendo como base o endereço dos envolvidos ou utilizadores da Blockchain
+(GREVE; SAMPAIO; ABIJAUDE; COUTINHO; VALCI; QUEIROZ, 2018)
+A privacidade ganha relevância diante de diversos fatores sociais ocorridos
+principalmente no século XX, como o desenvolvimento de novas tecnologias de
+comunicação e a invasão às esferas privada e doméstica de indivíduos. Do mesmo modo, o
+uso das redes de computadores possibilitou o tratamento de dados em escala nunca antes
+imaginado, tornando possível a obtenção de dados pessoais e informações de cidadãos, o
+que agrava o cenário da proteção à privacidade (MENDES, 2008).
+A privacidade tem se tornado um desafio com o desenvolvimento de novas
+tecnologias. Destaque-se que a Ciência da Informação estuda as práticas desde a criação até
+a recuperação de informações, estando diretamente relacionada com os novos paradigmas
+que surgem com o aumento dos fluxos informacionais e neste contexto, o problema da
+privacidade surge como um desafio, sobretudo nos ambientes informacionais digitais, sendo
+relevante que a Ciência da Informação estude e discuta questões sobre esta temática
+(GRISOTO, SANT’ANA; SANTAREM SEGUNDO, 2015).
+Sobre a relevância do estudo da privacidade no contexto de profissionais de
+informação, McGarry (1999) elenca quatro grandes áreas de interesse: a exatidão, a
+propriedade, o acesso e a privacidade, explicitando esta como quais as informações pessoais
+
+
+
+ou relações que uma pessoa deve revelar a outrem, em que circunstâncias e com quais
+garantias. De fato, transações financeiras são informações que em posse de pessoas erradas
+podem causar danos a indivíduos. Além de suportar transações financeiras com
+criptomoedas, a mesma tecnologia Blockchain vem sendo estudada em pesquisas como de
+suporte a registros de identidade, rastreio de produtos e até mesmo proteção autoral
+(MILAGRE; SANTARÉM SEGUNDO, 2018), de modo que a avaliação da privacidade no
+ambiente de uma transação financeira é de importância para outras áreas de aplicação da
+Blockchain.
+A alegada privacidade da Blockchain é justificativa proposta por Christidis e
+Devetsikiotis (2016), para, a exemplo, usa-la para integração com a Internet das Coisas (IOT),
+fornecendo uma camada computacional segura para compartilhamento e análise de dados
+gerados por objetos inteligentes.
+Estudos e pesquisas vem sendo realizados e explicitam o fator privacidade como
+inerente à rede descentralizada (CATALINE; GANS, 2017). No entanto, como se pode
+observar nesta pesquisa, existe divergência sobre a real privacidade da Blockchain, sendo
+importante avaliar as transações na Blockchain, identificando quais dados gera, como são
+armazenados e registrados e se podem expor a privacidade de utilizadores da rede.
+Deste modo, o artigo tem por finalidade avaliar, especificamente a partir da criação
+de uma carteira na Blockchain e realização de uma transação anônima, em um dos serviços
+mais utilizados (Blockchain.info), que é um serviço online que explora as transações na
+Blockchain, ao mesmo tempo em que oferece serviço de carteira eletrônica, quais dados são
+registrados, quais são expostos, qual a natureza ou classificação destes dados e se a partir
+deles, pode-se confirmar ser a Blockchain um ambiente privado ou não, avaliando-se a
+possibilidade de rastreio de transações e identificação dos utilizadores.
+A pesquisa parte da criação de uma carteira eletrônica e realiza uma transação em
+criptomoedas, solicitada a um pagador anônimo, sendo que a partir dela avalia quais dados
+podem ser coletados e se os dados podem direcionar à uma quebra de privacidade.
+Considerando ser a privacidade um dos campos de estudo da Ciência da informação, os
+resultados do trabalho servem de orientação sobre os desafios da privacidade a serem
+analisados no uso da plataforma Blockchain, bem como para trabalhos futuros que possam
+refletir medidas, propostas e modelos, com o aporte da Ciência da Informação, para que a
+Blockchain continue a evoluir, porém com o aprimoramento do fator privacidade das
+
+transações eletrônicas.
+2 PESQUISAS SOBRE A PRIVACIDADE DAS TRANSAÇÕES NA BLOCKCHAIN E SEUS RISCOS
+A privacidade é uma das questões na qual se debruça a Ciência da Informação e, no
+que diz respeito a Blockchain, identificou-se resultados divergentes sobre ser a rede segura
+ou não. Segundo Bezerra (2014), a privacidade refere-se a tudo o que o indivíduo não
+pretende que seja de conhecimento público, reservado apenas aos integrantes de seu
+círculo de convivência particular. Para transacionar com criptomoedas, como as bitcoins, é
+preciso uma carteira. Quando um utilizador cria uma carteira (em um dos serviços, como por
+exemplo a Blockchain.info) ele recebe um Wallet ID (ou número da carteira). Wallet ID é um
+número pessoal que não deve ser divulgado a ninguém eis que não é preciso informá-lo para
+receber criptomoedas. A Wallet ID é um identificador único, completamente individual ao
+utilizador e é utilizado para se acessar a carteira online, sendo que não é um endereço
+bitcoin para enviar ou receber valores (BLOCKCHAIN.INFO, 2019).
+A pesquisa de Catalini e Gans (2017) explicita que a Blockchain estabelece novos
+tipos de plataformas onde a troca de ativos digitais não precisa de intermediários e onde a
+confiança de um utilizador é amparada pela avalização de códigos de consenso dos sistemas
+e como resultado, o risco de privacidade é drasticamente reduzido.
+No mesmo sentido, em sua pesquisa envolvendo o uso da Blockchain, Martins (2019,
+p. 22), assim compreende a questão relativa à privacidade:
+Os blocos estão conectados linear e cronologicamente (como uma
+corrente) com o próximo bloco através de um hash. Um alto padrão de
+privacidade é alcançado, pois a identidade de cada usuário faz uso de uma
+chave de acesso pública e variável.
+
+Numerosos são os projetos e pesquisas que propõem a Blockchain como base para
+compartilhamento de dados entre pessoas e dispositivos, lastreados sempre na garantia da
+imutabilidade, confiabilidade, privacidade e anonimato. Tian (2016), apresenta proposta de
+uso de sensores de radiofrequência para coletar e transmitir dados de todas as fases da
+cadeia de suprimentos da agropecuária, com os dados registrados na Blockchain. Hashemi et
+al. (2016) propõe a criação de um sistema baseado em Blockchain para compartilhamento
+de dados de pessoas e organizações.
+
+Cidades inteligentes são projetadas a partir da Blockchain, como na proposta de
+Biswas e Muthukkumarasamy (2017), que estabelece um modelo para permitir a integração
+física, social e de negócios de uma cidade, baseado em contratos na plataforma.
+Diversamente das pesquisas avaliadas, encontram-se os autores que questionam a
+tão anunciada privacidade da Blockchain, ao tratar de criptomoedas, Rocha, et. al (2018),
+estabelece que os usuários do bitcoin usam um pseudônimo (endereço) para realizar suas
+transações, sendo que comumente cada usuário possui centenas de endereços e deste
+modo, uma transação pode ser vista como uma cadeia de assinaturas que comprova a posse
+e a transferência de valores, de maneira auditável. Neste sentido, uma das preocupações
+seria justamente com a auditabilidade destas transações imutáveis, que poderiam por
+exemplo revelar informações do utilizador além da mera identificação, mas principalmente,
+hábitos de compras, atividades financeiras e locais frequentados.
+A privacidade parece mais ameaçada quando as criptomoedas são utilizadas para
+realização de pagamentos em sites de e-commerce, considerando que estas aplicações (lojas
+virtuais) também manipulam dados de endereços associados a cadastros de compradores.
+Goldfeder et al. (2018) realiza uma pesquisa onde associam os cookies às transações feitas
+com bitcoins em sites de comércio eletrônicos. Como resultados, informam que os web
+trackers, aplicações de terceiros que lêem os cookies dos compradores para fins de
+propaganda ou análises,
+
+podem
+
+obter
+
+dados
+
+da transação na
+
+Blockchain
+
+e
+
+consequentemente identificar utilizadores (Figura 1). Apresenta a técnica de mixing (ou
+técnica de mistura), como forma de dificultar a identificação de utilizadores que fizeram
+transações na Blockchain, onde os mesmos enviam moedas uns aos outros de modo a
+esconder a ligação entre moedas antigas e novas.
+Figura 1: Possibilidade de identificação da pessoa associada à uma transação na Blockchain.
+
+Fonte: Goldfeder, Kalodner, Resiman, Narayana (2018. p. 180).
+
+
+
+Ao pesquisar sobre a privacidade de utilizadores de bitcoins em Blockchain pública,
+Barcelo (2007) já advertia que embora os endereços utilizados para as transações sejam
+pseudonimizados, a possibilidade de se conectar endereços com utilizadores é multiplicada
+quando os endereços são reutilizados para realizar novas transações. Tal situação se agrava
+quando muitos utilizadores estão utilizando a tecnologias sem conhecimento de tais fatores
+de risco.
+Deste modo, evidenciado que as pesquisas divergem sobre a Blockchain assegurar ou
+não privacidade ao utilizador. Do mesmo modo, é constatado que a suposta privacidade da
+Blockchain é consistente em desvincular os utilizadores ou usuários das transações e seus
+endereços. Na pesquisa, avaliamos se esta desvinculação ou pseudonimização é totalmente
+efetiva ou não e se existem riscos à privacidade de utilizadores.
+
+3 METODOLOGIA PARA ANÁLISE DE DADOS GERADOS A PARTIR DA CRIAÇÃO DE UMA
+CARTEIRA E REALIZAÇÃO DE TRANSAÇÃO “ANÔNIMA” COM BITCOINS
+A presente pesquisa, de natureza qualitativa e do tipo exploratória, valeu-se da
+criação de carteira e realização de uma transação a partir de um remetente anônimo na
+Blockchain, para a partir dela analisar os dados gerados e se podem ameaçar a privacidade
+dos utilizadores da operação. Inicialmente criou-se uma carteira online, wallet, valendo-se
+da plataforma Blockchain.info (www.blockchain.info). A partir dela solicitou-se a um
+anônimo o envio de uma pequena quantia em bitcoins. Registrada a transação no bloco,
+avaliou-se os dados capturados, elaborando-se uma tabela (Tabela 1) com os dados e riscos
+associados e na sequencia percorreu-se a Blockchain e seus registros, com uso de sistemas
+exploradores, de forma a buscar identificar padrões de transação, dados e entidades
+relacionadas, também se elaborando uma tabela (Tabela 2) de 10 (dez) transações
+anteriores ao recebimento pela carteira que pagou aquele “anônimo” que transferiu dados
+para os pesquisadores.
+
+3.1 Dados coletados no registro ou login em uma carteira online
+A partir do login realizado na wallet em 24-07-2019, percebeu-se que quando o
+navegador de quem faz login é desconhecido, é remetido um e-mail de Blockchain.info (noreply@blockchain.info) para que o titular da carteira autorize o login. Neste e-mail foram
+
+identificados dados coletados, transmitidos por mensagem eletrônica (dados que podem ser
+interceptados ou capturados no computador da vítima, prejudicando sua privacidade e
+identificando a autoria das transações), sendo alguns dados considerados dados pessoais,
+como o número único que identifica o computador do utilizador, o endereço IP (Internet
+protocol):
+Figura 2: Autorização de carteira Blockchain.
+
+Fonte: Blockchain.info(2019)
+
+Os dados registrados são data e hora, endereço IP, navegador usado para acesso a
+carteira e sistema operacional do utilizador.
+
+3.2 Dados em posse de terceiros e os riscos à privacidade
+Na sequência, avaliou-se o cabeçalho da mensagem recebida por noreply@blockchain.info para o e-mail dos pesquisadores para validação de um login na
+carteira criada. Para tanto, utilizamos o analisador de cabeçalhos MXtoolbox
+(https://mxtoolbox.com), onde submetendo o header (cabeçalho) da mensagem
+identificamos um endereço IP como remetente da mensagem, sendo que a partir dele,
+identificou-se uma outra pessoa jurídica, diversa da Blockchain.info, de nome SendGRID.
+A partir da análise, foi identificado o endereço de IP 198.21.6.174 como autor da
+mensagem, submetido a uma análise de WHOIS (para detecção da empresa responsável) na
+ferramenta WhatismyIP (https://www.whatismyip.com/), tendo-se identificado a empresa
+responsável por enviar os e-mails sobre a carteira da Blockchain.info (Figura 3).
+Figura 3: Endereço físico de terceiro que envia e-mails pelo serviço Blockchain.info
+
+Fonte: WhatsmyIP.com(2019)
+
+
+
+Foi possível apurar o endereço físico e telefone da empresa que remete e-mail ao
+titular da carteira, contendo dados pessoais e o ID (identificador) da carteira, informação
+considerada sigilosa e não divulgada nas transações.
+Uma das características da Blockchain é ser descentralizada e justamente não deter
+um intermediário, como um banco por exemplo, que poderia quebrar o sigilo de uma
+operação considerada fraudulenta. Por outro laudo, ao se tratar de transações com
+criptomoedas, como verificado, o utilizador precisa necessariamente de alguns serviços
+intermediários (terceiras partes) para operar transações, como carteiras e outras aplicações,
+que podem comprometer sua privacidade. Estes utilizadores podem, por variados motivos,
+realizar escolhas diversas para a custódia de suas Ids, chaves e senhas, as confiando na posse
+de terceiros, o que pode caracterizar um risco à privacidade, considerando que estas
+entidades podem vazar os referidos dados (Moser et al., 2013) e em alguns casos até mesmo
+usar recursos ou fundos indevidamente, reduzindo-se a possibilidade de questionamentos
+sobre o furto, considerando que a prova da propriedade de uma carteira se dá com a posse
+da chave privada (Valenta e Rowan, 2015).
+Conhecedor de dados interceptados em terceiros, atacantes podem realizar
+abordagem para fazer com que o utilizador forneça a senha da sua carteira, o que pode
+comprometer sua privacidade. Além disso, o próprio utilizador pode não usar os recursos de
+segurança apropriados. Krombholz, Judmayer, Gusenbauer e Weippl (2017), esclarecem em
+sua pesquisa com 990 utilizadores de bitcoins que 22% dos entrevistados já perderam
+bitcoins por falhas de segurança ou por serem induzidos a erros.
+
+3.3 Carteiras associadas a um e-mail
+Como constatado, a carteira Blockchain.info faz a entrega de dados a uma empresa
+terceira, com sede em Denver (SendGrid), para a remessa de e-mails, o que equivaleria a um
+operador que tem acesso as informações da carteira e de seu titular. Simulou-se o
+esquecimento de senha (PIN) de uma carteira se digitando o e-mail de recuperação
+(https://login.blockchain.com/#/reminder), com isso, em Wallet Login Reminder, foi possível
+identificar e receber um e-mail do mesmo remetente, mas com o histórico de carteiras
+identificadas para aquele e-mail (Figura 4).
+
+
+Figura 4: Três carteiras identificadas no login do pesquisador.
+
+Fonte: Blockchain.info (2019)
+
+Estes IDs são informações sensíveis e que não devem ser revelados a terceiros. De
+posse destes Ids, atacantes podem correlacionar informações para tentar a senha do
+utilizador. De outro lado, a correlação pode permitir identificar o utilizador proprietário de
+uma carteira, o que pode violar sua privacidade.
+
+3.4 Dados relativos à transação
+Neste ponto da pesquisa, gerou-se um endereço para recebimento de fundos e a
+partir do mesmo, compartilhou com terceiro (desconhecido e anônimo) para que este
+fizesse a transferência do valor de 0.0003 BTC, avaliando-se as informações e dados que são
+coletados. Fora gerado um endereço e remetido ao pagador, que efetuou a transação.
+Identificado que uma carteira pode gerar vários endereços para transações distintas.
+Feito o pagamento, analisou-se as transações da Blockchain, onde constatou-se a
+transação efetuada. Checou-se então que a transação fora registrada no bloco, tendo sido
+registrada data e hora da transação (Figura 5).
+
+
+Figura 5: Transação recebida através do endereço 1KR9yqtmwr9mib2KGpiUxuvQtVEZwDQPPp.
+
+Fonte: Blockchain.info (2019)
+
+Identificados dados relevantes como as datas, horários, taxa de mineração,
+confirmações, tamanho em bytes, local de inclusão nos blocos, montante dos fundos e o
+registro ou código da transação. Nesta sequência, identificado que a Blockchain não publica
+o endereço IP das transações. O serviço Blockchain.info, no entanto, registra inúmeras
+informações, sendo que elas não são publicadas nas transações, mas são armazenadas no
+serviço de gestão de carteiras.
+Assim, realizou-se uma tabela (Tabela 1) com dados considerados relevantes sob o
+prisma de potencial violação à privacidade e seus riscos associados.
+Tabela 1: Dados registrados a partir da criação de carteira e realização de transação na Blockchain.
+Índice
+
+Dado
+
+Processo
+
+Risco associado
+
+1
+
+Informação sobre o
+Browser
+
+Login na carteira (autorização de
+login)
+
+Em correlação pode-se identificar um
+responsável
+
+2
+
+Wallet ID
+
+3
+
+Data e hora
+
+4
+
+Endereço IP
+
+5
+
+Código da
+transação
+
+6
+
+Endereços das
+transações
+
+Validação do login na carteira (o
+agente recebe por e-mail)
+Login na carteira (autorização de
+login)
+Login na carteira (autorização de
+login)
+
+Pode-se identificar o titular de uma
+carteira
+Em correlação pode-se identificar um
+responsável
+Pode-se identificar a pessoa responsável
+por um Wallet ID
+Pode-se utilizar exploradores para rastrear
+Transferência de fundos
+endereços associados e identificar padrões
+Pode-se utilizar exploradores e
+correlacionar com informações na web e
+Transferência de fundos
+identificar outras transações e pessoas
+envolvidas
+Fonte: Elaborado pelos autores.
+
+
+3.5 A possibilidade de identificação do titular de uma carteira ou de agentes associados às
+transações
+Como identificado, embora o serviço de carteiras da Blockchain identifique e colete
+informações e dados pessoais como endereço IP, um olhar na Blockchain, a partir de uma
+pesquisa por transação, não permite apurar a princípio os responsáveis pela mesma,
+considerando a existência de pseudonimização (não se sabe quem é o titular do endereço).
+Neste sentido, buscou-se nesta pesquisa, realizar uma correlação de informações
+(Tabela
+
+1,
+
+item
+
+6)
+
+e
+
+transações,
+
+utilizando
+
+o
+
+serviço
+
+Wallet
+
+Explorer
+
+(https://www.walletexplorer.com/), a partir do endereço dos pesquisadores usado para
+receber a transação. Foi possível identificar o endereço do pagador. Submetendo o endereço
+de recebimento à aplicação, a mesma gera uma codificação matemática do endereço para a
+partir dele identificar endereços similares ou atribuíveis à mesma carteira, sendo que em
+algumas hipóteses, pode associar um endereço ou transação a uma carteira popular ou
+pessoa jurídica, apresentando também outras transações. Na análise, o código da wallet
+(codificação que não se confunde com o ID da carteira) fora gerado e apresentou apenas
+uma transação de recebimento.
+Buscou-se então identificar a transação e a partir dela, identificado o ID da carteira
+do remetente de 0.0003 Bitcoins: 1KR9yqtmwr9mib2KGpiUxuvQtVEZwDQPPp.
+A partir do ID da carteira ligada ao endereço do pagador anônimo (que não foi
+identificada como uma carteira conhecida, online ou provedor de aplicação), buscou-se
+identificar outras transações daquela mesma carteia, onde fora possível identificar um
+recebimento (Figura 6), 4 (quatro) minutos antes do momento do pagamento ao endereço
+da pesquisa.
+
+Figura 6: Transação de recebimento às 16:18:40.
+
+Fonte: WalletExplorer (2019)
+
+Assim, identificado que no dia 24/07/2019 às 16h14min, o ID da carteira ao qual está
+associado o endereço de remessa de bitcoins ao endereço da pesquisa, recebeu do ID
+575bda116b o equivalente a R$ 2.283,44 (dois mil, duzentos e oitenta e três reais e quarenta
+e quatro centavos).
+Como se pôde verificar, é possível com o explorador WalletExporer percorrer a
+corrente, avaliando outras transações ligadas a uma transação base. Analisando a corrente
+ainda fora possível identificar, a partir do ID 575bda116b, que pagou a pessoa que transferiu
+o dinheiro para o endereço de recebimento da pesquisa algumas transações (A corrente
+pode ser visualizada em https://www.walletexplorer.com/wallet/575bda116b0f429c).
+Percorreu-se 10 (dez) transações anteriores ao pagamento feito ao ID 575bda116b,
+que pagou a pessoa que transferiu o dinheiro para o endereço de recebimento da pesquisa.
+Assim, o ID 575bda116b recebeu valores de 896dd8b679, sendo as sequências posteriores
+registrada na Tabela 2.
+
+Tabela 2: 10 (dez) transações anteriores a transação que fez pagou a conta do anônimo.
+Sequencia
+
+Data
+
+Recebeu
+
+1
+
+2019-07-24 07:22:38
+
+[896dd8b679] +0.06748056
+
+2
+
+2019-07-24 07:22:21
+
+[a998e37705] +0.06848734
+
+3
+
+2019-07-24 06:36:00
+
+[4f215ca693] +0.06859412
+
+4
+
+2019-07-24 05:41:25
+
+[7e19467a57] +0.07041482
+
+5
+
+2019-07-24 05:24:08
+
+[fd402084c5] +0.07160247
+
+6
+
+2019-07-24 03:48:24
+
+[ee8821878c] +0.07211965
+
+7
+
+2019-07-12 18:04:15
+
+[a682605c07] +0.07316643
+
+8
+
+2019-07-10 14:22:53
+
+[dffc584540] +0.34591321
+
+9
+
+2019-07-10 14:22:53
+
+[cd9c59f390] +0.34934751
+
+10
+
+2019-07-10 01:36:56
+
+[00000b55c1] +0.82392781
+
+Fonte: Elaborado pelos autores.
+
+Identificado na 10a. posição da Tabela 2 que a carteira 00000b55c1 é responsável por
+transações de alto valor em criptomoedas, administrando uma grande quantidade de
+Bitcoins. Neste contexto, buscou-se avaliar todas as transações realizadas no lote em que
+estava registrada a transação para o id anterior, 9a. posição da Tabela 2, endereço
+cd9c59f390, relacionado com cadeia de transações registradas na referida tabela e que
+
+
+chega até o endereço dos autores da pesquisa. Rastreando o código da transação,
+identificamos que um único endereço de origem (da carteira 00000b55c1) remeteu ativos
+para 48 destinatários, totalizando quase 90 bitcoins1
+A
+
+partir
+
+do
+
+endereço
+
+de
+
+(1NDyJtNTjmwk5xPNhjgAMu4HDHigtobu1s)
+
+remessa
+e
+
+do
+
+que
+
+código
+
+enviou
+da
+
+o
+
+carteira
+
+ativo
+calculado
+
+virtual
+pelo
+
+WalletExplorer, 00000b55c1, iniciou-se a pesquisa por informações em outras fontes de
+informação, em atividade de correlação de informações, valendo-se do serviço online
+BitcoinWhoisWho (https://bitcoinwhoswho.com/).
+Neste ponto da pesquisa, nas aparições em websites, foi identificado a quem
+pertencia o endereço usado para transferência dos valores a um dos endereços participantes
+da cadeia de endereços do recebimento de criptomoedas pelos autores (Tabela 2).
+Identificado pertencer a corretora ou Exchange de nome Binance (Figura 7).
+
+Figura 7: Correlação de informações a partir de um endereço de origem usado para transação.
+Endereço pertencente à corretora Binance.
+
+Fonte: BitcoinWhoisWho (2019)
+1
+
+Disponível em:
+https://www.walletexplorer.com/txid/9ed0ad5ed709bdf7f09fd51ff560e0575abe4ee36f0380d20b53886295fb5
+e10 Acesso em 16 set. 2019
+
+
+Identificado o endereço físico e telefone da Corretora: Binance Europe Services
+Limited, Melita Court, Level 3, Triq Giuseppe Cali, Ta’Xbiex XBX 1420, Malta, Telefone +65
+6713 9777, a partir de pesquisa em seu website (https://www.binance.com/pt/terms).
+Como apurado das pesquisas, o registro de endereços e histórico de transações, a
+partir de uma transação que se analisa, pode conduzir a apuração do ID de carteiras, que
+usam outros endereços e através da análise das transações da corrente, pode-se identificar a
+origem de uma criptomoeda ou pessoas associadas. Em sentido inverso seria possível, por
+exemplo, a partir de um pagamento e não recebimento, rastrear o dinheiro até a carteira no
+final da corrente. Na pesquisa, que se limitou a 10 (dez) transferências a partir do endereço
+que pagou ou o endereço pagador ao endereço dos pesquisadores, fora identificado que o
+dinheiro ou criptomoeda:
+a) Originou-se da corretora Binance, fisicamente localizada, como Exchange, que
+poderia fornecer informações sobre o titular da próxima carteira cd9c59f390 (9a.
+posição na tabela), sendo possível levantar informações até que se alcançasse a
+carteira de destino.
+b) A corretora também pode ter informações sobre o pagador à carteira
+cd9c59f390, caso ela mesma não tenha sido responsável pela transferência.
+c) O mesmo procedimento de busca de informações poderia ser feito, em cada
+ponto identificado na Tabela 2, até se apurar o pagador anônimo ao endereço
+criado para fins da pesquisa.
+d) O uso do mesmo endereço para múltiplas transações, de fato, pode comprometer
+a privacidade de um titular de uma carteira, que pode ser associado por atuação
+de terceiros, identificação em outras transações, reportes de utilizadores ou por
+sistemas exploradores, que realizam o agrupamento de transações (endereços) a
+partir de um código de carteira.
+
+4 RESULTADOS IDENTIFICADOS
+Dentre os resultados da pesquisa, que envolveu a criação de uma carteira a avaliação
+dos dados coletados diante de uma transação, identificamos temos que:
+a) A privacidade é considerada um diferencial para adoção da tecnologia Blockchain
+não só nas transações em criptomoedas, mas para registro de outras atividades.
+
+
+
+b) Os trabalhos científicos dividem-se sobre ser a Blockchain um ambiente privado
+ou não, sendo que parte dos pesquisadores entende ser possível identificar
+utilizadores da rede.
+c) Poucas são as pesquisas, no entanto, que realmente submeteram ou avaliaram
+quais dados a Blockchain coleta, como trata e como os dados de intermediários
+(terceiras partes) como carteiras e corretoras ou exchanges podem influenciar na
+privacidade.
+d) Na pesquisa, ao se criar uma carteira virtual na Blockchain.info, fora possível
+identificar, que dados são coletados, mesmo sem o consentimento do utilizador,
+como o registro do Navegador do mesmo e seu endereço IP (Internet Protocol),
+além de sistema operacional. Identificado que tais dados são registrados e
+cedidos a outras empresas, como a empresa que remete e-mails ao utilizador
+(SendGrid), enviando inclusive o ID da carteira, em caso de esquecimento do
+mesmo (dado que seria sigiloso), que pode ser interceptado e a partir daí, ser
+utilizado como prova da propriedade de uma carteira, quebrando-se a
+privacidade do utilizador.
+e) Ao se criar um ativo digital (carteira) e receber a transação de um “anônimo”, foi
+possível identificar os dados que são gerados e, a partir dos mesmos, endereços
+das transações, avaliando-se a possibilidade de se rastrear a autoria de
+transações e identificar pessoas na cadeia de transações que pudessem conduzir
+ao endereço que pagou o endereço da pesquisa.
+f) Como isso, foi possível identificar transações e endereços ligados a uma mesma
+carteira, e por meio deles identificar outros agentes, em transações anteriores,
+como uma Exchange. Na pesquisa, foi identificado que o “anônimo” que realizou
+a transferência dos bitcoins à carteira da pesquisa, o fez com bitcoins que
+passaram pela Corretora/Exchange Binance, a qual foi possível identificar o
+endereço, a partir da utilização de outros sistemas exploradores como o
+BitcoinWhoisWho.
+g) A corretora, por sua vez, registra dados das pessoas que compram vendem
+Bitcoins, dados que podem ser comprometidos em caso de ataques,
+vulnerabilidades ou requerimentos.
+h) Na pesquisa, embora não se tenha identificado o remetente do dinheiro ao
+
+
+endereço dos pesquisadores, foi possível identificar que a partir da corretora
+identificada, seria possível ter acesso a informações sobre os pagamentos até o
+titular da carteria que realizou o pagamento. Neste sentido, fazendo-se o
+processo de correlação ou requerimento de informações, pode-se chegar até a
+autoria do realizador dos pagamentos.
+i) Identificado que a utilização frequente de mesmos endereços ligados a inúmeras
+transações é um fator que pode expor ainda mais a privacidade e conectar
+endereços a carteiras e até mesmo a pessoas por trás das mesmas, além de expor
+padrões e hábitos envolvendo transações, como na pesquisa, onde se chegou à
+corretora Binance a partir de um endereço utilizado para inúmeras transações em
+correlação com informações Web, registradas pelo serviço BitcoinWhosWho.
+j)
+
+Deste modo, não se pode afirmar que nível de privacidade assegurado pela
+Blockchain para transações de criptomoedas seja, de fato, irreversível e
+absolutamente seguro.
+
+5 CONCLUSÕES E TRABALHOS FUTUROS
+A privacidade é considerada uma das áreas de estudo da Ciência da Informação e,
+considerando o grande volume de transações, não apenas de criptomoedas, mas aplicações
+que estão surgindo amparadas por Blockchains, como por exemplo, serviços de identificação
+do cidadão (biografia e registros pessoais), é de importância apurar se a plataforma
+efetivamente assegura privacidade em relação a registros e transações, que deveriam estar
+disponíveis apenas aos utilizadores.
+Com o presente trabalho, analisando-se exclusivamente o registro de carteira na
+Blockchain.info e de uma transação, identificou-se que a aplicação ou serviço que gerencia a
+carteira coleta dados os utilizadores, sendo alguns considerados pessoais e que podem
+permitir sua identificação. Estes dados podem ser vazados ou interceptados em outros
+ambientes de terceiros ou no próprio terminal do utilizador, o que pode comprometer sua
+privacidade.
+Logo, revela-se muito importante que utilizadores estejam atentos às questões
+relativas a segurança da informação em transações com base na Blockchain, principalmente,
+que tenham critérios para identificar aplicações e serviços que protegem os dados,
+utilizando tais recursos.
+
+
+Na simulação das transações desta pesquisa, através de exploradores da Blockchain
+(blockchain.info e wallet explorer) não fora possível identificar diretamente o endereço IP
+dos utilizadores, o que poderia conduzir a seus dados cadastrais. Por outro lado, como
+apresentado, a partir da análise dos registros na corrente, pode-se não só analisar o
+histórico de transações associados aos endereços envolvidos em uma transação, mas
+especificamente, identificar outras transações a partir dos endereços e dados de alguns
+utilizadores, que podem ser serviços online como carteiras e exchanges, que por sua vez
+guardam outros dados associados. Deste modo, com a pesquisa, identificou-se que pode ser
+possível, através de correlação de informações, apurar os dados pessoais do titular de uma
+carteira ou responsável por uma determinada transação, a partir de um único endereço de
+uma transação na Blockchain.
+Assim, é salutar considerar, a partir dos resultados desta pesquisa, que apenas o uso
+da tecnologia Blockchain não será capaz de resolver todos os problemas relativos à
+privacidade e de segurança no âmbito virtual (ROCHA, PEREIRA E JUNIOR, 2018) Além disso,
+a exposição da privacidade está ligada não só aos dados que o utilizador recebe e custodia
+para acesso a seus ativos digitais, mas principalmente, aos terceiros intermediários (terceiras
+partes) que este escolhe para gerenciar seus bitcoins, como carteiras, aplicativos e
+exchanges. Estes terceiros ainda podem utilizar a estrutura e serviço de outros terceiros,
+como identificado na pesquisa, para envio de e-mails ou outras funções. Estes serviços
+podem ser comprometidos e expor a privacidade de utilizadores de carteiras de bitcoins.
+Assim, conquanto a estrutura da Blockchain tenha sido feita para ser privada, é
+possível rastrear fundos desde o primeiro pagamento até um recebimento específico.
+Serviços de rastreio e explorers hoje disponíveis (em especial BitcoinWhosWho), já analisam
+os dados disponíveis na Blockchain e os correlacionam com informações na World Wide Web
+e até mesmo com “denúncias” feitas por outros utilizadores, assim acrescentando dados
+adicionais a dados então “pseudonimizados”, podendo expor ou permitir inferências que
+tornam a privacidade das transações ameaçadas. Em conclusão, confirmado parte das
+pesquisas identificadas neste trabalho, pode-se afirmar que não existe garantia total de
+privacidade no uso e nas transações baseadas na infraestrutura pública Blockchain.
+Como trabalhos futuros, pretende-se identificar os aspectos da privacidade no
+âmbito de serviços de registros de identificação pessoal, a partir do uso da Blockchain e
+apurar se possível o rastreio de atividades e comportamentos pessoais de forma indelével a
+
+
+partir da análise da estrutura. A partir desta revisão, identificar como utilizar o aporte da
+Ciência da Informação para que a aplicações possam utilizar a infra-estrutura pública da
+Blockchain, sem que isso constitua uma ameaça indelével e crítica à privacidade e proteção
+de dados pessoais dos cidadãos.

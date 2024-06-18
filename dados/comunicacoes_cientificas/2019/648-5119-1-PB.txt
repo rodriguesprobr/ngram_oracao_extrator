@@ -1,0 +1,560 @@
+
+ANÁLISE DO MODELO CONCEITUAL DO SIGAD A PARTIR DE PRINCÍPIOS DA ONTOLOGIA DE
+FUNDAMENTAÇÃO UFO
+Modalidade: Trabalho Completo
+Resumo: Sistemas de informação são fundamentais para a gestão da massa documental gerada nas
+atividades das organizações. Para que tais sistemas atendam a estas necessidades é importante que
+os seus desenvolvedores tenham clareza sobre os conceitos relacionados do domínio alvo. Para isso
+é fundamental a elaboração de modelos conceituais expressivos e não ambíguos. A Orientação
+Técnica n° 2, editada pela Câmara Técnica de Documentos Eletrônicos (CTDE), apresenta um Modelo
+Entidade-Relacionamento para base de dados na implementação de um SIGAD. O objetivo deste
+trabalho é analisar o modelo conceitual do SIGAD e verificar se há ambiguidades ou problemas de
+expressividade com base nos pressupostos de uma ontologia de fundamentação (Unified
+Foundational Ontology – UFO). Esta pesquisa é de caráter exploratório, utiliza-se da pesquisa
+bibliográfica como procedimentos técnicos e tem como natureza a pesquisa qualitativa. Percebeu-se
+a ausência de determinados conceitos no modelo conceitual da CTDE e a necessidade da explicitação
+mais precisa de conceitos neste modelo.
+Palavras-Chave: Gestão Arquivística de Documentos; Modelo Conceitual; Ontologia de
+Fundamentação; SIGAD.
+1 INTRODUÇÃO
+Com o aumento da produção de documentos em meio digital, percebe-se um
+empenho de vários profissionais na oferta de soluções de informática para gestão da massa
+documental gerada nas atividades das instituições e empresas. Neste caso, ações importantes
+devem ser observadas para que estas soluções possam atender às necessidades das
+organizações que pretendam utilizar estes sistemas. Uma delas é a elaboração de modelos
+conceituais, que fornecem uma visão geral do domínio-alvo do sistema e, assim, auxiliam na
+compreensão dos conceitos relevantes deste domínio.
+Diante disto, o foco deste trabalho se encontra na análise do Modelo Conceitual
+proposto pela Câmara Técnica de Documentos Eletrônicos (CTDE) e na comparação do mesmo
+com os pressupostos de uma ontologia de fundamentação. Isto se dá, pelo fato de que estas
+ontologias têm sido utilizadas para apoiar a elaboração de modelos conceituais mais precisos
+(MEDEIROS, 2012) e têm sido usadas, especificamente, para fundamentar a elaboração de
+modelos que embasam o desenvolvimento de sistemas de informação.
+No processo de gestão de documentos arquivísticos, as administrações pública e
+privada utilizam ferramentas da Tecnologia da Informação (TI) e o mercado de
+desenvolvimento de sistemas de informação tem criado softwares para isso. No entanto, Silva
+e Bedin (2014, p. 300), no contexto de sistemas informatizados de gestão arquivística,
+apontam que “são poucas as iniciativas no Brasil que de fato aplicam a Gestão Documental em
+sua totalidade”, e concluem que na “prática o tratamento dos arquivos é algo distante da
+teoria, muitas vezes rejeitada pelo esquecimento ou pela falta de conhecimento”.
+Neste sentido, a análise de literatura existente indicou uma carência de estudos que
+orientem profissionais de TI e de outras áreas que utilizam estes sistemas, como por exemplo,
+os arquivistas, bibliotecários, museólogos, entre outros, no conhecimento de modelos
+relacionados ao domínio da gestão de documentos em formato digital e não digital. Tudo
+indica que, os sistemas de gerenciamento arquivístico de documentos construídos não
+atendem a todos os requisitos do e-ARQ Brasil e que estes sistemas ainda possuem
+funcionalidades que refletem um entendimento equivocado ou incompleto das reais
+necessidades de gestão do documento arquivístico. Esta afirmação pode ser comprovada na
+crítica do Conselho Nacional de Arquivos (CONARQ) ao Sistema Eletrônico de Informações
+(SEI) (CONARQ, 2015). Santos (2012) salienta que esta realidade ainda se faz presente devido
+à profissão do arquivista continuar sendo vista de modo muito relacionado à técnica do
+tratamento dos documentos em papel, o que, como consequência, acarreta a dificuldade em
+
+
+reconhecer o quanto os arquivistas podem vir a contribuir nos projetos de gestão de
+documentos digitais.
+Há propostas para modelos que tratam da realidade do documento arquivístico digital,
+mas elas ainda são incipientes ou expressam ambiguidades que podem levar a desenvolver
+sistemas incapazes de atender adequadamente às necessidades de gestão do documento
+arquivístico. Por outro lado, os modelos conceituais para sistemas de gestão arquivística estão
+em processo de amadurecimento, como por exemplo, o modelo conceitual do SIGAD (CTDE,
+2011). Somam-se a este exemplo, o Modelo de Requisitos Funcionais da União Europeia
+(MoReq), Especificação de requisitos do DOD (EUA), Requisitos para sistemas de gestão de
+documentos eletrônicosdo Reino Unido e a Norma ISO 15.489, que se configuram como
+principais influências do e-ARQ Brasil (SANTOS, 2019).
+Por isto, analisaremos o modelo conceitual da CTDE à luz dos requisitos obrigatórios do
+SIGAD e dos princípios de uma ontologia de fundamentação, que pode ser definida como um
+modelo formal, que visa apoiar a análise de modelos conceituais. Este movimento visa auxiliar
+a identificar ambiguidades1 e imprecisões no modelo mencionado. Por esta razão,
+consideramos esta temática relevante, pois possibilitará evidenciar aspectos que devem ser
+observados no desenvolvimento de modelos conceituais de modo a torná-los mais precisos2,
+ou seja, mais fiéis ao mundo real, no que diz respeito à conceituação dos objetos que
+representam e suas relações.
+Entendemos que esta pesquisa se encontra pautada em uma metodologia de caráter
+exploratório, pois com este tipo de abordagem investigativa busca-se a familiarização com a
+temática de sistemas informatizados de gestão de documentos arquivísticos digitais e não
+digitais, conforme apontado por Gil (2002, p. 41).
+Do ponto de vista dos procedimentos técnicos, a pesquisa será bibliográfica pois serão
+elaboradas a partir de leituras de artigos e livros das áreas de Ciência da Informação,
+Arquivologia e Ciência da Computação.
+2 O MODELO CONCEITUAL DO CTDE
+Segundo Gil (2002, p. 41), modelo conceitual é a “representação abstrata e simplificada
+de um sistema real, com a qual se pode explicar ou testar o seu comportamento, em seu todo
+1
+
+Problemas que surgem quando um termo ou uma estrutura semântica se presta a mais de uma interpretação
+(por homonímia ou polissemia) e, portanto, um de seus sentidos pode ser tomado pelo outro dentro de um
+contexto. A expressão que tem dois ou mais sentidos geralmente leva o usuário a mal-entendidos (BARITÉ,
+2015, p. 26, tradução nossa).
+2
+A precisão, em relação à modelagem de dados, significa que existe uma maneira clara e inequívoca de ler
+cada símbolo e termo no modelo conceitual (HOBERMAN, 2016, p. 23).
+
+
+ou em parte”. Segundo Sales, Sayão e Motta (2012, p. 183) o modelo conceitual serve para:
+“[...] compreender o mundo ou simplesmente uma questão no mundo; estabelecer padrões
+de comunicação entre ele e outros seres e representar de forma simplificada um objeto ou
+uma situação no mundo”.
+Cabe, neste momento, pontuarmos que O Modelo Entidade-Relacionamento (MER) e
+sua representação gráfica, conhecida como Diagrama Entidade-Relacionamento (DER), tem
+sido usado amplamente no mundo do desenvolvimento de software, tendo sido idealizado
+por Peter Chen em 1976.O modelo conceitual Entidade-Relacionamento é formado por
+entidades, representado pelo símbolo de um retângulo, atributos, representados por um
+círculo pequeno, e relacionamentos, representados por um losango.Nesta perspectiva, será
+apresentado o modelo conceitual existente na Orientação Técnica n. 2 de 2011 da CTDE para
+o desenvolvimento de um Sistema Informatizado de Gestão Arquivística de Documentos,
+conforme ilustrado na figura 1.
+O esquema de metadados do Modelo de Requisitos e-ARQ Brasil foi estabelecido
+com base nos metadados identificados nos processos de gestão arquivística de documentos
+para os SIGAD (ALVES, 2017, n. p).Neste sentido, visando atender a perspectiva do
+desenvolvedor de sistemas, faz-se necessário explicitar com mais detalhes os conceitos
+presentes no modelo, uma vez que os desenvolvedores não necessariamente são
+familiarizados com estes conceitos, que são: plano de classificação, temporalidade e
+destinação, classe, tipo de classe, unidade de arquivamento, tipo de unidade de
+arquivamento, volume, documento arquivístico, documento e documento digital.
+O plano de classificação é um dos instrumentos fundamentais da gestão documental.
+Bernardes e Delatorre (2008, p. 18) esclarecem que o plano de classificação de documentos
+de arquivo é o resultado do “estudo da estrutura e do funcionamento da organização
+responsável pela produção e acumulação de documentos”.
+Piedade (1983, p. 19) afirma que “classe é um conjunto de coisas e ideias que
+possuem um ou vários atributos, predicados ou qualidades em comum”. Em complemento a
+esta definição, Gonçalves (1998, p. 12) declara que o processo de formação das classes se
+dá:
+a partir da análise do organismo produtor de documentos de arquivo, são
+criadas categorias, classes genéricas, que dizem respeito às
+funções/atividades detectadas (estejam elas configuradas ou não em
+estruturas específicas, como departamentos, divisões etc.) (GONÇALVES,
+1998, p. 12).
+
+
+
+A CTDE (2011c) entende os níveis existentes em um plano de classificação, ou seja,
+cada um dos níveis de um plano de classificação, como um tipo de classe (classe, subclasse,
+grupo, subgrupo e tipo de documento arquivístico). Cada tipo de classe pode ter várias
+classes a ele relacionadas (CTDE, 2011c, n. p).
+Figura 1: Modelo conceitual do SIGAD, conforme a CTDE
+
+Fonte: CTDE (2011b, p. 1).
+
+Temporalidade é o prazo de guarda nas fases corrente e intermediária atribuída aos
+documentos. Destinação se compreende como a decisão a se tomar, a partir da avaliação,
+quanto ao encaminhamento dos documentos para as etapas de guarda permanente,
+descarte ou eliminação (ARQUIVO NACIONAL, 2005; FREIXO; TOUTAIN, 2014).
+A unidade de arquivamento pode ser compreendida como o documento que é
+considerado para fins de classificação, arranjo, armazenamento e notação. Uma unidade de
+arquivamento pode ser um dossiê, processo ou pasta em que se encontrem reunidos
+documentos sob o mesmo código de classificação, como, por exemplo, folhas de ponto de
+um determinado ano, relatórios de atividades de um período específico ou atas de reunião
+(CTDE, 2011a, n. p).
+
+
+
+O volume é uma partição de uma unidade de arquivamento. Esta prática tem origem
+nos documentos não digitais, de modo a possibilitar que os volumes tenham tamanho e
+peso de fácil manejo. No caso dos documentos digitais, tal prática pode se mostrar
+apropriada nas situações em que a divisão em volumes facilite a manipulação das unidades
+de arquivamento, como, por exemplo, nas atividades de seleção, transferência etc. (CTDE,
+2011c, n. p).
+Segundo a CTDE (2011c, n. p) o documento pode ser compreendido como uma
+unidade de registro de informações, qualquer que seja o suporte ou formato. Documento
+arquivístico é qualquer documento criado (produzido ou recebido e retido para a ação ou
+referência) por uma pessoa física ou jurídica ao longo de uma atividade prática como
+instrumento e subproduto dessa atividade (DURANTI, 2005, p. 5,7).
+Innarelli defende que:
+Os documentos digitais possuem todas as características que compreendem a
+definição de documento, podemos considerá-los válidos enquanto documentos,
+pois apesar de não sabermos exatamente onde eles estão armazenados
+fisicamente e de não conseguirmos enxergá-los diretamente em seu suporte, os
+documentos estão armazenados fisicamente em suportes magnéticos, ópticos,
+ópticos/magnéticos e outros na forma de bits e podem ser visualizados com o
+auxílio de hardware e software (INNARELLI, 2007, p. 26).
+
+Duranti (2005) define o componente digital como um objeto digital capaz de conter a
+totalidade ou parte de um documento, mais que um documento, e/ou metadados a eles
+relacionados. Também ressalta a existência de métodos específicos para a preservação deste
+tipo de objeto. Em outras palavras, um componente digital pode ser compreendido como
+uma unidade de armazenamento. É uma cadeia de “bits” distinta que, sozinha ou combinada
+a outras cadeias de “bits”, compõe um documento arquivístico digital. Cada documento
+arquivístico digital tem em sua composição, pelo menos, um componente digital e alguns
+deles possuem vários componentes digitais em sua composição.
+Cabe ressaltar que a partir da compreensão dos conceitos arquivísticos presentes no
+modelo do SIGAD, é preciso formalizar a sua representação de modo a minimizar as
+ambiguidades, e nisto os pressupostos da UFO podem ajudar.
+3A UFO: UMA ONTOLOGIA DE FUNDAMENTAÇÃO E SEUS PRESSUPOSTOS
+Na Ciência da Informação, há vários pesquisadores estudando e desenvolvendo os
+conceitos, os tipos, as aplicações, os métodos e formas de elaborar ontologias (ALMEIDA, M.
+B.; BAX, M. P, 2003; CAMPOS, M. L. A. et al., 2007; ALMEIDA, M. B., 2014). Campos et al.
+(2007, p. 1) afirmam que:
+
+Uma ontologia é um modelo de informações representando um conjunto de
+conceitos num domínio específico, estruturados e inter-relacionados entre si, de
+entendimento compartilhado em comum por uma comunidade de usuários. Os
+conceitos são organizados em hierarquias de classes e possuem atributos e
+relações entre si e representa em linguagem “inteligível” por programas “agentes
+de software” e usada por estes para fazer inferências sobre os conceitos desse
+domínio.
+
+Dentro da temática de Ontologia encontramos o conceito de ontologia de
+fundamentação, entendida por Guizzardi (2005, p. 371) como uma teoria resultante dos esforços da metafísica descritiva, da ciência cognitiva e da linguística, “com o principal objetivo
+de capturar as distinções ontológicas subjacentes à linguagem e a cognição humana”.
+Diante disto, podemos concluir que, a ontologia de fundamentação é uma ontologia
+formal, visando reconhecer as categorias gerais de certos aspectos da realidade que não
+está restrita a um campo científico, apresentando o conhecimento independentemente de
+linguagem, de um estado particular das coisas ou ainda do estado da agente.
+Nesta etapa, abordaremos um aspecto importante para nosso trabalho que é a
+Unified Foundational Ontology (UFO). A UFO é uma ontologia de fundamentação e é
+utilizada para o apoio da modelagem conceitual (GUIZZARDI, 2005).
+Ressaltamos que existem outras ontologias de fundamentação como a Basic Formal
+Ontology (BFO) (GRENON, P.; SMITH, B.; GOLDBERG, L., 2004; SMITH, B.; GRENON, P., 2004)
+e a Descriptive Ontology for Linguistic and Cognitive Engineering (DOLCE) (GANGEMI, A. et
+al., 2002). Entretanto, a UFO é voltada especificamente para modelagem de sistemas de
+informação, possuindo ferramental de apoio que permite elaborar e validar modelos
+ontológicos, o que a torna a escolha mais adequada para nossos propósitos.
+A UFO pode ser dividida em três partes: UFO-A, UFO-B3 e UFO-C4. Esta pesquisa vai se
+deter na UFO-A, pois ela “é uma ontologia de fundamentação capaz de modelar objetos
+(endurants), coisas e suas propriedades” (GUIZZARDI, FALBO, GUIZZARDI, 2008, p. 244).
+Elementos estes presentes no modelo do SIGAD proposto pela CTDE.
+Guizzardi (2005) afirma que a UFO-A pode ser encarada como uma teoria sobre as
+categorias Universais e Particulares. Universais “são padrões de características que podem
+ser instanciados em um número de diferentes indivíduos” (GUIZZARDI, FALBO, GUIZZARDI,
+2008, p. 245) e Particulares, também chamados de Individuals, “são entidades que existem
+3
+
+A UFO-B diferencia explicitamente eventos e objetos. Eventos (ou ocorrências) são indivíduos compostos de
+partes temporais. Eles acontecem no tempo no sentido de se estenderem no tempo acumulando partes
+temporais. São exemplos de eventos: uma conversa, uma partida de futebol, a execução de uma sinfonia e um
+processo de negócio (GUIZZARDI; FALBO; GUIZZARDI, 2008, p. 246).
+4
+A UFO-C é uma ontologia de entidades sociais (tanto objetos quanto eventos), construída sobre UFO-A e UFOB (GUIZZARDI; FALBO; GUIZZARDI, 2008, p. 247).
+
+
+na realidade, possuindo uma identidade única. Na figura 2, apresentamos as categorias da
+UFO-A, que espelham os seus pressupostos teóricos.Cabe ressaltar que nos detalharemos
+apenas às entidades que foram pertinentes a esta pesquisa.
+Na UFO-A, Universals podem ser divididos em substancial universal ou moment
+universal. Um substantial é uma entidade que mantém sua identidade no tempo, sendo
+existencialmente independentemente de qualquer outra entidade. Um moment, ao
+contrário, não é parte da essência do objeto, podendo apenas existir a partir da existência
+(dependência) de outra entidade (GUIZZARDI, 2005). Já o substantial universal pode ser
+dividido entre sortal universal ou mixin universal. Sortal universal é uma entidade que
+carrega um princípio de identidade para suas instâncias, permitindo observar se duas
+entidades são as mesmas a partir de características fornecidas. Mixin universal, por sua vez,
+agrega conceitos de diferentes características e identidades. Com isso, entendemos que
+estes conceitos podem ser considerados classes que agregam entidades, ainda que de
+essência diferenciada (GUIZZARDI, 2005).
+Figura 2: Categorias da UFO-A.
+
+Fonte: Salamonet al. (2017, n. p.)
+
+Sortal universal se ramifica entre RigidSortal e AntiRigidSortal. O RigidSortal é
+desdobrado em kind e o subkind. Anti-rigid sortal é desdobrada em phase e role. Rigidmixid
+desdobra-se em category. Non-rigidmixin em rolemixin e em mixin (GUIZZARDI, 2005).
+Kind representa um sortal substantial que fornece um princípio de identidade para
+suas instâncias, sendo responsável pela estruturação da taxonomia representante do
+
+domínio. Kinds podem ser especializados em outros subtipos rígidos que herdam o princípio
+de identidade e são chamados subkinds (GUIZZARDI, 2005).
+Cabe mencionar ainda algumas noções referente às relações partitivas na UFO, de
+fundamental relevância para nosso trabalho, que são: compartilhamento, essencialidade,
+inseparabilidade, separabilidade e mandatoriedade. Compartilhamento é a característica
+secundária da Teoria do Todo que afirma de uma parte pode ser pertencer a um todo, mas
+pode pertencer a outro todo (GUIZZARDI, 2005, p. 194). Por exemplo: uma pessoa pode
+pertencer, exclusivamente, a uma família e, também, pertencer a outro grupo qualquer.
+Essencialidade é a noção de que uma parte deve estar ligada ao seu todo caso
+contrário o todo perderá sua identidade. Por exemplo: a relação entre um carro e o chassi,
+pois se for removido o chassi de um carro este perderá sua identidade.
+Inseparabilidade é a noção onde uma parte, para existir, depende do seu todo
+(GUIZZARDI, 2005, p. 169), por exemplo, o cérebro de uma pessoa precisa, exclusivamente,
+da pessoa para existir.
+Separabilidade é a noção de que uma parte pode ser partilhada ou substituída por
+outra parte, sem que o todo tenha sua identidade comprometida (GUIZZARDI, 2005, p. 172).
+Ou seja, a parte pode ser substituída por qualquer outra parte igual, sem que o
+funcionamento do todo seja comprometido, por exemplo, um coração de um ser humano
+pode ser substituído por outro, sem que o ser humano perca a sua identidade.
+Mandatoriedade é a noção de que uma parte quando separada do seu todo
+compromete o funcionamento do todo (GUIZZARDI, 2005, p. 170). Segundo esta noção, o
+todo necessita da parte para existir. Neste caso, por exemplo, um ser humano não existe
+sem um coração, da mesma forma que um carro não existe sem o motor.
+As noções aqui apresentadas são importantes pressupostos para a elaboração de
+modelos conceituais ontológicos, ou seja, modelos conceituais que são ancorados em uma
+ontologia de fundamentação.
+Os modelos elaborados com base na UFO-A podem ser feitos com o auxílio de uma
+ferramenta de software, chamada OLED, a qual se baseia em uma linguagem denominada
+OntoUML. A OntoUML Lightweight Edition (OLED) é uma ferramenta utilizada para
+modelagem de ontologias em OntoUML. Ela permite a formalização, verificação, validação e
+implementação de modelos OntoUML. Igualmente, a ferramenta fornece um conjunto de
+padrões de design integrados para acelerar a atividade de modelagem através da
+reutilização (GUERSON, 2015). Esta ferramenta permite ainda a validação do modelo com
+ela elaborada. Esta validação é feita com base nos pressupostos da UFO.
+
+
+A OntoUML, segundo Pergl, Sales e Rybola (2013, n. p.), é uma extensão da UML
+(Unified Modeling Language5) e “é uma linguagem de modelagem conceitual baseada em
+ontologias”, sendo que esta proposta baseada na tese de doutorado de Guizzardi (2005).
+Pergl, Sales e Rybola (2013, n. p.) destacam que a vantagem para o uso da OntoUML
+na modelagem de domínios reside no fato dela possibilitar modelos mais precisos e
+expressivos. Outrossim, os sistemas modelados de acordo com a OntoUML permitem uma
+visualização mais aproximada da realidade modelada. Segundo Pergl, Sales e Rybola (2013,
+n. p.), a OntoUML auxilia na solução de modelagem de várias questões problemáticas, entre
+elas, as relações parte-todo e os papéis. Sendo uma linguagem para modelagem, possui um
+formalismo específico, cuja compreensão é relevante para que se possa entender de forma
+não ambígua o que representam os modelos com elas feitos.
+A OntoUML utiliza em seu formalismo estereótipos e símbolos. Em OntoUML,
+representam-se categorias em caixas, assim como em UML. Cada categoria deve ter um
+nome e um estereótipo. As relações da UFO na OntoUML são representadas de duas formas:
+por meio de uma linha reta ou por meio de uma linha tracejada e o seu respectivo
+estereótipo. Podem ainda conter um símbolo (círculo cheio, losango vazado e cheio) em uma
+das extremidades da linha reta. A relação de generalização é representada pela seta com um
+triângulo vazado na ponta. Cabe ressaltar que a direção da seta denota quem é o termo
+geral. A relação ComponentOf é representada por uma reta e um losango em uma das
+extremidades. ComponentOf é um tipo de relação partitiva utilizado para relações entre dois
+indivíduos complexos (Guizzardi, 2005, p. 341).
+Em OntoUML, segundo Rybola (2017, p. 40), “a relação parte-todo é descrita como
+uma associação entre os dois tipos que representam os universais relacionados com um
+losango vazado ou cheio em uma das extremidades”. Rybola aponta que:
+O losango está relacionado à noção de capacidade de compartilhamento (ou
+exclusividade) definida em UFO - a capacidade de um indivíduo fazer parte de
+múltiplos inteiros do mesmo tipo ao mesmo tempo. Na notação OntoUML, a
+associação completa do losango é usada para peças exclusivas (o indivíduo não
+pode fazer parte de múltiplos inteiros do mesmo tipo ao mesmo tempo), enquanto
+o diamante vazio é usado para peças compartilháveis (o indivíduo pode fazer parte
+de múltiplos inteiros do mesmo tipo ao mesmo tempo). No entanto, a
+exclusividade de uma parte não restringe o mesmo indivíduo a fazer parte de
+múltiplos de diferentes tipos (RYBOLA, 2017, p. 40).
+
+5
+
+“A UML é uma linguagem-padrão para a elaboração da estrutura de projetos de software. Ela poderá ser
+empregada para a visualização, a especificação, a construção e a documentação de artefatos que façam uso de
+sistemas complexos de software” (BOOCH; RUMBAUCH; JACOBSON, 2006, p. 13).
+
+
+A relação MemberOf é representada por uma reta com um losango em uma das
+extremidades e uma letra M. Este símbolo é utilizado quando o indivíduo compõe um
+conjunto, por exemplo, uma árvore faz parte de uma floresta.
+Figura 3: Formalismo para ComponentOf
+
+Fonte: Santos (2019).
+
+A OntoUML é a linguagem utilizada pela ferramenta OLED, a qual utilizamos em
+nossa pesquisa.
+5 ANÁLISE DO MODELO CTDE COM BASE NA ONTOUML
+Nesta seção apresentaremos o modelo conceitual do SIGAD proposto pela CTDE
+transposto para a ferramenta OLED, que auxilia no desenvolvimento, verificação, validação,
+detecção e retificação de padrões ontológicos. A ferramenta como mencionado utiliza a
+notação da OntoUML e é baseada nos pressupostos teóricos da UFO.
+O primeiro passo realizado foi desenhar o modelo conceitual na OLED como está
+apresentado na segunda orientação técnica da CTDE.Isso é importante, pois a OLED indicará
+as inconsistências do modelo do SIGAD. Esse modelo está ilustrado na figura 4.
+Figura 4: Modelo da CTDE submetido à OLED
+
+Fonte: Santos (2019).
+
+No entanto, cabe ressaltar que algumas classes do referido modelo não estão
+adequadamente representadas no que se refere a um modelo conceitual ontológico - por
+exemplo, Temporalidade e Destinação são coisas distintas, mas encontram-se representadas
+em uma única classe.
+A compreensão da temporalidade como atributo (qualidade de algo) deve-se à
+definição de prazos de guarda a serem atribuídos aos documentos, sendo, pois, uma
+qualidade de uma classe de documentos.
+Conforme podemos perceber, na figura 4, os conceitos "Temporalidade" e "Destinação" não deveriam estar presentes em um modelo conceitual como um único conceito.
+Todavia, esta classe foi mantida no modelo submetido ao OLED para que ele espelhe o do
+modelo da CTDE, mas não poderia ficar assim em um modelo conceitual ontológico.
+Ainda sobre os conceitos "TipoDeClasse" e "TipoUnidadeArquivamento", percebe-se
+que esses conceitos foram classificados na categoria quality. Segundo Sales (2015, n. p.)
+quality é “um tipo particular de propriedade intrínseca que possui um valor estruturado”.
+Quando realizamos a validação do modelo conceitual da CTDE na OLED foram obtidos
+resultados, que estão descritos a seguir.
+Ressaltamos que foram realizadas, neste trabalho, duas formas de validação: a sintática6 (mais geral), e a específica sobre anti-patterns. No entanto, ressaltamos que existem
+outros tipos de validações que envolveriam uma atenção mais detida, mas isso fugiria do
+foco deste trabalho. Em Santos (2019) apresentamos mais detalhes das validações da OLED.
+Diante disso, destacamos que o foco deste trabalho é a análise das relações partitivas
+e nos ateremos às inconsistências apontadas pela ferramenta OLED que dizem respeito a
+essas relações, a saber, (i) documento é composto por documento, (ii) documento
+arquivístico é composto por componente digital, e, (iii) unidade de arquivamento é
+composta por volume.
+Primeiramente, efetuamos a validação sintática. Nesta validação, no que diz respeito
+às relações partitivas, foram apontados quatro erros, para as relações ComponentOf,
+alertando que a soma mínima de cardinalidade das partes deve ser igual ou maior do que
+dois. Os erros apontados referentes às relações partitivas são ilustrados na figura 5.
+
+6
+
+Essa validação aponta diversos tipos de inconsistências existentes no modelo da CTDE, porém apenas serão
+detalhadas as ocorrências específicas sobre relações partitivas.
+
+Figura 5: Inconsistências sintáticas das relações partitivas, verificadas pela OLED.
+
+Fonte: Adaptado de Santos (2019).
+
+A título de simplificação, apresentamos o resultado da validação de um trecho do
+modeloque diz respeito ao Documento arquivístico ser composto por 0 (zero) ou mais
+componentes digitais. Percebe-se que há outros casos semelhantes no modelo, cuja
+validação apontará os mesmos erros (por exemplo, unidade de arquivamento composta por
+volumes). A seguir, efetuamos a validação sobre anti-patterns.Neste caso, a ferramenta
+apontou que para relações indicadas como “composta de” deve haver no mínimo duas
+entidades distintas e as relações do tipo ComponentOf
+
+são usadas para complexos
+
+funcionais. O resultado desta validação é exibido na figura 6.
+Figura 6: Validação do trecho do modelo para anti-patterns
+
+Fonte: Adaptado de Santos (2019).
+
+6 ANÁLISE DOS PROBLEMAS DE EXPRESSIVIDADE DO MODELO DA CTDE COM BASE NA
+ONTOUML
+Após uma análise dos problemas de modelagem apontados pela ferramenta, e com
+base no que foi apresentado em nossos estudos sobre os pressupostos da UFO, observamos
+aspectos no modelo do SIGAD da CTDE que podem ser expressos de forma mais precisa.
+
+
+Vemos que na Teoria das Partes a relação do tipo ComponentOf deixa claro que um
+indivíduo que possua partes deve ser constituído por pelo menos duas partes. No entanto,
+percebe-se que no modelo da CTDE, o conceito documento foi modelado como composto
+por documento (0...*), o que vai de encontro ao princípio da suplementação fraca.
+No entanto, percebemos que o modelo do CTDE procura expressar que pode haver
+documentos compostos por outros documentos, mas para expressar isto de forma não
+ambígua, devemos entender que isto pode significar duas coisas: ou todos os documentos
+são encarados da mesma forma (como uma coleção), ou então cada um deles é encarado
+como um papel específico (formando um complexo funcional). Então, a forma de
+modelagem vai depender de cada situação, de como queremos encarar este conjunto de
+documentos.
+Cabe, neste momento, retomarmos a diferença entre coletivos e complexos
+funcionais, pois há uma distinção ontológica entre eles. Este conhecimento é importante
+para compreendermos melhor o documento enquanto collective e enquanto complexo
+funcional.
+No que se refere ao documento enquanto um coletivo, o princípio que une estes
+documentos é a relação uniforme “que se mantem entre todas as partes e apenas essas
+partes” (SALES; GUIZZARDI, 2017, p. 3). Ou seja, quando os documentos são considerados
+como collective, isso quer dizer que os documentos têm o mesmo papel.
+No que se refere ao documento enquanto um coletivo, o princípio que une estes
+documentos é a relação uniforme “que se mantem entre todas as partes e apenas essas
+partes” (SALES; GUIZZARDI, 2017, p. 3). Ou seja, quando os documentos são considerados
+como collective, isto quer dizer que os documentos têm o mesmo papel.
+Por exemplo, em um processo, esta noção não daria conta da multiplicidade de
+funções de documentos que existem dentro do tipo de documento. Isto se dá porque em um
+processo existem, por exemplo, memorando, relatório e parecer – ou seja, são elementos de
+forma documental de naturezas distintas e que não têm o mesmo papel. Se nos interessa
+destacar esta diferença de papeis, então precisamos modelar o conceito deste tipo de
+documento como um complexo funcional.
+Diante do exposto, podemos considerar um documento como entidades distintas:
+em uma ele pode ser encarado como um complexo funcional e, por outro lado, pode ser
+encarado como collection. No modelo que estamos propondo, vamos considerar que o
+documento arquivístico é um documento em vez de origina-se de documento. Cabe destacar
+
+
+
+que o documento é uma unidade indivisível, sendo assim, não pode ser considerado
+separadamente.
+Para possibilitar uma visualização possível de como poderia ficar modelado o
+documento arquivístico enquanto complexo funcional e enquanto collective apresentamos o
+modelo ilustrado na figura 7.
+O exemplo da figura 7 é um exemplo didático, onde se considera um processo como
+sendo formado, apenas, por três tipos de elementos de forma documental (memorando,
+relatório e parecer), cada um deles com um papel específico que se desejaria destacar.
+Esta distinção pode ser útil para desenvolvedores de sistemas entenderem que
+podem existir diferentes composições possíveis de documentos arquivísticos, e cada uma
+destas composições possui um conjunto específico de documentos com papeis
+determinados. No desenvolvimento de um sistema como o SEI7, por exemplo, isto pode ser
+relevante, pois permite que se entendam os diferentes complexos documentais admissíveis
+e suas partes.
+Figura7: Documento arquivístico como complexo funcional versus documento como collective.
+
+Fonte: Santos (2019)
+
+Na hipótese de todos os documentos arquivísticos de um processo serem
+considerados como desempenhando apenas o papel de membro de um processo, então o
+conceito processo pode ser usado para se referir a uma coleção. Em contrapartida, se um
+processo é conceituado a partir de uma perspectiva funcional em que os papéis são
+explicitados – como, por exemplo, memorando, relatório e parecer, entre outros –, o
+conceito de processo deve ser representado como um complexo funcional. Cabe ressaltar,
+
+“O SEI é uma ferramenta eletrônica que permite produzir, editar, assinar e tramitar processos e
+documentos” (NOGUEIRA; COSTA, 2017, p. 306).
+7
+
+
+
+que o conceito documento arquivístico enquanto complexo funcional é constituído de uma
+coleção de documentos arquivísticos.
+A partir do exposto, o termo documento, presente no modelo conceitual da CTDE,
+parece expressar vários significados em um único elemento do modelo. De uma perspectiva,
+temos que documento arquivístico é um complexo funcional, pois possui várias partes que
+desempenham papéis diferentes; em outro momento, ele é apenas uma coleção de
+documentos arquivísticos.
+De maneira análoga, se considerarmos o documento arquivístico digital como um
+complexo funcional, será necessário representar no modelo pelo menos duas das partes que
+compõem este conceito. SANTOS (2019, p. 86) explica que um documento arquivístico
+digital pode possuir vários componentes digitais, estes fixados em um suporte digital
+(considerando que o suporte é onde está registrado o componente digital). Sendo assim,
+entendemos que uma forma possível de representar estes conceitos no modelo seria a
+figura 8.
+Figura 8: Documento Arquivístico Digital enquanto complexo funcional
+
+Fonte: Santos (2019)
+
+De acordo com Santos (2019, p. 86) o documento arquivístico pode ser digital ou não
+digital (analógico) e todo documento arquivístico digital possui um suporte digital (óptico,
+magnético etc.)8.
+Naturalmente, no modelo poderíamos, de maneira análoga, explicitar as partes do
+documento arquivístico não digital. A intenção, entretanto, não é refazer o modelo
+completo, mas apenas apontar caminhos para a sua melhor precisão.
+
+8
+
+Embora existam documentos arquivísticos de natureza híbrida, eles são na verdade compostos de
+documentos não digitais e digitais. A título de simplificação, no modelo proposto, vamos considerar apenas os
+conceitos de documento arquivístico digital e não digital.
+
+
+Assim, no modelo conceitual proposto, podemos representar algumas entidades que
+se relacionam ao documento arquivístico, a saber, documento arquivístico digital e
+documento arquivístico não digital. Além disto, podemos demonstrar os tipos de relações
+existentes entre os vários conceitos. Ao explicitar estes conceitos tendo em vista os
+pressupostos da UFO percebemos que o modelo do SIGAD fica menos ambíguo.
+7 CONCLUSÃO
+Desde a inserção da tecnologia no âmbito da gestão de documentos nas instituições
+públicas e privadas tem-se percebido inconsistências no levantamento dos requisitos e,
+consequentemente, ambiguidades nos modelos conceituais para sistemas de gerenciamento
+de documento arquivístico digital. Isto pode acabar gerando sistemas que não atendem as
+necessidades das instituições arquivísticas.
+Vimos que este estudo possibilita aos profissionais que trabalham com a gestão de
+documentos arquivísticos, sobretudo, a gestão do documento arquivístico digital, uma fonte
+para participar mais ativamente das decisões de escolha ou desenvolvimento de sistemas
+mais aderente à necessidade das instituições arquivísticas.
+Com isso, empreendemos neste trabalho dedicar atenção a um instrumento já
+existente, o e-ARQ Brasil e o modelo conceitual da CTDE, buscando em outro corpus teórico
+uma abordagem que auxiliasse no aprimoramento do modelo existente.
+Constatou-se que as bases de dados no âmbito nacional e especializadas em
+informação arquivística, no contexto de organizações brasileiras, possuem poucos estudos
+sobre sistemas de gestão arquivísticos de documentos, pois a atenção das organizações e
+profissionais está direcionada para os aspectos diplomáticos do documento e tem pouco
+explorado as questões de modelos de dados arquivísticos voltados para os sistemas de
+informação.
+Apesar disso, um fator positivo é que, o CONARQ, a partir da década de 1990 tem
+uma câmara técnica – CTDE – dedicada aos estudos e ao estabelecimento de normativas,
+para o desenvolvimento de sistemas de gestão de documentos arquivísticos. Diante disto,
+com este estudo, podemos perceber que a aplicação de princípios de modelagem conceitual
+ontológica é uma importante aliada na elaboração de modelos mais precisos, sobretudo o
+uso do arcabouço teórico da Ontologia de Fundamentação, mais especificamente a UFO-A.
+Cabe ressaltar que reconhecemos a relevância do modelo conceitual da CTDE para
+começarmos a refletir os conceitos importantes na gestão documental, mas consideramos
+
+
+ser necessário de ampliar a representação dos conceitos, de forma que possamos sanar as
+ambiguidades e imprecisões existentes.
+Podemos observar que a ontologia de fundamentação pode auxiliar na resolução da
+problemática da expressividade do modelo conceitual proposto pela CTDE, sobretudo a
+UFO-A e no entendimento dos conceitos da Arquivística, contidos no modelo proposto pela
+CTDE.
+Também em conformidade com nossos objetivos específicos, fomos à literatura da
+área arquivística, ao Conselho Nacional de Arquivos e à Câmara Técnica de Documentos
+Eletrônicos e levantamos quais eram as definições para os conceitos presentes do modelo;
+Verificamos que os conceitos do modelo conceitual da CTDE com base nas categorias
+apresentadas na Ontologia de Fundamentação UFO-A, submetemos o modelo à ferramenta
+OLED que apontou as inconsistências, e, por uma questão de tempo, restringimos nossa
+análise aos conceitos do modelo conceitual relacionados aos aspectos da Teoria do Todo e
+da Teoria das Partes. Para os trabalhos futuros, é possível um maior aprofundamento nos
+demais conceitos presentes no modelo conceitual, assim como nas relações existentes entre
+esses conceitos.

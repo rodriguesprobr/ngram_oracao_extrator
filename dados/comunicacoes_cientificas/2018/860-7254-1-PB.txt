@@ -1,0 +1,229 @@
+
+REVELANDO INFORMAÇÃO OCULTA: REDES CRIMINAIS DE MUNDO PEQUENO ENTRE NÓS
+
+Modalidade da Apresentação: Pôster
+Resumo: O trabalho ora apresentado releva o aumento contemporâneo dos fluxos informacionais,
+inclusive os criminais. Destaca que as redes ilegais e obscuras do crime organizado coabitam e se
+comunicam com redes legais e evidentes. Conceitua redes de mundo pequeno. Cogita a hipótese de
+que os dados armazenados em redes de sistemas corporativos possam qualificar-se como redes de
+mundo pequeno, apontando os critérios e os conceitos necessários à sua caracterização. Em seguida,
+realiza o estudo de dados extraídos de sistemas corporativos aplicados à uma operação policial,
+concluindo que atendem todos os critérios para qualificação como uma rede de mundo pequeno.
+Aponta ainda vantagens em que tais dados sejam manipulados como uma rede em uma investigação
+criminal. Ilustra um cenário recorrente de fraudes em licitações quando denúncias de crime são
+levadas ao conhecimento da polícia com dados mínimos iniciais. Propõe, nesse cenário, que estes
+dados mínimos sejam fixados como pontos de partida para uma expansão que produza um grafo
+gerado até de n graus de separação dos dados iniciais. Exibe o resultado dessa expansão como um
+grafo visual e aplica um leiaute circular para indicar como esse cenário de fraude em licitação se
+assemelha visualmente a uma rede de mundo pequeno, onde atalhos encurtam caminhos
+drasticamente. Conclui que esse método causa melhoria da cognição investigativa ao policial que tenta
+elucidar uma denúncia criminal.
+Palavras-Chave: Crime; Redes; Investigação; Rede de Mundo Pequeno.
+1 INTRODUÇÃO
+A sociedade pós-moderna testemunha uma profusão de metamorfoses relativas à
+intensificação do fluxo informacional. A Era da Informação, em pleno curso, propiciou
+integração mundial mediante capacidades de processamento, armazenamento e comunicação
+da informação em fluxos de escalas outrora inconcebíveis. Grande parcela da população global
+passou a dispor desses fluxos cujo uso, entretanto, nem sempre possui desígnios lícitos. Os
+integrantes de organizações criminosas, usuários que são desses recursos, constituem
+empresas, compram imóveis e automóveis, viajam ao exterior, emitem passaportes e contratam
+pessoas formalmente. Pessoas, eventos, coisas, fatos se interconectam e, mesmo com fins subreptícios, o uso dos novos fluxos informacionais assinalam alguns dados como rastros
+manifestos em sistemas de informação governamentais e empresariais. O trabalho ora proposto
+visa verificar que alguns desses dados, traços de um mundo criminal obscuro – mas real –
+formam redes classificadas como de Mundo Pequeno (MILGRAM, 1967, p. 61), embora não
+sejam investigadas como tal. Sob o viés da Ciência da Informação, o estudo também se propõe
+a indicar características peculiares dessas redes que, se exploradas, permitem melhorar
+sobremaneira a cognição sobre as suas interconexões, em especial nas investigações policiais,
+além de prover navegabilidade investigativa entre nós. A proposta faz jus à publicação porque,
+a priori, é uma nova forma de tratar relações no âmbito da investigação criminal. Ainda que há
+anos sob domínio governamental, essas redes de Mundo Pequeno subsistem, sob diversos
+aspectos, incógnitas ou, quando descobertas, o são usando meios rudimentares, o que sinaliza
+que a solução ainda não foi adotada nos organismos policiais, em especial no âmbito da Polícia
+Federal do Brasil.
+2 DESENVOLVIMENTO
+O trabalho ora apresentado possui um enfoque quali-quantitativo em uma pesquisa
+exploratória, na medida em que coleta dados de uma investigação policial, analisando-os sobre
+
+
+alguns aspectos matemáticos que os identificam como Redes de Mundo Pequeno. Ainda, de
+forma complementar, realiza sua interpretação segundo um contexto da Ciência da Informação
+e das Ciências Policiais para indicar qual proveito cognitivo poderia ser obtido quando como
+uma rede esses dados forem tratados.
+2.1 Redes de Mundo Pequeno
+A teoria acerca das redes de mundo pequeno (The Small World Problem) foi descrita por
+Milgram (1967, p. 62), em resposta à seguinte pergunta: dadas quaisquer duas pessoas no
+mundo, pessoa X e pessoa Z, quantos links de amizade intermediários são necessários até que
+X e Z estejam conectados? Para respondê-la, Milgram utilizou um experimento empírico por
+meio do qual solicitou que pessoas tentassem encontrar outras por meio do envio monitorado
+de cartas. Ele concluiu que as conexões intermediárias entre quaisquer duas pessoas são, em
+média, em torno de pouco mais de cinco passos, o que o levou a concluir que todos estamos
+ligados em um tecido social muito unido. Posteriormente o imaginário popular denominou a
+conclusão de Milgram como “Teoria dos Seis Graus de Separação”.
+2.2 Redes criminais existem em mundos reais
+Organizações criminosas não habitam um mundo virtual. Elas evoluíram e se
+fortaleceram usando redes ocultas e ilegais, mas subsistem um mundo real, entre entidades
+legais e visíveis. Isoladamente, as entidades criminais podem parecer compor legalidade, mas o
+comportamento do todo é diferente daquele expresso pela parte: a posse de um imóvel
+representa uma ideia, mas se adquirido com recursos oriundos do tráfico de drogas,
+representará outra. A relação entre redes legais e evidentes com redes ilegais e ocultas é
+ilustrada pela figura 1.
+Figura 1 – Coexistência em um mesmo mundo real da interligação entre redes legais e evidentes
+(formada por nós em verde) com redes ilegais e ocultas (formada por nós em vermelho)
+
+Fonte: Elaborada pelos próprios autores
+
+Parte das entidades, tenham elas relação com crimes ou não, subsistem como registros
+persistentes em bancos de dados de sistemas governamentais acessíveis aos investigadores.
+Seriam essas redes classificadas como um Mundo Pequeno? Caso positivo, poderiam ser
+
+
+
+implementados artifícios para que os investigadores criminais as percorram assim como o
+fizeram as correspondências que Milgram utilizou em seu experimento: pela travessia de
+poucos graus de separação. Para obter a resposta, faz-se necessário o entendimento de alguns
+conceitos prévios sobre grafos, grau de um nó, distribuição de conectividade, tipos de rede e
+coeficiente de clusterização.
+2.3 Grafos, Redes Homogêneas e Redes Heterogêneas
+Um ramo da matemática muito utilizado para representar redes é a teoria dos grafos.
+De forma elementar, um grafo é uma maneira de especificar relações entre itens. Uma definição
+matemática formal para um grafo foi elaborada Biggs (1996, p. 3), segundo o qual um grafo G
+consiste de três componentes: um conjunto de vértices Vg, um conjunto de arestas Ag e uma
+relação de incidência que é um subconjunto de Vg x Ag. Um elemento de Vg é chamado de
+vértice (ou nó) e um elemento de Ag é chamado de aresta ou ligação. Na figura 1 há dezoito
+nós vermelhos (círculos) ligados por diversas arestas (retas) a outros nós. A conectividade (ou
+grau) pode ser entendida como o número de ligações de um nó. A partir dessa definição de
+conectividade, se pode obter o conceito de distribuição de conectividade, a qual, segundo
+Almeida (2013, p. 13) representa a fração de nós de uma rede que apresenta conectividade k.
+De forma mais direta, a distribuição de conectividade P(k) é a probabilidade de que um dado
+nó, escolhido ao acaso, tenha conectividade k. Tomando como critério a distribuição de
+conectividade, podemos classificar as redes como de três tipos: (i) Regulares, na qual todos os
+nós apresentam a mesma conectividade ou grau; (ii) Randômicas, são redes nas quais todos os
+nós possuem valores de conectividade próximos, com baixa variação de graus, e; (iii)
+Heterogêneas, caracterizadas por grande amplitude de variação nos valores de conectividade
+dos nós. Ainda no contexto dos conceitos decorrentes da conectividade, define-se o Coeficiente
+de Clusterização (Cc) de um nó.
+Figura 2 - Elementos de um grafo utilizados no cálculo do Cc de um nó
+
+Fonte: Elaborada pelos autores
+
+
+
+O cálculo desse coeficiente foi descrito por Barabási (2009, p. 42) usando como modelo
+uma rede social de amigos, na qual o Cc de um nó é obtido pela divisão do número efetivo de
+arestas entre seus amigos pelo número total daquelas que poderiam existir se todos eles fossem
+amigos entre si. O Coeficiente de clusterização máximo de um nó ocorre quando todas as
+ligações possíveis foram efetivadas, e é igual a um. Para exemplificar o conceito, considere a
+figura 2, onde há um nó central (em verde). O primeiro passo do cálculo do Cc desse nó é
+identificar todos os seus vizinhos imediatos (totalizam seis, todos em preto). Em seguida,
+verificamos quais são todas as possíveis interconexões entre esses vizinhos (quinze ligações,
+considerados seis nós combinados dois a dois) e, depois, quantas são as conexões existentes de
+fato (cinco conexões representadas em azul). Dessa forma, conclui-se que o Cc do nó central é
+obtido pela razão entre o total de conexões entre os nós vizinhos pelo seu potencial total de
+conexões, que resulta no cálculo ilustrado em (1):
+(5/15) = 1/3 = 0,333333... (1)
+2.4 Redes de Pequeno Mundo: ocorrência simultânea de alta clusterização local e baixa
+separação global.
+Algumas décadas após Milgram sugerir a existência de redes de Mundo Pequeno, Watts
+(1999, p. 493) as caracterizou como sendo a ocorrência simultânea de alta clusterização local e
+baixa separação global, quando discorreu que essas redes não são nem completamente
+regulares e nem completamente randômicas, mas um misto de ambas. A baixa separação local
+é criada quando ocorrem algumas ligações randômicas que, ao tempo que não alteram
+significativamente a clusterização local das redes antes regulares, criam “atalhos” que fazem os
+graus de separação caírem drasticamente, conforme ilustrado pela figura 3:
+Figura 3 – Redes regulares e de Mundo Pequeno
+
+(i)
+
+(ii)
+
+Fonte: Extraído e modificado de Watts (1998, p. 441)
+
+As redes da figura 3 possuem as seguintes características: (i) Rede regular: Todos os nós
+possuem a mesma conectividade; há alta clusterização local, pois todos os vizinhos de um dado
+nó estão interligados entre si (clusterização máxima e igual a um); para realizar a travessia de
+
+
+
+um nó para outro, oposto na circunferência, percorre-se muitos nós intermediários (alto grau
+de separação); (ii) Rede Small World (Mundo Pequeno): O lançamento de algumas arestas
+randômicas pouco altera a clusterização local, mas faz cair drasticamente a distância entre os
+nós opostos na circunferência, por conseguinte a travessia entre quaisquer dois nós é realizada
+em poucos graus de separação, pois essas ligações randômicas funcionam como atalhos. A
+ocorrência de redes de mundo pequeno perfaz-se, portanto, mediante a ocorrência simultânea
+de alta clusterização local e baixa separação global.
+3 CONSIDERAÇÕES FINAIS
+Para caracterizar dados de sistemas corporativos policiais como redes de mundo
+pequeno faz-se necessário verificar o atendimento aos critérios de alta clusterização local e
+baixa separação global. Para tanto, foi gerado um grafo com 3.891 nós e 6.249 vértices formados
+por dados extraídos de sistemas da PF, todos relacionados à uma operação policial (figura 4).
+Figura 4 – Dados persistentes em sistemas Oficiais e relacionados a uma Operação da PF
+
+Fonte: Criada pelos autores a partir de dados reais de uma Operação Policial da PF
+
+Para verificar se essa rede atende ao critério baixa separação global, foi calculado o
+caminho médio para se chegar de um nó a qualquer outro, sendo o resultado igual a 5,29 graus
+de separação. Importante destacar que uma maior variedade e quantidade de dados
+certamente resultaria em maior número de ligações randômicas sendo adicionadas, o que
+poderia gerar mais “atalhos” que fazem os caminhos de travessia caírem drasticamente. Diante
+do fato de que a rede criminal ora estudada é composta por 3.891 nós, cuja distância média
+entre dois deles é 5,29 passos, considera-se que há baixa separação global e, portanto, o
+primeiro critério foi atingido. Para averiguar se a rede examinada atende ao critério de alta
+clusterização local, foram identificados todos os clusters por cores diferentes. Clusters (ou
+aglomerações) são uma espécie de comunidade de nós mantidos juntos por maiores
+
+
+
+coeficientes de clusterização (Cc). Os clusters do grafo apresentam, em sua maioria, o Cc entre
+35% a 96%. Há alta clusterização local e, portanto, o segundo critério foi atingido. Realizadas as
+devidas verificações, pode-se indicar que se trata de uma rede de mundo pequeno que pode
+ser navegada como um grafo em uma investigação sem a necessidade do policial consultar
+diversos sistemas esparsos um-a-um. Essa nova abordagem permitiria que, de forma recursiva
+e fornecendo alguns nós iniciais como ponto de partida, o investigador pudesse obter, por meio
+de uma plataforma computacional, um grafo. Assim, conheceria a circunvizinhança dos
+investigados mediante alguns poucos passos de separação (5,29 passos em média para a rede
+ora estudada). Empiricamente, é possível idealizar várias possibilidades de aplicação da
+proposta ora aventada. Por exemplo, um cenário recorrente de fraudes em licitações se
+caracteriza quando pessoas se associam previamente para encenar uma falsa concorrência,
+frustrando o obrigatório caráter competitivo. Destarte, para qualquer que seja a empresa
+vencedora do certame, o mesmo grupo social sagra-se vitorioso. Essas pessoas e empresas –
+ilicitamente associadas – fazem parte de um mesmo cluster social, visto que dificilmente um
+grupo age em sinergia criminal sem que haja mútua confiança entre os seus componentes.
+Nesse contexto, há alta probabilidade desse cluster possuir rastros (nós ou conexões) em
+sistemas informacionais corporativos e, em consequência, esteja apto a ser representado por
+um grafo navegável. Para conhecer essa rede, ao receber uma denúncia de crime onde são
+citados, hipoteticamente, os CPF´s1 de duas pessoas e o CNPJ´s1 de duas empresas, o policial
+investigador poderia, a partir desses dados preambulares, fixar n graus de separação e solicitar
+que uma plataforma computacional baseada em grafos expanda a rede adjacente até os limites
+do grau adotado. A figura 5(i) ilustra essa possibilidade para um grau de expansão fixado em até
+3 níveis. Os nós marcados com ícones de bandeiras são aqueles previamente conhecidos que
+constam na denúncia criminal hipotética (CPF´s e CNPJ´s). A plataforma baseada em grafos,
+partindo desses nós iniciais, expande a rede adjacente para obter a rede da figura 5(i). Dessa
+forma, diversas entidades e relações – antes desconhecidas ao contexto – foram adicionadas
+ao grafo. Isso permite a travessia da circunvizinhança pelo policial e, em consequência, a
+melhoria da cognição investigativa pela tomada do conhecimento imediato sobre as relações
+entre entidades. No caso hipotético, uma breve análise do grafo 5(i) aponta indícios de prévia
+associação dos envolvidos, embora a ocorrência de crime deva, compulsoriamente, ser
+
+1
+
+CPF é o acrônimo para Cadastro de Pessoas Físicas e CNPJ para Cadastro Nacional de Pessoas Jurídicas
+
+
+confirmada por outras diligências. A figura 5(ii) revela que a aplicação de um layout circular ao
+grafo 5(i) fá-lo assemelhar-se à figura 3(ii), ou seja, um cenário típico de uma rede de mundo
+pequeno onde alguns atalhos randômicos cruzam o grafo e encurtam drasticamente os graus
+de separação entre quaisquer dois nós da rede.
+Figura 5 – Cenário típico de fraudes a licitações (i) representado por Redes de Mundo Pequeno (ii)
+
+(i)
+
+(ii)
+Fonte: Elaborado pelos autores
+
+Outro exemplo de como tirar proveito do uso de grafos seria utilizá-los para descobrir
+os menores caminhos entre dois nós, representem eles duas pessoas, uma pessoa e um imóvel,
+duas contas bancárias, etc. Sob o viés da Ciência da Informação, tratar os dados armazenados
+em sistemas corporativos como um grafo de rede de mundo pequeno significaria uma melhoria
+na aplicação do paradigma cognitivo, pois além de agregar força ao aprendizado visual, todas as
+funcionalidades e métricas aplicáveis aos grafos poderiam ser utilizadas na aquisição do
+conhecimento sobre a investigação policial.
