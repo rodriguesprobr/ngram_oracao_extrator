@@ -1,0 +1,541 @@
+
+RECUPERAÇÃO DE IMAGENS NA MODELAGEM DE INFORMAÇÃO DA CONSTRUÇÃO: UMA
+REVISÃO
+Modalidade: Trabalho Completo
+Resumo: Este trabalho analisa a produção científica que aborda a aplicação de Recuperação de
+Imagens no contexto da tecnologia Building Information Modeling (BIM). A partir da explanação
+conceitual dessas técnicas, buscou-se compreender quais seriam as correlações entre as duas
+temáticas, i.e., quais são os usos de imagens digitais na modelagem BIM. Para isso, realizou-se uma
+revisão da literatura baseada em artigos publicados nas bases de dados Scopus, Web of Science e
+Google Scholar. A pesquisa realizada em maio de 2019 corresponde a uma revisão sistemática de
+literatura a partir das palavras-chaves "BIM" e "Image Retrieval" e seus sinônimos. Trata-se de um
+estudo de caráter exploratório que proporciona maior familiaridade com os dois temas e seu
+relacionamento, bem como indica oportunidades para novas pesquisas. Os artigos analisados
+denotam a existência da correlação entre os temas. Além disso, verificou-se a existência de
+pesquisas sobre o uso de imagens na modelagem BIM. O artigo detalha algumas destas pesquisas.
+Palavras-Chave: Recuperação de informação, Modelagem de Informação da Construção, BIM.
+1 INTRODUÇÃO
+Nos últimos anos, o uso de imagens no meio digital aumentou significativamente
+devido aos avanços tecnológicos de hardware e software, conciliado à crescente utilização
+da Internet (DEMIAN & BALATSOUKAS, 2012). A Recuperação de Imagens (RI) é um tema
+de relevância acadêmica e soluções de RI são aplicadas em várias áreas como medicina,
+marketing, prevenção de crimes, arquitetura, engenharia, entre outros.
+Composto por linhas, números, símbolos e indicações escritas e normalizadas, o
+desenho técnico é definido como uma linguagem gráfica universal da engenharia e
+arquitetura (PORTO, 2007). As ferramentas CAD (Computer Aided Design) são comumente
+usadas para a criação de desenhos técnicos de uma construção civil. O desenho técnico é
+uma imagem composta de representações geométricas que representam partes ou todo o
+projeto construtivo. O conjunto de "vistas" nos desenhos técnicos fornece representações
+para a execução do projeto. Todo o processo de desenvolvimento e criação de projetos de
+engenharia está ligado à expressão gráfica.
+Os projetos de construção utilizam sistemas de organização e recuperação de
+documentos e armazenagem de desenhos técnicos na forma de imagens. A recuperação de
+informações nesses projetos requer o uso de índices e atributos textuais em banco de
+dados. Os projetos construtivos envolvem ramos variados de conhecimentos científicos e
+técnicos. Cada ramo produz um conjunto de informações englobando o projeto
+arquitetônico, estrutural, elétrico, hidráulico, de prevenção e combate a incêndio, entre
+outros (GOLPARVAR-FARD et al., 2011).
+A informação é recurso estratégico nas organizações e o seu gerenciamento
+eficiente e eficaz favorece o melhor desempenho e produtividade. Trata-se de um conjunto
+estruturado de atividades que incluem o modo como a empresa obtém, distribui e utiliza a
+informação e o conhecimento (DAVENPORT, 2002). A quantidade de informações sobre
+projeto, construção e manutenção de edificações tem aumentado e a utilização da
+modelagem de informações da construção, conhecida como BIM - Building Information
+Modelling, oferece a integração de informações entre os profissionais envolvidos no projeto
+construtivo. Tais informações vão além dos desenhos técnicos, pois, os elementos
+construtivos são munidos de informações sobre os materiais e suas propriedades. Demian
+
+e Balatsoukas (2012) consideram importante a compreensão de um conteúdo recuperado
+em uma modelagem BIM antes de utilizá-lo ou aplicá-lo e que a exploração do contexto é
+essencial para este entendimento. A natureza do conteúdo de engenharia e as necessidades
+de informações dos engenheiros mostra que é importante trabalhar com técnicas de RI
+aplicáveis à engenharia civil (DEMIAN & BALATSOUKAS, 2012).
+Diante disso, esta pesquisa explora a correlação entre os usos e a recuperação de
+imagens no contexto da modelagem BIM por meio de uma revisão da literatura recente. Os
+conceitos e as discussões apresentados organizam o conhecimento na área, embora não se
+tenha a pretensão de esgotar o assunto. Espera-se realizar uma contribuição para
+pesquisadores interessados no uso de imagens digitais e técnicas de RI no contexto da
+modelagem BIM, motivando o surgimento de outras pesquisas na área que dependem de
+maior familiaridade com os temas acima e suas relações. Assim, será apresentada uma
+Revisão Sistemática da Literatura (RSL), conforme metodologia de Kitchenham et al. (2010),
+em artigos pesquisados nas bases de dados científicas, realizada em maio de 2019.
+O restante do artigo está organizado conforme segue: a Seção 2 apresenta a
+descrição conceitual dos temas abordados; a Seção 3 trata da metodologia utilizada, o
+quantitativo dos artigos obtidos e os critérios de exclusão. A Seção 4 apresenta os
+resultados da análise dos artigos selecionados. A última seção conclui tecendo as principais
+considerações finais.
+2 BIM e Recuperação de Imagens (RI)
+A pesquisa de objetos em uma modelagem BIM requer a identificação de materiais
+e da geometria dos objetos. A recuperação de espaços, fachadas e demais elementos
+construtivos pode ser realizada através de pesquisas por texto ou por imagem. Com a
+utilização do BIM, outros elementos de pesquisa, como os materiais e suas características,
+são incluídos e os métodos empregados podem variar de acordo com a necessidade do
+usuário. A RI para auxiliar a análise do andamento da construção, o levantamento de
+materiais e a digitalização de uma construção já pronta, é abordada nos artigos discutidos
+na Seção 4. Nesta seção, busca-se introduzir o relacionamento da aplicação da RI com a
+modelagem BIM.
+
+
+2.1 BIM - Building Information Modeling
+O estado da arte no gerenciamento de conteúdo digital em projetos de construção
+está sendo transformado com o uso do BIM. Enquanto os modelos CAD tentaram
+classicamente modelar a geometria dos edifícios ou construir componentes em duas ou três
+dimensões, os modelos BIM permitem também modelar o conteúdo não-geométrico. Este
+conteúdo inclui os atributos não-geométricos dos componentes de construção física (como
+o custo de um componente), bem como entidades não-geométricas. Por exemplo, o BIM
+pode incluir entidades para modelar os processos de projeto e construção, e os recursos
+(equipes e indivíduos) que executam esses processos. Além disso, a modelagem BIM não
+se limita às fases de projeto e construção, mas pode ser estendida para cobrir todo o ciclo
+de vida das instalações construídas (DEMIAN et al., 2015).
+A modelagem BIM favorece a integração de informações em projetos arquitetônicos
+e complementares, necessários para a construção de uma edificação. O BIM permite que
+os arquitetos criem um modelo digital durante a fase de planejamento e orçamento. A
+utilização do BIM oferece vários benefícios para a concepção de construção sustentável,
+tais como melhoria na análise, facilidade de acesso à informação, melhoria para a tomada
+de decisões e simplificação para certificações.
+A tecnologia BIM é promissora na arquitetura, na engenharia e na indústria da
+construção (EASTMAN et al., 2008). Trata-se de uma nova filosofia de trabalho que integra
+arquitetos, engenheiros e construtores, que passam a poder trabalhar de forma
+colaborativa, alterando e dinamizando a gestão da informação. Portanto, a tecnologia BIM
+apresenta-se como uma evolução no processo de projeto, pois permite novas possibilidades
+de visualização e processamento, representação, uso e recuperação da informação
+(PEREIRA JUNIOR & BARACHO, 2015).
+2.2 Recuperação de Imagens (RI)
+Conforme Baeza-Yates e Ribeiro Neto (2013), os modelos de sistemas de
+recuperação da informação podem ser divididos em três diferentes categorias: baseados
+em texto, baseados em links e baseados em objetos multimídia. Um sistema de recuperação
+da informação deve interpretar o conteúdo dos itens de informação, isto é, dos arquivos de
+uma coleção e classificá-los de acordo com o grau de relevância à consulta do usuário. Essa
+
+interpretação do conteúdo requer a extração de informações sintáticas e semânticas e sua
+utilização para satisfazer a necessidade de informações do usuário. O objetivo principal de
+um sistema de recuperação de informação é obter todos os arquivos relevantes à
+necessidade de informação do usuário e, ao mesmo tempo, recuperar o menor número
+possível de arquivos irrelevantes (BAEZA-YATES & RIBEIRO-NETO, 2013).
+Um Sistema Recuperação de Imagens (SRI) tem o objetivo de recuperar arquivos
+visuais relevantes para uma consulta textual ou visual de forma eficiente em uma grande
+base de dados. Embora a busca por imagens tenha sido amplamente explorada desde o
+início dos anos noventa, ainda são realizados estudos para a criação de novas técnicas para
+recuperação de informações a partir do grande volume de imagens e dados multimídia.
+Mecanismos de RI tradicionais geralmente indexam dados visuais com base nas
+informações de metadados em torno de imagens na Internet, como títulos e palavraschaves. Porém, novos mecanismos estão sendo associados a outras tecnologias para
+realizar a recuperação de imagens a partir da análise de uma imagem como índice de busca
+(ZHOU et al., 2017).
+Um SRI deve se concentrar em recursos como personalização, flexibilidade de
+navegação e metodologia de exibição. Os dados de imagem pesquisáveis têm conteúdo
+visual e semântico extremamente diversificado e criam inúmeras possibilidades. Nos
+sistemas computacionais para RI existem dois conceitos principais: baseado em texto e em
+conteúdo (DATTA et al., 2008).
+Os SRIs baseados em conteúdo (CBIR - Content-Based Image Retrieval) têm sido
+estudados e propostos para tentar superar as desvantagens de sistemas de recuperação de
+imagens baseados em texto (LIU et al., 2007; DATTA et al., 2008; SNOEK & SMEULDERS,
+2010). Nesses sistemas, as imagens são indexadas pelo seu conteúdo visual como cor,
+textura e forma, tornando desnecessária a anotação manual. Os métodos de extração de
+característica de imagens utilizam descritores, que representam o conjunto de pixels de
+uma imagem através de um vetor de característica, que expressa componentes da imagem
+relacionados pela cor, ou forma, ou textura, entre outros. O processo de busca consiste
+basicamente em, dado um padrão de consulta, calcular a sua similaridade em relação às
+imagens armazenadas em um conjunto de imagens e exibir as outras similares. Esta
+similaridade é obtida comparando os descritores da imagem de consulta com os descritores
+
+associados às imagens da base de interesse. De resultados da área de neurociência, sabese que a chave para o reconhecimento de objetos é o sistema ser capaz de discriminar
+objetos sendo tolerante a transformações de rotação, escala, translação, iluminação,
+mudança de ponto de vista e organização. Por isso, os descritores que buscam traduzir as
+propriedades visuais utilizadas para descrição das imagens devem ser invariantes a essas
+transformações (SILVA, 2011).
+Vale destacar também que a busca por imagens na Web tem avançado com a
+possibilidade de inserção de uma foto em um aplicativo ou site para pesquisa de imagens
+similares e sites relacionados. O armazenamento da imagem pesquisada é utilizado para
+aprendizagem e aprimoramento do método de pesquisa, como é o caso da pesquisa reversa
+por imagem no Google. Este avanço demonstra a intenção constante em proporcionar que
+a máquina se aproxime da subjetividade na identificação de imagens pelo ser humano.
+A utilização do BIM permite a vinculação de informações associadas a um elemento
+construtivo, representado tridimensionalmente no modelo geométrico da construção. A
+recuperação destas informações em um modelo BIM é aplicada em pesquisas para o
+gerenciamento de uma construção. A informação pode ser obtida através de buscas
+textuais e, até mesmo, a partir de imagens para associar um ambiente construído à sua
+representação em uma modelo BIM. Assim, é possível afirmar que existem oportunidades
+para o emprego da prática de RI em sistemas BIM (DEMIAN et al., 2015).
+3 METODOLOGIA
+A Revisão Sistemática da Literatura (RSL) foi realizada conforme as etapas de
+planejamento, execução e relatório de análise (KITCHENHAM et al., 2010). Utilizou-se o
+Portal CAPES, considerando as bases de dados Scopus, Web of Science e Google Scholar,
+para pesquisar artigos abordando a relação entre a Recuperação de Imagens aplicada em
+projetos BIM.
+Foi planejada a consulta: (Image Retrieval e BIM) ou (Image Retrieval e Building
+Information Modeling) ou (Recuperação de Imagem e BIM) ou (Recuperação de Imagem e
+Modelagem de Informação da Construção). Os demais critérios para seleção foram
+considerar as publicações nos últimos 5 anos, em qualquer idioma.
+Conforme Kitchenham et al. (2010), é preciso realizar inicialmente uma pesquisa
+para identificar a existência de alguma RSL desenvolvida na área de interesse desta
+
+pesquisa. A partir do uso da string de busca, considerando os termos acima associados e
+combinados com o termo “Systematic Review” ou “Revisão Sistemática”, foram obtidos os
+resultados apresentados no Quadro 1. Conforme a quantidade baixa de resultados, os
+artigos foram analisados integralmente.
+Quadro 1: Resultado da Busca para Análise de Necessidade
+String de Busca
+“Image Retrieval” AND “BIM” AND
+“Systematic Review”
+
+Resultados
+2
+
+Selecionados
+0
+
+“Image Retrieval” AND “Building Information
+Modeling” AND “Systematic Review”
+
+2
+
+0
+
+Critério para Exclusão
+Os trabalhos apresentam
+estudos sobre tratamento
+de imagens em BIM, mas,
+sem a adoção da RSL
+como metodologia
+proposta nesta pesquisa.
+Retornou os mesmos
+trabalhos da string de
+busca acima.
+
+“Recuperação de Imagem” AND “BIM” AND
+0
+0
+“Revisão Sistemática”
+“Recuperação de Imagem” AND “Modelagem
+0
+0
+de Informação da Construção” AND “Revisão
+Sistemática”
+Fonte: Elaborado pelos autores
+
+Considerando os resultados encontrados na busca por trabalhos de RSL relacionados
+com a questão de pesquisa proposta, destaca-se como relevante o uso de uma RSL para
+avaliar a relação entre RI e modelagem BIM.
+Uma vez estabelecida a relevância da pesquisa, foram analisados os títulos e
+resumos para a identificação da presença concomitante dos dois termos. A partir da
+recuperação das publicações por este critério de busca, foi realizada uma avaliação
+considerando o conteúdo dos textos na íntegra e o uso declarado de ambos os tópicos,
+simultaneamente. O Quadro 2 apresenta os resultados da busca.
+Quadro 2: Resultado da Busca
+String de Busca
+“Image Retrieval” AND “BIM”
+
+Resultados
+23
+
+Selecionados
+11
+
+“Image Retrieval” AND “Building
+Information Modeling”
+
+3
+
+1
+
+“Recuperação de Imagem” AND
+“BIM”
+“Recuperação de Imagem” AND
+“Modelagem de Informação da
+Construção”
+
+0
+
+0
+
+0
+
+0
+
+Critério para Exclusão
+Artigos descartados por discutir o
+uso de Multimídia e Imagem fora do
+contexto BIM.
+Artigos descartados por apresentar
+apenas o uso de multimídia em
+projetos tridimensionais.
+
+Fonte: Elaborado pelos autores
+
+A amostra de publicações avaliadas foi de 26 trabalhos, sendo que 12 atenderam ao
+critério de relação entre os tópicos. Os artigos selecionados foram publicados em revistas
+sobre automação, engenharia e computação. Além disso, é possível notar uma escassez de
+publicações na língua portuguesa sobre os dois temas relacionados, o que sugere a
+oportunidade para melhor desenvolver estes tópicos em pesquisas no Brasil.
+Diante do baixo número de publicações obtido na consulta com os termos Image
+Retrieval, BIM e Building Information Modeling, optou-se ainda por realizar a mesma
+consulta retirando a restrição do ano da publicação (Quadro 3).
+Quadro 3: Resultado da Segunda Busca
+String de Busca
+“Image Retrieval” AND “BIM”
+
+Resultados
+35
+
+Selecionados
+14
+
+“Image Retrieval” AND “Building
+Information Modeling”
+
+7
+
+2
+
+Motivo da Exclusão
+Artigos descartados por discutir o uso
+de Multimídia e Imagem fora do
+contexto BIM.
+Artigos descartados por apresentar
+apenas o uso de multimídia em
+projetos tridimensionais.
+
+Fonte: Elaborado pelos autores
+
+Desta vez, a pesquisa obteve 39 trabalhos, sendo que 16 atenderam aos critérios de
+análise e 3 artigos repetiram na listagem de resultados. O critério de exclusão adotado
+descartou artigos que não tratavam da relação da RI em projetos BIM.
+4 RESULTADOS DA ANÁLISE DA LITERATURA CONSULTADA
+Conforme objetivo deste trabalho, os artigos revisados tratam do uso das imagens
+de construções para recuperação de informações integrada ao BIM. O BIM é destacado por
+todos os artigos como uma necessidade para a comunidade de arquitetura, engenharia,
+construção e gerenciamento de instalações. Os autores citam os potenciais benefícios do
+BIM como documentação patrimonial construída, manutenção da garantia e informações
+de serviço, controle de qualidade, avaliação e monitoramento, gerenciamento de energia e
+espaço, gerenciamento de emergência ou planejamento de reforma, e até mesmo
+descontaminação ou desconstrução. A utilização de imagens das construções traz
+benefícios à modelagem BIM pelo uso de sistemas para recuperar informações dos
+elementos construtivos, bem como as fases de uma obra. Os artigos selecionados podem
+ser agrupados conforme os assuntos abordados, envolvendo o monitoramento da
+construção, a geração de modelos BIM, a localização interna e a classificação dos materiais.
+
+Este último assunto é abordado em conjunto com o monitoramento e a geração de modelos
+em dois artigos. A Figura 1 apresenta os artigos selecionados com autores, ano de
+publicação e o relacionamento por assunto abordado.
+Figura 1 - Artigos selecionados
+
+Fonte: Elaborado pelos autores
+
+A RI na construção promove um conjunto de ações para melhorar o gerenciamento.
+Segundo Golparvar-Fard et al. (2011), imagens de construções são usadas para visualização
+das operações, monitoramento e rastreamento do progresso, da equipe e dos
+equipamentos, medições de produtividade, investigação de acidentes, resolução de
+conflitos e controle de qualidade.
+As imagens, utilizadas para visualização das operações de construção, servem como
+ferramentas de coordenação e comunicação entre os participantes do projeto e podem ser
+aplicadas à educação de segurança e treinamento e ao marketing. Com a aplicação da RI é
+possível mensurar o desempenho dos insumos, permitindo a revisão de processos para
+melhorar a produtividade. Os dados visuais também podem fornecer evidências
+importantes para as partes envolvidas em um acidente, bem como a resolução de disputas
+entre contratada e contratante. Além disso, a partir da RI, a qualidade das superfícies
+acabadas pode ser rastreada, analisada e controlada remotamente (GOLPARVAR-FARD et
+al., 2011).
+
+4.1 Relação de RI e BIM em Construções Existentes
+Alguns estudos argumentam sobre a importância de trabalhar com as construções
+existentes em BIM e apresentam a modelagem da geometria baseada em imagens, obtidas
+através de escaneamento a laser e métodos para reconhecimento de objetos (BRILAKIS et
+al., 2010; DEMIAN & BALATSOUKAS, 2012; DEMIAN et al., 2015; HAN & GOLPARVAR-FARD,
+2015; LU & LEE, 2017; YANG et al., 2016). Apesar de muitos métodos realizarem o
+escaneamento a laser, os métodos baseados em imagens têm uma vantagem econômica
+significativa. As câmeras digitais possuem qualidade satisfatória e são fáceis de utilizar,
+comparado à utilização de scanners a laser, que são caros, exigem um conhecimento
+específico e necessitam de maior cuidado no uso. A fotogrametria é uma técnica que usa
+os dados visuais como fotografia, imagens e câmeras de vídeo para gerar objetos 2D e 3D.
+Essa técnica exige maior intervenção do usuário para gerar a superfície, comparado com o
+escaneamento a laser, mas, compensa com o seu menor custo (BRILAKIS et al., 2010; LU &
+LEE, 2017).
+A utilização do BIM em construções existentes é um problema multidisciplinar, que
+requer conhecimentos especializados em escaneamento, tratamento de imagens e vídeos,
+aprendizagem de máquina, modelagem geométrica dos objetos e registro dos parâmetros
+referentes às características físicas de cada elemento construtivo. Ao analisar a superfície
+geométrica e as informações de textura de superfície simultaneamente com uma
+taxonomia estabelecida de amostras e formas de materiais de construção e suas
+interrelações, é possível gerar representações que podem ser usadas para classificar
+objetos de construção comuns em categorias de objetos correspondentes (BRILAKIS et al.,
+2010).
+Lu & Lee (2017) estabelecem uma estrutura de processo para a construção de BIM
+baseada em imagens realizando uma análise comparativa detalhada por uma taxonomia.
+Os autores analisaram mais de cinquenta trabalhos publicados sobre a automação para
+construção de BIM baseada em imagens com o objetivo de obter um processo conveniente,
+eficiente e econômico. Conforme o processo exibido na Figura 2, são aplicados métodos e
+um conjunto de tecnologias em cada etapa de criação de um modelo BIM para construções
+existentes. A primeira etapa requer a entrada de dados e obtenção de informações, na qual
+a nuvem de pontos pode ser considerada como a principal fonte de dados. A nuvem de
+
+pontos é obtida através do escaneamento a laser que fornece as coordenadas X, Y e Z de
+cada ponto. Ao final deste processo, essa nuvem de pontos permite reproduzir a forma do
+material, bem como identificar diferentes materiais. Assim, na segunda etapa são aplicados
+métodos para reconhecimento utilizando as nuvens de pontos das imagens coletadas para
+gerar a modelagem da construção, com as informações semânticas, e atualizar o modelo
+BIM.
+Figura 2 - Criação de modelo BIM de construções existentes
+
+Fonte: Extraído de LU & LEE, 2017
+
+A análise de primitivas geométricas é o primeiro passo na identificação de objetos
+em imagens. São aplicados algoritmos que usam características das linhas, arestas e
+manchas (LU & LEE, 2017). No estudo de Yang et al. (2016), as nuvens de pontos geradas a
+partir de múltiplas imagens são segmentadas em componentes planares pelo algoritmo
+RANSAC (RANdom SAmple Consensus). Este algoritmo, também citado por Lu & Lee (2017),
+reconhece os componentes estruturais através de um conhecimento prévio junto a uma
+interpretação das relações geométricas entre os componentes.
+O segundo passo, corresponde ao reconhecimento de objetos que visa categorizar
+componentes de geometria de construção, conforme os tipos de componentes da
+construção. As relações e relacionamentos semânticos com outros componentes são
+identificados e adicionados aos elementos da geometria de construção. Essa etapa abrange
+a classificação, identificação e correspondência de objetos (LU & LEE, 2017).
+
+O reconhecimento dos componentes estruturais baseia-se nas características
+semânticas e em um conhecimento prévio. São características de área do plano, localização
+do plano e sua relação de conexão com outros componentes, e formas que auxiliam na
+identificação de janelas. Os estudos abordam a adoção de um algoritmo com base no
+conhecimento genérico, onde as superfícies planas segmentadas são classificadas em várias
+características semânticas ("Isso é uma parede") e é gerado um modelo de poliedro que
+contém a geometria detalhada e o significado semântico, estabelecendo relação entre os
+componentes ("Parede conectada no telhado neste local"). Para a detecção de materiais
+podem ser utilizados as cores, intensidade e representações de texturas (YANG et al., 2016).
+Outra solução para modelar uma construção existente no BIM é a fusão de dados
+visuais e espaciais para capturar, recuperar e construir automaticamente a geometria e os
+recursos construídos. A partir de múltiplos escaneamentos de um mesmo ponto, os pares
+de nuvens de pontos 3D são progressivamente registrados através do mapeamento RGB-D
+(Vermelho, Verde, Azul e Profundo) e os elementos de construção são reconhecidos
+conforme seus padrões visuais (ZHU &DONIA, 2013).
+Han & Golparvar-Fard (2015) apresentam um estudo de classificação de materiais
+baseada em imagens. O método proposto aplica uma técnica de estrutura de movimento
+que utiliza as nuvens de pontos obtidas pelas fotos para construção de um BIM. O processo
+inicia-se com a atribuição manual das relações entre o modelo de nuvem de pontos e o BIM,
+com a projeção de cada elemento BIM identificado em todas as imagens. A partir dessas
+projeções, os materiais são classificados conforme o tipo derivado do BIM. São
+concatenados filtros de textura e cor para comparação com vários modelos de classificação
+de materiais, sendo quantificados por vetores e analisados via histograma para inferência
+do tipo de maior relevância. Este método é parecido com o processo de identificação de
+janelas descrito por Yang et al. (2015), que também aplica as nuvens de pontos
+considerando a intensidade de pontos conciliada à cor e textura e quantifica os resultados
+em um histograma para classificar o tipo de material.
+O reconhecimento de materiais e o enriquecimento automático de imagens através
+do treinamento da máquina, com a identificação pela cor e textura, é uma solução comum
+em vários estudos. Uma imagem pode ser dividida em várias partes para aplicar diferentes
+metodologias de aprendizado de máquina na classificação dos materiais. A eficiência do
+
+reconhecimento está na quantidade de dados utilizada para realizar o treinamento da
+máquina (MALLEPUDI et al., 2011).
+Os objetos identificados com informações relevantes se tornam um BIM. Esta etapa
+ainda depende de aplicações comerciais e modeladores qualificados para construir um
+modelo BIM de construções existentes. Podem ser utilizados vários formatos de entrada
+como fotografia, mapas 2D, scanners a laser, arquivos CAD 2D, arquivos IFC e outros
+modelos de arquivos 3D. O método que integra fotografia e escaneamento a laser pode ser
+uma ótima opção para reduzir a redundância e favorecer no aumento da precisão e na
+eficiência do processo de modelagem (LU & LEE, 2017).
+4.2 Relação de RI e BIM no Monitoramento e Controle de Construções
+Além da utilização de imagens para criação de modelos BIM, existem pesquisas
+sobre o monitoramento e controle de construções (PARK et al., 2018; DIMITROV &
+GOLPARVAR-FARD, 2014; ROH et al., 2011). Assim como na geração de modelos de
+construção, no monitoramento automático da construção existe a necessidade de
+informações semânticas de materiais de construção e interconectividade entre os
+elementos de construção. O uso de imagens e a aplicação de técnicas de visualização
+permite relatar o progresso da construção usando abordagens interativas e visuais.
+Roh et al. (2011) apresenta uma plataforma para monitoramento do progresso do
+interior de uma construção com base em um processo composto de três etapas: coleta,
+análise e integração. Em primeiro lugar, as construções são armazenadas em um banco de
+dados para permitir monitoramento e controle do projeto. Os componentes dos modelos
+2D e 3D possuem informações específicas do domínio sobre entidades que são definidas no
+BIM. A partir destes registros, as fotografias do interior da construção são associadas ao
+modelo BIM para construir automaticamente os relacionamentos entre a foto coletada e o
+componente modelado. Esta associação fornece informações sobre o progresso. Em
+segundo lugar, a avaliação através de imagens pode interagir com o BIM e, a partir de um
+conjunto de imagens, recuperar a informação histórica de componentes concluídos.
+Finalmente, na fase de integração, a informação é agrupada e usada para gerar relatórios
+de progresso sob demanda, podendo ser representados através da codificação de cores e
+padrões mapeados em um modelo tridimensional.
+
+Park et al. (2018) propõem um método de registro automatizado de fotos diárias
+para análise do tempo de execução e identificação de objetos em BIM. Os autores
+desenvolveram uma abordagem de RI baseada em conteúdo para encontrar o local
+fotográfico mais próximo comparando as fotos com o modelo BIM e, em seguida, um
+conceito de grade bidimensional é usado para extrair objetos do modelo associado às fotos.
+Destaca-se ainda o trabalho apresentado por Dimitrov e Golparvar-Fard (2014) que
+aborda mais tecnicamente o processo de monitoramento através da análise de cor e textura
+dos elementos de construção. É proposto um algoritmo que modela a aparência do material
+conforme uma distribuição de probabilidade conjunta de respostas de um banco de filtros
+e valores de cor e saturação. Para a classificação dos materiais utiliza-se uma técnica de
+treinamento e aprendizado de máquina que analisa as imagens e reconhecem padrões.
+Para melhor entendimento, será apresentada na próxima seção este recurso e suas
+aplicações com o BIM.
+4.3 Relação de RI e BIM no Aprendizado de máquina (Machine Learning)
+A recuperação de informações aplica técnicas de aprendizado de máquina capazes
+de auxiliar na elaboração de projetos em BIM. Existem estudos de uso de machine learning
+em várias pesquisas sobre BIM (BRILAKIS et al., 2010; DIMITROV & GOLPARVAR-FARD,
+2014; ERICKSON et al., 2014; HAN & GOLPARVAR-FARD, 2015; MALLEPUDI et al., 2011;
+WILDE et al., 2013; YANG et al., 2016; HA et al., 2018; ACHARYA et al., 2019).
+A aprendizagem de máquina utiliza algoritmos para promover o aprendizado com
+variados propósitos como previsão e classificação. A máquina aprende a executar uma
+tarefa a partir do treinamento com um conjunto de dados. Esse aprendizado pode ser
+supervisionado, quando existe a utilização de um conjunto de dados, ou não
+supervisionado, quando não existe um conjunto prévio e os padrões são identificados pela
+própria máquina (LOURIDAS & EBERT, 2016).
+Um experimento que pode ilustrar a aplicação desta técnica é o estudo conduzido
+por Ciftcioglu e Bittermann (2015) que aplicou a cognição computacional para a criação de
+um protótipo no reconhecimento de espaços panorâmicos em projetos arquitetônicos. Os
+autores realizaram experimentos utilizando o aprendizado supervisionado para que a
+
+máquina consiga identificar a posição em um espaço tridimensional para obter a melhor
+vista panorâmica, enquanto experimenta o espaço com a densidade perceptual máxima.
+A realização do treinamento para promover o aprendizado de máquina corresponde
+à aplicação de técnicas como redes neurais, lógica fuzzy e algoritmos de maximização de
+entropia (BRILAKIS et al., 2010). Em alguns dos artigos selecionados nesta pesquisa existe a
+utilização do Multi-Layer Perception, Support Vector Machine e Radial Bases Function que
+são métodos de aprendizado supervisionado que analisam os dados e reconhecem padrões
+para a classificação de elementos e materiais de construção (DIMITROV & GOLPARVARFARD, 2014; MALLEPUDI et al., 2011; SIDDULA et al., 2016; RASHIDI et al., 2016).
+As técnicas Multi-Layer Perception (MLP), Support Vector Machine (SVM) e Radial
+Bases Function (RBF) são amplamente utilizadas para aprendizagem de máquinas na área
+de reconhecimento de padrões. O MLP é capaz de resolver problemas lineares básicos
+englobando redes neurais organizados em camadas para fins de treinamento na detecção
+de materiais. A rede neural RBF pode usar várias formas de funções radiais em uma camada,
+aplicando técnicas e heurísticas, para otimizar os parâmetros das funções de base e
+determinar o número de neurônios necessários para obter a classificação ideal. Já o SVM
+corresponde a um modelo de aprendizagem supervisionada com algoritmos capazes de
+analisar dados e reconhecer padrões (RASHIDI et al. 2016).
+Uma utilização prática de redes neurais pode ser na identificação de ambientes e
+localização interna através de uma fotografia. Um conjunto de dados é construído com as
+imagens renderizadas de um modelo BIM em cada ponto semelhante ao campo de visão do
+usuário. Uma imagem mais semelhante à fotografia de consulta interna é recuperada do
+conjunto de dados e a posição interna estimada com base na localização e orientação em
+que a imagem BIM foi renderizada. As características das imagens extraídas de uma rede
+neural são utilizadas para avaliar a similaridade entre imagens de domínio cruzado. Assim,
+os recursos extraídos de uma rede neural se tornam uma excelente alternativa para
+localização em ambientes fechados (HA et al., 2018; ACHARYA et al., 2019).
+A aplicação de algoritmos, que requerem um treinamento para associar RI na
+identificação da geometria e materiais, indica uma tendência do uso do aprendizado de
+máquina para otimizar a criação de BIM para construções existentes e a atualização no
+monitoramento do projeto.
+
+5 CONSIDERAÇÕES FINAIS
+Este trabalho analisou a produção científica que associa RI e tecnologia BIM. Com
+um caráter exploratório, visando aumentar a familiaridade com esses dois temas e suas
+relações, foi realizada uma revisão sistemática da literatura. Os artigos pesquisados nas
+bases do portal CAPES denotam a existência da correlação entre esses temas. Verificou-se
+que existem pesquisas sendo realizadas com o uso de imagens para recuperação de
+informações em um modelo BIM.
+Diante do avanço tecnológico no processamento de imagens, a utilização em
+projetos de engenharia favorece a execução de tarefas como criação, otimização,
+monitoramento, controle e, consequentemente, o apoio à tomada de decisão. Os artigos
+selecionados demonstram esta possibilidade do uso de imagens para recuperação de
+informações sobre as obras através da identificação de materiais, localização e construção
+em BIM de edificações existentes. Alguns trabalhos aplicam aprendizado de máquina para
+otimizar a recuperação e criação dos modelos em BIM.
+Estudos relacionando tecnologia BIM e RI são recentes e ainda reduzidos no âmbito
+da Ciência da Informação, conforme constatado nesta pesquisa. Destaca-se também que o
+procedimento de modelagem em BIM ainda é trabalhoso e pouco utilizado, principalmente
+no Brasil. Os resultados obtidos neste estudo sugerem que existe uma oportunidade para
+explorar as aplicações de RI em projetos BIM de construções já existentes e também
+àquelas que não têm seu projeto concebido em BIM. A expectativa por uma maior
+exploração da RI em projetos BIM é reduzir tempo e recursos necessários para modelar a
+estrutura com soluções acessíveis inclusive para pequenos projetos construtivos. Isso pode
+acelerar a adoção da modelagem BIM na indústria de Arquitetura, Engenharia, Construção
+e Gerenciamento de Instalações (AEC), tanto para o projeto quanto para a construção.

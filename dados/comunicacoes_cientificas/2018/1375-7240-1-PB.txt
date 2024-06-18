@@ -1,0 +1,454 @@
+
+ARQUIGRAFIA: AMBIENTE COLABORATIVO WEB DE IMAGENS DE ARQUITETURA
+Modalidade da Apresentação: Comunicação Oral
+Resumo: Apresenta o ARQUIGRAFIA, um ambiente colaborativo na web desenvolvido, modelado
+implementado e gerenciado por uma equipe multidisciplinar das áreas da Arquitetura, Ciência da
+Informação, Ciência da Computação e do Direito, com objetivo de preservar e dar acesso à memória
+iconográfica da Arquitetura Brasileira e seus espaços urbanos. Este ambiente colaborativo web
+possibilita o armazenamento e o compartilhamento de imagens digitalizadas e nato digitais,
+provenientes tanto de coleções institucionais quanto de coleções pessoais de arquitetos, fotográfos,
+pesquisadores, professores, estudantes ou interessados na área. O ARQUIGRAFIA é também um
+laboratório para criação, aplicação de ferramentas e pesquisas que promovem a participação ativa e
+colaborativa dos seus usuários, que podem criar uma conta e compartilhar suas coleções
+iconográficas digitalizadas (fotografias, desenhos, diapositivos e negativos) através do upload de
+arquivos, bem como proceder a indexação, o georreferenciamento e autorizar o uso de suas
+imagens, atribuindo as mesmas uma licença Creative Commons.
+O ARQUIGRAFIA está
+disponibilizado no endereço www.arquigrafia.org.br e na Play Store do Google com um aplicativo
+para smartphones Android. Da higienização à digitalização da coleção institucional ao
+desenvolvimento de um software beta perpétuo próprio apresenta os procedimentos metodológicos
+para o estabelecimento dos metadados e da normalização terminológica para a representação e
+recuperação da informação iconográfica, assim como os resultados obtidos até o momento pelo
+projeto.
+Palavras-Chave: ambiente colaborativo web; imagens de arquitetura; repositório digital.
+1 INTRODUÇÃO
+Este trabalho apresenta o desenvolvimento de um ambiente colaborativo na web
+construído com objetivo de salvaguardar, preservar e dar acesso à memória iconográfica da
+Arquitetura Brasileira e de seus espaços urbanos ao possibilitar o armazenamento e o acesso
+às imagens digitalizadas, assim como às imagens nato digitais, provenientes de coleções
+institucionais e pessoais, compartilhadas por pesquisadores, profissionais, professores,
+estudantes da área ou simplesmente pessoas interessadas no tema.
+Além de um repositório digital, esse ambiente colaborativo web denominado
+ARQUIGRAFIA (www.arquigrafia.org.br) modelado, implementado e gerenciado por uma
+equipe multidisciplinar é também um laboratório para criação e aplicações de ferramentas
+web que envolvem pesquisas realizadas sob o ponto de vista da Arquitetura e Urbanismo, da
+Ciência da Informação, da Ciência Computação e do Direito.
+A participação ativa e colaborativa de todos os usuários em sua construção contínua
+possibilitou o desenvolvimento de um software beta perpétuo, uma arquitetura de
+participação, onde o usuário é protagonista do compartilhamento de textos, áudios, vídeos,
+neste caso específico, de imagens, constituindo uma comunidade web que constrói
+conhecimento coletivamente, respeita os direitos autorais e utiliza interfaces distintas e
+complementares, como um site e um aplicativo Android para smartphones, este último
+disponível para download no Brasil, na Google Play Store.
+O ARQUIGRAFIA é um sistema de acesso gratuito com login, upload e download de
+imagens, que permite aos seus usuários institucionais ou individuais, em sua maioria
+estudantes de arquitetura (38,6%); arquitetos (23,4%); alunos de graduação em outras áreas
+(10,3%); professores de arquitetura (4,3%); fotógrafos (4,1%), na faixa etária entre 20 e 30
+anos, marcar, georeferenciar e atribuir licenças específicas (Creative Commons) para cada
+imagem de suas coleções.
+Por ser um ambiente colaborativo, um instrumento não apenas de armazenamento
+de imagens, mas também de pesquisa e ensino e, principalmente de acesso à informação e
+inovação, o ARQUIGRAFIA se insere no campo das Humanidades Digitais, pois conforme
+HUDON (2016) este campo se define por pesquisas colaborativas com atividades de ensino
+que combinam computação e tecnologias da informação com práticas acadêmicas no campo
+das humanidades.
+
+
+
+O ARQUIGRAFIA tem contribuído para ampliar e popularizar o debate sobre
+arquitetura, patrimônio cultural e sua documentação, permite uma construção coletiva do
+conhecimento apoiada em imagens relacionadas ao tempo (presente, passado e futuro) e
+espaço (imagens georeferenciadas), que podem ser integradas em uma experiência urbana
+real com o apoio de smartphones e aplicativos.
+A organização do conhecimento no domínio da arquitetura brasileira, a partir de
+pesquisas sobre os processos de indexação de imagens, e as etapas de construção de um
+vocabulário controlado que inclui a participação dos usuários do sistema, consolida os
+padrões para o estabelecimento de metadados, que pretendem responder tanto aos
+requisitos internacionais de interoperabilidade quanto às necessidades locais de organização
+e acesso à informação.
+O desenvolvimento e atualização de um software próprio para o ARQUIGRAFIA,
+baseado no PHP Laravel, que pode ser compartilhado livremente como um gabarito +GRAFIA
+contribui para o desenvolvimento de outras iniciativas similares na construção de ambientes
+colaborativos iconográficos georreferenciados na Internet.
+2 CORPUS DO PROJETO
+A principal fonte das imagens para o ARQUIGRAFIA tem sido a coleção de
+diapositivos e fotografias do Setor de Material Iconográfico da Biblioteca da Faculdade de
+Arquitetura e Urbanismo da Universidade de São Paulo (FAUUSP). Foram digitalizados um
+conjunto de 42 mil imagens provenientes de 34 mil slides e 8 mil fotografias em papel. Deste
+total de imagens digitalizadas, foi realizado o upload de 6.724 imagens para o sistema
+ARQUIGRAFIA, entre aquelas que já possuem as autorizações dos detentores dos direitos
+autorais sob a licença Creative Commons. As demais imagens estão em fase de curadoria
+para solicitação de autorização e análise para inserção. Além disso, 2600 imagens foram
+inseridas e catalogadas por usuários particulares e outras 1765 pertencentes a outras
+coleções institucionais como a do Museu Republicano de Itu e o projeto QUAPA - Quadro do
+Paisagismo no Brasil da FAUUSP. A Figura 1 apresenta a página de entrada deste ambiente
+web.
+
+
+Figura 1 – Home page do ARQUIGRAFIA
+
+Fonte: http://www.arquigrafia.org.br/home
+
+3 METODOLOGIA
+Anteriormente à digitalização das imagens, foi realizada a identificação e seleção do
+conjunto de diapositivos e ampliações fotográficas específicas sobre Arquitetura Brasileira e
+seus espaços urbanos. Em seguida todo esse conjunto foi higienizado e acondicionado de
+maneira adequada, com a aquisição de material específico, como pastas e cantoneiras em
+material neutro que permitem melhor acesso, organização e conservação dos originais. Ao
+mesmo tempo foi feita a revisão de sua catalogação, a partir do levantamento dos
+procedimentos e normas para representação descritiva e temática de imagens presentes em
+ambientes colaborativos. Após a digitalização foram constituídos backups do conjunto de
+imagens e foi realizado o upload das mesmas no ARQUIGRAFIA. Finalmente essas imagens
+foram catalogadas e indexadas utilizando-se um vocabulário controlado elaborado a partir
+das listas de assuntos já utilizadas pelo Setor de Material Iconográfico da Biblioteca da
+FAUUSP, incluindo-se aqui a seção de Arquitetura do Vocabulário Controlado do Sistema
+Integrado de Bibliotecas da USP (VOCAUSP), em conjunto com uma lista de tags indicadas
+pela equipe do projeto, formada no início por professores e pesquisadores da área da
+
+
+Arquitetura e Urbanismo. Esse vocabulário controlado encontra-se em constante atualização
+e a partir de 2016 tem incorporado as tags propostas pelos usuários não institucionais do
+sistema.
+Para a digitalização da coleção institucional foi contratada uma empresa terceirizada
+que utilizou filme 120 da Plustek Optic e o Silver Fast Ai Studio 8 (64 bits), software de
+digitalização, que ajuda na remoção de poeira e arranhões. Cada imagem foi digitalizada sem
+correção de cores, a fim de preservar a aparência original das fotografias e diapositivos,
+mantendo as marcas do tempo (mudanças de cor, manchas, saturação, etc) e seu aspecto
+histórico. Cada arquivo gerado possui 5 MB com resolução de 4.000 dpi o qual é salvo nos
+formatos TIFF, JPEG e PDF e gravado em DVDs e discos rígidos externos.
+Cada imagem recebeu um número de registro, que permitiu a associação com as
+informações registradas em planilha, contendo os dados de sua catalogação e descrição. O
+programa transformou cada linha da planilha em objetos de conteúdo usados pelo sistema.
+Para
+
+fazer
+
+essa transformação foi utilizado
+
+o
+
+software
+
+Apache
+
+ODF
+
+Toolkit
+
+(http://incubator.apache.org/odftoolkit) que criou uma interface de comunicação entre a
+planilha e o sistema do ARQUIGRAFIA para mineração e transformação de informações.
+Em seguida, a atividade de armazenamento de informações permitiu a criação de
+associações entre os objetos de conteúdo e seu armazenamento no banco de dados. Uma
+vez que a associação de objetos é feita (um autor é associado a uma imagem e esta imagem
+a
+
+um
+
+endereço),
+
+o
+
+sistema
+
+usa
+
+a
+
+biblioteca
+
+de
+
+persistência
+
+Hibernate
+
+(http://www.hibernate.org) para armazenar o banco de dados em Mysql (http: // www
+.mysql.com).
+4 REPRESENTAÇÃO E RECUPERAÇÃO DO PATRIMÔNIO DIGITAL
+Para definir e embasar a modelagem do sistema foram realizados procedimentos
+relacionados à representação e recuperação do patrimônio digital a ser inserido no
+ARQUIGRAFIA, de maneira a garantir o acesso e o compartilhamento de informações entre
+todos os usuários, sejam eles institucionais ou individuais.
+Dessa maneira, foram analisados alguns padrões de catalogação como o Código de
+Catalogação Anglo Americano - AACR2; o International Standard for Bibliographic
+Descripition for Non Book Material - ISBD (NBM) e padrões de conteúdo como o Cataloging
+Cultural Objects - CCO.
+
+
+A partir da análise desses padrões e identificadas as informações exigidas no
+ARQUIGRAFIA, é que foi desenvolvida uma planilha visando integrar os campos necessários
+para a representação das imagens no usuário institucional e a administração de dados no
+ambiente web colaborativo. Desta forma, foi estabelecido um conjunto de metadados
+conforme Quadro 1.
+Quadro 1 – Metadados do ARQUIGRAFIA
+Nível de Metadados da Imagem
+Descrição
+
+Técnico
+Administrativo
+
+Tipo de Informação
+Título, Número de classificação, Nome, País, Estado,
+Cidade, Distrito, Rua, Autor da imagem, Tags, Data
+da imagem, Autor do projeto, Data de construção,
+Notas, Data do número de registro, Data de
+catalogação
+Dimensões,
+Largura,
+Altura,
+Resolução,
+Profundidade de bits, Representação de cores
+Licença (Creative Commons), Coleta, Doadores,
+Termo de autorização para transmissão na web
+Fonte: elaborado pelas autoras
+
+As tags (etiquetas ou marcadores), bastante utilizados em redes sociais, representam
+o campo de assunto ou de indexação de assunto da imagem postada no ARQUIGRAFIA.
+A fim de incentivar os usuários a observar de perto as imagens e formular juízos
+sobre edifícios e espaços urbanos representados em fotografias, sob o ponto de vista da
+Arquitetura e Urbanismo, o ARQUIGRAFIA propõe aos seus usuários o registro de impressões
+baseadas em pares de qualidades opostas, denominados binômios (Figura 2).
+Figura 2 – Binômios do ARQUIGRAFIA
+
+Fonte: http://www.arquigrafia.org.br/
+
+
+
+Os binômios são organizados como diferenciais semânticos como: aberto / fechado;
+interno / externo; translúcido / opaco; complexo / simples; simétrico / assimétrico;
+horizontal / vertical.
+A média de interpretações é calculada e mostrada em gráfico (Figura 3) e comparada
+com a média de outras imagens que tiveram seus binômios analisados no sistema,
+permitindo a identificação de imagens com padrões semelhantes.
+Figura 3 – Comparação de média de interpretação de imagens do ARQUIGRAFIA
+
+Fonte: http://www.arquigrafia.org.br/
+
+Além disso, permite “estabelecer, para toda imagem, por meio de uma programação
+do sistema, uma perspectiva comparativa entre sua interpretação original, as interpretações
+posteriores, e a média de todas as interpretações já realizadas” (ROZESTRATEN, et al, 2010).
+As diversas intepretações ficam registradas e podem ir mudando as classificações de
+similaridades, bem como as interpretações de um mesmo usuário podem também
+identificar perfis e preferências.
+5 NORMALIZAÇÃO TERMINOLÓGICA
+A normalização terminológica a partir da construção de um vocabulário controlado é
+necessária devido ao ARQUIGRAFIA permitir aos usuários a atribuição de tags às suas
+imagens. Esta inclusão de tags ou marcadores pelos usuários sem controle de vocabulário e
+com linguagem natural é denominada de indexação colaborativa, folksonomia, indexação
+social ou tagueamento social, e pode causar ruído na recuperação da informação.
+
+
+
+Para minimizar esse ruído, na medida em que a inserção de tags é constante e o
+gerenciamento do vocabulário ocorre em ritmo mais lento, no momento da inserção das
+tags, o sistema sugere os termos normalizados a partir do Vocabulário Controlado do
+Sistema Integrado de Bibliotecas da Universidade de São Paulo (VOCAUSP) disponível em
+http://vocabusp.sibi.usp.br/vocab/ que foram selecionados como termos pertinentes à área
+(Arquitetura e afins), a lista de tags desenvolvida pela equipe, baseada em dicionários e
+thesauri de Arquitetura, além de considerar as tags atribuídas pelos usuários não
+institucionais (Figura 4) às suas imagens.
+No entanto, o sistema ainda aceita a inclusão de novas tags por adição, sugeridas
+pelos usuários mesmo quando não existem na lista. Essas novas tags deverão ser objeto de
+análise periódica para inclusão daquelas que forem pertinentes para recuperação da
+informação.
+Figura 4 – Tela de upload do ARQUIGRAFIA com lista de tags sugeridas
+
+Fonte: http://www.arquigrafia.org.br/
+
+Trabalhos como os de Angus et al. (2010) e Bradley (2011) estudaram o Flickr, um site
+de compartilhamento e rede social de fotos, que utiliza a folksonomia para assuntos, e são
+referencial teórico para a indexação colaborativa realizada na ARQUIGRAFIA. Este processo
+de indexação pode contribuir muito para a criação e gestão de acervos digitais, por ser
+realizado de forma colaborativa, distribuindo os recursos, atividades, e diminuindo os custos
+
+
+de forma que se torna importante para a organização, recuperação e o acesso à informação
+digital.
+Ao mesmo tempo, as instituições parceiras que cadastram imagens de seu acervo,
+como a Biblioteca da FAUUSP e o Museu de Itu, e utilizam o Vocabulário Controlado do
+Sistema Integrado de Bibliotecas da Universidade de São Paulo (VOCAUSP) realizam o
+controle das palavras inseridas, evitando sinonímia (duas palavras com o mesmo significado)
+e polissemia (uma palavra com vários significados), contribuindo para a melhoria da
+recuperação da informação.
+No entanto, o controle de vocabulário não é o único recurso para a consistência da
+indexação, sendo necessário analisar as características do suporte e de seu conteúdo,
+desenvolver regras claras para o processo de indexação e uso do vocabulário controlado,
+conhecimento da área temática e treinamento de indexação.
+Por esse motivo o ARQUIGRAFIA possui uma política de indexação a qual está
+descrita na segunda edição do Manual de Procedimentos onde indica que
+convém indicar por “tags” os materiais utilizados na construção da obra e que
+estejam visíveis no primeiro plano da imagem. Também devem ser indicados
+os elementos arquitetônicos presentes, os quais são identificados a partir da
+identificação do tipo de edificação e/ou espaço urbano e suas funções.
+(ROZESTRATEN; ANDRADE; FIGUEIREDO, 2018).
+
+A consistência da indexação está ancorada nos estudos de coerência de indexação,
+que segundo (Lancaster, 2004), “refere-se à extensão com que há concordância quanto aos
+termos a serem usados para indexar o documento”. É possível também, segundo o autor,
+analisar a coerência inter indexadores (concordância entre os indexadores) e intra
+indexadores (extensão da coerência do próprio indexador). Outros autores também
+estudaram este tema como (Gil-Leiva, 2002), (Oikarinen e Kortelainen, 2013) e (Hughes e
+Rafferty, 2011) estes últimos analisaram a consistência inter indexadores de materiais
+gráficos na National Library of Wales.
+O uso do tagueamento social e a análise da consistência da indexação apresentam
+uma tensão inerente entre o uso de terminologia do usuário de forma livre e o controle da
+informação indexada, sendo ambos os recursos fundamentais para garantir a recuperação e
+o acesso à informação.
+No momento atual da pesquisa uma lista de termos com definições, enriquecida com
+tags atribuídas por usuários privados às suas imagens, está sendo analisada para
+
+incorporação ao ARQUIGRAFIA e virá a constituir a primeira versão de um vocabulário
+controlado colaborativo que funcionará como uma sugestão de termos aos usuários,
+mantendo-se a possibilidade de inserção de novas tags, as quais posteriormente poderão
+ser incluídas no vocabulário do ARQUIGRAFIA.
+A inclusão de tags pode contribuir muito para a gestão e manutenção desta
+constelação de imagens de Arquitetura e Urbanismo que se tornou o ARQUIGRAFIA pois, ao
+ser realizada de forma colaborativa distribui os recursos e reduz os custos, de forma que se
+torna importante para a organização, recuperação e acesso à informação presentes nessas
+imagens. Dito de outra maneira, por pertencerem ao universo semântico dos usuários, as
+tags enriquecem o vocabulário controlado do sistema ao mostrar como os usuários pensam
+e recuperam as informações de que necessitam.
+6 RESULTADOS RECENTES
+Foi desenvolvido para o ARQUIGRAFIA, o aplicativo Android para acesso via
+smartphone, com o intuito de estimular os usuários a navegarem no acervo georeferenciado
+enquanto circulam pelas cidades, visualizam as imagens, interagem entre si e colaboram
+(ROZESTRATEN e PEREIRA, 2014).
+Possui também uma landing page bilíngue (Figura 5) desenvolvida para informar os
+usuários sobre o ambiente e os recursos disponíveis no sistema, integrada ao projeto de
+aprimoramento da comunicação da ARQUIGRAFIA com usuários, usuários em potencial e
+atividades de relações públicas.
+Figura 5– Landing page do ARQUIGRAFIA
+
+Fonte: http://www.arquigrafia.org.br/
+
+
+
+Tanto o usuário com acesso pessoal como o usuário com acesso institucional podem
+inserir fotos de arquitetura de coleções próprias ou acervos específicos, no site ou no
+aplicativo, sendo que o App permite fotografar o local por câmara própria e insere a
+indicação automática do GPS. Para fazer o upload de uma foto, os colaboradores devem
+preencher pelo menos título e autor da imagem, país e tags, etiquetas ou marcadores que
+representam a indexação de assunto da imagem postada (ROZESTRATEN; LIMA e SANTOS,
+2017).
+No perfil do usuário existe a possibilidade de realizar chat através de mensagens e de
+notificações como um canal de comunicação para interação com outros usuários do
+ambiente do ARQUIGRAFIA com uma rede social web, criação de álbuns de fotos, e a
+inserção de contribuições (Figura 6), que permite a complementação e revisão das
+representações descritivas e de conteúdo das imagens através de recursos de gamificação.
+Figura 3 – Recursos de interação social do ARQUIGRAFIA
+
+Fonte: http://www.arquigrafia.org.br/
+
+A natureza colaborativa deste projeto o distingue das bases de dados institucionais
+de imagens existentes na internet, precisamente porque permite que uma rede heterogênea
+de colaboradores tanto institucionais como privados contribua de forma conjunta para a
+construção e crescimento contínuo da coleção de imagens digitais.
+Está atualmente em desenvolvimento uma interface para a criação de exposições
+que permitirá a curadoria digital por usuários com perfis específicos, bem como o piloto de
+
+
+
+um Open Air Museum com descrições em áudio das imagens devido à parceria com o Smart
+Audio City Guide em projeto apoiado pelo INCT/CNPq.
+As principais conquistas e resultados obtidos pelo projeto ARQUIGRAFIA nos últimos
+dois anos reforçam a importância de sua constituição multidisciplinar e a cooperação e interrelação entre as áreas da Ciência da Informação, da Ciência da Computação e a Arquitetura e
+Urbanismo.
+A melhoria da interação dos registros das impressões dos usuários sobre aspectos
+visíveis das arquiteturas representados em imagens fotográficas com base nos binômios de
+qualidades espaciais integrados como diferenciais semânticas permitiu expressar em
+infográficos sintéticos essas impressões, bem como a recuperação de imagens com
+impressões similares, parâmetros que estão integrados à pesquisa avançada do sistema.
+A finalização da digitalização do conjunto de 42 mil imagens representa um desafio
+quanto a curadoria digital das mesmas, no que se refere a questões relacionadas a direitos
+autorais e obtenção das licenças para inserção no ARQUIGRAFIA, além da preservação digital
+do material registrado no sistema.
+A catalogação e o envio de imagens para o sistema ARQUIGRAFIA, a partir das
+autorizações dos detentores dos direitos autorais, com a inserção das licenças Creative
+Commons, representação descritiva e indexação foi uma conquista, principalmente devido à
+melhoria dos mecanismos de carregamento de imagens que eram anteriormente realizadas
+de forma indireta com base em planilhas do Excel. Foi implementado o upload direto ao
+sistema online diferenciando entre as formas de catalogação e indexação para os usuários
+comuns (ou privados) e usuários institucionais, bem como para as coleções ou séries
+fotográficas foi possível desenvolver o recurso de reutilização de dados inseridos em uma
+imagem para o próximo upload.
+Outra melhoria desenvolvida foi um mecanismo de inserção de datas imprecisas para
+catalogação de imagens; e ainda a inclusão de um mecanismo que permite a inserção de
+dados de imagens da coleção, que ainda não possuem a licença do autor para serem
+exibidos privadamente às instituições que os registraram, sem visualização pública.
+O sistema teve a inserção de listas controladas de autocomplete para nomes
+completos e corretos de arquitetos brasileiros, bem como tags específicas da área, com base
+no Vocabulário Controlado do Sistema Integrado de Bibliotecas da USP (VOCAUSP), com
+
+
+
+termos identificados das áreas de Arquitetura, Urbanismo, Artes e Engenharia; ferramentas
+que possibilitam melhorar a consistência de dados do repositório.
+Ocorreram melhorias nas funcionalidades de interação do sistema através de
+procedimentos UCD, baseados em elementos de gamificação visando maior engajamento do
+usuário especialmente com elementos de interface relacionados à colaboração, tais como:
+notificações; mensagens; complementação de informações sobre imagens e comentários; a
+possibilidade de seguir e ser seguido por outros usuários. Estão em estudo também recursos
+de design for gamification, tais como: gráfico de liderança, emblemas, destaques da semana
+e pontuações.
+Em relação aos recursos computacionais realizou-se: o desenvolvimento e
+consolidação integral do software ARQUIGRAFIA em PHP (Laravel) com integração adequada
+com o front end com fundo branco; a refatoração de código e suas interações fluidas, tanto
+com o desenvolvimento do App Android quanto com o design do template + GRAFIA; o
+desenvolvimento da primeira versão do Aplicativo Android a partir de novembro de 2016,
+que intensificou a interação do sistema com novos usuários e a experiência direta dos
+espaços urbanos nas cidades brasileiras; a ampliação da base iconográfica ARQUIGRAFIA
+com o upload experimental de desenhos e vídeos como piloto para uma plataforma mais
+completa de imagens digitais.
+7 CONSIDERAÇÕES FINAIS
+O ARQUIGRAFIA, como uma de suas características principais, explora os recursos
+colaborativos que uma rede social pode fornecer, com a interação dos usuários não
+institucionais e a inserção de moderadores no sistema. Por outro lado, enfrenta desafios
+relacionados à sustentabilidade de um sistema de crescimento contínuo, que incluem
+desenvolvimento e programação; armazenamento e preservação digital; gestão e inserção
+de dados e imagens.
+Considerando os resultados recentes, a equipe de pesquisa da ARQUIGRAFIA lida
+com novos objetivos de curto e médio prazo como a implementação de uma primeira versão
+das seguintes funcionalidades: sistema de moderação integrado com elementos de jogo
+(gamification); comunicação instantânea de usuários logados no sistema; questionário como
+instrumento para intensificar o aprendizado sobre Arquitetura a partir de questionários
+respondidos pelos usuários. Tais funcionalidades visam formar uma comunidade interativa
+
+
+
+em torno das imagens e suas informações, buscando sustentabilidade de longo prazo para o
+sistema.
+Nesse sentido, também vem sendo realizado o acompanhamento do sistema de
+versão on-line e sua consequente avaliação crítica pelos usuários de acordo com o Projeto
+Centrado no Usuário com Testes A / B e testes formais de usabilidade no sistema com as
+funcionalidades listadas. A análise estatística das métricas de engajamento dos usuários com
+o sistema permitirá a avaliação do impacto das mudanças recentes feitas no projeto.
+Do ponto de vista da divulgação do projeto, é importante o acompanhamento e
+análise da integração de novas instituições na ARQUIGRAFIA, realizada a partir de contatos
+com organização e a disseminação do "Manual dos Procedimentos de Projetos Técnicos da
+ARQUIGRAFIA" que teve sua segunda edição em 2018. Além disso, pretende-se reforçar o
+desenvolvimento e divulgação pública gratuita do template + GRAFIA integrado ao
+aprimoramento do Android, criação do IOS App e da difusão em código aberto do template
+App + GRAFIA.
+Uma frente de pesquisa que se mostra promissora no ARQUIGRAFIA refere-se aos
+estudos relacionados às qualidades plurais-espaciais dos binômios dispostos como
+diferencial semântico buscando definir um modelo de avaliação de imagens com aspectos de
+similaridades que possam ser úteis à recuperação da informação.
+Em relação à representação da informação mostra-se necessário tornar os
+metadados descritivos, técnicos e administrativos definidos a partir dos campos descritivos
+do AACR2 para padrões atualizados como o conjunto de RDAs1; FRBR2 ou RDA / CCO3, que
+são interoperáveis com ambiente web e permitem a aplicação de ontologias conceituais. O
+processo de indexação de imagens é uma das frentes de pesquisa que vem sendo abordado
+atualemente e que vem indicando a necessidade do estabelecimento de uma política sob o
+ponto de vista de um ambiente colaborativo web.
+Finalizando, deve-se buscar realizar estudos de usabilidade para avaliar a versão beta
+atual e o redesenho do sistema a partir das observações críticas feitas pelos usuários,
+expandir a base iconográfica da ARQUIGRAFIA, incluindo vídeo digital, e desenhos e outros
+recursos audiovisuais, bem como buscar o aprofundamento da pesquisa em novos temas
+pertinentes e futuros desenvolvimentos.
+1
+2
+3
+
+http://www.rda-jsc.org/rda.html
+http://www.ifla.org/publications/functional-requirements-for-bibliographic-records
+http://cco.vrafoundation.org

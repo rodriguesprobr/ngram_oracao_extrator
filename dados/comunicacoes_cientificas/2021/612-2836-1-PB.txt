@@ -1,0 +1,443 @@
+
+ACESSIBILIDADE DIGITAL DA HOMEPAGE DO WEBSITE DA BIBLIOTECA CENTRAL DA UFPA:
+AVALIAÇÃO COM O SOFTWARE WAVE E TESTES COM ALUNOS CEGOS1
+Modalidade: Trabalho Completo
+Resumo: A acessibilidade digital é o esforço para garantir a eliminação de barreiras e autonomia no
+acesso à informação na web para todos, em especial às pessoas com deficiência (PcD). As conquistas
+com relação às PcD, já teve grandes avanços, mas ainda tem um longo caminho por percorrer, cuja
+demanda inicial é identificar e entender as barreiras ainda existentes. Com esse intuito, esta pesquisa
+desenvolveu um estudo de caso na homepage da Biblioteca Central da Universidade Federal do Pará,
+para analisar a acessibilidade digital no que diz respeito ao acesso à informação, sob as diretrizes de
+acessibilidade para conteúdo web 2.1, e a experiência do usuário cego na interação com a web
+usando o leitor de telas NonVisual Desktop Access. A análise da acessibilidade digital da homepage
+foi estudada aplicando três métodos de avaliação: (1) automática com o software Web Accessibility
+Evaluation Tool; (2) testes com usuários cegos e (3) entrevista de satisfação. Os resultados mostraram
+que a acessibilidade digital da homepage do website em estudo está comprometida nos aspectos
+perceptível, operável, compreensível e robusto. São apresentados problemas relacionados à
+usabilidade, arquitetura da informação, boas práticas de acessibilidade, proficiência no uso do NVDA,
+falta de previsibilidade e clareza, entre outros. Conclui-se que aspectos tecnológicos e humanos são
+necessários para garantir a democratização e autonomia no acesso à informação de sites de
+bibliotecas universitárias aos alunos cegos, que automaticamente atenderão outras categorias de
+usuários.
+
+Palavras-Chave: Acessibilidade digital. Biblioteca universitária. Alunos cegos. Inclusão digital.
+
+1 INTRODUÇÃO
+A definição de acessibilidade tem evoluído significativamente nas últimas décadas,
+ampliando dos elementos físicos a atitudinal e digital. No ambiente digital um marco é a
+definição do World Wide Web Consortium (W3C)2 - define acessibilidade na web, como a
+possibilidade de seu uso por pessoas com deficiência, que elas possam perceber, entender,
+navegar, interagir e contribuir para este ambiente digital. Este benefício atinge também
+outros grupos, como os idosos, crianças e pessoas sem deficiência (W3C BRASIL, 2013). Na
+literatura, os termos variam entre acessibilidade web, acessibilidade digital, acessibilidade no
+espaço digital, entre outros, mas apontam para o mesmo objetivo.
+Nesta pesquisa a acessibilidade digital é entendida como essencial para que as
+pessoas com deficiência (PcD)3 possam participar nos diferentes ambientes web. O Decreto
+5.296 de 2004 marca um grande avanço neste sentido, tornando obrigatória, a partir de
+2005, a acessibilidade nos portais e sites eletrônicos da administração pública na internet,
+para que as PcD tenham garantido o acesso às informações nesses ambientes. Além disso,
+ele, assim como várias legislações e a própria convenção, exigiu mudanças significativas de
+acessibilidade para garantir o acesso e permanência de e alunos com deficiência no ensino
+superior, fomentando assim, um sistema educacional inclusivo (BRASIL, 2004).
+As instituições de ensino e seus sistemas de bibliotecas precisam responder ao novo
+contexto de inclusão e acessibilidade, para garantir aos usuários com deficiências o direito de
+acesso à informação e ao conhecimento, previsto nas legislações e no oferecimento de
+
+2
+
+Consórcio internacional composto por empresas, instituições e o público em prol de desenvolver padrões e
+diretrizes web gratuitas e abertas, visando garantir a sua evolução e que todas as pessoas possam usufruir do
+seu valor social.
+3
+Sigla usada na Convenção sobre os Direitos das Pessoas com Deficiência, de acordo com a ONU. Todos os
+países signatários passaram a usar a sigla, inclusive o Brasil nas suas leis e políticas, a partir de 2006.
+
+
+
+produtos e serviços presenciais e virtuais inerentes a qualquer biblioteca. A biblioteca
+universitária assume-se, deste modo, como uma das principais mediadoras no contato entre
+os estudantes e os acervos de conhecimento científico, visando a construir cada vez mais
+autonomia e independência na aprendizagem (MARÇAL, 2015b).
+Desde 1996, a Biblioteca Central (BC) da Universidade Federal do Pará (UFPA), por
+meio do Espaço Braille, é uma das pioneiras na atuação da acessibilidade e inclusão dos
+usuários cegos e com baixa visão. Além disso, o website desta Biblioteca oferece uma
+diversidade de informações técnico-científicas, serviços e produtos pertinentes ao ensino,
+pesquisa e extensão da comunidade acadêmica, da qual os diversos usuários com
+deficiência, nem somente do Campus Belém, estão inseridos.
+A missão da Biblioteca Central da UFPA é de “prover e disseminar informação à
+comunidade universitária de modo presencial e em meio à rede, contribuir para a formação
+profissional e para o espírito de cidadania” (MISSÃO..., [S.d.]). Sendo assim, é imprescindível
+conhecer as barreiras de acesso à informação na web, as tecnologias assistivas e o conjunto
+de componentes necessários para garantir que o website da BC/UFPA seja acessível a todos.
+Com isso, esta pesquisa também é relevante pela contribuição que pode fornecer no
+desenvolvimento de uma política de acessibilidade digital às informações disponíveis no
+website da BC/UFPA.
+Com essa reflexão, a pergunta-problema a que se propõe responder essa pesquisa é a
+homepage do website da Biblioteca Central da UFPA atende aos requisitos de acessibilidade
+para conteúdo web do W3C, permitindo que pessoas cegas que usam o NVDA possam
+acessar as informações contidas nela?
+Dessa maneira, o objetivo geral dessa pesquisa é analisar a acessibilidade digital da
+homepage do website da Biblioteca Central da UFPA, no que diz respeito ao acesso à
+informação, tendo como parâmetros as diretrizes de acessibilidade para conteúdo web
+(WCAG) 2.1 e a experiência do usuário cego na interação com a web usando o leitor de telas
+NVDA4. Para isso, delimitaram-se os seguintes objetivos específicos: A) Identificar itens que
+comprometem a acessibilidade da homepage do website da Biblioteca Central da UFPA,
+apontados pelo avaliador automático WAVE. B) Verificar a experiência de navegação do
+4
+
+Non Visual Desktop Access [Acesso não-visual à área de trabalho], software livre e de código aberto para o
+Sistema Operacional Microsoft Windows. A sua resposta é dada por meio de sintetizador de voz integrado que
+suporta mais de 80 idiomas, permitindo que pessoas com deficiência visual acessem computadores e
+navegadores web.
+
+
+usuário cego que usa o NVDA com a homepage do website da BC/UFPA, acessando
+informações sobre os produtos e serviços disponíveis. C) Verificar a conformidade das
+diretrizes de acessibilidade para conteúdo web 2.1 de acordo com os resultados da avalição
+do WAVE e dos testes com os usuários cegos que usam o NVDA.
+2 ACESSIBILIDADE DIGITAL E ACESSO À INFORMAÇÃO EM WEBSITES DE BIBLIOTECAS
+UNIVERSITÁRIAS
+As pessoas com deficiência representam 15% da população mundial, cerca de 1
+bilhão de habitantes (OMS, 2011). De acordo com as estimativas da OMS, em 2010, 285
+milhões de pessoas, do mundo inteiro, tinham deficiência visual e destas 39 milhões eram
+cegas (PROJETO, 2013). Pesquisas feitas pela Organização Mundial da Saúde (OMS) indicam
+que em 2020 existirão no mundo 76 milhões de pessoas cegas (OTTAIANO et al, 2019). No
+Brasil, com a releitura dos dados do Censo do Instituto Brasileiro de Geografia e Estatística
+(IBGE) de 2010, o quantitativo é de 12.748.663 PcD, ou 6,7% do total de 190.755.048 pessoas
+recenseadas (IBGE, 2018). O maior quantitativo está entre as pessoas com deficiência visual,
+3,4 %, seguido da motora, 2,3%, intelectual/mental, 1,4 e auditiva, 1,1%.
+De acordo com a Lei Brasileira de Inclusão (LBI), a acessibilidade é a possibilidade e
+condição de alcance para utilização, com segurança e autonomia, de espaços, mobiliários,
+equipamentos urbanos, edificações, transportes, incluindo também a informação e
+comunicação, inclusive nos sistemas e tecnologias, bem como de outros serviços e
+instalações (BRASIL, 2015). Por acessibilidade na web, a Cartilha de Acessibilidade do W3C,
+define como a possibilidade de uso da web por pessoas com deficiência, ou seja, que elas
+possam perceber, entender, navegar, interagir e contribuir para a web. Este benefício atinge
+também outros grupos como os idosos (W3C BRASIL, 2013?).
+Nas pesquisas de Ferreira e Cianconi (2011) e Marçal (2015) voltadas a estudar a
+acessibilidade de websites de bibliotecas universitárias, são verificadas diversas barreiras que
+os usuários cegos enfrentam para acessar informações, serviços e produtos oferecidos por
+eles. Os erros mais presentes são os relacionados aos princípios de tornar as páginas
+operáveis e seus conteúdos perceptíveis. Estes estudos concluem que há muito a
+desenvolver para se assegurar níveis de excelência da acessibilidade na web, o maior desafio
+é a adoção de práticas internacionais de acessibilidade na web que permitam o acesso de
+maneira autônoma, acessível, inclusiva e de igual oportunidade.
+
+
+
+Sousa e Lazzarin (2014), tendo como foco inacessibilidade web, analisaram trabalhos
+do Encontro Nacional de Pesquisa em Ciência da Informação no período de 1994 a 2012, e os
+resultados apontam um crescimento da temática da acessibilidade em ambientes digitais em
+pesquisas brasileiras em Ciência da Informação.
+Para a LBI, dentre as barreiras que as PcD enfrentam, estão as de acesso à informação
+(BRASIL, 2015). Ela destaca também a obrigatoriedade da acessibilidade nos websites da
+internet de empresas ou de instituições do governo, indicando também que se adotem as
+diretrizes internacionais de acessibilidade. Para o W3C, as barreiras de acesso encontram-se
+perceber, operar, compreender a informação na web.
+De acordo com Sonza (2008), Dias (2006) e W3C Brasil (2018) as principais barreiras
+encontradas pelos usuários cegos são: imagens que não possuem texto alternativo; vídeos
+que não possuem descrição textual ou sonora; formulários e tabelas complexos que não
+permitem uma leitura linear e não fazem sentido; uso de CAPTCHA5 como dispositivo de
+segurança; falta de links para as principais regiões da página; navegadores e ferramentas de
+autoria que não possuem suporte de teclado para todos os comandos; páginas web com
+excessos de elementos, sem hierarquia e cheia de informações desnecessárias; documentos
+formatados que não seguem o padrão de desenvolvimento de páginas, o que pode dificultar
+a interpretação dos mesmos por leitores de tela; cor como única forma de enfatizar o texto;
+distinguir rapidamente os links num documento.
+Segundo o W3C (2018a), as Diretrizes de Acessibilidade para Conteúdos Web (WCAG)
+são recomendações para tornar o conteúdo da web mais acessível para pessoas cegas e com
+baixa visão, Surdas e com baixa audição, com limitações de movimento, incapacidade de fala,
+fotossensibilidade e pessoas com mais de uma dessas características, além de bloqueios de
+aprendizagem e limitações cognitivas, assim como pessoas idosas e sem deficiência.
+As WCAG 2.1 foram lançadas em 2018. Segundo o documento do W3C (2018a), o
+conjunto de camadas de orientação das WCAG 2.1 compõe quatro princípios, que estão no
+topo e representam a base da acessibilidade na web: perceptível, operável, compreensível e
+robusto. Em seguida, têm-se 13 diretrizes que oferecem os objetivos elementares para
+5
+
+CAPTCHA é um acrônimo da expressão "Completely Automated Public Turing test to tell Computers and
+Humans Apart": é um tipo de medida de segurança conhecido como autenticação por desafio e resposta.
+Protege contra spam e descriptografia de senhas com um teste simples que prova que você é um ser humano,
+não um computador tentando invadir uma conta protegida por senha.
+
+
+tornar o conteúdo da web acessível e 78 critérios de sucesso testáveis que possibilitam o uso
+das diretrizes onde os requisitos e os testes de conformidade são indispensáveis. Existem
+três níveis de conformidade: A (nível mínimo de acessibilidade), AA (nível elevado de
+acessibilidade) e AAA (nível elevado melhorado de acessibilidade).
+5 METODOLOGIA
+Este estudo classifica-se como um estudo de caso, que segundo Yin (2010, p. 39) é
+“uma investigação empírica que investiga um fenômeno contemporâneo em profundidade e
+em seu contexto de vida real, especialmente quando os limites entre o fenômeno e o
+contexto não são claramente evidentes”, cuja unidade de análise foi a homepage do website
+da Biblioteca Central da UFPA6, com a aplicação de três formas de avaliação: (1) automática
+com o software Web Accessibility Evaluation Tool (WAVE)7, (2) testes com usuários cegos que
+usam NVDA8 e (3) entrevista de satisfação.
+Como o website da BC/UFPA tem diversas páginas, a delimitação do escopo da
+pesquisa se restringiu à análise da acessibilidade da homepage (página inicial). Os sujeitos da
+pesquisa foram alunos de graduação e pós-graduação cegos, regularmente matriculados no
+Campus Belém da UFPA, que têm prática de internet com o uso do leitor de telas NVDA. O
+teste de acessibilidade foi realizado com quatro (4) usuários cegos, três homens e uma
+mulher. A participação dos usuários cegos no teste de acessibilidade foi um ato de respeito
+ao lema das pessoas com deficiência “Nada sobre nós sem nós”, reconhecendo que a
+participação das PcD em estudos sobre elas.
+
+6 RESULTADOS E DISCUSSÕES
+Os resultados dos testes de acessibilidade do WAVE e dos usuários cegos sobre a
+homepage do website da Biblioteca Central da UFPA mostram erros de acessibilidade
+envolvendo vários níveis de critérios de sucesso dos quatro grandes princípios que regem as
+diretrizes de acessibilidade para conteúdo web 2.1 do W3C.
+Alguns problemas de acessibilidade detectados pelo WAVE também foram
+confirmados no teste com os alunos cegos. Observa-se que uma determinada situação pode
+combinar diferentes critérios de sucesso das WCAG de distintos níveis. Alguns erros também
+6
+
+http://bc.ufpa.br/
+https://wave.webaim.org/
+8
+https://www.nvaccess.org/
+7
+
+
+
+estão relacionados à Arquitetura da Informação, usabilidade, boas práticas de acessibilidade,
+melhorias na experiência do usuário e proficiência no uso do NVDA e browser, entre outros.
+Em suma, no que se refere ao Princípio Perceptível, os erros de acessibilidade
+detectados pelo WAVE foram relacionados à falta de alternativa em texto para conteúdo não
+textual, em especial para imagens. A presença deste erro afeta o critério de sucesso 1.1.1
+Conteúdo não textual (Nível A) - todo o conteúdo não textual apresentado ao usuário, como
+por exemplo: imagens, áudios, vídeos, gráficos etc. deve conter uma alternativa textual que
+serve para uma finalidade equivalente, exceto quando for teste, CAPTCHA, imagem
+decorativa (W3C, 2018a). O WAVE apontou 35 imagens sem texto alternativo que fazem
+parte da área de novas aquisições, na qual são mostradas as capas de livros que foram
+recém-incorporadas ao acervo do Sistema de Bibliotecas. A Figura 1 exemplifica dois desses
+títulos.
+FIGURA 1: Imagens de capas de livros sem alternativa em texto conforme o WAVE.
+
+Fonte: SANTOS (2020, p. 80).
+
+Os casos de alternativas em texto podem ser desde uma simples legenda a uma
+descrição de uma imagem complexa, neste caso, há a necessidade de se utilizar um link que
+remete para uma página que contenha esta descrição (W3C, 2018a). Algumas imagens sem
+texto alternativo são também decorativas, sendo necessária a utilização de um alt nulo para
+que a página web não fique poluída sonoramente. Há imagens que tratam de informações
+que vão desde um logo às informações mais essenciais para a vida acadêmica dos usuários
+cegos, como serviços e produtos da Biblioteca Central — imagens de livros recém-adquiridos
+por ela, por exemplo. A Figura 2 mostra a área de novas aquisições, usada para teste com os
+usuários, foi solicitado a eles que citassem duas obras.
+
+
+
+FIGURA 2: Área de novas aquisições.
+
+Fonte: SANTOS (2020, p. 104)
+
+Durante a interação do teste, foi observado que todas as imagens indicadas pelo
+WAVE realmente não eram lidas pelo NVDA, passando despercebidas ou não encontradas
+como no caso da tarefa da citação das novas aquisições acima. Ainda segundo o Princípio
+Perceptível, o WAVE detectou que alguns elementos do conteúdo não foram adaptados para
+serem apresentados de distintas maneiras sem que houvesse a perda de informação ou
+entendimento, por exemplo, a falta de rótulos nos formulários. Os discentes cegos durante
+vários momentos do teste não perceberam ou ficaram confusos sobre a real funcionalidade
+dos formulários devido à falta de seus rótulos.
+Ao serem perguntados se conseguiram perceber as informações necessárias para a
+execução das tarefas e suas dificuldades neste sentido, eles responderam:
+Em algumas partes, sim, e outras, não. Nesse formulário de busca, lá na guia de
+trabalho, quando eu circulava pelo menu, eu não consegui encontrar. (Usuário A).
+Consegui parcialmente, a dificuldade foi na questão de downloads né, para verificar
+os livros, na própria guia de informações do site. (Usuário B). Sim, consegui
+perceber. (Usuário C). Mais ou menos, porque não consegui encontrar algumas
+coisas”. (Usuária D).
+
+No que se refere ao Princípio Operável, o WAVE detectou falhas em fornecer
+maneiras de ajudar os usuários a navegar por links e consequentemente localizar as
+informações. Uma imagem usada como link sem texto alternativo resulta em um link vazio,
+assim como, links que não contém texto. Com isso, a função do link não é apresentada e nem
+operada pelos usuários cegos, ou seja, eles ficam sem saber e sem acessar links de produtos
+e serviços como os localizados no carrossel do website, como observados na Figura 3. Esta
+falha impacta em perda significativa de informações para os discentes cegos.
+
+
+
+Figura 3: Link vazio.
+
+Fonte: SANTOS (2020, p. 80).
+
+Conforme o teste com os participantes cegos, a operacionalização em diversas partes
+do website foi comprovadamente afetada ou impedida, como no caso do botão de busca que
+não foi identificado e botão do download que não fora expandido, isto não atende ao critério
+de sucesso 2.1.1 Teclado (Nível A), que orienta - toda a funcionalidade do conteúdo deve ser
+operada por teclado, exceto quando não é possível.
+Foi observado também que os usuários tiveram dificuldades em operar em links de
+mesma descrição (eventos, notícias), mas que levam pra destinos diferentes, assim como
+aqueles que remetem para outras páginas, mas sem o usuário ter essa percepção e links com
+nome genérico (saiba mais). É necessário, portanto, adotar textos que identifiquem a
+finalidade do link e façam sentido fora do contexto. Isso ajudará os estudantes cegos em
+todas as suas formas de navegação: pelo Tab, letra K, por setas e por listas de links, como é o
+caso do NVDA, que fornece uma lista de elementos do website (acionando as teclas Insert +
+F7).
+Os usuários cegos não conseguiram operar por meio da navegação, com o teclado,
+em várias partes do site e não obtiveram um feedback da abertura ou não de links ou
+quando eles abriam em uma nova página. Além disso, o sítio eletrônico não fora construído
+para fornecer formas mais ágeis de navegar, como ignorar blocos de informação adequados,
+retirar informações repetidas a cada página nova e fornecer formas completas de localização
+na página. Com isso, a operação por teclado ficava demorada, cansativa e confusa.
+De acordo com Vidotti e Sanches (2004), a Arquitetura da Informação (AI) em
+websites é responsável pela estruturação de conteúdos, pelas disposições informacionais,
+com o foco de satisfazer as necessidades de navegabilidade, busca e acesso dos usuários. O
+sistema de navegação é um dos itens da AI que deve fazer parte do projeto de planejamento
+de um website, ele bem organizado permite ao usuário: navegar de um ponto ao outro com
+eficácia e rapidez. Em websites/portais de bibliotecas digitais a AI é basilar para os usuários
+
+
+
+se localizarem e identificarem as informações ou serviços que almejem, como os
+documentos digitalizados ou links referenciais, por exemplo.
+As respostas sobre se as informações estavam acessíveis por teclado:
+Parcialmente, porque infelizmente não é intuitiva, os links para você acessar com o
+Tab e com as setinhas pelo NVDA eles ficam muito confusos, às vezes tem links que
+nem estão nas descrições do próprio site, então fica bem difícil de você navegar, a
+não ser um usuário como eu experiente em NVDA para conseguir tentar captar
+algumas informações, se for iniciante vai ser bem difícil. (Usuário B).
+
+Apesar das dificuldades ocasionadas por erros de acessibilidade, algumas dificuldades
+de navegação estão atreladas à proficiência no uso do NVDA. Isso acaba causando uma
+navegação mais demorada por não oferecerem formas alternativas de busca da informação
+que esteja programaticamente acessível.
+Quanto ao Princípio Compreensível, tanto o teste WAVE, quanto os usuários
+identificaram barreiras na compreensão da interface, conteúdo e informação da página web.
+Um exemplo contundente deste caso foram os formulários identificados pelo WAVE sem
+rótulos, causando confusão na compreensão e navegação indevida. A falta de instruções
+apropriadas para identificar os controles de formulários, ocasiona a não leitura pelos leitores
+de tela dessas informações Foi observado que os usuários utilizaram um formulário
+pensando que fosse outro. A Figura 4 mostra esse formulário.
+FIGURA 4: Etiquetas ausentes na área de login do administrador no website da BC/UFPA.
+
+Fonte: SANTOS (2020, p. 90)
+
+Apesar das etiquetas dos formulários da Figura 4 estarem disponíveis visualmente
+para pessoas videntes, ao navegar por elas com o leitor de telas NVDA 2019.2.1, ele leu da
+seguinte maneira: no campo do login: “Edição exigido entrada inválida, em branco”, ele não
+
+
+
+leu o your user name; no campo da senha: “Edição protegido exigido entrada inválido, em
+branco”, não leu também a frase que visualmente aparece your password. Ao clicar para
+recuperar a senha, ele leu “Edição exigido entrada inválida, em branco”, não leu your email.
+Portanto, é necessário identificar o campo, ou seja, utilizar o atributo label para associar as
+etiquetas de texto aos campos de entrada.
+Este erro de acessibilidade atinge os princípios perceptível, operável e compreensível,
+pois a pessoa cega ao se deparar com formulários que não a possibilitam perceber que
+existem as etiquetas e as instruções que são fornecidas para compreender do que se trata o
+campo de formulário e operar dando entrada com conteúdo necessário para se realizar uma
+atividade de logar. Além disso, os formulários estão escritos em língua inglesa, é necessário
+estar escrito em língua portuguesa para facilitar a compreensão dos comandos, atendendo
+assim o Princípio Compreensível, Diretriz 3.1 Legível, no qual conteúdo do texto é legível e
+compreensível.
+Ao perguntar para os usuários se tiveram alguma dificuldade na compreensão da
+informação disponibilizada ou na utilização dos serviços prestados pelo site, eles
+responderam:
+Sim, tive sim, a partir das informações que estavam lá em inglês, ficava difícil para
+gente ter esse entendimento e até mesmo o nome, por exemplo, slide, ele ler como
+se escreve, ele não pronuncia, a gente geralmente escreve de uma forma e se
+pronuncia de outra. (Usuário C).
+
+A opinião dos usuários é fundamental para uma nova perspectiva das barreiras e
+questões de acessibilidade. Muitas delas transcendem as WCAG, como a melhora da
+experiência do usuário do sistema. Há casos dentro da acessibilidade que não há um critério
+específico determinado, mas que requerem um conjunto de boas práticas de outras áreas
+relacionadas à acessibilidade que devem ser consideradas.
+Consoante ao Princípio Robusto, o WAVE não apontou diretamente um critério de
+sucesso específico desse grupo. Mesmo porque os critérios de sucesso 4.1.1 Análise (A) e o
+4.1.2 Nome, Função e Valor (A) são boas práticas a se seguir e qualquer infração efetuada em
+critérios técnicos anteriores automaticamente infringem esses também. O WAVE e o teste de
+usuários detectaram incongruências entre o conteúdo e o leitor de telas em estudo, NVDA,
+geralmente de natureza programática, não sendo robusto o suficiente para suportar as
+tecnologias assistivas.
+
+
+
+A informação ou conteúdo não está sendo comunicado por meio dos agentes de
+usuários, em especial as tecnologias assistivas, que possibilitam obter, apresentar e interagir
+com conteúdo da web, isso se dá pela inapropriação do código ou marcação que define a
+estrutura do conteúdo, a apresentação e as interações. De acordo com Freitas (2019), muitos
+desenvolvedores
+
+e
+
+conteudistas
+
+não
+
+implementam
+
+acessibilidade
+
+por
+
+mero
+
+desconhecimento. Ele afirma que as linguagens de HTML, XHTML e CSS são bem usuais,
+todavia são usadas de forma incompatível com os padrões do W3C.
+Quando solicitado para os usuários marcarem o que acharam do sistema de
+navegação do website, um respondeu que era funcional (Usuário A), dois (usuários B e C)
+apontaram que era de “difícil navegação” e a usuária D respondeu “Mediana”.
+A Biblioteca Central assim como o Sistema de Bibliotecas da UFPA precisam se
+conscientizar e se empenhar para disponibilizar de forma acessível às informações para os
+usuários PcD e sem deficiências. A participação deles é indispensável para a construção da
+acessibilidade digital, um direito previsto em lei. A seguir a opinião, sugestões, sentimentos
+ou necessidades dos usuários cegos sobre a acessibilidade da página inicial do website da
+BC/UFPA.
+O site já existe, a acessibilidade material com o leitor de telas NVDA já existe
+também, capacitação técnica para isso também já existe, eu inclusive prestei isso.
+Mas infelizmente o que falta é acessibilidade atitudinal do ser humano como em
+qualquer área da humanidade, então falta que as pessoas tenham realmente
+atitude para fazer um site acessível para todos respeitando os limites e as
+peculiaridades de pessoas. (Usuário B).
+
+A universidade, as bibliotecas e a sociedade precisam internalizar o que o usuário B,
+eloquentemente, citou que faltava para a acessibilidade no site da BC/UFPA, “acessibilidade
+atitudinal”. É imprescindível que haja mudança de atitude, de cultura, de visão sobre as PcD.
+Não convém apenas corrigir e adotar alguns elementos acessíveis para dizer que cumpriu a
+lei. A contribuição para a universalidade da web e para os princípios de liberdade, autonomia
+e igualdade das PcD passa pela acessibilidade atitudinal.
+
+7 CONSIDERAÇÕES FINAIS
+A pesquisa atingiu os objetivos propostos. O primeiro foi a identificação de itens que
+comprometem a acessibilidade da homepage do website da Biblioteca Central da UFPA,
+apontados pelo avaliador WAVE. Foi possível analisar a categoria “Erros” de acessibilidade na
+página inicial apontados pelo software que também referenciou os critérios de sucesso das
+
+
+WCAG. É apontado que o site não oferece recursos adequados de acessibilidade devido à
+falta de uma estrutura hierárquica de conteúdo adequada. Não atende aos elementos do
+nível A, considerado o nível mínimo de acessibilidade digital. Isso é possível com a HTML, por
+ser linguagem de marcação que hierarquiza o conteúdo e dá significado a ele, por meio de
+seus elementos: títulos, tabelas, listas, parágrafos, textos e formulários.
+Foi verificada também as formas de navegação dos usuários cegos de graduação e
+pós-graduação, suas proficiências no uso do leitor de telas, seus bloqueios, anseios e
+sentimentos — como ficar confuso, frustrado, impaciente, desorientado, realizado, feliz ao
+navegar diante de uma página web que pode facilitar ou dificultar e até mesmo impossibilitar
+o acesso à informação.
+Foi constatada a conformidade das diretrizes de acessibilidade para conteúdo web 2.1
+de acordo com os resultados da avaliação do WAVE e dos testes com os usuários. A falta de
+adoção de critérios de sucesso de diversos níveis e princípios foi examinada nos dois testes
+realizados.
+O teste automático é algo relevante para a análise do código, se ele está bem
+construído e se respeita o que apregoa os padrões web e as diretrizes internacionais de
+acessibilidade. Entretanto, complementar a análise com a participação dos usuários cegos no
+teste de acessibilidade foi fundamental, pois pôde-se respeitar o lema das pessoas com
+deficiência “Nada sobre nós sem nós”. Muitas barreiras de acesso à informação em
+ambientes digitais não são detectadas por softwares ou por pessoas que enxergam, mas sim
+pelas próprias pessoas que tem a deficiência.
+Sendo assim, do ponto de vista dos requisitos do W3C, a homepage do website da
+BC/UFPA não está em conformidade com os padrões do W3C, comprometendo com isso não
+somente a percepção, navegação, compreensão e acesso de pessoas cegas às informações
+da página inicial do website dessa biblioteca, mas de todas as pessoas que tem algum tipo de
+deficiência e pessoas com limitações temporárias.
+Recomenda-se também, para futuras pesquisas, que sejam analisados todos os
+produtos, serviços e as plataformas digitais disponibilizados no site da Biblioteca Central da
+UFPA ou em outras bibliotecas universitárias, como os Repositórios, o FICAT 2.0 – Módulo de
+Elaboração de Ficha Catalográfica, o Guia de Normalização de Trabalhos Acadêmicos. Assim
+como, livros, artigos, dissertações e teses, que são de grande interesse e fomentam novas
+pesquisas na comunidade acadêmica.

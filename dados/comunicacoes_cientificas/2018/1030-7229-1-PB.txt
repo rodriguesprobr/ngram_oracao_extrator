@@ -1,0 +1,679 @@
+
+INTERNET DAS COISAS E PRIVACIDADE: UMA REVISÃO SISTEMÁTICA DA LITERATURA
+
+Modalidade da Apresentação: Comunicação Oral
+Resumo: A Internet das Coisas (IoT) já transformou a sociedade, atingindo indústrias, cidades
+e lares e o valor econômico dessa transformação é estimado em trilhões de dólares.
+Juntamente com os potenciais benefícios dos dispositivos inteligentes interconectados, no
+ambiente IoT, aumentam o risco e o potencial de abuso ao incorporar detecção e inteligência
+em cada um dos dispositivos conectados. Assim, um dos principais problemas com o crescente
+número de dispositivos IoT é o aumento da complexidade para operá-los de forma segura, a
+fim de preservar a privacidade dos usuários. Dessa forma, este artigo buscou, por meio de
+uma revisão sistemática da literatura, responder a este problema com uma análise de artigos
+que abordem os métodos descritos para a garantia da privacidade dos usuários na IoT. Para
+isso, foram selecionados artigos a partir do ano de 2010, das bases Web of Science, Scopus e
+Ebsco e, como resultado, observa-se que a proteção dos dados pessoais, o comportamento
+do usuário, os aspectos legais e as formas de classificação da privacidade foram os temas mais
+citados. Percebe-se, assim, que são necessárias soluções que considerem esses temas de
+forma conjunta, não somente por meio de tecnologias, mas também de legislações e,
+principalmente, do empoderamento do usuário.
+Palavras-Chave: Internet das coisas; Privacidade; Segurança da Informação.
+
+
+1 INTRODUÇÃO
+O avanço tecnológico e a revolução informacional, ocorrida nos últimos anos,
+proporcionaram um ambiente ideal para a análise e cruzamento de dados. Porém, em uma
+direção contrária, a privacidade do indivíduo vem sendo continuamente violada,
+principalmente quando se trata da proteção dos seus dados pessoais em questões
+relacionadas ao consumo. Essa revolução informacional é marcada principalmente por três
+fenômenos: convergência da base tecnológica, dinâmica da indústria e o crescimento e
+expansão da internet (BARRETO JUNIOR, 2009).
+Warren e Brandeis (1890) já entendiam, no século XIX, que a privacidade é o direito ou
+proteção que os indivíduos devem ter sobre a pessoa e a propriedade. Os autores mencionam
+que a vida privada e doméstica haviam sido invadidas pelas fotografias instantâneas e eventos
+jornalísticos, de modo que o que antes era sussurrado na intimidade de um closet, passaria a
+ser dito nas coberturas das casas. Nos dias atuais, a tecnologia, cada vez mais, impõe essas
+preocupações na sociedade moderna, de modo que esses riscos se ampliam e se tornam mais
+complexos.
+Já o termo “Internet of things” (IoT), ou “Internet das Coisas”, surgiu em 1999 e foi
+introduzido por Kevin Ashton, co-fundador e diretor executivo do MIT Auto-ID Centre
+(SUNDMAEKER; GUILLEMIN; FRIES, 2010). Segundo os autores, o termo Auto-ID refere-se a
+qualquer classe de tecnologias de identificação usadas na indústria com o intuito de
+
+automatizar, reduzir erros e aumentar a eficiência. Em 2003, o principal foco Auto-ID foi a
+tecnologia de identificação por rádiofrequência (RFID).
+Thierer (2015) define IoT como uma geração de objetos que permitem convergir
+atividades e exercem uma função de maneira sensitiva, automatizada e integrada, não
+limitando a internet somente ao uso de computadores, mas sim de qualquer tipo de objeto –
+carros, geladeiras, relógios, óculos dentre outros. Percebe-se que esse novo conceito resulta
+em registro e compartilhamento de dados comportamentais e de costumes, e, dessa forma,
+pode-se esperar que a privacidade na IoT pode abranger diferentes aspectos: técnicos, legais,
+comportamentais e de organização.
+É nesta lacuna que surge a motivação deste estudo: quais são os métodos, apontados
+na literatura científica internacional, utilizados para garantir a privacidade na internet das
+coisas? O objetivo deste artigo é descrever esses métodos em pesquisas que abordaram uma
+conexão entre os dois temas: IoT e privacidade. Para isso, foi feita uma revisão sistemática da
+literatura em três bases de dados científicas - Scopus, Ebsco e Web of Science – em trabalhos
+publicados a partir de 2011 (ano que foi estabelecido um aumento substancial nas publicações
+científicas), nos idiomas português ou inglês. Especificamente, buscou-se: i) identificar
+estudos que façam uma abordagem conjunta dos dois temas; ii) identificar os focos temáticos
+dos estudos; iii) analisar métodos indicados para garantir a privacidade dos usuários na IoT.
+Justifica-se o estudo realizado frente a necessidade acadêmica de descrever o estado
+da arte sobre o binômio privacidade e IoT e ainda propiciar novas discussões. O assunto é foco
+de investimento de trilhões de dólares e envolve transformação de indústrias, cidades e
+rotinas das pessoas em suas casas (WEBER, 2015). Além disso, a preservação da privacidade
+será um dos maiores desafios visto que bilhões de dispositivos serão implantados para coletar
+informações refinadas do ambiente para compartilhá-las com outros dispositivos (LOPEZ et
+al., 2017).
+Na sequência, apresentam-se as seções de referencial teórico, metodologia,
+resultados e as considerações finais seguida das referências.
+2 REFERENCIAL TEÓRICO
+Nesta revisão da literatura buscou-se organizar os conceitos acerca dos temas IoT e
+privacidade.
+
+
+2.1 Internet das coisas
+A Internet das Coisas (IoT) pode ser considerada como a rede mundial de objetos
+interligados por meio de endereço exclusivo, com base em protocolos de comunicação padrão.
+Isso se dá por meio da coleta, do processamento e da análise de dados gerados pelos sensores
+da IoT, que se integrarão por meio dessa rede (Albertin & de Moura Albertin, 2017). O conceito
+de “coisa” tem evoluído junto à tecnologia, mas, o principal objetivo da IoT é obter informações
+úteis para sistemas computadorizados sem a intervenção humana (MISUGI; OBLADEN; FREITAS,
+2016). Para isso, é necessária uma evolução na rede de objetos interconectados que passam a
+colher informações do ambiente (sensoriamento) e interagir com o mundo físico (atuação,
+comando e controle). Também são necessários novos padrões tecnológicos para a Internet que
+permitam serviços de transferência, análises e usos da informação (WEBER, 2015).
+A IoT tem transformado indústrias, cidades e lares sendo possível estimar que esta
+transformação envolve trilhões de dólares relacionado à produtividade nos negócios (WEBER,
+2015). Juntamente com os potenciais benefícios dos dispositivos conectados, aumentam os
+riscos e o potenciais de vulnerabilidade de dados pessoais. Um dos principais problemas com o
+crescente número de dispositivos IoT é a maior complexidade necessária para operá-los de
+forma segura e segura (MISUGI et al., 2016).
+Esta complexidade cria novos desafios no âmbito da privacidade e usabilidade e este
+ambiente provoca tendências ou percepções de uso negativas. Busca-se determinar o melhor
+caminho para que os indivíduos gerenciem a privacidade de seus dados pessoais ao usar
+dispositivos. Para demonstrar a abrangência do tema, uma classificação das “coisas” em quatro
+áreas de aplicação e seus usuários finais é apresentada como padrão (FU et al., 2017):
+•
+
+Casa: composto pela relação de saúde, entretenimento e eletrodomésticos.
+
+•
+
+Transporte: representado pela logística.
+
+•
+
+Comunidade: composta pelo meio ambiente de negócios.
+
+•
+
+Nacional: sendo os usuários serviços públicos.
+
+A IoT prevê a interconexão e a cooperação integrada de elementos inteligentes dentro
+de um ambiente de IoT, possibilitadas pela infraestrutura atual e futura da Internet. A IoT é,
+portanto, a evolução da internet, permitindo muitas novas aplicações que irão afetar o cotidiano
+das pessoas, gerar novos negócios e tornar, por exemplo, as cidades e os transportes mais
+inteligentes. Percebe-se, então, que o desenvolvimento da internet das coisas é crescente e
+
+
+
+promissor e pode ser considerado indutor de inovações. Porém, ele traz ameaças à privacidade
+das pessoas, próximo tópico abordado neste referencial teórico.
+2.2 Privacidade
+Para o melhor entendimento de como a inovação tecnológica pode se tornar uma
+ameaça, é necessário compreender o conceito de privacidade que é muito amplo (SOLOVE,
+2008). Segundo o autor, a privacidade abrange liberdade de pensamento, controle sobre o
+corpo, solidão, controle sobre informações pessoais, liberdade de vigilância, proteção da
+reputação dentre outros. Ressalta-se uma classificação de privacidade em seis definições
+diferentes: direito de ficar sozinho; acesso limitado ao “eu”; segredo; controle sobre as
+informações pessoais; personalidade e intimidade (SOLOVE, 2008).
+Porém, Habermas (1987) mostra um modelo de sociedade moderna que permite
+conceitualizar a relação entre o privado e o público. Segundo o autor, a vida é composta pela
+esfera privada, representada pela família e intimidade, e a esfera pública que permite que
+pessoas privadas participem da cultura por meio de redes comunicativas e ajudem a formar
+uma opinião pública (HABERMAS, 1987, p.319). Essa distinção entre as esferas, pública e
+privada, é importante para distinguir entre o que deve ser mostrado e o que deve ser escondido
+(ARENDT, 1958, p.72).
+Schoeman (1984) categoriza a privacidade como: reivindicação, direito; a medida do
+controle de um indivíduo sobre informações pessoais, intimidade e visibilidade; estado ou
+condição de acesso limitado a um indivíduo. Solove (2004) reforça a definição relacionada com
+o controle de informações pessoais com outras definições de privacidade: proteção do Big
+Brother; segredo; não invasão; controle sobre o uso da informação.
+Segundo a teoria do controle da privacidade, a privacidade refere-se ao controle de
+informações sobre si mesmo e sobre o acesso a assuntos pessoais (TAVANI, 2008, p.142). Essa
+definição é corroborada por Westin (1967, p.7) que define privacidade como o direito de
+indivíduos, grupos ou instituições determinarem como, quando e em que medida as
+informações sobre eles serão comunicadas aos outros.
+Silveira, Avelino e Souza (2016) concluem que o mercado de dados pessoais já é a
+principal fonte de receita em algumas partes da economia mundial. Os autores citam que o
+direito à privacidade será o principal limitador à expansão desse mercado, sendo que a
+transparência completa do cotidiano das pessoas tem sido buscada pelas forças do mercado.
+
+
+Além disso, o interesse de vigilância por parte do Estado também busca restringir o direito à
+privacidade.
+Dessa forma, o desenvolvimento da IoT deve seguir os princípios básicos de proteção da
+privacidade pessoal, por meio de leis, modelos de proteção à privacidade, regulamentações e
+tecnologias para garantir a inviolabilidade da privacidade pessoal, removendo, assim,
+obstáculos e barreiras para as suas aplicações (ZHANG; YE, 2010).
+3 METODOLOGIA
+A metodologia do presente estudo foi dividida em 2 etapas. A primeira consiste em
+aplicar técnicas de Cientometria e a segunda aborda a Revisão Sistemática da Literatura.
+3.1 Cientometria
+Segundo Freitas (2008), a bibliometria é um método usado para analisar e quantificar a
+bibliografia. Já a cientometria, segundo Purcell (2016), proporciona melhoria da organização
+científica e do planejamento racional da ciência. Essa é definida como o estudo da mensuração
+e quantificação do progresso científico, tendo potencial de aplicação, em instituições de
+pesquisas, do conhecimento com o objetivo de implementar diferentes formas de apoio ao
+desenvolvimento científico e tecnológico.
+Dessa forma, a fim de utilizar outra metodologia e comprovar a validade do mapa
+empírico cognitivo de relacionamentos conceituais, foi utilizada a ferramenta VOSviewer, onde
+a associação se dá através de modelos semi-logs com análise de regressão e aparece na forma
+logarítmica (RODRIGUES; GODOY VIEIRA, 2016).
+3.2 Revisão Sistemática da Literatura
+O presente estudo baseia-se no modelo de revisão sistemática da literatura (RSL)
+proposto por Kitchenham (2004) que basicamente divide-se em três etapas: o planejamento da
+revisão, a condução da revisão e a análise dos resultados.
+Na fase de planejamento foi estabelecido o protocolo para a execução da RSL que seguiu
+as seguintes etapas: a descrição dos objetivos, a elaboração da questão de pesquisa, descrição
+da estratégia de busca e a adoção dos critérios para inclusão/exclusão dos artigos.
+O objetivo deste artigo é descrever estudos que abordaram relação entre os dois temas:
+IoT e privacidade. Para isso, foi feita uma revisão sistemática da literatura em três bases de
+
+dados científicas - Scopus, Ebsco e Web of Science – em trabalhos publicados a partir de 2011
+(ano que foi estabelecido um aumento substancial nas publicações científicas), nos idiomas
+português ou inglês com o intuito de responder à seguinte pergunta: quais são os as relações
+apresentadas entre privacidade na internet das coisas, apontados na literatura internacional?
+Com relação à estratégia de busca, o presente estudo baseia-se nos seguintes critérios:
+i) as bases de dados utilizadas no trabalho foram: Web of Science, Scopus e Ebsco; ii) elaboração
+da string de pesquisa: foi elaborada uma string que continha as palavras “privacidade” e
+“internet das coisas”. Esses termos foram traduzidos para a língua inglesa e resultou no
+seguinte: TITLE (("privacy" OR "privacidade") AND ("internet of things" OR "internet das
+coisas" OR "IOT")).
+Os critérios para inclusão e exclusão de trabalhos foram: i) para inclusão dos estudos:
+as publicações devem estar disponíveis na Web, especificamente nas bases selecionadas,
+abordando estudos sobre privacidade na internet das coisas e respondendo a qualquer uma das
+questões de pesquisa. Além disso, os artigos devem ter a sua data de publicação a partir de
+2011. ii) para exclusão dos estudos: trabalhos duplicados, que não abordam o tema necessário,
+não respondam a nenhuma das questões de pesquisa ou possuem o ano de publicação anterior
+ao ano de 2011.
+Após a recuperação dos estudos primários por meio da string de busca, os trabalhos
+foram organizados na ferramenta ENDNOTE X7 para facilitar a separação e o rastreamento de
+cada uma das fases e critérios de inclusão/exclusão.
+Sendo assim, foram encontrados 404 estudos após a busca inicial nas bases. Após a
+remoção dos duplicados, obteve-se um total de 285 trabalhos. Destes, 117 não estavam
+disponíveis gratuitamente na Web e não foram recuperados. Dos 168 artigos restantes, 81 deles
+foram removidos após a análise dos títulos. Os 87 restantes tiveram a leitura dos seus resumos
+e essa fase resultou em 46 trabalhos conforme mostrado na Figura 1.
+
+
+Figura 1 – Processo de recuperação e pré-seleção
+
+Fonte: Elaborado pelos autores - 2018
+
+Após as fases de recuperação e pré-seleção, os artigos foram analisados por meio de
+uma leitura completa do seu conteúdo. Assim, os 46 trabalhos selecionados na fase anterior
+foram selecionados.
+4 RESULTADOS E DISCUSSÕES
+Os resultados foram apresentados em duas etapas, a cientometria e bibliometria.
+4.1 Definição de clusters e mapa de relacionamento entre entidades conceituais
+Para corroborar com os filtros da revisão sistemática da literatura, os 87 artigos
+selecionados para a fase de análise de títulos foram analisados. Os construtos privacidade e IoT
+que foram recuperados por meio da string de busca detalhada no capítulo de metodologia são
+exibidos em destaque no mapa de densidade. Dessa forma, é possível perceber graficamente a
+força interna dos vínculos de palavras-chave que compõem a rede temática (Figura 2).
+
+
+Figura 2 – Mapa de densidade e relacionamento
+
+Fonte: Elaborado pelos autores
+
+Segundo Choi (2005), a centralidade permite o uso de medidas para entender estruturas
+grupais, definindo a importância do tema no desenvolvimento e medindo o grau de interação
+com outras redes temáticas. Já a densidade de Callon descreve o grau de coesão interna,
+exprimindo a força interna dos vínculos (NALIMOV, 2016). Estas duas medidas permitem
+construir o Diagrama Estratégico da Rede Temática, um espaço bidimensional composto de
+quadrantes em que se distribuem os diversos temas (COBO; HERRERA, 2016).
+Ao analisar a força de ligação entre os diversos componentes do cluster, que surge a
+partir das pesquisas bibliográficas realizadas, nota-se claramente, na Figura 2, o destaque dos
+termos “Segurança” e “Privacidade”. Este detalhe corrobora com a intenção inicial do artigo de
+verificar a convergência destes termos com IoT, entretanto, não é possível identificar, somente
+por meio do mapa de relacionamento, nos construtos “Segurança” e “Privacidade”, os aspectos
+meramente técnicos e distingui-los dos aspectos sociais. Dessa forma, o presente estudo utilizou
+a leitura individual das publicações selecionadas no protocolo de revisão sistemática da
+literatura.
+4.2 Revisão sistemática da literatura
+Em relação ao ano de publicação, a revisão sistemática da literatura mostra uma
+concentração de estudos após o ano de 2014, conforme a Figura 3:
+
+
+Figura 3 – Distribuição dos 46 estudos por ano de publicação
+12
+
+11
+
+11
+
+2016
+
+2017
+
+11
+
+10
+8
+6
+
+6
+
+4
+
+3
+2
+
+2
+0
+
+1
+2010
+
+1
+2011
+
+2012
+
+2013
+
+2014
+
+2015
+
+Fonte: Dados da pesquisa
+
+A distribuição dos 46 artigos selecionados por bases pesquisadas mostra que a grande
+maioria, 40 deles, foram encontrados na base Scopus. A base Web of Science totalizou 21 artigos
+e a base Ebsco somente 7 trabalhos. A soma total supera a quantidade de 46 trabalhos porque
+muitos deles foram encontrados em mais de uma base e foram removidos posteriormente
+(Figura 4).
+Figura 4 – Distribuição dos 46 estudos por base de pesquisa
+
+7
+21
+
+40
+
+Web of Science
+
+Scopus
+
+Ebsco
+
+Fonte: Dados da pesquisa
+
+Em relação ao foco do estudo, os 46 artigos são descritos e categorizados abaixo, no
+Quadro 1, em ordem cronológica:
+QUADRO 1: Os principais focos temáticos dos 46 estudos selecionados
+Nº
+
+REFERÊNCIA
+
+1
+2
+3
+4
+5
+
+Weber (2010)
+Hu, Zhang e Wen (2011)
+Liang e Peiji (2011)
+Tao e Peiran (2011)
+Elkhodr, Shahrestani e Cheung (2012)
+
+FOCO TEMÁTICO DO ESTUDO
+Aspectos legais
+Proteção dos dados dos usuários
+Proteção dos dados dos usuários
+Classificação de privacidade
+Proteção dos dados dos usuários
+
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+
+Ukil et al. (2012)
+Alcaide et al. (2013)
+Henze et al. (2013)
+Lu et al. (2014)
+Sun et al. (2014)
+Ukil, Bandyopadhyay e Pal (2014)
+Wong e Kim (2014)
+Ziegeldorf, Morchon e Wehrle (2014)
+Funke et al. (2015)
+Lu et al. (2015)
+Samani, Ghenniwa e Wahaishi (2015)
+Sanchez-Alcon, Lopez-Santidrian e Martinez (2015)
+Schurgot, Shinberg e Greenwald (2015)
+Smith (2015)
+Ukil, Bandyopadhyay e Pal (2015)
+Vasilomanolakis et al. (2015)
+Weber (2015)
+Weinberg (2015)
+Zhou e Piramuthu (2015)
+Bailey (2016)
+Bertino (2016)
+Caron et al. (2016)
+Harris, Sundaram e Kravets (2016)
+Hsu e Lin (2016)
+Malina et al. (2016)
+Mehotra et al. (2016)
+Misugi, de Almeida Freitas e Carlos Efing (2016)
+Strazdins e Wang (2016)
+Suryani, Sulistyo e Widyawan (2016)
+Williams, Nurse e Creese (2016)
+
+Proteção dos dados dos usuários
+Proteção dos dados dos usuários
+Proteção dos dados dos usuários
+Classificação de privacidade
+Proteção dos dados dos usuários
+Gerenciamento da privacidade
+Proteção dos dados dos usuários
+Desafios da privacidade
+Políticas de privacidade
+Classificação de privacidade
+Framework de privacidade
+Proteção dos dados dos usuários
+Proteção dos dados dos usuários
+Prós e contras da privacidade
+Proteção dos dados dos usuários
+Análise de arquitetura de IoT
+Aspectos legais
+Proteção dos dados dos usuários
+Personalização da privacidade
+Comportamento do usuário
+Proteção dos dados dos usuários
+Aspectos legais
+Proteção dos dados dos usuários
+Comportamento do usuário
+Proteção dos dados dos usuários
+Proteção dos dados dos usuários
+Dimensões da privacidade
+Desafios da privacidade
+Classificação de privacidade
+Comportamento do usuário
+Comportamento dos usuários, aspectos
+Chamberlain et al. (2017)
+legais e proteção de dados pessoais
+Conoscenti, Vetro e De Martin (2017)
+Proteção dos dados dos usuários
+Concoran (2017)
+Framework de privacidade
+Jayaraman et al. (2017)
+Proteção dos dados dos usuários
+Lee e Kodsa (2017)
+Comportamento do usuário
+Lopez et al. (2017)
+Desafios da privacidade
+Madaan, Ahad e Sastry (2017)
+Proteção dos dados dos usuários
+O’Connor et al. (2017)
+Proteção dos dados dos usuários
+Segu (2017)
+Proteção dos dados dos usuários
+Tran (2017)
+Aspectos legais
+Zhou et al. (2017)
+Proteção dos dados dos usuários
+Fonte: Dados da Pesquisa
+
+No Quadro 1 é possível observar que 24 estudos, de um total de 46 selecionados,
+possuem um enfoque na questão de proteção dos dados dos usuários. Nestes, a grande maioria
+trata de questões técnicas como criptografia de dados, algoritmos, protocolos de autenticação
+e técnicas de pseudônimos como formas de manter essa proteção (Quadro 2).
+
+
+QUADRO 2: Os métodos citados para a proteção dos dados dos usuários na IoT
+Nº
+
+REFERÊNCIA
+
+1
+2
+3
+
+Hu, Zhang e Wen (2011)
+Liang e Peiji (2011)
+Elkhodr, Shahrestani e
+Cheung (2012)
+Ukil et al. (2012)
+Alcaide et al. (2013)
+
+4
+5
+6
+
+Henze et al. (2013)
+
+7
+8
+9
+
+Sun et al. (2014)
+Wong e Kim (2014)
+
+10
+
+Schurgot, Shinberg e
+Greenwald (2015)
+Ukil, Bandyopadhyay e Pal
+(2015)
+
+11
+12
+
+Sanchez-Alcon, LopezSantidrian e Martinez (2015)
+
+Weinberg (2015)
+
+13
+14
+
+Bertino (2016)
+
+15
+16
+17
+
+Malina et al. (2016)
+Mehotra et al. (2016)
+
+18
+
+Conoscenti, Vetro e De Martin
+(2017)
+Jayaraman et al. (2017)
+
+19
+21
+22
+23
+24
+
+Harris, Sundaram e Kravets
+(2016)
+
+Chamberlain et al. (2017)
+
+Madaan, Ahad e Sastry (2017)
+O’Connor et al. (2017)
+Segu (2017)
+Zhou et al. (2017)
+
+MÉTODO ABORDADO PARA PROTEÇÃO DOS DADOS
+Autenticação com o uso de identidades virtuais
+Algoritmo de proteção dos dados
+Não cita métodos. Alerta sobre o perigo do rastreamento que já
+existe na computação móvel e pode ser herdada pela IoT
+Mascaramento de dados por método similar à criptografia
+Protocolo de autenticação anônimo e descentralizado
+Cita o UPECSI, um sistema de controle de privacidade baseados
+em serviços na nuvem
+Algoritmo de homomorfismo
+Protocolo de coleta de dados de autoconsciência
+Não cita um método específico. Mostra que a combinação das
+áreas empresarial, jurídica e tecnológica podem oferecer as
+melhores soluções
+Criptografia dos dados
+Propõe uma solução DPA (Dynamic Privacy Analizer)
+Também não cita um método específico. Foca no dilema entre
+conveniência e privacidade
+Criptografia dos dados e segurança de aplicativos
+Apresenta o Lamina, um sistema para prover privacidade
+baseado em criptografia e mecanismos de mudanças de
+endereços MAC
+Criptografia dos dados
+Criptografia dos dados
+Não cita um método específico. Fala sobre proteção dos dados,
+comportamento dos usuários e aspectos legais
+Propõe um sistema distribuído ponto-a-ponto
+Criptografia dos dados
+Não apresenta método. Os autores discutem a ameaça à
+privacidade por meio do link de informações
+Consentimento dos usuários (eConsent)
+Consentimento dos usuários
+Criptografia dos dados
+Fonte: Dados da Pesquisa
+
+Porém, 5 dos trabalhos selecionados focam na questão legal sobre a privacidade na IoT
+(WEBER, 2010; WEBER, 2015; CARON et al., 2016; CHAMBERLAIN et al., 2017; TRAN, 2017).
+Estes pesquisadores citam a importância de uma legislação específica para garantir a
+privacidade das pessoas e afirmam que questões técnicas não são suficientes para tal se
+abordadas de forma isolada. As abordagens jurídicas precisam considerar diferenças na
+legislação sobre questões de comunicação e controle relacionadas às preocupações da IoT.
+Em relação ao comportamento do usuário, o estudo encontrou 5 artigos (BAILEY, 2016;
+HSU; LIN, 2016; WILLIAMS, NURSE; CREESE, 2016; CHAMBERLAIN et al., 2017; LEE; KODSA,
+2017). Estes artigos demonstram que o comportamento e atitude do usuário em um ambiente
+
+
+de IoT tem reflexos diretos no aspecto privacidade e pesquisas de opinião mostram que os
+indivíduos afirmam valorizar a privacidade. Sendo assim, compreender o que as pessoas pensam
+sobre a tecnologia, sua vontade de adotá-la e seus desafios em mantê-la precisam ser uma parte
+crítica da pesquisa e da política da IoT.
+Outros 4 estudos focam na questão da classificação da privacidade (TAO; PEIRAN, 2011;
+LU et al., 2014; LU et al., 2015; SURYANI, SALISTYO; WIDYAWAN, 2016). Esses estudos citam a
+necessidade de classificar a privacidade em níveis e outros estudos usam algoritmos para
+classificação de objetos confiáveis. A classificação é uma forma de organização necessária para
+inclusive amparar aspectos legais da privacidade da IoT. Também sugerem que essa classificação
+possa ser de responsabilidade compartilhada com os usuários, que indicariam os dados a serem
+considerados sensíveis.
+Assim, 38 dos 46 artigos abordaram 4 temas principais (Quadro 01): proteção de dados
+dos usuários, aspectos legais, comportamento do usuário e classificação da privacidade. Isso
+representa aproximadamente 83% do total de trabalhos selecionados e mostram que a maioria
+dos estudos selecionados consideram estas dimensões de atuação em relação à privacidade na
+IoT.
+5 DISCUSSÕES
+A privacidade abrange conceitos como: liberdade de pensamento, controle sobre o
+corpo, solidão, controle sobre as informações pessoais, liberdade de vigilância e proteção da
+reputação. O autor preconiza uma classificação com as seguintes definições: direito de ficar
+sozinho; acesso limitado ao “eu”; segredo; controle sobre as informações pessoais;
+personalidade e intimidade (SOLOVE, 2008).
+Após a revisão da literatura, nota-se que os principais métodos abordados para a
+proteção dos dados dos usuários foram: criptografia de dados, algoritmos, protocolos de
+autenticação e técnicas de pseudônimos. Levando-se em conta que apenas 02 estudos citaram
+formas de rever o consentimento do usuário, fica a preocupação sobre o entendimento de que
+a segurança na transmissão dos dados pessoais tem importância maior sobre o direito de um
+indivíduo de fornecer ou não o seu consentimento sobre os mesmos.
+Além disso, somente 05 estudos (WEBER, 2010; WEBER, 2015; CARON et al., 2016;
+CHAMBERLAIN et al., 2017; TRAN, 2017) abordaram as questões legais sobre a privacidade na
+IoT período analisado. Percebe-se, novamente, que as discussões acadêmicas estão focadas nas
+
+
+
+tecnologias de proteção dos dados, e questões como a legalidade e o consentimento do usuário
+foram pouco exploradas.
+O desenvolvimento da IoT deve seguir os princípios básicos de proteção da privacidade
+pessoal não por meio somente de tecnologias, mas também de: leis, modelos de proteção à
+privacidade e regulamentações para garantir a inviolabilidade dos dados pessoais, removendo,
+assim, obstáculos e barreiras para as suas aplicações (ZHANG; YE, 2010).
+Esses princípios são reforçados pela teoria do controle da privacidade, que se refere ao
+controle de informações sobre si mesmo e sobre o acesso a assuntos pessoais (TAVANI, 2008,
+p.142). Essa premissa é apontada por Westin (1967, p.7) que define privacidade como o direito
+de indivíduos, grupos ou instituições determinarem como, quando e em que medida as
+informações sobre eles serão comunicadas publicamente.
+Portanto, o empoderamento do indivíduo em relação à sua privacidade ainda é pouco
+discutido no meio acadêmico, embora seja muito necessário. Contudo, também é necessária
+uma legislação que ampare todo este processo e que garanta a validade e a obrigatoriedade
+deste consentimento, não bastando somente os cuidados tecnológicos na transmissão e no
+armazenamento dos dados.
+6 CONSIDERAÇÕES FINAIS
+O avanço tecnológico e a revolução informacional possibilitam um ambiente favorável
+para o cruzamento de dados e análises estatísticas. Porém, a privacidade do indivíduo vem
+sendo constantemente violada, principalmente em se tratando dos seus dados pessoais. A
+Internet das Coisas acompanha essa evolução tecnológica mas possibilita o compartilhamento
+de dados comportamentais e de costumes, aumentando, assim, os riscos de perda de
+privacidade.
+Os novos produtos e serviços da IoT nos tornarão mais eficientes, com maior capacidade
+de atuação e compreensão e haverá novos aplicativos que nos permitirão maior interatividade.
+No entanto, é necessário aprender a conviver com uma grande quantidade de elementos que
+compõe a IoT e que reunirão informações sobre nossas atividades ameaçando a nossa
+privacidade. A desconfiança, e por consequência o afastamento, poderia ser uma barreira para
+o desenvolvimento completo desses novos produtos e serviços.
+O presente estudo apresenta revisão sistemática da literatura baseada no protocolo
+proposto por Kitchenham (2004) e identifica os estudos publicados em relação aos temas IoT e
+
+
+
+privacidade, permitindo uma análise do cenário abordado no meio acadêmico. Foram
+selecionados artigos a partir do ano de 2010, das bases Web of Science, Scopus e Ebsco. Dos 286
+estudos encontrados (não duplicados), apenas 46 foram selecionados devido à falta de
+aderência com a temática.
+Os resultados indicaram que 83% desses artigos tratam dos seguintes temas: proteção
+de dados pessoais (24 artigos), aspectos legais da privacidade na IoT (5 artigos), comportamento
+do usuário (5 artigos) e classificação da privacidade (4 artigos). Percebe-se, nessa revisão, que
+esses temas estão interconectados e, para garantir a privacidade na IoT, são necessárias
+soluções que considerem esses aspectos de forma conjunta, não somente por meio de
+tecnologias, mas também por meio de legislações e do empoderamento do usuário.
+Embora a metodologia do artigo proposto não busque esgotar o assunto e,
+considerando que ocorre limitação a subjetividade, sugere-se novos estudos que propiciem
+discussão acerca da relação entre os quatro temas: proteção de dados pessoais, aspectos legais
+da privacidade na IoT, comportamento do usuário e classificação da privacidade.
