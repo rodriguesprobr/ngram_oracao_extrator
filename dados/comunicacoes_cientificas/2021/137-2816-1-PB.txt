@@ -1,0 +1,584 @@
+
+TRANSFORMAÇÃO DIGITAL NA EMISSÃO DE DIPLOMAS: PROPOSIÇÃO DE UMA
+PLATAFORMA DE PROCESSOS DIGITAIS
+
+Modalidade: Trabalho Completo
+Resumo: Introdução: A transformação digital trouxe vários benefícios à sociedade moderna,
+revolucionando setores e processos organizacionais. No contexto das Instituições de Ensino Superior
+(IES) públicas, essa prática ainda é tímida, a efeito disso, tem-se como exemplo, o processo de
+emissão de diplomas, ainda feito manualmente, o que prejudica a qualidade do serviço, ocasionando
+morosidade e fragilidade com relação à segurança, evidenciada pelo aumento de casos de fraudes e
+falsificações. Diante deste cenário, o Ministério da Educação (MEC), com intuito de modernizar e
+garantir a segurança do processo publicou três portarias: 330, 1.095 e 554, que instituem o Diploma
+Digital e dispõem sobre a expedição e o seu registro. Objetivo: Contextualizado o cenário, este artigo
+tem como objetivo propor um arquétipo de uma Plataforma de Processos de Negócios Digitais
+(PPND), evidenciando suas etapas de modelagem, desenvolvimento, implantação, tendo como
+escopo o processo de emissão de diplomas digitais. Metodologia: A metodologia caracteriza-se como
+de natureza aplicada, de abordagem qualitativa, com objetivos aplicados de modo exploratório e
+procedimentos técnicos por meio de pesquisa-ação, por meio da construção de um Produto Mínimo
+Viável (MVP) adotando-se como base a metodologia de Business Process Management (BPM). Para
+construção do referencial teórico-metodológico, foi utilizado o protocolo RBS Roadmap. Resultados:
+Teve-se como resultados o arquétipo da PPND. Conclui-se que a PPND é factível e viável de ser
+implementada, e que a metodologia de BPM utilizada pode auxiliar as instituições a transformarem
+digitalmente seus processos. Considerações finais: Com a utilização da PPND, as IES conseguirão
+atender às necessidades de se trabalhar com eficiência e eficácia os processos acadêmicos.
+Palavras-Chave: Automação de Processos Acadêmicos; Emissão de Diploma Digital; Transformação
+Digital; Portarias MEC 330, 554 e 1.095; Plataforma de Negócio Digital.
+1 INTRODUÇÃO
+A crescente utilização da Tecnologia da Informação e Comunicação (TIC) nos novos
+modelos de negócio, faz com que as organizações de diversos segmentos sofram grandes
+mudanças na disponibilização de novos processos, produtos e serviços. Algumas
+organizações ainda tentam resistir aos novos modelos de negócio, porém a cada dia a
+transformação digital ganha mais espaço. Esse novo modelo de negócio está, em grande
+medida, baseado na exploração de novas tecnologias e de apresentação aos seus usuários de
+inovações em plataformas digitais e experiências, com o propósito de se obtenção de maior
+agilidade, produtividade e inovação.
+De tal forma, ao se falar em inovação, remete-se diretamente ao conceito de
+mudança, e é essencial, que para que as mesmas sejam efetivadas, é necessário que
+diretrizes e práticas de gestão sejam estabelecidas, com intuito de conduzir de maneira
+eficiente as transformações advindas do novo modelo de negócio. Por conseguinte, é
+necessária uma abordagem específica, centrada na formulação de uma estratégia para a
+Transformação Digital. Assim, a gestão de processos se torna essencial, pois facilita a
+transição do mundo analógico para o mundo digital. Wiesböck e Hess (2019) argumentam
+que as inovações digitais só podem se manifestar se as organizações souberem realizar
+inovações digitais e gerenciar e se preparar para a realização e incorporação de tecnologia
+em novos processos.
+Inúmeros são os benefícios da junção dos conceitos de transformação digital e gestão
+de processos, e todos vão de encontro com a definição e características do Business Process
+Management (BPM), em português conhecido como Gestão de Processos de Negócio.
+
+
+Kohlbacher (2010) relata que os benefícios de se adotar a gestão de processos incluem:
+maior velocidade nas melhorias e mudanças de mercado, aumento da satisfação do
+consumidor, melhor qualidade de produtos, redução de custos e maior compreensão sobre
+as atividades da organização.
+No que se refere às Instituições de Ensino Superior (IES) brasileiras, após se identificar
+tentativas de falsificação do diploma, além da necessidade de modernização por meio do
+acesso à tecnologia, o Ministério da Educação (MEC) direcionou esforços para a
+transformação digital, publicando decretos e portarias na intenção de transformar
+digitalmente o processo de emissão de diploma. Assim, por meio das portarias 330 (BRASIL,
+2018b), 1.095 (BRASIL, 2018a) e 554 (BRASIL, 2019b), o MEC pretende padronizar o
+documento e o processo em âmbito nacional, para não só diminuir a incidência de fraudes
+envolvendo a falsificação de diplomas, mais também mudar o conceito do documento.
+Inegavelmente, a falta de gestão e validação do processo de emissão de diplomas
+torna o controle da documentação gerada durante a operacionalização das atividades das
+IES, ainda mais difícil. Uma situação que ilustra tal dificuldade foi publicada pela Empresa
+Brasileira de Comunicação (EBC) em 2014, relatando que a Universidade Gama Filho (UGF) e
+o Centro Universitário da Cidade (UniverCidade), mesmo após serem descredenciadas, pelo
+Ministério da Educação, ainda têm situações pendentes, há ex-alunos sem o histórico escolar
+e o diploma (AGÊNCIA BRASIL, 2014).
+Diante deste cenário, este artigo, tem como objetivo propor um arquétipo de uma
+Plataforma de Processos de Negócios Digitais (PPND), com intuito de impulsionar a
+transformação digital em outras IES, por intermédio da gestão de processos de negócios
+aplicados ao processo de emissão de diplomas baseados nas referidas portarias (BRASIL,
+2018a, 2018b, 2019b).
+Para apresentar o referido arquétipo, este artigo foi estruturado da seguinte maneira:
+seção 2 apresenta o referencial teórico, pautado nas temáticas: Gestão de Processos e sua
+utilização nas IES públicas e o projeto Diploma Digital do MEC; na seção 3 tem-se a
+metodologia e os procedimentos realizados; na seção 4 apresenta-se o arquétipo da
+Plataforma de Processos de Negócios (PPND), e a seção 5 finaliza o artigo com as últimas
+considerações.
+2 REFERENCIAL TEÓRICO
+
+
+
+Nesta seção são apresentados os conceitos de Transformação Digital e do projeto
+Diploma Digital do MEC. Além disso, são apresentadas as portarias que serviram de
+norteamento para a construção da PPND.
+
+2.1 Transformação Digital
+Segundo (PATEL; MCCARTHY, 2000), a transformação digital é uma estratégia que faz
+uso da tecnologia para maximizar a performance e promover melhorias que refletem nos
+resultados do negócio. Essa estratégia representa uma mudança de comportamento
+empresarial e, como tal, deve envolver os colaboradores (recursos humanos) e gerar
+impactos em processos e na própria estrutura da organização. Igualmente Kotarba (2018),
+define a transformação digital consiste na modificação (ou adaptação) dos modelos de
+negócios, resultante do ritmo dinâmico do progresso tecnológico e da inovação que, se
+implantada com sucesso, desencadeia mudanças nos comportamentos sociais e do ponto de
+vista do consumidor. Em síntese, a transformação digital marca um repensar radical de como
+as organizações estão utilizando a tecnologia, de como processos deverão ser melhorados, e
+como o desempenho dos negócios deverá se preocupar com a satisfação do
+cliente/consumidor.
+É de suma importância ressaltar, que não se faz transformação digital simplesmente
+com a digitalização de documentos, deixando de se usar papel, construindo um site da
+instituição ou por meio de posts no Instagram. Um aspecto importante nesse contexto é a
+distinção conceitual entre “digitalização” e “digitização”. De acordo com o Gartner Institute,
+em seu IT Glossary, os termos “digitalização” (digitalization) e “digitização” (digitization)
+fazem parte da Transformação Digital, mas possuem significados diferentes. A digitalização é
+o uso de tecnologias digitais para mudar um modelo e gerar novos valores, já a digitização é
+o uso das tecnologias digitais para alcançar um resultado específico: transformar algo
+analógico em digital (GARTNER, [ca. 2020]).
+O conceito da transformação digital tem sido um dos mais pesquisados, tornando-se
+uma das principais tendências, tanto no contexto privado quanto no setor público, e essa
+tendência foi ampliada em 2019 e 2020 com a declaração de pandemia de COVID-19 pela
+Organização Mundial da Saúde (OMS).
+A transformação digital trata da mudança de como os processos, as pessoas e a
+tecnologia trabalham para criar novas fontes de inovação e novos insights que não estavam
+
+
+
+prontamente disponíveis anteriormente. Várias empresas estão experimentando a
+transformação digital, porém o posicionamento competitivo e o sucesso não dependem
+apenas das tecnologias que estão sendo adotadas, mas, também das estratégias que são
+implantadas.
+O cenário evidencia a crescente necessidade de digitização dos processos
+acadêmicos. Embora haja investimentos em tecnologia digital e de informação, as IES
+esquecem que transformar digitalmente vai além da própria tecnologia, uma vez que o
+desenvolvimento de pessoas e de processos de modo incremental são eixos essenciais para
+essa transformação.
+A pandemia de COVID-19 mostrou que o ano de 2020, foi um divisor de águas para o
+desenvolvimento da transformação digital, até então visto como um diferencial no mercado
+brasileiro, o investimento em tecnologias e pessoas passou a ser condição básica para se
+manter competitivo. Segundo o Índice de Transformação Digital da Dell Technologies 2020
+(DT Index 2020), cerca de 87,5% das empresas instaladas no Brasil tentaram realizar alguma
+iniciativa voltada à transformação digital neste ano. O número ficou acima da média mundial,
+de 80%.
+As IES públicas no Brasil, mesmo ainda não possuindo o aparato financeiro e
+tecnológico necessário, vêm se transformado, e tem se dedicado a acompanhar, na medida
+do possível, as mudanças sociais do mundo. Porém, apesar das diversas iniciativas do
+governo e das próprias universidades, a grande maioria das IES públicas, ainda são
+organizadas e gerenciadas, de modo hierarquizado e não orientada por processos, o que faz
+com que a operacionalização e seus processos sejam morosos e burocráticos.
+Janissek et al (2017), afirmam que quando se trata de processos de gestão, a
+universidade pública ainda se encontra muito arraigada em práticas e procedimentos de
+gestão considerados tradicionais e burocráticos. Entretanto as universidades brasileiras, bem
+como todos os entes públicos, passam por um período de transformação, no qual são
+exigidas mudanças capazes de torná-las mais ágeis e flexíveis para o cumprimento de sua
+função social com eficácia e eficiência. Segundo os autores, a principal ameaça à
+universidade está enraizada nela mesma, por manutenção de práticas obsoletas e
+dificuldade em adequação à um novo contexto de relações sociais complexas. Segundo
+Sampaio (2009), a gestão universitária quase sempre é adjetivada com os atributos da
+racionalidade técnica calcados nos princípios isolados da eficiência e eficácia. Porém apesar
+
+
+das facilidades advindas das soluções tecnológicas, conforme já descrito, os processos de
+negócios das IES ainda são morosos. Além disso, há a questão da produção crescente de
+dados e informações vinculadas aos referidos processos.
+Em resumo, as IES públicas brasileiras, possuem um protagonismo na transformação
+digital da economia e da sociedade, especialmente por serem agentes de sua própria
+transformação digital. A transformação digital nas IES é fundamental para aumentar não
+apenas o nível de eficiência da atividade governamental, em termos de custos ou de maior
+racionalização, como também a efetividade em relação ao aumento da participação social ou
+da satisfação dos alunos, visando a melhoria da prestação de serviços à população. Por
+serem entidades que organizam e refletem sobre a sociedade como um todo, as IES são foco
+de grandes aspirações e expectativas, que são cada vez maiores, em razão da velocidade das
+transformações sociais, econômicas e tecnológicas da atualidade. Diante dessas rápidas
+mudanças, as IES não podem ficar indiferentes.
+2.3 Projeto do Diploma Digital
+O Projeto do Diploma Digital (PDD) é uma iniciativa do MEC para a aceleração da
+transformação digital na educação. Por meio da inovação tecnológica pretende alcançar
+melhorias em um processo específico e altamente demandado no meio acadêmico,
+possibilitando a modernização do fluxo do processo de emissão e registro de diplomas nas
+IES. Tal processo é tratado em detalhes por meio das portarias 330 (BRASIL, 2018b), 1.095
+(BRASIL, 2018a) e 554 (BRASIL, 2019b), que impõem exigências, tais como: capacidade de
+gestão do acervo digital, oferta de indexadores que permitam a rápida recuperação do
+acervo, procedimentos que garantam a correta preservação dos documentos digitais, em um
+ambiente confiável, com garantia de durabilidade e segurança. Segundo o MEC (2021) PPD é
+desde o início do Ensino Superior no Brasil, o documento mais aclamado da academia, o
+Diploma, enfim entra no século XXI (BRASIL, 2019), e ainda, ao unir legislação educacional e
+tecnologia, mediante o uso da certificação digital, cria-se não apenas uma sólida ferramenta
+no combate à falsificação e irregularidades de diplomas pela transformação digital, mas
+também, inicia-se uma revolução digital na educação. No QUADRO 1, a seguir, tem-se as
+legislações e seus objetivos de acordo com cada portaria mencionada.
+
+
+QUADRO 1 - Legislação referente ao Projeto Diploma Digital do MEC
+
+Fonte: Adaptado de MEC, 2021.
+
+METODOLOGIA
+Trata-se de um estudo de natureza aplicada que teve como objetivo apresentar um
+arquétipo de uma PPND, evidenciando suas etapas de modelagem, desenvolvimento e
+implementação. Quanto à abordagem do problema, tratou-se de uma pesquisa qualitativa,
+visto que propõe e um arquétipo de uma PPND. Quanto aos objetivos, classifica-se como
+pesquisa exploratória no que se refere aos procedimentos técnicos, realizou-se uma
+pesquisa-ação concebida em associação a uma ação (projeto), em que o pesquisador não
+atuou apenas como observador, mas como ator modificador do processo. Benbasat,
+Goldstein & Mead (1987) afirmam que um participante na implementação de um sistema,
+não é um observador independente, mas torna-se um participante, e o processo de
+mudança torna-se seu objeto de pesquisa.
+A metodologia caracteriza-se pela observação e experimentação, a partir das etapas
+de planejamento, implementação e proposição do arquétipo de um Produto Mínimo Viável,
+ou Minimum Viable Product (MVP), que consiste em uma versão simplificada de um produto
+final com intuito de verificar se a PPND proposta, alinhada à gestão de processos de
+negócios, forneceria o mínimo de funcionalidades necessárias. Como resultado tem-se um
+esboço da PPND, além da definição dos requisitos necessários para a modelagem, o
+desenvolvimento, a implantação e a automação do referido arquétipo.
+3.1
+
+Procedimentos metodológicos
+
+
+
+Os procedimentos metodológicos foram conduzidos em três etapas: 1) Planejamento
+do MVP - onde se realizou todo o planejamento, desde o alinhamento do processo ao
+planejamento estratégico da organização, até o desenho do processo dentro da metodologia
+BPM. 2) Implementação do MPV - nesta etapa foi realizado a implementação do processo,
+que foi realizada de forma sistêmica em ambiente do software e 3) Proposição do arquétipo
+do MVP - nesta etapa ocorreu a construção da PPND, a partir das diretrizes gerais do MVP,
+foram definidas também a integração entre os componentes do arquétipo.
+O quadro 2 a seguir, demonstra as etapas e seus passos
+QUADRO 2 - Procedimentos Metodológicos
+Etapa
+
+Descrição
+Passo 1 - Definiu-se o planejamento e alinhamento estratégico: para se
+obter uma visão ampla dos processos da IES em sintonia com o que
+pensa o cliente, foi necessário alinhar os processos ao planejamento
+estratégico da organização. Nesta fase foi analisada toda
+documentação disponível e feito a assimilação de que maneira os
+processos estão alinhados à gestão.
+
+1) Planejamento
+MVP
+
+do
+
+Passo 2 - Analisou-se o Processo de Emissão e Registro de Diploma:
+foi realizada a análise dos processos exatamente da maneira como
+estavam acontecendo na organização naquele momento, para se ter um
+“retrato” que permitisse a modelagem e avaliação dos processos.
+Passo 3 - Desenhou-se o de Emissão e Registro de Diploma: momento
+de alinhamento do processo com os objetivos estratégicos da
+organização e de se desenhar um novo processo. Para isso, fez-se
+simulações com base no cenário definido (ECI/UFMG), e incluiu-se
+melhorias necessárias.
+Passo 4 - Implementação do processo: momento em que se colocou em
+ação a execução do processo, conforme definido e documentado, por
+meio do fluxo de trabalho.
+
+2) Implementação
+MPV
+
+do
+
+Passo 5 - Monitoramento do processo: momento em que se verificou se
+os processos estavam alinhados com os objetivos estratégicos,
+monitorando os indicadores adequados à avaliação dos resultados
+obtidos.
+Passo 6 - Refinamento do processo: início à melhoria contínua dos
+processos. Ao se analisar o monitoramento da fase anterior e verificar
+se os objetivos estratégicos estavam ou não sendo alcançados.
+
+
+
+3)Proposição
+arquétipo do MVP
+
+do
+
+Consistiu na construção do arquétipo da PPND, por meio da definição
+de uma arquitetura específica e das tecnologias que a constituem. Para
+garantir que os requisitos propostos pelo MEC foram obedecidos,
+elaborou-se um quadro comparativo, em que se evidencia a análise
+feita, e destaca-se os requisitos e as tecnologias aplicadas na referida
+PPND e será demonstrado na próxima seção.
+Fonte: Elaborado pelos autores (2021).
+
+Para a etapa 3 - Ao final da aplicação desta etapa, teve-se o primeiro esboço do
+arquétipo da PPND, além da efetiva averiguação dos requisitos definidos e considerados para
+a modelagem, desenvolvimento, implantação e automação do referido arquétipo.
+Nesse momento já era possível a verificação do MVP ao contexto das IES públicas
+brasileiras. A adoção do MVP nos permitiu focar somente em um produto específico, o que
+proporcionou uma redução de recursos de tempo e custo. Assim, pode se ter uma visão do
+produto e da sua viabilidade e de seu correto direcionamento, mesmo que no formato de
+produto mínimo. Na próxima seção são demonstrados os resultados e entre eles estão a
+primeira proposta de arquétipo da PPND.
+4 RESULTADOS
+Esta seção apresenta os resultados obtidos e as discussões propostas, a partir da
+aplicação dos procedimentos metodológicos deste estudo.
+Na metodologia BPM utiliza-se o conceito de entregáveis que, segundo o BPM CBOK
+(2013), consiste em produtos ou serviços, resultantes de uma atividade, subprocessos ou
+processo, que será entregue a um cliente da organização. Todos esses entregáveis foram
+documentados, posto que devido ao caráter empírico da pesquisa, se fazia necessário.
+Assim, no QUADRO 3, tem a lista de entregáveis deste estudo, de acordo com cada uma das
+três etapas.
+QUADRO 3- Lista de Entregáveis
+Etapa
+
+1) Planejamento
+do MVP
+
+Tarefa
+
+Descrição
+
+Entregável
+
+Definição do
+escopo do
+processo
+
+Definição e formalização dos requisitos mínimos
+necessários de acordo com as exigências feitas
+pelo MEC, por meio das portarias 330, 1095 e
+554.
+
+Documento de
+Declaração de
+Escopo do
+Projeto
+
+Identificação e
+planejamento dos
+recursos
+
+Definição dos objetivos, características, recursos
+humanos e de hardware, responsabilidades e os
+
+Planilha com o
+Planejamento
+
+
+
+softwares selecionados para a construção do
+MVP
+
+Revisão do
+processo “as-is”
+
+2)
+Implementaçã
+o do MPV
+
+3) Proposição
+do arquétipo
+do MVP
+
+Compreensão do estado atual (as-is) dos
+processos.
+
+dos recursos MVP
+Descritivo dos
+processos e
+Desenho as-is
+do processo.
+
+Identificação,
+análise e avaliação
+das regras de
+negócio
+
+O BPM CBOK®1 (2013) define que as regras de
+negócio, são regras que impõem restrições que
+impactam na natureza e no desempenho do
+processo.
+
+Documento Regras de
+Negócio
+
+Desenho do
+processo em
+ferramenta
+interativa
+
+Redesenho de processo ou processo “to-be”
+(como será), e trata a mudança de processo, e o
+que essa transformação irá impactar no
+atingimento de metas e estratégias
+organizacionais
+
+Desenho to-be
+do processo
+
+Inserção de regra
+de negócios e
+modelo de dados
+
+Para o correto funcionamento do fluxo
+desenhado se faz necessária a montagem do
+ambiente na ferramenta de BPMS, ou seja, para
+que o processo possa ser automatizado
+
+Construção de
+interfaces, banco
+de dados,
+webservices
+
+Nessa fase, configurou-se os parâmetros
+necessários para a execução do sistema, e em
+seguida realizaram-se os testes da interface de
+entrada do diploma digital.
+
+Geração da
+aplicação
+
+Esta tarefa refere-se à geração da aplicação, ou
+seja, geração do MVP. Trata-se de gerar a primeira
+versão automatizada do processo em um sistema
+de BPM
+
+Definição das
+diretrizes gerais do
+MVP da PPND
+
+As tecnologias propostas no arquétipo da PPND já
+existem no mercado de softwares, porém de
+maneira segmentada. Assim, priorizou-se o
+atendimento ao requisito da portaria 554, Art. 3º
+- item II, que trata da interoperabilidade entre os
+sistemas (BRASIL, 2019b).
+A partir da arquitetura e-Ping2, foi realizada busca
+por softwares com capacidade e componentes
+que pudessem trabalhar em conjunto
+(interoperar) de modo a garantir que os sistemas
+computacionais interagem para trocar
+
+Primeira versão
+do MVP
+
+Diretrizes gerais
+do MVP da
+PPND
+
+1
+
+“BPM CBOK® é um documento de referência básico para todos os praticantes. O objetivo principal
+deste guia é identificar e fornecer uma visão geral das Áreas de Conhecimento que são geralmente
+reconhecidas e aceitas como boas práticas. (ABPMP, [2020]).
+2
+
+A arquitetura ePING – Padrões de Interoperabilidade de Governo Eletrônico – define um conjunto
+mínimo de premissas, políticas e especificações técnicas que regulamentam a utilização da Tecnologia
+de Informação e Comunicação na interoperabilidade de serviços de governo eletrônico,
+estabelecendo as condições de interação com os demais Poderes e esferas de governo e com a
+sociedade em geral (BRASIL, 2018c).
+
+
+
+informações de maneira eficaz e eficiente e com a
+devida transparência, conforme FIGURA 1.
+
+Integração entre
+os componentes
+do arquétipo da
+PPND
+
+Considerou-se ainda, que a construção da PPND
+ampliasse o acesso aos sistemas de informação,
+com segurança e escalabilidade, ou seja, que em
+projetos futuros, possam ser implementadas
+possíveis expansões com a entrada de novos
+processos, atendendo, desse modo, aos
+requisitos exigidos nas portarias 330, 1.095 e 554
+do MEC, que determinam que uma PPND deve
+prever conceitos de autenticidade, integridade,
+confiabilidade, disponibilidade, rastreabilidade e
+validade jurídica (BRASIL, 2018a; 2018b; 2019b).
+
+Documento de
+arquitetura do
+MVP
+
+Construção do
+arquétipo da PPND
+
+Para a construção do arquétipo da PPND de
+acordo com os requisitos do MEC, foram
+utilizadas quatro tecnologias:
+1. BPMS (Business Process Management
+Suite System) para a representação e
+execução do fluxo de processos de
+emissão de diplomas mapeado
+2. ECM (Enterprise Content Management)
+para gerenciamento e armazenamento
+dos documentos vinculados ao processo.
+3. Serviço de assinatura digital no padrão
+ICP-Brasil, para assinatura digital dos
+documentos e
+4. Repositório digital confiável, para
+armazenamento e preservação dos
+diplomas, após o cumprimento do seu
+prazo de guarda.
+
+Arquitetura
+tecnológica do
+arquétipo da
+PPND.
+
+Representação
+gráfica da PPND.
+
+A partir das tecnologias, elaborou-se o Roadmap
+da PPND, FIGURA 3, para apresentá-la de modo
+gráfico e descritivo de acordo com cada fase de
+seu desenvolvimento.
+O Roadmap apresentado, se inspirou no
+protocolo de ECM elaborado pela AIIM 2020.
+
+Roadmap da
+PPND.
+
+Fonte: Dados da pesquisa (2021)
+
+Inegavelmente, a PPND é o objeto principal da pesquisa, portanto em virtude de sua
+importância, é detalhada nessa seção, três principais entregáveis da Etapa 3 - Proposição do
+arquétipo do MVP, que são: (i) FIGURA 1 - Diretrizes que fundamentam a PPND – para o
+entendimento de quais diretrizes foram usadas; (ii) FIGURA 2 - Arquitetura do Arquétipo da
+PPND - e (iii) FIGURA 3 - Roadmap do Arquétipo da PPND.
+Para a construção de uma PPND que contemplasse todos os requisitos do MEC,
+fazia-se necessário que a mesma possuísse diretrizes sólidas e com esse intuito de tornar-se
+referência como plataforma, principalmente para governo, a mesma foi fundamentando-se
+
+
+
+na arquitetura e-Ping, foi realizada busca por softwares com capacidade e componentes que
+pudessem trabalhar em conjunto (interoperar) de modo a garantir que os sistemas
+computacionais interajam para trocar informações de maneira eficaz e eficiente e com a
+devida transparência. A FIGURA 1 evidencia as diretrizes que fundamentaram a construção
+do arquétipo da PPND.
+FIGURA 1 - Diretrizes que fundamentam a PPND
+
+Fonte: Adaptado de Padrão e-Ping, BRASIL, 2018c.
+
+A partir das diretrizes gerais do MVP da PPND, foi definida a integração entre os
+componentes do arquétipo, e finalmente sua construção, possibilitando assim a
+automatização do processo de emissão de diplomas.
+Optou-se por um conjunto de softwares de padrão aberto, que trabalhassem
+utilizando protocolos livres e universais de comunicação, e que possuíssem uma visão
+orientada aos processos de negócios das IES públicas. Tratando a dimensão técnica da PPND,
+considerou-se ainda, que a construção da PPND ampliasse o acesso aos sistemas de
+informação, com segurança e escalabilidade, ou seja, que em projetos futuros, possam ser
+implementadas possíveis expansões com a entrada de novos processos, atendendo, desse
+modo, aos requisitos exigidos nas portarias 330, 1.095 e 554 do MEC, que determinam que
+uma PPND deve prever conceitos de autenticidade, integridade, confiabilidade,
+disponibilidade, rastreabilidade e validade jurídica (BRASIL, 2018a; 2018b; 2019b).
+
+
+FIGURA 2 - Arquitetura do Arquétipo da PPND
+
+Fonte: Elaborado pelos autores (2021).
+
+O Roadmap da PPND apresenta o fluxo do processo de emissão de diplomas e seus
+respectivos documentos, desde o momento em que o aluno conclui o curso superior em uma
+IES e requisita o seu diploma. Em seguida, aguarda a disponibilização do diploma digital de
+modo simples, ágil e seguro. O que torna o MVP da PPND viável, pois abarca os fluxos de
+expedição, registro e consulta pública de diplomas digitais, bem como o seu armazenamento
+e preservação.
+FIGURA 3 - Roadmap do Arquétipo da PPND
+
+Fonte: Elaborado pelos autores - Adaptado de AIIM – (2021)
+
+
+5 CONSIDERAÇÕES FINAIS
+Este estudo permitiu relatar como se deu a construção do arquétipo de uma PPND,
+que abarcou o processo de emissão de diplomas conforme proposto pelo MEC em suas
+portarias 330, 1.095 e 554, por meio da utilização de metodologias consagradas como BPM e
+a utilização de tecnologias emergentes, como a do MVP.
+Ressalta-se que embora a transformação digital seja predominantemente aplicada em
+contextos de instituições privadas, esta pode e deve ser aplicada IES, com intuito de
+aperfeiçoar a eficiência e eficácia institucional.
+De acordo com os resultados a PPND se mostrou uma alternativa viável e exequível, e
+essa afirmativa pode ser comprovada por meio do MVP, que se mostrou fiel aos objetivos,
+concluindo que a construção de uma plataforma de negócios digital inicialmente pensada
+para o fluxo de emissão de diplomas contribuirá para a transformação digital da instituição
+como um todo, uma vez que pode ser estendida aos demais processos. O digital já é um
+imperativo dos negócios. A digitalização é um facilitador importante do digital, mas nem toda
+a digitalização existente fará, por si só, uma empresa ser digital.
+Por meio da criação do MVP evidencia-se que é possível fomentar o
+empreendedorismo nas universidades públicas. E ainda, ratificar a viabilidade do projeto e a
+possibilidade de replicação para outros processos no contexto universitário.
+Acredita-se que, com a implantação PPND, as IES passarão a tirar pleno proveito da
+revolução digital, uma vez que terão acesso aos benefícios que a sociedade da informação e
+do conhecimento tem a oferecer, aprimorando-se com dinamismo, competitividade e
+inclusão, absorvendo a digitização dos seus processos e conhecimentos.

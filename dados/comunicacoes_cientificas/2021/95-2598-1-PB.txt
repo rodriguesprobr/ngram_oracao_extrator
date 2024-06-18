@@ -1,0 +1,456 @@
+
+PAINEL DE VISUALIZAÇÃO ANALÍTICA DOS ACERVOS DIGITAIS INTEGRADOS DO INSTITUTO
+BRASILEIRO DE MUSEUS: O USO DAS TECNOLOGIAS TAINACAN E ELASTIC STACK
+Modalidade: Trabalho Completo
+Resumo: O Instituto Brasileiro de Museus - Ibram, em 2016, iniciou o processo de difusão de seus
+acervos museológicos na web, por meio do software Tainacan. Hoje, 2021, com os desdobramentos
+do Projeto Tainacan, está em estudo um novo serviço de informação, um agregador de objetos
+culturais de museus brasileiros. Uma das etapas iniciais foi a seleção das tecnologias, tendo sido
+escolhida a pilha Elastic Stack, composta pelas ferramentas: Beats, Logstash, Elasticsearch e Kibana. A
+partir da implementação do protótipo, observou-se que as ferramentas poderiam, além da
+agregação, permitir a criação de um painel de visualização analítica dos acervos digitais integrados do
+Ibram, a partir da ferramenta Kibana. Dessa forma, este artigo visa descrever o processo de criação
+do painel utilizando o software Tainacan e as ferramentas do Elastic Stack, com ênfase na Kibana. Em
+linhas gerais, a Kibana permite a visualização dos dados armazenados no Elasticsearch, que foram
+previamente coletados dos museus de origem, processados e tratados via Beats e Logstash. Trata-se
+de uma pesquisa qualitativa, exploratória e descritiva, que, envolvendo o processo de agregação dos
+acervos do Ibram, configura-se na modalidade de estudo de caso. O resultado é um painel interativo,
+atualizado automaticamente, quando novos dados são inseridos nos museus de origem, composto
+pelos dados de 16 museus, totalizando 13.891 itens, proporcionando o acesso gráfico a indicadores,
+que permitem medir, monitorar e gerenciar os acervos, além de possibilitar o acesso ao link do item
+no museu de origem, facilitando a comparação e a análise contextual do acervo completo.
+Palavras-Chave: Agregação; Kibana; Museus; Painel de Visualização; Tainacan.
+1 INTRODUÇÃO
+O Instituto Brasileiro de Museus – Ibram, criado em 2009, é uma autarquia vinculada
+ao Ministério do Turismo, responsável pela Política Nacional de Museus e pela melhoria dos
+serviços do setor, tais como: o aumento de visitação e a arrecadação dos museus; o fomento
+de políticas de aquisição; a preservação de acervos e; a criação de ações integradas entre os
+museus brasileiros. Além de administrar 30 instituições museológicas1, distribuídas no Sul,
+Sudeste, Centro-Oeste e Nordeste do país (IBRAM, 2021).
+Em 2014, o Ibram firmou parceria com o Laboratório de Políticas Públicas
+Participativas, da Universidade Federal de Goiás - UFG, parceria essa, atualmente transferida
+para a Universidade de Brasília - UnB, visava o desenvolvimento do Projeto Tainacan, com
+intuito de promover os fundamentos de uma política nacional para acervos digitais (GOV.BR,
+2021). Em 2016, a primeira versão do software Tainacan é apresentada.
+O Tainacan é uma ferramenta flexível e poderosa para WordPress que
+permite a gestão e a publicação de coleções digitais com a mesma facilidade
+de se publicar posts em blogs, mas mantendo todos os requisitos de uma
+plataforma profissional para repositórios (GOV.BR, 2021).
+
+O software foi pensado para ser uma solução tecnológica para a difusão e para a
+interoperabilidade de acervos digitais das instituições culturais brasileiras (MARTINS;
+CARVALHO; GERMANI, 2019). É um software livre e gratuito, que vislumbrou sua
+manutenção a longo prazo, escolhendo a ecologia do WordPress, amplamente difundido e
+com uma comunidade de desenvolvedores e usuários ativa, além da facilidade, para que
+profissionais da área da cultura, sem formação específica em Tecnologia da Informação - TI,
+pudessem instalar, customizar e utilizar de forma autônoma (MARTINS; MARTINS, 2020).
+Atualmente, o Tainacan se configura como uma consolidada ferramenta utilizada por
+diferentes instituições, incluindo Universidades Públicas (MARTINS; MARTINS, 2020), Museus
+1
+
+IBRAM. Museus IBRAM. 2021. Disponível em: https://www.museus.gov.br/museus-ibram/. Acesso
+em: 07 mai. 2021.
+
+Estaduais e Municipais, Instituições privadas, Instituições internacionais e pelo Ibram, que
+possui 16 museus disponíveis na web e outros em fase de implantação do Tainacan
+(TAINACAN, 2021; GOV.BR, 2021).
+Em uma nova etapa de implementação, o Laboratório de Inteligência de Redes da
+Universidade de Brasília – UnB tem desenvolvido os primeiros serviços de integração das
+coleções museológicas publicadas pelo Ibram visando a criação de uma interface única de
+busca como experimento dos efeitos da publicação de acervos em rede (GOV.BR, 2021).
+A partir de uma revisão sistemática de literatura, Siqueira e Martins (2021)
+levantaram as principais tecnologias utilizadas por projetos de agregação de dados culturais,
+além de buscarem na literatura cinzenta por novas tecnologias capazes de realizar a
+agregação de dados. Nesse sentido, o grupo de pesquisadores do Laboratório optou pelo uso
+do software Tainacan e da pilha Elastic Stack, que tem como principal vantagem a
+automatização de etapas importantes e a facilidade e agilidade nas buscas (ELASTIC, 2021b).
+No entanto, durante o processo de prototipação da busca integrada, identificou-se a
+possibilidade de oferecer painéis de visualização dos acervos digitais integrados do Ibram.
+Segundo Sarikaya et al (2019):
+Dados onipresentes e tecnologias de visualização disponíveis ao público
+ampliaram a adoção do painel para novos domínios. Consequentemente, o
+conceito de painel evoluiu de telas de relatório para incluir interfaces
+interativas, com múltiplas visualizações e propósitos, incluindo
+comunicação, aprendizado e motivação, além das noções clássicas de
+monitoramento e suporte à decisão (p. 683, tradução nossa).
+
+Os painéis são extremamente importantes em um mundo baseado em dados.
+Empresas, organizações sem fins lucrativos e grupos comunitários dependem de painéis
+todos os dias para realizar seu trabalho. Para muitos, os painéis podem ser o primeiro (ou
+único) encontro com todos os dados. Além disso, o uso do painel ultrapassou os limites
+organizacionais, incluindo os indivíduos e o público em geral (SARIKAYA et al, 2019).
+Os painéis são ferramentas para a visualização da informação, especificamente, nesta
+pesquisa, a Visualização Analítica, que procura focar no pensamento analítico por meio de
+interfaces gráficas, impulsionada pelo crescimento das bases dados e dos processos de
+gestão de conhecimento, bem como do processo de diminuição de incertezas para tomada
+de decisão e análise do comportamento cognitivo (FERREIRA, 2012).
+
+
+Para o Ibram, o painel de visualização oferece recursos para uma gestão da
+documentação museológica mais eficaz, pois apresenta, de forma unificada e interativa, uma
+visão macro de todos os seus museus, por meio de gráficos, métricas, tabelas e mapas.
+Além disso, dados integrados podem demonstrar inconsistências sintáticas ou
+semânticas, possibilitando aos museus melhorarem, na base, suas informações a partir de
+boas práticas de catalogação (GILLILAND, 2016), incluindo criação e uso de metadados, de
+vocabulários controlados (ou linguagens documentárias) e de regras de catalogação, com as
+quais se determinam como elaborar a descrição de um recurso de informação e os pontos de
+acesso, tornando-se práticas essenciais na padronização e na descrição, viabilizando,
+portanto, interoperabilidade e agregação de acervos digitais. Nesse viés, instituições de
+memória cumprem a função de fornecer uma melhor experiência de busca para o usuário,
+potencializando um caráter formativo de sua equipe interna, tendo em vista que os museus
+são encorajados a disponibilizar conteúdo de qualidade na rede.
+A partir da comparação de diferentes instituições, torna-se possível encontrar
+padrões e conexões que interessam (FERREIRA, 2012). Os indicadores podem garantir um
+melhor planejamento estratégico, maior produtividade do trabalho, agilidade no acesso aos
+dados, melhorando a eficiência da gestão, gerando efeitos nas dimensões administrativas,
+culturais e educacionais.
+O painel também pode, a critério do Ibram, ficar disponível ao público em geral,
+permitindo que pesquisadores, por exemplo, possam enriquecer sua fonte de dados para
+pesquisa; que os usuários possam ter acesso aos links dos objetos digitais por meio de
+simples pesquisas; que os museus possam monitorar o seu acervo em comparação aos
+demais. As possibilidades de análises e públicos-alvo são inúmeras, pelo fato de o painel
+abrir um leque de novas possibilidades, até então, inimagináveis se considerarmos cada
+museu de forma independente.
+Desta forma, o presente artigo tem como objetivo descrever o processo de criação do
+Painel de Visualização Analítica dos Acervos Digitais Integrados do Ibram, utilizando o
+Tainacan e a pilha Elastic Stack, com ênfase no Kibana, assim como elucidar e apresentar o
+protótipo desenvolvido.
+
+
+2 METODOLOGIA
+Em relação aos procedimentos metodológicos, a presente pesquisa foi classificada
+como sendo de natureza qualitativa, de cunho exploratório e descritivo envolvendo o
+processo de agregação dos acervos museológicos digitais do Ibram e o desenvolvimento de
+um painel de visualização analítica de acervos integrados, configurando como modalidade de
+estudo de caso. Como procedimento técnico, utilizou-se de pesquisa bibliográfica no intuito
+de fundamentar conceitos e fornecer sustentabilidade teórica ao estudo.
+O Painel de Visualização Analítica dos Acervos Digitais Integrados do Ibram
+contemplou 16 museus, listados no Quadro 1.
+Quadro 1 – Relação de Museus, suas coleções, links e quantidade de itens
+N. Museus
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+
+Coleções e links
+Qte. de itens
+Acervo Museológico
+1124
+Museu Casa da Hera
+Indumentária
+31
+Museu Casa da Princesa
+Museu Casa da Princesa
+264
+Museu Casa de Benjamin Constant
+Acervo Museológico
+983
+Museu Casa Histórica de Alcântara
+Acervo Museológico
+631
+Museu da Inconfidência
+Acervo Museológico
+4624
+Museu das Bandeiras
+Museu das Bandeiras
+401
+Museu das Missões
+Acervo Museológico
+90
+Museu de Arqueologia de Itaipu
+Acervo MAI
+1040
+Museu de Arte Sacra da Boa Morte
+Museu de Arte Sacra da Boa Morte
+132
+Museu do Diamante
+Acervo Museológico
+895
+Museu do Ouro
+Acervo Museológico
+60
+Museu Histórico Nacional
+Acervo Museológico
+773
+Museu Regional Casa dos Ottoni
+Acervo Museológico
+463
+Museu Regional São João Del Rey
+Acervo Museológico
+328
+Museu Victor Meirelles
+Acervo do Museu Victor Meirelles
+237
+Museu Villa Lobos
+Fotografias
+1812
+Total
+13891
+Fonte: Elaborado pelos autores (2021)
+
+De modo a integrar os acervos nos museus de origem e criar o painel de visualização
+foram utilizados o software Tainacan, versão 0.15, e a pilha do Elastic Stack, versão 7.9,
+ambas, versões mínimas para efetivação da integração. No caso do Tainacan, necessária para
+instalação do plugin de mapeamento de dados, e no Elastic Stach, mínima para que as
+configurações para controle da paginação feita pelo Tainacan tenham efeito. Todo código
+está disponível no GitHub, repositório tainacan-elk2.
+O Elastic Stack é um conjunto de quatro ferramentas, gratuitas e de código aberto,
+que possibilitam a obtenção de dados de diversas fontes e em qualquer formato, com vistas
+
+2
+
+GITHUB. Tainacan - tainacan-elk. 2021. Disponível em: <https://github.com/tainacan/tainacan-elk>.
+Acesso em: 10 mai. 2021.
+
+
+
+a buscar, a analisar e a visualizar dados em tempo real, a saber: Beats, Logstash, Elasticsearch
+e Kibana (ELASTIC, 2021b).
+O Beats é uma plataforma para agentes de dados de finalidade única, que enviam
+dados de centenas ou milhares de computadores e sistemas para o Logstash ou o
+Elasticsearch (ELASTIC, 2021a). Nesta pesquisa, utilizamos o agente FileBeat. O Logstash é
+um pipeline de processamento de dados do lado do servidor que faz a ingestão de dados de
+inúmeras fontes, transforma-os e envia-os para o seu local de armazenamento (ELASTIC,
+2021e). O Elasticsearch é um mecanismo de análise de dados e busca distribuído, que
+armazena os dados centralmente para proporcionar busca rápida (ELASTIC, 2021c). Por fim, o
+Kibana é uma interface de usuário para visualização dos dados do Elasticsearch e navegação
+no Elastic Stack (ELASTIC, 2021d).
+
+3 AGREGAÇÃO DOS DADOS DOS MUSEUS DO IBRAM
+Para a criação do painel de visualização torna-se necessário, de forma geral, realizar a
+coleta, o processamento e o armazenamento dos dados, integrando os 16 museus. Estas
+etapas são descritas a seguir, subdivididas pelas tecnologias Tainacan e Elastic Stack.
+
+3.1 Tainacan
+O primeiro passo consistiu em realizar um alinhamento de metadados de modo que
+as bases de dados dos museus envolvidos pudessem fazer referência a um padrão comum.
+Tal procedimento é denominado na literatura de Crosswalk ou mapeamento, para o qual
+Chan e Zeng (2006) afirmam se tratar de um mapeamento de ordem sintática e semântica
+envolvendo elementos de um esquema de metadados em direção a outro, viabilizando, por
+conseguinte, interoperabilidade entre diferentes esquemas de metadados e permitindo que
+coleções heterogêneas possam ser pesquisadas simultaneamente com uma única consulta,
+como se fossem um único banco de dados.
+No caso do Ibram, em 2014, a Resolução Normativa n. 2 estabeleceu os elementos de
+descrição das informações sobre o acervo museológico, bibliográfico e arquivístico, intitulado
+Inventário Nacional dos Bens Culturais Musealizados – INBCM (MINISTÉRIO DA CULTURA,
+2014). Dessa forma, os elementos de metadados constituintes dos esquemas das bases de
+dados dos museus envolvidos, sempre que possível, foram mapeados para o INBCM.
+
+
+
+O mapeamento foi realizado diretamente no Tainacan por meio de um plugin extra
+(GITHUB, 2020), desenvolvido especificamente para esta pesquisa, que adiciona o mapeador
+do INBCM. O plugin, que requer a versão 0.15 do Tainacan ou superior, precisa ser instalado
+separadamente, pois não faz parte da versão principal do software, e está disponível no
+repositório tainacan-mappers-ibram-inbcm3 do GitHub.
+Para demonstração de como se deu o mapeamento, utilizaremos como exemplo o
+Museu Villa-Lobos, que possui 27 metadados, porém, apenas alguns são demonstrados no
+Quadro 2.
+Quadro 2 – Exemplos de mapeamento de metadados do Museu Villa Lobos para o INBCM
+INBCM
+
+Museu Villa Lobos
+Legenda:
+
+Metadados
+
+Metadados
+
+Status
+
+Número de registro
+
+Número de registro
+
+Público
+
+Outros números
+
+Outros números
+
+Privado
+
+Mapeado - coletado
+Mapeado - não coletado
+
+Dimensões - altura
+
+Sem representação
+
+Público
+
+Não mapeado – não coletado
+
+Sem representação
+
+Data padronizada
+
+Privado
+
+Sem representação
+
+Localização
+Público
+Fonte: Elaborado pelos autores (2021)
+
+No Tainacan, os usuários são livres para modelar quaisquer metadados que desejar e
+determinar se eles são públicos ou privados, ou seja, respectivamente, se serão
+disponibilizados ao público ou ficarão restritos à administração do museu. Assim, conforme o
+Quadro 2, apenas os metadados públicos e mapeados serão coletados e serão apresentados
+no painel de visualização.
+Além do INBCM, são incluídos três novos metadados no processo de agregação: o
+nome do museu de origem dos dados; um código único gerado pelas ferramentas
+do Elastic Stack e o link do item, que direciona ao objeto digital no museu de origem.
+A Figura 1 mostra parte da interface de mapeamento do Tainacan, que, de forma
+simplificada, permite que os próprios museus executem o mapeamento.
+Após o mapeamento, o Tainacan passa a disponibilizar a Application Programming
+Interface - API no formato Java Script Object Notation - JSON4, paginados a cada 96 itens, que
+poderão ser coletados pelo Elastic Stack. A API é coletada pela pilha Elastic Stack, dando
+início ao processo de agregação dos dados.
+
+3
+
+GITHUB. Tainacan. tainacan-mappers-ibram-inbcm. Disponível em:
+https://github.com/tainacan/tainacan-mappers-ibram-inbcm. Acesso em: 19 mai. 2021.
+4
+JSON.ORG. Introducing JSON. Disponível em: https://www.json.org/json-en.html. Acesso em: 10
+mai. 2021.
+
+
+Figura 1 - Interface de mapeamento de dados do Tainacan
+
+Fonte: elaborado pelos autores (2021)
+
+Para acessar, basta abrir a página web do Acervo e seguir os passos: Ver Como ->
+JSON Simples -> JSON simples: inbcm-ibram mapper. Como exemplo, o link da Página 1 do
+Museu Villa-Lobos5.
+
+3.2 Elastic Stack
+Conforme supracitado, cada instalação do Tainacan disponibiliza a API com um
+retorno em JSON, e estes são coletados pelo Filebeat, dando início a agregação dos dados. A
+Figura 2 mostra a sequência.
+O Beats (FileBeat) coleta os dados; o Logstash agrega, processa e realiza
+transformações importantes nos dados, como exemplo, retirar espaços em branco em
+excesso. Na sequência, tudo é armazenado no Elasticsearch, que abastece o Kibana com os
+dados que serão transformados em gráficos, tabelas, mapas, no painel de visualização.
+Figura 2 – Etapas para integração das instalações do Tainacan com a Elastic Stack
+
+5
+
+JSON. Museu Villa-Lobos. Disponível em:
+https://museuvillalobos.acervos.museus.gov.br/wp-json/tainacan/v2/collection/1570/items/?perpag
+e=96&order=DESC&orderby=date&exposer=json-flat&mapper=inbcm-ibram&paged=1. Acesso em:
+24 mai. 2021.
+
+
+
+Fonte: elaborada pelos autores (2021)
+
+4 PAINEL DE VISUALIZAÇÃO ANALÍTICA DOS ACERVOS DIGITAIS INTEGRADOS
+A partir dos dados integrados, o Kibana possibilita a criação do painel e, para tal,
+se baseia na criação de elementos de visualização, tais como, gráficos, títulos, métricas, para
+compor o painel. Para exemplificar, apresentamos, na Figura 3, a interface de criação da
+visualização Horizontal Bar, ou seja, um gráfico de barras horizontais que demonstra a
+quantidade de itens por museu.
+Figura 3 - Interface do Kibana para criação de um gráfico com o número de itens de cada museu
+
+Fonte: Elaborada pelos autores (2021)
+
+Dessa forma, um painel é composto por um conjunto de visualizações. No caso
+do Ibram, por nove títulos, cinco filtros, oito métricas numéricas, seis gráficos, uma tabela,
+um quadro de seleção, podendo, a qualquer momento, adicionar novas visualizações, a
+depender das necessidades da Instituição.
+Em números, são 16 museus, 13891 itens, 2130 denominações, 74 classificações,
+663 autores, seis estados de conservação, 1531 materiais e técnicas e 254 locais de
+produção. A Figura 4 apresenta parte do painel.
+
+XXI Encontro Nacional de Pesquisa em Ciência da Informação • ENANCIB 2021
+Rio de Janeiro • 25 a 29 de outubro de 2021
+
+Figura 4 - Painel de Visualização Analítica dos Acervos Digitais Integrados do Ibram
+
+Fonte: elaborada pelos autores (2021)
+
+
+
+Por fim, demonstramos algumas formas de realizar as buscas no painel de forma
+rápida e eficiente. A primeira, é possível interagir com os gráficos. Por exemplo, ao clicar em
+Museu Villa-Lobos, no gráfico de museus, todo painel se altera, mostrando apenas os
+números referentes a este museu, conforme demonstra a Figura 5.
+Figura 5 – Exemplo com o resultado da seleção do Museu Villa-Lobos no gráfico de museus
+
+Fonte: elaborado pelos autores (2021)
+
+Outra maneira são os filtros pré-configurados, que permitem a obtenção
+de resultados que combinem diferentes seleções. A Figura 6 apresenta o exemplo de busca
+por itens cujas denominações selecionadas são oratório ou cadeira, em materiais e técnicas
+foi selecionada a madeira e que esteja em bom estado de conservação.
+Figura 6 – Exemplo de consulta com filtro pré-configurado
+
+Fonte: elaborada pelos autores (2021)
+
+
+
+O Kibana também permite realizar buscas que independem das visualizações
+pré-definidas, adicionando e combinando diferentes preferências (2), ou uma busca simples,
+por palavra-chave (1), conforme Figura 7.
+Figura 7 - Interface para uma consulta simples, por palavra-chave e a partir da adição de novos
+filtros.
+
+Fonte: elaborada pelos autores (2021)
+
+O painel criado utilizando o Kibana abre diversas possibilidades, e permite aos
+gestores um controle de todos os acervos, em uma única interface. Por ser utilizado junto
+a Elastic Search, ao FileBeat e ao Logstash, as atualizações realizadas nos museus de origem
+serão automaticamente atualizadas. Além disso, permite a criação de diversos outros
+gráficos, tabelas, a partir das necessidades apresentadas pelo Ibram, tornado o painel ainda
+mais completo.
+Para visualizar o resultado final e realizar as consultas desejadas, disponibilizamos o
+acesso para o painel de visualização analítica dos acervos integrados dos museus vinculados
+ao
+
+Ibram,
+
+disponível
+
+no
+
+link: http://200.137.217.144:6601/goto/613663b72fc306a908e86a6233e5219c
+
+5 CONSIDERAÇÕES FINAIS
+Esta pesquisa resultou na criação do Painel de Visualização Analítica dos Acervos
+Integrados do Ibram, a partir da utilização de duas diferentes tecnologias, o software
+Tainacan e a pilha Elastic Stack. Os resultados obtidos são parte de uma pesquisa de
+
+
+
+doutoramento de maior amplitude, visando a construção de um agregador de objetos
+culturais de museus brasileiros a ser denominado Brasiliana Museus.
+Considera-se que essa etapa de criar repositórios digitais de dados da documentação
+museológica, tratar os dados, mapear para um modelo comum, coletar e gerar uma base
+integrada de dados para o cálculo de indicadores e a geração de painéis de visualização de
+dados foi concluída de forma satisfatória. Nesse sentido, tornou-se possível a geração de
+informações úteis que têm ajudado a compreender a documentação dos museus de uma
+forma ainda não trabalhada pelo Ibram.
+A pesquisa demonstra a viabilidade das tecnologias para agregação de dados e,
+portanto, valida o modelo tecnológico e o fluxo de circulação da informação para a
+continuidade da pesquisa em busca da modelagem e da implementação da ferramenta de
+busca integrada dos acervos. Importante destacar a robustez do ElasticSearch, muito eficaz
+na busca de texto completo, com escalabilidade horizontal capaz de manipular pentabytes
+de dados, garantindo a agregação de milhares de itens museológicos.
+Vale ressaltar que a combinação do Tainacan e da pilha do Elastic Stack se mostrou de
+média complexidade, se tornando uma opção viável de aprendizagem e customização para o
+uso e a análise de dados oriundos de repositórios digitais.
