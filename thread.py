@@ -1,4 +1,3 @@
-import fnmatch
 import os
 
 import spacy, spacy_ngram
@@ -12,15 +11,10 @@ from sql import ngram_inserir, comunicacao_cientifica_ngram_inserir, comunicacao
 def processar_comunicacao_cientifica(comunicacao_cientifica):
     ano = ano_selecionar_um(comunicacao_cientifica.ano_id)
     util.log(f"Processando - Ano {ano.ano} - Comunicação Científica {comunicacao_cientifica.arquivo_nome}")
-    # conteudo = limpar(
-    #     open(os.path.join(comunicacoes_cientificas_dir, ano, comunicacao_cientifica), "r", encoding="UTF-8").read(),
-    #     ["\t", "\r", "\n", "  "]
-    # )
     nlp = spacy.load('pt_core_news_lg')
     nlp.add_pipe('spacy-ngram', config={'ngrams': (1, 2, 3)})
-    spacy_model = PreProcessamento.load_model("pt_core_news_lg")
     preprocessor = PreProcessamento(
-        spacy_model=spacy_model,
+        spacy_model=PreProcessamento.load_model("pt_core_news_lg"),
         remove_numbers=True,
         remove_special=True,
         pos_to_remove=None,
