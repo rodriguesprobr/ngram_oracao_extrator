@@ -1,0 +1,323 @@
+------------------texto todo inglês----------------
+MAPEAMENTO GEORREFERENCIADO DE CURSOS DE BIBLIOTECONOMIA E CIÊNCIA DA
+INFORMAÇÃO: UMA ABORDAGEM INTERNACIONAL
+Modalidade: Resumo Expandido
+Resumo: Oferece uma análise de um projeto de código livre em andamento que busca mapear os
+programas de Biblioteconomia e Ciência da Informação (BCI) em nível mundial. Um questionário foi
+utilizado para identificar as faculdades de BCI. Diversos visualizadores georreferenciados foram
+examinados e validados de acordo com os benefícios oferecidos. Os dados disponibilizados com o
+mapa escolhido são uma fonte de informação. Informações sobre faculdades e programas de BCI,
+requisitos para aplicação, tipo de graduação, dentre outras, pode contribuir para aumentar a
+visibilidade e reconhecimento de abordagens na Educação de BCI e habilitar estudantes a entender a
+distribuição dos programas espacialmente.
+Palavras-Chave: sistemas de informação geográfica; cursos de BCI; BSLISE; visão; ciência aberta.
+1 INTRODUCTION
+Library and Information Science (LIS) schools are often challenging to locate as there
+are no global databases currently in existence that allow one to do a comprehensive search
+for specific data and characteristics (CHU; RAJU, 2018). The impetus behind this project was
+to begin to build a global database of LIS schools and programs using data gathered from an
+international survey that requested information on contact details, degrees available,
+certifications offered as well as languages available within the program (OGUZ, 2020, p. 15).
+Geographic Information System (GIS) is a tool for organizing data so that it can combine
+multiple data sets. The paper provides an overview an ongoing GIS project to map LIS
+schools and programs around the world and preliminary findings of the study.
+Since John Snow’s map of the cholera outbreak in 1854 (BRODY; RIP; VINTENJOHANSEN; PANETH; RACHMAN, 2000) and coining of the term GIS in early 1960s
+(CHRISMAN, 1999), GIS has become an increasingly important tool in data visualization.
+Though early definitions of GIS placed more emphasis on the use of hardware and software
+in capturing, storing, managing, analyzing, and presenting spatially referenced data (e.g.,
+MAGUIRE, 1991), there is no agreement on the definition of GIS. For the purposes of this
+research, the following definition is adopted: organized activity by which people measure
+and represent geographic phenomena, then transform these representations into other
+forms while interacting with social structures (CHRISMAN, 1999) as the definition addresses
+the social and cultural contexts that informed measurement and representation of the data.
+Within the LIS domain, GIS has been primarily used to analyze service areas and manage
+library facilities and collections (MANDEL; BISHOP; OREHEK, 2020) in addition to advocacy
+projects such as the Library Map of the World (https://librarymap.ifla.org/) by the
+International Federation of Library Associations and Institutions (IFLA) and the Libraries of
+the World (http://www.abf.asso.fr/pages/carte_bib/carte_bib.php) by the French Library
+Association (ABF). Especially in academic institutions, the LIS community has also focused on
+providing access to GIS data in addition to access to traditional geographic resources
+(MARCH; SCARLETTO, 2017; WEIMER; REEHLING, 2006). GIS presents a myriad of
+opportunities for the LIS community to leverage its use from increasing access to
+information and services to advocacy and policy development (MANDEL; BISHOP; OREHEK,
+2020; ROSICHAN, 2020).
+
+
+
+2 METHODS
+The study used an online questionnaire to collect information about LIS schools and
+programs around the world as part the IFLA Building Strong Library and Information Science
+Education (BSLISE) Working Group activities. The online questionnaire is developed by an
+international team of researchers and included questions about schools and programs and
+local structures, organizations, and procedures that address the issues of professional
+qualifications, accreditation, certification, and registration for professional practice.
+A non-probability sampling strategy was used due to a lack of a sampling frame to
+disseminate the questionnaire. The questionnaire was distributed via regional, national, and
+international mailing lists as well as personal contacts by the members of the BSLISE
+Working Group. The questionnaire included eight questions about schools and programs and
+16 questions (e.g., admission and graduation requirements, program modality, and
+accreditation) for each program offered by the LIS academic unit. The questionnaire was
+made available and promoted for about two months in late 2019. Multilingual information
+contacts were provided in the invitation message to increase access, who were available to
+address question in 6 languages: Arabic, Chinese, French, Russian, Spanish, and Turkish. A
+total of 159 schools and programs with 28 languages of instruction are represented in the
+dataset from 66 different countries.
+
+3 SOFTWARE SELECTION
+The study has followed the Open Science principles by fostering sharing and
+collaboration since its inception as an international collaborative project. Open Science
+constitutes a radical transformation in the way of doing scientific research. The origin of the
+concept can be traced back to 2002 with the Budapest Open Access Initiative (BOAI) that
+raises the scope and use of Open Access. It is a new model and a cultural change in the way
+researchers, educators and other stakeholders create, store, share and deliver the results of
+their activity (AYRIS; LÓPEZ DE SAN ROMÁN; MAES; LABASTIDA, 2018). Considering that we
+live in complex socio-environmental systems, which are better understood from the
+integration of different perspectives and forms of knowledge, science is moving to new
+participatory ways of generating knowledge (MONZÓN ALVARADO; ZAMORA RENDON;
+VÁZQUEZ PÉREZ, 2020). Within the open science umbrella, initiatives such as participatory
+research, and citizen science have gained relevance. As the use of open source software and
+
+
+
+open interfaces is a critical part of open science, the choice an open source GIS software was
+straight forward in addition to other reasons including greater accessibility and equity, initial
+cost of investment, long-term sustainability of the project by allowing for future contributors
+to work on the project or host it without having to have access to specific commercial
+packages or specific institutional affiliations.
+
+Table 1 - Differences between the software selection
+Typology
+Web servers
+
+Software
+
+Advantages
+
+Disadvantages
+
+Geoserver
+
+-Ease of operation (configuration through a
+Web application).
+-Has a powerful community configuration files
+
+- Difficult to learn and
+configure at the beginning
+
+Mapserver
+
+- Multiplatform
+- Speed of access to data
+- A multitude of raster and vector formats
+supported
+- Very active and developed community.
+
+- Download speed and file
+sizes in comparison with
+other software
+
+‘Thin clients’
+web
+
+OpenLayers - Simplicity of use (without dependency on
+specific map servers)
+- Tiles and cache support and access to Google
+or Bing maps
+
+- Requires more time for
+learning
+- OpenLayers community is
+smaller
+
+GIS service at
+the cloud
+
+CARTO
+
+- Open, powerful and intuitive platform
+- Simplicity of Builder
+- Support
+
+- Hard to use (when you
+have no knowledge).
+- Lack of editing capabilities
+
+QGIS Cloud
+
+- Free to use
+- User-Friendly GUI
+- Usable features
+- Extend functionality
+
+- It is less Beginner Friendly
+- Tools can be outdated
+sometimes
+- Lack of tutorial
+
+Visão
+
+- Multiplatform
+- Speed of access to data
+- Online tool
+- Easy configuration
+- Modular infrastructure
+- Allow citizen participation
+
+- Beta version
+
+Fonte: Elaborado pelos autores
+
+A comparison table where various GIS applications that were considered by their
+typologies (i.e., Web Server, Thin Clients Web, and Cloud-based) was used to facilitate the
+decision making process in identifying the most suitable open source GIS software for the
+project. Though Geoserver was initially adopted because mainly of existing skillset BSLISE
+group, the difficulties experienced when configuring the software led the research team to
+consider alternatives. In this regard, Visão emerged as a better option for the long-term
+sustainability of the project. Visão’s features such as its multi-platform support, increased
+
+
+speed of access to data, modular infrastructure, and ease of use as a cloud-based based GIS
+software let the research team to choose it over other alternatives including GeoServer,
+MapServer, Open Layers, CARTO, and QGIS Cloud. It also offers the option for more direct
+community participation, also referred to as citizen science. The term citizen science can be
+described as a public engagement in scientific research activities where citizens actively
+contribute to science either with their intellectual effort, or surrounding knowledge, or their
+tools and resources (SERRANO SANZ; HOLOCHER-ERTL; KIESLINGER, SANZ GARCIA; SILVA,
+2014). Above all, long term sustainability of the project in terms of ability to customize the
+interface, cost (e.g., hosting, licensing), and access to technical expertise, for example, is
+critical for its success. The Brazilian Institute of Information Science and Technology (IBICT),
+the developer of Visão, agreed to host the software and maintain for free of charge and
+joined the BSLISE initiative as a partner organization.
+
+4. IMPLEMENTATION
+This section describes the implementation of the survey data to generate the GIS
+map.
+
+4.1 Data Cleanup
+The first action was to clean the data by standardizing certain responses such as
+country names and eliminating duplicate responses. The dataset had more information than
+Visão could present as the chosen software works essentially with quantitative and
+georeferenced data. Hence, after cleaning the data the group had to identify what pieces of
+information (i.e., id, Nam of the Institution, Name of the Academic Unit, Web Address, and
+Program Specification) could be exported to the interactive interface. A new file in CSV
+(comma-separated values) format was generated and delivered to the working group
+responsible for the transformation of the text data to the SQL (structured query language)
+format which is the format that Visão can process. During this process no other aspect
+related to data quality was proposed, which can be done during the next phase.
+
+4.2 Indicators, Geographic Filters, & Layers
+Currently Visão (SHINTAKU, 2019) works with four types of data structures to present
+data and information: indicators, geographical filters, layers, and metadata. The software is
+
+
+
+hosted by the Brazilian Institute of Information Science and Technology (IBICT) which is a
+partner organization with IFLA’s BSLISE initiative (https://bslise.org/).
+An indicator is a field that uses quantitative data to define a numerical value to a
+concept. To define the indicators, an understanding was needed of what data could be
+quantified as the main fields. The main objective was to have an international understanding
+of how LIS programs were distributed into the world, so the fields "type of program" and
+"qualification required" were transformed into numerical values as they were summed per
+country and per type of program and qualification required. As a result, twelve indicators
+were identified from the dataset and organized in two categories.
+▪
+
+Category: LIS programs
+o Indicators: Undergraduate, Master's, Doctorate, Non-degree, Specialist or
+Professional, Post-Master's, LIS programs
+
+▪
+
+Category: Qualification required
+o Indicators: Accredited Degree (National), Accredited Degree
+(International), Certification, None, Other
+
+Related indicators from external data sources were also added in the interactive
+interface in addition to these categories and indicators from the questionnaire.
+▪
+
+Category: Human development
+o Indicator: Human Development Index
+
+▪
+
+Category: Pisa performance
+o Indicators: Mathematics performance, Science performance, Reading
+performance
+
+▪
+
+Category: Economy
+o Indicator: GDP (current millions of US$)
+
+These last indicators were included to allow users to understand how factors such as
+human development as it situates LIS education schools/program in socioeconomic context,
+which allows one to determine how LIS as a field is maturing or thriving. Overall, a total of 19
+pertinent indicators were identified.
+Regarding the geographical filters, they are used to limit the countries presented to a
+certain region or to countries that have certain requirements. The geographical filters
+defined by the group were: continent, LIS programs (Non-degree, Specialist or Professional,
+Undergraduate, Master, Doctorate and Post-Master's) and Qualification required
+
+
+
+(Certification, Accredited Degree/National, Accredited Degree/International, Other and
+None). After a filter is selected, the platform presents the countries that have those values.
+For example, if a geographical filter of "Doctorate" is chosen, countries that offer a doctorate
+degree are presented on the map as shown in Figure 1.
+
+Figure 1 - Programs that offer a Doctorate degree
+
+Fonte: Sistema Visão (2021).
+
+The diversity of realities depending on continents, countries, and LIS programs can be
+easily viewed when the geographical filters are applied.
+
+Figure 2 - A Visão screenshot with indicator, filter, layer and metadata applied
+
+Fonte: Sistema Visão (2021).
+
+The data structure named layers is the exact location of an address presented in the
+map. As the dataset has latitude and longitude of all LIS Schools, the group opted to present
+
+
+
+them. This was the only layer identified during the data analysis. Finally, the other fields
+were defined as metadata related to the indicators, geographical filters, and layers.
+
+4.3 Importing Data into Visão
+The data were transformed to SQL format to import it into Visão, but the platform
+also supports CSV automatic conversion. As this was the first time an international
+georeferenced dataset was imported into Visão, it was necessary to make certain changes to
+the code.
+This project aligns with the conference theme of equity and inclusion as the project
+focused on open source solutions in order to allow greater access over using a commercial
+package. In addition, the project was an international endeavor of individuals and
+technologies from the Global North and South and will be made freely available online as a
+resource (https://bslise.org/map/) for educators, students, practitioners, policy makers and
+researchers in order to allow greater dissemination of the findings and understand and
+compare the state of LIS education programs internationally.
+
+5 FUTURE DIRECTIONS & CONCLUSION
+The project is still a work-in-progress. The researchers plan to finalize their edits and
+share the map with the BSLISE community for feedback. After this initial feedback period,
+the interface may be revisited. Since the dataset is limited in its coverage and data were
+collected in late 2019, the research team intends to disseminate the survey with a working
+model to further encourage participation and refresh the data. The team also plans to add
+additional functionalities to the user interface to let LIS community members to include and
+update their data by themselves, for example. Lastly, the research team is investigating
+various alternatives to release the data to the wider LIS community for research purposes.
+As the participation rate improves, additional data such as funding sources may be collected,
+which can be used as an indicator of the progress of those schools. Also, collaboration with
+other organizations to enrich the work is being considered.
+The purpose of this paper was to show the preliminary findings of how LIS schools
+could be integrated into an open-source GIS project to map their distribution worldwide.
+Such visualization of LIS schools and programs around the world could help (a) students who
+are interested in pursuing an LIS degree to make more informed decisions, (b) the LIS
+
+
+community to establish relationships at institutional and individual levels, (c) researchers
+access more up-to-date data about LIS schools and programs as well as professional
+requirements, and (d) serve as a source of information to identify the recent news and the
+evolution of LIS schools over time.
+
