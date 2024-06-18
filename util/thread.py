@@ -1,10 +1,10 @@
 import os
 
-import spacy, spacy_ngram
+import spacy
 
 import util
 from preprocessamento import PreProcessamento
-from sql import ngram_inserir, comunicacao_cientifica_ngram_inserir, comunicacao_cientifica_analisar, ano_selecionar_um, \
+from util.sql import ngram_inserir, comunicacao_cientifica_ngram_inserir, comunicacao_cientifica_analisar, ano_selecionar_um, \
     comunicacao_cientifica_analisar_finalizar
 
 

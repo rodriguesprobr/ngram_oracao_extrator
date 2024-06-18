@@ -1,6 +1,6 @@
 from util import log
 
-from sql import ngram_por_ano_selecionar
+from util.sql import ngram_por_ano_selecionar
 
 analisar = input("Deseja analisar os dados? (S/N) ")
 if analisar.lower().strip() in ["sim", "s"]:
