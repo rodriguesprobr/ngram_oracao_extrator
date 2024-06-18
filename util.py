@@ -1,3 +1,5 @@
+import json
+import os
 from datetime import datetime
 
 
@@ -10,3 +12,7 @@ def limpar(texto, remocoes):
         while texto.find(remocao) != -1:
             texto = texto.replace(remocao, " ")
     return texto.strip().lower()
+
+
+def get_config(nome):
+    return json.load(open(os.path.join(os.path.dirname(os.path.realpath(__file__)), "config.json")))[nome]
