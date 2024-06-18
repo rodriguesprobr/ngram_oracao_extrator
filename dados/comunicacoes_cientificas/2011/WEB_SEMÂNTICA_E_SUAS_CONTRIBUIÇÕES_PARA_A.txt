@@ -1,0 +1,171 @@
+WEB SEMÂNTICA E SUAS CONTRIBUIÇÕES PARA A CATALOGAÇÃO: UM ESTUDO SOBRE ARQUITETURAS DE METADADOS E FRBR
+
+Resumo: Os avanços tecnológicos provenientes da evolução da Internet proporcionaram um
+crescimento exorbitante das informações contidas na Web, dificultando o acesso e recuperação
+destas. Muitas se localizam em uma camada profunda da Web, na qual mecanismos de busca
+Web não conseguem chegar. É o caso das informações contidas nos bancos de dados e sistemas
+de bibliotecas, cuja recuperação de registros e documentos digitais somente podem ser encontrados
+através de suas próprias interfaces de busca. A proposta de uma Web Semântica, idealizada por
+Tim Berners-Lee no ano de 2001, surgiu como uma alternativa ao caos da Internet, ao passo que
+possibilitaria a interpretação das informações por máquinas, permitindo, assim, maior qualidade nas
+buscas e resultados mais relevantes. Para tanto, desenvolveram-se diversas tecnologias e mecanismos
+inteligentes, estruturados em metadados, padrões, linguagens, ontologias e agentes de busca. Objetiva-se identificar as contribuições que a Web Semântica pode oferecer à área de Ciência da Informação
+e, sobretudo à modelagem e arquitetura de metadados em catálogos online de bibliotecas, baseando se nos conceitos contidos nos FRBR, um modelo conceitual desenvolvido para a representação do
+universo bibliográfico cuja estrutura se baseia na modelagem entidade-relacionamento. A proposta
+central será estudar diversas arquiteturas de metadados semântica, além de analisar o modelo FRBR
+e o desenvolvimento de uma ontologia baseada em seu vocabulário e conceitos.
+Palavras-chave: Informação e Tecnologia. Catalogação. Web Semântica. Arquiteturas de metadados.
+FRBR.
+
+1 INTRODUÇÃO
+	
+A constante evolução das Tecnologias de Informação e Comunicação (TIC) se destaca como
+fator fundamental para o desenvolvimento das pesquisas na área da Ciência da Informação, levando-se em conta o fato de que tais tecnologias avançam consideravelmente em curtos períodos de tempo.
+Há, então, a necessidade de pesquisar os impactos de tais tecnologias, principalmente, no que se
+refere ao uso destas na prática profissional, momento no qual o estudo da teoria e a investigação se
+configuram como etapas essenciais.
+O aumento nos fluxos informacionais, gerados pela evolução da internet, torna fundamental
+o desenvolvimento e a otimização de mecanismos de busca e recuperação nesses ambientes
+informacionais.
+
+Desde a criação dos primeiros códigos de catalogação, especialistas e pesquisadores buscam
+sua melhor utilização no Tratamento Descritivo da Informação (TDI), levando em consideração a
+eficácia da recuperação informacional nos ambientes informacionais. Em 1998, um grupo de estudos
+da IFLA (International Federation of Librarian Association and Institutions) publicou um relatório
+de pesquisa desenvolvida entre os anos de 1992 e 1995, que ficou mundialmente conhecido no campo
+da catalogação como os FRBR, sigla para Functional Requirements for Bibliographic Records, em
+português, Requisitos Funcionais para Registros Bibliográficos. (IFLA STUDY GROUP..., 2009)
+	
+No contexto da internet, a recuperação da informação se configura como um dos maiores
+desafios aos profissionais e pesquisadores da área, já que há um aumento exponencial de informações
+que precisam ser descritas e localizadas por mecanismos de busca. A Web Semântica, idealizada por
+Tim Berners-Lee e o W3C (World Wide Web Consortium) no início deste século, é uma extensão
+da Web atual, que busca integrar significado aos conteúdos Web. (BERNERS-LEE; HENDLER;
+LASSILA, 2001)
+	
+Com base nos FRBR, nas propostas que a Web Semântica tem com relação à recuperação da
+informação e ao fato das informações contidas em catálogos online de bibliotecas não serem cobertas
+por mecanismos de busca da Web, se apresenta como o problema desta pesquisa: os conceitos e
+arquiteturas de metadados propostos para a Web Semântica podem contribuir positivamente para a
+construção de catálogos online tendo por base ontologias pautadas no modelo conceitual FRBR?
+	
+Propõe-se, então, o desenvolvimento da pesquisa através de estudos e análises que
+busquem identificar como as tecnologias utilizadas para a Web Semântica podem contribuir com
+a Biblioteconomia e a Ciência da Informação, no que se refere à modelagem de OPACs, à luz dos
+conceitos pontuados nos FRBR, seu vocabulário e demais esforços relacionados ao modelo.
+1.1 Objetivo geral
+	
+Esta pesquisa tem como objetivo geral identificar as contribuições que os conceitos,
+tecnologias, arquiteturas de metadados utilizados pela Web Semântica podem oferecer à área da
+Ciência da Informação, mais especificamente ao desenvolvimento, modelagem e arquitetura de
+metadados em catálogos online, tendo por base os conceitos definidos nos Functional Requirements
+for Bibliographic Records (FRBR), bem como estudos que possibilitam sua utilização como recurso
+ontológico. Visa, sobretudo, estudar meios de tornar as informações contidas em bases de dados e
+catálogos de bibliotecas (registros catalográficos e recursos informacionais digitais – born-digital
+documents – localizados na “Web profunda”) passíveis de recuperação na “Web superficial”.
+1.2 Objetivos específicos
+	Identificar os principais aspectos da Web Semântica, destacando suas características, padrões de metadados, linguagens de ontologias e demais conceitos que a fundamentam;
+	Analisar e identificar as arquiteturas de metadados semânticas mais indicadas a serem atribuídas
+na modelagem de OPACs, a fim de possibilitar a interoperabilidade das informações e recursos
+contidos no catálogo para a sua recuperação na Web;
+	Analisar, por fim, a possibilidade de utilizar os FRBR como modelo ontológico, tendo por base
+as semelhanças do modelo conceitual com a estrutura de ontologias, focando no estudo do
+documento FRBR/CIDOC (International Committee on Documentation).
+
+2 FUNDAMENTAÇÃO TEÓRICA
+A enorme quantidade de informações disponível na Web faz com que hoje em dia exista
+uma ampla mobilização de recursos humanos e financeiros envolvidos em desenvolver maneiras de
+otimizar a recuperação de todas as informações dispostas nesta grande teia. No entanto, a maior parte
+das informações presentes na Web se encontram em camadas escondidas, nas quais os robôs de busca
+(Web buscadores, como Google e Yahoo) não podem ou não conseguem alcançar. Este não é um fato
+negativo, já que muitas das bases de dados contêm informações sigilosas que não devem ser acessadas
+sem restrições, como bases de empresas privadas, bancos ou órgãos governamentais, por exemplo.
+O foco desta pesquisa, porém, está nas informações contidas em bases de dados de bibliotecas, cujos
+conteúdos se encontram nas camadas da chamada “Web profunda”, as quais podem ser disseminadas
+e, sobretudo, encontradas. (BERGMAN, 2001 apud MARCONDES, 2006)
+Assim como se deu o desenvolvimento e crescimento da Web, nas bibliotecas a quantidade
+de informações também cresceu substancialmente, porém num maior período de tempo, levando
+em conta o fato de que as bibliotecas existem desde os períodos mais remotos. O surgimento dos
+microcomputadores e da Internet no final dos anos 80 do século passado teve grande destaque neste
+crescimento, pois possibilitou organizar de maneira muito mais ágil os registros catalográficos antes
+elaborados manualmente e também automatizou os demais serviços da biblioteca. Com a evolução
+do paradigma orientado ao bibliotecário para um orientado ao usuário (LE COADIC, 2004), novas
+visões foram atribuídas ao processo de catalogação, bem como ao profissional catalogador.
+Sob esse novo paradigma foram estipulados os FRBR: um documento elaborado por
+especialistas da IFLA cuja finalidade era definir diretrizes para a modelagem conceitual de bases
+de dados de catálogos de bibliotecas, pautadas nas tarefas do usuário definidas nos Princípios de
+Paris (1961), garantindo os requisitos fundamentais para a descrição de recursos informacionais
+presentes em bibliotecas e outras unidades de informação. Como modelo conceitual do tipo entidaderelacionamento, os FRBR são compostos por entidades, atributos e relacionamentos. (TILLETT,
+2004)
+A proposta de atribuir significado às páginas Web para que sejam interpretadas por máquinas
+surgiu no ano de 2001, a partir da publicação de um artigo na revista americana Scientific American,
+cujo título é: “Web Semântica: um novo formato de conteúdo para a Web com significado para
+computadores vai iniciar uma revolução de novas possibilidades”. Tal artigo foi publicado por Tim
+Berners-Lee (diretor do W3C e pesquisador do Instituto de Tecnologias de Massachusetts - MIT),
+James Hendler (professor da Universidade de Maryland) e Ora Lassila (pesquisador e membro
+do W3C), e é até hoje um texto referência sobre Web Semântica, pois nele os autores definem
+seus principais conceitos, estrutura e ilustram as situações que esse novo momento da Web pode
+proporcionar. (BERNERS-LEE; HENDLER; LASSILA, 2001)
+	
+A Web Semântica, segundo Alves (2005), tem como proposta estruturar e atribuir semântica
+aos dados representados com a finalidade de diminuir problemas de recuperação da informação na
+Web, apresentando, para tal, uma estrutura que permitirá a compreensão do conteúdo dos recursos
+informacionais, através da valorização semântica destes recursos e de agentes inteligentes capazes de
+processar informações e trocá-las com outros programas.
+Os recursos propostos para a Web Semântica e os esforços intelectuais proporcionados pela
+Ciência da Informação por meio dos FRBR agindo conjuntamente poderão exercer transformações
+significativas no que tange à representação e recuperação de recursos na Web, possibilitando, assim,
+a visibilidade dos recursos localizados nos sistemas e bases de dados de bibliotecas. A atribuição de
+uma ontologia FRBR à arquitetura de metadados adequada, utilizando princípios da Web Semântica
+de Tim Berners-Lee, poderá proporcionar benefícios às unidades informacionais, aos usuários das
+informações e, sobretudo, às informações, que deixarão de estar, como afirma Grandmann (2005),
+“enterradas” na Web.
+5 METODOLOGIA
+	
+A pesquisa se caracterizará por seu caráter teórico-exploratório, realizando-se por meio de
+análises descritivas sobre os assuntos que irá abordar, de modo a construir o conhecimento teórico sobre
+esses temas. Para tanto, a pesquisa será feita em livros e periódicos da área de Ciência da Informação
+e Tecnologias, anais de congressos, teses, dissertações, monografias, revistas eletrônicas, bases de
+dados textuais e referenciais, documentos eletrônicos disponíveis na Internet, bibliografias, catálogos,
+dentre outras fontes informacionais confiáveis que se fizerem necessárias ao desenvolvimento da
+etapa de busca.
+DISCUSSÕES
+Para que a Web Semântica seja possível é necessário que diversas ferramentas tecnológicas
+trabalhem de forma integrada em sua estrutura de implementação. Tais ferramentas podem ser
+resumidas em: metadados; linguagens de marcação; arquitetura de metadados; ontologias; e agentes
+inteligentes. (JORENTE; SANTOS; VIDOTTI, 2009)
+
+
+	
+Uma dos elementos essenciais para que a interoperabilidade semântica ocorra entre sistemas
+de informação é a elaboração de ontologias. Breitman (2005, p. 100) afirma que
+[...] ontologias têm muito em comum com outras modelagens que utilizamos
+em nossa prática de software. Exemplos são modelos de Análise Estruturada,
+modelos de Entidade Relacionamento, de Análise Essencial e Orientação a
+Objeto. A construção desses modelos, bem como a de ontologias, envolve
+processos de descoberta, modelagem, validação e verificação da informação.
+	
+O W3C pontua que as ontologias devem prover descrições para os conceitos de “classes”
+(ou “coisas”), relacionamentos entre essas classes e propriedades (atributos). (BREITMAN, 2005, p.
+31) Com base nas semelhanças existentes entre ontologias e modelagens de dados, como o aspecto
+conceitual que possuem e a utilização de relacionamentos, evidenciam-se os esforços da criação de
+uma ontologia baseada no modelo conceitual FRBR.
+Fusco (2010) afirma que, dentre as muitas possibilidades de usos do modelo em questão,
+destaca-se a iniciativa dos estudos sobre FRBROO, realizado pelo CIDOC (International Committee
+on Documentation), a partir do documento já elaborado CIDOC CRM (Conceptual Reference
+Model), em conjunto com a IFLA, formando o International Working Group on FRBR/CIDOC
+CRM Harmonisation, responsável pela elaboração de uma ontologia formal dos FRBR para uso na
+alternativa proposta da modelagem orientada a objetos.
+CONCLUSÃO
+A internet se apresenta, no contexto atual, como o ambiente informacional que oferece o
+maior número de recursos informacionais e é, sem dúvidas, o que necessita de maiores cuidados
+com o tratamento descritivo de suas informações. Inseridos nesse ambiente estão os catálogos online
+de bibliotecas. A proposta de levantar e analisar as arquiteturas de metadados utilizadas pela Web
+semântica é uma forma de buscar informações sobre como modelar um catálogo online de biblioteca
+que possa interoperar suas informações com motores de busca, possibilitando tornar suas informações
+visíveis na Web.
+Levando-se em conta que esta pesquisa está em sua fase inicial, espera-se que o estudo das
+arquiteturas de metadados identificados, juntamente à análise da ontologia FRBR proposta pela IFLA
+e pelo CIDOC, possam contribuir significativamente com os estudos da área, assim como para a
+implementação de catálogos online semânticos e mais úteis aos usuários que dele necessitam.
+

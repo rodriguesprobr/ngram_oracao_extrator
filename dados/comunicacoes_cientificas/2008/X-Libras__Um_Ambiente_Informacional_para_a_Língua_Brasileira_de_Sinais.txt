@@ -1,0 +1,293 @@
+X-Libras: Um Ambiente Informacional para a Língua Brasileira de Sinais 
+
+Resumo: Este artigo descreve a implementação de um ambiente informacional baseado no padrão de metadados
+desenvolvido utilizando o vocabulário X-LIBRAS, arquitetura baseada na tecnologia XML para a representação
+tridimensional dos sinais da Língua Brasileira de Sinais. O padrão desenvolvido de metadados para a representação de sinais serve de base para a criação de ambientes de visualização, manipulação e interoperabilidade de
+informações contendo sinais LIBRAS. Foi implementada uma interface para homologar a arquitetura proposta
+por meio de ambiente virtual que utiliza avatares humanóides do padrão H-Anim e as tecnologias Extensible 3D
+(X3D) e Virtual Reality Modeling Language (VRML). Este sistema permite a visualização tridimensional e
+imersiva dos sinais LIBRAS, de modo que o usuário possa ter uma visão ampliada e detalhada do sinal.
+Palavras-chaves: XML. Metadados. LIBRAS. Realidade virtual.
+
+1 Introdução
+Recursos tecnológicos têm sido utilizados para melhorar a comunicação das pessoas
+deficientes, isto acontece porque a flexibilidade de sistemas computacionais torna possível o
+desenvolvimento de serviços especiais para usuários que tenham alguma debilidade (SHNEIDERMAN, 1998).
+No âmbito da deficiência auditiva, as línguas de sinais aparecem como o meio mais
+natural de comunicação, e nesta área muitos esforços tecnológicos têm sido feitos para facilitar o aprendizado e a divulgação das línguas de sinais como os trabalhos de Capovilla (2003)
+para a Língua Brasileira de Sinais (LIBRAS).
+A Ciência da Informação, no âmbito das tecnologias de informação e seus estudos do
+tratamento e disponibilização da informação, tem contribuído na questão da representação e
+persistência de ambientes informacionais com a finalidade de garantir uma melhor geração,
+armazenamento, recuperação, uso e interoperabilidade do conteúdo informacional em ambientes na Web. No contexto da criação de ambientes favoráveis ao acesso e ao uso de conteúdos
+informacionais digitais, são utilizados metadados para descrever as informações desse ambiente e, neste sentido, metadados pode ser definido como[...] conjuntos de atributos, mais especificamente dados referenciais, que representam o conteúdo informacional de um recurso que pode estar em meio
+eletrônico ou não. Já os formatos de metadados, também chamados de padrões de metadados, são estruturas padronizadas para a representação do
+conteúdo informacional que será representado pelo conjunto de dadosatributos (CASTRO; SANTOS, 2007).
+
+No âmbito das linguas de sinais, a implantação de ambientes informacionais utilizando
+tecnologias e elementos de acessibilidade com a presença de recursos tridimensionais podem
+viabilizar o estudo e o acesso de usuários surdos, de forma autônoma e independente a esses
+ambientes e a Realidade Virtual (RV), com os seus recursos avançados de interface, trouxe
+para esse campo de estudo, muitas possibilidades, devido ao seu realismo visual e interação
+dos sentidos humanos. Uma vantagem importante de Ambientes Virtuais (AV) sobre outras
+formas de interação homem-computador é que o ambiente pode ser visualizado a partir de
+qualquer ângulo, à medida que vão sendo feitas alterações em tempo real e devido a estrutura
+tridimensional dos sinais, AVs podem facilitar o entendimento, aprendizado e a comunicação
+de deficientes auditivos na língua de sinais.
+Este trabalho objetivou desenvolver um ambiente informacional utilizando a tecnologia XML (eXtensible Markup Language) na criação de um padrão de metadados para a representação de sinais tridimensionais chamado vocabulário X-LIBRAS que permite criar uma
+arquitetura padronizada de armazenamento e intercâmbio de informações de sinais da LIBRAS. A proposta deste vocabulário é criar um mecanismo unificado, padronizado e flexível
+que permita facilitar o desenvolvimento de ferramentas computacionais utilizando a LIBRAS.
+A partir deste vocabulário, implementar um sistema de RV que permita a visualização dos
+sinais num ambiente tridimensional facilitando o entendimento da estrutura das unidades que
+formam um sinal.
+2 O padrão XML
+XML é um acrônimo para Extensible Markup Language – Linguagem de Marcação
+Extensível – linguagem que consiste de uma série de regras que divide um documento em
+partes lógicas e hierárquicas. O XML é uma maneira simples e padrão de delimitar os dados
+do texto (ANDERSON et. al., 2001). Este mecanismo de descrição de dados é um ótimo modo de compartilhar informação via Internet porque:
+• É aberto; o XML pode ser usado para trocar dados com outros usuários e programas em uma plataforma de maneira independente.
+• Sua natureza auto-descritiva o torna uma opção eficaz para soluções entre desenvolvedores.
+• É possível compartilhar dados entre programas sem coordenação prévia.
+Aplicações de RV são complexas devido à natureza do conteúdo de um grafo de cena
+e à grande quantidade de informações que são geradas pelo AV. Se a Internet for esse ambiente de execução da aplicação de RV, a arquitetura de armazenamento e a transferência dessas
+informações devem ser as mais simples e seguras possível, além de garantir acesso a plataformas abertas. O formato de um documento XML possibilita essa característica, pois expressa de uma maneira simples e padrão a delimitação das informações do documento, facilitando,
+assim, a transmissão e o processamento dos dados nele inseridos e ainda propondo a integração com tecnologias não proprietárias (ANDERSON et al., 2001).
+As regras de sintaxe do XML são fundamentais para qualquer sistema baseado nessa
+tecnologia. Essas regras foram estabelecidas pela Recomendação XML 1.0 do W3C CONSORTIUM, e um documento que obedece a essas regras é chamado de XML bem-formado.
+Existem ferramentas analisadoras (parser) que são responsáveis por verificar se um documento obedece às regras de sintaxe do XML e identificar se um documento é bem-formado (ANDERSON et al., 2001).
+Para criar um vocabulário XML específico para uma aplicação, deve-se especificar as
+regras por meio das quais os documentos XML serão escritos. Como qualquer desenvolvedor
+pode utilizar o XML para criar seu próprio vocabulário de marcação e manter a interoperabilidade entre ambientes informacionais, deve-se criar um mecanismo de validação que defina
+as regras de um documento XML. Este mecanismo é chamado de DTD (Definition Type Document) e contém as regras acordadas que uma comunidade definiu para descrever um vocabulário de um ambiente informacional específico.
+Ao projetar um documento XML para uma aplicação específica, o projetista deve definir no DTD o que é ou não permitido num documento XML. Com isso, uma aplicação deve
+consultar um DTD ao gerar um documento XML para outra aplicação. Da mesma maneira, a
+aplicação cliente ao receber esse documento, antes de processá-lo, deve consultar o DTD para
+verificar se o documento é legítimo em relação às regras pré-definidas no sistema, essa validação também é efetuada pelo parser. Portanto, um parser pode tanto verificar um documento
+em relação às regras centrais do documento XML - são os chamados parsers de não validação
+- quanto verificar um documento quanto às regras de um DTD - são chamados parsers de
+validação (REITMAYR; SCHMALSTIEG, 2001).
+Com esse mecanismo, um ambiente informacional que queira ter interoperabilidade
+entre aplicações distribuídas e colaborativas que geram e/ou recebem documentos XML, pode
+garantir a integridade das informações recebidas por meio da adoção de um padrão de metadados e por conseqüência a implementação de um vocabulário XML utilizando DTD contendo as regras desse padrão e, então, desenvolvendo uma aplicação parser que valide os documentos utilizando essas regras, como pode ser observado na Figura 1.
+Aplicação
+
+
+A criação de um DTD também segue algumas regras sintáticas que definem como escrever as regras de uma determinada classe de documentos XML. Basicamente, um DTD precisa definir todos os elementos em um documento, os atributos que podem ser designados a
+ele, e os relacionamentos possíveis entre os elementos.
+Ao criar um documento XML, o DTD é associado a esse documento, então quando
+um parser de validação lê a instrução através da qual os documentos são associados a um
+DTD, isto informa ao parser que carregue o DTD e valide o documento de acordo com as
+regras contidas nele. Caso o parser não encontre no documento XML estas características, um
+erro acontecerá neste processo, e o documento não será validado.
+
+Esta arquitetura de validação foi utilizada no ambiente proposto, em que um padrão de
+metadados foi criado para a representação de sinais LIBRAS considerando suas características
+tridimensionais e um vocabulário XML contendo as especificações das unidades mínimas
+distintivas da linguagem de sinais. Para a criação do ambiente de visualização desses sinais
+também foi utilizado um vocabulário XML padrão de implementação de interfaces tridimensionais, que é descrito a seguir.
+3 A especificação X3D
+O formato X3D (WEB3D CONSORTIUM, 2002) tem-se mostrado uma excelente especificação na representação de recursos de geometria e comportamento na Web, pois permite
+a utilização do padrão XML para codificação de sistemas de RV. O próximo passo é o desenvolvimento de ferramentas de autoria de grafos de cena e de aplicativos de visualização e navegação destes arquivos X3D. Atualmente, os navegadores VRML não suportam o padrão
+X3D, e esse tem sido o desafio deste padrão.
+Os navegadores ou plug-ins que executam aplicações X3D utilizando o perfil H-Anim
+não são, ainda, compatíveis com todos os recursos deste perfil, por esta razão, a implementação do protótipo foi realizada com avatares H-Anim desenvolvidos em VRML através de
+classes Java (Withers, 1999). Porém, também foi implementado o avatar em X3D utilizando o
+software VizX3D da Virtock Technologies, Inc (Vizx3D, 2004). O Vizx3D é uma ferramenta
+que permite o desenvolvimento de ambientes virtuais X3D através de uma interface visual
+(GUI), além de possibilitar a simulação da visualização do navegador.
+4 Língua Brasileira de Sinais - LIBRAS
+As línguas de sinais distinguem-se das línguas orais porque utilizam-se de um meio ou
+canal visual-espacial e não oral auditivo. Assim, articulam-se espacialmente e são percebidas
+visualmente, ou seja, usam o espaço e as dimensões que ele oferece na constituição de seus
+mecanismos “fonológicos”, morfológicos, sintáticos e semânticos para veicular significados,
+os quais são percebidos pelos seus usuários através das mesmas dimensões espaciais.
+Daí o fato de muitas vezes apresentarem formas icônicas, isto é, formas linguísticas
+que tentam copiar o referente real em suas características visuais. Esta iconicidade, mais evidente, nas estruturas das línguas de sinais do que nas orais, deve-se ao fato de que o espaço
+parece ser mais concreto e palpável do que o tempo, dimensão utilizada pelas línguas oraisauditivas quando constituem suas estruturas através de seqüências sonoras que, basicamente,
+se transmitem temporalmente (BRITO, 1995). O que é denominado palavra ou item léxico nas
+línguas orais-auditivas é denominado sinal nas línguas de sinais.
+De acordo com Brito (1995), o sinal é formado a partir da combinação do movimento
+das mãos com um determinado formato em um determinado lugar, podendo este lugar ser
+uma parte do corpo ou um espaço em frente ao corpo. Estas articulações das mãos, que podem
+ser comparadas aos fonemas e às vezes aos morfemas, são chamadas de parâmetros ou unidades mínimas distintivas, portanto, nas línguas de sinais podem ser encontrados os seguintes
+parâmetros:
+1. Configuração das mãos: são formas das mãos, que podem ser da datilologia (alfabeto
+manual) ou outras formas feitas pela mão predominante (mão direita para os destros),
+ou pelas duas mãos do emissor ou sinalizador;
+2. Ponto de articulação: é o lugar onde incide a mão predominante configurada, podendo esta tocar alguma parte do corpo ou estar em um espaço neutro vertical (do meio do
+corpo até à cabeça) e horizontal (à frente do emissor);
+3. Movimento: os sinais podem ter um movimento ou não;
+4. Orientação: os sinais podem ter uma direção e a inversão desta pode significar idéia
+de oposição, contrário ou concordância número-pessoal;
+5. Expressão facial e/ou corporal: muitos sinais, além dos quatro parâmetros mencionados acima, em sua configuração têm como traço diferenciador também a expressão
+facial e/ou corporal.
+Destes, podem ser destacados três parâmetros primários que se combinam para a constituição do sinal em LIBRAS: a Configuração das Mãos, o Movimento e o Ponto de Articulação.
+Diante dessas características dos sinais LIBRAS, para a construção de uma interface
+tridimensional que permita a visualização dos sinais, é necessária a utilização de uma biblioteca que já contenha uma estrutura de criação de avatares humanóides animados e o ambiente
+de visualização gere a movimentação desses avatares, para tanto, foi utilizada a especificação
+H-Anim.
+5 Especificação H-Anim
+Em Humanoid Animation Working Group (2003) é especificada a estrutura e manipulação de avatares H-Anim. Avatares H-Anim são representação 3D articuladas que descrevem
+humanóides animados. Enquanto avatares H-Anim têm a intenção de representar figuras como humanas, eles são um conceito geral que não é limitado ao mesmo número de membros,
+cabeças e outras partes do corpo que são típicas do ser humano. Um avatar simples H-Anim é
+chamado de humanóide e estes são descritos utilizando os seguintes objetos H-Anim: Humanoid, Joint, Segment, Site e Displacer:
+• O objeto Humanoid é o root de um avatar H-Anim e providencia a ligação para todas as outras partes do humanóide;
+• O objeto Joint é associado ao objeto Humanoid ou outros objetos Joint utilizando
+um nó transform que especifica o estado atual da articulação junto com a geometria
+associada com a parte do corpo em anexo;
+• O objeto Segment especifica os atributos de ligação física entre os joints da figura
+humanóide;
+• O objeto Site especifica localizações, nas quais semânticas conhecidas podem ser
+associadas;
+• O objeto Displacer especifica informações sobre o alcance dos movimentos permitidos para os objetos nos quais ele está embutido.
+6 O ambiente informacional X-Libras
+Para um melhor entendimento da arquitetura do ambiente, este foi dividido em camadas lógicas para separar a interface, a lógica da aplicação (middleware) e a persistência de
+informações com seus modelos de dados e metadados, num ambiente multi-camadas.
+A Figura 2 mostra as camadas lógicas e suas representações dentro do sistema.
+
+Na camada de persistência, serão armazenadas em documentos XML, por meio do vocabulário X-LIBRAS, as informações concernentes aos sinais LIBRAS de acordo com os metadados que serão especificadas no tópico sobre a implementação do vocabulário X-LIBRAS.
+Na camada de lógica da aplicação, é definida a validação dos documentos XML através do
+parser e da API DOM (objetos de serviço), utilizando o DTD X-LIBRAS ou o Schema XLIBRAS e, então, mapeado o sinal para sua representação no H-Anim, através do conversor
+X-LIBRAS (objeto de domíno), utilizando o X3D ou VRML. E, finalmente, na camada da
+interface, o sinal LIBRAS é apresentado ao usuário num ambiente sintético virtual tridimensional.
+6.1 Especificação da camada lógica da aplicação
+A partir do módulo de entrada, o usuário escolhe o sinal desejado, gerando, então, o
+acesso à base especificada de sinais XML, que é validada pelo Schema ou DTD X-LIBRAS;
+este sinal é mapeado para um documento X3D/VRML, tendo como base o protótipo H-Anim.
+Essa manipulação do grafo de cena pode ser feita por meio de uma biblioteca externa
+Java utilizando a interface EAI (External Authoring Interface) no caso do VRML e AI (Scene
+Access Interface) (ISO/IEC FCD 19777-2:200x) no X3D (KIMEN, 1997).
+6.2 Projeto de interface
+Para o AV proposto no projeto é necessária a especificação de um avatar humanóide
+que contenha a habilidade de realizar os sinais da LIBRAS e permita ao usuário uma visão
+tridimensional do sinal e por conseqüência, um melhor entendimento de sua natureza.
+
+Para tanto, foi necessária, primeiramente, a modelagem do avatar que serviu como
+protótipo para implementação dos sinais e depois o estudo e a implementação da animação
+desse avatar.
+6.3 Modelagem de avatares
+A implementação do avatar baseia-se na especificação HAnim para modelar o corpo de
+um humanóide. A escolha desta especificação deveu-se ao fato da mesma definir uma forma
+padrão para representar humanóides e de ser de implementação bastante acessível e flexível.
+O projeto especifica um conjunto mínimo de articulações de forma a permitir animar as partes
+inerentes à definição de um sinal da LIBRAS.
+A hierarquia de articulações facilita a animação das partes do corpo de um humanóide.
+Basta mudar o ângulo da articulação (efetuando rotações), e todas as outras articulações “filhas”, bem como os respectivos segmentos, serão afetados pela transformação, permitindo
+assim mover as diversas partes do corpo.
+A Figura 3 mostra a definição da hierarquia de articulações, exemplificando até o
+segmento hanim_c7.
+DEF humanoid Humanoid { humanoidBody [
+DEF hanim_HumanoidRoot Joint{
+name "HumanoidRoot"
+center 0.0 0.707 -0.024
+children [
+DEF hanim_sacrum Segment {
+name "sacrum"
+children [] }
+DEF hanim_vc7 Joint{
+name "vc7"
+center -6.631E-4 0.79796004 -0.0019899998
+children [
+DEF hanim_c7 Segment {
+name "c7"
+children [
+Shape { appearance Appearance { texture ImageTexture { url "texturas/torax.jpg"
+repeatS TRUE repeatT TRUE } ]
+}
+...
+
+Figura 3: Especificação da hierarquia de articulações.
+
+Nesta especificação foi utilizado o nó ImageTexture para preenchimento do segmento
+hanim_c7 que define o tórax do humanóide; isso foi feito utilizando a imagem torax.jpg. O
+protótipo do avatar é visualizado na Figura 4.
+
+7
+
+Figura 4: Protótipo H-Anim.
+
+6.4 Implementação das animações
+Figuras H-Anim são animadas pela aplicação de transformações nas articulações. A
+habilidade de uma figura H-Anim rearranjar seus membros e corpo são ditados pelo número
+de articulações e segmentos utilizados para especificar cada membro e o corpo. Mais articulações e segmentos resultam em uma imagem mais flexível. Menos articulações resultam numa
+imagem menos flexível.
+Devido à utilização da especificação H-Anim, a implementação de animações para o
+avatar torna-se uma tarefa bastante simplificada. Uma vez definidas as articulações, animar o
+avatar é uma questão de efetuar rotações às articulações associadas às partes do corpo que se
+pretende mover. Por exemplo, se efetuar uma rotação no eixo X com um ângulo negativo à
+articulação do ombro do braço direito, o avatar irá levantar o braço direito esticado. A Figura
+5 mostra o código em Java que mostra a implementação da movimentação do cotovelo direito
+do avatar através do nó hanim_r_elbow.
+
+Figura 5: Rotina de movimentação do avatar.
+
+Este exemplo utiliza informações estáticas (linhas 14, 15, 16 e 17) de movimentação
+do avatar. Na aplicação, essas informações são carregadas do metadados que contém dinamicamente os valores referentes aos parâmetros de um sinal LIBRAS.
+8
+
+A composição da movimentação dos sinais LIBRAS é baseada na arquitetura do EAI,
+configurando as rotações das articulações por meio de um aplicativo Java externo. Foi utilizada a versão SDK (Software Development Kit) 1.3 do Java.
+6.5 Mapeamento do sinal LIBRAS no vocabulário XML
+A partir das unidades mínimas distintivas que formam um sinal da LIBRAS (configuração da mão, ponto de articulação, movimento e expressão facial), foi gerado um modelo de
+dados por meio do UML (Unified Modeling Language), para isso, o diagrama de classes (Figura 6), demonstra o relacionamento entre os sinais e seus parâmetros.
+Sinal
+Nome
+Configuração_Mão
+Lado
+Neste documento há a definição de todos os elementos que formam o sinal, isto é, as
+unidades mínimas distintivas são descriminadas de modo que outras aplicações possam interpretar esse sinal no sistema específico, como por exemplo, o parser da aplicação proposta,
+que utilizará esse documento para gerar o sinal no avatar H-Anim.
+A Figura 9 mostra a aplicação sendo executada no navegador VRML, utilizando o
+plug-in Cortona, demonstrando o mapeamento do sinal do vocabulário X-LIBRAS para a especificação H-Anim, permitindo ao usuário a visualização dos sinais da LIBRAS num ambiente virtual. Além da visualização, o usuário pode explorar com mais detalhes a formação do
+sinal através da rotação do avatar humanóide, podendo assim, ter uma visão tridimensional e
+imersiva do sinal.
+
+Figura 9: Ambiente virtual X-LIBRAS.
+
+6.7 Implementação no X3D
+Para demonstrar a implementação do sistema proposto no X3D foi especificado o
+mesmo avatar humanóide, visto anteriormente, utilizando a especificação X3D. A implementação desse avatar utilizou as mesmas características como visto na Figura 10 e foi desenvolvido no software de autoria Vizx3D.
+
+Figura 10: Visualização do sistema no X3D.
+
+A implementação dos movimentos do avatar foi feita utilizando recursos do X3D através do elemento ROUTE, definindo o nó fromnode e o campo fromfield da posição origem, e
+o nó tonode e o campo tofield da posição destino. O código da implementação do movimento
+pode ser visto na Figura 11.
+<TimeSensor DEF='Soldado'
+cycleInterval='5.000' loop='false' startTime='-1.000' />
+<OrientationInterpolator DEF='Soldado_rot0' key='0 .5 .75 1' keyValue='-.952 .133 .275 0 -.989
+.15 0 2.752 -.649 .068 .757 1.378 -.989 .151 0 1.941'/>
+<OrientationInterpolator DEF='Soldado_rot1'
+key='0 .5 .75 1' keyValue='-.997 -.083 0 0 -.997 -.083 0 0 -.962 -.273 0 1.589 -.994 .11 0
+1.276' />
+<TimeSensor DEF='vizx_init'
+cycleInterval='0.100' loop='false' />
+<ROUTE fromNode='vizx_init' fromField='cycleTime' toNode='Soldado' toField='startTime'/>
+<ROUTE fromNode='vizx_init' fromField='cycleTime' toNode='vizx_init' toField='stopTime'/>
+<ROUTE fromNode='Soldado' fromField='fraction_changed' toNode='Soldado_rot0'
+toField='set_fraction'/>
+<ROUTE fromNode='Soldado_rot0' fromField='value_changed' toNode='hanim_r_elbow'
+toField='set_rotation'/>
+<ROUTE fromNode='Soldado'fromField='fraction_changed' toNode='Soldado_rot1'
+toField='set_fraction'/>
+<ROUTE fromNode='Soldado_rot1' fromField='value_changed' toNode='hanim_r_shoulder'
+toField='set_rotation'/>
+
+7 Conclusão e trabalhos futuros
+Estudos na Ciência da Informação têm sido desenvolvidos no tratamento de conteúdos
+informacionais que utilizam recursos tecnológicos como meio de armazenamento, tratamento,
+organização, recuperação e disponibilização de informações a diferentes comunidades de usuários e este trabalho apresentou um ambiente que permite a criação de um mecanismo padronizado de armazenamento, manipulação e intercâmbio de informações dos sinais da LIBRAS
+por meio de um metadados desenvolvido com um vocabulário XML, facilitando assim, o desenvolvimento de novas ferramentas e aplicações computacionais na área da comunicação
+gestual-facial atendendo os requisitos a que se destina esses ambientes e seu público-alvo.
+Um dos objetivos do desenvolvimento do vocabulário X-LIBRAS era de se poder
+construir um ambiente virtual onde pesquisadores, usuários deficientes e qualquer pessoa que
+desejasse conhecer melhor a natureza dos sinais da LIBRAS, pudesse encontrar nesse sistema
+um meio amigável e eficiente de interface homem-computador.
+Destaca-se nesse vocabulário, além das representações básicas das informações que
+formam um sinal LIBRAS, a consideração de sua natureza e comportamento tridimensional
+que é representada nos metadados propostos.
+Utilizando este vocabulário, outras ferramentas podem ser implementadas na área da
+LIBRAS, como por exemplo, um editor de sinais, no qual o usuário pudesse montar no próprio ambiente virtual, os sinais através das unidades mínimas distintivas, visualizar o sinal
+criado e persistir as informações na base XML do vocabulário X-LIBRAS, o novo sinal. Outra implementação possível é um ambiente de colaboração em rede, utilizando o metadados
+proposto como um padrão para se alcançar a interoperabilidade entre sistemas heterogêneos.
+
