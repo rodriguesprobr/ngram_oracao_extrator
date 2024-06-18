@@ -1,0 +1,474 @@
+
+O CHATGPT COMO AUXILIAR NA CONDUÇÃO DE REVISÕES SISTEMÁTICAS DA LITERATURA:
+DEFINIÇÕES, DESAFIOS E POTENCIAIS APLICAÇÕES
+
+Modalidade: Trabalho Completo
+Resumo: O ChatGPT tem sido testado em diversas áreas, inclusive no contexto acadêmico.
+Considerando a complexidade e os recursos empregados na condução de uma Revisão Sistemática da
+Literatura (RSL), objetiva-se identificar o potencial de aplicação do ChatGPT na automação de
+diferentes etapas e processos da RSL, verificando ainda os desafios e problemáticas relacionados à
+essa aplicação. Foi realizada uma análise exploratória baseada em protocolo de pesquisa, sendo
+aceitos 14 artigos para compor o corpus do estudo. Entre as vantagens, observou-se que o ChatGPT
+pode auxiliar nas etapas da análise exploratória, formulação da pergunta de pesquisa, da estratégia
+de busca, sumarização e elaboração do relatório final. Com bases nas desvantagens, observou-se que
+os principais desafios estão relacionados com a falta de confiança nos resultados, que podem ser
+incorretos, imprecisos ou baseados em referências fabricadas. Também se destaca uma preocupação
+com a falta de transparência nas fontes, segurança dos dados, e com questões de autoria, como a
+possibilidade de plágio não intencional. Conclui-se que, embora exista um potencial de aplicação do
+ChatGPT na condução de RSLs, os desafios apresentados ressaltam a necessidade constante de
+checagem das informações obtidas, e que em muitos casos o tempo necessário para essa checagem
+diminui ou anula as vantagens identificadas. Conclui-se ainda que essa é uma temática recente e
+pouco explorada, sendo necessários mais teste para promover uma maior compreensão das
+vantagens e desvantagens da aplicação do ChatGPT em RSLs de diferentes áreas do conhecimento.
+Palavras-chave: ChatGPT; revisão sistemática da literatura; inteligência artificial.
+1 INTRODUÇÃO
+O ChatGPT (Generative Pretrained Transformer), pode ser compreendido como um
+chatbot que aplica técnicas de Inteligência Artificial (IA) e Processamento de Linguagem
+Natural (PLN), lançado em novembro de 2022, “[...] parece fornecer uma forma alternativa
+de recuperar informações abrangentes para vários tópicos temáticos”. (AGAPIOU;
+LYSANDROU, 2023, p. 4073).
+Revisão Sistemática da Literatura (RSL) são revisões de literatura, acrescidas de
+critérios, etapas e da documentação das decisões do pesquisador, com a finalidade de
+estabelecer o estado da arte de determinada temática, garantindo a reprodutibilidade e
+auditabilidade posterior da pesquisa (JESUS, 2021). “A construção de revisões sistemáticas
+requer esforço manual de profissionais treinados, em várias fases distintas, com diferentes
+tipos de esforço manual exigidos em cada fase.” (WANG et al., 2023, p. 2).
+A existência de etapas manuais e exaustivas, e o longo investimento em recursos para
+a condução de RSLs, tornam relevantes estudos que busquem automatizar um ou mais
+processos relacionados a sua condução. Nesse sentido, questiona-se: É possível aplicar o
+ChatGPT nos processos de RSL? Essa aplicação pode contribuir para a eficiência desses
+processos?
+Objetiva-se identificar o potencial de aplicação do ChatGPT como ferramenta auxiliar
+em diferentes etapas e processos da condução de RSLs, verificando ainda quais os desafios e
+problemáticas relacionados à essa aplicação. Para isso, foi realizada uma análise exploratória,
+baseada em protocolo de pesquisa, cujos resultados foram apresentados e discutidos à luz
+dos principais procedimentos e etapas de uma RSL.
+
+
+2 ChatGPT: definições, funcionamento e conceitos relacionados
+Essa seção apresenta os conceitos necessários para uma maior compreensão sobre o
+funcionamento e as limitações do ChatGPT. Iftikhar, Iftikhar e Hanif (2023, p. 45, tradução
+nossa, grifo nosso) listam alguns desses conceitos, que na citação aparecem em destaque:
+O ChatGPT-3 (Generative Pretrained Transformer) é a terceira iteração do
+modelo de linguagem popular da OpenAI. Foi lançado em 2020 e é
+considerado um dos large language models (LLM) mais avançados. Ele está
+sendo treinado para recuperar grandes quantidades de dados de texto da
+Internet, tornando-o capaz de gerar texto humano e executar várias tarefas
+de processamento de linguagem natural (PLN), como conclusão de texto,
+resumo, tradução e muito mais.
+
+O termo “chat”, que compõe o nome da ferramenta, refere-se ao conceito de
+chatbot, que pode ser definido como “[...] agentes de conversação automatizados que usam
+processamento de linguagem natural e algoritmos de aprendizado de máquina para interagir
+com os usuários de maneira humana.” (KOOLI, 2023, p. 2). Esse tipo de ferramenta é baseado
+em um sistema de perguntas e respostas, que “[...] pode então ser usado para gerar texto, a
+partir do fornecimento de um prompt ou um texto inicial, que ele usa para gerar uma
+resposta coerente e fluente” (BURGER et al., 2023, p 235).
+O mecanismo básico empregado pelo ChatGPT é pegar uma sequência de
+entrada de texto (chamada prompt), processá-la através do modelo e emitir
+o próximo token na sequência. Este processo é repetido várias vezes para
+gerar uma resposta completa ao prompt. (WANG et al, 2023, p. 4, tradução
+nossa).
+
+A formulação do prompt influencia tanto na granularidade como na acurácia dos
+resultados retornados. Wang et al. (2023) listam 3 formas principais de elaboração: simples,
+detalhada e com exemplo. Enquanto a formulação simples apresenta um questionamento
+direto, a detalhada acrescenta o contexto relacionado a formulação. A versão com exemplos
+apresenta um modelo daquilo que se espera obter como resultado.
+Para gerar respostas coerentes, o ChatGPT utiliza-se dos conceitos de Inteligência
+Artificial, Machine Learning e Processamento de Linguagem Natural (PLN). A Inteligência
+Artificial não é um campo de pesquisa recente, passando por muitas evoluções e pelo
+surgimento de novas nomenclaturas, para refletir diferentes técnicas e abordagens.
+(CONEGLIAN, 2020). Uma dessas novas nomenclaturas é o termo Machine Learning (ML), ou
+aprendizado de máquina. Esse conceito é baseado na "[...] construção de agentes
+computacionais capazes de aprender com a experiência, com base na aplicação de técnicas
+
+
+
+estatísticas, em especial, por meio de algoritmos, visando a identificação de padrões e a
+realização de predições " (JESUS et al., 2023, p. 168).
+Já o Processamento de Linguagem Natural (PLN) pode ser definido como um campo
+científico, cujo produto são técnicas empregadas visando [...] “aproximar a linguagem
+computacional da linguagem humana, buscando oferecer formas de transformar o que uma
+pessoa escreve e fala em algo compreensível para as máquinas” (CONEGLIAN, 2020, p. 18).
+O G de GPT refere-se ao conceito de IAs Generativas. Esse tipo de IA apresenta como
+resultado a criação de novos conteúdos, embora essa criação ainda seja limitada a uma
+recombinação dos conteúdos utilizados para treino, com base em uma análise probabilística.
+(CUNNINGHAM et al., 2023, p. 22). Gozalo-Brizuela e Garrido-Mercham (2023), apontam
+que um aspecto chave de IAs generativas é a sua capacidade de receber enormes
+quantidades de dados, e que existe uma diversidade de interações e resultados possíveis
+entre usuários e IAs generativas, sendo o GPT uma IA do tipo texto para texto.
+O P da sigla se refere a forma como a IA foi treinada, por meio de um
+pré-treinamento, alimentada com grandes quantidades de informação, provenientes de
+fontes diversas da internet. Como apontado pela própria OpenAI (2023) o ChatGPT não está
+ligado de maneira orgânica à internet, como um buscador tradicional, não podendo assim
+realizar busca por conteúdos novos, tendo suas respostas limitadas as informações eventos
+que antecedem a 2021. Entretanto, tal como uma modelo de ML, ele pode “aprender” com
+cada nova interação, sendo assim alimentado constantemente com novas informações.
+O T da sigla está relacionado ao conceito de transformer. As respostas a esses
+prompts ocorrem por meio de um processo de tokerização. Nesse processo, as frases
+fornecidas por meio do prompt são fragmentadas em tokens, que podem ser palavras, sinais
+de pontuação ou sílabas. Esses tokens recebem uma pontuação:
+Após a tokerização, os tokens são fornecidos ao modelo, que os utiliza para
+entender o comando ou pergunta e gerar a resposta apropriada. Durante o
+treinamento, o modelo aprende a associar sequências de tokens a respostas
+relevantes, de modo que, quando você faz uma pergunta, o modelo busca
+as informações relevantes em seu treinamento e gera uma resposta com
+base nesse conhecimento. (OPENAI, 2023, não paginado).
+
+O conceito de Transformer Models está relacionado a essa etapa de predição, esse
+tipo de modelo, assim como no caso do ChatGPT, é treinado com base em grandes
+quantidades de dados. Com base na forma como desempenha suas tarefas, o ChatGPT
+também é frequentemente definido como um Large Language Model (LLM). Os LLMs
+
+
+
+também são modelos pré-treinados, aplicados a linguagem escrita, que por meio da análise
+de padrões, identificam ou preveem o que pode ser esperado após uma sequência
+determinada de palavras (QURESHI et al., 2023).
+Modelos como esse são aplicados, por exemplo, em ferramentas textuais, como
+e-mails e editores de texto, prevendo quais as próximas palavras esperadas em determinado
+ponto das frases digitadas. Um dos destaques do ChatGPT em relação a outros Transformer
+Models e LLMs é o seu aspecto geral, que não se concentra apenas em tarefas específicas,
+como previsão de palavras, correção ortográfica e tradução, desenvolvendo atividades
+diferentes de maneira simultânea, e podendo ser empregado em diferentes setores da
+sociedade. Apresentados os principais aspectos e conceitos relacionados com o
+desenvolvimento e funcionamento do ChatGPT, a próxima seção apresenta os
+procedimentos metodológicos adotados na pesquisa.
+3 Procedimentos metodológicos
+Caracterizada como exploratória e descritiva, a presente pesquisa adota como
+método a Análise Exploratória, baseada em protocolo e pesquisa. Foram aceitos estudos que
+abordassem, tanto de maneira secundária como principal, a aplicação do ChatGPT para a
+condução de Revisões de Literatura e Revisões Sistemáticas da Literatura. Optou-se por essa
+abordagem mais abrangente pois a temática ainda é recente e pouco explorada. O protocolo
+adotado pode ser observado no quadro 1
+Quadro 1 – protocolo de pesquisa da Análise Exploratória
+Objetivos
+
+Identificar as potenciais aplicações e desafios do ChatGTP como ferramenta auxiliar para a
+automação dos processos relacionados à condução de Revisões de Literatura, com foco
+especial em Revisões Sistemáticas da Literatura.
+
+Questões de
+pesquisa
+
+Quais as principais contribuições do ChaGPT para a automação de Revisões Sistemáticas da
+Literatura? Quais os principais desafios relacionados ao uso do ChaGPT para a automação
+de Revisões Sistemáticas da Literatura?
+
+("Generative Artificial Intelligence" OR "Generative IA" OR "ChatGPT") AND ("Systematic
+Palavras-chave Literature Review" OR "Systematic Review" OR "Literature Review" OR "Bibliographic
+Review" OR "Systematic Mapping Study" OR "Systematic Map")
+Linguagem dos Inglês, português e espanhol.
+estudos
+Métodos de
+seleção
+
+Leitura do título, palavras-chave e resumo dos documentos; Leitura da introdução e
+conclusão; Leitura do documento completo; Aplicação dos critérios de inclusão e de
+exclusão.
+
+Bases de dados Web of Science, Google Acadêmico, Portal de Periódicos da Capes, Taylor & Francis
+
+
+
+Critérios de
+inclusão (I) e
+exclusão (E)
+
+(I) Discussões aplicadas do ChatGPT na condução de levantamentos bibliográficos (I)
+Discussões teóricas que abordem o uso do ChatGPT na condução de levantamentos
+bibliográficos; (E) Não está nos idiomas estabelecidos para a pesquisa; (E) Não está no
+formato estabelecido para a pesquisa; (E) Não aplica ou não discute o tema da pesquisa(E)
+Não é possível ter acesso ao documento completo.
+
+Tipos
+documentais
+
+Artigos em periódicos, teses e dissertações; trabalhos apresentados em eventos, editoriais
+e comentários publicados em periódicos qualificados.
+
+Estudos iniciais Não se aplica ao estudo.
+Campos de
+extração
+
+1) o objetivo principal do estudo e forma como a temática foi abordada 2) Definições do
+ChatGPT e conceitos correlatos 3) Potenciais contribuições do uso do ChatGPT na condução
+de Revisões de Literatura 4) Potenciais desafios do uso do ChatGPT na condução de
+Revisões de Literatura. 5) Referências Relevantes
+
+Os dados serão agrupados em quadros-resumo de acordo com os campos de extração
+Sumarização dos estabelecidos, os resultados serão agrupados em categorias definidas a posteriori.As
+resultados.
+vantagens e os desafios de utilização do ChatGPT serão discutidos levando em
+consideração a sua aplicabilidade em etapas e processos da RSL.
+Fonte: Autores (2023)
+
+Em conjunto com o protocolo, também foi adotada a técnica de snowballing, sendo
+consideradas as referências apresentadas nos artigos aceitos. Para a discussão dos
+resultados, as vantagens e os desafios foram discutidos considerando etapas e processos da
+RSL: Planejamento - Análise Exploratória (familiarização com a temática, verificação da
+existência de estudos secundários e outras RSLs que abordam o tema); Elaboração da
+pergunta de pesquisa e dos objetivos; Preenchimento do Protocolo de Pesquisa. 2) Execução
+- Busca nas bases de dados; Seleção dos Documento; Extração das informações 3)
+Sumarização – Síntese dos resultados obtidos e elaboração do relatório final/material de
+divulgação científica (FELIZARDO et al., 2017). Apresentados os procedimentos, a próxima
+seção discute os resultados obtidos.
+4 Resultados da análise exploratória
+Com base no protocolo apresentado, foram recuperados 129 documentos, dos quais
+44 foram identificados como duplicados, 71 foram recusados e 14 aceitos para compor o
+corpus da pesquisa. Com base nos estudos levantados, foram identificados os potenciais de
+aplicação do ChatGPT na condução de RSLs, os resultados são apresentados na próxima
+subseção.
+3.1 Potenciais aplicações do ChatGPT em Revisões Sistemáticas da Literatura.
+Nessa seção buscou-se identificar como e em quais etapas/processos de uma RSL, o
+ChatGPT pode trazer contribuições. As discussões foram embasadas pelas vantagens de uso
+
+
+identificadas na literatura, buscando relacionar essas vantagens com as etapas e processos
+da RSL, seguindo o modelo apresentado nos procedimentos metodológicos.
+Em relação à análise exploratória, o ChatGPT pode ser útil em promover uma maior
+familiarização com a temática pesquisada. O “ChatGPT com seu acesso a bilhões de
+parâmetros e textos, devem ser particularmente hábil na ampla exploração de ideias
+existentes”. (DOWLING; LUCEY, 2023, p. 8). "A ferramenta pode fornecer uma revisão
+organizada, embora rudimentar, bem como um resumo conciso dos conteúdos. (DEJONG et
+al., 2023, p. 5, tradução nossa).
+Ainda na etapa de análise exploratória, foram mencionadas vantagens na
+identificação de novas ideias de pesquisa e lacunas a serem exploradas. Existe ainda a
+possibilidade de aplicação do ChatGPT na formulação da pergunta de pesquisa, que irá
+auxiliar posteriormente no preenchimento do protocolo (RAHMAN et al., 2023). Rahman et
+al. (2023) destacam que o ChatGPT “pode escrever uma metodologia adequada se o
+pesquisador puder fornecer todas as informações sobre os métodos de pesquisa utilizados.
+No entanto, fornecer um prompt preciso é crucial neste contexto” (RAHMAN et al., 2023, p.
+7). Essa forma de uso pode ser particularmente útil no preenchimento dos diferentes
+campos do protocolo de pesquisa. Ainda na etapa de planejamento, foram identificadas
+vantagens nas atividades de elaboração das palavras-chave, booleanos e estratégias de
+busca. Wang et al. (2023) abordam a questão da elaboração dos booleanos e estratégias de
+busca. Os autores realizaram uma série de testes comparando o desempenho do ChatGPT
+nessa tarefa com outras ferramentas de automação de formulação de booleanos,
+constatando que o ChatGPT tem resultados favoráveis quando comparado a essas
+ferramentas.
+Quanto ao processo de extração dos resultados, Dowling e Lucey (2023) indicam que
+a ferramenta é capaz de identificar, dentro de um texto, um conjunto de informações de
+interesse, o que poderia contribuir para a coleta das informações indicadas no formulário de
+extração. Em relação a sumarização, Dejong et al. (2023, p. 617), aponta que o ChatGPT
+pode fornecer resumos concisos dos resultados. Segundo os autores, a ferramenta se
+destaca pela sua “[...] capacidade de processar grandes quantidades de dados textuais em
+um curto período, o que pode economizar tempo e esforço significativos dos pesquisadores”.
+Destacam-se ainda vantagens relacionadas à elaboração do relatório final e produção
+dos documentos de divulgação, como artigos e trabalhos para eventos. Sallam (2023)
+
+
+realizou um levantamento com pesquisadores sobre as principais contribuições do ChatGPT.
+Nesse levantamento, destacou-se a vantagem de amparar o processo de escrita, melhorando
+a qualidade e a coerência dos textos, auxiliando ainda no processo de tradução. RAHMAN et
+al. (2023, p. 7) destacam que o chat “[...] pode ser uma ferramenta de assistência de
+pesquisa eficaz para projetar manuscritos com eficiência”. Zamfiroiu, Vasile e Savu (2023, p.
+12) acrescentam ainda que o ChatGPT pode: “[...] sugerir ao pesquisador títulos apropriados
+para o artigo que deseja desenvolver, ajudá-lo a redigi-lo, e também se mostra útil no
+processo de editar e resumir o artigo.” Os autores ainda ressaltam que “A Inteligência
+Artificial não permite geração de novas ideias, mas pode auxiliar o pesquisador na
+organização, síntese e desenvolvimento suas próprias [ideias]. (ZAMFIROIU; VASILE; SAVU,
+2023, p. 12).
+Além das vantagens que podem ser relacionadas diretamente com determinadas
+etapas e processos da RSL, foram identificadas vantagens gerais, relacionadas a todo o
+processo. Foi destacado que a utilização do ChatGPT não exige dos pesquisadores um
+conhecimento técnico específico do uso de IAs ou de programação, o que a torna mais
+acessível (BURGER et al., 2023). Outra vantagem seria a automação de tarefas, que resultaria
+no aumento da produtividade dos pesquisadores (RAHMAN et al., 2023). O uso do ChatGPT
+poderia reduzir o erro humano, pois a IA não seria afetada pelo cansaço ou distrações [...]
+(WANG et al., 2023).
+O ChatGPT poderia evidenciar padrões nos resultados, que inicialmente poderiam
+passar desapercebidos ao pesquisados. Esse uso se assemelharia a discussão com os pares,
+com o adicional de conhecimento promovido pelas grandes quantidades de dados utilizadas
+para seu treinamento. Apresentadas as potencias contribuições do ChatGPT na condução de
+RSL, a próxima seção irá discutir as problemáticas e os desafios dessa aplicação, também
+levando em considerações as etapas listadas nos procedimentos metodológicos.
+3.3 Potenciais desafios e problemáticas relacionados à aplicações do ChatGPT em
+Revisões Sistemáticas da Literatura.
+Entre os problemas que podem afetar o uso do ChatGPT na etapa de análise
+exploratória, destacam-se alto potencial de viés nos resultados, de disseminação de
+informações falsas ou imprecisas, alucinações e a fabricações de citações e referências. Em
+relação ao potencial de Viés, como já mencionado, os conteúdos do ChatGPT são limitados a
+
+
+
+fatos e acontecimento que antecedem a 2021, como um modelo pré-treinado, o chat não
+acessa diretamente a Web. “Essa data limite significa que, se o campo de pesquisa mudou
+substancialmente depois disso ponto, a IA pode não fornecer dados perspicazes.” (BURGER
+et al., 2023, p. 237, tradução nossa). Outro aspecto que pode enviesar os resultados são as
+limitações dos dados utilizados no treinamento, “[...] os dados são apenas de acesso aberto,
+os documentos de acesso fechado geralmente não fazem parte do treinamento da IA.
+(BURGER et al., 2023, p. 237).
+Existe uma falta de transparência em relação aos dados usados no treinamento: “Os
+sistemas de IA podem ser treinados em dados tendenciosos, levando a resultados
+tendenciosos.” (TEMSAH et al., 2023, p. 622) Burger et al. (2023) destaca ainda que muitos
+periódicos predatórios publicam seus artigos no formato aberto, enquanto algumas editoras
+de periódicos qualificados adotam um modelo fechado, o que pode ter impacto na acurácia
+das respostas fornecidas pela ferramenta.
+Essa limitação temporal, de acurácia e completude do conteúdo, pode afetar
+especialmente pesquisas relacionadas a temas muito recentes, que ainda foram pouco
+explorados pela literatura e/ou nos quais houve importantes avanços científicos.
+Além de tornar as pesquisas datadas ou imprecisas, esses vieses também podem
+comprometer a integridade e a veracidade das informações. Sallam (2023) ressalta que a
+divulgação de informações falsas ou de desinformação pode ser potencializada pelo ChatGPT,
+levando a uma potencial infodemia. “A utilização do ChatGPT em pesquisas pode resultar na
+integração de informações falsas ou tendenciosas em artigos, potencialmente levando a
+plágio não intencional e/ou atribuição incorreta de conceitos.” (DERGAA et al., 2023, p. 617).
+Outra questão que pode prejudicar o uso do ChatGPT para a condução da etapa de
+análise exploratória é a tendencia à fabricação de citações e referências. (QURESHI et al.,
+2023). Rhaman e Školník (2023, p. 3) também realizaram testes com referências e obtiveram
+resultados semelhantes:
+Usamos esse prompt cinco vezes, resultando em cinco bate-papos
+exclusivos. ChatGPT nos forneceu 10 publicações de cada vez, com 48
+publicações únicas nas cinco tentativas. Descobrimos que apenas 8 dos 50
+DOIs fornecidos existem e são listados para a publicação correta. Ao mesmo
+tempo, buscamos o título do próprio artigo com os autores e a publicação
+acadêmica correta (mesmo que o DOI possa estar errado), e apenas em 17
+dos 50 casos, o artigo em questão existia nas bases de dados [...]. Em 66%
+dos casos, o ChatGPT nos deu um DOI inexistente.
+
+
+Ou seja, a ferramenta forneceu referências estruturadas, aparentemente verdadeiras,
+mas que não puderam ser encontradas e checadas. Essa aparente veracidade das referências
+também foi observada por Day (2023, p. 3):
+As citações estão em um estilo consistente e os números das páginas estão
+dentro do volume e da edição do periódico real, mas em todos os casos as
+páginas das revistas relevantes são ocupadas por artigos não relacionados à
+referência listada. Muitos dos autores listados pelo ChatGPT são altamente
+considerados em seu campo, mas eles não escreveram os artigos com os
+quais foram creditados. O poder enganoso é reforçado pelo fato de que os
+periódicos referenciados são reais e publicam artigos genuíno relacionados
+a cada um dos temas.
+
+Outro aspecto em relação as referências inventadas, ou hipotéticas, é que “[...]
+quando solicitado a fornecer o DOI ou o URL original das referências que o ChatGPT
+retornou, o chatbot mencionou que não tem acesso aos artigos originais. Assim, gerou
+algumas citações e referências inexistentes no texto.” (RAHMAN et al., 2023, p. 5, tradução
+nossa).
+Esse processo de inventar referências hipotéticas, aparentemente reais, em
+periódicos e com autores relevantes da área, pode ser considerado um caso de alucinação.
+As alucinações consistem na elaboração de resultados imprecisos ou incorretos, gerados
+quando o modelo não possui uma resposta adequada a pergunta. Para evitar que esses erros
+ocorram, a liberdade de criação da ferramenta precisa ser limitada, o que amplia as
+possibilidades de plágio não intencional.
+Em relação a etapa de execução, a falta de acesso à internet e a fontes reais também
+impede que a ferramenta realize a etapa de busca nas bases de dados (RAHMAN et al.,
+2023,). Para que ele atue nos processos de seleção dos documentos e extração das
+informações pertinentes, seria necessário fornecer os textos completos, não sendo possível
+apenas fazer uma menção ao título ou doi, pois a ferramenta pode não ter tido acesso a esse
+material, ampliando a chances de alucinações. A inserção de textos através dos prompts
+também possui limitações, como apontado por Burguer et al. (2023, p. 237):
+[...] a entrada máxima por prompt para OpenAI é 2.048 Tokens. Um Token
+converte no caso ideal para uma palavra, em casos especiais para menos.
+Assim, cada artigo pode precisar de vários prompts de entrada. As
+demandas de todos os artigos podem representar um custo financeiro
+substancial.
+
+Outra dificuldade relacionada aos processos de seleção e extração é o fato de que
+“falta aos chatbots a capacidade de entender o contexto e as nuances, o que é essencial em
+muitas áreas de pesquisa. Isso pode resultar em erros e más interpretações dos dados.”
+
+
+(TEMSAH et al., 2023, p. 7).
+
+As dificuldades de acesso direto as fontes e de limitação de
+
+tokens também afetariam o uso da ferramenta nos processos da etapa de sumarização. O
+uso nessa etapa também pode ser afetado por problemas com a acurácia dos resultados
+fornecidos.
+Ao testar o uso da ferramenta no processo de síntese dos resultados Kooli (2023, p. 1)
+aponta que: o “ChatGPT é capaz de criar resumos concisos de literatura e tópicos de assunto,
+no entanto, sua saída é frequentemente repetitiva com sentença/parágrafo semelhantes,
+gramática abaixo do ideal e sintaxe ruim, exigindo edição”. Rahman et al. (2023) acrescentam
+ainda que o ChatGPT possui dificuldades em elaborar dados estatísticos, por não consultar
+diretamente as fontes, e não é possível enviar arquivos, sendo limitado aos textos do
+prompt, que muitas vezes não possuí um formato adequado para análises de dados.
+Em relação ao uso da ferramenta nos processos de elaboração dos relatórios e
+resultados, destaca-se a questão dos problemas de autoria e possibilidade de plágio (que
+também podem influenciar outras etapas do processo). Sallam (2023) ressalta que o uso da
+ferramenta diminui a credibilidade dos resultados, pois amplia os casos de fraude, como
+escrita fantasma e pesquisas forjadas. Dergaa et al. (2023) ressaltam o risco de incorrer em
+plágio não intencional. Temsah et al. (2023), levanta ainda a questão da segurança dos dados
+fornecidos como prompts. Esses dados podem acabar sendo reutilizados pela ferramenta,
+prejudicando o ineditismo da pesquisa Algumas questões podem afetar todo o processo de
+aplicação do ChatGPT em RSL. Kooli (2023) aponta a questão do fornecimento de respostas
+diferentes, geradas para um mesmo prompt.
+Mesmo que bem formulados, as respostas que o ChatGPT irá retornar a determinado
+prompt podem variar, gerando um “[...]conteúdo novo em cada nova tentativa, mesmo a
+partir dos mesmos prompt como uma entrada" (GOZALO-BRIZUELA; GARRIDO-MERCHAN,
+2023, p. 1). Esse aspecto do ChatGPT dificulta a auditabilidade das respostas e faz com que
+os pesquisadores precisam ser cuidados ao registrar e armazenar tanto os prompts utilizados
+como as respostas obtidas. Temsah et al. (2023) apontam que, por ser uma ferramen
+arecente, poucos estudos e teste foram feitos para entender como a ferramenta irá atuar em
+diferentes áreas, sendo necessários mais estudos para identificar e compreender outras
+potenciais limitações.
+CONSIDERAÇÕES
+
+
+
+A presente pesquisa teve como objetivo discutir o potencial de aplicação do ChatGPT
+em diferentes etapas e processos da condução de uma RSL, bem como os desafios
+relacionados à essa aplicação.
+
+Em relação a etapa de planejamento, destacaram-se
+
+vantagens relacionados aos processos de análise exploratória. O ChatGPT pode auxiliar na
+familiarização dos pesquisadores com a temática, ajudar na identificação de novos novas
+ideias de pesquisa, lacunas a serem exploradas e na formulação da questão de pesquisa. Ele
+poderia também auxiliar no preenchimento de diferentes campos do protocolo de pesquisa,
+como a elaboração dos booleanos e das estratégias de busca.
+Quando levantados os desafios relacionados ao uso do ChatGPT na etapa de
+planejamento, destacaram-se desafios relacionados com a falta de confiabilidade nos
+resultados gerados, falta de transparência nas fontes, resultados imprecisos e incorretos,
+alucinações, tais como a fabricação de citações e referências. Essa falta de confiança nos
+resultados eleva a necessidade de checagem das informações, e como o ChatGPT não
+fornece as referências consultados, esse processo precisa contar com referências externas.
+Como todo o processo de análise exploratória pressupõe a não familiaridade com o
+assunto, pode ser ainda mais complexo identificar potenciais informações incorretas,
+imprecisas, fabricadas ou fruto do fenômeno de alucinação. Mesmo com essa necessidade
+de checagem, a ferramenta ainda poderia ser útil, ao apresentar os principais conceitos e
+definições relacionados ao assunto, fornecendo uma primeira visão, que pode facilitar as
+buscas posteriores. Entretanto, esse uso exige cautela, e é necessário ponderar o quanto de
+tempo e esforço precisará ser empregado nesse processo de checagem.
+Poucas vantagens puderam ser diretamente relacionadas à etapa de execução.
+Pode-se mencionar o uso da ferramenta no processo de coleta de informações estabelecidas
+no formulário de coleta. As vantagens reduzidas nessa etapa se justificam parcialmente pelos
+desafios identificados, como as limitações de acesso da ferramenta, que impede que ela
+realize as buscas nas bases de dados, e a limitação de inserção de informações. Essa
+limitação também afeta o seu uso no processo de seleção dos documentos, como arquivos
+não podem ser carregados e a ferramenta não pode buscar os artigos nas bases, é necessário
+inserir os conteúdos dos artigos recuperados por meio dos prompts, que possuem um
+número limitado de tokens, tornando o processo complexo e trabalhoso.
+Na etapa de sumarização, pode-se considerar aplicação do ChatGPT na sintetização
+dos resultados coletados e na formulação do relatório final e dos textos de divulgação
+
+
+
+cientifica derivados do processo de RSL. Na formulação dos textos, o ChatGPT poderia
+contribuir com a organização das ideias, revisão ortográfica e gramatical do texto e ainda nos
+processos de tradução. Entre os desafios que podem comprometer seu uso nessa etapa
+destaca-se também a falta de confiança nos resultados gerados e os riscos de incorrer em
+plágio acidental. Como um LLM o ChatGPT se utiliza da recombinação de conteúdos de seu
+treinamento, dada a falta de transparecia em relação as fontes consultadas em cada
+resposta, é possível que o conteúdo sugerido, ou parte desse conteúdo seja derivado de
+outro pesquisador, levantando questões de autoria dos resultados. Outro aspecto que
+precisa ser levado em consideração é a falta de segurança dos dados fornecidos por meio
+dos prompts, que podem comprometer o ineditismo da pesquisa.
+Como um desafio geral a utilização do ChatGPT em todas as etapas da RSL, destaca-se
+a dificuldade de auditabilidade dos resultados, como a ferramenta gera diferentes respostas
+a uma mesma pergunta e não fornece referências para as informações, o processo de
+auditabilidade pode ser comprometido. A auditabilidade é um aspecto importante das RSLs,
+que se destacam justamente por permitir que os resultados possam ser conferidos e que a
+pesquisa possa ser continuada. Nesse sentido, conclui-se que é necessário que os registros
+dos processos de pesquisa sejam feitos de maneira rigorosa, sendo armazenados os prompts
+utilizados e as respostas obtidas, o que pode minimizar esse desafio.
+Em resposta à pergunta de pesquisa, conclui-se que é possível aplicar o ChatGPT em
+diferentes etapas e processos da RSL, entretanto, o potencial de contribuição da ferramenta
+para a eficiência do processo oscila em diferentes etapas, e precisa ser ponderado pelos
+pesquisadores. A maior parte dos desafios e benefícios levantados no presente estudo foi
+obtido por meio de discussões teóricas, dada a novidade do tema, existe uma ausência de
+testes significativos que busquem observar o desempenho da ferramenta na condução de
+diferentes RSLs, em diferentes áreas do conhecimento, esses estudos são necessários para
+que se possa efetivamente considerar ou descartar o uso do ChatGPT na condução de
+Revisões Sistemáticas da Literatura.

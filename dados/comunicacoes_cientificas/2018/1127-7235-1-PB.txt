@@ -1,0 +1,554 @@
+
+A CIÊNCIA DA INFORMAÇÃO E A ENGENHARIA DE REQUISITOS DE SOFTWARE:
+CONVERGÊNCIAS ENTRE AS DUAS ÁREAS
+Priscila Basto Fagundes (Universidade Federal de Santa Catarina – UFSC)1
+Douglas Dyllon Jeronimo de Macedo (Universidade Federal de Santa Catarina – UFSC)2
+INFORMATION SCIENCE AND REQUIREMENTS ENGINEERING OF SOFTWARE:
+CONVERGENCES BETWEEN THE TWO AREAS
+Modalidade da Apresentação: Comunicação Oral
+Resumo: Algumas das atividades fundamentais do processo de desenvolvimento de sistemas de
+informação computadorizados estão relacionadas à disciplina de Engenharia de Requisitos, uma área
+da Ciência da Computação cujos objetivos são descobrir, analisar, documentar e verificar os
+requisitos que farão parte do software. Os requisitos são as características do sistema e são
+identificados com base em informações fornecidas pelos usuários ou por especialistas no negócio do
+software que está sendo desenvolvido, e a efetiva compreensão e estruturação dessas informações
+são essenciais para garantir que o sistema atenda às necessidades dos seus usuários. O presente
+estudo faz parte de uma pesquisa que está sendo desenvolvida com o intuito de propor um modelo
+de cooperação entre a Ciência da Informação e a Engenharia de Requisitos, e apresenta os resultados
+de uma análise sobre as convergências entre os objetivos da Ciência da Informação: geração, coleta,
+organização, armazenamento, recuperação, interpretação, disseminação, transformação e uso da
+informação, e as atividades da Engenharia de Requisitos: concepção, levantamento, elaboração,
+negociação, especificação, validação e gestão de requisitos. Com base nas relações estabelecidas,
+evidenciou-se a necessidade de novas pesquisas e propostas para fortalecer o intercâmbio entre a
+Ciência da Informação, na condição de ciência que possui como objeto de estudo a informação, e a
+Engenharia de Requisitos que, por sua vez, tem na informação a matéria-prima para a identificação
+das necessidades dos usuários de softwares.
+
+1
+
+Doutoranda do Curso de Pós-Graduação em Ciência da Informação da Universidade Federal de Santa
+Catarina, cuja pesquisa está sendo financiada pela Fundação de Amparo à Pesquisa do Estado de Santa
+Catarina (FAPESP) e pela Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES).
+2
+Docente do Curso de Pós-Graduação em Ciência da Informação da Universidade Federal de Santa Catarina.
+
+
+Palavras-Chave: Ciência da Informação; Engenharia de Requisitos; Informação; Requisitos, Sistemas
+de Informação.
+
+
+1 INTRODUÇÃO
+A construção de sistemas de informação de qualidade e que atendam às
+necessidades informacionais dos seus usuários está fortemente relacionada com o processo
+utilizado para o seu desenvolvimento. A disciplina pertencente à grande área da Ciência da
+Computação, denominada Engenharia de Software, procura apresentar conceitos, técnicas e
+ferramentas para serem aplicados durante as etapas de desenvolvimento de um sistema,
+que inclui as atividades de especificação, projeto, desenvolvimento, validação e evolução. A
+atividade inicial de especificação consiste na definição das funcionalidades do sistema e das
+restrições ao seu funcionamento, e conta com a área de Engenharia de Requisitos para dar
+suporte à descoberta, análise, documentação e verificação dos requisitos do software
+(SOMMERVILLE, 2011, p. 18;57).
+Contudo, nem sempre as atividades da Engenharia de Requisitos são executadas de
+maneira a possibilitar o total entendimento das necessidades dos usuários, e os sistemas
+acabam sendo criados com base em especificações concebidas que advêm de visões
+individuais
+
+e
+
+específicas,
+
+comprometendo
+
+o
+
+sistema
+
+que
+
+será
+
+entregue
+
+e,
+
+consequentemente, o projeto como um todo. Segundo Hanisch e Corbitt (2007), são
+diversas as causas que podem gerar problemas durante o processo de Engenharia de
+
+
+Requisitos, alguns exemplos são a falta de clareza nas informações fornecidas, a ausência de
+conhecimento do ambiente em que o sistema está inserido, a ambiguidade das informações,
+os ruídos de comunicação.
+As atividades relacionadas à Engenharia de Requisitos exigem um intenso
+compartilhamento de informações e conhecimento entre os profissionais de Tecnologias da
+Informação e Comunicação (TIC) e os profissionais da organização que são os usuários ou os
+especialistas no negócio do software em desenvolvimento (MORETTO; GALDO; KERN, 2010).
+Além disso, é fundamental que seja definido um processo para a coleta das informações que
+dão origem aos requisitos, uma vez que as atividades necessárias vão mais além do que
+apenas perguntar aos usuários o que eles esperam do sistema em questão. Para que os
+requisitos sejam de fato compreendidos, é essencial uma análise e uma organização
+cuidadosa das informações levantadas e dos processos de negócio no qual o sistema será
+utilizado (PRESSMAN, 2011; SOMMERVILLE, 2011; RIBEIRO, 2012).
+Com base no mencionado, é possível observar a existência de relações entre as
+demandas da Engenharia de Requisitos e os objetivos que envolvem a área da Ciência da
+Informação, dado que, segundo Borko (1968), a Ciência da Informação se ocupa com a
+geração, coleta, organização, armazenamento, recuperação, interpretação, disseminação,
+transformação e uso da informação. Dessa forma, é pertinente afirmar que a Ciência da
+Informação pode ser considerada para auxiliar no estudo e compreensão dos aspectos
+ligados à Engenharia de Requisitos, e que a utilização de abordagens oriundas das Ciências
+Sociais, que tratam do comportamento e do fluxo das informação, além das formas de
+comunicação entre fonte e destinatário, podem ajudar no desenvolvimento de novos
+sistemas de informação, para que estes apresentem maior qualidade e estejam mais
+adequados às necessidades de seus usuários.
+O presente estudo é parte integrante de uma pesquisa de doutorado que está sendo
+desenvolvida no Programa de Pós-Graduação em Ciência da Informação da Universidade
+Federal de Santa Catarina, cujo objetivo é propor um modelo contemplando as técnicas
+utilizadas pela Ciência da Informação para auxiliar na realização das atividades da
+Engenharia de Requisitos. Este artigo possui como objetivos, evidenciar e estabelecer
+relações entre as atividades definidas por Borko (1968) para a Ciência da Informação, a
+saber: geração, coleta, organização, armazenamento, recuperação, interpretação,
+disseminação, transformação e uso da informação; e as atividades propostas por Pressman
+
+
+(2009) para a Engenharia de Requisitos, quais sejam: concepção, levantamento, elaboração,
+negociação, especificação, validação e gestão de requisitos. Além de estar relacionada com a
+pesquisa citada, buscou-se com este estudo identificar intersecções conceituais e teóricas
+entre as duas áreas, e propor uma reflexão acerca das possibilidades de cooperação entre
+elas, fomentando novas pesquisas que contribuam para o aumento da qualidade das
+informações relacionadas aos requisitos dos sistemas de informação.
+2 A INTERDISCIPLINARIDADE DA CIÊNCIA DA INFORMAÇÃO COM FOCO NA CIÊNCIA DO
+COMPUTAÇÃO
+Antes de verificar as possíveis relações entre a Ciência da Informação e a Engenharia
+de Requisitos, fez-se necessária uma reflexão a respeito das relações já consolidadas entre a
+Ciência da Informação e a Ciência da Computação, área à qual a Engenharia de Requisitos
+está associada.
+De acordo com Queiroz e Moura (2015), a informação não pode ser considerada um
+conhecimento isolado, e todo o processo em que ela é gerada, coletada, difundida,
+armazenada e recuperada faz parte do estudo que é discorrido pela Ciência da Informação.
+Por ter como seu objeto de estudo a informação, e por esta fazer parte, de uma forma ou de
+outra, de todas as outras áreas do conhecimento, a Ciência da Informação na condição de
+ciência possui um reconhecido caráter interdisciplinar.
+São trazidas para este estudo três definições acerca da Ciência da Informação que, no
+entendimento dos autores, contribuem diretamente para o estabelecimento de relações
+diretas com a Ciência da Computação. Segundo Borko (1968), a Ciência da Informação
+carrega em seu núcleo interdisciplinar um arcabouço teórico e metodológico que busca
+estudar o comportamento da informação para fins de sua recuperação e está relacionada
+com a matemática, a linguística, a psicologia, a tecnologia de computação, a comunicação, a
+biblioteconomia, a administração, entre outras. De acordo com o autor,
+a Ciência da Informação é uma disciplina que investiga as propriedades e o
+comportamento informacional, as forças que governam os fluxos de
+informação, e os significados do processamento da informação, para uma
+acessibilidade e usabilidade ótima. Ela está preocupada com o corpo de
+conhecimento
+relacionado
+à
+origem,
+coleção,
+organização,
+armazenamento, recuperação, interpretação, transmissão, transformação,
+e utilização da informação. Isto inclui a investigação da representação da
+informação em ambos os sistemas, naturais e artificiais, o uso de códigos
+para a transmissão eficiente da mensagem, e o estudo do processamento
+
+
+de informações e de técnicas aplicadas aos computadores e seus sistemas
+de programação (BORKO, 1968, p. 3).
+
+A percepção de Borko (1968) sobre a natureza interdisciplinar da Ciência da
+Informação alinha-se à de Saracevic (1996), uma vez que, para este autor, ela possui relação
+com a biblioteconomia, pois compartilha o seu papel social e sua preocupação com os
+problemas da efetiva utilização dos registros; com a ciência da computação, por utilizar
+computadores e tecnologias na recuperação e transformação da informação por meio de
+algoritmos, tratando da sua natureza e comunicação para ser utilizada pelos homens; com a
+ciência cognitiva, que é representada pela inteligência artificial, a qual contribui com
+inovações nos sistemas de informação, além de colaborar com modelos teóricos da
+cognição; e com a comunicação, pois ambas compartilham interesse na comunicação
+humana, compreendendo a informação como um fenômeno e a comunicação como um
+processo que devem ser estudadas em conjunto.
+Apesar de não trazerem explicitamente a questão da interdisciplinaridade, Capurro e
+Hjorland (2007), perpetuam a ideia de “[...] geração, coleta, organização, interpretação,
+armazenamento, recuperação, disseminação, transformação e uso da informação [...]”
+dentro da Ciência da Informação. Porém, por se tratar de um conceito mais recente, os
+autores incorporam a ideia intrínseca da utilização de tecnologias modernas nessas
+atividades.
+É possível encontrar na literatura diversos estudos dentro da área da Ciência da
+Computação utilizando-se de conceitos originários da Ciência da Informação, bem como do
+contrário. Temas envolvendo Arquitetura da Informação, Web Semântica, Recuperação da
+Informação, Ontologias, Representação da Informação, Usabilidade, entre outros,
+encontram, na convergência entre as duas áreas, soluções que cooperam com a ciência e
+com a sociedade de maneira geral. Cafezeiro, Costa e Kubrusly corroboram com esse
+pensamento afirmando que a
+[...] Ciência da Computação pode contribuir com a Ciência da Informação no
+sentido de oferecer mecanismos automatizados para o armazenamento,
+manuseio e recuperação da informação, e que inversamente, a Ciência da
+Informação pode contribuir com a computação no sentido de propor
+modelos de representação da informação que possibilitem um arranjo
+lógico mais elaborado sobre o qual os sistemas computacionais possam
+agir. [...] O que enfatiza a possibilidade de um modelo de coprodução, em
+que as ciências colaboram na conformação dos conceitos que as
+fundamentam. É um modelo de interdisciplinaridade porque confraterniza
+traduções provenientes de ambas as disciplinas sobre um objeto
+compartilhado por ambas, nesse caso, a informação [...] (CAFEZEIRO;
+COSTA; KUBRUSLY, 2016, p. 130).
+
+No entendimento de Alves et al. (2007), a Ciência da Computação fornece o meio, as
+ferramentas tecnológicas para o desenvolvimento de ambientes para acesso, transmissão,
+recuperação, armazenamento e transformação da informação, e a Ciência da Informação
+fornece os métodos e as técnicas para o tratamento das informações nos documentos
+disponíveis, e utiliza as aplicações tecnológicas em seu fazer. Dessa forma, pode-se
+considerar que uma área complementa a outra, permitindo com que suas ferramentas e
+métodos atuem em conjunto no objetivo de garantir uma boa acessibilidade e usabilidade
+nos mais variados tipos de ambientes informacionais.
+3 AS ATIVIDADES DA ENGENHARIA DE REQUISITOS
+Kruchten (2003) salienta que um requisito de software é uma condição ou
+capacidade que um sistema automatizado precisa ter ou realizar com a finalidade de atender
+às necessidades de seus usuários. Sommerville (2011, p. 57) amplia esse significado,
+definindo os requisitos de um sistema como sendo
+[...] as descrições do que o sistema deve fazer, os serviços que oferece e as
+restrições a seu funcionamento. Esses requisitos refletem as necessidades
+dos clientes para um sistema que serve a uma finalidade determinada,
+como controlar um dispositivo, realizar um pedido ou encontrar
+informações [...].
+
+Os requisitos de software frequentemente são classificados como funcionais e não
+funcionais. Os requisitos funcionais são declarações de serviços que o sistema deve fornecer,
+de como o sistema deve reagir a entradas específicas e de como o sistema deve se
+comportar em determinadas situações, e dizem respeito às funções contidas no sistema,
+bem como às suas propriedades. Como exemplo de um requisito funcional, podem ser
+citados o cálculo do salário de um funcionário da empresa ou a geração de um relatório de
+contas a pagar. Os requisitos não funcionais, ao contrário dos funcionais, não expressam
+nenhuma função a ser realizada pelo software, e sim comportamentos e restrições que tal
+software
+
+deve
+
+satisfazer.
+
+São
+
+classificados
+
+em
+
+categorias,
+
+como
+
+desempenho,
+
+manutenibilidade, segurança, flexibilidade e confiabilidade (POHL, 1994; CYSNEIROS; LEITE,
+1997; PRESSMAN, 2009; SOMMERVILLE, 2011).
+A Engenharia de Requisitos é considerada uma das etapas do processo de
+desenvolvimento de software em que o analista procura compreender quais são as reais
+
+
+necessidades dos clientes no que tange à resolução ou dissolução do problema posto em
+foco. Tal área pode ser descrita como um conjunto de atividades para descobrir, analisar,
+documentar e verificar os requisitos e artefatos gerados, ressaltando que as atividades
+podem variar de uma organização para outra, ou até mesmo dentro de uma mesma
+organização, em razão das particularidades de cada projeto (KOTONYA; SOMMERVILLE,
+1998).
+É possível encontrar na literatura diferentes propostas relativas às atividades que
+fazem parte do processo de Engenharia de Requisitos. Pressman (2009) propõe que a
+Engenharia de Requisitos seja estruturada tomando por base sete atividades, e que algumas
+destas podem ocorrer em paralelo, devendo ser adaptadas às necessidades do projeto, são
+elas:
+• Concepção: estabelece um entendimento básico do problema, identificando os
+envolvidos e a natureza da solução desejada.
+• Levantamento: identifica os objetivos, as funcionalidades e as necessidades
+requeridas pelos envolvidos para o software.
+• Elaboração: refina as informações obtidas durante a concepção e desenvolve um
+modelo técnico, contendo as funções, as características e as restrições do
+software.
+• Negociação: realiza uma negociação entre os envolvidos no projeto, objetivando a
+priorização e solução entre os requisitos do software.
+• Especificação: formaliza/documenta os requisitos para fundamentar as atividades
+subsequentes do processo de desenvolvimento.
+• Validação: avalia e valida os produtos gerados durante a Engenharia de Requisitos,
+da qual participam engenheiros de software, clientes, usuários e outros
+interessados.
+• Gestão: realiza o gerenciamento de requisitos, definindo identificações individuais
+e relacionamentos, permitindo a sua rastreabilidade e facilitando as alterações
+quando necessário.
+Já Sommerville (2011) sugere que o processo de Engenharia de Requisitos pode
+incluir quatro atividades básicas, definidas por ele como atividades de alto nível, que têm em
+vista avaliar se o sistema será útil (Estudo de Viabilidade), descobrir os requisitos (Elicitação
+
+
+e Análise de Requisitos), documentar os requisitos (Especificação de Requisitos) e verificar se
+os requisitos de fato definem o sistema que o cliente deseja (Validação de Requisitos).
+Conforme pode ser observado na Figura 1, o processo proposto tem como objetivo produzir
+um documento de requisitos contendo os artefatos gerados ao longo da execução de cada
+uma das atividades e que, ao final, será acordado com todos os envolvidos.
+Figura 1: Processo de Engenharia de Requisitos.
+Estudo de
+viabilidade
+
+Obtenção de
+análise de
+requisitos
+
+Especificação
+de requisitos
+
+Relatório de
+viabilidade
+
+Validação de
+requisitos
+
+Modelos de
+sistema
+
+Requisitos de
+usuário e de
+sistema
+Documento
+de requisitos
+
+Fonte: Sommerville (2011)
+
+Pode-se considerar a atividade de Elicitação ou Levantamento de Requisitos como
+umas das mais críticas durante o processo de Engenharia de Requisitos, visto que, se os
+requisitos não forem bem definidos e compreendidos, todas as outras atividades podem ser
+afetadas. A Elicitação de Requisitos pode ser compreendida como um conjunto de técnicas
+que auxiliam na coleta de fatos para realizar a identificação das necessidades de informação
+junto aos usuários dos sistemas de informação (RIBEIRO, 2012). Dentre essas técnicas,
+podem-se mencionar a realização de entrevistas, a análise documental, a construção de
+cenários que simulam as interações entre os usuários e os sistemas, o uso de protótipos para
+apoiar a experimentação de tais cenários e o processo de observação com análise social do
+contexto, denominado etnografia (GOGUEN, 1994; KOTONYA; SOMMERVILLE, 1998).
+4 PROCEDIMENTOS METODOLÓGICOS
+Quanto aos procedimentos metodológicos utilizados para o alcance dos objetivos
+deste artigo, foi realizado um estudo bibliográfico de caráter exploratório, pois pretende-se
+investigar os conceitos relacionados às atividades da Ciência da Informação e da Engenharia de
+
+
+
+Requisitos (GIL, 2002). Segundo Sampieri, Collado e Lucio (1994), “o uso do estudo
+exploratório se dá quando o objetivo é examinar um determinado tema que tenha sido pouco
+ou nada estudado anteriormente, permitindo que se obtenha um maior grau e familiaridade
+com os fenômenos envolvidos” (apud VIANNA; DUTRA; FRAZZON, 2016, p. 188). O estudo foi
+realizado por meio de levantamento e leitura de referências teóricas, publicadas por meios
+escritos e eletrônicos, como livros, artigos científicos e páginas de web sites. Quanto à
+natureza, é considerada uma pesquisa básica, porque se propõe à geração de novos
+conhecimentos que sejam úteis para o avanço da ciência, sem aplicação prática prevista.
+Para a identificação dos estudos relacionados com este, foi realizada uma busca em
+bases de dados da área da Ciência da Informação que possibilitavam a utilização de filtros
+por esta área, utilizando os termos “engenharia de requisitos”, para as bases em língua
+portuguesa, e “requirements engineering”, para as bases em língua inglesa. Sendo elas, a
+Biblioteca Brasileira de Teses e Dissertações (BDTD), Web of Science (WoS), Scielo, Library
+and Information Science Abstracts (LISA), BRAPCI e Anais do Encontro Nacional de Pesquisa
+em Ciência da Informação (ENANCIB).
+Com base nos resultados, identificaram-se algumas pesquisas propondo a utilização
+de abordagens ligadas à Ciência da Informação e às Ciências Sociais para auxiliar na
+compreensão das necessidades dos usuários a partir da etnografia e da análise de domínio
+para entendimento do contexto em que o software está inserido (POHL, 1994; MAIDEN;
+HARE, 1998; VILLER; SOMMERVILLE, 2000; RIBEIRO, 2008; RIBEIRO, 2012). Além disso,
+foram localizados estudos ligados ao fluxo informacional para detectar problemas e propor
+soluções acerca da comunicação e troca de informações entre os fornecedores e os seus
+receptores (VILLER; BOWERS; RODDEN, 1999; HANISCH; CORBITT, 2007; VIJAYAKUMAR; GEY;
+WENDE, 2008; MORETTO; GALDO; KERN, 2010; ROSENKRANZ; CHARAF; HOLTEN, 2013;
+PAAVOLA; HALLIKAINEN, 2016).
+5 CONVERGÊNCIAS ENTRE A CIÊNCIA DA INFORMAÇÃO E A ENGENHARIA DE REQUISITOS
+Com a finalidade de estabelecer as relações entre as duas áreas, teve-se como base
+de análise os objetivos estabelecidos por Borko (1968), para a Ciência da Informação, e as
+atividades da Engenharia de Requisitos propostas por Pressman (2009). A escolha pela
+utilização do referencial teórico desses autores se deu pelas indiscutíveis contribuições de
+ambos para as duas áreas, contribuições tais que podem ser observadas pela grande
+
+quantidade de citações que possuem e por se acreditar que as teorias e propostas de Borko
+e Pressman, respectivamente, contemplam de forma ampla tanto os objetivos da Ciência da
+Informação, quanto as atividades da Engenharia de Requisitos.
+O resultado da análise das relações entre as duas áreas foi definido com base no
+entendimento sobre os objetivos da Ciência da Informação e as atividades da Engenharia de
+Requisitos. O Quadro 1 mostra um resumo do resultado das relações identificadas.
+Quadro 1: Relações entre a Ciência da Informação e a Engenharia de Requisitos
+CIÊNCIA DA INFORMAÇÃO
+(BORKO, 1968)
+
+ENGENHARIA DE REQUISITOS
+(PRESSMAN, 2009)
+
+Origem
+
+Concepção
+
+Coleção
+
+Levantamento e Elaboração
+
+Organização
+
+Elaboração e Especificação
+
+Armazenamento
+
+Gestão
+
+Recuperação
+
+Gestão
+
+Interpretação
+
+Concepção, Levantamento, Elaboração e Especificação
+
+Transmissão
+
+Concepção, Levantamento, Negociação, Validação e Gestão
+
+Transformação
+
+Elaboração e Especificação
+
+Utilização
+
+Elaboração, Negociação, Especificação, Validação e Gestão
+Fonte: os autores (2018)
+
+Com base nas relações identificadas e apresentadas, observa-se uma clara
+intersecção entre as duas áreas. Começando por uma das preocupações da Ciência da
+Informação no que diz respeito à origem da informação, que está inserida dentro da
+Engenharia de Requisitos na atividade de concepção, pois é durante referida atividade que
+os provedores das informações, que serão transformadas em requisitos – sejam eles,
+indivíduos, documentos, ou sistemas –, são identificados. No que tange à coleção das
+informações, também entendida como coleta na Ciência da Informação (CAPURRO;
+HJORLAND, 2007), acontece durante as atividades de levantamento quando são
+identificados os objetivos, as funcionalidades e as necessidades requeridas para o software e
+na atividade de elaboração em que ocorre o refinamento das informações alcançadas
+durante a concepção.
+Brascher e Café (2008, p. 5) ressaltam que a organização da informação é um
+processo que envolve a descrição física e de conteúdo dos objetos informacionais, em que
+
+
+“[...] o produto deste processo é a representação da informação, entendida como um
+conjunto de elementos descritivos que representam os atributos de um objeto
+informacional específico”. Diante da definição apresentada, pode-se relacionar a
+organização da informação dentro da Ciência da Informação com as atividades da
+Engenharia de Requisitos denominadas de elaboração, em que ocorre o desenvolvimento de
+um modelo técnico contendo os requisitos do software e a atividade de especificação, que
+consiste na formalização e documentação dos requisitos identificados. Vale salientar que a
+forma e a estrutura utilizadas para a documentação dos requisitos podem variar de acordo
+com a abordagem de desenvolvimento do software adotada pela organização.
+É comum observar, na literatura referente à Ciência da Informação, questões
+relacionadas ao armazenamento e à recuperação da informação tratadas na fronteira dos
+estudos acerca de Sistemas de Recuperação da Informação (SRI). Conforme Souza (2006, p.
+163), um SRI deve desempenhar as seguintes atividades: (a) fornecer informações contidas
+nos documentos, usualmente por meio dos processos de indexação e descrição dos
+documentos; (b) possibilitar o armazenamento e gestão física e/ou lógica desses
+documentos e de suas representações; (c) recuperar as informações representadas e dos
+próprios documentos armazenados, de maneira a satisfazer as necessidades de informação
+dos usuários. Na Engenharia de Requisitos, as atividades relacionadas com o
+armazenamento e representação da informação estão inseridas basicamente na atividade
+responsável pela gestão dos requisitos, em que são realizados o gerenciamento dos
+requisitos, a partir da definição de identificações individuais e de relacionamentos que
+permitam a sua rastreabilidade, facilitando sua localização e as alterações quando
+necessário.
+Para a Ciência da Informação, um usuário da informação ou uma comunidade de
+usuários exercem papel ativo, selecionando as informações fundamentando-se em um
+processo de compreensão e interpretação, numa atividade que “procede não só de sua
+consciência ou de seus modelos mentais mas de seus conhecimentos e interesses prévios
+que estão entrelaçados na rede social e pragmática que lhes dá sustentação” (CAPURRO,
+2003, apud AZEVEDO, 2004, p. 125-126) . Nessa perspectiva, a interpretação das
+informações relacionadas aos requisitos do sistema pode se relacionar com diversas
+atividades da Engenharia de Requisitos, sendo elas: as atividades de concepção e
+levantamento, pois é inerente a necessidade de um processo de interpretação das
+
+informações para transformá-las em requisitos, e as atividades de elaboração e
+especificação, pois da mesma forma que as anteriores, os requisitos precisam ser
+compreendidos e interpretados para possibilitar a elaboração dos modelos e documentos
+que irão representá-los.
+Como um ativo indispensável, a informação precisa fluir ininterruptamente pelo
+ambiente em que se encontra. Nesse sentido, o fluxo informacional representa uma série de
+tarefas essenciais à comunicação das informações geradas em um determinado contexto. De
+acordo com Barreto (1998), o fluxo da informação consiste em uma sequência de eventos
+desde
+
+a
+
+geração
+
+da
+
+informação,
+
+por
+
+parte
+
+do
+
+emissor,
+
+até
+
+sua
+
+captação/assimilação/aceitação pelo receptor, gerando saberes individuais e coletivos.
+Tomando por fundamento referido conceito, é possível relacionar a transmissão da
+informação com as atividades da Engenharia de Requisitos que tratam da troca de
+informações entre os envolvidos no processo de desenvolvimento para a geração de
+conhecimento e tomada de decisão. Dessa maneira, o relacionamento é firmado com as
+atividades de concepção e levantamento, já que nelas acontece a compreensão dos
+requisitos por meio da troca de informações entre os usuários/clientes e os
+analistas/engenheiros de software, com a atividade de negociação e validação, em que
+ocorre a priorização e solução de conflitos dos requisitos e a avaliação dos requisitos já
+identificados e, por fim, com a atividade de gestão que se utiliza de ferramentas e técnicas
+para disseminar as informações relacionadas aos requisitos para todos os envolvidos no
+projeto.
+No que se relaciona à transformação da informação utilizando a definição dada por
+Borko (1968), entende-se que a informação é a matéria-prima que compõe o conhecimento;
+e nessa perspectiva, a cadeia produtiva do conhecimento passa, necessariamente, pela
+produção da informação. Dentro de um processo de Engenharia de Requisitos, todas as
+informações geradas durante cada uma das atividades estão relacionadas à geração de
+conhecimento – seja ele para ser utilizado pelos envolvidos no processo de desenvolvimento
+pelos usuários do software que será entregue. Todavia, para fins da definição das relações
+entre esta característica da Ciência da Informação e as atividades da Engenharia de
+Requisitos, fez-se necessário definir que a transformação seria utilizada no sentido de alterar
+a forma de representar a informação, e, neste caso, foram definidas duas relações. A
+primeira com a atividade de elaboração, no momento em que as informações são
+transformadas em modelos técnicos, contendo os requisitos, e a segunda com a atividade de
+elaboração na qual os requisitos são documentados e formalizados para fundamentar as
+atividades subsequentes do processo de desenvolvimento.
+O último relacionamento estabelecido entre os objetivos da Ciência da Informação e
+as atividades de Engenharia de Requisitos diz respeito ao uso da informação. Segundo Le
+Coadic (2004), utilizar um produto de informação é empregar tal objeto para obter um efeito
+que satisfaça a uma necessidade de informação. Nesse contexto, serão consideradas as
+atividades da Engenharia de Requisitos, nas quais existe o envolvimento dos usuários do
+sistema e/ou da equipe de desenvolvimento, que são os consumidores das informações que
+estão sendo produzidas para a geração dos requisitos. São elas: a atividades de elaboração,
+momento em que a equipe de desenvolvimento elabora modelos técnicos, usando as
+informações obtidas nas fases de concepção e levantamento; a atividade de negociação,
+quando ocorre a análise dos requisitos pela equipe de desenvolvimento e pelos usuários,
+objetivando a solução de conflitos entre os requisitos e a sua priorização; a atividade de
+especificação, em que a equipe de desenvolvimento utiliza os requisitos identificados para a
+geração de documentos contendo o detalhamento destes, a atividade de validação, em que
+os usuários, em conjunto com a equipe de desenvolvimento, avaliam se os requisitos estão
+de acordo com o esperado. E por fim a atividade de gestão, na qual a equipe fica responsável
+por manter os documentos e modelos gerados atualizados e disponíveis para serem
+consultados por todos os envolvidos no processo.
+6 CONSIDERAÇÕES FINAIS
+Conforme pode ser observado, identifica-se claramente a intersecção entre as áreas da
+Ciência da Informação e a da Engenharia de Requisitos. A primeira preocupa-se com as
+propriedades da informação, seu comportamento, sua fluidez e as diferentes maneiras de
+processá-la com foco na sua acessibilidade e utilização. E a segunda tem como objetivo prover
+mecanismos para a compreensão das necessidades dos usuários – por intermédio das
+informações fornecidas, buscando a transformação destas em um produto de software
+funcional.
+Apesar de haver propostas na literatura, objetivando auxiliar a Engenharia de
+Requisitos na identificação das informações para a construção de sistemas que sejam
+considerados úteis para os seus usuários, ainda é possível observar oportunidades de melhoria
+
+
+em tal processo. Nota-se que a maioria dos estudos com esse objetivo são desenvolvidos
+dentro da área da Ciência da Computação e não levam em conta conceitos que envolvem a
+natureza da informação que será transformada nos requisitos, o que é perfeitamente
+compreensível, já que a informação, no seu sentido mais original, não é a essência desta área.
+A partir das relações estabelecidas e apresentadas entre as duas áreas, notamse/percebem-se oportunidades de contribuição da Ciência da Informação para com a
+Engenharia de Requisitos, principalmente no que diz respeito à utilização de abordagens
+complementares no entendimento das necessidades informacionais e tratamento da
+informação para a construção de sistemas de informação. Assim sendo, pode-se concluir que
+existe uma necessidade de estudos que utilizam abordagens oriundas da Ciência da
+Informação para auxiliar nas atividades da Engenharia de Requisitos, fato que reforça a
+importância e a potencialidade de investigações futuras, utilizando esses dois temas,
+fortalecendo a relação entre a Ciência da Informação e a Ciência da Computação.

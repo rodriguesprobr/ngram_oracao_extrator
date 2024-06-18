@@ -1,0 +1,473 @@
+
+HIPÁTIA: A PRIMEIRA EXPERIÊNCIA PRÁTICA DE IMPLEMENTAÇÃO DE UM RDC-ARQ NO
+BRASIL
+
+Modalidade: Trabalho Completo
+Resumo: A preservação arquivística é uma necessidade institucional e social. Nos últimos anos,
+diversas demandas relacionadas à implementação de repositórios arquivísticos digitais confiáveis
+foram normalizadas por meio de resoluções, decretos e diretrizes. Todavia, implementar este tipo de
+repositório não é uma tarefa trivial, tendo em vista a grande quantidade de requisitos que devem ser
+atendidos. Este trabalho descreve um projeto de pesquisa executado pelo Instituo Brasileiro de
+Informação em Ciência e Tecnologia a partir de uma demanda do Tribunal de Justiça do Distrito Federal
+e Territórios. São descritos os passos realizados para se implementar um repositório arquivístico digital
+confiável que fosse capaz de preservar o diário de justiça eletrônico. As etapas de levantamento
+arquivístico, levantamento computacional, estruturação de uma proposta informacional e aplicação
+do modelo foram detalhadas e os recursos informacionais que as apoiam foram descritos. Como
+resultado, este trabalho apresenta o modelo Hipátia, primeira experiência brasileira de
+implementação de um repositório confiável que atende aos requisitos apresentados pelo Conselho
+Nacional de Arquivos na manutenção da cadeia de custódia.
+Palavras-Chave: Hipátia. RDC-Arq. Preservação Digital.
+1 INTRODUÇÃO
+A necessidade de se preservar o conhecimento existente hoje em dia a fim de que a
+sociedade tenha condições de poder acessá-lo no futuro é tema de várias pesquisas no Brasil
+e no mundo. O estudo de Chowhury (2010) acerca da pesquisa sobre preservação reforça o
+entendimento de que a principal missão das ações de preservação é tornar a informação
+digital acessível e usável para a comunidade de usuários de agora e do futuro. Todavia, essa é
+uma tarefa cada vez mais urgente e desafiadora. Seja pela enorme quantidade de conteúdos
+digitais gerados anualmente, cerca de 40 trilhões de gigabytes produzidos no último ano,
+segundo a revista Exame (2021), seja pela acelerada transformação das práticas digitais, que
+acabam tornando formatos de manipulação de arquivos que antes eram unanimidade em
+estruturas obsoletas.
+A preservação digital requer a realização de procedimentos complexos e que envolvem
+todos os aspectos da informação. Além da preservação dos atributos físicos da mídia que
+guarda a informação digital, é necessário se ater a outras características, como a atualização
+dos formatos e a manutenção do contexto. Essas ações garantirão que o item a ser preservado
+possa ser semanticamente compreendido quando for novamente acessado. O modelo de
+referência DELOS (CANDELA et al., 2008) destaca três aspectos principais relacionados à
+preservação digital:
+- manter fisicamente intacta a instância da entidade digital frente a
+deterioração da mídia física de armazenamento e os sinais gravados nela.
+- garantir que a sintaxe da entidade digital (sua codificação e formato) pode
+ser interpretada e que cada instância subsequente (acesso, renderização,
+manipulação etc) é idêntica à instância inicial (com relação ao
+comportamento, incluindo aparência e sentimento, ou funcionalidade etc)
+- garantir que o significado semântico da entidade digital é acessível ao longo
+do espaço e tempo em face das mudanças tecnológicas e culturais.
+(CANDELA et al., 2008, p. 54, tradução nossa) .
+
+Logo, a preservação é um processo sistêmico, que precisa ser realizado a partir da
+incorporação de várias abordagens. A fim de que todas as perspectivas necessárias sejam
+consideradas, as instituições usualmente priorizam o tipo de conteúdo a ser preservado.
+Dessa forma, os esforços são centrados na preservação de um tipo específico de conteúdo,
+possibilitando a realização de estudos aprofundados para que as especificidades de cada
+objeto digital sejam analisadas e absorvidas pelas práticas de preservação.
+
+
+Com vistas a essa especialização no projeto de preservação, várias instituições
+definiram tipologias específicas para iniciar seus projetos de preservação. O Birô Europeu de
+Associações de Biblioteconomia, Informação e Documentação definiu duas prioridades no
+decorrer das discussões acerca da temática (EBLIDA, 2010): a preservação das heranças
+culturais e a preservação das informações científicas. No Brasil, o Instituto Brasileiro de
+Informação em Ciência e Tecnologia (IBICT) também se ocupou em um primeiro momento em
+promover a preservação das informações científicas (MÁRDERO ARELLANO, 2008).
+Assim como as informações científicas e a herança cultural, outros tipos de
+preservação digital foram sendo mapeados e demandados pela sociedade, a exemplo dos
+arquivos multimídia, das páginas de internet e dos conteúdos arquivísticos. No caso da
+preservação arquivística, ela foi promovida em grande parte pela publicação da resolução nº
+39/2014 do Conselho Nacional de Arquivo (CONARQ) e sua atualização, a resolução 43/2015
+(CONARQ, 2015), quando foram estipulados os requisitos para a criação de Repositórios
+Arquivísticos Digitais Confiáveis (RDC-Arq).
+Assim como o CONARQ, outras importantes instituições iniciaram a discussão para
+normatizar o uso dos RDC-Arq. Uma dessas instituições é o Conselho Nacional de Justiça (CNJ),
+que publicou a resolução nº 324/2020 (CNJ, 2020). Nela, é estabelecido o Programa Nacional
+de Gestão Documental e Memória do Poder Judiciário (Proname), bem como são descritas as
+diretrizes e normas da gestão da memória e da gestão documental.
+No que tange à implementação do RDC-Arq, há uma indicação explícita no normativo
+do CNJ a respeito da forma como ela deve ser sistematizada:
+Art. 34. Para fins de preservação digital, os órgãos do Poder Judiciário
+adotarão repositório arquivístico digital confiável (RDC-Arq), desenvolvido
+como software livre, gratuito e de código aberto, projetado para manter os
+dados em padrões de preservação digital e o acesso em longo prazo. (CNJ,
+2020)
+
+Além das dificuldades inerentes às diretrizes apontadas pelos documentos do CONARQ
+e do CNJ, um dos grandes desafios na implementação dos RDC-Arq paira sobre a manutenção
+ininterrupta da cadeira de custódia, conforme aponta Flores et al. (2016). Este tópico é
+primordial para o sucesso de um RDC-Arq, já que apenas a certeza da autenticidade do objeto
+digital é capaz de garantir a confiabilidade inerente a este tipo de solução.
+
+
+Visando atender às normativas citadas anteriormente, bem como sua própria
+normativa, o Tribunal de Justiça do Distrito Federal e Territórios (TJDFT) iniciou discussões
+internas relacionadas à implantação de RDC-Arq. As indicações sobre como deveria ser a
+gestão documental do TJDFT são estabelecidas na resolução nº 2/2018. Dentre outras
+indicações, detalhou-se como seria o escopo de utilização do RDC-Arq no Tribunal (2021).
+Diante dos desafios encontrados para o estabelecimento de ações práticas de
+implementação do RDC-Arq, o TJDFT entendeu por bem convidar o IBICT para apoiar a
+iniciativa. Tal convite culminou com a realização de um Termo de Execução Descentralizada
+(TED) entre as duas instituições e que tinha como objetivo:
+Apresentar alternativas de soluções para implantação de um repositório
+arquivístico digital confiável - RDC - Arq, integrado com solução de
+gerenciamento documental, tornando possível a elaboração e disseminação
+de modelo tecnológico de mapeamento, preservação e disseminação das
+informações associadas. (TJDFT, 2018).
+
+A execução da pesquisa por parte do IBICT, fruto da parceria, resultou na implantação
+do primeiro RDC-Arq do Brasil. Seu grande diferencial é a garantia de manutenção da cadeia
+de custódia, algo inédito em um ambiente de produção. O RDC-Arq foi implementado com o
+sistema Diário de Justiça Eletrônico (DJe) do TJDFT. Ainda como fruto da parceria, foi
+estruturado o modelo Hipátia, a proposta do IBICT para preservação digital arquivística , que
+tem sido utilizado por diversas instituições nacionais, a exemplo do Arquivo Nacional, do
+Tribunal de Justiça de Minas Gerais, do Tribunal Regional do Trabalho da 4ª região, dentre
+outras.
+Este trabalho buscou apresentar a pesquisa executada pelo IBICT no âmbito da
+parceria com o TJDFT, bem como discorrer sobre as bases informacionais que foram
+consideradas durante a construção do modelo Hipátia.
+2 METODOLOGIA
+A pesquisa foi realizada a partir de uma perspectiva qualitativa e teve caráter aplicado.
+A metodologia utilizada foi a proposta durante a formalização da parceria entre o TJDFT e o
+IBICT e está explicitada no TED. Ela consiste em modelos de análise documental e
+experimentação e objetiva implementar um RDC-Arq. Os trabalhos foram organizados em
+quatro metas:
+
+
+Levantamento de informações;
+
+
+
+Implantação de repositório;
+
+
+
+Estudo de integração de fluxo de dados; e
+
+
+
+Transferência de tecnologia e disseminação do conhecimento.
+
+Em cada uma delas foram realizados diversos procedimentos metodológicos,
+conforme apresentado a seguir.
+Visando alcançar as metas propostas, foi realizada inicialmente a análise documental
+de toda a legislação pertinente à temática. A fim de se aprofundar no entendimento das
+demandas internas do TJDFT, optou-se pela realização de entrevistas com atores-chave para
+a temática na instituição, tal como realização de reuniões regulares de acompanhamento,
+quando foram validadas as estratégias montadas.
+Outro procedimento metodológico se apoiou na análise comparativa de programas
+que poderiam atender os requisitos apontados pelo CONARQ e CNJ. Neste processo, diversos
+programas de apoio foram instalados. Suas principais características foram sistematizadas de
+modo a identificar as configurações adequadas para implementação do RDC -Arq. O ambiente
+que seria preservado, DJe, foi também analisado e seus dados e metadados foram mapeados.
+Esta etapa visou estabelecer as bases para a proposição de um dicionário de dados. A pesquisa
+também demandou uma análise compreensiva da infraestrutura de tecnologia da informação
+do TJDFT de forma a identificar como poderia se dar a coleta e a transferência de dados entre
+as etapas de implantação do RDC-Arq.
+Com os levantamentos realizados anteriormente, foi então proposto um modelo de
+implementação do RDC-Arq: o Hipátia. Este modelo possuía como requisito a existência de
+um barramento de extração e preparação, que foi desenvolvido no decorrer da pesquisa.
+Também previa a incorporação de diversas configurações entre os programas escolhidos para
+apoiar a implementação do RDC-Arq. Como última etapa da pesquisa, o modelo Hipátia foi
+sistematizado e disponibilizado para que pudesse ser aplicado em outras instituições.
+3 RESULTADOS E ANÁLISES
+A seguir, são descritos os resultados obtidos durante a pesquisa. Eles são divididos em
+levantamentos arquivísticos, levantamentos computacionais, sistematização do modelo
+Hipátia e aplicação no ambiente do TJDFT.
+3.1 Levantamentos arquivísticos
+
+
+Os metadados levantados no âmbito do projeto ao se analisar o sistema DJe podem
+ser divididos em duas categorias: metadados de gestão e metadados descritivos. A definição
+desses metadados levou em consideração o MoReq-Jus, instituído pela Resolução nº 91 de
+2009 (CNJ, 2009) e o e-ARQ Brasil, instituído pela Resolução nº 25 de 2007 (CONARQ, 2007),
+recentemente substituída pela Resolução nº 50 de 2022.
+Os metadados de gestão foram extraídos do próprio DJe e são compostos,
+inicialmente, por 22 itens. Um extrato da lista de metadados de gestão mapeados é
+apresentado no quadro a seguir.
+Quadro 1 – Metadados de gestão mapeados.
+Descrição
+Número gerado pelo sistema na hora de sua captura.
+Geralmente é o campo ID de uma tabela.
+Identificar de forma unívoca e persistente o
+documento. Podemos usar no caso do DJe, por
+exemplo, o ano concatenado com o número do Diário
+da Justiça.
+[...]
+
+Campo CSV
+
+Tabela
+[DB].DiarioEletron
+numeroSistema
+ico.ID
+[DB].DiarioEletron
+numeroIdentificado ico.Ano +
+r
+[DB].DiarioEletron
+ico.Numero
+[...]
+[...]
+Utilizar de
+Registro do algoritmo utilizado para o criptografia do
+algoritmoChecksum codificação para
+cálculo do checksum. Exemplo: SHA, MD5
+salvar esse dado.
+Fonte: IBICT (2019b).
+
+Exemplo
+5620
+201961
+
+[...]
+sha-256
+
+Além dos metadados de gestão, foram estipulados os metadados descritivos, que
+seguiram dois padrões: ISAD(G) e Dublicore. A utilização dos dois padrões procurou atender a
+infraestrutura computacional proposta para implementar o RDC-Arq, tendo em vista que
+alguns sistemas utilizavam o ISAD(G) e outros usavam o Dublicore. Dada a arquitetura
+informacional que foi desenvolvida para o Hipátia, é possível adicionar qualquer outro padrão
+de metadados sem maiores transtornos. Os metadados incorporados para os dois padrões
+foram extraídos do ambiente do DJe ou preenchidos de forma estática, quando aplicável. No
+primeiro momento foram mapeados 15 metadados seguindo o padrão Dublincore. A lista de
+metadados inicialmente mapeados foram: dc.title, dc.creator, dc.subject, dc.description,
+dc.publisher, dc.contributor, dc.date, dc.type, dc.format, dc.identifier, dc.source, dc.language,
+dc.relation, dc.coverage e dc.rights.
+Já no padrão ISAD(G), foram selecionados os seguintes metadados: identifier, title,
+eventDates, levelOfDescription, extentAndMedium,
+archivalHistory,
+
+acquisition,
+
+scopeAndContent,
+
+eventActors,
+
+appraisal,
+
+eventActorHistories ,
+
+accruals,
+
+arrangement,
+
+accessConditions, reproductionConditions, language, physicalCharacteristics, findingAids,
+
+
+locationOfOriginals,
+
+locationOfCopies,
+
+relatedUnitsOfDescription,
+
+publicationNote,
+
+generalNote, archivistNote, rules e revisionHistory. Estes 26 metadados são uma lista
+exemplificativa, mas outros metadados foram adicionados no decorrer do projeto. A lista
+completa dos metadados utilizados está disponível no repositório GIT destinado ao Hipátia1.
+Todos os metadados foram mapeados a partir de entrevistas e reuniões com a equipe do
+TJDFT.
+A tabela de temporalidade do TJDFT foi considerada a fim de pautar a forma como
+seria feita a integração entre o RDC-Arq e o DJe. Foram levantadas duas possibilidades: a
+primeira, denominada de Integração Ativa, ocorre de forma que o RDC-Arq acesse ativamente
+o ambiente DJe a fim de verificar se existem novas atualizações e proceder com a preservação
+dos objetos informacionais. Já a segunda, denominada de Por Demanda, funciona quando o
+ambiente que está sendo preservado acessa o RDC-Arq, passando parâmetros para iniciar o
+processo de preservação. Uma vez que todas as edições publicadas no DJe precisam ser
+preservadas, optou-se pela Integração Ativa, que ocorre a cada 24 horas.
+Por fim, nos levantamentos arquivísticos foi definida a estrutura do dicionário de dados
+do DJe. Este dicionário é responsável por mapear os dados e metadados extraídos do DJe para
+o RDC-Arq, funcionando como um tradutor das tabelas do sistema para os metadados de
+gestão e descritivos. Para que cada sistema seja integrado com o Hipátia, seu próprio
+dicionário de dados precisa ser definido. Este documento é lido pelo RDC-Arq, e então, os
+metadados são coletados para permitir que o contexto de utilização do objeto informacional
+que está sendo preservado seja resgatável no futuro. A figura 1 apresenta um extrato do
+dicionário de dados que foi construído para o DJe.
+
+1
+
+O acesso ao repositório GIT do projeto poderá se dar pelo endereço https://git.ibict.br/cgti/barrapres_/Dje
+mediante um cadastro prévio. O cadastro precisa ser realizado neste momento por motivo de segurança, mas
+espera-se que esta exigência seja eliminada em breve.
+
+
+Figura 1 - Dicionário de dados do DJe.
+
+Fonte: https://git.ibict.br/ (2021).
+
+Visando promover a interoperabilidade, o dicionário de dados do DJe foi construído na
+linguagem textual XML, largamente utilizada.
+3.2 Levantamentos computacionais
+O levantamento computacional considerou a infraestrutura tecnológica adotada pelo
+TJDFT e as opções de programas consolidados que poderiam ser consideradas para
+implementação do RDC-Arq. Foram mapeados dois programas já existentes: o Archivematica
+e o AtoM. Todavia, não foi possível identificar um programa capaz de conectar-se ao DJe e
+realizar a extração e preparação do conteúdo. Para isso, foi desenvolvido um programa
+denominado BarraPres. Além da parte de programas, foram apreciadas questões referentes à
+infraestrutura de rede do TJDFT. Isso se deu pela necessidade de garantir o funcionamento
+seguro da solução RDC-Arq.
+Com relação aos programas que fazem parte do modelo, passa-se a descrever como
+se deu a utilização de cada um deles.
+3.2.1 BARRAPRES
+O BarraPres foi inteiramente desenvolvido no IBICT. Apoiado na linguagem Python, ele
+possui duas funções principais: extrair os dados e metadados do DJe e prepará-los para envio
+ao Archivematica. Para tanto, o BarraPres foi estruturado a partir de uma arquitetura
+simplificada, permitindo que adaptações sejam realizadas de forma otimizada. Entre os
+componentes que são incorporados no BarraPres estão: conector com o sistema produtor,
+dicionário de dados do sistema produtor e estrutura de empacotamento. A figura 2 apresenta
+o esquema de funcionamento do BarraPres.
+
+
+Figura 2 - Esquema de funcionamento do BarraPres.
+
+Fonte: Elaboração própria (2022).
+
+Os itens marcados na cor roxa são os que eventualmente deverão ser alterados caso o
+BarraPres seja utilizado junto ao DJe de outra instituição. Enquanto o módulo de Dados de
+Acesso recebe os dados de conexão, o módulo Dicionário de dados DJe recebe os metadados
+que devem ser preservados na nova instância. Entende-se que cada instituição priorizará um
+conjunto de metadados personalizado para além daqueles obrigatórios já definidos.
+Foram vislumbrados três formatos de conexão entre o BarraPres e o sistema produtor:
+acesso direto ao banco de dados, API Rest, acesso aos diretórios e pastas do sistema
+operacional. Para o caso do DJe, entendeu-se que o acesso direto ao banco era a melhor
+opção, tendo em vista a simplicidade do sistema. Sendo assim, foi necessário configurar um
+usuário com acesso somente leitura à base oficial do DJe do TJDFT. Com isso, o BarraPres pôde
+gerar os pacotes e enviá-los para o repositório de preservação. No módulo de Controle de
+Envio são registrados todos os pacotes enviados para preservação, de forma a evitar envios
+duplicados e a realizar a comunicação em caso de algum erro de execução.
+3.2.2 ARCHIVEMATICA
+O Archivematica foi escolhido por ser a solução de acesso livre mais compreensiva e
+completa em termos de preservação arquivística. Ele foi pensado para ser o repositório de
+preservação do modelo Hipátia, ou seja, o sistema que recebe os pacotes enviados pelo
+BarraPres. A figura 3 mostra uma das etapas de funcionamento do Archivematica.
+
+
+Figura 3 - microprocessos realizados pelo Archivematica.
+
+Fonte: Ibict (2019a).
+
+Um dos pontos fundamentais para o sucesso de implementação do RDC-Arq foi a
+configuração automática para que o BarraPres fosse capaz de submeter pacotes diretamente
+para o Archivematica, sem a necessidade de interferência humana. Com isso, todo o processo
+de preservação foi automatizado, bastando alguma atuação humana apenas quando eram
+encontrados erros que não podiam ser solucionados dinamicamente pelo sistema. O
+mapeamento de erros do Archivematica é realizado por meio de seus microprocessos de
+Ingest.
+Para envio dos pacotes de preservação para o Archivematica foi necessário definir o
+formato do pacote. Após a análise de todas as possibilidades oferecidas pelo programa, optouse por um pacote que possibilitasse o envio de forma simplificada ao mesmo tempo que
+compreendesse todas as informações necessárias para que o pacote pudesse ser acessível no
+futuro, mantendo sua autenticidade. A figura 4 apresenta a estrutura adotada.
+Figura 4 - Estrutura do pacote enviado para o Archivematica.
+
+Fonte: Ibict (2019a).
+
+Com o envio do pacote para o Archivematica e a realização bem-sucedida dos
+microprocessos, os conteúdos preservados já estão prontos para serem enviados para
+disseminação. Todavia, embora a utilização do AtoM esteja prevista no modelo Hipátia, para
+este primeiro projeto a opção foi por finalizar o processo com a verificação de que o pacote
+encontrava-se preservado no Archivematica. Já existem implementações do modelo Hipátia
+
+
+nas quais a disponibilização do AtoM é contemplada. Todavia, estas implementações não
+compõem o escopo desta pesquisa.
+Além das configurações dos programas descritos anteriormente, foram necessários
+criar usuários locais na rede do TJDFT. Tal demanda era necessária para permitir a realização
+de ações automatizadas sem a necessidade de interferência humana. Outra opção
+computacional adotada pelas equipes foi a segmentação da estrutura de rede em diversas
+redes virtuais (VLAN, na sigla em Inglês). Com isso, objetivou-se dificultar a ação de criminosos
+que eventualmente tenham como objetivo acessar os ativos informacionais do TJDFT.
+3.3 A estruturação do modelo Hipátia
+Após os levantamentos arquivísticos e computacionais, foi possível estruturar uma
+proposta de modelo capaz de apoiar a implementação de RDC-Arq. A estruturação de tal
+proposta tinha como premissa atender ao modelo de referência Open Archival Information
+Systeam (OAIS). Entre os principais diferenciais do OAIS está a proposição de separação entre
+os pacotes de submissão, preservação e disseminação. Aumentando ou diminuindo a
+complexidade da estrutura do pacote a depender de sua utilização.
+A figura 5 apresenta o esquema do modelo de referência OAIS.
+Figura 5 - Esquema proposto pelo modelo de referência OAIS
+
+Fonte: ISO (2012).
+
+O OAIS prevê três principais atores: o produtor de conteúdo, o gerenciador do
+processo de preservação e o consumidor de conteúdo. Cabe ao sistema produtor de conteúdo
+gerar a informação a ser preservada, o que ocorre por meio do pacote de submissão de
+informação (SIP, na sigla em Inglês). Este pacote passará pelo processo de Ingest, tal como
+mostrado anteriormente na análise do Archivematica, e então passará pelo gerenciamento de
+dados e pelo armazenamento arquivístico, quando o pacote de arquivamento de informação
+é gerado (AIP, na sigla em Inglês). Para viabilizar o acesso, é disponibilizado o pacote de
+
+
+disseminação da informação (DIP, na sigla em Inglês). Todo este processo ocorre sob a guarda
+de um planejamento de preservação e administração.
+Ao se propor a estruturação do modelo Hipátia, o OAIS serviu como parâmetro de
+referência. No caso do Hipátia foram concebidas algumas ações adicionais, que não eram
+previstas no OAIS, mas que eram primordiais para garantir o sucesso de implementação do
+RDC-Arq.
+O Hipátia funciona a partir de um sistema produtor de massa documental. Até o
+momento não foram encontradas restrições com relação à abrangência dos sistemas
+produtores, o que serve como um indicativo de que o Hipátia pode se adaptar a diversos
+cenários. Além disso, não é necessário que o sistema produtor seja um Sistema Informatizado
+de Gestão Arquivística de Documentos (SIGAD), ou seja, a preparação arquivística pode ser
+realizada inteiramente no escopo do modelo Hipátia por meio do BarraPres.
+Cabe ao BarraPres acessar o sistema a ser preservado, extrair os conteúdos definidos
+pela equipe de gestão documental, preparar o pacote de preservação e então encaminhar
+para a fase de preservação. Neste processo são utilizadas algumas estruturas avançadas, como
+um dicionário de dados, um módulo de conexão e um módulo de empacotamento. Embora
+não tenha sido o caso descrito sobre o DJe, atualmente o BarraPres gera os pacotes seguindo
+o padrão BagIt, um avançado mecanismo de organização de documentos, dados e metadados
+para preservação (KUNZE et al., 2018). A figura 6, apresentada a seguir, sintetiza a estrutura
+de funcionamento do modelo Hipátia.
+Figura 6 - estrutura do modelo Hipátia.
+
+Fonte: elaboração própria (2022)
+
+Na fase de preservação é utilizado o Archivematica. Os pacotes AIP e DIP são gerados
+por este sistema, que realiza uma série de microprocessos a fim de garantir a preservação do
+
+
+conteúdo e do contexto, possibilitando o acesso futuro. O Archivematica é configurado para
+enviar aqueles pacotes marcados para disseminação diretamente para o AtoM, sem a
+necessidade de interferência humana neste processo. Além disso, o sistema disponibiliza um
+avançado mecanismo de controle, garantido que os pacotes arquivados mantenham sua
+autenticidade enquanto estiverem ali armazenados.
+Por fim, os pacotes DIP são encaminhados para o AtoM a fim de que fiquem disponíveis
+para consumo futuro. No modelo Hipátia foram definidas configurações que garantem ao
+AtoM recuperar as categorias existentes no sistema produtor, facilitando a navegação por
+parte dos usuários.
+3.4 A prova do modelo
+O modelo Hipátia foi aplicado na infraestrutura computacional do TJDFT e atualmente
+encontra-se no ambiente de produção, ou seja, é entendido como uma das soluções
+informacionais adotadas por aquele Tribunal. Para suportar tal aplicação foram desenvolvidos
+ambientes de apoio que podem ser acessados por qualquer pessoa ou instituição interessada
+no Hipátia.
+Dentre as infraestruturas informacionais disponíveis para suporte ao Hipátia
+destacam-se: o fórum de suporte técnico2, utilizado para dirimir quaisquer dúvidas sobre a
+aplicação do modelo; o site do modelo Hipátia 3, local em que são reunidas todas as
+documentações, exemplos e avanços do modelo e o repositório de códigos do modelo
+Hipátia4, onde são disponibilizados os códigos de todas as implementações do Hipátia.
+Dessa forma, além de se aplicar o modelo no proposto no âmbito do TJDFT, foram
+disponibilizadas infraestruturas abertas de apoio ao modelo a fim de fomentar a
+implementação do Hipátia em outras instituições que tenham demandas similares.
+4 CONSIDERAÇÕES FINAIS
+O modelo Hipátia consiste em na proposta do IBICT para oferecer infraestruturas
+informacionais voltadas para a preservação arquivística. Sua sistematização somente foi
+possível por meio da construção da parceria com o TJDFT. Como resultado principal da
+
+2
+
+Disponível em https://forum.ibict.br/c/hipati a.
+Disponível em https://hipatia.ibict.br.
+4 Disponível em https://git.ibict.br/cgti/barrapres_., mediante cadastro prévio.
+3
+
+
+pesquisa, tem-se a primeira implementação nacional de um RDC-Arq com manutenção da
+cadeia de custódia dos conteúdos preservados, garantindo a autenticidades destes
+conteúdos. A forma como o modelo Hipátia foi desenvolvido indica a importância de se
+estabelecer parcerias entre agentes públicos que possuam interesses comuns. Este tipo de
+atuação envolvendo órgãos públicos é, sem dúvida, um dos caminhos possíveis frente a um
+cenário de diminuição do corpo técnico disponível nas instituições.
+Um dos indicativos do acerto na estruturação do modelo Hipátia pode ser vislumbrado
+pelo número de instituições que já estabeleceram parcerias com o IBICT a fim de implementá lo. Além do TJDFT, que em 2021 renovou a parceria, também houve formalização de parcerias
+com o Arquivo Nacional e com o Tribunal de Justiça de Minas Gerais. Além dessas parcerias,
+atualmente a formalização de parcerias entre o IBICT e o Tribunal Regional do Trabalho da 4ª
+Região, o Superior Tribunal de Justiça, o Arquivo Público do Es tado de São Paulo e o Arquivo
+Público do Estado do Rio Grande do Sul estão em estágio avançado.
+No entanto, estima-se que diversos outros projetos apoiados no modelo Hipátia estão
+sendo executados, tendo em vista que o modelo foi disponibilizado de forma livre e gratuita
+por meio de uma série de canais. O número expressivo de palestras e reuniões de
+apresentação demandadas ao IBICT corroboram com esta impressão.
+Com a construção deste modelo, o IBICT reafirma sua missão de fornecer
+infraestruturas informacionais. Há espaço para se pensar em muitos aprimoramentos em
+relação ao modelo Hipátia, mas o estágio atual em que ele se encontra já pode ser considerado
+um grande avanço em termos de preservação digital arquivística. As instituições que estão na
+vanguarda da gestão documental e preservação da memória podem contar com o Hipátia
+como ponto de partida a fim de obterem sucesso nesta árdua tarefa de preservação do
+conhecimento humano.
