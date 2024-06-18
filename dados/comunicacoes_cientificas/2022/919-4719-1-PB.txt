@@ -1,0 +1,331 @@
+ELUCIDÁRIO.ART: DESENVOLVIMENTO DE UM COLLECTION MANAGEMENT SYSTEM
+
+Modalidade: Resumo Expandido
+Resumo: O app Elucidário.art precisa ser atualizado para ser considerado um Collection Management
+System. Os objetivos são: definição de um modelo conceitual de organização e representação da
+informação museológica baseado em padrões do Conselho Internacional de Museus; e, definição do
+modelo de Governança da Informação para delimitar os níveis de acesso dos usuários no sistema,
+infraestrutura, políticas e segurança da informação. As metodologias são: revisão bibliográfica nas
+disciplinas de Ciência da Informação, Museologia e Tecnologia da Informação; método descritivo para
+definição dos modelos; e, o estudo de caso do app na Casa Museu Ema Klabin.
+Palavras-Chave: Sistema para Gestão de Coleções. Organização da Informação. Governança da
+Informação. Documentação Museológica.
+
+
+1 INTRODUÇÃO
+O aplicativo Elucidário.art, lançado em versão beta fechado em 2019, foi desenvolvido
+com o objetivo de disponibilizar para consulta online a Coleção Ema Klabin, formada por mais
+de 1700 objetos de artes visuais e artes decorativas que compreendem um arco de 35 séculos
+de história da arte. O desenvolvimento partiu do projeto de design digital apresentado como
+Trabalho de Conclusão de Curso na pós-graduação em Comunicação e Design Digital na Escola
+Superior de Propaganda e Marketing (ESPM), e minha experiência como coordenador de
+
+
+
+comunicação na Casa Museu Ema Klabin. O resultado obtido foi um protótipo de alta
+fidelidade e uma dissertação com foco na usabilidade do usuário final: o visitante do museu 1.
+Oficialmente lançado com o nome Explore a Coleção! (EXPLORE) sob o endereço
+https://emaklabin.org.br/explore, o aplicativo teve seus metadados migrados diretamente da
+base de dados museológica da casa museu, passando por poucos procedimentos de
+padronização da informação, pois o objetivo da ferramenta era a disponibilização para
+consulta online da base de dados tal como ela estava.
+Com foco na usabilidade do usuário final e centrado em questões relacionadas ao
+design digital como User Interface (UI) e User Experience (UX), a versão atual do aplicativo
+possui inúmeros desafios que precisam ser superados para que o mesmo possa ser utilizado
+de fato como um Collection Management System (CMS).
+O presente trabalho tem como objetivo definir um modelo conceitual da organização
+e representação da Informação no sistema, propor um modelo para Governança desta
+Informação (GI) no sistema, e realizar um estudo de caso do uso do aplicativo Elucidário.art
+na gestão da Coleção Ema Klabin.
+2 DESENVOLVIMENTO
+A Casa Museu Ema Klabin possui 1701 itens em sua coleção museológica, 2132
+fotografias, 3554 livros e 5261 documentos entre notas fiscais de compra de obras de arte,
+cartas com marchands, galeristas e pessoais, entre outros documentos. Todas as informações
+sobre estes itens estão armazenados em quatro Bases de Dados (BD) diferentes: Museológico,
+Fotográfico, Arquivístico e Bibliográfico.
+Estas bases foram criadas com o software Filemaker, e aqui reside uma das grandes
+motivações desta pesquisa: a obsolescência do sistema. Atualmente o Filemaker está na
+versão 19 e a casa museu possui licença somente até a versão 13. Nesta versão, não é possível
+realizar acessos remotos: atualizações em computadores distintos têm que passar por
+processos de sincronização manual para que haja integridade entre os diferentes pontos de
+acesso. Também não há conexão entre as BDs: cada BD opera de maneira isolada, quando
+muito
+
+1
+
+há uma
+
+referência do
+
+arquivo (arquivístico) sobre
+
+a obra
+
+no campo
+
+COSTA, Henrique G.L.. Projeto de design digital “Wiki-Ema” para Fundação Ema Klabin. São Paulo: Trabalho
+de Conclusão de Curso (Pós-graduação) - Escola Superior de Propaganda e Marketing (ESPM), 2018.
+
+
+
+“DocumentoAquisição”. Metadados que poderiam ser compartilhados entre as BDs como as
+listas de autoridades de localização dentro da casa, autores e origem geográfica do item,
+operam de maneira isolada dificultando a manutenção e a padronização das informações.
+Essa obsolescência se agrava quando notamos que as BDs não aderem a padrões
+internacionais de catalogação, organização e representação, e que a sua atualização requer
+uma solução tecnológica mais moderna e atual.
+O EXPLORE, desenvolvido em WordPress, consiste em duas partes principais: plugin e
+tema. O plugin é responsável por delimitar a arquitetura da Informação no sistema, o backend, já o tema é responsável pela apresentação desta informação, o front-end2. No back-end
+foi estabelecido dois tipos principais de conteúdos a serem inseridos: Autores e Obras .
+Também foi estabelecido três taxonomias para organizar as obras: Ambientes, Núcleos e
+Classificações.
+Após o lançamento do site foi diagnosticada a necessidade de atualizar a base de dados
+para que as informações estejam em padrões internacionais de des crição e representação de
+itens museológicos, como Object ID (1997), e Linked-art (2020) criados pelos Grupos de
+Trabalhos do Comitê Internacional de Documentação do Conselho Internacional de Museus
+(CIDOC-ICOM), e que os processos museológicos passassem a adotar metodologias como
+Standard Procedures for Collections Recording Used in Museums (SPECTRUM) criada pela
+Collections Trust, recomendada pelo ICOM e utilizada por todas as instituições museológicas
+do Reino Unido e diversas outras ao redor do mundo (SPECTRUM, 2017).
+Tanto o EXPLORE quanto o Filemaker, não são soluções adequadas para a gestão de
+uma coleção complexa como a Coleção Ema Klabin. Embora o EXPLORE seja uma solução mais
+recente e desenvolvida internamente, será necessário passar por novos ciclos de
+desenvolvimento para que possa ser utilizado efetivamente como um CMS.
+
+2
+
+Back-end e front-end são termos de desenvolvimento de sites que consistem na separação das
+responsabilidades das funções programadas. O back-end no geral representa as funções rela cionadas ao
+servidor, armazenamento e banco de dados. O front-end são as funções que renderizam as informações na tela
+por meio de templates e que geram a interação com o usuário. Os dois podem operar em servidores, linguagens
+de programação, ou com dependências diferentes, ou também se apresentar em soluções monolíticas como o
+WordPress que oferece o back e o front-end embarcados.
+
+
+2.1. Problema de pesquisa
+O problema da pesquisa consiste em: quais são os requisitos mínimos para que um
+CMS seja uma ferramenta efetiva para questões centrais à Museologia e à Ciência da
+Informação: organização, gestão e disseminação da informação e do conhecimento?
+Para tentar responder à questão principal, delimitamos o problema da pesquisa nos
+quatro eixos temáticos a seguir:
+a) Epistemológico: em qual paradigma da CI a pesquisa se encontra? Como o
+problema da pesquisa se delimita dentro da CI, Museologia e TI?
+b) Conceitual: como realizar a gestão da documentação museológica focando a
+interoperabilidade do sistema?
+c) Normativo e referencial: quais são normas e práticas recomendadas por
+organizações, governos, instituições ou especialistas para a documentação
+museológica?
+d) Arquitetura e design de softwares: quais paradigmas, metodologias e arquiteturas
+de desenvolvimento de software vamos utilizar no aplicativo?
+2.2. Objetivos
+O objetivo geral desta pesquisa é o desenvolvimento do aplicativo Elucidário.art e
+consolidação de seu uso como um CMS de maneira a possibilitar melhor representação,
+visualização e recuperação de informações da coleção da Casa Museu Ema Klabin. Como
+objetivos específicos necessários para atingir o objetivo geral definimos:
+a) Desenvolver um Modelo Conceitual de Organização e Representação da
+Informação Museológica para o Elucidário.art;
+b) Desenvolver o Modelo de Governança da Informação (GI) para o Elucidário Art;
+c) Migrar a base de dados museológica da Casa Museu Ema Klabin (CMEK) para o
+Elucidário.art
+2.3. Metodologia
+Como o objetivo da pesquisa é o desenvolvimento do aplicativo Elucidário.art, a
+definição de seus modelos conceituais e de GI e a implementação de seu uso na Coleção Ema
+Klabin, será necessário o uso de diferentes tipos de metodologias para obtenção dos
+resultados.
+
+
+Primeiramente vamos utilizar a metodologia da revisão bibliográfica qualitativa
+sistemática para delimitar o tema dentro das disciplinas de Ciência da Informação (CI),
+Museologia e Tecnologia da Informação (TI). O plano provisório de assuntos consiste no
+mapeamento e seleção de periódicos científicos; obras de referências; teses e dissertações; e
+anais de encontros científicos (GIL, 2002), no Banco de Dados Bibliográficos da USP
+(DEDALUS), Base de Dados Referencial de Artigos e Periódicos em Ciência da Informação
+(Brapci), Revista Ibero-Americana de Ciência da Informação (RICI), Base de dados da
+International Society for Knowledge Organization (ISKO), com os descritores: Museologia AND
+Organização do conhecimento, Collection Management System, Tecnologia da Informação.
+Após análise dos artigos encontrados e delimitação de seus temas, partiremos para a
+parte descritiva da pesquisa, em que apresentaremos os modelos do Elucidário.art (conceitual
+e de GI) em Unified Modeling Language (UML) e tabelas para melhor visualização das
+propriedades, métodos e relações (composição e herança) das entidades. O UML é uma
+linguagem visual para modelagem de softwares baseado no Paradigma de Orientação a
+Objetos (POO)—paradigma discutido mais à frente na metodologia do desenvolvimento do
+aplicativo.
+O UML é uma linguagem de modelagem, não um método. A maioria dos
+métodos consiste, pelo menos em princípio, de uma linguagem de
+modelagem e um processo. A linguagem de modelagem é a notação
+(principalmente gráfica) que o método usa para expressar projetos. O
+processo é o seu conselho sobre quais medidas tomar para realizar um
+projeto. (...) Eu acho que a maioria das pessoas, quando dizem que estão
+usando um método, usam a linguagem de modelagem, mas raramente
+seguem o processo. Então de muitas maneiras, a linguagem de modelagem
+é a parte mais importante do método. É certamente a parte chave para a
+comunicação (FOWLER & SCOTT, 1999, p.1. Tradução nossa).
+
+O modelo conceitual apresentado será baseado no Linked Art e no SPECTRUM, e fará
+uso de vocabulários controlados externos como Arts & Architecture Thesaurus (AAT),
+Thesaurus of Geographic Names (TGN) e Union List of Artist Names (ULAN).
+O modelo de GI apresentado será amplamente baseado no DCC-CLM que define o
+modelo de ciclo de vida da informação digital genérica, ou seja, define os procedimentos e
+etapas necessários para a realização da Curadoria Digital (CD). O DCC -CLM coloca os objetos
+digitais ou a base de dados como objeto central do ciclo de vida. Neste ciclo, a descrição da
+representação da informação; o planejamento da preservação; o acompanhamento e a
+
+
+
+participação da comunidade; o curar e o preservar, são ações constantes no modelo. As ações
+como conceitualizar; criar ou receber; selecionar e avaliar; ingerir; a ação de preservação;
+armazenamento; acesso, uso e reuso; e transformação, devem acontecer sequencialmente.
+Já o descarte, a reavaliação e a migração são ações que ocorrem ocasionalmente.
+O Spectrum 5.0 é um outro modelo de ciclo de vida—neste caso do objeto
+museológico—utilizado como referência para o modelo conceitual apresentado. O Spectrum
+foi criado pela Collections Trust e é utilizado como padrão de gestão de coleções no Reino
+Unido e em outros países (SPECTRUM, 2017). O SPECTRUM apresenta 21 procedimentos para
+a gestão de coleções, alguns deles, representam tarefas do dia-a-dia do museu como a
+movimentação do objeto e atualização das informações. Outros procedimentos ocorrem
+ocasionalmente, como atualizar as informações do seguro. Os 9 procedimentos principais são:
+entrada de objeto; aquisição e adesão; localização e controle de movimentação; inventário;
+catalogação; saída de objeto; entrada de empréstimos; saída de empréstimos; e planejamento
+da documentação.
+Para o desenvolvimento do aplicativo, iremos utilizar o padrão de design do Paradigma
+de Orientação a Objetos (POO). O POO estabelece relações entre os objetos do mundo virtual
+com objetos do mundo real ou conceitos abstratos (KORSON & MCGREGOR, 1990, p.9). A
+metodologia utilizada na programação será a SOLID (MARTIN, 2000) que cons iste em um
+acrônimo que define os cinco princípios da Programação Orientada a Objetos:
+S: Single Responsibility Principle (SRP) - Uma classe deve ter somente uma
+responsabilidade;
+O: Open-closed Principle (OCP) - Objetos devem estar abertos para extensão e
+fechados para modificação;
+L: Liskov Substitution (LS) - Uma classe derivada deve ser substituível por sua classe
+base (abstrata);
+I: Interface Segregation (IS) - Uma classe nunca deve ser forçada a implementar uma
+interface que não usa; e
+D: Dependency Inversion (DI) - Entidades devem depender de abstrações, e não de
+objetos concretos.
+Por fim, para o estudo de caso, pretendemos realizar a migração da BD museológica
+da Casa Museu Ema Klabin para o Elucidário.art fazendo uso de vocabulários controlados,
+
+
+
+como o AAT, TGN e ULAN da Getty Foundation, e os vocabulários controlados criados
+especificamente para a Coleção Ema Klabin, como o de localização interna dos objetos na casa
+e núcleos da coleção. O procedimento será guiado por meio das etapas definidas por Gil
+(2002): formulação do problema; definição da unidade-caso; determinação do número de
+casos; elaboração do protocolo; coleta de dados; avaliação e análise dos dados; e preparação
+do relatório. A tabela a seguir apresenta as etapas e sua delimitação na pesquisa:
+Tabela 1 - Etapas e definições do estudo de caso e suas delimitações na pesquisa.
+Etapa
+
+Definição
+
+Formulação do problema
+
+A BD da CMEK não utiliza nenhum
+Etapa inicial da pesquisa. A
+padrão internacional de
+formulação do problema
+catalogação e está definida em um
+geralmente decorre de um longo
+software obsoleto. Como o
+processo de reflexão e de imersão Elucidário.art pode auxiliar na
+em fontes bibliográficas adequadas. gestão de uma coleção complexa
+como a Coleção Ema Klabin?
+
+Definição da unidade-caso
+
+Refere-se a um indivíduo num
+contexto definido. O caso pode ser
+entendido como um grupo social,
+uma organização, um conjunto de
+relações, um papel social, um
+processo social, uma comunidade,
+uma nação ou mesmo toda uma
+cultura.
+
+Os estudos de caso podem ser
+Determinação do número de casos constituídos de um ou múltiplos
+casos.
+
+Delimitação na pesquisa
+
+Estudo de caso intrínseco é aquele
+em que o caso constitui o próprio
+objeto da pesquisa,ou seja, o uso
+do Elucidário.art para gestão da
+Coleção Ema Klabin
+
+A Coleção Ema Klabin possui mais
+de 1700 itens em sua BD. O estudo
+utilizará 255 itens da coleção de
+artes visuais que passaram por
+processo de digitalização recente.
+
+Elaboração do protocolo
+
+O protocolo, de acordo com Yin
+(2001, p.89 apud GIL), inclui as
+seguintes seções: visão global do
+projeto; procedimentos de campo;
+determinação das questões; e guia
+para elaboração do relatório.
+
+O protocolo do estudo de caso
+consiste na migração da atual BD da
+CMEK para o Elucidário.art. Para
+isso será necessário realizar a
+exportação dos metadados da atual
+BD e realizar um mapeamento
+crosswalk entre os dois esquemas
+de metadados.
+
+Coleta de dados
+
+Os resultados obtidos no estudo de
+caso devem ser provenientes da
+convergência ou da divergência das
+observações obtidas de diferentes
+procedimentos.
+
+Os dados serão obtidos mediante
+observação das interações dos
+usuários com o aplicativo e
+avaliação da BD em relação aos
+padrões internacionais.
+
+
+
+A análise dos dados busca verificar
+se o estudo de caso foi satisfatório
+em seus objetivos principais:
+migração da BD para um sistema
+mais moderno com foco na
+interoperabilidade, e nos
+procedimentos e normas
+internacionais de gestão de
+coleções.
+
+Análise de dados
+
+Natureza predominantemente
+qualitativa.
+
+Redação do relatório
+
+Considerando que o estudo de caso
+é um delineamento mais flexível
+que os demais, é natural que a
+elaboração do relatório possa ser Redação do relatório final
+caracterizada por um grau de
+formalidade menor que o requerido
+em relação a outras pesquisas.
+Fonte: Elaborado pelo autor, baseado em Gil (2002).
+
+3 CONSIDERAÇÕES FINAIS
+O aplicativo Elucidário.art precisa passar por novas etapas de desenvolvimento para
+atingir o objetivo de ser um CMS funcional. Este resumo expandido busca explicitar as
+próximas etapas do desenvolvimento do aplicativo: definição de um modelo conceitual de
+organização e representação da informação museológica; elaboração de um plano de GI para
+o sistema; e avaliar seu funcionamento com um acervo real.
+Após concluído, o aplicativo Eluciário.art será usado como o CMS da Casa Museu Ema
+Klabin e buscará por outras instituições que possuem acervos para testar o aplicativo. No
+futuro vislumbramos o uso do aplicativo em diferentes tipos de acervos museológicos:
+etnológicos e científicos, bem como em bibliotecas e arquivos.

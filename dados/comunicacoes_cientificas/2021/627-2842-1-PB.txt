@@ -1,0 +1,715 @@
+
+PADRÕES DE ANOTAÇÃO PARA INTEGRAÇÃO DE ACERVOS CULTURAIS EM REDES WIKIS
+Modalidade: Resumo Expandido
+Resumo: A pesquisa discorre sobre vocabulários usados como padrões de anotação em projetos de
+integração de acervos culturais nos ambientes Linked Open Data e das Wikis. A partir de pesquisa
+bibliográfica e documental, chegou-se a sistematização de alguns desses vocabulários mais usados
+atualmente no âmbito das redes de informação da Fundação Wikimedia. O resultado desse
+levantamento será utilizado na seleção e reúso de padrões adequados à descrição semântica dos
+itens de coleções pertencentes à rede de agregação do Instituto Brasileiro de Museus, cujos
+metadados e mídias associados poderão ser publicados e integrados, respectivamente, no Wikidata e
+no Wikimedia Commons.
+Palavras-Chave: padrões de anotação; acervos culturais; dados abertos ligados; Wikimedia;
+Wikidata.
+1 INTRODUÇÃO
+Nos últimos anos, um fator importante que vem potencializando o surgimento e, por
+consequência, o crescimento de grandes bases de dados multimídia na rede está associado à
+prática da digitalização, a exemplo do que ocorre em instituições ligadas ao campo da
+cultura digital (CARVALHO JUNIOR; MARTINS; GERMANI, 2019), conhecidas pelo acrônimo
+GLAM (do inglês, Galleries, Libraries, Archives, Museums) de “galerias, bibliotecas, arquivos e
+museus”, através das quais se mantêm grandes repositórios de documentos multimídia.
+Ao tornar esses artefatos gratuitamente acessíveis por meio de repositórios digitais e
+bancos de dados on-line, as instituições de patrimônio cultural têm o potencial de ampliar a
+base de usuários e a produção colaborativa de seus recursos de informação, além de
+possibilitar um acesso mais fácil e rápido a informação requerida. Assim, surgem ações
+colaborativas na rede como o GLAM-Wiki (CARVALHO JUNIOR; MARTINS; GERMANI, 2019).
+A iniciativa Wiki-GLAM criada pela Fundação Wikimedia (WIKIMEDIA FOUNDATION,
+2021) baseia-se no carregamento de acervos, normalmente a partir de parcerias com
+instituições culturais ao redor do mundo, com objetivo de compartilhar as obras livremente
+no ecossistema da fundação. Tal iniciativa tende a fornecer e aprimorar a coleção de
+recursos abertos para projetos como a Wikipédia (WIKIPÉDIA, 2021), o Wikimedia Commons
+(WIKIMEDIA COMMONS, 2021), bem como o Wikidata (WIKIDATA, 2021), com metadados
+estruturados, enriquecidos e disponibilizados na rede com o intuito de conceber uma rede
+de conhecimento que pode ser agregada, por exemplo, a arquivos publicados no Wikimedia
+Commons com descrições em seus aspectos de mídia, de conteúdo e de proveniência,
+potencializando busca, recuperação e reúso.
+A abordagem técnica para a integração de projetos GLAM com o ecossistema wiki
+conta com a proposta de uso de padrões, de modo a interligar e anotar conjuntos de dados
+(do inglês, datasets) sob licença aberta, conhecida como Linked Open Data (LOD) (BIZER;
+HEATH; BERNERS-LEE, 2009).
+Em recente revisão de literatura, Mora-Cantallops, Sánchez-Alonso e GarcíaBarriocanal (2019) identificaram projetos e oportunidades de colaboração entre instituições
+de patrimônio cultural e comunidades do Wikidata, especialmente no continente europeu,
+na descrição de coleções e do conhecimento subjacente a partir de tecnologias semânticas,
+especialmente com o uso de vocabulários disponíveis em ambiente LOD.
+
+
+No Brasil, nota-se uma carência de iniciativas nessa perspectiva, muito em função do
+emprego precário de soluções sociotécnicas contemporâneas (NÚCLEO DE INFORMAÇÃO E
+COORDENAÇÃO DO PONTO BR, 2019). Nesse panorama, torna-se oportuno mencionar a
+presença de acervos de museus ligados ao Instituto Brasileiro de Museus (Ibram) no
+Wikimedia Commons, em que se constataram um total de 629 imagens relacionadas a
+pinturas (CARMO; MARTINS, 2019). Além da presença no Wikimedia Commons, Martins e
+Carmo (2019) também relatam a existência de páginas de museus ligados ao Ibram na rede
+da Wikipédia, apontando a ação de construção coletiva de informação museal por meio de
+redes de colaboração.
+Nesse sentido, a presente pesquisa busca contribuir no preenchimento da lacuna
+associada à participação brasileira no ecossistema wiki, tendo o Ibram como objeto de
+análise. Desde o ano de 2014, o Ibram vem adotando estratégias para o desenvolvimento de
+uma rede interoperável de agregação de repositórios digitais para o cenário cultural
+brasileiro1 visando preservação, difusão e integração dos acervos dos 30 museus federais
+sob seu gerenciamento, buscando, sobretudo, maior interação por parte dos usuários, bem
+como estratégias inovadoras de construção coletiva de redes de conhecimento patrimonial.
+Para tal, torna-se necessária a concepção de uma estratégia de modelagem
+conceitual de dados que vise à organização integrada dos dados pertencentes a essas redes
+de informação, incluindo acervos museais e datasets do ecossistema wiki. Para o propósito
+desta pesquisa, ontologias são consideradas como padrões de anotação mais sofisticados
+(LEMOS; SOUZA, 2020) em termos de tratamento semântico da informação, pois seus
+elementos são expressos com rigor formal, incluindo relações lógicas e outros tipos de
+primitivas de representação, como, por exemplo, axiomas (ALMEIDA, 2013).
+Logo, anotações semânticas permitem identificar formalmente conceitos e relações
+entre conceitos em documentos, permitindo um usuário (humano ou não) descrever e
+interligar recursos existentes por meio de qualificadores ontológicos como conceitos,
+instâncias, propriedades e restrições mantidas entre tais recursos, viabilizando o
+processamento pela máquina (SHADBOLT; BERNERS-LEE; HALL, 2006).
+Assim sendo, o objetivo do artigo é apresentar um levantamento de vocabulários
+comumente usados como padrões de anotação de acervos culturais em ambientes LOD e
+1
+
+https://www.museus.gov.br/acessoainformacao/acoes-e-programas/projeto-tainacan/
+
+
+
+wiki, projetando seu uso na descrição semântica dos itens de coleções dos museus
+interligados na rede do Ibram. Tal levantamento servirá de base futura para a seleção e o
+reúso de padrões adequados à rede de agregação do Ibram, por meio dos quais metadados
+e mídias associadas poderão ser publicados e integrados, respectivamente, no Wikidata e no
+Wikimedia Commons a partir de declarações semânticas constitutivas.
+2 METODOLOGIA
+A pesquisa foi classificada como sendo de natureza teórica, qualitativa, de cunho
+exploratório e descritivo, sendo direcionada a uma revisão de literatura sobre vocabulários
+vistos como padrões de anotação no âmbito de projetos envolvendo dados abertos ligados e
+redes de informação da Fundação Wikimedia. Para tal, pesquisas bibliográficas e
+documentais foram usadas como procedimento técnico de coleta e análise dos dados,
+incluindo artigos científicos, livros, manuais, tutoriais e vídeos explicativos.
+Para a identificação e a seleção de vocabulários ou padrões de anotação, foi usado
+como referência o sítio do projeto GLAM-WIKI (PROJETO GLAM-WIKI, 2021) pela autoridade
+e garantia de fonte confiável de informação relacionada a projetos associados. A partir de tal
+fonte, foi possível elaborar estratégias de busca em bases de dados indexadas pelo Portal de
+Periódicos da CAPES (Association Computing Machinery; Emerald; e Science Direct),
+combinando o “nome do vocabulário” com os seguintes descritores em inglês “GLAM”,
+“wikidata”, “linked open data”, “Semantic Annotation”.
+Numa segunda etapa, com vistas à organização da análise e dos resultados acerca
+dos padrões de anotação selecionados, foram determinadas categorias de análise à luz dos
+estudos desenvolvidos em Lemos e Souza (2020) em que se aprofundou na apreciação de
+ontologias no domínio da anotação de recursos multimídia na web. As categorias foram
+fundamentadas em 3 tipologias de metadados multimídia, a saber: (i) independentes de
+conteúdo (metadados para gerenciamento e administração de recursos de informação); (ii)
+dependentes de conteúdo (metadados visuais e para áudio, ambos considerados de nível
+primitivo); e descritivos de conteúdo (metadados que associam entidades da mídia com
+entidades do mundo real).
+As demais categorias analíticas são elencadas em sequência: propósito de
+desenvolvimento, recursos de conhecimento utilizados, linguagem de implementação,
+equipe de desenvolvimento, projetos que fazem uso, site oficial e atualização mais recente.
+
+
+
+3 RESULTADOS E DISCUSSÕES
+A partir da análise realizada sobre os 13 padrões de anotação elencados, chegou-se
+ao resultado sinóptico apresentado no Quadro 1.
+Observa-se desde modelos ontológicos mais associados ao domínio do patrimônio
+cultural, como o CIDOC CRM (uma ontologia formal de referência), o EDM e a DPLA
+(agregadores de acervos culturais) e o Linked Art (um modelo simplificado do CIDOC-CRM),
+até esquemas de categorias mais genéricos para descrever uma variedade de estruturas de
+dados capazes de satisfazer a várias comunidades, como o Schema.org e o Dublin Core.
+Para a modelagem de acervos bibliográficos, tem-se o potencial de uso para o
+modelo conceitual FRBR e suas extensões para ações de encontrar, identificar, selecionar e
+obter o objeto bibliográfico; o padrão de metadados Marc para a produção mais efetiva de
+registros bibliográficos; e as linguagens documentárias (para além dos acervos bibliográficos)
+representadas pelos tesauros AAT, ULAN e TGN do Getty Research Institute, pertinentes
+como padrões para preenchimento de dados nos elementos de metadados visando
+normalização e qualidade em suas descrições.
+Grande parte dos vocabulários analisados é fundamentada em recursos de
+conhecimento (padrões de metadados, vocabulários controlados, modelos conceituais e
+ontologias) consolidados na comunidade em que fazem parte, reforçando a confiabilidade
+no uso e reúso frente a aspectos de tratamento semântico nas declarações.
+No aspecto de cobertura e abrangência para a representação multimídia de variados
+tipos de acervos, nota-se uma carência de metadados visuais e de áudio associados à
+categoria dependentes de conteúdo, com exceção da ontologia de imagem do projeto
+IMGpedia. O artefato apresenta categorias formais em sua estrutura ontológica para
+aspectos visuais de cor, intensidade e bordas. O projeto almeja, ainda, estender a estrutura
+taxonômica para representar características no âmbito da mídia áudio (FERRADA et al.,
+2018). As demais categorias mostraram-se contempladas pelos vocabulários ora elencados.
+Por fim, os vocabulários analisados possuem fontes confiáveis e atualizadas, equipes
+com reputação em seu desenvolvimento e manutenção, refletindo na confiabilidade dos
+projetos que fazem uso. Soma-se o fato de todos pertencerem ao universo da web
+semântica e dos dados abertos ligados (BIZER; HEATH; BERNERS-LEE, 2009) com seus
+padrões semânticos RDF/XML, o que viabiliza interoperabilidade semântica e sintática entre
+dados e metadados no escopo das redes de informação.
+
+
+Quadro 1 - Quadro sinóptico da análise dos vocabulários elencados
+
+(continua)
+Categorias de análise
+
+CIDOC CRM
+
+DPLA-MAP
+
+Dublin Core
+
+EDM
+
+FRBR e derivados
+
+IMGpedia
+
+Propósito de desenvolvimento
+
+Modelo de referência formal
+desenvolvido para facilitar a
+integração, mediação e
+intercâmbio de informações
+heterogêneas do patrimônio
+cultural na rede.
+
+Modelo de dados voltado à
+definição de como os
+metadados são estruturados e
+validados no DPLA, orientando
+como os metadados são
+armazenados, serializados e
+disponibilizados por API.
+
+Padrão de metadados usado para
+pesquisa e indexação de
+metadados baseados na web,
+promovendo descrição para
+qualquer categoria de recurso,
+incluindo várias coleções de
+documentos e mídias.
+
+Modelo conceitual ontológico
+desenvolvido para enriquecer
+dados e metadados culturais por
+estruturas de alto nível. O projeto
+Europeana pode ser considerado
+uma referência global de agregador
+de acervos culturais em LOD.
+
+Modelo conceitual usado para capturar e
+representar a semântica subjacente a
+informações bibliográficas, facilitando,
+portanto, a integração, a mediação e o
+intercâmbio de dados bibliográficos na
+rede.
+
+Ontologia para categoria de mídia
+imagem endereçada a incorporar
+informações visuais do conteúdo
+das imagens do conjunto de dados
+do Wikimedia Commons.
+
+Independentes
+de conteúdo
+
+Criação, produção, classificação,
+informação e uso do recurso
+
+Criação, produção,
+classificação, informação e uso
+do recurso
+
+Criação, produção, classificação,
+informação e uso do recurso
+digital
+
+Criação, produção, classificação,
+informação e uso do recurso
+
+Grupo 1: entidades que representam o
+produto de trabalho intelectual e artístico
+associado à criação e à produção da obra
+
+Não identificado
+
+Dependentes
+de conteúdo
+
+Não identificado
+
+Não identificado
+
+Não identificado
+
+Não identificado
+
+Não identificado
+
+Relações visuais baseadas em três
+descritores principais: cor,
+intensidade e bordas.
+
+Descritivos de
+conteúdo
+
+Possui em sua estrutura a noção
+de Evento o que possibilita
+agregar à categoria: atores,
+objetos, localidades e duração de
+intervalos de tempo
+
+Possibilidade de ligação com
+outros vocabulários
+semânticos para descrever
+conteúdo sobre o recurso
+
+Possibilidade de ligação com
+outros vocabulários semânticos
+para descrever conteúdo sobre o
+recurso
+
+Possibilidade de ligação com outros
+vocabulários semânticos para
+descrever conteúdo sobre o recurso
+(edm:Agent, edm:Place,
+edm:TimeSpan e skos:Concept)
+
+Grupo 3: entidades que servem como
+descritores de assunto da entidade Obra
+do Grupo 1. O Grupo 3 define quatro
+entidades denominadas Conceito, Objeto,
+Evento e Lugar
+
+Possibilidade de ligação com outros
+vocabulários semânticos para
+descrever conteúdo das imagens
+
+Recursos de conhecimento
+utilizados
+
+Não identificado
+
+EDM, Dublin Core
+
+Não identificado
+
+CIDOC CRM, Dublin Core, FOAF,
+MARC, BIBO, EAD, LIDO, SKOS
+
+Bancos de Dados Relacionais (modelo
+entidade e relacionamento)
+
+Dbpedia; Schema.org
+
+Linguagem de implementação
+
+OWL DL
+
+RDF/XML
+RDF Schema
+
+RDF/XML
+RDF Schema
+
+RDF/XML
+RDF Schema
+
+FRBR com RDF; FRBR
+OWL2 DL
+
+RDF Schema /OWL
+
+Equipe de desenvolvimento
+
+Equipes multidisciplinar sob o
+amparo do CIDOC do ICOM
+
+DPLA (Digital Public Library of
+America)
+
+The Dublin Core Metadata
+Initiative
+
+Europeana Foundation
+
+IFLA (International Federation of Library
+Associations and Institutions)
+
+Grupo acadêmico
+
+Projetos que fazem uso
+
+American Art Collaborative (FINK,
+2018); Projeto Europeana
+(EUROPEANA, 2017)
+
+Portal de busca integrada
+(DPLA, 2021)
+
+Rijksmuseum Collection
+(DIJKSHOORN et al., 2018);
+Arquivo fotográfico Skogler
+(ROBLEDANO-ARILLO; NAVARROBONILLA; CERDÁ-DÍAZ, 2019)
+
+Rijksmuseum Collection
+(DIJKSHOORN et al., 2018); Arquivo
+fotográfico Skogler (ROBLEDANOARILLO; NAVARRO-BONILLA;
+CERDÁ-DÍAZ, 2019)
+
+Arquivo fotográfico Skogler (ROBLEDANOARILLO; NAVARRO-BONILLA; CERDÁ-DÍAZ,
+2019)
+
+IMGpedia (FERRADA et al. 2018)
+
+Site oficial
+
+cidoc-crm.org
+
+dp.la/about
+
+dublincore.org
+
+pro.europeana.eu
+
+iifla.org
+
+imgpedia.dcc.uchile.cl
+
+Atualização mais recente
+
+abr, 2021
+
+dez, 2017
+
+jan, 2020
+
+Ausente
+
+nov, 2015
+
+Não identificado
+
+Natureza
+dos
+metadados
+multimídia
+
+
+
+Quadro 1 - Quadro sinóptico da análise dos vocabulários elencados
+
+(conclusão)
+Categorias de análise
+
+AAT
+
+LIDO
+
+Linked Art
+
+TGN
+
+ULAN
+
+Propósito de desenvolvimento
+
+Vocabulário
+estruturado (tesauro)
+usado para descrever
+materiais de arte,
+arquitetura, artes
+decorativas, cultura e
+arquivos.
+
+Esquema de metadados
+destinado à coleta e a entrega
+de metadados. Usado em uma
+variedade de serviços on-line
+relacionados a instituições de
+cultura, em especiais museus.
+
+Padrão de metadados para
+formato de intercâmbio de
+registros bibliográficos e
+catalográficos.
+
+Modelo desenvolvido para
+ajudar os mecanismos de
+pesquisa a interpretar
+informações em páginas da web
+para poderem ser usadas para
+melhorar a exibição dos
+resultados de pesquisa.
+
+Vocabulário
+estruturado (tesauro)
+contendo informações
+sobre nomes
+geográficos.
+
+Vocabulário estruturado
+(tesauro) contendo nomes e
+outras informações sobre
+artistas, patrocinadores,
+museus, e outras entidades
+relacionadas à produção e a
+coleções de arte e
+arquitetura.
+
+Independentes
+de conteúdo
+
+Criação, produção e
+classificação do recurso
+digital
+
+Criação, produção e classificação do
+recurso original e digital
+
+Criação, produção e classificação
+do recurso original e digital
+
+Criação, produção, classificação,
+informação e uso do recurso
+
+Criação e produção do
+recurso digital
+
+Criação e produção do
+recurso digital
+
+Dependentes
+de conteúdo
+
+Não identificado
+
+Não identificado
+
+Não identificado
+
+Não identificado
+
+Não identificado
+
+Não identificado
+
+Descritivos de
+conteúdo
+
+Descrição de objetos
+que agregam entidades
+do mundo real
+
+Descrição de eventos que
+agregam entidades do mundo
+real
+
+Modelo centrado em entidades
+abstratas para representação de um
+objeto cultural
+
+Não identificado
+
+Possibilidade de ligação com
+outros vocabulários semânticos
+para descrever conteúdo sobre o
+recurso
+
+Descrição de locais
+que agregam
+entidades do mundo
+real
+
+Descrição de pessoas e
+agentes que agregam
+entidades do mundo real
+
+Recursos de conhecimento
+utilizados
+
+MARC, tabelas
+relacionais
+
+CDWA Lite, museumdat,
+SPECTRUM XML schema,
+CIDOC CRM
+
+CIDOC-CRM, Getty Vocabularies
+
+FRBR, MODS, Dublin Core, Digital
+Geospatial Metadata, RDA
+
+Microformatos
+
+MARC, tabelas
+relacionais
+
+MARC, tabelas relacionais
+
+Linguagem de implementação
+
+JSON, RDF, N3/Turtle,
+N-Triples, XML
+
+XML Schema
+RDF/XML
+
+RDF Schema, JSON-LD
+
+XML
+
+JSON-LD, Turple, Triples, Quads,
+RDF/XML, CSV
+
+JSON, RDF, N3/Turtle,
+N-Triples, XML
+
+JSON, RDF, N3/Turtle, NTriples, XML
+
+Equipe de desenvolvimento
+
+Getty Research
+Institute
+
+ICOM-CIDOC LIDO Working
+Group
+
+Linked Art Contributors/comunidade
+aberta
+
+Library of Congress
+
+W3C Schema.org Community
+Group/Comunidade aberta
+
+Getty Research
+Institute
+
+Getty Research Institute
+
+Projetos que fazem uso
+
+Rijksmuseum Collection
+(DIJKSHOORN et al.,
+2018)
+
+Projeto Europeana
+(EUROPEANA, 2017)
+
+American Art Collaborative (FINK, 2018)
+
+Biblioteca Virtual de Polígrafos
+(AGENJO-BULLÓN; HERNÁNDEZCARRASCAL, 2018); Projeto
+Europeana (EUROPEANA, 2017)
+
+Marginal Art in Serbia (POPOVIĆ;
+KRSTIĆ; CVETKOVIĆ, 2017);
+IMGpedia (FERRADA et al. 2018)
+
+Rijksmuseum
+Collection
+(DIJKSHOORN et al.,
+2018)
+
+Rijksmuseum Collection
+(DIJKSHOORN et al., 2018)
+
+Site oficial
+
+getty.edu/research/too
+ls/vocabularies/aat/
+
+cidoc.mini.icom.museum/work
+ing-groups/lido
+
+linked.art
+
+loc.gov/marc
+
+schema.org
+
+getty.edu/research/to
+ols/vocabularies/tgn
+
+getty.edu/research/tools/voc
+abularies/ulan
+
+Atualização mais recente
+
+dez, 2020
+
+dez, 2020
+
+Ausente
+
+jun, 2021
+
+mar, 2021
+
+dez, 2020
+
+dez, 2020
+
+Natureza
+dos
+metadados
+multimídia
+
+MARC / MARC21
+
+Schema.org
+
+Modelo conceitual de dados
+desenvolvido para funcionar como uma
+adaptação mais simples e mais fácil de
+implementação baseada no modelo
+CIDOC CRM. Serve como referência por
+facilitar a entrada de instituições no
+mundo dos dados abertos ligados.
+
+Criação, produção,
+classificação, informação e uso
+do recurso (objectWork)
+
+Não identificado
+
+Fonte: Elaborado pelos autores.
+
+
+
+4 CONSIDERAÇÕES FINAIS E TRABALHOS FUTUROS
+Como mencionado anteriormente, é possível notar uma carência de projetos e
+iniciativas no Brasil referente à publicação e descrição de coleções das instituições nacionais
+de patrimônio cultural no ecossistema wiki. Entretanto, esse panorama tem a tendência de
+mudar progressivamente com algumas iniciativas atuais, tais como a presença de acervos de
+museus ligados ao Ibram no Wikimedia Commons e de suas páginas na rede da Wikipédia
+(CARMO; MARTINS, 2019).
+O presente artigo representa uma contribuição nesse sentido, ao apresentar um
+levantamento de vocabulários que estão sendo comumente usados como padrões de
+anotação em projetos de integração de acervos culturais em ambientes LOD e wiki. A partir
+de busca ao sítio do projeto GLAM-WIKI e em bases de dados indexadas pelo Portal de
+Periódicos da CAPES, esta pesquisa recuperou e descreveu, brevemente, alguns desses
+vocabulários mais usados atualmente, os quais englobam modelos conceituais de alto nível
+orientados por ontologias (CIDOC CRM, Linked Art, EDM e DPLA), ontologia de domínio
+(IMGpedia), modelos de dados (FRBR e suas extensões), esquemas de metadados (Marc,
+Dublin Core, LIDO e Schema.org) e linguagens documentárias, como os tesauros AAT, ULAN
+e TGN.
+A partir de tal levantamento, foi possível constatar certa carência de metadados
+visuais e de áudio associados à categoria dependentes de conteúdo, com exceção da
+ontologia de imagem do projeto IMGpedia, e uma maior necessidade, portanto, do reúso de
+ontologias multimídia (LEMOS; SOUZA, 2020) na representação e descrição de objetos de
+acervos culturais no ecossistema wiki, considerando a capacidade de ontologias na descrição
+semântica e integração de entidades do domínio.
+Nesse sentido, esta pesquisa tem como importante contribuição a sugestão de
+trabalhos futuros que correspondam ao reúso das ontologias pesquisadas e a construção de
+ontologias próprias para representar, descrever e disponibilizar o conteúdo do acervo de
+alguns dos museus sob gestão do Ibram. Adicionalmente, sugere-se a utilização de uma
+metodologia para a construção de ontologias que tem sido proposta em pesquisas no
+âmbito da Ciência da Informação, qual seja, a OntoForInfoScience (MENDONÇA; 2017), em
+conjunto ao editor web gráfico, o Onto4ALLEditor (MENDONÇA et al., 2021). Ambos os
+instrumentos projetam uma melhor experiência do usuário (UX - User eXperience) no
+desenvolvimento de suas ontologias a partir de interface amigável e interativa.
+
+
+
