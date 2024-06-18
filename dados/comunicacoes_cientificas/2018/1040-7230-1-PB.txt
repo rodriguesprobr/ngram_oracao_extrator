@@ -1,0 +1,627 @@
+
+A INFLUÊNCIA DO BIBLIOGRAPHIC FRAMEWORK PARA VISIBILIDADE DOS DADOS
+Modalidade da Apresentação: Comunicação Oral
+Resumo: O Bibliographic Framework é um modelo para representação de recursos informacionais
+que visa a criar dados bibliográficos com significados definidos e em consonância com os princípios
+do linked data. A presente pesquisa tem como objetivo analisar como a versão 2.0 do mencionado
+modelo pode influenciar a visibilidade dos dados bibliográficos, apontando as vantagens e
+desvantagens de seu uso. Quanto à metodologia, caracteriza-se como uma pesquisa exploratória e
+descritiva, com coleta de dados em fontes bibliográficas e documentais, e com abordagem
+qualitativa. Como resultados, constatou-se que o Bibliographic Framework contribui para aumentar a
+visibilidade e o uso dos dados bibliográficos, pois utiliza padrões não exclusivos do universo
+bibliotecário que possibilitam a representação dos recursos informacionais por meio de entidades e
+relacionamentos, permitem a vinculação semântica desses dados e viabilizam seu reúso e
+recuperação por agentes inteligentes e ferramentas semânticas. Como produto desta pesquisa,
+apresentam-se 51 orientações para auxiliar os bibliotecários na implementação do Bibliographic
+Framework em bibliotecas. Por meio desta investigação, concluiu-se que o referido modelo contribui
+de maneira mais efetiva para o aumento da visibilidade e do uso dos dados bibliográficos, no
+entanto, ainda apresenta deficiências para representar alguns tipos de recursos informacionais e
+para atender as especificidades da catalogação com a diretriz Resource Description and Access.
+Palavras-Chave: Catalogação. Bibframe. OPACs. Linked data. Web semântica.
+1 INTRODUÇÃO
+A catalogação é um processo especializado desempenhado pelo catalogador no qual
+são construídos registros bibliográficos sobre recursos informacionais. Tais registros
+possuem a descrição física e de conteúdo dos recursos presentes nas coleções da biblioteca
+e são armazenados no catálogo bibliográfico, um dos produtos da catalogação.
+Por meio da criação de instrumentos, diretrizes, políticas, modelos conceituais e
+modelos para representação de dados bibliográficos, a catalogação almeja constantemente
+atualizar-se e reinventar-se, sobretudo para satisfazer de forma eficaz as necessidades
+informacionais dos diferentes usuários da biblioteca.
+Dentre as propostas de atualização e de melhoria nas práticas e nas ferramentas de
+construção de registros bibliográficos realizadas pela catalogação, destaca-se o Bibliographic
+Framework (Bibframe), uma iniciativa da Library of Congress (LC), lançado em 2011.
+Um dos objetivos do Bibframe é proporcionar mais visibilidade aos dados
+bibliográficos disponibilizados nos catálogos on-line de acesso público – Online Public Access
+Catalogs (OPACs) – para que possam ser entendidos e recuperados por tecnologias e
+ferramentas de busca da web (ENIS, 2015). Tal objetivo possui grande relevância, visto que
+os registros bibliográficos produzidos pela catalogação, atualmente, são invisíveis aos
+usuários da web (MODESTO, 2015).
+Diante desse contexto, esta pesquisa tem a seguinte pergunta norteadora: como o
+Bibframe pode influenciar a visibilidade dos dados bibliográficos?
+Para responder a essa pergunta, traçou-se como objetivo geral: analisar como o
+Bibframe pode influenciar a visibilidade dos dados bibliográficos, apontando as vantagens e
+desvantagens de seu uso. Como objetivos específicos, buscou-se: identificar os diferenciais
+do uso do Bibframe como novo modelo para representação de dados bibliográficos;
+
+
+
+descrever a relação entre a diretriz Resource Description and Access (RDA) e o modelo
+Bibframe; analisar como o Bibframe pode promover a interligação dos dados bibliográficos,
+por meio do linked data para os OPACs; e, por fim, propor orientações para auxiliar os
+catalogadores na implementação do Bibframe em bibliotecas.
+Quanto à delimitação, esta investigação está restrita à análise e ao estudo da versão
+2.0 do modelo Bibframe, uma vez que se constitui na versão mais atualizada durante o
+período de realização desta pesquisa (2016 a 2018).
+Na literatura científica da área de Biblioteconomia e Ciência da Informação,
+identificou-se um número reduzido de trabalhos nacionais acerca do modelo Bibframe. A
+escassez de publicações nacionais sobre o mencionado modelo foi constatada por Silva
+(2013) e Ramalho (2016). Em nível internacional, Taniguchi (2017b) afirma que a quantidade
+de estudos que abordam a versão 2.0 do Bibframe também é limitada atualmente.
+Nesse sentido, esta pesquisa visa a contribuir para as áreas da Biblioteconomia e da
+Ciência da Informação, nacional e internacional, ao realizar um estudo acerca do modelo
+Bibframe 2.0 e de sua influência para a visibilidade dos dados bibliográficos.
+Compreende-se que este estudo poderá servir para auxiliar os profissionais da
+informação a iniciar ou complementar seus estudos acerca do modelo Bibframe, assim como
+para guiar esses profissionais no planejamento das ações que deverão ser realizadas para
+preparar as bibliotecas para implementação e testes com o Bibframe.
+Este artigo é proveniente da pesquisa realizada durante a elaboração da dissertação1
+apresentada ao Mestrado Profissional do Programa de Pós-Graduação em Gestão da
+Informação da Universidade do Estado de Santa Catarina, defendida em julho de 2018.
+2 BIBFRAME
+O modelo Bibframe apresenta um conjunto de conceitos, valores e boas práticas para
+guiar a implementação de uma solução para a representação de recursos informacionais na
+web. Tal solução visa a atender as especificidades da catalogação em RDA e aproveitar as
+vantagens tecnológicas atuais e de compartilhamento de dados na web para proporcionar
+uma cooperação mais efetiva entre as bibliotecas.
+Além disso, segundo documento publicado pela Library of Congress (2012), o
+Bibframe possibilita novas formas de diferenciar o conteúdo conceitual de suas
+1
+
+Intitulada A Influência do Bibframe para Visibilidade dos Dados Bibliográficos.
+
+
+
+manifestações físicas ou digitais, identificar sem erros as informações sobre entidades e
+promover e expor estas relações.
+Desse modo, assim como o modelo entidade-relacionamento, denominado
+Functional Requirements for Bibliographic Records (FRBR), da International Federation of
+Library Associations and Institutions (IFLA), o Bibframe foi desenvolvido para ser capaz de
+reconhecer as entidades e suas relações bem como seus respectivos atributos. Para isso, o
+Bibframe emprega a prática de modelagem Resource Description Framework (RDF) (LIBRARY
+OF CONGRESS, 2012; SILVA, 2013).
+RDF é a arquitetura de metadados indicada e recomendada pelo World Wide Web
+Consortium (W3C) para promover a interoperabilidade semântica, estrutural e sintática na
+web (ALVES, 2005), sendo necessária para a efetivação do linked data. De acordo com Laufer
+(2015), o RDF possibilita representar informações por meio de um modelo genérico, baseado
+em três elementos: sujeito (subject); predicado (predicate) e objeto (object), que descrevem
+os recursos, suas características e os seus relacionamentos com outros recursos.
+O linked data, por sua vez, pode ser definido como um conjunto de boas práticas que
+se referem a como disponibilizar dados na web, para que seja possível vinculá-los
+semanticamente com outros dados, de maneira que as máquinas possam compreender tais
+relacionamentos. Esses relacionamentos são representados pela arquitetura de metadados
+RDF e as ligações semânticas entre os dados são realizadas por meio do Uniform Resource
+Identifier (URI), identificador único e universal para recursos na web (ARAKAKI, 2016).
+O Bibframe foi desenvolvido para ser um modelo geral para representar e conectar
+os dados bibliográficos na web, por meio dos princípios do linked data, como uma nova
+forma de representar e trocar dados bibliográficos, em substituição ao formato Machine
+Readable Cataloguing for the 21st century (MARC 21), empregado atualmente nas
+bibliotecas (LIBRARY OF CONGRESS, [201-?]a, [201-?]b).
+Enis (2015) afirma que o Bibframe também visa a proporcionar mais visibilidade para
+os dados bibliográficos disponibilizados em OPACs, de modo que esses dados possam ser
+entendidos e recuperados por tecnologias e ferramentas da web, como os buscadores online Google e Yahoo.
+Para Modesto (2015), o Bibframe reflete uma tendência da área da Biblioteconomia,
+em que os catalogadores estão buscando produzir dados bibliográficos que possam ser
+aproveitados na web, visto que os dados produzidos atualmente, com as regras e os padrões
+
+biblioteconômicos disponíveis, não são visíveis para os usuários do ambiente digital além da
+interface dos OPACs das bibliotecas.
+O modelo Bibframe está dividido em duas partes – o modelo conceitual Bibframe e o
+vocabulário Bibframe – as quais são detalhadas nas subseções a seguir.
+2.1 Modelo Conceitual Bibframe
+A Library of Congress ([201-?]a) define o modelo Bibframe como um modelo
+conceitual/prático que pode ser empregado para atender instituições que necessitam
+registrar a representação dos seus recursos com alto ou baixo nível de detalhamento, bem
+como instituições que descrevem outros tipos de materiais culturais.
+A versão 2.0 do modelo Bibframe é composta por três classes principais, também
+denominadas entidades: Obra (Work); Instância (Instance) e Item. A entidade Obra é o nível
+mais alto de abstração do Bibframe e representa a essência conceitual do recurso
+catalogado, a obra intelectual. Já a Instância é a concretização individual de uma Obra por
+uma ou mais formas de realização, publicadas ou não. Por fim, o Item é uma cópia (física ou
+digital) de uma Instância (LIBRARY OF CONGRESS, 2016).
+Para McCallum (2017) a entidade Bibframe Obra corresponde à visão conceitual de
+um recurso, e, portanto, diz respeito às entidades Obra e Expressão do FRBR, as quais são
+incorporadas também na diretriz RDA. A entidade Bibframe Instância, por sua vez, está
+relacionada com a forma de realização física de uma Obra, ou seja, com a entidade
+Manifestação do FRBR e da RDA.
+A partir do entendimento de McCallum (2017) sobre a relação entre as entidades
+Bibframe e FBRB, apresenta-se na Figura 1 um esquema visual da abstração de um livro
+impresso e encadernado em brochura da obra literária Dom Casmurro, de Machado de Assis.
+
+Figura 1: Abstração da Obra Dom Casmurro
+
+Fonte: elaborada pelas autoras – 2018.
+
+Por meio da Figura 1, observa-se que a ideia do autor Machado de Assis de escrever o
+romance Dom Casmurro está relacionada ao nível mais alto de abstração do universo
+bibliográfico. Dessa forma, a criação intelectual em si corresponde à entidade Obra do
+modelo conceitual Bibframe e à junção das entidades Obra e Expressão do modelo entidaderelacionamento FRBR.
+A materialização da ideia do autor em um livro impresso e encadernado em
+brochura, por sua vez, corresponde ao nível intermediário de abstração, ou seja, à entidade
+Bibframe Instância e à entidade FRBR Manifestação.
+Por fim, a individualização da materialização da ideia, isto é, um exemplar específico
+do livro impresso do romance de Machado de Assis que está, por exemplo, no acervo da
+Biblioteca Nacional do Brasil e que possui o número de identificação 1069, pertence ao nível
+mais baixo de abstração, e, portanto, corresponde às entidades homônimas Bibframe e FRBR
+Item.
+
+
+2.2 Vocabulário Bibframe
+Um vocabulário (ou uma ontologia)2 é um importante aspecto para a viabilização da
+web semântica, uma vez que, por meio dele, é possível definir um conjunto comum de
+termos que são utilizados para representar e descrever um domínio específico, como o
+domínio bibliográfico, por exemplo (LIMA; CARVALHO, 2005). Ainda, segundo os autores, os
+vocabulários apresentam, entre outros objetivos, o propósito de melhorar a exatidão de
+buscas em ferramentas da web.
+Entende-se que o vocabulário Bibframe vem ao encontro dos objetivos descritos pelo
+W3C para um vocabulário no contexto da web semântica, isto é, ele foi criado “[…] para
+classificar os termos que podem ser usados em uma determinada aplicação, caracterizar
+possíveis relacionamentos e definir possíveis restrições na utilização desses termos.”.
+(WORLD WIDE WEB CONSORTIUM, c2015, tradução nossa).
+Dessa forma, ao determinar quais termos podem ser utilizados, bem como quais
+devem ser evitados na representação dos recursos informacionais, o vocabulário Bibframe
+visa a garantir que o significado de quem produziu os dados (catalogador) possa ser o
+mesmo entendido pelo consumidor dos dados (usuários humanos ou sistemas de
+informação), garantindo que a semântica dos dados bibliográficos seja bem definida e
+facilite a comunicação desses dados com outros sistemas (LAUFER, 2015).
+A Library of Congress ([201-?]a) define o vocabulário Bibframe como a chave para a
+descrição dos recursos informacionais no ambiente web. Para realizar a descrição dos
+recursos nesse ambiente, o Bibframe emprega um conjunto de classes (elementos) e
+propriedades (atributos e relações).
+As classes são originárias de um sistema de abstração, utilizado para agrupar recursos
+que compartilham algumas propriedades (LIMA; CARVALHO, 2005). As propriedades, por sua
+vez, são empregadas para caracterizar as classes Bibframe e para indicar as relações entre as
+classes e subclasses do recurso (LIBRARY OF CONGRESS, 2016; SILVA et al., 2017).
+As classes e as propriedades do vocabulário Bibframe são representadas por meio da
+sintaxe RDF. A Figura 2 apresenta um esquema que demonstra a função das classes e das
+propriedades no vocabulário Bibframe, assim como as suas relações com os elementos de
+2
+
+De acordo com o W3C, não existe uma definição clara sobre a diferença entre empregar os termos
+“ontologia” e “vocabulário”, mas há uma tendência de usar a palavra “ontologia” para coleções de
+termos mais complexas e formais, e a palavra “vocabulário” para designar coleções de termos mais
+simples e informais (WORLD WIDE WEB CONSORTIUM, c2015).
+
+uma tripla RDF (conjunto dos elementos sujeito, predicado e objeto que formam uma
+declaração RDF).
+Figura 2: Esquema de estrutura de uma declaração Bibframe
+
+Fonte: elaborada pelas autoras – 2018.
+
+Observa-se, por meio da Figura 2, que a classe Bibframe possui a função de sujeito
+em uma declaração RDF, ao passo que a propriedade Bibframe é o predicado, ou seja, o
+elemento que faz a ligação entre o sujeito e o objeto, e informa a natureza dessa ligação.
+O objeto, por sua vez, é o alcance da propriedade Bibframe, atuando como elemento
+que caracteriza o sujeito e fornece o valor da propriedade. Seu valor pode ser representado
+por uma classe Bibframe, de uma URI ou de um valor literal, como palavras ou números.
+A última linha do esquema da Figura 2 contém um exemplo simplificado de uma
+declaração Bibframe, de acordo com o vocabulário Bibframe. Nesse exemplo, o sujeito da
+declaração é a classe Bibframe Instância, o predicado é a propriedade “bf: title” (empregada
+para indicar o título da Instância), e o valor desse título é o objeto Dom Casmurro.
+O vocabulário Bibframe pode ser considerado um componente essencial para o
+modelo Bibframe, pois, por meio dele, é possível representar e descrever as características
+dos recursos informais e ainda realizar a vinculação semântica dos dados representados.
+3 PROCEDIMENTOS METODOLÓGICOS
+Esta pesquisa pode ser caracterizada como exploratória, descritiva, bibliográfica,
+documental e de abordagem qualitativa.
+
+Para o levantamento dos dados, foram utilizadas fontes documentais, empregadas a
+partir da análise de documentos institucionais publicados, principalmente, pela LC e no site
+do modelo Bibframe 2.03.
+Utilizou-se a pesquisa bibliográfica sobre o modelo Bibframe 2.0 em artigos
+disponíveis na íntegra on-line, nos idiomas inglês e português, e publicados nos anos de 2016
+e 2017. O corte temporal está relacionado ao fato de o Bibframe 2.0 ter sido lançado em
+abril de 2016.
+Os artigos foram coletados nas seguintes bases de dados: Portal de Periódicos da
+Coordenação de Aperfeiçoamento de Pessoal de Nível Superior (CAPES); Base de Dados
+Referenciais de Artigos de Periódicos em Ciência da Informação (BRAPCI); Library and
+Information Science Abstracts (LISA); Scopus; Emerald Insight e Science Direct. Além disso,
+foram realizadas buscas no Cataloging & Classification Quarterly e nos anais dos eventos 27º
+Congresso Brasileiro de Biblioteconomia, Documentação e Ciência da Informação (CBBD);
+17º e 18º Encontro Nacional de Pesquisa em Ciência da Informação (ENANCIB) e 1º Encontro
+de Representação Documental (EnReDo).
+A estratégia consistiu na busca pelo termo “Bibframe” em todos os campos dos
+artigos disponíveis na BRAPCI e nos anais do 27º CBBD, 17º e 18º ENANCIB e 1º EnReDo, e na
+pesquisa pelo termo “Bibframe” no título ou no assunto dos artigos disponíveis nas demais
+fontes de dados utilizadas.
+4 RESULTADOS
+Como resultados, verificou-se que, entre os diferenciais do Bibframe como novo
+modelo para representação de dados bibliográficos, destaca-se que o modelo foi
+desenvolvido para atender as necessidades da catalogação em RDA, no entanto, visa a ser
+um modelo independente de qualquer diretriz ou regra de catalogação (LIBRARY OF
+CONGRESS, [201-?]a).
+Outro diferencial do Bibframe está relacionado ao fato deste ser um modelo de
+abstração do universo bibliográfico, o que, de acordo com Arakaki et al. (2017), torna mais
+visível a catalogação proposta pelo FRBR, pois possibilita que a representação do recurso
+seja realizada de forma fragmentada e separada em blocos, em vez de um registro único
+como é proposto pela estrutura do formato MARC 21. Após realizar a descrição da Obra de
+3
+
+Link para acesso: http://www.loc.gov/bibframe
+
+um recurso informacional, é necessário somente fazer a ligação do registro dessa Obra com
+os registros de suas Manifestações (Instâncias Bibframe), agilizando o processo de
+catalogação dos próximos recursos informacionais.
+O emprego de hiperlinks para conectar as classes e as propriedades Bibframe
+também contribui para tornar a catalogação mais ágil, pois, quando uma propriedade é
+alterada, todas as classes vinculadas a ela são alteradas automaticamente, diminuindo o
+retrabalho relacionado ao processo (RAMALHO, 2016).
+Sobretudo, entende-se que um dos diferenciais do Bibframe está ligado ao fato desse
+modelo ser uma junção do objetivo de representar o domínio bibliográfico por meio de
+modelos conceituais, como os criados pela IFLA na década de 1990, e a tendência atual da
+web de publicar dados de forma que sejam possíveis ligações semânticas com outros dados,
+isto é, dados em consonância com os princípios do linked data. Assim, o Bibframe visa a
+atualizar a comunidade bibliotecária para as recomendações da web, de forma a prepará-la
+para uma nova maneira de criar e publicar dados: a web semântica.
+Outra iniciativa da catalogação para atualizar-se e preparar-se para a criação e
+publicação de dados na web é a diretriz RDA. A referida diretriz apresenta um conjunto de
+instruções para guiar os catalogadores na representação de recursos informacionais físicos e
+digitais, as quais estão fundamentadas nas necessidades dos usuários e estão em
+consonância com os modelos FRBR e Functional Requirements for Authority Data (FRAD), e
+com a Declaração de Princípios Internacionais de Catalogação de 2009.
+Em relação às características comuns entre o modelo Bibframe e a diretriz RDA,
+ambos foram criados para atender as necessidades específicas das bibliotecas, mas almejam
+ir além, podendo ser empregados em outras unidades de informação, como museus e
+arquivos (OLIVER, 2011; LIBRARY OF CONGRESS, 2012).
+O modelo Bibframe e a diretriz RDA também apresentam como característica comum
+o fato de possibilitarem a diferenciação entre o conteúdo intelectual (Obra RDA/FRBR e
+Obra Bibframe) e as manifestações físicas (Manifestação RDA/FRBR e Instância Bibframe) de
+um recurso. Além disso, o Bibframe e a RDA identificam as entidades e os conceitos
+associadas ao recurso e representam os relacionamentos existentes entre as entidades
+(LIBRARY OF CONGRESS, [201-?]a).
+Ambos possuem, também, vocabulário próprio em RDF para representar os recursos
+informacionais do universo bibliográfico por meio de classes e propriedades. De acordo com
+
+
+
+Taniguchi (2017a, 2017b), o fato do Bibframe e da RDA utilizarem uma quantidade ampla de
+classes para representar os recursos informacionais, em vez de uma única classe, faz com
+eles possam ser classificados como modelos multiclasses.
+No entanto, mesmo com essas características em comum, as modelagens realizadas
+pelo Bibframe e pela RDA são diferentes, tendo em vista que cada um apresenta, por
+exemplo, distintos números de classes; isto é, enquanto o vocabulário RDA possui doze
+classes principais (Obra, Expressão, Manifestação, Item, Pessoa, Família, Entidade Coletiva,
+Agente coletivo, Lugar, Período de tempo, Nomen e Entidade RDA), o vocabulário Bibframe
+contém três classes principais (Obra, Manifestação e Item), que são complementadas por
+três conceitos-chaves (Agente, Assunto e Evento) que possuem relacionamento com as
+classes principais (LIBRARY OF CONGRESS, 2016; TANIGUCHI, 2017a).
+Além do distinto número de classes principais, Taniguchi (2017a) aponta outras
+diferenças entre a modelagem realizada entre os vocabulários RDA e Bibframe. Dentre tais
+diferenças, estão, por exemplo, que a entidade Bibframe Evento e suas propriedades
+relacionadas não possuem classe nem propriedades equivalentes no vocabulário RDA e que
+a entidade RDA Expressão não apresenta equivalente no vocabulário Bibframe.
+Outra diferença da modelagem realizada pelo modelo Bibframe e pela diretriz RDA
+está associada ao fato das relações entre as entidades do Bibframe não serem hierárquicas,
+ao passo que as relações entre as entidades do modelo FRBR e da RDA são (RAMALHO,
+2016).
+Quanto às vantagens do modelo Bibframe 2.0 em relação a sua versão anterior,
+McCallum (2017) e Taniguchi (2017a) assinalam que a versão atual está mais próxima da
+diretriz RDA, e consequentemente do modelo FRBR, uma vez que possui uma entidade para
+a representação da entidade FRBR/RDA Item (entidade Bibframe Item), diferentemente da
+versão 1.0 que não apresentava tal entidade.
+Xu, Hess e Akerman (2017), por sua vez, afirmam que o conversor marc2bibframe2,
+lançado em 13 de março de 2017 pela LC, apresenta vantagens em relação ao software
+responsável pela conversão de registros MARCXML4 para Bibframe 1.0. Conforme os
+autores, o conversor da versão 2.0 tem processamento mais rápido, bem como é de mais
+fácil entendimento para os usuários.
+4
+
+Framework desenvolvido pela LC “[…] para trabalhar com dados MARC em um ambiente XML.”
+(LIBRARY OF CONGRESS, 2004, tradução nossa).
+
+
+
+A respeito das vantagens do Bibframe como modelo para representação de dados
+bibliográficos, Xu, Hess e Akerman (2017) ressaltam que as ferramentas desenvolvidas pela
+LC para a iniciativa Bibframe, como o conversor marc2bibframe2, possuem código aberto, de
+forma que qualquer biblioteca pode acessar seu código fonte e modificá-lo para melhor
+atender as suas necessidades locais.
+Outra vantagem do Bibframe como modelo para representação de dados
+bibliográficos está relacionada à possibilidade de aplicar extensões a seu vocabulário, uma
+vez que permite que a comunidade bibliotecária o complemente, buscando uma melhor
+adequação de sua estrutura às características específicas de determinados recursos
+informacionais (MCGEE; DURANTE; WEIMER, 2017).
+Com relação aos aspectos que podem ser considerados como desvantagens do
+Bibframe 2.0, Taniguchi (2017a) apresenta o fato do mencionado modelo não possuir uma
+entidade correspondente à entidade RDA/FRBR Expressão. Tal aspecto faz com que, durante
+o processo de mapeamento de um registro bibliográfico em FRBR/RDA para Bibframe 2.0,
+seja necessária a transferência das informações referentes à entidade FRBR/RDA Expressão
+para a entidade Bibframe Obra. Dessa forma, a distinção entre as entidades FRBR/RDA Obra
+e Expressão desaparece quando ocorre o mapeamento para Bibframe 2.0 de um registro em
+FRBR/RDA que representa uma Obra com Expressões.
+Para Zapounidou, Sfakakis e Papatheodorou (2017) a inexistência de uma entidade
+Bibframe correspondente à entidade FRBR/RDA Expressão ocasiona a perda de informações
+no mapeamento de dados com origem no modelo FRBR para o Bibframe 2.0. Por exemplo,
+ao mapear uma Obra que possui duas Expressões FRBR (como uma gravação de som e um
+texto em inglês) a informação de que tais Expressões possuem origem na mesma Obra não é
+preservada no registro bibliográfico em Bibframe 2.0.
+Outra deficiência do modelo estudado é não conseguir representar algumas classes e
+propriedades RDA. Exemplos disso são as propriedades RDA “earlier title proper” (título
+anterior apropriado) e “later title proper” (título posterior apropriado), relacionados a
+variações de título de um recurso, que não podem ser representados em Bibframe 2.0, pois
+não possuem correspondentes em seu vocabulário (TANIGUCHI, 2017a).
+Identificou-se também que o modelo Bibframe 2.0 possui deficiências também para
+representar alguns tipos de recursos informacionais em suportes físicos, principalmente
+
+
+
+
+materiais cartográficos, recursos seriados e audiovisuais (BALSTER; RENDALL; SHRADER,
+2017; MCGEE; DURANTE; WEIMER, 2017; TANIGUCHI, 2017b).
+Um exemplo da deficiência do Bibframe para representar as especificidades dos
+materiais cartográficos é apresentado por McGee, Durante e Weimer (2017). Segundo os
+autores, o vocabulário Bibframe 2.0 não faz distinção entre diferentes tipos de recursos,
+como mapas em papel e digital, dados geoespaciais, atlas e globos, identificando todos esses
+recursos como a entidade “Cartography” (cartografia).
+Na visão dos autores, é importante que o Bibframe realize a distinção entre os
+diferentes tipos de materiais cartográficos existentes, uma vez que cada um deles apresenta
+um conjunto de características próprias que devem conter no registro bibliográfico para
+auxiliar os usuários na recuperação e diferenciação desses recursos por meio do catálogo
+bibliográfico.
+Compreende-se, entretanto, que as deficiências apresentadas nesta pesquisa como
+desvantagens do Bibframe 2.0 podem ser vistas como oportunidades de melhoria para o
+modelo. Essas oportunidades têm como finalidade proporcionar um melhor alinhamento do
+Bibframe 2.0 ao modelo FRBR e à diretriz RDA, bem como garantir que o modelo possa
+atender de forma efetiva as necessidades das unidades de informação e de seus usuários.
+Em relação à influência do Bibframe para a vinculação e a visibilidade dos dados
+bibliográficos, destaca-se que o fato do referido modelo empregar padrões não exclusivos ao
+universo bibliotecário, como o RDF e o URI, faz com que a relevância e a aplicabilidade
+desses dados sejam expandidas para outras comunidades da web (WORLD WIDE WEB
+CONSORTIUM, c2011).
+O emprego do RDF pelo modelo Bibframe pode ser considerado a chave para a
+interligação e a visibilidade dos dados bibliográficos dos OPACs na web semântica
+(MCCALLUM, 2017), uma vez que o RDF “[…] se propõe a representar e transmitir
+metadados de forma que sejam legíveis por máquinas e favoreçam a integração entre
+sistemas de informação na Web.” (SERRA; SANTARÉM SEGUNDO, 2017, p.176).
+Por meio do RDF, o Bibframe pode identificar e representar as entidades e os
+relacionamentos bibliográficos presentes nos recursos, de maneira que os agentes e as
+ferramentas da web semântica possam compreender. Segundo documento publicado pela
+Library of Congress (2012) os relacionamentos bibliográficos são importantes para auxiliar os
+motores de busca a melhorar a relevância das pesquisas para os usuários. Além disso, o RDF
+
+
+
+possibilita que os dados bibliográficos gerados pelo Bibframe sejam legíveis e interpretáveis
+por agentes inteligentes, bem como sejam recuperáveis por ferramentas de busca
+semântica, contribuindo para aumentar a visibilidade desses dados para usuários não
+diretamente relacionados à comunidade bibliotecária (MODESTO, 2015; XU; HESS;
+AKERMAN, 2017).
+O URI, utilizado pelo RDF, também possui grande importância nesse contexto, uma
+vez que amplia as possibilidades de acesso aos recursos informacionais das bibliotecas,
+vinculando os dados bibliográficos dessas instituições a conteúdos de outras fontes
+(RAMALHO, 2016).
+O uso do modelo Bibframe em OPACs possibilita o direcionamento de usuários de
+outras fontes para esses catálogos, de forma que, por exemplo, ao acessar um site com
+dados vinculados, o usuário pode ser remetido ao catálogo de uma biblioteca que possui
+algum recurso relacionado ao conteúdo presente no site acessado.
+Ao possibilitar que sites e bases de dados façam links para conteúdos presentes nos
+OPACs, o Bibframe aumenta a visibilidade dos dados bibliográficos das bibliotecas para os
+usuários da web, fazendo com que eles tenham conhecimento dos produtos e serviços
+ofertados
+
+pelas
+
+instituições
+
+(RAMALHO,
+
+2016).
+
+Igualmente,
+
+contribui
+
+para
+
+a
+
+contextualização dos dados de outras comunidades, as quais podem utilizar os dados bem
+estruturados e altamente descritivos das bibliotecas para complementar as suas
+informações.
+Ademais, ao viabilizar a navegação dos usuários de sites externos para os OPACs,
+Welsh (2017) destaca que o Bibframe aumenta a quantidade de pontos de acesso que
+podem ser utilizados para remeter os usuários aos catálogos das bibliotecas, contribuindo,
+assim, para o aumento do potencial de utilização dos OPACs na web.
+No entanto, ressalta-se que, para que o Bibframe alcance todo o seu potencial e
+possibilite a interligação dos dados bibliográficos com fontes externas aos OPACs, é
+indispensável que os dados disponibilizados nesses catálogos estejam abertos, isto é, que
+possam ser livremente acessados, utilizados, modificados e compartilhados por outros
+sistemas e sites da web (ARAKAKI, 2016).
+Além da abertura dos dados bibliográficos, foram identificados outros aspectos
+necessários para viabilizar a implementação do modelo Bibframe em bibliotecas, os quais
+
+
+são apresentados no Quadro 1 como orientações para as instituições que queiram implantar
+o Bibframe.
+Quadro 1: Orientações para implementação do Bibframe em bibliotecas
+Infraestrutura
+
+Computador com acesso à internet
+Acesso à diretriz RDA
+Servidor web
+
+Humano
+
+Conhecimentos
+
+Habilidades
+
+Tecnológico
+
+Atitudes
+
+Sistema de
+Gerenciamento
+de Bibliotecas
+
+Princípios da web semântica e linked data
+Objetivos e características de vocabulários semânticos
+Características, finalidades e terminologias do modelo Bibframe
+Classes e propriedades do vocabulário Bibframe
+eXtensible Markup Language (XML)
+Representação de recursos em RDF
+Desenvolvimento de identificadores em URI
+Declaração de Princípios Internacionais de Catalogação
+Modelos entidade-relacionamento criados pela IFLA, principalmente FRBR
+Caraterísticas, finalidades e terminologia da diretriz RDA
+MARCXML
+Língua inglesa
+Extensões criadas para complementar o vocabulário Bibframe
+Representar os recursos por meio de entidades e relacionamentos
+Catalogação em RDA
+Desvincular-se da catalogação em campos e subcampos do formato MARC
+Saber trabalhar em grupo, principalmente com profissionais de outras áreas –
+interdisciplinaridade
+Ferramentas Bibframe para criação, conversão e transformação de dados
+Representar os recursos informacionais reutilizando ao máximo conteúdos de outras
+fontes
+Não temer mudanças
+Não temer trabalhar com tecnologias
+Pensar na catalogação além dos instrumentos e regras atuais
+Ser proativo e buscar conhecimentos por conta própria
+Participar de cursos, eventos, listas de discussões on-line, etc. sobre o tema – educação
+continuada
+Ficar atento para atualizações do modelo Bibframe e desenvolvimentos de novas
+ferramentas
+Participar do programa da LC Bibframe Implementation Testbed
+Registrar na Política Institucional de Catalogação as decisões acerca da adoção e
+implementação do modelo Bibframe
+Disponibilizar o acervo on-line – OPAC
+Publicar os dados bibliográficos por meio de licença de uso aberta
+Ser capaz de representar os recursos informacionais por meio de entidades e
+relacionamentos
+Representar e gerenciar os relacionamentos bibliográficos por meio de identificadores
+controlados
+Permitir ligações com fontes externas de dados e destas com os dados bibliográficos
+armazenados
+Estar alinhado aos modelos de entidade-relacionamento criados pela IFLA,
+principalmente o FRBR
+Atender as tarefas dos usuários descritas nos modelos de entidade-relacionamento
+criados pela IFLA, principalmente o FRBR
+
+
+Quadro 1: Orientações para implementação do Bibframe em bibliotecas (conclusão)
+
+Outros
+softwares
+
+Módulo de catalogação automatizada compatível com as terminologias e as
+especificações da catalogação em RDA e em Bibframe
+Possibilitar o controle de autoridades de acordo com a diretriz RDA e o modelo Bibframe
+Representar os dados bibliográficos de acordo com outros códigos de catalogação, não
+estando restrito a diretriz RDA
+Apresentar consultas interativas a fontes de identificadores únicos durante o cadastro
+dos registros bibliográficos, como o Open Researcher and Contributor ID (ORCID) e o
+Virtual International Authority File (VIAF)
+Permitir a cooperação de registros bibliográficos com outras instituições que utilizam o
+Bibframe
+Proporcionar a interoperabilidade com outros sistemas que utilizam o Bibframe
+Armazenamento e recuperação de recursos informacionais de diversos formatos
+Aproveitar o linked data para aumentar as possiblidades de uso e reúso dos dados
+bibliográficos armazenados
+Possibilitar pesquisas no catálogo bibliográfico compatíveis com a representação de
+dados realizada pelo Bibframe
+Utilizar linguagens e protocolos para descrição e intercâmbio de dados recomendados
+pelo W3C (como o RDF e o Hypertext Transfer Protocol – HTTP) em vez de padrões
+exclusivos das bibliotecas
+Implementar atualizações de acordo com as mudanças realizadas no modelo Bibframe
+pela LC
+Navegador de internet
+Bibframe Editor
+Conversor de registros MARCXML para Bibframe 2.0
+Fonte: Das autoras (2018).
+
+A estrutura de apresentação das orientações foi embasada no estudo de Café, Santos
+e Macedo (2001). Os elementos, por sua vez, foram traçados a partir da pesquisa
+bibliográfica e documental realizada neste estudo. Artigos como o de Ramalho (2016) e o de
+McCallum (2017) proporcionaram o embasamento teórico necessário para a compreensão
+dos objetivos do Bibframe 2.0 e suas aplicações de uso, resultando, principalmente, nos
+elementos humanos apresentados no quadro.
+Os estudos de natureza aplicada, como o de Balster, Rendall e Shrader (2017), os de
+Taniguchi (2017a; 2017b) e o de Zapounidou, Sfakakis e Papatheodorou (2017), contribuíram
+para o entendimento dos aspectos necessários para a representação de recursos
+informacionais pelo Bibframe 2.0, auxiliando na determinação das orientações relacionadas,
+sobretudo, ao fator tecnológico. Os documentos acerca do Bibframe 2.0, provenientes do
+site da Library of Congress ([201-?]a; [201-?]b; 2016), foram utilizados para embasar
+orientações de todas as naturezas, especialmente, aquelas relacionadas à infraestrutura e à
+tecnologia.
+Salienta-se que tais orientações não têm como pretensão serem exaustivas, mas, sim,
+representar de forma estruturada e de fácil entendimento alguns dos aspectos que devem
+
+
+ser considerados e avaliados pelos bibliotecários para a implementação do modelo Bibframe
+em suas bibliotecas.
+5 CONSIDERAÇÕES FINAIS
+Conforme apresentado, a arquitetura e os padrões empregados atualmente nos
+OPACs não possibilitam que os usuários da web possam acessar os dados bibliográficos
+armazenados nesses catálogos por meio de fontes externas, como ferramentas de busca ou
+sites.
+A falta de visibilidade dos dados bibliográficos dos OPACs na web foi o ponto de
+partida para a investigação realizada nesta pesquisa, uma vez que é indispensável que as
+bibliotecas divulguem seus acervos também para usuários que não estão familiarizados com
+a pesquisa de informações por meio do catálogo bibliográfico.
+A partir desta pesquisa foi possível constatar que o Bibframe contribui para aumentar
+a visibilidade dos dados bibliográficos dos OPACs ao descrever os recursos informacionais
+por meio do RDF, em que é possível representar as entidades que constituem o recurso e os
+relacionamentos bibliográficos existentes entre elas.
+Graças à identificação única e universal de entidades e relacionamentos
+proporcionada pelo URI, utilizado pelo RDF, o Bibframe possibilita que os dados
+bibliográficos dos OPACs sejam vinculados a dados de outras fontes, de forma a criar uma
+“teia” de dados interligados de sentido, na qual os usuários possam navegar – do catálogo
+bibliográfico para sites ou bases de dados e vice-versa.
+Ao navegar pela “teia” de dados vinculados, os usuários apresentam maiores chances
+de serem remetidos para os catálogos bibliográficos, assim, quanto maior a quantidade de
+sites e bases de dados que apresentam links para os dados bibliográficos dos OPACs, maior a
+quantidade de caminhos que levarão os usuários a utilizar o catálogo bibliográfico,
+aumentando, portanto, a visibilidade e o uso dos recursos presentes nesses catálogos
+(WELSH, 2017).
+Isso posto, entende-se que a questão norteadora e os objetivos desta pesquisa foram
+alcançados, uma vez que foram analisados os principais aspectos do modelo Bibframe 2.0
+que influenciam a visibilidade e a vinculação semântica dos dados bibliográficos. Além disso,
+foram apresentadas as vantagens e desvantagens de seu uso, seus diferenciais como modelo
+para representação de dados bibliográficos, sua relação com a diretriz RDA, além da
+proposição de um conjunto de orientações relacionadas a sua implementação em
+bibliotecas.
+Identificou-se também que o Bibframe 2.0 apresenta vantagens em relação a sua
+versão anterior. No entanto, ainda há diversos pontos que podem ser trabalhados para
+garantir um melhor alinhamento do seu modelo conceitual e do seu vocabulário ao modelo
+conceitual FRBR e à diretriz RDA, e, também, para proporcionar mais especificidade na
+representação de alguns tipos de recursos informacionais, como materiais cartográficos,
+audiovisuais e recursos seriados.
+Por isso, compreende-se que o modelo Bibframe ainda possui um longo caminho a
+ser percorrido até concluir seu desenvolvimento e ser liberado para implementação nas
+unidades de informação. Serão necessárias melhorias e adaptações em seu modelo
+conceitual e vocabulário, os quais deverão ser submetidos a mais testes pela LC e pela
+comunidade bibliotecária antes da implementação oficial em instituições.
+Quanto às contribuições desta pesquisa para as áreas da Ciência da Informação e da
+Biblioteconomia, destaca-se, sobretudo, o caráter inovador da investigação realizada que
+inclui 51 orientações para guiar os bibliotecários no planejamento das ações que deverão ser
+realizadas para preparar as bibliotecas para a implementação do Bibframe, bem como para
+testar o mencionado modelo.
+Acredita-se que as temáticas abordadas servirão para auxiliar os bibliotecários a
+iniciar ou complementar seus estudos acerca do modelo Bibframe. Desse modo, almeja-se
+que os bibliotecários possam compreender os benefícios que a adoção e a implementação
+do modelo Bibframe, e consequentemente do linked data, nos OPACs, pode proporcionar
+para os usuários desses catálogos, assim como para aumentar a visibilidade dos recursos das
+bibliotecas na web.
+Como trabalhos futuros, sugere-se a criação de um protótipo de sistema de
+gerenciamento de bibliotecas, compatível com as especificidades do Bibframe 2.0, por meio
+do qual seja possível comparar a eficiência da recuperação de dados bibliográficos em
+Bibframe 2.0 com a de dados em formato MARCXML, de forma a compreender na prática as
+vantagens da adoção do Bibframe para o trabalho dos catalogadores e para os usuários dos
+OPACs das bibliotecas.
+Além disso, sugere-se a investigação do alinhamento do modelo Bibframe 2.0 com o
+modelo FRBR Library Reference Model (FRBR-LRM) que visa a consolidar em um único
+
+
+documento os modelos conceituais desenvolvidos pela IFLA e que será adotado pela diretriz
+RDA.

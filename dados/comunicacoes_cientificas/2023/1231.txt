@@ -1,0 +1,241 @@
+
+BRASILIANA MUSEUS: WORKFLOW DO SERVIÇO DE BUSCA E RECUPERAÇÃO DA
+INFORMAÇÃO AGREGADA DOS ACERVOS DIGITAIS DO IBRAM
+
+Modalidade: Trabalho Completo
+Resumo: O Instituto Brasileiro de Museus (Ibram) administra diretamente 20 museus federais que
+possuem seus acervos digitais, parciais ou totais, disponíveis na Web por meio do Tainacan. Esse
+cenário trouxe importantes desafios à busca e recuperação de informações, levando à necessidade de
+iniciar pesquisas visando o desenvolvimento de um novo serviço de busca e recuperação agregada
+para o Ibram. Assim, por meio de estudos complementares, utilizando como metodologia uma
+pesquisa de natureza aplicada, que empregou as seguintes técnicas de pesquisa: pesquisa
+documental, pesquisa bibliográfica e revisão sistemática de literatura, e adotando o estudo de casos
+múltiplos como método de pesquisa, obtivemos como resultado o Serviço de Busca Integrada do
+Ibram, denominado Brasiliana Museus. Este serviço é composto pelo Painel de Visualização Analítica
+e pelo Portal Brasiliana Museus. A partir do sucesso dos protótipos, que validaram o fluxo de
+agregação e suas tecnologias, esta pesquisa buscou desenvolver o modelo conceitual do serviço por
+meio da criação de um fluxo de agregação que se mostrou eficaz, tanto do ponto de vista da
+socialização e divulgação dos objetos digitais, quanto na monitorização e acompanhamento das
+informações dos acervos por meio de painéis analíticos. Além disso, representa uma solução
+tecnológica econômica e viável de ser implementada.
+Palavras-chave: busca; recuperação da informação; Brasiliana Museus; workflow; agregação.
+
+INTRODUÇÃO
+Instituições responsáveis pela preservação do patrimônio cultural têm investido
+consideravelmente na digitalização e disseminação de seus acervos, resultando em uma
+multiplicação de museus digitais acessíveis na Web. Entre os exemplos notáveis estão a
+Pinacoteca no Brasil, o Museu do Louvre na França, a Casa Anne Frank na Holanda, o Museu
+Nacional de História Natural nos Estados Unidos da América, entre outros.
+Esse crescimento contínuo tem levado os museus a armazenarem uma vasta
+quantidade de objetos digitais na nuvem, criando um cenário rico e promissor, mas que
+também apresenta desafios significativos em relação à busca e recuperação de informações.
+Para enfrentar esses desafios, instituições nacionais e, especialmente, internacionais têm
+desenvolvido diferentes soluções que oferecem aos usuários uma interface unificada para
+buscar e recuperar informações por meio de uma plataforma centralizada que direciona o
+acesso aos museus de origem.
+A título de exemplo no Brasil, temos a Brasiliana Iconográfica (BRASILIANA
+ICONOGRÁFICA, 2017), a Brasiliana Fotográfica (BRASILIANA FOTOGRÁFICA, 2023) e a Rede
+Web de Museus (GOVERNO DO RIO DE JANEIRO, 2023); nos Estados Unidos da América, a
+American Art Collaborative (AAC), a Digital Public Library of America (DPLA), a World Digital
+Library e a Google Arts & Culture; na Nova Zelândia, a DigitalNZ; na Europa, a Europeana; no
+México, a Mexicana; na Austrália, a TROVE (SIQUEIRA; MARTINS, 2019b, 2020, 2021c;
+SANTAREM SEGUNDO; SILVA; MARTINS, 2019). São realidades distintas, mas que têm
+transformado a maneira como coletamos e disseminamos conteúdo digital.
+As iniciativas internacionais são mais consolidadas e estruturadas, mas carecem de
+documentação adequada e são altamente específicas às realidades informacionais de cada
+contexto em que estão inseridas, tornando praticamente inviável sua adaptação no contexto
+brasileiro (SIQUEIRA; MARTINS, 2021c). Já as iniciativas nacionais são limitadas,
+fragmentadas e exigem apoio técnico e modelos de governança escaláveis para o território
+brasileiro, além de enfrentar a notável ausência de incentivo político e econômico (MARTINS
+et al., 2022; SANTARÉM SEGUNDO; SILVA; MARTINS, 2019).
+Nesse cenário, o Instituto Brasileiro de Museus (Ibram), que atualmente supervisiona
+20 museus na Web, com um total de mais de 17 mil objetos digitais acessíveis por meio do
+software Tainacan, iniciou uma nova pesquisa. Essa pesquisa, em consonância com o
+desenvolvimento de agregadores internacionais, mas principalmente adaptada às
+
+
+
+expectativas e realidades dos museus brasileiros sob a gestão do Ibram, teve como objetivo
+criar um serviço de busca e recuperação de informações. Esse serviço, alinhado com as
+práticas de organização dos museus, coleta, agrega, transforma e armazena dados em uma
+plataforma centralizada.
+A agregação de dados requer não apenas uma infraestrutura tecnológica robusta,
+mas também acervos organizados de forma sólida. Freire et al. (2017), em sua pesquisa
+sobre tecnologias web aplicadas à agregação de metadados culturais, afirmam que, no
+campo do patrimônio cultural, o protocolo OAI-PMH (Open Archives Initiative Protocol for
+Metadata Harvesting) não é mais viável devido à heterogeneidade de subdomínios; há a
+falta de um modelo de dados de referência unificado; os orçamentos são limitados; e há
+constantes inovações e adoção de novas tecnologias. Harpring (2013) complementa que nem
+sempre temos informações completas sobre objetos culturais e seus criadores, e que uma
+recuperação eficiente requer indexação com regras consistentes, terminologia bem definida
+e controle de vocabulário. Além disso, Freire et al. (2017) argumentam que o agregador deve
+acompanhar as mudanças nas bases de origem, atualizando periodicamente sua cópia dos
+dados.
+Após uma extensa pesquisa documental, bibliográfica e revisão sistemática de
+literatura, foi desenvolvido o agregador do Ibram, chamado Brasiliana Museus, que é
+composto por dois produtos distintos: o Painel de Visualização Analítica (SIQUEIRA;
+MARTINS, 2021) e o Portal Brasiliana Museus (SIQUEIRA; MARTINS; LEMOS, 2022).
+Com o sucesso dos protótipos, tornou-se necessário dar um passo adiante e construir
+um workflow do Brasiliana Museus para a busca e recuperação de informações agregadas.
+Isso permitirá que outros pesquisadores tenham acesso a um modelo flexível, mas
+fundamentado, que pode ser adaptado às suas necessidades.
+2 METODOLOGIA
+Para construção do modelo foram desenvolvidos estudos de natureza aplicada, de
+cunho descritivo, com abordagem qualitativa, que utilizou as técnicas de pesquisa: pesquisa
+documental (SIQUEIRA et al., 2021), pesquisa bibliográfica (SIQUEIRA; MARTINS, 2019; 2020)
+e Revisão Sistemática de Literatura (SIQUEIRA; MARTINS, 2021), e como método de pesquisa
+o estudo de casos múltiplos, para prototipagem (SIQUEIRA; MARTINS; LEMOS, 2022;
+SIQUEIRA; MARTINS, 2021; SIQUEIRA; MARTINS; MEDEIROS, 2022; 2022b; 2022c).
+
+
+
+A partir dos resultados obtidos foi sistematizado o modelo conceitual, o Workflow do
+Brasiliana Museus, apresentado e descrito a seguir.
+3 WORKFLOW DO BRASILIANA MUSEUS: SERVIÇO DE BUSCA E RECUPERAÇÃO DA
+INFORMAÇÃO DO IBRAM
+O workflow de agregação apresenta todas as etapas, as tecnologias e os requisitos
+mínimos para agregação. A Figura 1 apresenta o workflow.
+Figura 1 - Workflow do Brasiliana Museus: serviço de busca e recuperação da informação do Ibram
+
+Fonte: elaborado pelos autores (2023)
+
+O workflow, Figura 01, visa a ilustrar graficamente seus principais fluxos,
+considerando processos, tecnologias e atores, demonstrando a viabilidade e simplicidade da
+solução. Ele foi dividido em duas etapas: a que se refere à primeira coleta e a que se refere às
+demais coletas, para atualização dos dados do agregador em relação aos museus de origem.
+3.1 Primeira coleta
+Para que a agregação dos dados seja satisfatória, é primordial que os museus
+mapeiem seus dados para um formato único, que no caso do Ibram, é o Inventário Nacional
+
+
+
+de Bens Culturais Musealizados (INBCM), descrito como "um instrumento de inserção
+periódica de dados sobre os bens culturais musealizados [...], com o propósito de
+identificação, proteção e preservação" (BRASIL, 2021).
+Esse mapeamento é realizado por meio de um plugin desenvolvido pela equipe do
+Tainacan (SIQUEIRA; MARTINS; MEDEIROS, 2022a), o qual permite que os profissionais dos
+museus, que têm conhecimento profundo dos dados, realizem o mapeamento manual dos
+dados existentes. Essa ação inicial permite que o Tainacan disponibilize todos os dados
+públicos mapeados em formato aberto, utilizando a API JSON (Application Programming
+Interface JavaScript Object Notation), permitindo a coleta.
+Uma vez que os dados públicos e abertos estão disponíveis, o processo de coleta
+automatizada é iniciado com o uso da tecnologia Elastic Stack, composta por quatro
+ferramentas: Filebeat, Logstash, Elasticsearch e Kibana (SIQUEIRA; MARTINS; MEDEIROS,
+2022a).
+Os dados coletados (Filebeat) são agregados e transformados (Logstash) antes de
+serem armazenados tanto no Tainacan (plugin de submissão de itens) quanto no
+Elasticsearch. No entanto, no Elasticsearch há uma divisão importante: os dados
+corretamente submetidos no Tainacan são armazenados em um índice de agregação,
+enquanto os dados com erros de submissão são armazenados em um índice de erros. Ambos
+os índices são utilizados no Kibana para criar painéis de visualização analítica dos dados.
+Os dados submetidos ao Tainacan compõem o Portal Brasiliana Museus, juntamente
+com as páginas da web desenvolvidas no WordPress. Além disso, foi incorporado ao Tainacan
+o plugin do WordPress Elasticpress para agilizar as consultas.
+O Tainacan também oferece, por padrão, APIs de saída de dados em diferentes
+formatos, permitindo que os dados agregados sejam utilizados por outras aplicações. No
+entanto, uma limitação significativa é destacada devido ao uso do INBCM e à prática de
+catalogação dos museus: não há licenças de uso disponíveis para cada item, o que dificulta
+sua utilização em diversas atividades e campos de atuação. Portanto, mesmo que o reúso da
+informação seja tecnologicamente viável, essa questão ainda requer estudo e ações por
+parte do Ibram.
+Após a conclusão da primeira coleta, os dados estão disponíveis para análise pelo
+Ibram e pelos gestores dos museus, por meio dos painéis analíticos, e estão acessíveis para
+busca e recuperação no Portal Brasiliana Museus. É importante ressaltar que os dados
+
+
+
+podem ser alterados nos museus de origem, e, por isso, novas coletas devem ser realizadas
+com uma frequência determinada pelos próprios museus. Qualquer mudança deve ser
+refletida nos painéis e no Portal, dando início à parte do fluxo de trabalho relacionada às
+coletas subsequentes.
+3.2 Coletas Subsequentes
+Após a inclusão dos dados dos museus no agregador, surge a primeira questão a ser
+considerada: o museu deseja continuar a agregar seus dados? Se a resposta for negativa, é
+importante que o museu formalize uma solicitação de exclusão junto ao Ibram. Isso permitirá
+que nossa equipe técnica proceda à remoção manual dos dados coletados da base, assim
+como elimine o código responsável pela coleta automática dos dados desse museu.
+No entanto, caso o museu não se manifeste, prosseguiremos com coletas periódicas
+automatizadas, visando manter a base agregada atualizada. É relevante destacar que os
+dados são de acesso aberto e podem ser coletados sem a necessidade de solicitações
+adicionais aos museus.
+Quando ocorre a atualização ou a inclusão de novos itens, o Filebeat será responsável
+por reiniciar o processo, realizando nova coleta, atualizando tanto a base de dados do
+Tainacan quanto do Elasticsearch (e, por consequência, nos painéis analíticos). É importante
+mencionar que a solução proposta não realiza exclusões automáticas no caso de itens
+removidos (SIQUEIRA; MARTINS; MEDEIROS, 2022), sendo necessária a intervenção manual
+da equipe técnica após a devida solicitação nesse sentido.
+4 DISCUSSÕES
+O desenvolvimento do serviço validou a viabilidade da proposta tecnológica e de suas
+ferramentas. A primeira versão foi avaliada por meio de uma técnica de Engenharia de
+Software conhecida como teste funcional, cujo objetivo era identificar se o serviço executava
+corretamente as principais funções para as quais foi concebido. O teste resultou em algumas
+melhorias, porém, a versão final ainda apresenta uma limitação significativa: a exclusão dos
+dados não é realizada automaticamente e requer investigação adicional para ser
+implementada (SIQUEIRA; MARTINS; MEDEIROS, 2022).
+É importante ressaltar a flexibilidade da solução. Embora tenha sido inicialmente
+projetada para funcionar com o software Tainacan e os elementos descritivos do INBCM, a
+
+
+solução pode ser facilmente adaptada para instituições que optem por utilizar outros
+repositórios, como DSpace, Omeka, entre outros, ou que utilizem diferentes formatos de
+dados, desde que esses dados possam ser consumidos no formato JSON. Em tais casos,
+apenas poucas modificações no código-fonte seriam necessárias.
+Dessa forma, não é estritamente necessário que os dados sejam extraídos
+exclusivamente do Tainacan, mas sim de qualquer repositório que forneça uma API. A
+interoperabilidade entre os dados é fundamental, e eles podem ser mapeados para se
+adequar a outros padrões, o que torna a migração mais simples. Por exemplo, a situação é
+facilitada se os dados de origem estiverem todos estruturados de acordo com o padrão
+Dublin Core, reduzindo a necessidade de mapeamentos.
+Com a coleta de dados concluída, é possível manter o Tainacan como repositório final,
+sem a necessidade de alterações no código. No entanto, também é viável adaptá-lo para a
+submissão em outro software, embora isso demande recursos e a participação de
+profissionais capacitados para a execução bem-sucedida dessa transição.
+5 CONSIDERAÇÕES FINAIS
+O patrimônio cultural está passando por uma transformação significativa à medida
+que seus objetos são digitalizados e disponibilizados na Web. Essa mudança está alterando a
+maneira como interagimos com o patrimônio cultural, eliminando as barreiras de tempo e de
+espaço, de horários de visitação e de possíveis taxas de entrada. Além disso, os acervos não
+são mais apenas locais de entretenimento, mas também se tornaram fontes valiosas para a
+busca e recuperação de informações, tanto em nível local quanto global.
+Essa nova realidade já é estabelecida em países como a Europa e os Estados Unidos
+da América, com benefícios e qualidades comprovados. No entanto, no Brasil, estamos
+progredindo lentamente na mesma direção. Nesse contexto, este estudo se propôs a
+contribuir para a área de estudo por meio da construção de um serviço de busca e
+recuperação de informações.
+Compreendemos que uma das maneiras de conduzir a pesquisa científica no campo
+da Ciência da Informação, quando se trata de tecnologia, envolve a pesquisa aplicada que
+utiliza ou desenvolve tecnologias para criar processos de circulação de informações
+adaptados aos contextos informacionais locais. Esses contextos locais abrangem não apenas
+
+os padrões de metadados, regras de catalogação e linguagens documentárias usadas por
+uma comunidade, mas também o histórico sociotécnico da documentação de objetos
+informacionais, os atores envolvidos e os sistemas de informação utilizados.
+As diferentes visualizações dos metadados agregados representam um avanço
+significativo, pois permitem aos gestores uma compreensão mais profunda de seus acervos.
+A simples identificação e correção de inconsistências sintáticas ou semânticas já representa
+um progresso importante na catalogação dos acervos. Quando consideramos a possibilidade
+de identificar padrões e conexões de interesse, abrimos portas para estudos avançados na
+área da organização da informação.
+À medida que os metadados são analisados mais profundamente, torna-se evidente a
+importância de buscar a mais alta qualidade dos dados nas bases de origem. Portanto, esta
+pesquisa destaca a necessidade de um estudo abrangente e complementar para investigar
+como as práticas de catalogação influenciam os resultados do agregador e quais alterações
+são necessárias para aprimorá-los.
+Além disso, é importante destacar os benefícios sociais dessa solução. Ela facilita o
+acesso ao patrimônio cultural brasileiro, valoriza esse acervo e o torna disponível para uma
+variedade de usos, incluindo sala de aula e outras representações educacionais. O Portal
+Brasiliana Museus é um espaço aberto, acessível e centrado na comunicação.
+Por fim, o serviço atualmente agrega 17.315 objetos culturais de 20 museus,
+tornando-se uma porta de entrada organizada e agregada para visitação por diversos
+públicos, como professores, estudantes, pesquisadores e o público em geral interessado na
+cultura musealizada brasileira.
+O lançamento do serviço “Brasiliana Museus — a plataforma do patrimônio
+museológico brasileiro” ocorreu em setembro de 2023, no Museu Paulista em São Paulo. Foi
+apresentado como sendo a primeira experiência de agregação de acervos culturais a partir
+de uma política pública em software livre, alinhada com as diretrizes nacionais, em sintonia
+com as principais experiências internacionais (BRASILIANA MUSEUS, 2023).
+O Brasiliana Museus pode servir como uma ferramenta de apoio para várias
+iniciativas futuras relacionadas à educação, mediação cultural e diferentes formas de
+alfabetização informacional. Entendemos que este projeto desempenha um papel
+importante no contexto da política cultural do país e representa uma contribuição
+significativa do campo da Ciência da Informação para a área em geral.

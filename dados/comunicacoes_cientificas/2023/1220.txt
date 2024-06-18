@@ -1,0 +1,672 @@
+
+DIÁLOGOS ENTRE A TEORIA MATEMÁTICA DA COMUNICAÇÃO, A TEORIA BOOLEANA E A
+INTELIGÊNCIA ARTIFICIAL NO CONTEXTO DA CIÊNCIA DA INFORMAÇÃO
+
+Modalidade: Trabalho Completo
+Resumo: No presente texto discutimos diálogos entre as Teorias Matemáticas da Comunicação
+(TMC), a Inteligência Artificial (IA), mencionando o paradigma do Generative Pre-trained Transformer
+(GPT) e a Álgebra Booleana (TAB) no sentido de conhecermos as interações destas com objetos de
+estudo da Ciência da Informação (CI), particularmente na representação e recuperação da
+informação. Abordamos as propostas de Shannon para a TMC e a proposta de George Boole para a
+TAB. Apresentamos dados relativos a uma pesquisa bibliográfica, na qual foram selecionados textos
+de Revistas relacionadas a CI e qualificadas como Qualis A1 pela CAPES. Na análise de cada texto,
+visando estabelecer correlações e diálogos entre as teorias consideradas no estudo, foram
+evidenciados aspectos que aludem às teorias e demonstram a complementaridade entre elas no
+contexto da CI. Contextualizamos a discussão na historicidade das teorias até o momento atual.
+Abordamos e definimos questões relativas à informação moderna, posicionando-a como um fator
+com potencial de influência social, ao passo que evidenciamos problemas nos conjuntos de dados
+para a construção de sistemas de IA. Apontamos discussões sobre a informação moderna, dentre ela
+as fake-news, verdade, meia-verdade, mentira e desinformação, propondo abordagens para mitigar
+os impactos negativos desses atributos por meio de discussão sobre uma estruturação para os textos,
+através da qual seria possível atribuir um selo de autenticidade e assim permitir inferir as origens e
+reputação do conteúdo de um objeto digital.
+Palavras-chave: chatGPT; desinformação; teoria matemática da comunicação; Inteligência Artificial;
+estruturação de textos.
+
+1 INTRODUÇÃO
+Há um comportamento humano de presumir que tudo que é moderno é uma visão
+norteada somente para frente, no futuro e no desconhecido, esquecendo-se que o passado
+tem influência no futuro tal qual o presente. O período de guerra no início da década de 40
+foi marcado pela necessidade de comunicar a informação com velocidade, cientistas
+desenvolveram pesquisas e teorias matemáticas com o objetivo de buscar respostas aos
+problemas que enfrentavam, dentre os quais, podemos citar o que concerne ao
+processamento de informações. Resultados dos esforços realizados naquele período tem
+repercussão direta em tecnologias que estão presente atualmente, a exemplo, podemos citar
+as teorias matemáticas relacionadas ao processamento de similaridade entre informações e
+nos processos de comunicação, na aprendizagem de máquina e avanços em teorias
+matemáticas, como se viu com a lógica booleana, que até hoje é fundamental na construção
+de consultas que são formuladas para serem processadas e respondidas por softwares de
+gerenciamento de banco de dados, através do que normalmente são conhecidas pelo termo
+query da Ciência da Computação (CC). Também vimos o surgimento de teorias matemáticas
+seminais na área da inteligência artificial (IA), como a proposta do neurônio artificial de
+McColloch e Pitts (MCCOLLOCH; PITTS, 1943, p. 115-133), trabalho bioinspirado no que se
+compreendia à época ser o funcionamento de um neurônio humano, o qual impactou
+fortemente em questões e possibilidades de processamento de dados. Portanto, no sentido
+de conhecer o impacto contemporâneo dessas teorias matemáticas, este trabalho
+concentra-se na tentativa de elucidar as relações e os diálogos entre a Teoria Matemática da
+Álgebra Booleana (TAB), a Teoria Matemática da Comunicação (TMC) e parte do arcabouço
+Teórico da Inteligência Artificial (IA), quando aplicadas ao campo da Ciência da Informação
+(CI) inclusive na Recuperação da Informação (RI).
+Como ponto focal para as discussões iniciais, abordam-se a TAB de George Boole
+(BOOLE, 1854) e a relação desta com os trabalhos de Claude Shannon, na TMC (SHANNON,
+1948) relacionados ao atual campo da Teoria da Informação e a paradigmas recentes de
+
+
+sistemas baseados em inteligência artificial, particularmente no modelo teórico do
+Generative Pre-trained Transformer (GPT) em sua versão 3 (BROWN et al, 2020).
+2 MÉTODOS E MATERIAIS DA PESQUISA
+Caracterizando-se como uma pesquisa de natureza qualitativa do tipo bibliográfica, os
+procedimentos foram iniciados com a leitura dos trabalhos seminais da TAB de George Boole
+(BOOLE, 1854) e no trabalho de Claude Shannon (SHANNON, 1948) sobre a TMC e no
+trabalho de definição do GPT em sua versão 3 (BROWN et al, 2020), na qual delineou-se a
+interseção e complementaridade entre esses trabalhos e uma vez consolidados, foram
+organizados no Quadro 1 na forma de postulados destas teorias. A interseção e
+complementaridade foram compreendidas com o apoio da análise do assunto (CESARINE;
+PINTO, 1980) na qual os textos basilares do presente estudo foram avaliados para determinar
+os conceitos presentes. Tais conceitos foram identificados e mapeados como os objetivos
+centrais dos textos e na sequência foram identificados os objetos de interesse que se
+relacionam com os objetivos. Esse mapeamento inicial foi organizado no Quadro 1, ao qual
+também foram incorporados os resultados teóricos que se produzem pelo alcance dos
+objetivos centrais dos textos em relação aos respectivos objetos de interesse. Os dados da
+coluna “Postulado” do Quadro 1 resumem os fundamentos propostos por cada uma das
+teorias. Posteriormente os postulados e demais dados do quadro apoiaram a definição de
+quais expressões de busca seriam apropriadas para uma pesquisa bibliográfica dentro do
+contexto do presente trabalho, as quais são introduzidas adiante, logo após um
+detalhamento dos Postulados presentes no quadro.
+Quadro 1 - Postulados das Teorias
+Teoria
+
+Álgebra
+Booleana
+
+Álgebra
+Booleana
+
+Álgebra
+Booleana
+
+Interseção de
+Objetos de
+Interesse
+Dados numéricos
+Realizar a soma lógica de
+primários ou não
+dados
+numéricos através
+de abstrações
+Dados numéricos
+Realizar complementação
+primários ou não
+lógica de dados
+numéricos através
+de abstrações
+Dados numéricos
+Realizar o produto lógica de primários ou não
+dados
+numéricos através
+de abstrações
+Objetivo Central
+
+Resultados que produz Postulado
+Decisão quando um ou
+mais parcelas da soma
+são verdadeiros ou
+diferente de zero
+Obter o complemento
+lógico de um
+determinado valor
+Obter o complemento
+lógico de um
+determinado valor
+
+Operador disjuntivo
+OR (+) de soma
+lógica 0+0=0 0+1=1
+1+0=1 1+1=1
+Operador negação
+NOT
+( ~ ) de soma lógica
+~0 = 1 ~1 = 0
+Operador
+conjuntivo AND
+( .) de soma lógica
+0.0=0 0.1=0
+
+
+
+Da
+Comunicação
+
+Da
+Comunicação
+
+Da
+Comunicação
+
+GPT
+
+GPT
+
+GPT
+
+1.0=0 1.1=0
+Fonte de informação - Parte Dados numéricos
+Transmissor
+inicial do processo de
+primários ou não O compartilhamento de T(d)={datum,C}
+comunicação visando a
+numéricos através um conjunto de dados C é o canal de
+transmissão de dados
+de abstrações
+Transmissão
+Receptor de informação Dados numéricos
+Receber o
+Parte final do processo de
+primários ou não
+Receptor
+compartilhamento de
+comunicação visando a
+numéricos através
+d=R(T(d))
+um conjunto de dados
+transmissão de dados
+de abstrações
+Canal C = (F,r)
+F é o meio físico ou
+Dados numéricos
+Prover um meio para a
+Um meio de
+sem fio de
+primários ou não
+efetiva comunicação visando
+comunicação para o
+transmissão
+numéricos através
+a transmissão de dados
+efetivo envio e recepção r= meios para
+de abstrações
+controlar fontes de
+ruído
+Fonte de dados para o
+Dados numéricos estabelecimento de
+DS ={datum}
+Conjunto de dados de
+primários ou não relações estatísticas
+treinamento (Data Set)
+numéricos através sobre um vocabulário e
+de abstrações
+práticas humanas sobre
+o texto escrito
+Dados de uma
+linguagem
+Dados numéricos
+representados através ML =Tr(DS)
+Modelo de Linguagem
+primários ou não
+de equivalências de
+(Language Model)
+numéricos através
+frases e dados
+de abstrações
+probabilísticos de
+ocorrência de frases
+Fonte de dados para
+Dados numéricos
+testar a eficiência do
+TDS ={datum}
+Conjunto de dados de teste primários ou não
+aprendizado ou dados
+ou ativação (Tests Data Set) numéricos através
+fornecidos para uso real
+de abstrações
+do sistema
+Fonte: Dados da Pesquisa
+
+Quanto ao Quadro 1 as operações booleanas OR, AND e NOT são fundamentais para
+quaisquer sistemas que visem a recuperação de informações ou de dados, já as operações de
+transmissão, recepção e suporte a canal de transmissão estão presentes mesmo em
+complexos sistemas distribuídos pela Internet. No quadro T(d)={datum,C} refere-se à
+operação de transmissão de um determinado conjunto de dados, expresso por datum,
+enquanto C refere-se ao necessário canal de transmissão, o qual pode ser provido por meio
+física, tais como cabos de redes de computadores ou cabos ópticos, ou ainda por recursos de
+comunicação sem fio. Na notação C = (F,r), F representa o meio físico da transmissão e r
+representa algum mecanismo para controle de transmissão e correção de erros. A expressão
+d=R(T(d)) refere-se à operação de recepção, na qual R(T(d)) representa o processo efetivo da
+
+
+recepção da transmissão realizada em T(d). Na tabela a entrada relativa a GPT, com a
+operação DS={datum}, define o necessário conjunto de dados que compõem o dataset para
+o treinamento da aplicação baseada na proposta de inteligência artificial do GPT, enquanto
+ML=Tr(DS) define a abstração relativa ao modelo de representação da linguagem a ser
+“compreendida” e praticada pela aplicação. Por fim, a notação TDS ={datum} representa o
+conjunto de dados de teste, os quais podem ser utilizados para verificação dos níveis de
+resposta correta da aplicação de inteligência artificial. Também representa as entradas de
+dados fornecidas diretamente pelos usuários através do teclado, por exemplo, quando se
+interage com uma aplicação como o chatGPT.
+A partir dos achados da análise dos textos basilares do estudo e dos elementos
+retratados no Quadro 1, que apontaram pistas quanto a natureza da interseção e
+complementaridade das teorias analisadas, foram eleitas as seguintes expressões de busca:
+“Claude Shannon”, “Teoria da Comunicação”, “Inteligência Artificial”, “Silêncio + Revocação +
+Ruído”, “Booleano”, “chatGPT”. As quais foram aplicadas em revistas científicas que publicam
+textos em português e que sejam classificadas com A1 pelo Qualis da CAPES no Quadriênio
+2013-2016 na área de Comunicação e Informação, as quais totalizaram 55 revistas, no
+recorte temporal limitado a março de 2023. Do conjunto documental recuperado das 55
+revistas, foram descartados todos os documentos que não se enquadravam no escopo da
+pesquisa do presente trabalho. Foram mantidos todos os documentos que expressavam
+relação direta ou indireta com a interseção e complementaridade percebidas neste trabalho
+em relação a TAB, TMC e ainda relacionados ao GPT ou paradigmas semelhantes na
+inteligência artificial, inclusive se a relação fosse desdobrada em aplicações atuais dos
+conceitos aludidos pelas expressões de busca usadas.
+O Quadro 2 apresenta todos os documentos que foram mantidos na pesquisa,
+totalizando 9 documentos. Cada um dos 9 documentos foi analisado no sentido de apontar
+quais postulados constantes no Quadro 1 puderam ser percebidos em seus respectivos
+conteúdos e desta forma, compreender as possíveis relações entre a lógica Booleana e a
+Teoria Matemática da Comunicação e a Inteligência Artificial, quando aplicadas ao campo da
+Ciência da Informação (CI), o que resultou no que se vê na coluna “Principais teorias
+abordadas / mencionadas” do Quadro 2.
+Quadro 2 - Documentos selecionados para o estudo
+Título
+
+Revista
+
+Áreas/Sub-área do
+
+Principais teorias
+
+Ano
+
+
+
+conhecimento
+Investigaciones en inteligencia artificial
+en España
+Utilização de ontologias na Recuperação
+de Informação: principais abordagens,
+problemas e propostas de melhorias
+Multi e interdisciplinaridade entre a
+Ciência da Informação e a Ciência da
+Computação no âmbito da Web
+Semântica.
+Uso da IoT, Big Data e Inteligência
+Artificial nas capacidades dinâmicas: um
+estudo comparativo entre cidades do
+Brasil e de Portugal
+
+Transinformação
+
+CI
+
+abordadas /
+mencionadas
+Inteligência Artificial 1989
+
+Informação &
+Sociedade:
+Estudos
+
+CC / CI /Rec. da
+Informação
+
+Álgebra Booleana
+Inteligência Artificial 2021
+Da Comunicação
+
+Informação &
+Sociedade:
+Estudos
+
+CC / CI / Rec. da
+Informação /
+Representação da
+Informação
+
+Álgebra Booleana
+Inteligência Artificial 2021
+Da Comunicação
+
+Informação &
+Sociedade:
+Estudos
+
+CC / CI / Rec. da
+Informação
+
+Álgebra Booleana
+Inteligência Artificial 2019
+Da Comunicação
+
+Informação &
+Sociedade:
+Estudos
+A terminologia em Sistemas de
+Informação &
+Recuperação da Informação baseada na Sociedade:
+WORDNET.PT.
+Estudos
+Folksonomia e os conceitos de ordem, Informação &
+desordem e organização à luz de Edgar Sociedade:
+Morin
+Estudos
+Linguagem natural ou linguagem
+Informação &
+controlada? Influência da palavra-chave
+Sociedade:
+na representação para indexação e
+Estudos
+recuperação de informações
+
+CC / CI / Rec. da
+Informação /
+Repr. da Informação
+CC / CI/ Rec. da
+Informação /
+Repr. da Informação
+CC /CI / Rec. da
+Informação /
+Repr. da Informação
+
+Estudo das similaridades entre a teoria Informação &
+matemática da comunicação e o ciclo
+Sociedade:
+documentário
+Estudos
+
+CC /CI / Rec. da
+Informação / Repr. da Álgebra Booleana
+Da Comunicação
+Informação
+
+Identificação e representação de
+conceitos por meio de termos.
+
+CC / CI/ Rec. da
+Informação /
+Repr. da Informação
+
+Da Comunicação
+Álgebra Booleana
+
+2021
+
+Álgebra Booleana
+Inteligência Artificial 2020
+Da Comunicação
+Álgebra Booleana
+Da Comunicação
+
+2020
+
+Álgebra Booleana
+Inteligência Artificial 2020
+Da Comunicação
+
+2014
+
+Fonte: Dados da Pesquisa
+
+3 DISCUSSÕES PRELIMINARES
+Como se vê no Quadro 1 todas as teorias consideradas no presente estudo possuem
+relevante nível de interseção e complementaridade. Pode-se ver que todas possuem os
+mesmos objetos de interesse. É importante ressaltar que imagens, sons, textos e demais
+elementos iconográficos são representados como dados numéricos primários em qualquer
+computador moderno. Elementos que excedem a complexidade de simples dados numéricos
+são mantidos coesos através de Tipos Abstratos de Dados (TAD), tais como: cadeias de
+caracteres, valores lógicos, datas, horas, etc. Os TAD são Modelos de Representação de
+Dados (MR) mais elaborados que são suportados por linguagens de programação (LISKOV,
+1974) e desta forma, mesmo que de fato os computadores não processem textos, através
+desse mecanismo essa possibilidade é incorporada. Essa compreensão deve ser estendida
+para todos os tipos de documentos não textuais, por mais complexos que o sejam. De fato,
+
+
+esse é o mecanismo que explica a possibilidade de existirem softwares complexos como os
+baseados em inteligência artificial. Embora à época em que as teorias Booleana de George
+Boole e a Teoria da Comunicação de Claude Shannon foram desenvolvidas, os recursos
+computacionais disponíveis fossem incomparavelmente menores que os fornecidos por
+computadores atuais, suas respectivas propostas continuam em uso, pois os objetos de
+interesse das teorias continuam em uso e suas especificações técnicas não foram alteradas.
+O mecanismo dos TAD permitiu um isolamento da especificação dos dados primários, dando
+liberdade para que linguagens de programação que surgissem, incorporassem novos tipos de
+dados e novas facilidades para o desenvolvimento de sistemas. É justamente através desses
+novos tipos de dados incorporados que sistemas baseados em inteligência artificial puderam
+evoluir. Da proposta original do neurônio artificial de McColloch e Pitts (MCCOLLOCH; PITTS,
+1943, p. 115-133) até os sistemas de comportamentos sofisticados como os do chatGPT
+(BROWN et al, 2020) na qual é possível uma interação que lembra uma conversação com
+uma pessoa, todos dependem de complexas relações entre grupos de dados. No Quadro 1, a
+análise do que se vê na coluna “Principais teorias abordadas / mencionadas”, nos revela que,
+no escopo e recorte amostral desta pesquisa, apenas um texto, cerca de 11%, foi publicado
+na década de 1980, dois na década de 2010, cerca de 22% e seis textos, cerca de 67%, na
+década de 2020, percebe-se que o aumento de publicação de textos que se relacionam a
+temática deste estudo está indicando um crescimento de interesse e discussões sobre as
+questões pertinentes ao tema. Percebe-se também que entre os textos selecionados para o
+estudo, apenas um estudo abordou exclusivamente as teorias relacionadas à Inteligência
+Artificial. Três textos abordam duas teorias simultaneamente, TAB e TCM, e cinco textos
+abordam simultaneamente TAB, TCM e IA. Nesses cinco textos os respectivos autores
+transitam naturalmente entre as ideias, termos e conceitos dessas teorias, de maneira que se
+percebe que elas estão integradas aos trabalhos da CI. A interdisciplinaridade entre a CI e CC
+pode ser percebida, generalizando, nos contextos da Recuperação da Informação e ou da
+Representação da Informação. Essa interdisciplinaridade justifica um aprofundamento no
+estudo das respectivas teorias, no sentido de evidenciar as relações e os diálogos que
+possam ser percebidos no processo informacional.
+4 A TEORIA MATEMÁTICA DA COMUNICAÇÃO NO PROCESSO INFORMACIONAL
+
+
+
+O processo informacional e a comunicação na década de 2020 tem sido caracterizado
+por discussões sobre a desinformação - fake-news, (ANDREZA, FARIAS, VERAS, 2022, p. 1),
+sobre políticas para a manutenção da reputação de instrumentos de comunicação científica e
+práticas para a avaliação de textos científicos (MAIA, FARIAS, 2023, p. 122916). Vive-se um
+momento no qual há um excesso de informações, o qual refere-se a um volume que
+inviabiliza o seu consumo por parte dos potenciais interessados. Segundo dados da
+Sociedade Brasileira para o Progresso da Ciência (SBPC), em 2020 já se podia observar um
+volume 32% maior do que o volume anual publicado em 2015 e acumulados entre 2015 e
+2020 há mais de 11 milhões de artigos indexados apenas na Web of Science (WoS) (SBPC,
+2021). Esse, contudo, não era o cenário que se podia observar nas décadas de 1940 e 1950.
+Tratava-se de um cenário no qual o desafio não era vencer o volume de informação
+disponível, mas sim comunicá-la de maneira eficiente e segura. A preservação da integridade
+da informação e a velocidade de transmissão foram fatores que levaram vários cientistas a
+iniciarem pesquisas em torno do tema e dentre eles, como já mencionado anteriormente, o
+matemático Claude Elwood Shannon que, atuante na área da lógica e jogos mentais, pôde
+criar a TMC (SHANNON, 1948). Para Sá (SÁ, 2018, p.48-70) a TMC também pode ser chamada
+de Teoria da Informação, é um princípio que confere à informação a proporção quantificável
+e física dos emissores e receptores da informação independente do conteúdo a ser
+transmitido. Nesta teoria a informação adquire uma nova faceta, na qual a informação é um
+objeto que oferece liberdade de escolha do receptor sobre a seleção da mensagem e o que
+poderá ser dito como verdade advindo dessa informação. Os aspectos semânticos não são
+considerados, a informação adquire um formato fragmentado em dados para auxiliar a maior
+velocidade de transmissão, pois de acordo com Pelegrini (PELEGRINI, 2009, p. 11-23) um dos
+fatores cernes da TMC é que esta não está voltada ao “o quê“ está sendo transmitido, mas “o
+quanto” está sendo transmitido através de bits, que é a medida matemática para
+representação de dados na TMC. O entendimento de Sá não é partilhado por Capurro e
+Hjorland que entendem que:
+Comunicação é a união de oferta de significados, informação e compreensão. De
+acordo com esta teoria, nenhuma transmissão de informação ocorre entre o
+emissor e o receptor. Esta metáfora de coisas-orientadas, implica na idéia de que
+existe algo que o emissor possui e perde ao transmiti-la. (CAPURRO; HJORLAND,
+pág. 148, 2007).
+
+
+No entendimento de Capurro e Hjorland a informação não é, de fato, fragmentada
+em dados quantificados e sequer transmitida, sendo um processo de compreensão dos
+signos pelo cognoscente, entendimento reforçado pelos autores ao afirmarem que “Esta
+metáfora de coisas-orientadas, implica na ideia de que existe algo que o emissor possui e
+perde ao transmiti-la” (CAPURRO; HJORLAND, pág. 148, 2007). Pois ao comunicarem, tanto
+emissor quanto receptor passam a possuir o que foi transmitido. Shannon não nos fala sobre
+significados, contextos ou compreensão, mas situa o processo da comunicação no espaço da
+entropia, sendo esse espaço o principal fator a tornar as comunicações complexas.
+Justamente uma das contribuições de Shannon é parcialmente afastar-se da entropia,
+minimizando-a e aproximando-se de estados bastante simples para representar a
+fragmentação da informação em dados e o faz a medida em que passa a representar todos
+dados a partir da variabilidade de possibilidades dentro de um sistema representado por
+bits, representando tudo a partir de 0 ou 1. Todavia, ainda nesta atenuação da entropia,
+quanto maior a quantidade e variedade, maior será a entropia e por conseguinte a
+complexidade. Trabalhar com a entropia acompanha vantagens e desvantagens, um exemplo
+disso é discutido por Pelegrini que nos diz:
+Tal aspecto da entropia revela uma das grandes vantagens em se trabalhar com
+bits. O registro ou transmissão destes se torna mais resistente aos efeitos da
+distorção ou do ruído em função de sua entropia ser menor. (PELEGRINI, 2009, p.
+11-12).
+
+Compreendemos então que Shannon (SHANNON, 1948) se ocupa de
+instrumentalizar a comunicação, ele não se ocupa de estabelecer políticas sobre a
+compreensão daquilo que se transmite, sendo esse aspecto, o da coisa comunicada e
+compreendida pelo cognoscente, o foco no qual a fala de Capurro e Hjorland (CAPURRO;
+HJORLAND, 2007, pág. 148) encontra um sentido contemporâneo. Enquanto Shannon nos
+fala sobre a fragmentação do documento e sua posterior reconstrução, Capurro e Hjorland
+nos falam sobre o conteúdo semântico do documento. Não são visões opostas, mas
+complementares, situam-se em momentos diferentes entre os diálogos do emissor e do
+receptor nos processos informacionais contemporâneos.
+5 A TEORIA BOOLEANA NO PROCESSO INFORMACIONAL
+Amplamente conhecidos em sistemas de unidades de informação, assim como na
+pesquisa básica do Google, os operadores booleanos são chaves lógicas que ajudam na
+busca da informação de maneira mais assertiva, que viabilize uma melhor precisão no
+
+
+
+processo de recuperação da informação. Este é apenas um exemplo de diálogo
+contemporâneo da TAB nos processos informacionais. De fato, Shannon desenvolveu a ideia
+de que era possível usar a TAB para simular o comportamento de bobinas elétricas de um
+sistema de comutação e assim conseguiu sintetizar circuitos de comutação baseados nas
+portas lógicas AND, OR e NOT, as mesmas que podem ser vistas no Quadro 1 deste texto.
+Embora não se perceba em um primeiro olhar, tanto a TMC quanto a TAB estão presentes em
+todo processo informacional contemporâneo, presentes em toda informação moderna.
+Todavia, para discutirmos a informação moderna precisamos antes, discutir o que venha a
+ser a modernidade. Para esta tarefa emprestamos inicialmente o entendimento de Giddens
+(GIDDENS, 1991) que nos diz que modernidade são os modos de vida que nos desvencilham
+das ordens sociais tradicionais. Aquilo que foi vivenciado há mais de vinte anos, no início dos
+anos 2000, ainda pode ser moderno. Portanto, seguindo este mesmo pensamento, pode-se
+inferir que o moderno pode arrastar-se por décadas até atingir um período do tempo em que
+as coisas sofram transformações, quer sejam de costumes, sociais ou até mesmo de
+novidades na tecnologia, que superem aquelas que até outrora se consideravam modernas.
+Assim, é correto afirmar que o moderno não pode ser visto em apenas uma amostra, um
+único dia ou em um único pensamento, é preciso olhar um período, uma faixa maior das
+coisas, para então poder se concluir que algo é novo e esse novo, agora é o moderno,
+tornando todas as outras coisas antigas. Um exemplo surpreendente, até contraditório, do
+uso cada vez mais evidente de ferramentas provenientes de métodos computacionais da
+área de inteligência artificial é a presença de chatbots e robôs que interagem em redes
+sociais, simulando a presença humana e influenciando interesses comerciais ou políticos
+(TSE, 2018), entre outros. A contradição a que nos referimos reside no fato de que o campo
+da inteligência artificial, relacionado ao aprendizado de máquina (LUND, BURGESS, 1996,
+p.203-208) aplicado a textos (ATSERIAS, et al, 1997), é tecnologia que já se via aplicada na
+década de 1990. Neste caso, tais ferramentas são modernas? Parece que não. Então, em se
+tratando de processos informacionais, o que é novo é a maneira como tais ferramentas estão
+sendo utilizadas e combinadas? O moderno, então, é o uso que se dá a ferramentas antigas?
+Parece que também não. Poderíamos então ir um tanto além e cogitar a possibilidade de que
+o moderno não esteja na ferramenta, mas naquilo que ela processa atualmente?
+Acreditamos que sim e neste caso o moderno é a informação, pois é ela que está a ser
+processada por essas ferramentas antigas.
+
+
+A informação moderna, entretanto, apresenta-se com certas peculiaridades: ela é
+fugaz, ela é influenciável e manipulável, ela é disseminada em múltiplos suportes e em
+múltiplas formas. Ela transita do textual ao hipertexto e a hipermídia. Está presente no
+jornal, na televisão, na rádio e em todo o ecossistema informacional (DE SOUZA,
+FERNANDES, 2020). Então diferente do que se via à época de Shannon e Boole, o que se
+comunica na atualidade não são apenas dados, são verdades, meias-verdades e mentiras.
+Sendo os dois últimos, os ruídos e interferências previstas no modelo de Shannon, todavia,
+com a diferença de que Shannon estabeleceu mecanismos para minimizar ou detectar os
+ruídos prejudiciais à comunicação no contexto de dados. A comunicação contemporânea, no
+entanto, concordando e indo além de Capurro e Hjorland (CAPURRO; HJORLAND, 2007, pág.
+148) comunica signos, significados e contextos, sendo essa comunicação afetada pelos ruídos
+provenientes da desinformação, da meia-verdade e da mentira. Sendo necessário aportar
+novos postulados que definam instrumentos para a mitigação destes novos tipos de ruídos.
+Tais postulados não se originam na TAB ou na TMC, mas nas possibilidades da IA.
+6 A IA COMO FONTE E FILTRO DE RUÍDOS NO PROCESSO INFORMACIONAL
+A Inteligência Artificial tem ocupado lugar de destaque em atividades complexas
+(BRUNIALTI et al., 2015) e também no processo informacional relacionado a pesquisas de
+temas específicos e na criação de textos e conteúdos assistidos por software, a exemplo,
+cita-se o chatGPT (GPT) que em dois meses atingiu 100 milhões de usuários ativos (FORBES,
+2023). Soluções baseadas em IA em geral necessitam de algum conjunto de exemplos para
+que possam realizar as tarefas de aprendizado. Esses conjuntos de exemplos, em geral, são
+produzidos pelas pessoas e obviamente, carregam as suas opiniões, tendência e
+preconceitos. Essa influência é geralmente denominada pelos termos bias ou viés, cuja
+existência tem causado problemas reais, como se vê no estudo (BOULAMWINI; GEBRU,
+2018) intitulado Gender Shades: Intersectional Accuracy Disparities in Commercial Gender
+que discute disparidades relevantes no reconhecimento facial com taxas de erros maiores
+para mulheres e para pessoas com pele mais escuras. Um conjunto de dados contaminado
+com vieses poderá afetar negativamente a imparcialidade e a igualdade de representação em
+sistemas autônomos. Se por um lado os sistemas baseados em IA podem aprender um viés
+negativo, também podem ser influenciados por um viés positivo. Isso é uma boa notícia, pois
+podemos usar a IA para identificar e rotular informação falsa, meia-verdades, mentiras e
+
+
+
+desinformação. Se por um lado a IA pode ser usada na inserção de ruídos provenientes do
+bias dos dados, também pode ser usada como um filtro a combater a desinformação, da
+meia-verdade e da mentira. Se hoje temos ISSN, ISBN, e DOI para identificar os objetos
+digitais, podemos pensar em implementar uma solução baseada, por exemplo, no paradigma
+de inteligência artificial GPT, que atribua um número e um selo de verificação de conteúdo,
+atestando a originalidade do conteúdo do objeto digital, construindo uma estruturação dos
+textos, permitindo assim inferir suas origens e reputação. Considerando-se o volume de
+publicações disponíveis no ecossistema informacional, a IA pode ser utilizada como
+ferramenta em prol da redução do tempo necessário para que um potencial leitor possa
+decidir qual texto ler, ou até mesmo no esforço relacionado ao processo de seleção do
+conjunto bibliográfico a ser considerado em uma pesquisa. Segundo De Souza e Fernandes:
+Há, portanto, um aumento do tempo necessário para que um potencial usuário de
+uma informação a encontre; (...) Acreditamos, contudo, que é possível alterar essa
+relação com o tempo através do uso de tecnologia que minimize o volume de
+informações a serem apreendidas, (...) Se um determinado documento puder ser
+transformado em outro tipo de documento, todavia preservando-se o valor
+semântico, (...), criando versões de denso valor semântico que requereriam menor
+tempo para seu consumo. (DE SOUZA; FERNANDES, 2020, p. 146).
+
+Um trabalho direcionado à diminuição do tempo e esforço necessários ao contato
+com o material bibliográfico e seu potencial uso foi apresentado em (DE SOUZA et al, 2017)
+no qual é descrita uma solução baseada em processamento de linguagem natural (PLN) e
+inteligência computacional (IC) que produz automaticamente resumos de textos, a solução
+proposta foi testada e os resultados positivos dos testes podem ser vistos em (TABOSA et al,
+2020). Todavia, ainda que existam estudos direcionados a diminuir o tempo e o esforço
+necessário no processo informacional, a ausência de uma estruturação dos textos gera um
+ambiente propício ao surgimento dos fenômenos das fake-news e discussões em busca de
+métodos para avaliação de um determinado texto ou informação quanto a suas
+características de verdade, meia-verdade, mentira e desinformação. Quando consideramos o
+ecossistema informacional (DE SOUZA; FERNANDES, 2020, p. 145) percebemos que o
+problema decorrente da ausência de uma estruturação dos textos, quanto a identificação de
+seus autores, origens, propriedade e principalmente seus antecedentes e ou descendentes
+semânticos, impacta negativamente na formação de opiniões e orientação correta para a
+sociedade quanto a assuntos diversos. Esse impacto negativo abrange todas as áreas da ação
+humana, tais como a educação, a saúde, a convivência social e a formação da cultura. Utilizar
+a IA como filtro de ruídos no processo informacional pode contribuir na minimização dos
+
+
+
+problemas relativos as fake-news, tornando mais fácil identificar, analisar, quantificar e
+atribuir selos qualitativos aos textos e informações, por exemplo, classificando-os como:
+verdade, meia-verdade, mentira e desinformação. Para essa atribuição de classificação
+torna-se necessário haver algum esforço de estruturação, produzindo alguma noção de
+cadeia-produtiva dos textos, na qual fossem evidenciados, como dito anteriormente, os
+autores, origens, propriedade e conteúdo semântico que influenciaram ou que derivaram do
+texto. Obviamente, considerando-se o volume de textos e informações presentes no
+ecossistema informacional, não há como tal estruturação ser feita por processo manual.
+Embora considerando-se que a IA, ao dialogar com a TAB e a TMC, beneficia-se das
+operações de conjunção, negação e disjunção, constantes no Quadro 1, para elaborar as
+complexas relações entre textos, determinando suas equivalências e divergências, ainda
+assim há uma incompletude perceptível (GÖDEL, 1931). Essa incompletude é materializada
+justamente pela questão do viés humano a influenciar positivamente ou negativamente os
+textos e informações. Há, contudo, momentos em que o viés apenas esteja presente como
+uma mera manifestação de preferência, na qual não estejam abaladas as questões da
+verdade, meia-verdade, mentira ou desinformação. De fato, considerando-se o teorema da
+incompletude de Gödel, estabelece-se uma base sólida para a aceitação de que, mesmo que
+as soluções tecnológicas, baseadas na inteligência computacional, na inteligência artificial, e
+nas teorias TAB e TMC, possam ser perfeitas ao primeiro olhar, haverá algo a ser acrescido. E
+talvez o que se possa acrescer seja justamente uma estruturação que estabeleça um “fio”
+condutor que permita ao potencial interessado, conhecer toda a antecedência e
+descendência do texto ou da informação de seu interesse. Os resultados dessas complexas
+relações podem ser comunicados através dos mecanismos discutidos na TMC, especialmente
+quando consideramos os valores semânticos dos textos, transmitidos aos cognoscentes por
+mecanismos nos quais sejam consideradas as particularidades da informação moderna. Nos
+processos informacionais contemporâneos o “o quê” está sendo transmitido é relevante,
+sendo esse um dos principais desafios social, epistemológico e tecnológico a ser discutido na
+CI e áreas relacionadas aos temas deste estudo.
+7 CONSIDERAÇÕES FINAIS
+Os diálogos entre a TCM, a TAB e a IA abordados neste texto revelam um campo fértil
+para estudos e discussões na CI, são questões que afetam a representação e a recuperação
+
+
+
+da informação. Sinalizam a necessidade de discussão em torno de um aporte teórico próprio
+da área, para nortear, por exemplo, trabalhos de curadoria de dados, visando mitigar as
+questões do viés humano nas informações, de modo a estabelecer ferramentas que
+disseminem informações corretas, desprovidas de tendências que possam corromper o valor
+semântico do que se pretende disseminar, ou então que permitam ao leitor saber de
+antemão, que a informação que lhe foi fornecida possui tendências teóricas, sociais, entre
+outras, permitindo ao leitor compreender que a informação pode ser tendenciosa.
