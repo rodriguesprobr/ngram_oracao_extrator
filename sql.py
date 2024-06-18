@@ -46,14 +46,14 @@ def executar(sql):
 
 def ano_inserir(ano):
     qtde = conn.execute(
-        db.select(db.func.count().label("qtde")).select_from(Ano).where(Ano.c.ano == ano)
+        db.select(db.func.count().label("qtde")).select_from(Ano).where(Ano.c.ano == ano)  # type: ignore
     ).first().qtde
     if qtde == 0:
         result = conn.execute(db.insert(Ano).values(ano=ano)).lastrowid
         # conn.commit()
     else:
         result = conn.execute(
-            db.select(Ano).where(Ano.c.ano == ano)).first().id
+            db.select(Ano).where(Ano.c.ano == ano)).first().id  # type: ignore
     return result
 
 
@@ -65,14 +65,15 @@ def ano_selecionar():
 
 def ano_selecionar_um(ano_id):
     return conn.execute(
-        db.select(Ano).where(Ano.c.id == ano_id).order_by(Ano.c.ano)
+        db.select(Ano).where(Ano.c.id == ano_id).order_by(Ano.c.ano)  # type: ignore
     ).first()
 
 
 def comunicacao_cientifica_inserir(arquivo_nome, ano_id, processado):
     qtde = conn.execute(
         db.select(db.func.count().label("qtde")).select_from(ComunicacaoCientifica).where(
-            ComunicacaoCientifica.c.arquivo_nome == arquivo_nome).where(ComunicacaoCientifica.c.ano_id == ano_id)
+            ComunicacaoCientifica.c.arquivo_nome == arquivo_nome).where(  # type: ignore
+            ComunicacaoCientifica.c.ano_id == ano_id)  # type: ignore
     ).first().qtde
     if qtde == 0:
         result = conn.execute(db.insert(ComunicacaoCientifica).values(
@@ -83,8 +84,9 @@ def comunicacao_cientifica_inserir(arquivo_nome, ano_id, processado):
         # conn.commit()
     else:
         result = conn.execute(
-            db.select(ComunicacaoCientifica).where(ComunicacaoCientifica.c.arquivo_nome == arquivo_nome).where(
-                ComunicacaoCientifica.c.ano_id == ano_id)).first().id
+            db.select(ComunicacaoCientifica).where(
+                ComunicacaoCientifica.c.arquivo_nome == arquivo_nome).where(  # type: ignore
+                ComunicacaoCientifica.c.ano_id == ano_id)).first().id  # type: ignore
     return result
 
 
@@ -109,7 +111,8 @@ def comunicacao_cientifica_analisar():
 
 def comunicacao_cientifica_analisar_finalizar(comunicacao_cientifica_id):
     conn.execute(
-        db.sql.text("UPDATE comunicacao_cientifica SET processado = 'Processado' WHERE id = %s" % comunicacao_cientifica_id)
+        db.sql.text("UPDATE comunicacao_cientifica SET processado = 'Processado' WHERE id = %s"
+                    % comunicacao_cientifica_id)
     )
     # conn.commit()
 
@@ -149,48 +152,16 @@ def ngram_por_ano_selecionar():
 
 def ngram_inserir(ngram, tipo):
     qtde = conn.execute(
-        db.select(db.func.count().label("qtde")).select_from(Ngram).where(Ngram.c.ngram == ngram).where(
+        db.select(db.func.count().label("qtde")).select_from(Ngram).where(Ngram.c.ngram == ngram).where(  # type: ignore
             Ngram.c.tipo == tipo)
     ).first().qtde
     if qtde == 0:
         result = conn.execute(db.insert(Ngram).values(ngram=ngram, tipo=tipo)).lastrowid
         # conn.commit()
     else:
-        result = conn.execute(db.select(Ngram).where(Ngram.c.ngram == ngram).where(Ngram.c.tipo == tipo)).first().id
+        result = conn.execute(db.select(Ngram).where(
+            Ngram.c.ngram == ngram).where(Ngram.c.tipo == tipo)).first().id  # type: ignore
     return result
-
-
-def ngram_por_ano_selecionar():
-    retorno = []
-    cabecalho = ["ngram", "tipo"]
-    sql = """
-        SELECT
-            n.ngram,
-            n.tipo,
-        """
-    anos = ano_selecionar()
-    for ano in anos:
-        cabecalho.append(ano.ano)
-        sql += f"count(case when ano = {ano.ano} then 1 end) as '{ano.ano}',"
-    sql += """
-            count(ccn.ngram_id) as total
-        FROM ngram n
-        LEFT JOIN comunicacao_cientifica_ngram ccn ON ccn.ngram_id = n.id
-        LEFT JOIN comunicacao_cientifica cc ON cc.id = ccn.comunicacao_cientifica_id
-        LEFT JOIN ano a ON a.id = cc.ano_id
-        GROUP BY n.ngram, n.tipo
-        ORDER BY total DESC
-        """
-    cabecalho.append("Total")
-    retorno.append(cabecalho)
-    dados = executar(sql)
-    for dado in dados:
-        linha = [dado.ngram, dado.tipo]
-        for ano in anos:
-            linha.append(getattr(dado, str(ano.ano)))
-        linha.append(dado.total)
-        retorno.append(linha)
-    return retorno
 
 
 def ngram_ano_selecionar(ano_id):
@@ -202,7 +173,7 @@ def ngram_ano_selecionar(ano_id):
             ComunicacaoCientificaNgram
         ).join(
             ComunicacaoCientifica,
-            ComunicacaoCientifica.c.id == ComunicacaoCientificaNgram.c.comunicacao_cientifica_id
+            ComunicacaoCientifica.c.id == ComunicacaoCientificaNgram.c.comunicacao_cientifica_id  # type: ignore
         ).join(
             Ano,
             Ano.c.id == ComunicacaoCientifica.c.ano_id
@@ -215,8 +186,8 @@ def ngram_ano_selecionar(ano_id):
 def comunicacao_cientifica_ngram_inserir(comunicacao_cientifica_id, ngram_id):
     qtde = conn.execute(
         db.select(db.func.count().label("qtde")).select_from(ComunicacaoCientificaNgram).where(
-            ComunicacaoCientificaNgram.c.comunicacao_cientifica_id == comunicacao_cientifica_id).where(
-            ComunicacaoCientificaNgram.c.ngram_id == ngram_id)
+            ComunicacaoCientificaNgram.c.comunicacao_cientifica_id == comunicacao_cientifica_id).where(  # type: ignore
+            ComunicacaoCientificaNgram.c.ngram_id == ngram_id)  # type: ignore
     ).first().qtde
     if qtde == 0:
         result = conn.execute(
@@ -225,6 +196,6 @@ def comunicacao_cientifica_ngram_inserir(comunicacao_cientifica_id, ngram_id):
         # conn.commit()
     else:
         result = conn.execute(db.select(ComunicacaoCientificaNgram).where(
-            ComunicacaoCientificaNgram.c.comunicacao_cientifica_id == comunicacao_cientifica_id).where(
-            ComunicacaoCientificaNgram.c.ngram_id == ngram_id)).first()
+            ComunicacaoCientificaNgram.c.comunicacao_cientifica_id == comunicacao_cientifica_id).where(  # type: ignore
+            ComunicacaoCientificaNgram.c.ngram_id == ngram_id)).first()  # type: ignore
     return result

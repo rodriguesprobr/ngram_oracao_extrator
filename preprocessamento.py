@@ -120,10 +120,3 @@ class PreProcessamento:
         text = text.lower()
 
         return text
-
-
-# if __name__ == "__main__":
-#     spacy_model = SpacyPreprocessor.load_model()
-#     preprocessor = SpacyPreprocessor(spacy_model=spacy_model, lemmatize=True, remove_numbers=True)
-#     clean_text = preprocessor.preprocess_text("spaCy is awesome! 123")
-#     print(clean_text)
