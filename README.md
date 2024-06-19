@@ -39,3 +39,9 @@ Após a instalação do _Python_ e das bibliotecas, deve-se executar na seguinte
 O _script_ _processar.py_ pode demorar algumas horas para terminar a execução. Ele utiliza programação em _threads_ para processar múltiplos textos ao mesmo tempo. No arquivo _config.json_ você poderá aumentar ou diminuir quantos textos são processados em paralelo, alterando o valor do atributo _threads_quantidade_.
 
 No _config.json_ também pode ser alterado se os dados serão excluídos na execução (atributo _excluir_dados_) e o local em que o algoritmo fará a varredura procurando os textos a serem processados (atributo _comunicacoes_cientificas_dir_).
+
+# _TODO List_
+
+- Refatoração de parte do algoritmo
+- Orientação a Objetos
+- Melhorias no processamento paralelo para evitar _OutOfMemoryError_.
