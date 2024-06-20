@@ -1,0 +1,513 @@
+
+Comunicação Oral
+APORTES DA ARQUITETURA EMPRESARIAL PARA A GESTÃO DA
+INFORMAÇÃO EM HOSPITAIS PRIVADOS
+Resumo
+A elaboração de uma arquitetura empresarial (EA) é tipicamente motivada pela necessidade
+de gerenciar a atual complexidade do cenário de negócios e das tecnologias nas organizações.
+A EA possibilita uma percepção global da informação na empresa, o que auxilia na
+comunicação com as diferentes partes interessadas. Soma-se o indispensável alinhamento
+estratégico da tecnologia da informação (TI) aos negócios. Como ferramental para construir
+arquiteturas, foi escolhida uma linguagem recentemente elaborada a partir do estado da arte
+em modelagem conceitual de empresas, o ArchiMate. Assim, essa apresentação de pesquisa
+trata de uma questão de investigação que perpassa duas áreas: a gestão da informação (GI) e
+EA. A pergunta que motiva é: como a EA pode colaborar para melhorar a GI nas
+organizações de saúde privada? O objetivo central é identificar um conjunto de princípios que
+ilustrem a melhoria da GI à luz da EA. A metodologia envolve parte prática com amostra
+constituída por três hospitais privados da cidade de Belo Horizonte - MG. Entrevistas
+semiestruturadas serão aplicadas para coletar dados. Os sujeitos da amostra serão o corpo
+executivo, gerentes e a equipe de TI e sistemas de informações (SI) dos hospitais. Será
+realizada uma análise de conteúdo no intuito de classificação das expectativas. Utilizando-se o
+ArchiMate, será desenvolvido o modelo de EA comum para os hospitais privados que
+atenderá à GI. Um grupo de foco discutirá em profundidade o modelo desenvolvido nos
+hospitais da amostra. Finalmente, um diagnóstico resultará da análise dos dados desse grupo
+de foco, para fazer emergir o conjunto de princípios que ilustrem a viabilidade (ou não) da
+adoção da EA para melhorar a GI.
+Palavras-Chave: Gestão da informação. Arquitetura empresarial. Alinhamento estratégico da
+tecnologia da informação com negócios. Organizações de saúde privada. Informática em
+saúde.
+1 INTRODUÇÃO
+O tema central dessa apresentação de pesquisa é a gestão da informação (GI) com
+arquitetura empresarial (EA). A informação na área médica é aquela originada dos
+procedimentos relacionados ao tratamento da saúde do paciente. Também são resultantes das
+áreas administrativas e financeiras, dos exames de laboratórios, procedimentos, entrevistas,
+internação hospitalar, pronto-atendimento, dentre outros. Pesquisas mostram que, em grande
+parte das organizações de saúde, a operação desses dados é realizada de maneira precária e
+desconectada do negócio (DAVENPORT; MANVILLE, 2012; CAVALCANTE et al., 2012;
+DAMÁZIO; GONÇALVES, 2012; GESITI, 2012; KANE, 2011; SIGULEM, 1997).
+Na área pertinente a essa apresentação de pesquisa, as organizações de saúde, o uso
+complexo das informações administrativas e dos pacientes em métodos tradicionais (papel e
+arquivos), juntamente com o avanço da tecnologia da informação (TI), assim como a
+necessidade da GI, fez com que um novo campo emergisse. Se antes a informática em saúde
+era apenas um campo promissor, hoje atinge um alto ritmo de desenvolvimento, em busca de
+agilidade nos processos biomédicos e, porque não, em busca de maturidade nos processos
+básicos da GI (CAVALCANTE et al., 2012; ITMIDIA – REPORT, 2012; SBIS, 2013;
+SIGULEM, 1997; SUN, 2010).
+Tais processos, como asseveram Davenport e Prusak (1998), podem ser definidos de
+várias maneiras, com um número diferente de etapas. Contudo, um processo de
+gerenciamento da informação pode ser generalizado na “determinação das exigências,
+obtenção, distribuição e utilização da informação” (DAVENPORT; PRUSAK, 1998, p. 175).
+É importante que as organizações se preocupem com esses processos básicos, não deixando
+de lado alguns processos específicos, dependendo da área e do contexto de cada uma delas
+(CHOO, 2006; McGEE; PRUSAK, 1999; MAES, 2007; MOODY; WALSH, 1999; LEITE,
+2011).
+Para atender a necessidade informacional das organizações, emerge a necessidade do
+alinhamento entre os negócios e a TI (HENDERSON; VENKATRAMAN, 1993; KEARNS;
+
+LEDERER, 2003; MAES, 2007; MOLINARO; RAMOS, 2011). Entretanto, instrumentos que
+materializem e permitam tratar a questão objetivamente não são tão conhecidos. A EA é um
+desses instrumentos, pois é parte da estratégia de negócio de uma organização (BAX, 2012;
+LANKHORST, 2012). É um recurso valioso para executivos obterem informação tecnológica
+correta em suas organizações. Ao invés de adotar um conjunto desconexo de representações
+para modelar a organização como um todo, a EA privilegia os modelos de negócios e indica
+como desenvolver uma infraestrutura de negócio apropriada para a execução da estratégia
+corporativa. Esses modelos fornecem uma fundação para execução e crescimento da
+organização (ROSS; WEILL; ROBERTSON, 2008; GARTNER – IT CLOSSARY, 2013;
+SEREFF, 2012).
+De fato, uma EA é criada para que as diferentes preocupações ou interesses (concerns)
+das partes interessadas (stakeholders) da organização possam ser representados e atendidos
+(THE OPEN GROUP, 2006, 2009, 2012). Os stakeholders necessitam de visões
+especializadas da mesma organização, voltadas para a natureza de sua atuação e
+responsabilidades específicas. Mesmo fazendo parte da mesma organização, essas pessoas
+têm, em geral, modelos mentais claramente diferentes. O papel do arquiteto é representar
+essas preocupações, levantando, identificando e refinando os vários requisitos e necessidades
+destes stakeholders, bem como desenvolvendo visões específicas sobre a arquitetura
+(GRAVES, 2012; LANKHORST, 2012; WIERDA, 2013; ZACHMAN, 1982, 1987).
+Diante do que foi exposto, o objetivo principal dessa apresentação de pesquisa é
+identificar um conjunto de princípios que especifiquem a viabilidade ou não da adoção da
+arquitetura empresarial para melhorar a gestão da informação nas organizações de saúde.
+Além disso, será elaborado um modelo de arquitetura empresarial que atenda (seja útil) aos
+processos da gestão da informação nos hospitais privados, utilizando a linguagem arquitetura
+empresarial, o ArchiMate.
+A relevância da pesquisa se dará na medida em que a GI, uma das áreas da Ciência da
+Informação, como caracterizam Saracevic (1996) e Shera (1977), receberá a introjeção de
+novos conhecimentos. Ainda mais, no modelo que será obtido, a GI será atendida por uma
+arquitetura empresarial.
+Essa apresentação de pesquisa está dividida em seis partes: acima foi apresentado e
+contextualizado o tema, os objetivos e as justificativas. Na parte dois, encontram-se as
+descrições dos trabalhos correlatos.
+
+Para guiar a pesquisa, descrevem-se as abordagens
+
+metodológicas na parte três. Na parte quatro, os principais construtos são elucidados, bem
+
+como a ligação entre os mesmos. O que se segue é a apresentação da pesquisa, as
+considerações finais e as referências.
+
+2. TRABALHOS RELACIONADOS
+Identificam-se nesta seção três trabalhos relacionados ao tema dessa pesquisa. Buscouse no estado da arte, iniciativas que contribuam para proposta de construção de um modelo de
+EA. As obras escolhidas apresentam aberturas de continuidade dos estudos, assim como
+trabalhos na área da informática em saúde que serão aproveitados como referências básicas.
+2.1
+
+TESE:
+
+TOWARDS
+
+HIGH
+
+PERFORMING
+
+HOSPITAL
+
+ENTERPRISE
+
+ARCHITECTURES: ELEVATING HOSPITALS TO LEAN ENTERPRISE THINKING AUTOR: JORGE MIGUEL DOS SANTOS FRADINHO
+Essa tese foi motivada pelo gasto excessivo em saúde nos Estados Unidos, com os
+hospitais representando uma grande parte do valor em relação ao produto interno bruto (PIB)
+americano, ano base de 2005. Após uma extensiva e multidisciplinar revisão de literatura,
+foram realizadas entrevistas com especialistas para descobertas preliminares. O estudo
+exploratório, dedutivo e indutivo, foi realizado para coletar e analisar dados para a pesquisa
+qualitativa e quantitativa, de um conjunto de múltiplos hospitais. Uma vez mostrado que a
+melhora do desempenho dos hospitais pode ser obtida a partir do melhor entendimento da
+arquitetura empresarial, foi proposto, de maneira específica, recomendações e métricas para
+os líderes e executivos dos hospitais, que lidam com a arquitetura empresarial, gerenciarem
+melhor suas organizações.
+
+2.2 TESE: FATORES CRÍTICOS DE SUCESSO DA ESTRATÉGIA PARA
+DESEMPENHO SUPERIOR EM HOSPITAIS PRIVADOS - AUTORA: LUCIANA
+FABULA DAMÁZIO
+O objeto de estudo dessa tese são os hospitais associados à Associação Nacional de
+Hospitais Privados (ANAHP). Segundo a autora, os hospitais se posicionam em um patamar
+de principais prestadores de serviços, funcionando como centro do sistema de saúde. A
+estrutura dessas organizações é complexa, incluindo diversas especialidades médicas, grau
+tecnológico elevado, novas formas de cuidado do paciente. Foi realizado um levantamento
+qualitativo, cujo campo de estudo foram os hospitais associados à ANAHP, que são
+instituições privadas, para identificar os fatores críticos de sucesso, ou seja, as práticas de
+
+gestão estratégica que exercem maior influência no desempenho superior. Finalmente, dois
+levantamentos (qualitativo/quantitativo) foram convergentes e apontam para uma valorização
+de aspectos intangíveis, especialmente das práticas associadas ao conteúdo da estratégica.
+
+2.3 PROJETO DE PESQUISA: GESITI - AVALIAÇÃO DA GESTÃO EM SISTEMAS
+E TECNOLOGIAS DE INFORMAÇÃO EM HOSPITAIS (GESITI/HOSPITALAR) CENTRO DE TI RENATO ARCHER - MINISTÉRIO DA CIÊNCIA, TECNOLOGIA
+E INOVAÇÃO
+Com relação à gestão dos sistemas de informação (SI) e TI na área hospitalar, estudos
+relevantes estão sendo realizados nesse contexto, com vistas ao mapeamento desta área. Um
+projeto envolvendo dezenas de universidades brasileiras e internacionais está sendo
+coordenado pelo Centro de Tecnologia de Informação Renato Archer (CTI), unidade do
+Ministério da Ciência, Tecnologia e Inovação (MCTI), o GESITI/Hospitalar – Gestão dos
+Sistemas e Tecnologia da Informação Hospitalar. O objetivo do projeto GESITI é mapear a
+gestão de SI e TI em hospitais, visando identificar suas necessidades e demandas, prospectar
+desdobramentos, realizar publicações e, principalmente, gerar um relatório de pesquisa
+integrado.
+
+3 ABORDAGEM METODOLÓGICA
+Esta seção fará a caracterização dessa apresentação de pesquisa quanto aos fins
+(exploratória e aplicada), quanto aos meios (bibliográfica, documental, pesquisa de campo e
+estudo de múltiplos casos) e quanto à forma de abordagem (qualitativa). Os procedimentos
+para a coleta, tratamento e análise de dados da amostra, que será escolhida por conveniência,
+serão as entrevistas semiestruturadas e grupo de foco, e a técnica de análise de conteúdo. Os
+corpora serão os textos transcritos, oriundos dessas coletas de dados.
+Wazlawick (2009) explica que, para não se chegar a conclusões errôneas e basear
+somente na fundamentação teórica e no princípio da autoridade, o empirismo é adequado e
+recomendado nas pesquisas, coexistindo a teoria e a prática. Essa apresentação de pesquisa
+faz a junção dos tipos exploratória e aplicada. Situar-se nas áreas fronteiriças da EA com GI
+faz jus à incipiência do assunto a ser estudado e ao enquadramento da pesquisa como
+exploratória. Ainda mais, o problema será tratado de forma pioneira, de modo que ele
+descreva situações e estabeleça as suas relações.
+
+Com o propósito de tornar essa pesquisa aplicada, uma vez desenvolvido o modelo de
+EA que atenda (seja útil) a GI, as ideias serão comunicadas aos stakeholders dos hospitais,
+gerando os resultados. A aplicação prática e concreta para as organizações em saúde
+caracteriza-se o interesse prático, isto é, para que os resultados sejam aplicados na solução de
+problemas que ocorrem na realidade. Vergara (2011, p. 43) descreve que “a pesquisa aplicada
+é fundamentalmente motivada pela necessidade de resolver problemas concretos, mais
+imediatos ou não”. Tem a finalidade prática, ao contrário da pesquisa pura, motivada pela
+curiosidade intelectual do pesquisador.
+Quanto ao paradigma qualitativo, ele se justifica como o mais condizente para o
+alcance dos objetivos dessa pesquisa, pois a investigação ocorrerá em uma ótica
+predominantemente compreensiva e interpretativa, o que exige do pesquisador uma postura
+crítica no que tange à percepção e assimilação de indicadores que o auxiliarão na clarificação
+das várias óticas do problema de pesquisa.
+Com relação à análise dos dados, na opinião de Vergara (2012, p. 7), “a análise de
+conteúdo é considerada uma técnica para o tratamento de dados que visa identificar o que está
+sendo dito a respeito de determinado tema”. A autora resume que se presta aos fins
+exploratórios, ou seja, descobertas; exige categorias; pode ser utilizada para grandes
+quantidades de dados; e a interpretação cabe ao pesquisador. Recomendam-se três etapas
+básicas para análise de conteúdo: pré-análise; exploração do material; tratamento dos dados e
+interpretação.
+4 FUNDAMENTAÇÃO DOS CONCEITOS
+Não é intenção de essa apresentação de pesquisa exaurir todos os fundamentos
+teóricos dos construtos, entretanto serão identificados os principais conceitos e os elos
+representados, trazendo alguma luz sobre as terminologias da área, que se encontram difusas
+na literatura e podem confundir quem está iniciando os estudos no tema.
+4.1 A INFORMAÇÃO E A GESTÃO DA INFORMAÇÃO (GI)
+Torna-se importante iniciar caracterização sobre a necessidade de informação, com
+uma citação encontrada em Shera (1977, p. 2): “assim como a necessidade de informação
+orienta o indivíduo, assim também orienta sociedades. É a base do comportamento coletivo,
+tanto quanto do comportamento individual”. Em corroboração, Cortada (2011) em uma obra
+sobre o papel da informação e sua gestão nas organizações contemporâneas, mostra o valor da
+
+informação e sua importância central que desempenha no futuro do trabalho organizacional,
+colocando-a no patamar proeminente que deve ocupar, em uma posição privilegiada.
+A informação é o dado trabalhado, tratado e inserido em um contexto. É um conjunto
+de dados que tem algum significado. “Pense em informação como dados que fazem
+diferença” (DAVENPORT; PRUZAK, 1998, p. 4). Envolve usualmente diversas medições e
+obtenção de dados associados. Somando-se a isso, Le Coadic (2004) posiciona a informação
+como um conhecimento gravado, sob forma escrita (ou digital). A informação comporta um
+sentido e possui significado que pode ser transmitido.
+Choo (2006, p. 27), com propriedade, diz que “a informação é um componente
+intrínseco em quase tudo que uma organização faz”. Se as empresas não têm uma clara
+compreensão dos processos organizacionais e humanos pelos quais a informação se
+transforma em percepção, conhecimento e ação, elas dificilmente conseguirão perceber a
+importância de suas fontes e da TI. Ainda mais, a informação é um valioso ativo
+organizacional (MOODY; WALSH, 1999), cujo valor reside no relacionamento que o usuário
+constrói entre si mesmo e de determinada informação, sendo útil, somente quando o usuário
+infunde-lhe significado (CHOO, 2006).
+Já a abordagem da gestão da informação, a função primordial é a ação de procurar
+compreender as demandas informacionais que carecem as organizações, disponibilizando-as
+para solucionar os problemas presentes e futuros, de forma estruturada e clara (ARAÚJO,
+2010; BEAL, 2009; CARVALHO, 2006).
+Na visão de Davenport e Prusak (1998) um modelo ideal de gestão da informação
+precisa contemplar os processos de determinação da necessidade, obtenção, armazenamento,
+distribuição e utilização, como será fundamentado a seguir.
+4.2 MODELOS DE GESTÃO DA INFORMAÇÃO
+Na busca na literatura realizada para essa apresentação de pesquisa, aponta-se para a
+existência de alguns modelos indicados para guiar a gestão da informação. Cabe, inicialmente,
+esclarecer que modelos são abstrações que se faz de algo, representando alguma porção real
+ou imaginária do mundo, produzidos por seres humanos, cujo objetivo é o melhor
+entendimento e comunicação.
+Com o propósito de mostrar que a GI é um recurso estratégico fundamental, Vital,
+Floriani e Varvakis (2010) destacam que a GI requer o estabelecimento de processos, etapas
+
+ou fluxos sistematizados e estruturados, associado às pessoas responsáveis pela sua condução,
+a fim de alcançar os resultados almejados.
+Souza e Duarte (2011) analisaram e compatibilizaram as dimensões dos modelos de
+GI de McGee e Prusak (1998), Davenport e Prusak (1998) e Choo (2006), enumerando os
+aspectos comuns e distintos, a partir de uma análise de conteúdo, abordados por cada um
+desses autores, elencando o universo de dimensões contempladas nestes três modelos de GI.
+Modelo de gerenciamento da informação de Davenport e Prusak (1998)
+Em diversos estudos comparativos entre modelos de GI, sempre é utilizado o modelo
+de Davenport e Prusak (1998), tornando-o um modelo de referência (ARAÚJO, 2010), assim
+como é considerado um modelo clássico de GI (SOUZA; DUARTE, 2011), juntamente com
+modelos desenvolvidos por outros autores, como Choo (2006).
+Em Davenport e Prusak (1998), a GI, ou melhor, o seu gerenciamento, é um conjunto
+estruturado de atividades que incluem a maneira que as organizações obtêm, distribuem e
+usam a informação. A perspectiva desse modelo é processual, cujos processos abarcam todas
+as fontes de informações possíveis, todas as pessoas e todos os problemas que envolvem, a
+partir de dois métodos: identificação do processo principal (que motivam a GI) e a análise dos
+processos específicos (dependentes da informação).
+Estes autores descrevem de maneira genérica o processo de gerenciamento da
+informação, conforme a ilustração abaixo.
+
+Figura 1: O processo de gerenciamento da informação.
+Fonte: Davenport e Prusak, 1998, p. 175 (figura adaptada).
+
+Soma-se a esses passos, o processo de classificação e de armazenamento da
+informação. Finda-se, neste momento, os dois primeiros tópicos desta fundamentação teórica.
+A partir de então, os conceitos sobre as organizações de saúde serão esclarecidos, e em
+seguida a TI e os SI que atendem a essa área.
+
+4.3 ORGANIZAÇÕES DE SAÚDE E A INFORMÁTICA EM SAÚDE
+A sociedade contemporânea, para a sobrevivência das espécies, criou o cuidado com a
+vida. Derivado das relações cotidianas, o cuidado deve ser entendido como um processo
+dinâmico em busca da promoção da vida. Neste sentido, é que o campo da saúde se insere,
+mudando o foco de uma preocupação unicamente familiar ou exercido por um indivíduo, para
+a constituição de organizações complexas. Tais organizações encaram o cuidado com a saúde
+como mais um produto do mercado (SINGULEM, 1997; SUN, 2010).
+Para que essas organizações de saúde tenham resultados eficientes e eficazes, criou-se
+um novo campo científico denominado informática médica ou informática em saúde, termo
+que vem do inglês medical informatics (SBIS, 2013). A necessidade da rápida tomada de
+decisão, baseada em informações precisas, fez com que esse campo emergisse, aumentando a
+preocupação
+
+com
+
+o
+
+armazenamento
+
+e
+
+recuperação
+
+das
+
+informações
+
+médicas
+
+(CAVALVANTE et al., 2012; DAVENPORT; HARRIS; MORISON, 2012).
+O início da informática na área da saúde remonta aos anos 60, com análises
+estatísticas. Os sistemas administrativos hospitalares apareceram em seguida (SINGULEM,
+1997). Todo esse ambiente sempre lidou com fontes heterogêneas de dados e informações e
+uma grande diversidade de recursos. Para suprir essa demanda, inúmeros sistemas foram
+criados, tornando a complexidade ainda maior (GESITI, 2012; LAUDON; LAUDON, 2011).
+Contudo, os processos dessas organizações têm o aporte dos SI e da TI. Os
+administradores começam a contar com ferramentas importantes para atingir altos níveis
+efetividade e produtividade, especialmente se combinados com mudanças no comportamento
+da administração e da prática de negócios (CARDOSO; ALMEIDA; GUIZZARDI, 2010;
+DAMAZIO; GONÇALVES, 2012).
+No tópico que segue, serão apresentados os SI e a TI na área hospitalar. Tanto os
+hospitais públicos, quanto os privados, fazem uso intensivo da TI e dos SI (GESITI, 2012).
+4.4 SISTEMAS DE INFORMAÇÃO E TECNOLOGIA DA INFORMAÇÃO
+HOSPITALAR
+Não é tarefa fácil generalizar o que é tecnologia da informação (TI), mas pode-se
+definir como conjunto de hardware, software e tecnologias (recursos da informática)
+utilizadas para otimizar o processo de criação, processamento, armazenamento e distribuição
+das informações, ou seja, informatização do ciclo de vida da informação (LAUDON;
+
+LAUDON, 2011). Hoje em dia, encontram-se aplicações de TI em tudo, dessa forma é difícil
+delimitar fronteiras em que ela atua.
+Com relação aos sistemas de informação (SI), Laudon e Laudon (2011) explicam que
+os mesmos podem contribuir para a solução de vários problemas organizacionais,
+independentemente do seu tipo ou do seu uso, e são criados para facilitar a gestão das
+empresas. Pelo menos três componentes formam um SI: tecnologia, processos organizacionais
+e pessoas. O uso da TI nos SI agrega recursos de processamento de dados, gerando
+informações para clientes, fornecedores, usuários e demais interessados. Darão o alicerce para
+a área administrativa, sempre objetivando resultados e a tomada de decisões (REZENDE,
+2008).
+Entretanto, a TI nos hospitais não se limita ao aporte aos SI. Os sofisticados
+equipamentos que são utilizados no ambiente da saúde, tais como os de suporte à vida do
+paciente podem possuir o funcionamento diretamente ligado à rede de dados, proporcionando
+a integração necessária com as informações clínicas (SBIS, 2013).
+4.5 ALINHAMENTO DA TI COM OS NEGÓCIOS ORGANIZACIONAIS
+Com o crescimento e o surgimento de novas tecnologias, a área de TI não pode ser
+considerada apenas de suporte para as demais áreas organizacionais. Os executivos de
+negócio e de TI deparam com um novo desafio, que é criar um ambiente de confiança e de
+colaboração para que seja facilitada a interação de todas as áreas organizacionais. Nesse
+sentido, com o mercado atual, globalizado, dinâmico e altamente competitivo, exige-se das
+organizações uma nova postura, necessitando que processos de gestão tenham alinhamento
+estratégico com processos de TI (MAES, 2007).
+Alinhamento estratégico são as atividades executadas de forma coordenada pela
+gerência da organização com o objetivo de alcançar suas metas através da integração de várias
+áreas funcionais, tais como: TI, administração financeira, marketing, recursos humanos,
+produção, serviços, dentre outras (HENDERSON; VENKATRAMAN, 1997; MOLINARO;
+RAMOS, 2011).
+Este conceito de alinhamento estratégico de TI é novo, e somente começou a ser
+sistematicamente entendido e implementado a partir da introdução do modelo de Henderson e
+Venkatraman (1993). Embora existam diversos modelos de alinhamento estratégico da TI
+com os negócios, estes autores propuseram o modelo mais aceito, o qual retrata quatro
+domínios: estratégia de negócios, infraestrutura e processos organizacionais, estratégia de TI,
+
+infraestrutura e processos de TI (MAES, 2007). Como a arquitetura empresarial é parte da
+estratégia de negócio de uma organização, ela pode materializar o almejado alinhamento
+estratégico da TI com os negócios (BAX, 2012; LANKHORST, 2012).
+4.6 ARQUITETURA EMPRESARIAL (EA)
+Arquitetura empresarial conta com uma miríade de definições propostas na literatura.
+Tal profusão de conceitos ocorreu ao longo dos últimos 20 anos, em função da proliferação
+das pesquisas relacionadas ao desenvolvimento de metodologias e frameworks para construir
+e operacionalizar o conceito na prática.
+Alguns autores ainda utilizam o termo “informação”, referindo-se a uma “arquitetura
+de informação” e adicionam “corporativa”, “empresarial” ou “organizacional” ao final da
+expressão. Nesse caso, a presença do termo “de informação” gera grande confusão com a
+terminologia utilizada para designar a “arquitetura de informação” de portais e sites web
+(GARTNER – IT GLOSSARY, 2013).
+O conceito arquitetura empresarial pode ser visto também como um processo. Nesse
+caso, segundo o Gartner – IT Glossary (2013), a EA é o processo de traduzir a visão
+estratégica de negócios em mudanças empresariais efetivas pela criação, comunicação e
+melhoria dos requisitos chave, princípios e modelos que descrevem o estado atual e futuro da
+empresa, permitindo, assim, a sua evolução.
+O escopo de um programa de elaboração e manutenção de EA é amplo e envolve toda
+a empresa, incluindo as pessoas, processos, informação e tecnologia empregada, além de suas
+relações entre si e com o ambiente externo. Os arquitetos compõem soluções holísticas que
+abordam os desafios empresariais e apoiam a governança necessária para implementá-las.
+Conduzem o processo de EA para definir o estado de destino em que a organização deseja
+alcançar e, em seguida, ajudam a organização a compreender o seu progresso em direção ao
+estado desejado. Dessa forma, é necessário conhecer a situação atual da empresa (as is) para
+que se almeje o estado futuro (to be), da mesma forma que a análise do impacto das mudanças
+também é de suma importância (DYER, 2009; GRAVES, 2012; ROSS; WEILL,
+ROBERTSON, 2008; SEREFF; 2012).
+Inúmeras evoluções ocorreram no campo da modelagem conceitual de organizações e
+SI. Os diagramas, que eram meros desenhos, passaram a constituir artefatos formais que,
+exatamente por serem formais, permitem o desenvolvimento de aplicativos que apoiam e
+orientam o trabalho do arquiteto na sua concepção. Um problema, contudo, era a falta de
+
+uniformização desses diagramas, pois cada um deles era desenvolvido com uma linguagem
+especializada em representar o fenômeno peculiar a uma célula da matriz a qual se aplicava
+(CARDOSO; ALMEIDA; GUIZZARDI, 2010; SEREFF, 2012).
+Visando, sobretudo, fornecer uma representação uniforme dos diagramas que
+descrevem arquiteturas corporativas, recentemente, uma linguagem de modelagem de
+arquitetura empresarial foi desenvolvida no contexto de um projeto europeu1, a linguagem
+ArchiMate (LANKHORST, 2012). Ela oferece abordagem conceitual integrada que descreve
+e permite visualizar os diferentes domínios da arquitetura, bem como as relações e
+dependências que subjazem entre seus componentes (THE OPEN GROUP, 2012).
+A especificação precisa e a descrição dos componentes da arquitetura e suas relações
+requerem uma linguagem de modelagem que priorize a questão de fundo, relativa ao
+alinhamento consistente entre as camadas de abstração da organização (negócios, sistemas e
+infraestrutura) de forma a suportar a modelagem coerente de arquiteturas empresariais. Em
+uma linguagem de modelagem, essa especificação precisa dos componentes e relações, que
+estão disponíveis ao arquiteto, é formalizada por aquilo que é denominado o “metamodelo” da
+linguagem (LANKHORST, 2012; WIERDA, 2013).
+ArchiMate é uma linguagem de modelagem de arquitetura para descrever, analisar e
+visualizar arquiteturas de informação em diferentes domínios de negócios (ARCHIMATE,
+2013; LANKHOST, 2012; WIERDA, 2013). Distingue-se de outras linguagens pelo seu
+metamodelo bem definido e de escopo mais amplo, apropriado para a modelagem da
+arquitetura da organização como um todo (ARCHIMATE, 2013).
+Na linguagem ArchiMate, existem três camadas que podem ser conceituadas da
+seguinte forma:
+
+
+a camada de negócios: oferece produtos e serviços para os clientes externos,
+desenvolvidos na organização por processos de negócios realizados por atores de
+negócios;
+
+
+
+a camada de aplicação: suporta a camada de negócios, com serviços realizados pelas
+aplicações de software;
+
+
+
+a camada de tecnologia: oferece os serviços de infraestrutura (por exemplo,
+processamento, armazenamento e serviços de comunicação) necessários para executar
+os aplicativos realizados por computador, o hardware e o software de comunicação do
+sistema (LANKHORST, 2012; THE OPEN GROUP, 2012).
+
+1
+
+http://www.archimate.nl/
+
+Na camada de negócio, a fim de se obter uma subdivisão lógica de uma capacidade da
+empresa, existem as funções de negócio (business functions). Uma função de negócio define
+“o que” de um comportamento do negócio. Oferece a funcionalidade que pode ser útil para
+um ou mais processos de negócio. Tais processos de negócios são definidos com base nos
+produtos e serviços que a organização oferece, enquanto as funções de negócio são a base
+para, por exemplo, a atribuição de recursos a tarefas e o suporte à aplicação (ARCHI, 2013;
+ARCHIMATE, 2013; LANKHORST, 2012; WIERDA, 2013).
+Uma função de negócio é contemplada em um hospital nas funções oferecidas por eles
+para a sociedade, por exemplo, no pronto atendimento, cirurgia, internação, dentre outras. Um
+passo importante nessa apresentação de pesquisa será a escolha de uma função de negócio,
+como poderá ser visto no tópico que a seguir.
+
+5 APRESENTAÇÃO DA PESQUISA
+Inicialmente, cabe esclarecer que o universo a ser pesquisado, o setor hospitalar
+privado e não o público, se deve pelo foco distinto entre eles. O setor público visa à melhoria
+de suas operações, com vistas em contrabalancear a oferta e a demanda. Já o setor privado
+utiliza a estratégia organizacional de forma abrangente e foca na intensidade das ações, pois
+visa à captação de recursos para serem sustentáveis.
+Como foi apresentado na introdução, o objetivo central dessa apresentação de pesquisa
+é identificar um conjunto de princípios que especifiquem a viabilidade ou não da adoção da
+arquitetura empresarial para melhorar a gestão da informação nas organizações de saúde,
+assim como a obtenção de um modelo de EA que seja útil à GI. No intuito de alcançar esses
+objetivos serão apresentados abaixo os passos a serem seguidos durante o período da
+pesquisa, cuja divisão foi realizada em etapas distintas, contudo, interconectadas, a saber:
+
+
+o universo da pesquisa serão os hospitais privados. A amostra será escolhida por
+conveniência e acessibilidade do pesquisador e será composta por três hospitais,
+localizados em Belo Horizonte - MG. Os sujeitos serão constituídos pelos seguintes
+stakeholders: corpo executivo, gerentes e a equipe de TI e SI, cujo número base será
+de cinco por hospital;
+
+
+
+serão realizadas entrevistas semiestruturadas para a coleta de dados. As entrevistas
+serão gravadas e o foco será na assimilação de como os hospitais utilizam e aplicam,
+atualmente, a GI e a EA;
+
+
+
+a transcrição das entrevistas e o tratamento dos dados serão realizados pela técnica de
+análise de conteúdo, no intuito de obter uma classificação das expectativas, bem como
+a interpretação dos dados;
+
+
+
+um passo importante será a escolha do recorte, por uma função do negócio (business
+function), que será aplicado no desenvolvimento do modelo de EA;
+
+
+
+com as informações obtidas até esse momento e utilizando a linguagem ArchiMate,
+será desenvolvido o modelo de EA comum para os hospitais privados que atenderá à
+GI. Mesmo realizando o recorte por uma função do negócio, os domínios existentes no
+arcabouço do ArchiMate não serão deixados de lado, principalmente pelo fato da
+possibilidade da visão holística proporcionada por um modelo de EA;
+
+
+
+utilizando um grupo de foco para a discussão em profundidade, o modelo
+desenvolvido será apresentado em um ou mais hospitais da amostra para ser validado.
+O grupo de foco será mediado pelo pesquisador. Um diagnóstico será resultante dessa
+reunião para formar o conjunto de princípios que especifiquem a viabilidade ou não da
+adoção da EA para melhorar a GI nas organizações.
+
+6 CONSIDERAÇÕES FINAIS
+De forma a suportar a modelagem coerente de arquiteturas empresariais, essa
+apresentação de pesquisa identificou o ArchiMate como o framework orientado à construção
+de arquiteturas. ArchiMate também é uma linguagem de modelagem que tem uma
+especificação precisa, assim como a descrição de componentes e suas relações e o
+alinhamento consistente entre as camadas de abstração da organização: negócios, aplicações e
+infraestruturas.
+Avaliou-se que a elaboração de uma EA é tipicamente motivada pela necessidade de
+gerenciar a complexidade do cenário de tecnologia nas organizações. Foi mostrado que ela é
+um instrumento efetivo de promoção do necessário alinhamento entre negócios e TI. A EA
+possui diferentes camadas, mas os modelos de cada uma delas estão ligados uns aos outros, e
+se relacionam coerentemente. Esse fato permite uma visão integrada que perpassa os
+diferentes níveis de abstração da empresa.
+Por fim, foi descrito nessa apresentação de pesquisa, que será desenvolvido um
+modelo de EA utilizando a linguagem ArchiMate, a partir do levantamento das expectativas
+dos stakeholders (corpo executivo, gerentes e a equipe de TI e SI), envolvidos no ambiente
+hospitalar privado. No intuito de obter os resultados efetivos a partir da GI nos hospitais, esse
+
+modelo deverá contemplar a melhoria dos processos de negócios, sua interconexão com os SI,
+com aporte da infraestrutura de TI. Um diagnóstico será resultante da apresentação do modelo
+nos hospitais da amostra, para formar o conjunto de princípios que especifiquem a viabilidade
+ou não da adoção da EA para melhorar a GI nas organizações.
+Considera-se como limitação dessa apresentação de pesquisa a utilização da amostra
+de três hospitais privados e o número base de cinco respondentes por hospital. Contudo, está
+sendo viabilizado o aumento dessa amostra. A continuidade dos estudos acontecerá na medida
+em que se realize e concretize a pesquisa apresentada, assim como sejam obtidos os resultados
+almejados.

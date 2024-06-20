@@ -1,0 +1,176 @@
+
+Modalidade de apresentação: Pôster
+Serviço de Anotação em Imagens Médicas Baseado em Linguagem de Marcação1
+Resumo: Este trabalho apresenta proposta de desenvolvimento de um serviço de
+anotação em imagens médicas para Serviços de Informação Especializados na área da
+Saúde. Devido ao fato de que as imagens não são auto-descritivas, parte-se do
+pressuposto que este tipo de documento clínico demanda metodologias específicas para
+indexação. A implementação segue o modelo proposto por Channin et al. e faz uso de
+linguagem de marcação para representar o conteúdo das anotações. A experiência
+descrita possibilita refletir sobre aspectos relativos à arquitetura da informação, no sentido
+de facilitar a interação homem-máquina e conteúdo informacional, provendo meios para
+que a informação seja estruturada, organizada, marcada, buscada, representada e
+planejada; e o usuário a localize com maior facilidade, além da interoperabilidade entre
+aplicações clínicas.
+Palavras-chave: serviço de anotação em imagens; linguagem de marcação; XML;
+informação em saúde; imagem médica.
+
+1. Introdução
+A visualização das estruturas do corpo de um paciente, em especial as estruturas internas por
+meio de técnicas não invasivas, há anos tem sido objeto de estudos e pesquisas. A descoberta de
+Röentgen em 1895 produziu impactos significativos na prática da Medicina e marcou o surgimento
+da Radiologia Médica. Sistrom (2006) menciona que
+“Nenhuma outra área de conhecimento da Medicina tem
+experimentado o aumento da quantidade de facilidades
+disponíveis, em termos de volume e variedade, como é o caso da
+Radiologia durante as últimas décadas.”
+No entanto, devido ao constante e crescente uso das imagens na prática da Medicina, é
+difícil imaginar o amplo e consistente uso dessas imagens sem a existência de recursos capazes de
+viabilizar sua organização, possibilitando o armazenamento, recuperação e processamento, de modo
+tão rápido e prático quanto se necessite no dado contexto de uso.
+Apesar dos avanços tecnológicos e evoluções ocorridas na criação e organização dos
+sistemas de informações, muitas instituições ainda encontram dificuldades para produzir, gerenciar
+e disponibilizar adequadamente informações relevantes a seus usuários. Parte-se do pressuposto
+que, mesmo que a informação seja apresentada em suporte digital, não se garante que esta seja
+devidamente estruturada e auto-descritiva. Por este motivo, torna-se necessário um serviço de
+anotação de imagens médicas que facilite o acesso, pesquisa, seleção, referenciamento e
+recuperação de dados de tipologia pictórica.
+A exemplo do que ocorre com as imagens em geral, as imagens médicas contêm um vasto
+conjunto de informações. Tais imagens na forma digital, usualmente, são disponibilizadas num
+formato denominado Digital Imaging and Communication in Medicine (DICOM) (Nema, 2001). O
+formato inclui um conjunto de metadados sobre as condições de aquisição. Tais metadados são
+importantes para uso em tarefas de análise de imagem, pois possibilitam, por exemplo, fazer
+reconstruções volumétricas (3D) a partir de um conjunto de imagens tomográficas. Contudo, as
+informações consideradas decisivas para o diagnóstico encontram-se codificadas no conjunto de
+elementos que compõem a imagem (pixels).
+Após a realização do exame radiológico é elaborado um documento que descreve as
+observações a partir das imagens adquiridas. Este documento, denominado laudo, traz a
+interpretação das condições observadas nas imagens. Em geral, o documento é composto por:
+
+
+
+achados (o que foi observado); discussão (o significado dos achados); conclusão (o diagnóstico
+sugerido) e key images (imagens significativas e/ou região de interesse).
+Na prática, apesar de haver uma “pseudo-estrutura” que suporta a apresentação do laudo,
+este consiste num documento apresentado em texto livre (sem formatações). O problema é que o
+texto livre não é associado com a localização espacial da observação na imagem, tornando difícil
+relatar a observação e a correspondente localização na imagem. Por não possuir uma estrutura
+explicitamente definida, criam-se grandes dificuldades para indexar, pesquisar e recuperar imagens
+médicas a partir das informações contidas no laudo.
+Como uma das etapas de desenvolvimento do projeto que objetiva tornar disponível um
+ambiente computacional para desenvolvimento de estudos de gestão e organização de serviços de
+informação, com suporte e mediação baseados em tecnologias de informação e comunicação
+(Santos; Fujino, 2009), este trabalho apresenta a proposta de desenvolvimento de um serviço de
+anotações em imagens médicas. A implementação segue o modelo proposto por Channin et al
+(2010) e faz uso de linguagem de marcação para representar o conteúdo das anotações.
+2. O Contexto da Pesquisa
+Considerando como objetivos o diagnóstico e tratamento da patologia, as imagens
+radiológicas (ou imagens médicas) constituem instrumento de grande valia nos processos de
+inferência diagnóstica e acompanhamento de tratamentos. Em função disso, a prática num
+departamento de Radiologia Médica gera um considerável e rico volume de informações clínicas e
+estas necessitam ser organizadas, armazenadas, recuperadas e adequadamente utilizadas, tanto na
+prestação da assistência, quanto no ensino. Dentre as diferentes abordagens utilizadas no ensino da
+Medicina, uma delas é o aprendizado baseado em casos ou problemas (Boud; Feletti, 1999).
+Nesse contexto, para fins de documentação, as imagens médicas necessitam possuir
+anotações sob diferentes pontos de vista, a saber: (a) sobre a modalidade da imagem (radiografia,
+ressonância magnética, tomografia computadorizada, etc); (b) parâmetros utilizados na aquisição;
+(c) paciente e região anatômica examinada; (d) o laudo. Neste projeto, as imagens médicas possuem
+função educacional. Dessa forma, a descrição deve contemplar modalidade, região anatômica e
+comentários sobre o estado morfológico e diagnósticos. E tais comentários podem se referir à
+imagem toda ou, mais frequente, a uma ou mais regiões dessa imagem, as quais também necessitam
+ser identificas.
+A anotação em imagens é considerada uma maneira de descrevê-las. No caso das imagens
+médicas, a anotação oferece aos profissionais meios para se comunicarem e trocarem informações
+
+
+sobre estas imagens, mais especificamente o que vêem e inferem. Com isto, as anotações em
+imagens têm o potencial de oferecer ricas formas de interação com objetos digitais e colaboração
+entre pessoas que acessam e fazem uso da informação clínica. Assim, o propósito de uma anotação
+pode incluir (Chronaki; Zabulis; Orphanoudakis, 1997): (1) comentar ou apontar atributos e/ou
+características específicas na imagem; (2) confirmar ou refutar um comentário elaborado por outro
+usuário; (3) ilustrar um cenário, possivelmente com um conjunto de anotações; e (4) relatar alguma
+distorção/inconsistência.
+3. Materiais e Métodos
+O padrão DICOM é considerado o padrão de facto para armazenamento e troca de
+informações no domínio das imagens médicas (Clunie, 2005). No entanto, tradicionalmente, as
+anotações e marcações nestas imagens são realizadas e armazenadas por meio de soluções
+particulares.
+Neste trabalho utilizamos o modelo de informação padronizado para representação e
+comunicação de anotações proposto por Channin et al(2009) no projeto denominado Annotation
+and Image Markup (AIM). O padrão proposto no projeto AIM oferece não apenas
+interoperabilidade sintática, mas semântica com padrões como DICOM e Health Level Seven (HL7), no contexto da avaliação clínica. O modelo AIM (Figura 1), descrito em linguagem unificada de
+modelagem (Unified Modeling Language – UML), contempla o relacionamento de entidades
+(algumas delas atores e outras objetos) como: paciente, observador, equipamento de diagnóstico,
+imagem, regiões anatômicas, observações, formas geométricas, anotações textuais e dados de
+calculados, entre outros.
+
+Figura 1 – Visão geral do modelo de dados AIM (Channin et al, 2009).
+
+
+Na implementação do modelo AIM utilizamos Extensible Markup Language (XML), onde
+os elementos de dados são representados numa estrutura hierárquica. Há algum tempo, XML tem se
+tornado a linguagem padrão para troca de informações em aplicações baseadas em tecnologias de
+Internet, bem como, tem sido utilizada no compartilhamento de dados e interoperabilidade
+semântica em aplicações da área da Saúde, em diferentes domínios (Shabo; Cohen; Vortman, 2006).
+O desenvolvimento (implementação) está baseado no uso de software livre: Java (J2EE,
+EJB, JDBC, JSP), Xerces XML e o gerenciador de banco de dados PostgreSQL. Para suportar o
+armazenamento de documentos XML no banco de dados PostgreSQL foi preciso realizar uma
+extensão no referido banco de dados utilizando bibliotecas de funções para manipulação de XML e
+de consultas XPath2, por meio da biblioteca libxml3. De forma sucinta, esta extensão oferece as
+seguintes funcionalidades ao PostgreSQL: (a) validação de documentos XML e (b) realização de
+consultas XPath nos documentos armazenados.
+Objetivando futuros trabalhos, como é o caso de estudos de ontologias a partir de laudos
+radiológicos, fizemos uso de vocabulário controlado – o RadLex (Langlotz, 2006) – para
+designação das regiões anatômicas e o registro das observações e suas características.
+4. Resultados
+A partir do modelo de dados proposto por Channin et al (2009), foi implementado em Java,
+na forma de plug-in da aplicação de visualização de imagens médicas, um componente que
+disponibiliza um conjunto de ferramentas para anotação em imagens médicas (Figura 2). Com o uso
+das ferramentas deste componente, pode-se realizar a inserção de texto sobre a imagem, desenho de
+contornos à mão livre, seleção de regiões de interesse, realização de medidas (lineares, de área e
+volumétrica) e inclusão de formas geométricas, cheias ou vazadas, conforme mostrado na Figura 3.
+O aplicativo produz, automaticamente, o código XML correspondente a cada objeto de anotação
+inserido na imagem (exemplo na Listagem 1).
+
+2
+3
+
+Lingugem de consulta para documentos XML.
+Disponível para download em ftp://xmlsoft.org/ acesso em 30 jun 2010.
+
+
+O aplicativo desenvolvido para edição de anotações implementa o conceito de camadas de
+edição, mimetizando vidraças sobre as quais as anotações são criadas. Esta abordagem possibilita
+que os dados originais da imagem sejam preservados e as anotações possam ser mostradas ou
+ocultadas de acordo com a conveniência.
+Constata-se que as anotações desempenham papel importante no ambiente digital porque
+oferece uma forma de colaboração assíncrona e complementar a recursos como ao e-mail, clipping
+de notícias, fóruns de discussão, entre outros. Neste projeto, isto tem sido realizado por meio de
+documentos clínicos estruturados, como DICOM Structured Report (DICOM SR) (Clunie, 2005) e
+HL-7 Clinical Document Architecture (HL-7 CDA) (Dolin et al, 2001) que, positivamente, têm
+viabilizado a interoperabilidade, sintática e semântica, no âmbito de aplicações que utilizam
+informações clínicas em diferentes contextos.
+5. Discussão e Conclusão
+As imagens constituem um meio efetivo para registro e distribuição da informação, tanto na
+educação médica quanto na prestação de assistência clínica. No entanto, capturar o conhecimento
+acerca do conteúdo das imagens constitui barreiras de uso para os usuários das bases de dados dessa
+natureza. Em parte, isto se deve ao fato de que as imagens – diferentemente das informações
+textuais – não são auto-descritivas, fazendo que seja necessário dispor de metodologias específicas
+para realizar tarefas como a indexação deste tipo de documento.
+Diversos tipos de imagens são utilizados na prática da Medicina. Tradicionalmente, a
+interpretação de um exame radiológico descrita num laudo não contém gráficos e informações
+espaciais. Também, há falta de padrões para armazenar as anotações em imagens, bem como
+facilitar o uso dessas anotações em outros domínios.
+
+
+A proposta criada por Channin et al (2009) e implementada neste trabalho define um
+modelo de informação para anotações, suportado por uma linguagem de marcação. Em nossa
+implementação os objetos de anotação podem ser armazenados e transmitidos na forma de
+documentos XML, DICOM SR ou HL-7 CDA. Aliado ao uso do vocabulário controlado (RadLex),
+esta implementação tem se mostrado útil no que concerne à documentação de imagens médicas para
+fins de assistência e ensino da especialidade. Isto tem sido experimentado na prática e cabe dizer
+que a experiência aqui descrita corrobora o que é discutido por Rosenfeld e Morville (1998), no que
+tange à arquitetura da informação que objetiva facilitar a interação homem-máquina e conteúdo,
+provendo meios para que a informação seja estruturada, organizada, marcada, buscada, representada
+e planejada para que o usuário a localize com maior facilidade, além da interoperabilidade entre
+aplicações.

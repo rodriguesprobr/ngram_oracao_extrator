@@ -1,0 +1,659 @@
+
+
+ANÁLISE DOS PADRÕES DE METADADOS À LUZ DA PRESERVAÇÃO DIGITAL
+
+Modalidade da apresentação: Comunicação Oral
+Resumo: Os desafios da preservação digital estão associados à natureza dos objetos digitais e seu
+ambiente, à obsolescência tecnológica e aos direitos de propriedade intelectual. A adoção de
+metadados para preservação apoia a administração dos processos relativos ao arquivamento e à
+manutenção do acesso à informação digital a longo prazo, com garantias de autenticidade, de
+integridade e de confiabilidade. Neste cenário, foi objetivo do trabalho identificar e descrever padrões
+ou esquemas de metadados que poderiam ser considerados por instituições que estão desenvolvendo
+seus repositórios institucionais, para que possam contemplar a preservação digital. Para tanto, foi
+desenvolvida pesquisa bibliográfica e sistematização e análise de conteúdo. Foram selecionados e
+analisados os seguintes esquemas e padrões de metadados: DUBLIN CORE, MODS, EAD,
+ANSI/NISO Z39.87, METS e o PREMIS. A análise dos resultados indica que os metadados
+descritivos e técnicos do DC, MODS, EAD e ANSI/NISO Z39.87 ou MIX, possuem um papel mais
+direcionado a amparar o METS e o PREMIS, tanto na descoberta e no registro dos aspectos técnicos
+do objeto digital, como na comprovação de sua procedência, autenticidade, contexto e integridade.
+Englobando metadados descritivos, estruturais, administrativos e de preservação do PREMIS, o METS
+pode gerir os objetos digitais atuando como um Pacote de Submissão de Informação (PSI), Pacote de
+Arquivamento de Informação (PAI) ou Pacote de Disseminação de Informação (PDI) num SAAI.
+Confirma-se ao final que a garantia de preservação digital a longo prazo só será possível com a adoção
+efetiva de padrões ou esquemas de metadados, pois são eles que determinarão a descrição, a
+representação, a consistência e a persistência do recurso/objeto digital no ambiente informacional,
+além de definir a interoperabilidade entre sistemas.
+Palavras-chave: Preservação digital. Padrões de metadados. Metadados de preservação. Ciência da
+Informação. Informação e Tecnologia.
+1 INTRODUÇÃO
+Com o advento e a expansão do acesso à Internet em consonância com o uso intensivo
+das Tecnologias de Informação e Comunicação (TIC), no desenvolvimento de ambientes
+informacionais tornou-se notório o expressivo aumento gradativo na produção de recursos
+informacionais, principalmente em formato digital. Garantir a autenticidade, a integridade e a
+preservação dos recursos digitais, é apontado pela comunidade científica, principalmente pela
+Ciência da Informação, como um dos grandes desafios do século XXI.
+Uma das estratégias de preservação digital existentes refere-se à adoção de padrões de
+metadados, estruturas formais de descrição de recursos para comunidades específicas, de
+modo a apoiar a gestão e a preservação de objetos digitais em ambientes informacionais, tais
+como os repositórios institucionais.
+Considerando a hipótese de que há uma carência de estudos nacionais de preservação
+digital na Ciência da Informação e áreas afins que sistematizam e analisam em profundidade
+
+os metadados e as características de esquemas de metadados aplicáveis à preservação digital,
+é que se reconheceu a necessidade de identificar e descrever quais padrões ou esquemas de
+metadados poderiam ser considerados pelas instituições que estão desenvolvendo seus
+repositórios institucionais, para que estas pudessem contemplar a preservação digital.
+Objetiva-se ainda, mais especificamente verificar em que medida os padrões ou
+esquemas de metadados no âmbito da preservação digital têm sido discutidos pela Ciência da
+Informação e áreas afins (Arquivologia, Biblioteconomia, Museologia etc.), apontando
+aspectos destes esquemas que poderiam atender as demandas de estruturação de repositórios
+institucionais de maneira mais adequada para a preservação de documentos digitais.
+Trata-se de uma pesquisa exploratória que utiliza como método de coleta de dados, a
+pesquisa bibliográfica, a partir de uma revisão de literatura direcionada e concernente aos
+padrões ou esquemas de metadados utilizados no escopo da preservação digital. A partir da
+análise do conteúdo da revisão da literatura especializada, foram reconhecidas e
+sistematizadas algumas definições e classes para metadados; o conceito de metadados de
+preservação e as informações requeridas para a preservação de longo prazo; além dos
+principais padrões de metadados utilizados no suporte ao gerenciamento da preservação
+digital. O presente trabalho se propõe então a apresentar os resultados e análises destes
+conteúdos.
+O resultado deste mapeamento e análise vislumbrou contribuir para possíveis
+delimitações do conjunto de diretrizes e políticas a serem adotadas pelas instituições
+interessadas e/ou envolvidas com a preservação e o acesso ao longo do tempo de informações
+digitais.
+2 METADADOS: definições e classificações
+A concepção de metadados está fundamentada na tradicional atividade de catalogação
+em bibliotecas, cuja principal função é descrever um recurso informacional de forma única,
+multidimensionando suas formas de acesso, garantindo sua recuperação pelo usuário final,
+num ambiente/sistema informacional (convencional ou digital).
+O ambiente digital pode ser retratado, segundo Campos (2002) e Saramago (2002),
+como aquele que se caracteriza pela fragilidade, volatilidade e permanente dinâmica. Por sua
+vez, os objetos digitais a serem mantidos, sejam eles nascidos digitais ou digitalizados, são
+também dinâmicos e vulneráveis quanto a sua alta dependência de tecnologias que se tornam
+obsoletas rapidamente ou que são danificadas fisicamente (FORMENTON; GRACIOSO;
+CASTRO, 2015).
+
+Há na literatura científica da área de Ciência da Informação várias definições e
+conceitos sobre metadados e padrões de metadados. Neste trabalho nos deteremos ao conceito
+de metadados determinado por Grácio (2012, p.121), pois este contempla as principais
+características e metodologias para garantir a preservação digital. Os metadados referem-se à
+“[...] um conjunto de dados, chamados ‘elementos’, cujo número varia de acordo com o
+padrão adotado, e que descreve o recurso, possibilitando a um usuário ou a um mecanismo de
+busca acessar e recuperar esse recurso”.
+Através de Barbedo, Corujo e Sant’Ana (2011) são observadas múltiplas categorias
+funcionais de tipos de metadados, que são assim entendidas:
+ Metadados descritivos ou de identificação – visam à pesquisa, recuperação e identificação.
+Podem conter elementos como, por exemplo, título, autor, assunto e palavras-chave.
+ Metadados estruturais – vinculam de forma hierárquica distintos objetos digitais (textos,
+imagens, áudios etc.) integrantes de um mesmo documento ou recurso informacional.
+ Metadados administrativos – dispõem informações que suportam a gerência dos recursos
+arquivísticos eletrônicos. Incluem de que forma e em que ocasião os recursos foram
+gerados, espécie de ficheiro ou de arquivo de computador e demais informações técnicas,
+além dos titulares com direitos ou permissões de acesso.
+ Metadados técnicos – especificam os aspectos técnicos dos arquivos e dos seus formatos.
+ Metadados de preservação – incluem informações requeridas ao arquivamento e
+salvaguarda dos objetos digitais ao longo do tempo.
+Para os propósitos da presente investigação destacaremos a categoria de metadados
+relativos à preservação de longo prazo, uma vez que são fundamentais para a consecução de
+uma efetiva gerência e preservação dos recursos/objetos digitais.
+3 METADADOS PARA A PRESERVAÇÃO DIGITAL
+Os metadados de preservação são essenciais para a preservação digital. De acordo com
+Sayão (2010, p.10) estes tipos de metadados são conceituados “[...] de uma forma simples e
+direta, como a informação que apoia e documenta a preservação de longo prazo de materiais
+digitais”. Em Saramago (2004, p.1) compreende-se por metadados de preservação “[...] como
+informação de apoio aos processos associados com a preservação digital de longo prazo”.
+Para Arellano (2008) tratam-se daqueles associados ao conteúdo do recurso, seu contexto e
+estrutura de criação/produção, além das alterações ocorridas em todo o seu ciclo de vida.
+Reunindo as ponderações de Barbedo, Corujo e Sant’Ana (2011), Campos e Saramago
+(2007), National Museum of Australia (2012), Saramago (2004), Sayão (2010) e Grácio
+
+(2012) pode-se identificar algumas das distintas informações e funções inter-relacionadas
+circunscritas pela obtenção, geração, guarda e manutenção de metadados para preservação,
+tais como:
+ Registro do histórico, do hardware, software e outras dependências técnicas, das estruturas
+e das mudanças (de custódia legal e física ou de natureza tecnológica, social etc.)
+suportadas pelos recursos/objetos digitais, no decurso de todo o seu ciclo de vida (isto é,
+criação, seleção e descarte, identificação persistente, descrição e acesso, armazenamento e
+preservação).
+ Documentação das tomadas de decisão e atos de preservação, dos métodos de preservação
+e seus resultados, das ações de gestão de coleções e direitos, além dos próprios metadados,
+de modo a apoiar os processos ou as iniciativas correntes e vindouras de preservação
+digital.
+ Suporte à descoberta, localização, recuperação, referência única e persistente, preservação,
+acesso, utilização, comprovação de autenticidade e integridade, bem como gestão de
+direitos de propriedade intelectual de objetos arquivísticos e museológicos digitais ou
+eletrônicos.
+ Assistência à uma ideal gerência dos objetos digitais, dos sistemas de informação (registros
+de correspondência e de documentos, registros de funcionamento dos sistemas e seus
+acessos por intermédio de práticas de auditorias mantidas pelos serviços de TIC, por
+exemplo), da comunidade usuária e das funcionalidades a serem oferecidas.
+Em suma, os metadados de preservação registram informações do conteúdo de
+recursos digitais e dados administrativos, estruturais e técnicos para preservação digital. Esses
+metadados propiciam a preservação por longo prazo e o acesso contínuo aos objetos digitais,
+com garantias de autenticidade, de integridade e de confiabilidade. Neste cenário, a
+determinação e, possivelmente, adaptação de padrões de metadados torna-se uma ação
+indispensável e complexa, devendo-se incorporar os vários tipos específicos de processos e de
+recursos digitais tratados e preservados, o rol abundante de informações a serem registradas e
+fornecidas e, ainda, as decisões tomadas diante de um futuro de imprevisões intrínsecas à
+preservação em ambientes digitais.
+
+4 DOS ESQUEMAS E PADRÕES DE METADADOS
+A organização dos metadados dá-se em estruturas formais chamadas de esquemas de
+metadados, que consistem de conjuntos de elementos concebidos para um fim específico,
+como a descrição de um certo tipo de recurso de informação. Na literatura, as expressões
+“esquema”, “formato”, “sistema” e “conjuntos de elementos” têm sido usadas indistintamente
+para se referir a padrões de metadados (CHAN; ZENG, 2006; NATIONAL INFORMATION
+STANDARDS ORGANIZATION, 2004). De acordo com Zeng e Qin (2008, p. 323, tradução
+nossa) o esquema de metadados (Metadata schema) pode ser considerado como:
+Uma especificação processavelmente por máquinas que define a estrutura, a
+codificação de sintaxe, regras, e formatos para um conjunto de elementos de
+metadados em uma linguagem formal num esquema. Na literatura o termo
+“metadata schema” usualmente refere-se ao conjunto de elementos na sua
+totalidade, assim como a codificação dos elementos e a estrutura com uma
+linguagem de marcação.
+
+De fato, o “esquema” é uma entidade total contendo os componentes semânticos e de
+conteúdo (tidos como um “conjunto de elementos”), bem como a codificação dos elementos
+com uma sintaxe ou linguagem de marcação, como Standard Generalized Markup Language
+(SGML) e Extensible Markup Language (XML). Assim, um conjunto de elementos de
+metadados dispõe de dois componentes básicos: 1) Semântica – as definições ou os
+significados dos elementos e seus refinamentos; e 2) Conteúdo – as declarações ou as
+instruções de quais e como os valores devem ser atribuídos para os elementos. Para cada
+elemento definido, um padrão de metadados geralmente especifica regras de conteúdo para
+como o conteúdo deve ser criado ou incluído (por exemplo, como identificar o título
+principal), regras de representação para conteúdo (por exemplo, padrões de representação do
+tempo) e valores de conteúdo admissíveis (isto é, se os termos devem ser tomados a partir de
+um vocabulário controlado específico ou podem ser providos pelo autor, derivados do texto,
+ou aditados pelo trabalho de criadores de metadados sem uma lista de termos controlados).
+Pode haver ainda regras de sintaxe para codificação dos elementos e seu conteúdo (CHAN;
+ZENG, 2006; NATIONAL INFORMATION STANDARDS ORGANIZATION, 2004).
+Da revisão e da análise da literatura pode-se identificar variados padrões ou esquemas
+de metadados usados para a descrição de recursos em distintos domínios. Múltiplos padrões
+de metadados vêm sendo elaborados para uma extensa diversidade de usos e âmbitos
+específicos, todavia, os esquemas são delimitados por seus próprios conjuntos de elementos
+de metadados, particularidades e domínios de utilização. A seguir são discutidos alguns dos
+principais e mais correntes padrões apontados pela literatura especializada para a preservação
+
+digital, contudo, não serão descritos todos os elementos de cada padrão e sim será feita a
+menção somente aos elementos que fazem parte da análise dos resultados, momento em que é
+apresentado o mapeamento e a indicação de elementos para a preservação digital. Os
+elementos de todos os padrões elencados poderão ser consultados na íntegra em Formenton
+(2015), assim com outras informações complementares relacionadas ao assunto deste
+trabalho.
+4.1 PADRÃO DUBLIN CORE
+O padrão Dublin Core (DC) tem sua origem em Chicago, na 2ª Conferência
+Internacional World Wide Web, em 1994, numa discussão sobre semântica e a Web enfocada
+na dificuldade da descoberta de recursos de informação. Posteriormente, a Online Computer
+Library Center (OCLC) e o National Center for Supercomputing Applications (NCSA)
+organizaram um evento em Dublin, Ohio, em 1995. No evento, intitulado de "OCLC/NCSA
+Metadata Workshop", mais de 50 profissionais debateram como um conjunto semântico seria
+útil para a busca e a recuperação de recursos baseados na Web. Como resultado definiu-se um
+conjunto básico de elementos de metadados chamado “Dublin Core”, em razão do local do
+evento (DUBLIN CORE METADATA INITIATIVE, c2015; HARPER, 2010).
+Existem dois níveis no padrão DC: Simples e Qualificado. Sendo assim, o DC Simples
+inclui quinze elementos; e o DC Qualificado compreende três elementos adicionais
+(Audiência, Proveniência e Detentor de Direitos), assim como um grupo de refinamentos ou
+qualificadores de elementos, que aperfeiçoam a semântica dos elementos de maneira que
+possam ser úteis na descoberta de recursos. O DC apresenta algumas características, que
+refletem também os seus objetivos, dentre os quais são as seguintes: simplicidade,
+interoperabilidade semântica, consenso internacional, extensibilidade e flexibilidade.
+(GRÁCIO, 2012; HILLMANN, 2005).
+O DC está entre os padrões mais usados por comunidades internacionais para
+descoberta de recursos no domínio Web. É representado por meio de diversas sintaxes como,
+por exemplo, codificado em HyperText Markup Language (HTML), ou em Resource
+Description Framework (RDF) usando XML. Embora o DC tenha uma capacidade descritiva
+para prestar o acesso e seja um expoente de interoperabilidade na Web, este esquema é muito
+simples e menos eficaz quanto à preservação digital e à efetuação do papel dos metadados
+administrativos e estruturais de documentar, por exemplo, o histórico de estratégias de
+preservação adotadas no recurso digital e os componentes de hardware e software
+(CAMPOS; SARAMAGO, 2007; HILLMANN, 2005).
+
+4.2 PADRÃO MODS
+Criado pela Library of Congress (LC) e disponível em 2002, o esquema de metadados
+bibliográficos Metadata Object Description Schema (MODS) pode ser aplicado para objetos
+de bibliotecas digitais. Expresso em XML, o MODS contém um subconjunto de campos
+MARC 21 e utiliza elementos textuais, ao invés de códigos numéricos, possibilitando uma
+fácil compreensão.
+Atualmente na versão 3.6, o padrão MODS apresenta um conjunto de vinte elementos
+de metadados descritivos principais (LIBRARY OF CONGRESS, 2014).
+O esquema MODS fornece informações bibliográficas importantes que apoiam outros
+padrões expressos em XML, como o Metadata Encoding and Transmission Standard (METS)
+e o PREservation Metadata: Implementation Strategies (PREMIS). Sob o enfoque da
+preservação digital, três elementos MODS merecem atenção: Informação de Origem, Item
+Relacionado e Condição de Acesso. Estes elementos registram informações que são úteis para
+auxiliar os metadados de preservação na corroboração da proveniência, autenticidade e
+integridade dos objetos digitais, bem como no reconhecimento dos direitos associados ao
+recurso que podem intervir, sobretudo, na realização das ações de preservação, de acesso e de
+utilização dos seus respectivos conteúdos.
+4.3 PADRÃO EAD
+O padrão Encoded Archival Description (EAD) tem seu início num projeto da
+biblioteca da Universidade da Califórnia, Berkeley, em 1993. Este projeto investigou a
+oportunidade e a viabilidade de desenvolver um padrão de codificação não-proprietário para
+instrumentos de pesquisa legíveis por computador, tais como índices, registros, inventários,
+ou guias elaborados por arquivos, bibliotecas, museus e repositórios de manuscritos, que
+proporcionam informações acerca de determinadas coleções de materiais arquivísticos.
+Conforme Andrade (2007), Barbedo et al. (2007), Gama e Ferneda (2010) e Society of
+American Archivists (2002), na versão de 2002 um documento EAD contém três partes.
+Na preservação digital o uso do EAD é cabível, pois para Barbedo, Corujo e Sant’Ana
+(2011), trata-se de um esquema completo e que atende as normas de descrição arquivística.
+Os padrões de metadados descritivos, tal como o DC, o MODS e o próprio EAD, apesar de
+serem mais propícios à descoberta e recuperação de recursos ao invés da preservação de longo
+prazo, são esquemas importantes para o registro de algumas informações de apoio aos
+metadados de preservação, no tocante à proveniência, autenticidade, integridade, contexto
+
+técnico, direitos, e à custódia/propriedade dos recursos armazenados num repositório de
+preservação digital.
+4.4 PADRÃO ANSI/NISO Z39.87
+O padrão American National Standards Institute (ANSI)/National Information
+Standards Organization (NISO) Z39.87 tem sua origem no “Image Metadata Workshop”,
+evento patrocinado pela NISO, Council on Library and Information Resources (CLIR) e
+Research Libraries Group (RLG), em abril de 1999, que se propôs a promover um trabalho
+cooperativo para determinar um conjunto de elementos de metadados para documentar
+atributos técnicos de imagens fixas digitais. Na norma ANSI/NISO Z39.87-2006 (R2011) os
+elementos visam ser harmônicos com os metadados de preservação do PREMIS, sendo que
+um esquema em XML, aludido como NISO Metadata for Images in XML (MIX), está em
+construção para intercambiar e/ou armazenar os elementos de metadados técnicos
+especificados na ANSI/NISO Z39.87-2006 (NATIONAL INFORMATION STANDARDS
+ORGANIZATION, c2011).
+Através de National Information Standards Organization (c2011), a versão atual de
+2011 agrupa os elementos do padrão ANSI/NISO Z39.87 em cinco principais seções.
+O ANSI/NISO Z39.87 não tem como escopo metadados para o registro da
+proveniência, autenticidade, integridade, ou dos direitos e propriedade intelectual de imagens.
+Na preservação digital o uso do padrão pode ser contextualizado através de dois projetos
+notáveis: em Portugal, o Repositório de Objectos Digitais Autênticos (RODA) da DireçãoGeral do Livro, dos Arquivos e das Bibliotecas (DGLAB) e da Universidade do Minho; e nos
+Estados Unidos, University of Houston Digital Library (UHDL). Para a guarda de metadados
+de preservação, estruturais e descritivos o RODA utiliza, nessa ordem, o PREMIS, o METS e
+o EAD, tendo o Z39.87 de apoio ao PREMIS na guarda de metadados técnicos de imagens.
+Por outro lado, a UHDL preserva registros METS gerados por softwares (JHOVE e 7train)
+através de metadados descritivos DC e de metadados técnicos MIX (BARBEDO et al., 2007;
+CHEN; REILLY, 2011; NATIONAL INFORMATION STANDARDS ORGANIZATION,
+c2011).
+4.5 PADRÃO METS
+O METS teve como antecedente o projeto Making of America II (MOA2), que
+forneceu um esquema de codificação para metadados para obras textuais e baseadas em
+imagens. Usando a linguagem XML, o METS concede um padrão para codificação de
+metadados – descritivos, administrativos e estruturais – tanto para a administração de objetos
+
+de bibliotecas digitais num repositório como também para o intercâmbio destes objetos
+digitais entre repositórios (ou entre repositórios e seus usuários).
+Segundo Barbedo et al. (2007), Campos e Saramago (2007), Grácio (2012), Library of
+Congress (2011) e Sayão (2010) um documento METS compõe sete principais seções.
+O METS é relevante na preservação digital, pois está escrito em XML, entretanto, a
+flexibilidade na implementação do METS pode inibir o intercâmbio de registros causando
+assim problemas de interoperabilidade entre sistemas; e na utilização do METS com o
+PREMIS pode ocorrer duplicações ou, ainda, uma parcial harmonia entre seus elementos
+(LAVOIE; GARTNER, 2013; RODRIGUES, 2008; SAYÃO, 2010).
+4.6 PADRÃO PREMIS
+O PREMIS denota o nome de um grupo de trabalho internacional patrocinado pela
+RLG e OCLC, no período de 2003 a 2005. Tal grupo de trabalho produziu um relatório final
+chamado “PREMIS Data Dictionary for Preservation Metadata”, que define um conjunto de
+metadados básicos, implementáveis e de ampla aplicação, para apoiar a preservação digital
+em sistemas de repositórios. O Dicionário de Dados PREMIS, atualmente na versão 3.0,
+propicia orientações para o preenchimento e o gerenciamento dos metadados de preservação.
+Com base em Barbedo et al. (2007), Campos e Saramago (2007), Caplan (2009) e
+Sayão (2010), o Dicionário de Dados PREMIS organiza-se de acordo com um modelo de
+dados que correlaciona cinco tipos de entidades compreendidas nos processos de preservação
+digital.
+Promovido pela LC, o PREMIS Maintenance Activity oferece um esquema XML que
+corresponde diretamente ao Dicionário de Dados, permitindo a descrição de objetos, eventos,
+agentes e direitos, assim como a utilização do PREMIS representado em XML para a gerência
+e o intercâmbio de metadados entre sistemas de preservação.
+
+5 ANÁLISE DOS PADRÕES DE METADADOS À LUZ DA PRESERVAÇÃO
+DIGITAL
+Os padrões DC, MODS, EAD, ANSI/NISO Z39.87, METS e PREMIS tem um
+conjunto de características em comum e algumas particularidades. As ponderações feitas
+respaldaram-se nos requisitos para a preservação digital, no modelo de informação SAAI6 e
+nas informações registradas e expressas pelos metadados de preservação. O Quadro 1 sintetiza
+o escopo, os aspectos elementares dos padrões e os elementos de metadados julgados nesta
+investigação como importantes para a preservação digital.
+
+6
+
+O modelo Open Archival Information System (OAIS) ou Sistema Aberto de Arquivamento de
+Informação (SAAI), do Consultative Committee for Space Data Systems (CCSDS) e da ISO, é um
+esquema conceitual que regulariza e coordena um sistema de arquivamento direcionado para a
+preservação e manutenção do acesso à informação digital por longo período. Neste esquema
+conceitual temos um modelo de informação para a incorporação dos metadados requeridos na
+preservação e acesso de informação digital a longo prazo, onde são observados três pacotes de
+informação, a saber: o PSI, pacote expedido do produtor para o arquivo SAAI; o PAI, pacote
+armazenado, administrado e protegido de modo efetivo no interior do arquivo, incluindo o material
+que será mantido e a informação necessária para sua representação e preservação de longo prazo; e o
+PDI, pacote transportado do arquivo para um cliente/consumidor em resposta a uma solicitação ou
+pesquisa de acesso. Estes pacotes são reservatórios ou contêineres que encapsulam a Informação de
+Conteúdo (isto é, recurso/conteúdo a ser arquivado e preservado) e sua Informação de Descrição de
+Preservação (ou seja, múltiplos metadados de apoio a gerência da preservação de longo prazo), e que
+também propiciam os fluxos de informação. A Informação de Descrição de Preservação divide-se em
+quatro subtipos: Informação de referência, Informação de contexto, Informação de proveniência e
+Informação de fixidade. O SAAI é especificado na norma nacional Associação Brasileira de Normas
+Técnicas (ABNT) NBR 15472:2007 Sistemas espaciais de dados e informações - Modelo de
+referência para um SAAI (THOMAZ, 2004; THOMAZ; SOARES, 2004).
+
+Quadro 1 – Padrões e elementos de metadados de apoio à preservação digital.
+Padrão
+
+Características
+
+DC
+Qualificado
+
+- Esquema flexível e extensível de metadados
+descritivos para descoberta de recursos Web.
+- Mantido pela DCMI vêm sendo muito
+usado por comunidades internacionais.
+- Pode ser representado em XML e propicia
+interoperabilidade de dados na Web.
+
+MODS
+
+- Esquema XML aplicável aos objetos de
+bibliotecas digitais e mantido pela LC.
+- Elementos descritivos herdam a semântica
+dos elementos MARC 21.
+- É mais simples que MARC completo e mais
+rico que o DC Qualificado.
+
+Elementos de metadados úteis para
+a preservação digital
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+EAD
+
+- Esquema XML e uma DTD para codificar
+instrumentos de pesquisa arquivísticos.
+- Mantido pela LC junto com a SAA.
+- Compatível com as normas de descrição
+arquivística, tal como a ISAD(G).
+
+
+
+
+Título
+ Relação
+Criador
+ Cobertura
+Descrição
+ Direitos
+Data
+ Detentor de
+Direitos
+Formato
+Identificador  Proveniência
+Fonte
+Informação
+ Identificador
+de Título
+ Localização
+Nome
+Informação
+ Parte
+de Origem
+ Condição de
+Descrição
+Acesso
+Física
+Índice
+ Informação de
+Item
+Registro
+Relacionado
+Cabeçalho EAD
+Descrição Arquivística
+
+Escopo
+ Padrão para suporte a descoberta
+de recursos eletrônicos na Web
+(CAMPOS; SARAMAGO, 2007;
+GRÁCIO, 2012; SAYÃO, 2010).
+
+ Padrão de metadados descritivos
+derivado do esquema bibliográfico
+MARC 21, cujo o enfoque são os
+recursos eletrônicos e os serviços
+de biblioteca (NATIONAL
+INFORMATION STANDARDS
+ORGANIZATION, 2004).
+
+ Padrão para codificação de
+instrumentos arquivísticos de
+acesso, tais como inventários,
+índices, dentre outros
+(ANDRADE, 2007; BARBEDO et
+al. 2007; BARBEDO; CORUJO;
+SANT’ANA, 2011; CHAN;
+ZENG, 2006).
+
+ANSI/NIS
+O Z39.87
+
+METS
+
+PREMIS
+
+- Inclui metadados técnicos para gestão de
+coleções de imagens fixas digitais.
+- Implementado e adotado via esquema XML
+NISO MIX mantido pela LC.
+- Compreende metadados para preservação e
+metadados administrativos.
+
+ Informação Básica do Objeto
+Digital
+ Informação Básica da Imagem
+ Metadados de Captura da Imagem
+ Metadados de Avaliação da
+Imagem
+ Histórico de Mudança
+
+- Esquema XML mantido pela LC para
+gestão de objetos de biblioteca digital.
+- Pode implantar e padronizar os pacotes PSI,
+PAI ou PDI no modelo SAAI.
+- Organiza e expressa relações hierárquicas e
+hiperligações entre os objetos e suas partes.
+- Inclui DC, MODS, EAD e MIX na seção de
+Metadados Descritivos, e pode ter o PREMIS
+na seção de Metadados Administrativos.
+- Esquema XML de metadados para suporte a
+preservação digital em repositórios.
+- É mantido pela LC, focaliza o sistema e sua
+gerência e define unidades semânticas.
+- Pode ter apoio do DC, MODS, EAD e MIX
+na verificação da autenticidade, integridade,
+procedência ou direitos relativos aos objetos
+mantidos num repositório digital.
+
+
+
+
+
+
+
+Cabeçalho METS
+Metadados Descritivos
+Mapa Estrutural
+Ligações Estruturais
+Comportamento
+
+
+
+
+
+
+
+Entidade Intelectual
+Objeto
+Eventos
+Agentes
+Direitos
+
+Fonte: Elaborado pelos autores.
+
+ Padrão de metadados técnicos para
+desenvolver, intercambiar e
+interpretar arquivos de imagem
+fixa digital, facilitar a
+interoperabilidade entre sistemas,
+serviços e software, assim como
+apoiar a gestão a longo prazo e o
+contínuo acesso a coleções de
+imagens digitais (BARBEDO et
+al. 2007; NATIONAL
+INFORMATION STANDARDS
+ORGANIZATION, 2004, c2011).
+ Padrão para codificar metadados
+descritivos, administrativos e
+estruturais sobre objetos digitais
+num repositório (ALMEIDA;
+CENDÓN; SOUZA, 2012;
+BARBEDO et al. 2007;
+CAMPOS; SARAMAGO, 2007).
+
+ Padrão que define um conjunto de
+elementos básicos para codificar,
+armazenar, gerir e intercambiar
+metadados de preservação no
+contexto de um sistema de
+repositório para preservação
+digital (ARELLANO, 2008;
+CAMPOS; SARAMAGO, 2007;
+SAYÃO, 2010).
+
+A princípio, é notável frisar que todos estes padrões apontados podem ser
+representados na linguagem computacional XML. Visto que é um padrão aberto, não
+proprietário e entendível por aplicações variadas, a linguagem XML apoia as demandas de
+preservação de longo prazo e propicia o intercâmbio de dados entre sistemas, além de
+favorecer o uso combinado de diferentes esquemas, como o METS e o PREMIS com as
+informações descritivas do DC, MODS, EAD ou MIX. Ademais, temos a DCMI, no caso do
+DC, e o Network Development and MARC Standards Office da LC, para os outros padrões,
+onde padronizam a descrição e a representação das informações através de vocabulários
+controlados ou esquemas de codificação internacionalmente reconhecidos.
+Utilizar conjuntamente distintos padrões de metadados torna-se plausível em razão dos
+tipos de recursos para serem descritos e dos vários processos de preservação digital. Não
+apenas os metadados para preservação são importantes, mas também os metadados
+descritivos, estruturais, administrativos e técnicos auxiliam o alcance da preservação por
+longo prazo. Desta maneira, não há como afirmar qual é o único esquema de metadados
+existente que assegure totalmente a preservação digital e, sim, que diferentes padrões podem
+trabalhar juntos, de modo a se auto complementarem para o registro eficaz das informações
+requeridas, na gestão da preservação e do acesso utilizável ao longo do tempo de
+objetos/recursos digitais.
+Dentre os elementos de metadados que são relevantes e recorrentes em todos os
+padrões indicados estão os identificadores. Uma vez que os objetos digitais são frágeis,
+dinâmicos e volúveis, os identificadores provêm o acesso contínuo e confiável para os objetos
+como a localização ou a referência única e indubitável para estes em todo o seu ciclo de vida.
+O registro de informações de identificadores locais ou persistentes manifestam os metadados
+para preservação delineados na Informação de Descrição de Preservação (em especial,
+referência) do modelo SAAI, além do requisito de localizar e rastrear o objeto ao longo do
+tempo.
+Os padrões DC, MODS e EAD são mais aplicáveis a descrição de recursos para fins
+de sua descoberta, busca, recuperação ou localização. Embora a eficácia dos esquemas
+apontados esteja intrinsicamente atrelada à etapa de acesso do que propriamente para a
+preservação, alguns dos seus elementos são relevantes para auxiliar os metadados de
+
+preservação PREMIS. Assim, as informações descritivas destes padrões apoiam tanto os
+requisitos de manter a autenticidade, a proveniência e o contexto do objeto digital como os
+metadados de preservação na Informação de Descrição de Preservação (principalmente,
+contexto e proveniência) do modelo SAAI.
+Sob o enfoque da preservação por longo prazo destacam-se os seguintes padrões:
+
+
+DC Qualificado: Título, Criador, Descrição, Data, Formato, Identificador, Fonte,
+Relação, Cobertura, Direitos, Detentor de Direitos e Proveniência.
+
+
+
+MODS: Informação de Título, Nome, Informação de Origem, Descrição Física,
+Índice, Item Relacionado, Identificador, Parte, Localização, Condição de Acesso e
+Informação de Registro.
+
+
+
+EAD: Cabeçalho EAD e Descrição Arquivística.
+Embora esteja fora do seu escopo, os metadados técnicos ANSI/NISO Z39.87 ou MIX
+
+podem ser usados com o PREMIS na comprovação da procedência, autenticidade e
+integridade de imagens digitais. Além de metadados sobre os aspectos técnicos de imagens, o
+ANSI/NISO Z39.87 possui também metadados de preservação e administrativos. Isto posto,
+todas as seções de metadados Z39.87 devem ser levadas em consideração, visto que amparam
+os metadados de preservação na Informação de Descrição de Preservação (contexto,
+proveniência e fixidade) e os requisitos de salvaguardar a autenticidade, a proveniência e o
+contexto do objeto digital.
+Por sua vez, o METS pode atuar na padronização dos pacotes de informação PSI, PAI
+ou PDI no modelo SAAI, armazenando metadados – descritivos, estruturais, administrativos e
+de preservação – associados a um objeto digital num sistema. É útil para simplificar a ordem e
+a gerência das partes constituintes de objetos complexos (Seção de Arquivos) e seus
+metadados, ou expressar as relações hierárquicas e hiperligações (Mapa Estrutural e Ligações
+Estruturais) entre os vários arquivos que compõem os objetos ou entre diferentes objetos
+digitais. Algumas seções num documento METS são notáveis para a preservação, dando
+suporte aos requisitos de manter o contexto e as funcionalidades do objeto digital e para os
+metadados de preservação na Informação de Descrição de Preservação (especialmente,
+contexto), tais como: Cabeçalho METS, Mapa Estrutural, Ligações Estruturais e
+Comportamento.
+Em razão do PREMIS refletir diretamente o modelo de informação SAAI e os
+requisitos de preservação digital, todas as suas entidades ou seções de metadados são
+significantes. Tendo em vista as discussões realizadas neste trabalho consideramos que, num
+sistema de repositório baseado no SAAI, o METS pode ser utilizado como um esquema
+
+central para a administração dos objetos digitais, englobando os padrões DC, MODS, EAD e
+MIX na seção de Metadados Descritivos, além do padrão PREMIS na seção de Metadados
+Administrativos. Todavia, temos que ponderar também a ocorrência de problemas de
+duplicação, sobreposição e equivalência entre os conjuntos de metadados no uso
+concomitante destes diferentes esquemas.
+6 CONSIDERAÇÕES FINAIS
+Os desafios da preservação digital estão associados à natureza dos objetos digitais e
+seu ambiente, à obsolescência tecnológica e aos direitos de propriedade intelectual. É
+desejável não apenas salvaguardar o acesso contínuo aos conteúdos, mas também assegurar
+que os objetos sejam localizados ao longo do tempo somado à preservação do leiaute, das
+funcionalidades, da origem e do contexto, o qual suportam a comprovação de sua
+autenticidade e integridade. Estes aspectos refletem basicamente os requisitos para
+consecução da preservação de longo prazo.
+Existem diferentes estratégias para o processo de preservação digital. Em razão de sua
+ampla aplicação em instituições e da não exigência de grandes recursos, a migração demostra
+ser útil para a maioria das políticas institucionais de preservação digital. A adoção de
+metadados para preservação apoia a administração dos processos relativos ao arquivamento e
+à manutenção do acesso à informação digital a longo prazo, com garantias de autenticidade,
+de integridade e de confiabilidade.
+Os padrões de metadados podem propiciar a interoperabilidade dos objetos digitais,
+oferecer ou orientar o uso de vocabulários controlados e esquemas de codificação, bem como
+possibilitar a descrição conjunta ou a incorporação de metadados provindos de outros
+esquemas XML.
+Na pesquisa foram identificados, sistematizados e analisados os padrões de metadados
+para a preservação digital, articulados à Ciência da Informação e a áreas afins. Os metadados
+descritivos e técnicos do DC, MODS, EAD e ANSI/NISO Z39.87 ou MIX, possuem um papel
+mais direcionado a amparar o METS e o PREMIS, tanto na descoberta e no registro dos
+aspectos técnicos do objeto digital, como na comprovação de sua procedência, autenticidade,
+contexto e integridade. Englobando metadados descritivos, estruturais, administrativos e de
+preservação do PREMIS, o METS pode gerir os objetos digitais atuando como um Pacote de
+Submissão de Informação (PSI), Pacote de Arquivamento de Informação (PAI) ou Pacote de
+Disseminação de Informação (PDI) num SAAI.
+
+Determinados elementos de metadados dos padrões identificados puderam ser
+sinalizados nesta investigação como sendo úteis para a preservação digital em repositórios.
+Nos padrões DC e MODS, por exemplo, os elementos indicados no Quadro 1 incluem
+algumas das informações previstas nos metadados de preservação PREMIS, como os direitos
+de propriedade intelectual e seus detentores, a identificação única para o objeto digital, os
+outros objetos relacionados ao objeto que está sendo descrito e as dependências técnicas do
+objeto.
+Os resultados neste trabalho dispõem um respaldo teórico, técnico e sistematizado de
+esquemas que podem ser utilizados em repositórios institucionais, construídos para atender a
+preservação e o acesso a longo prazo de informações digitais. Os elementos de metadados
+julgados na pesquisa como úteis na preservação digital contribuirão para a escolha dos
+padrões segundo as demandas da instituição, ou para o reconhecimento do conjunto de
+informações necessárias para garantir a preservação e a administração de conteúdos digitais
+em C&T num sistema.
+Destaca-se que a garantia de preservação digital a longo prazo só será possível com a
+adoção efetiva de padrões ou esquemas de metadados, pois são eles que determinarão a
+descrição, a representação, a consistência e a persistência do recurso/objeto digital no
+ambiente informacional, além de definir a interoperabilidade entre sistemas.

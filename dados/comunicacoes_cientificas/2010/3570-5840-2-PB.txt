@@ -1,0 +1,586 @@
+
+Modalidade de apresentação: Comunicação Oral
+
+UMA TECNOLOGIA DE AGRUPAMENTO DE RESPOSTAS PARA REDUÇÃO DE
+ESFORÇO DE CORREÇÃO DE ATIVIDADES EM SISTEMA ONLINE DE APOIO À
+AVALIAÇÃO FORMATIVA EM INDEXAÇÃO
+Resumo. Este trabalho aborda uma metodologia computacional melhorada de avaliação
+formativa para a indexação de documentos textuais. Ela é baseada em um sistema online
+que dá ao usuário total acesso de qualquer lugar do mundo, e em qualquer tempo, a um
+documento que está sendo analisado. Nós testamos esse sistema com alunos de uma
+turma real de graduação em Biblioteconomia e os resultados são que possibilitamos os
+alunos dessa turma realizarem dez vezes mais exercícios, corrigir todos os seus
+exercícios rapidamente e dar prontamente feedback personalizado a cada um desses
+estudantes. Acompanhamos, assim, etapa por etapa do desenvolvimento desses alunos,
+conforme proposto por Perrenoud (1999). No experimento em particular, nós relatamos
+neste artigo que foram corrigidos manualmente mais de 6 mil itens de exercícios, o que
+levou mais de dez horas para um dos autores corrigi-los. Nós mostraremos neste
+trabalho que esse trabalho exaustivo é válido para o benefício do processo de
+aprendizagem dos estudantes, mas pode atenuar a estratégia implementada no âmbito do
+sistema que propomos. Nosso objetivo final é melhorar a capacidade de ensino para
+turmas grandes e aumentar a capacidade de aprendizagem dos alunos assim como a
+qualidade do nosso processo de ensino. Este trabalho confirma que estamos no caminho
+para essa meta.
+Palavras-Chave: sistema de avaliação formativa; indexação; correção de atividades;
+clusterização automática.
+
+
+1 INTRODUÇÃO
+Os debates mais ou menos complexos gerados no seio da academia ou fora desse ambiente
+tendem a caracterizar o processo de formação universitária pela abordagem interdisciplinar do
+conhecimento. Essa tendência recente, de certa forma, é notada a partir da década de sessenta do
+século XX, em países europeus, e da década seguinte, no Brasil (FAZENDA, 1994).
+A interdisciplinaridade supõe um eixo integrador, que pode ser o objeto de conhecimento,
+um projeto de investigação, um plano de intervenção. Nesse sentido, ela deve partir da
+necessidade sentida pelas escolas, professores e alunos de explicar, compreender, intervir,
+mudar, prever, algo que desafia uma disciplina isolada e atrai a atenção de mais de um
+olhar, talvez vários (BRASIL, 2002, p. 88-89, grifo nosso).
+
+Esse tal eixo integrador se concretiza nesta pesquisa pelo diálogo entre as áreas da Ciência
+da Informação/Biblioteconomia e Ciência da Computação/Informática. O grau de aproximação
+entre ambas as áreas ocorre “[...] principalmente pelo caráter aplicado e técnico da CI [Ciência da
+Informação], caráter esse impulsionado pelas tecnologias digitais em constante evolução desde o
+século anterior – muitas vezes denominadas tecnologias da informação” (SILVA; LIMA; ARAÚJO,
+2009).
+Buscamos nos recursos propiciados pelas tecnologias digitais reduzir o tempo e esforço
+exaustivos dedicados à correção de atividades de indexação, como processo de análise
+documentária, dirigidas a alunos do curso de graduação em Biblioteconomia da Universidade
+Federal do Espírito Santo (UFES).
+Concebemos a definição do tipo operacional para exposição do significado de processo de
+indexação, porque neste caso o exemplo fornecido tende a auxiliar a compreensão tornando clara a
+experiência no mundo real (LAKATOS; MARCONI, 2001).
+O processo de indexação, portanto, compreende dois estágios: o analítico, em que é
+realizada a compreensão do texto como um todo, a identificação e a seleção de conceitos
+válidos para a indexação e o estágio de tradução, que consiste na representação de
+conceitos por termos de uma linguagem de indexação (FUJITA, 2003, p. 63, grifo nosso).
+
+Esses estágios, às vezes se sobrepõem em três níveis sem perderem a essência que constitui o
+processo de indexação. Citamos como exemplo a Norma 12676 (ASSOCIAÇÃO..., 1992). Segundo
+Fujita e Silva (2004, p. 154), essa norma consiste em uma tradução da Norma ISO 5696 de 1985.
+Os conteúdos curriculares referentes ao processo de indexação são introduzidos na unidade
+III do programa da disciplina de Representação Temática I do curso de graduação em
+Biblioteconomia da UFES. Ao levarmos em conta que “A natureza do índice é determinada
+[também] pelo conteúdo do material que está sendo indexado [...]” (CAVALCANTI, 1978, p. 15,
+
+
+grifo da autora), aplicamos esses conteúdos curriculares na unidade III da disciplina de
+Representação Temática II, junto a outros de igual importância às abordagens sobre índice de
+assuntos como um produto gerado pela indexação. A carga horária igual a de 60 horas é destinada a
+cada uma das disciplinas ministradas em semestres letivos distintos.
+Como se uma espécie de desafio da área da Educação tivesse sido colocado à Ciência da
+Informação/Biblioteconomia e a Ciência da Computação/Informática, buscamos respostas a
+questão-problema que compreende dificuldades na dinâmica de correção de exercícios práticos
+propostos ao aluno sobre o processo de indexação por assunto.
+Orientados pela questão-problema perseguimos nesta pesquisa o objetivo de descobrir
+estratégias mais dinâmicas de correção de exercícios de modo que sejam solucionadas as
+dificuldades relativas ao tempo e esforço exaustivos dedicados a essa correção.
+Experiência similar a esta que buscamos vem sendo vivida há cerca quatro semestres pela
+disciplina de Representação Temática III, ofertada no mesmo Curso e Instituição mencionados.
+Trata-se de uma metodologia para avaliação formativa em um ambiente de ensino e aprendizagem
+de classificação em Biblioteconomia proposta por Oliveira; Oliveira e Zandonade (2008).
+Acreditamos com base no exposto que pavimentar caminhos como possibilidade de uma
+área ou disciplina aceitar o desafio recíproco de intervir em dada realidade que traz inquietações à
+outra, consiste em algo atrativo à atenção de docentes do Departamento de Biblioteconomia da
+UFES que atuam na área curricular de Organização e tratamento da informação, em especial.
+Estreitamos os relacionamentos para ampliar diálogos mediante a formação de equipes
+interdisciplinares, de modo que se encontrem novos olhares sobre a dinâmica do processo de
+ensino-aprendizagem.
+Diante do escopo e das nuances apresentadas em relação à problemática das estratégias de
+avaliação do processo de indexação por assunto, este trabalho apresenta uma metodologia
+computacional de apoio à avaliação formativa de indexação através de um Sistema Online de
+Atividades de Indexação.
+Na primeira aplicação do Sistema Online de Indexação em uma turma real do curso de
+Biblioteconomia da UFES, os alunos realizaram através de uma interface web atividades de
+indexação como processo de análise documentária.
+No processo de correção dessas atividades, no entanto, observou-se que a demanda de tempo
+e esforço exigidos do professor para análise das respostas às atividades dos alunos era muito grande.
+Com isso, as ações formativas desse professor através do Sistema Online de Atividades de
+
+Indexação eram dificultadas. Para resolver esse problema, experimentamos uma tecnologia da área
+da Recuperação da Informação, a clusterização automática (STEINBACH; KARYPIS; KUMAR,
+2000), para automatizar praticamente todo o processo de correção de atividades de indexação. Os
+resultados dos experimentos realizados com a aplicação dessa tecnologia foram bastante
+promissores. Isso porque, através da tecnologia de clusterização automática, foi possível reconhecer
+e agrupar com alta precisão grandes quantidades de respostas similares dos alunos nas atividades de
+indexação. Em resumo, mostramos com os resultados alcançados que, com a nossa tecnologia de
+correção automática de atividades de indexação, um professor, em vez de corrigir cerca de 6000
+atividades, pode corrigir em torno de apenas seis dessas atividades.
+Este trabalho está organizado conforme a ordem a seguir. Na Seção 2, é feita a revisão de
+literatura onde serão apontadas tentativas de melhorias no ensino-aprendizagem de indexação e
+iniciativas similares na área de Ciência da Informação. Na Seção 3, são descritas as funcionalidades
+do Sistema Online de Atividades de Indexação. Na Seção 4, é apresentada a metodologia de
+avaliação utilizada atualmente e o processo de correção de atividades dirigidas aos alunos como se
+conhece hoje. Na Seção 5, descrevemos o processo de correção de atividades de indexação em
+mídia eletrônica e uma técnica computacional de correção automática que reduz consideravelmente
+o esforço de correção do professor. Na Seção 6, concluímos com as considerações finais e propostas
+de trabalhos futuros.
+2 REVISÃO DE LITERATURA
+Já desde os anos 70, chamavam-se à atenção os problemas que interferiam na qualidade do
+processo de ensino-aprendizagem em cursos da área de Ciência da Informação.
+
+Em curso de
+
+classificação bibliográfica, por exemplo, Pazim (1976) destacava que ainda se usavam métodos
+tradicionais de ensino e, sendo as turmas muito numerosas, havia dificuldades do
+
+professor
+
+acompanhar a aprendizagem individual de seus alunos assim como realizar a prática assistida de
+exercícios de classificação.
+Depois de três décadas, Aquino (2008) destaca que há ainda uma desvalorização do caráter
+qualitativo da Educação em Ciência da Informação e que isso tem afetado os processos formativos
+da aprendizagem.
+Para Oliveira et al. ( 2008), esses processos formativos, devido ao grande número de
+alunos em turmas de cursos de Biblioteconomia, são dificultados, principalmente, pela carência de
+
+tecnologias e metodologias computacionais que apóiem o processo de ensino-aprendizagem nesses
+cursos.
+Para disciplinas de classificação bibliográfica, no entanto, houve algumas iniciativas de
+agregar tecnologias computacionais ao processo de ensino-aprendizagem. Nos anos 70, por
+exemplo, o computador chegou a ser utilizado como apoio ao ensino de classificação através do
+software CAI (Computer Assisted Instruction) (CHAN; SMITH, 1975). O CAI possibilitava
+feedback imediato nas respostas dos alunos em atividades de classificação e a análise do
+comportamento dos alunos nessas atividades. O grande mérito do CAI, dessa forma, segundo
+Pazim (1976), foi possibilitar uma prática individual e assistida de exercícios em turmas numerosas
+e heterogêneas.
+Embora o uso do computador nos anos 70 tenha representado um importante salto na
+qualidade do ensino-aprendizagem de classificação, de acordo com Pazim (1976), as diversas
+situações de aprendizagem no emprego da tecnologia é que iriam definir a qualidade de ensino e
+não a tecnologia em si.
+Atentando para a importância de se agregar metodologias às tecnologias, Oliveira et al.
+(2008) desenvolveram um Sistema Online de Atividades de Classificação (SOAC) como apoio ao
+processo de ensino-aprendizagem de classificação. Através desse sistema e de técnicas de
+reconhecimento automático de perfis de alunos, a tecnologia auxiliou o professor a diagnosticar
+seus alunos e a realizar ações de avaliação formativa possibilitando a eles maior prática de
+exercícios e um feedbacks mais rápidos.
+Os problemas no processo de ensino-aprendizagem apontados por Pazim (1976), Aquino
+(2008) e Oliveira et al. (2008), presentes em cursos de classificação bibliográfica, estendem-se
+também para os cursos de indexação. Somado aos problemas apresentados, em cursos de indexação
+há ainda o esforço exaustivo do professor em corrigir manualmente uma grande quantidade de
+atividades de indexação. Dessa forma, para o caso específico da indexação, soluções
+computacionais que reduzam esforços do professor na correção de atividades são necessárias para
+que de fato a prática da avaliação formativa seja bem sucedida.
+Para apoiar o ensino-aprendizagem de indexação poucas soluções têm de fato sido
+desenvolvidas. Conforme Fujita e Rubi (2006), há algumas propostas práticas para o ensino de
+política de indexação dirigidas a alunos de graduação e pós-graduação através do curso a distância
+de Política de indexação em sistemas de informação, realizado com bibliotecários indexadores de
+algumas universidades estaduais paulistas. Nesse curso a distância apresentado por Fujita e Rubi
+
+
+(2006), para soluções de dúvidas, utiliza-se uma ferramenta de chat como ferramenta de interação
+aluno-professor.
+Neste trabalho, assim como Oliveira et al.(2008) desenvolveram um Sistema Online de
+Atividades de Classificação para avaliação formativa de alunos, desenvolvemos um Sistema Online
+de Atividades de Indexação. Esse sistema estende as funcionalidades do sistema proposto por
+Oliveira et al.(2008) através de uma nova tecnologia computacional para a correção automática de
+atividades de indexação.
+Hoje, a correção automática é uma possibilidade de acordo com a literatura. Especialmente
+para respostas discursivas com poucas palavras, muitas soluções computacionais têm sido
+desenvolvidas, inclusive soluções comerciais.
+
+O estado da arte em correção automática de
+
+pequenas respostas discursivas é revisado por Pérez-Marin et al. (2009), que realizam um estudo
+comparativo de várias propostas de sistemas de correção automática. De acordo com Pérez-Marin et
+al. (2009), os sistemas de correção automática de textos são de grande importância para promover
+melhoramentos no processo de ensino-aprendizagem pois o tempo e o esforço que se demandam
+para corrigir exercícios poderiam ser devotados para melhor qualidade de aulas.
+Entendemos, portanto, que, as funções de avaliação formativa do nosso sistema online de
+atividades de indexação serão melhores realizadas por um professor se dele se pouparem tempo e
+esforços na correção de atividades. Dessa forma, aplicando a correção automática de atividades,
+será possível uma gestão verdadeiramente eficaz da aprendizagem dos alunos.
+3 UM SISTEMA ONLINE DE APOIO À AVALIAÇÃO FORMATIVA EM INDEXAÇÃO
+Assim como o Sistema Online de Atividades de Classificação (SOAC), desenvolvido por
+Oliveira et al. ( 2008), o sistema de apoio à prática de indexação têm o propósito de fornecer
+mecanismos de avaliação formativa
+
+para acompanhar, individualizar e regular o ensino-
+
+aprendizagem do processo de indexação de documentos textuais.
+O Sistema Online de Atividades de Indexação ainda está em fase de desenvolvimento, mas,
+já está sendo utilizado por alunos e professor da disciplina de Representação Temática II do curso
+de Biblioteconomia da UFES. Os alunos utilizam esse sistema para praticar os estágios do processo
+de indexação por assuntos e o professor, para especificar tarefas e avaliar as respostas dos alunos às
+atividades propostas.
+No Sistema Online de Atividades de Indexação, o professor da disciplina disponibiliza os
+objetos de análise que, em geral, são artigos publicados em periódicos da área de Ciência da
+
+Informação/Biblioteconomia. Esses objetos são sorteados e apresentados ao aluno para a realização
+do processo de indexação. Para cada objeto sorteado, o aluno deve preencher o quadro em que se
+adota uma abordagem sistemática de análise de assunto para indexação, conforme o exemplo do
+Quadro 1.
+O aluno deve verificar o link do objeto de análise sorteado no Quadro 1. O aluno poderá
+ainda, no processo de indexação, realizar consultas através do link para o Tesauro em Ciência da
+Informação (2006). Para preencher um quadro de indexação de um objeto sorteado, o aluno deve
+responder para cada pergunta da coluna Categorias analisadas a coluna Análise de assunto e a
+coluna Tradução conforme o exemplo do Quadro 1. Ao final, cada quadro do processo de
+indexação preenchido e enviado pelo aluno é submetido à avaliação do professor.
+
+Quadro 1 – O processo de indexação: uso da abordagem sistemática de identificação de conceitos na análise de assunto
+e a tradução respectiva de conceitos
+Fonte: Associação Brasileira de Normas Técnicas (1992)
+Nota: Dados adaptados pelos autores
+
+
+Uma vez submetido um quadro de indexação, o aluno poderá em qualquer outro momento
+reiniciar a tarefa para preencher outros quadros de indexação, a fim de atingir uma meta de pontos
+estabelecida pelo professor para a tarefa proposta.
+Para a correção dos quadros de indexação submetidos pelos alunos, o Sistema Online de
+Atividades de Indexação fornece ao professor uma visão completa e imparcial das respostas dos
+alunos para cada item dos quadros de indexação, conforme exemplo (Quadro 2).
+Na tela de correção dos quadros de indexação (Quadro 2), do lado esquerdo na parte
+superior, são apresentados em links todos os objetos de análises disponibilizados pelo professor para
+serem indexados pelos alunos. Ao selecionar um desses objetos, é apresentado no lado esquerdo, na
+parte inferior, o quadro de indexação do objeto selecionado. Cada item de indexação desse quadro
+recebe uma numeração de 1 a 16, que corresponde às posições desses itens no quadro de indexação.
+Após selecionar um objeto de análise e clicar em um dos números do quadro de indexação
+correspondente, todas as respostas de alunos referentes ao objeto de análise selecionado para o item
+indicado no quadro de indexação são apresentadas ao professor no lado direito da tela de correção
+do Quadro 2. Vale ressaltar que o sistema não informa ao professor quais alunos forneceram as
+respostas apresentadas, o que garante a imparcialidade do professor no processo de análise das
+respostas dos quadros de indexação.
+Na Tela de correção do Quadro 2, para cada resposta dos alunos para um item do quadro de
+indexação, o professor atribui uma nota e um peso. Esses valores são exibidos na coluna Nota
+atribuída na forma “n de p”, onde n representa a nota dada pelo professor e p, o peso do item, isto é,
+o número de respostas esperadas para aquele item de avaliação.
+À medida que o professor corrige os itens de um quadro de indexação para cada objeto de
+análise, os desempenhos dos alunos que deram as respostas para esses itens são computados e os
+resultados apresentados a esses alunos.
+
+
+Quadro 2 - Tela de correção dos quadros de indexação
+
+Embora o Sistema Online de Atividades de Indexação reconheça as respostas idênticas de
+alunos e apresente ao professor somente uma dessas respostas para correção, demanda-se ainda do
+professor um grande esforço para a correção de cada resposta de aluno para cada item do quadro de
+indexação e para cada objeto de análise. Na mais recente utilização do sistema, por exemplo, um
+professor da disciplina de Representação Temática II corrigiu através do sistema cerca de 10.000
+respostas de uma turma de quase 40 alunos para apenas vinte objetos de análise.
+Há, portanto, mesmo com os recursos que o Sistema Online de Atividades de Indexação
+oferece para auxiliar o professor, uma grande necessidade de agregar a esse sistema tecnologias que
+automatizem a maior parte desse trabalho exaustivo do professor na correção dos quadros de
+indexação.
+4 A METODOLOGIA DE HOJE
+Recortamos desde a ementa do programa da disciplina de Representação Temática II, até a
+bibliografia, aspectos atinentes à atividade proposta.
+Ementa - Linguagem de indexação: conceito, tipos e instrumentos (teoria e prática de
+tesauro e cabeçalho de assunto). Elaboração de uma política de indexação. Produtos gerados pela
+indexação.
+
+Com a finalidade de aplicar as representações geradas pela indexação a um índice de
+assuntos, durante o planejamento do programa de disciplina formulamos o objetivo que compreende
+a prática do processo de indexação.
+No âmbito das estratégias de ensino e avaliação da aprendizagem previmos o uso do
+Sistema Online de Atividades de Indexação para acompanhar, individualizar e regular o processo
+ensino-aprendizagem.
+A bibliografia em que listamos as fontes do programa referencia os 20 objetos submetidos
+ao processo de indexação por assunto, a Norma 12676 da Associação Brasileira de Normas
+Técnicas (1992) e o Tesauro em Ciência da Informação (2006). Nos estágios respectivos da
+indexação “Esta Norma fixa condições exigíveis para a prática normalizada do exame de
+documentos, da determinação de seus assuntos e da seleção de termos de indexação”
+(ASSOCIAÇÃO..., 1992); enquanto que “Os tesauros constituem uma ferramenta de indexação já
+consolidada nas atividades de organização da informação empregada por muitos que exercem essas
+atividades (MOREIRA; MOURA, 2006).
+Esses aspectos, em geral, devem servir para autenticar os conteúdos prescritos no programa
+da disciplina sobre o que é vivido pelo aluno, ao mesmo tempo em que situam o contexto de
+abordagem curricular da atividade seguinte.
+Especificação da tarefa dirigida aos alunos
+A atividade referente ao processo de indexação por assunto contou com a participação de
+alunos do 5º período do curso de Biblioteconomia (o curso é ministrado em 9 períodos),
+matriculados regularmente na disciplina no semestre letivo 2009/1. Tanto os alunos como o docente
+responsável pela disciplina obtiveram registro e senha individuais para o acesso ao Sistema Online
+de Atividades de Indexação.
+Sobre a apresentação e instruções de uso desse ambiente semi-automatizado, ambas
+ocorreram após o agendamento do local e da data com a turma e contaram com a participação de
+uma doutoranda na área da Ciência da Computação/Informática na função de mediadora do Sistema
+Online de Atividades de Indexação.
+Além dos encontros presenciais ocorridos geralmente em sala de aula, o uso da lista de
+discussão da turma foi considerado pelo grupo de alunos como um dos canais apropriados ao
+esclarecimento de dúvidas em relação à atividade proposta e/ou ao Sistema.
+
+O aluno teve a oportunidade de analisar até 20 objetos selecionados previamente da
+bibliografia do programa da disciplina. Numa escala de 0 (zero) a 10 (dez) consideramos como
+pontuação mínima nota igual a 7 (sete) pontos dessa escala.
+Recordamos com o aluno os estágios da indexação que haviam sido introduzidos na
+disciplina de Representação Temática I. Tal como abordada na Norma 12676,
+A indexação consiste basicamente nos três estágios seguintes que, na realidade, tendem a se
+sobrepor:
+a) exame do documento e estabelecimento do assunto de seu conteúdo;
+b) identificação dos conceitos presentes no assunto;
+c) tradução desses conceitos nos termos de uma linguagem de indexação
+(ASSOCIAÇÃO..., 1992).
+
+Considerando que a abordagem sistemática refere-se a “um questionamento que o indexador
+realiza para melhor extrair conceitos enquanto estiver fazendo a leitura documentária do texto”
+retocamos a importância de adotarem tal abordagem “[...] como estratégia de inferência que orienta
+o indexador quanto à identificação dos conceitos (FUJITA; RUBI, 2006). Nesse sentido instruímos
+o aluno sobre procedimentos a serem seguidos para o registro de respostas ao questionamento. Essa
+instrução compreendeu a inserção do símbolo representado pela barra (/) entre dois ou mais
+conceitos identificados nos dois primeiros estágios e no terceiro estágio, em que esses conceitos
+devem ser traduzidos nos termos do Tesauro em Ciência da Informação (2006). Buscamos, assim,
+facilitar a organização de registros nos quadros de indexação submetidos à correção (Quadro 1).
+Embora o Sistema Online de Atividades de Indexação tenha apresentado avanços sobre o
+seu propósito, continuamos lidando com o enfrentamento de dificuldades na correção de exercícios
+a ser tratada nos parágrafos seguintes.
+A correção da tarefa dirigida aos alunos
+Naturalmente que os estágios de indexação, objeto da Norma 12676 (ASSOCIAÇÃO...,
+1992), envolvem complexas variáveis ao serem levados à prática pelo indexador (FUJITA, 2003;
+FUJITA; RUBI 2006; NAVES 2001; SILVA; FUJITA 2004). Infere-se, todavia, que a
+complexidade envolvida com a realização de exercícios práticos propostos em uma disciplina, nem
+sempre acarrete dificuldades na correção manual.
+Mas, no caso da indexação assegura-se a existência de dificuldades nesse sentido devidas
+especialmente, ao a registros gerados a partir da análise de assunto e ao manuseio de formulários no
+suporte papel que tendem a se avolumar. Essas limitações, em geral, contribuem para reduzir a
+
+quantidade de objetos de análise apresentados aos alunos, limitando, assim, as suas chances de
+exercitar o aprendizado na perspectiva da prática de indexação.
+A correção da tarefa em mídia impressa
+De acordo com dados coletados de programas da disciplina de semestres anteriores, nessa
+perspectiva da prática de indexação previu-se, em média, a análise de 8 a 10 objetos iguais para
+todos os alunos.
+Ao levarmos em conta que a quantidade de matriculas por turma alcançava 30 ou mais
+alunos, os exercícios submetidos à correção correspondiam ao total de 300 formulários impressos
+ou acima desse valor. Essa correção realizada pelo sistema manual anteriormente ao semestre
+2009/1, todavia, não dispõe de registros sobre a quantidade de conceitos identificados nem sobre a
+tradução desses conceitos nos termos de uma linguagem de indexação. Mas, ao se tomar por base
+experiências vividas anteriormente na disciplina estimamos que para cada um dos objetos
+analisados, uma quantidade igual ou superior a 16 registros foram obtidos em resposta ao
+questionamento preconizado na abordagem sistemática da Norma 12676 (QUADRO 1).
+É razoável inferir com base nos valores informados no parágrafo anterior que a correção
+manual dos exercícios atingiu estimativas entre 3.840 a 4. 800 dados. O valor igual a 3.840
+corresponde ao produto da multiplicação entre 8 objetos,16 registros e 30 alunos, enquanto que o
+valor igual a 4.800 corresponde ao produto da multiplicação entre 10 objetos, 16 registros e 30
+alunos.
+Assim, além das inconveniências relacionadas ao manuseio de materiais no suporte papel,
+tornava-se exaustivo o tempo destinado à correção dos exercícios mesmo que para tanto o docente
+responsável pela disciplina mantivesse uma matriz de correção que o auxiliasse na redução do
+tempo ao cotejar respostas fornecidas pelos alunos. Nos casos em que se constatassem respostas
+diferentes das fornecidas nesta matriz, buscava-se diagnosticar essas dificuldades junto ao grupo ou
+individualmente de modo que as dúvidas pudessem ser dirimidas.
+Diante das complexidades apresentadas no processo de correção de atividades de indexação
+e da necessidade de uma estratégia que possibilitasse melhor acompanhamento dos alunos na
+prática de indexação, desenvolvemos instrumentos computacionais de apoio à aprendizagem e à
+avaliação de indexação.
+
+
+5 INSTRUMENTOS COMPUTACIONAIS DE APOIO À CORREÇÃO DE ATIVIDADES
+DE INDEXAÇÃO
+Já que tudo ou quase tudo hoje em dia se acomoda ou ganha soluções com a aplicação da
+tecnologia, questões que desafiam a correção de exercícios em mídia impressa levaram o docente
+responsável pela disciplina recorrer a intervenções do campo da Ciência da computação/Informática
+para modificar tal realidade. Propiciar a integração da atividade focalizada no universo de
+experimentos do Sistema Online de Atividades de Indexação constituiu o primeiro passo para o
+enfrentamento de tal dificuldade de correção.
+5.1 A correção de atividades de indexação em mídia eletrônica
+O Sistema Online de Atividades de Indexação em desenvolvimento, propiciou a substituição
+do suporte físico do formulário destinado ao registro de respostas submetidas a correção, antes
+apresentado em papel e agora em mídia eletrônica. Também, consideramos como sendo um ganho
+para a atividade os links criados para acesso aos 20 objetos de análise (QUADRO 1).
+O processo de indexação em si, especialmente a análise de assunto, conta com peculiar
+complexidade o que a torna “difícil de ser realizada e ensinada” (NAVES, 2001, p. 189). Assim,
+consideramos importante neutralizar interferências devidas à forma de apresentação desta atividade
+sobre a formação inicial do indexador.
+Se não for atraente, talvez, seja necessário o aluno contar com os benefícios de uma
+interface digital para o registro de respostas e o acesso a conteúdos dos objetos de análise. Isto
+porque as abordagens contemporâneas no campo da Educação tendem a valorizar oportunidades de
+aprendizado em que o aluno é instado a interagir em diferentes níveis e ambientes. Assim, além do
+objetivo a que se destina à prática do processo de indexação, o aluno pode reconhecer
+possibilidades de aplicação da informática na educação ou então em nichos de mercado que
+contemplem a área da Ciência da Informação/Biblioteconomia. Ao mesmo tempo pode
+compreender, talvez, a perspectiva de crescimento de uma disciplina a partir da abordagem
+interdisciplinar do conhecimento. Desde então, pode pensar em aplicar o conhecimento adquirido
+em situações reais a serem vividas no mundo do trabalho.
+Mesmo que contando com essas possibilidades o tempo e o esforço destinado à correção dos
+exercícios foram também exaustivos, porque se mantiveram os procedimentos destinados à correção
+manual em formulários apresentados em mídia impressa. Isto posto criamos expectativas
+
+
+relacionadas a questões que ainda desafiam o Sistema Online de Atividades de Indexação, ou seja,
+solucionar as dificuldades de correção de exercícios.
+A possibilidade de redução do tempo e do esforço pode favorecer a qualificação do processo
+avaliativo ao ser diagnosticado, individualmente ou em relação ao grupo de alunos, o nível de
+entendimento dos objetivos definidos. Medidas formativas devem, portanto, ser devidamente
+adotadas no ensino e na avaliação em favor da melhoria da aprendizagem (PERRENOUD, 1999).
+Isso porque a idéia de avaliação formativa leva o professor a observar melhor seus alunos, a
+compreender melhor seu funcionamento, de modo a ajustar e individualizar suas intervenções
+pedagógicas (PERRENOUD, 1999). Infere-se, dessa forma, que favorecer a avaliação formativa
+possa surtir bons resultados no que se refere à formação inicial do indexador.
+Para reduzir esse esforço de correção pelo professor e favorecer a avaliação formativa,
+apresentamos a seguir uma tecnologia de reconhecimento de padrões da recuperação de informação
+que pode automatizar a maior parte do processo de correção de pequenas questões discursivas,
+como é o caso dos itens dos quadros de indexação preenchidos por alunos.
+5.2 Um corretor automático para atividades de indexação
+Com o propósito de reduzir esforços do professor no processo de correção de quadros de
+indexação, apresentamos uma tecnologia de agrupamento de padrões, a clusterização automática
+(STEINBACH; KARYPIS; KUMAR, 2000) para reconhecer e agrupar respostas similares
+fornecidas por alunos a itens de quadros de indexação. A idéia em aplicar essa tecnologia é
+possibilitar que o professor em vez de atribuir notas a cada resposta dada para cada item de um
+quadro de indexação, atribua-as apenas a alguns exemplos de um grupo de respostas similares. Essa
+idéia de correção automática é sintetizada no modelo da Figura 1.
+O processo de correção automática apresentado no modelo da Figura 1 consiste de 5 etapas.
+Na Etapa (1), de cada item de um quadro de indexação são extraídas todas as respostas dadas por
+alunos para aquele item. Na Etapa (2), é criada uma representação vetorial da coleção de respostas
+extraídas na Etapa (1) e, já em formatação adequada, essa coleção é submetida a algoritmos de
+clusterização automática. Na etapa (3), obtêm-se através desses algoritmos clusters ou
+agrupamentos das respostas mais similares entre si. Na etapa (4), através de uma interface do
+Sistema Online de Atividades de Indexação, seriam apresentados alguns exemplos de cada
+agrupamento para o professor atribuir notas na forma “n de p”, onde n é o nota dada a uma resposta
+e p o peso dessa resposta, isto é, a nota máxima que lhe poderia ser atribuída. Na Etapa (5), as
+
+notas atribuídas pelo professor aos exemplos de cada agrupamento
+
+seriam atribuídas
+
+automaticamente a todas as demais respostas pertencentes a esse agrupamento.
+
+Figura 1 - Modelo de correção automática de quadros de indexação
+
+Através da aplicação desse modelo de correção automática, o esforço do professor em
+atribuir, por exemplo, notas a mil respostas de alunos seria reduzido tão-somente a atribuição de
+notas a alguns poucos exemplos dessas mil respostas e a maior parte do trabalho de correção seria
+realizada automaticamente.
+5.2.1 A clusterização automática
+O agrupamento (ou clustering) de dados é um método no qual fazemos conjunto de objetos
+(por exemplo, documentos) que de alguma forma, são similares em características. Na ciência da
+computação/informática esse método é muito estudado e possui muitas aplicações na área de
+recuperação da informação e classificação de documentos.
+Para elaborar o conceito um pouco mais, tomemos como exemplo o sistema biblioteca. Em
+uma coleção de livros existe uma grande variedade de temas disponíveis. Eles estão dispostos
+sempre em forma de clusters. Os livros que têm semelhanças em relação aos seus conteúdos são
+agrupados. Os livros sobre matemática são organizados em uma estante e livros sobre história em
+outra, e assim por diante. A fim de facilitar o acesso físico, os livros que cobrem o mesmo tipo de
+
+
+tema são colocados na mesma estante. E então são rotulados com códigos alfanuméricos que os
+identificam, em relação a classe/subclasse de assunto.
+Assim sendo, se um leitor desejar um livro sobre um tema específico, ele irá procura-lo
+numa estante em particular e não por toda a biblioteca.
+A clusterização é uma técnica que utiliza a abordagem de aprendizagem não-supervisionada,
+ou seja, representa a auto-organização de padrões em classes sem precisar de exemplos de padrões
+rotulados ou classificados para orientar como classificar novos padrões (JAIN; MURTY; FLYNN,
+1999).
+O objetivo da clusterização é formar grupos caracterizados por alta homogeneidade entre
+padrões de um mesmo grupo e heterogeneidade entre padrões de grupos distintos (ALVES, 2007).
+Isso significa que os padrões devem ser semelhantes entre si dentro do mesmo grupo e diferentes
+em relação aos padrões de outros grupos.
+A clusterização é muitas vezes confundida com a classificação, mas há diferença entre elas.
+A principal diferença entre a clusterização e a classificação é que na classificação os padrões são
+reunidos por classes já conhecidas. Já na clusterização, analisam-se as características dos padrões
+para a partir delas descobrirem-se possíveis classes de padrões.
+Nesse trabalho a técnica de clusterização foi aplicada para reconhecimento de padrões nos
+textos, e assim, podendo identificar documentos semelhantes quanto ao assunto. Esse agrupamento
+dos documentos semelhantes automatiza a maior parte do processo de correção das atividades
+realizadas.
+5.3 Experimentos e resultados
+Para a realização dos experimentos de correção automática, obtivemos do banco de dados do
+Sistema Online de Atividades de Indexação uma base com cerca de 10000 respostas de alunos.
+Selecionamos dessa base cerca de 7000 respostas corrigidas, isto é, respostas com notas atribuídas
+por um professor. Em seguida, indexamos essas respostas para processamento automático. Essa
+indexação consiste em representar cada resposta de aluno por um vetor, cujas dimensões são
+representadas pelo número de ocorrências de cada palavra da base de respostas de alunos no texto
+de uma resposta de aluno. Um exemplo dessa representação vetorial das respostas dos alunos é
+mostrada no Quadro 3.
+
+Quadro 3 - Representação vetorial de respostas de alunos
+
+De acordo com o Quadro 3, uma vez conhecido o número de ocorrências de cada palavra em
+cada resposta, isto é, os valores numéricos das dimensões de cada vetor que representa uma resposta
+de aluno, é possível, através de medidas de similaridades (MANNING, 2008) reconhecer quão
+semelhantes são duas respostas de alunos. Conhecendo os índices de similaridades entre as
+respostas de alunos, os algoritmos de clusterização automática formam os agrupamentos dos textos
+mais similares entre si.
+Para avaliar a eficácia da clusterização automática para correção de atividades de indexação,
+utilizamos a tradicional métrica Precisão da área de recuperação da informação (BAEZA-YATES;
+RIBEIRO-NETO, 1998). A Precisão
+
+(P) é calculada da seguinte forma:
+
+O valor de TP é o número de itens que foram colocados no mesmo agrupamento e de fato
+são de uma mesma classe, isto é, possuem a mesma nota atribuída pelo professor. O valor de FP é o
+número de itens que não foram colocados no mesmo agrupamento e que não são de uma mesma
+classe.
+A Tabela 1 apresenta os resultados da aplicação do modelo de correção automática
+apresentado neste trabalho sobre uma base de respostas obtidas a partir de quadros de indexação
+preenchidos por alunos através do Sistema Online de Atividades de Indexação. Esses resultados, em
+resumo, indicam quão acertadamente os algoritmos de clusterização automática conseguiram reunir
+em um mesmo agrupamento respostas de alunos com as mesmas notas.
+
+
+Tabela 1- Resultados da correção automática de atividades de indexação
+Total de
+respostas
+corrigidas
+
+Número de
+Agrupamentos
+
+Precisão
+
+6017
+
+4
+
+84,7%
+
+6293
+
+5
+
+88,7%
+
+7009
+
+6
+
+90,4%
+
+Os números da Tabela 1 demonstram que a clusterização automática apresenta resultados
+aceitáveis e, principalmente, precisos para a realização do processo de correção automática sobre
+um grande número de respostas a atividades de indexação.
+Observamos, no entanto, que a escolha do número de agrupamentos formados afeta
+diretamente a precisão dos resultados. Nos experimentos realizados, observamos que uma boa
+escolha do número de agrupamentos para o caso de atividades de indexação é o número de notas
+possíveis para os itens de um quadro de indexação mais um. Essa estimativa pode ser justificada
+pelo fato de, no caso das atividades de indexação, as respostas dos alunos
+
+diferenciarem-se
+
+essencialmente por conceitos ou sentenças simples. Isso nos leva a compreender que, as respostas
+dos itens dos quadros de indexação com um número máximo de cinco palavras ou assuntos,
+supondo que essas respostas tentem convergir para as respostas do professor, haveria as seguintes
+possibilidades de agrupamentos: respostas com as cinco respostas do gabarito, com quatro, três,
+duas ou apenas uma. Esses agrupamentos corresponderiam, respectivamente, às notas 5 de 5, 4 de 5,
+3 de 5, 2 de 5 e 1 de 5, formando um total de cinco possíveis agrupamentos ou clusters. As
+respostas de alunos que não se assimilassem a nenhum desses agrupamentos formariam um novo
+agrupamento. Dessa forma,
+
+estimaríamos um bom processo de clusterização automática
+
+escolhendo seis clusters (5 clusters + 1) para o caso das respostas de alunos terem no máximo 5
+palavras ou assuntos.
+Em resumo, através do reconhecimento e agrupamento de grandes quantidades de respostas
+similares, a clusterização automática pode poupar grandes esforços do professor em corrigir uma
+imensa quantidade de respostas semelhantes. Os resultados obtidos mostram, portanto, que a
+
+clusterização automática pode ser uma eficaz ferramenta para auxiliar um professor no processo de
+correção de atividades de indexação.
+6 CONCLUSÃO
+Corrigir as atividades realizadas por alunos ao longo de um processo de ensinoaprendizagem é parte importante e tarefa do professor, mediador desse processo. O feedback dessa
+correção deve ser devolvido ao aluno o mais rápido possível para que esse aluno possa reparar seu
+trajeto de aprendizado e, assim, evitar oportunamente um percurso de falha.
+O que vemos na prática, entretanto, é que tendo em vista a grande quantidade de alunos em
+cada turma de uma disciplina, o professor acaba sendo o maior gargalo entre a realização de
+atividades realizadas pelos alunos e a posterior apresentação de comentários sobre as
+soluções/respostas dadas pelos alunos: análise de seus equívocos e acertos, sistematização das
+maiores dificuldades e maiores facilidades. Ou seja, a construção de um mapa de diagnóstico dos
+percursos de aprendizagem dos alunos é geralmente comprometida por excesso de trabalho sobre
+esse professor.
+Esse artigo faz uma apresentação da prática de uma disciplina oferecida semestralmente no
+curso de Biblioteconomia da UFES e como, após utilizarmos uma tecnologia de clusterização das
+respostas dadas pelos alunos, conseguimos reduzir a necessidade do professor atribuir notas a 6000
+itens de questões de para apenas seis itens.
+Com uma precisão em relação à atribuição de notas de forma manual de 90,4%,
+vislumbrando que com a utilização dessa tecnologia liberamos mais tempo para o professor
+acompanhar mais de perto os alunos que tiverem mais dificuldades e, o mais importante, dar mais
+chances aos mais talentosos alunos de se exercitarem mais, melhor e com maior frequência de
+feedbacks.

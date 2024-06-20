@@ -1,0 +1,156 @@
+
+Pôster
+A RELAÇÃO DA NORMA GERAL INTERNACIONAL DE DESCRIÇÃO
+ARQUIVÍSTICA [ISAD (G)] COM AS RECOMENDAÇÕES DO WORDL WIDE
+WEB CONSORTIUM (W3C): O MODELO RDF
+
+Resumo
+Explora a aplicação do modelo Resource Description Framework (RDF) na descrição
+arquivística, tendo como foco a Norma Geral Internacional de Descrição de Arquivos [ISAD
+(G)]. Tem como objetivo investigar a relação da Norma ISAD (G) com as recomendações do
+World Wide Web Consortium (W3C) para a aplicação do modelo RDF na descrição
+arquivística. Numa abordagem qualitativa está sendo realizada uma pesquisa exploratória a
+qual terá como resultado um diagrama em Unified Modelling Language (UML) que
+representará a estrutura conceitual da aplicação do RDF, a ser validada pelos especialistas da
+Câmara Técnica de Normalização da Descrição arquivística. Este trabalho permitirá visualizar
+a utilização do padrão RDF para a organização das informações conforme as recomendações
+da norma ISAD (G). Portanto, investigar a relação da Norma ISAD (G) com as
+recomendações do W3C que orientam a aplicação do modelo RDF se faz necessário, a fim de
+corroborar com a organização e recuperação das informações disponíveis hoje na web, e de
+modo particular, que orientam o campo de pesquisa voltado a Ciência da Informação e a
+Arquivística.
+Palavras-chave: ISAD (G). Normas de Descrição Arquivística. Web Semântica. RDF.
+
+1 INTRODUÇÃO
+As tecnologias de informação no âmbito da Arquivística tem ampliado as
+possibilidades de novas aplicações, principalmente no que se relaciona aos processos de
+organização dos documentos voltados na web.
+Neste sentido, é imprescindível a padronização no processo de descrição documental,
+tal como previsto na Norma Geral Internacional de Descrição Arquivística1 [ISAD (G)]. E
+neste sentido, remete-se a Ramalho (2013), o qual relata que a adoção da Web Semântica
+permite criar meios alternativos para localizar os arquivos na web, por meio da criação de
+índices e da adoção de padrões é possível relacionar os links em Resource Description
+Framework (RDF) presentes em diferentes bancos de dados.
+Para se entender o contexto, descreve-se que em meados de 2001, Tim Berners-Lee
+trouxe à tona uma nova visão da web, o que ele nominou de “Web Semântica”, que é uma
+extensão da web atual, porém constituída por documentos auto-descritíveis, onde o conteúdo
+pode ser compreendido por programas, o que por sua vez possibilitaria aos agentes de
+software raciocinar e realizar inferências relativas ao conteúdo dos documentos, auxiliando o
+usuário na recuperação das informações. (MARCONDES; CAMPOS, 2008).
+Para tornar essa web uma realidade, os dados contidos na rede devem ser
+representados por um formato padrão, acessível e gerenciável por tecnologias apropriadas.
+Além do acesso aos dados, é imprescindível, criar relações entre os dados. Neste sentido, é
+preciso adotar o (RDF) recomendado pelo World Wide Web Consortium (W3C), o qual é um
+modelo padrão para intercâmbio de dados na web (RDF WORKING GROUP, 2004).
+Atentos a estes avanços, os conselhos que orientam e normalizam a área de arquivos
+iniciam um caminho aberto a adoção de metadados a partir das recomendações estabelecidas
+na norma ISAD (G), como Encoded Archival Description Document Type Definition2 (DTD
+EAD e o Europeana Data Model 3(EDM), os quais fazem uso do eXtensible Markup
+Language (XML).
+O objetivo central deste trabalho constitui em investigar a relação da Norma ISAD (G)
+com as recomendações do W3C para a aplicação do modelo RDF. Para atingir o objetivo
+
+1
+
+Disponível em:< http://www.conarq.arquivonacional.gov.br/Media/publicacoes/isad_g_2001.pdf>.
+Acesso em: 20 jun. 2013.
+2
+Desenvolvido pela Biblioteca da Universidade da Califórnia e amparado pela Biblioteca do
+Congresso Americano e pela Society of American Archivists (SAA). Disponível em:
+<http://www.loc.gov/ead/>. Acesso em: 20 jun. 2013.
+3
+Criado pela The Fundation Europeana. Disponível em: <http://pro.europeana.eu/edmdocumentation>. Acesso em: 20 jun. 2013.
+
+proposto pretende-se: contextualizar as recomendações elaboradas pelo W3C e as Normas de
+descrição arquivística; identificar e analisar as correlações entre os campos de atributos e os
+campos de descrição existentes na norma ISAD (G) com o modelo RDF de forma mútua;
+apresentar por meio de um diagrama em Unified Modelling Language (UML) o desenho
+conceitual de relacionamento entre documentos descritos em RDF; e caracterizar as opiniões
+dos integrantes da Câmara Técnica de Normalização da Descrição Arquivística (CTNDA) do
+CONARQ frente a aplicação do modelo RDF junto a norma ISAD (G).
+Acredita-se que a maior contribuição deste trabalho está em levar a Arquivística e a
+Ciência da Informação (CI) para este círculo de debate, propiciando subsídios e estabelecendo
+pontes com a Web Semântica, além de possibilitar o início de novas pesquisas referentes as
+temáticas abordadas e corroborar com a organização e recuperação das informações
+disponíveis hoje na web.
+2 A DESCRIÇÃO ARQUIVÍSTICA
+Para garantir o acesso às informações contidas nos documentos, a Arquivística
+estabelece seus próprios critérios elaborados a partir de uma lógica e de metodologias
+específicas a cada tipo documental, a fim de auxiliar à pesquisa e ao conhecimento.
+(CARBONE, 1993).
+O Conselho Internacional de Arquivos (CIA, 2000) define a descrição arquivística
+como a representação de uma unidade4 de descrição e de suas partes componentes, por meio
+da extração, análise, organização e registro de informação, a fim de auxiliar na identificação e
+localização dos documentos de arquivo, além de elucidar o contexto de sua produção e
+acumulação.
+Desde a publicação do Manual Holandês (ASSOCIAÇÃO DOS ARQUIVISTAS
+HOLANDESES, 1960, uma grande mudança aconteceu, surgiram várias normas e
+publicações a fim de auxiliar os profissionais e os usuários de arquivo.
+A ISAD(G), norma eleita como foco neste trabalho, determina regras para descrição
+arquivística que podem ser aplicadas em qualquer documento independente de forma ou
+suporte em que se encontre o documento. Essas regras consistem em assegurar a criação de
+descrições consistentes, facilitarem a recuperação e a troca de informação sobre documentos
+arquivísticos, possibilitar o compartilhamento de dados de autoridades e tornar possível a
+
+4
+
+“Documento ou conjunto de documentos, sob qualquer forma física, tratado como uma unidade, e
+que, como tal, serve de base a uma descrição particularizada [...]”. (CIA, 2000, p. 16).
+
+integração de descrições de diferentes arquivos em um sistema unificado de informação (CIA,
+2000).
+O intuito é desenvolver uma discussão em torno da especificidade da descrição, e sua
+relação com a Web Semântica. Para isso, será discorrido de forma breve, conceitos relativos a
+temática.
+3 A WEB SEMÂNTICA
+O termo ‘Web Semântica’ ou como Tim Berners- Lee denomina web de dados, é um
+nome dado ao projeto do W3C a qual refere-se à visão da web dos ‘Dados Lincados5’.
+Conforme o consórcio W3C (2013) a Web Semântica dá às pessoas a capacidade de criarem
+repositórios de dados na Web, de forma a facilitar a troca de informação. Conforme Catarino
+(2009) o termo foi dito pelos autores Tim Berners-Lee, James Hendler e Ora Lassila em 2001
+quando divulgaram na revista Scientific American o estudo que relacionava o
+desenvolvimento de tecnologias que possibilitassem a informação legível pelas máquinas.
+Esta proposta, na visão de Breitman (2005) parte da necessidade de organizar a
+informação na internet. A ideia de categorizar a informação de forma padronizada como a
+autora relata, pode ser comparada a classificação dos seres vivos. Conforme Berners-Lee,
+Hendler e Lassila (2001) a Web Semântica não é uma web separada, na verdade ela é uma
+extensão da web atual, onde a informação possui significados definidos, o que permite uma
+cooperação entre computadores e pessoas.
+As autoras Catarino e Baptista (2008) descrevem que o princípio que norteia a Web
+Semântica é simples, e requer a utilização de linguagens e formatos comuns para a descrição.
+Nesse sentido, a web semântica fornece um enquadramento comum que permite o
+compartilhamento dos dados. O compartilhamento e armazenamento são realizados através da
+manipulação de dados, dados estes habilitados por tecnologias como o Resource Description
+Framework (RDF), a Web Ontology Language (OWL) e Simple Knowledge Organization
+System (SKOS). (W3C, 2013).
+A seguir será explanada a metodologia elencada e em andamento.
+
+5
+
+“Dados lincados é o nome que se dá às coleções de dados relacionados na Web.” (CATARINO;
+SOUZA, 2012, p. 79).
+
+4 PROCEDIMENTOS METODOLÓGICOS
+O presente trabalho está sendo realizado numa abordagem qualitativa por meio de
+pesquisa exploratória. Amparada na análise dos documentos, os quais fazem parte as normas
+de descrição arquivística e as recomendações para aplicação do modelo RDF elencadas pelo
+consórcio W3C, segue a elaboração de um diagrama conceitual em Unified Modelling
+Language (UML), o qual representará a aplicabilidade do padrão RDF na norma ISAD (G).
+De posse do diagrama, o trabalho partirá para a fase de validação, onde será
+apresentado o resultado da análise aos especialistas da área de descrição arquivística, aqui
+nomeados os integrantes da Câmara Técnica de Normalização da Descrição Arquivística
+(CTNDA) do Conselho Nacional de Arquivos (CONARQ).
+A consulta será realizada por meio da técnica Delphos, onde o estudo será conduzido
+por meio de questões direcionadas a temática (amparadas pelo diagrama) ao grupo de
+especialistas em rodadas, as quais permitirão que a cada devolução dos questionários seja
+possível visualizar um quadro de posicionamentos, até a convergência de todas as opiniões do
+grupo quanto a aplicação do padrão RDF na norma ISAD (G).
+5 CONTRIBUIÇÕES ESPERADAS
+O resultado obtido após a análise e interpretação dos dados, permitirá visualizar a
+utilização do padrão RDF para a organização das informações conforme as recomendações da
+norma ISAD (G).
+O presente trabalho está em andamento, porém é possível ressaltar a ausência de
+estudos teóricos, o que elucida a necessidade de um maior aprofundamento teórico e
+metodológico das temáticas abordadas.
+Atualmente, em andamento o levantamento bibliográfico e documental, relacionado a
+Web Semântica e as normas de descrição arquivística, e a elaboração do diagrama em UML.

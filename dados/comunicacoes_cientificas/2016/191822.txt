@@ -1,0 +1,603 @@
+
+
+REQUISITOS FUNCIONAIS PARA REGISTROS BIBLIOGRÁFICOS-FRBR: um
+estudo de sua aplicação em repositórios
+Modalidade da apresentação: Comunicação Oral
+Resumo: Estuda o uso do modelo conceitual FRBR em repositórios digitais a fim de contribuir para
+uma melhor organização e recuperação dos registros de informação em bibliotecas digitais. Busca
+verificar se a estrutura descritiva do repositório digital se ajusta ao novo paradigma das entidades,
+atributos e relacionamentos. Analisa a adequação de padrões de metadados, como o Dublin Core, ao
+modelo conceitual FRBR. Tem como campo empírico, o repositório LUME da Universidade Federal
+do Rio Grande do Sul. A partir de pesquisa feita na base, mostra como o repositório organiza e
+representa seus registros e a seguir identifica as entidades e atributos das expressões/manifestações de
+uma obra. Simula como seria o resultado de uma pesquisa se a arquitetura do RI-LUME fosse
+adequada aos princípios do FRBR. No que diz respeito aos dados de autoridade, sugere a adição de
+novos atributos FRAD aos metadados Dublin Core de modo a oferecer ao usuário mais informações
+sobre o criador das obras, incluindo as informações sobre área e linha de pesquisa, grupos, etc.
+Conclui que uso do modelo FRBR qualifica as entidades, as individualiza por meio de atributos e
+concomitantemente as relaciona, o que torna as buscas muito mais precisas dando ao usuário a
+oportunidade de encontrar, identificar, selecionar e obter as informações de forma simples e rápida,
+permitindo que este, a partir de uma questão de pesquisa, recupere todas as expressões e manifestações
+de uma obra ou conheça todas as obras, expressões e manifestações produzidas por uma pessoa ou
+entidade.
+Palavras-chave: Representação descritiva. FRBR. FRAD. Repositório digital. Dublin core.
+1 INTRODUÇÃO
+Desde a segunda metade do século passado o mundo vem passando por inúmeras
+transformações, principalmente aquelas relacionadas às tecnologias de informação e
+comunicação, o que fez mudar a forma de viver e de pensar das pessoas.
+Isso fez aumentar a massa documental disponível levando a informação de forma mais
+rápida aos usuários. Reduziu-se o tempo de reprodução dos textos, o elevado custo dos livros
+e principalmente dos periódicos. Outro grande impacto foi o surgimento do computador e
+depois da internet e web, novas tecnologias que aperfeiçoaram o modo de produzir, divulgar e
+preservar os documentos e a informação minimizando o tempo e a distância entre os autores,
+as bibliotecas e os leitores. Em termos de acesso à informação, surge a necessidade de atender
+aos usuários para que tenham à sua disposição não apenas os documentos tradicionais, mas
+também aqueles que são produzidos no ambiente digital. É nesse contexto que surgem os
+repositórios digitais (RD).
+Os repositórios digitais são bases de dados bibliográficas em linha que armazenam os
+recursos digitais para o uso posterior, cujo papel principal é o de reunir, preservar, dar acesso
+e disseminar o conhecimento de uma instituição científica, ou de uma área do conhecimento,
+ampliando sua visibilidade e tornando-se uma ferramenta de apoio à gestão do conhecimento
+científico. O diferencial de um repositório para outras bases de dados é o fato de que os
+conteúdos podem ser depositados tanto pelo autor, pelo proprietário ou por terceiros. Além
+disso, os repositórios digitais proporcionam uma melhor preservação dos recursos digitais
+devido ao uso de padrões internacionais de metadados, como o Dublin Core, um conjunto de
+elementos de metadados que descreve os recursos na web.
+
+No campo da representação descritiva de documentos, a crescente diversidade
+informacional transformou a web em um grande depósito de conteúdos e fez da web um lugar
+privilegiado para a realização de pesquisas. Essa aproximação do usuário com a informação
+fez com que a International Federation of Library Associations and Institutions (IFLA)
+revisse os princípios da catalogação de modo a aproximar as ferramentas bibliográficas das
+novas tecnologias digitais com o objetivo de organizar e disponibilizar os registros de
+informação e seus conteúdos de forma mais rápida e eficaz. 3
+Com o objetivo de estabelecer novas diretrizes para o trânsito informacional na web
+foi criado o modelo conceitual FRBR (Functional Requirements of Bibliographic Records)
+inspirado no modelo computacional Entidade-Relacionamento (E-R), criado por Peter Chen
+em 1976 e considerado um padrão para elaboração de outros modelos, com objetivo de
+representar, de forma abstrata, dados armazenados em um domínio do conhecimento. No caso
+do FRBR, o domínio bibliográfico. Para que o modelo conceitual FRBR se consolidasse todos
+os requisitos necessários aos registros bibliográficos foram pensados tomando por referência
+as tarefas genéricas realizadas pelos usuários: encontrar, identificar, selecionar, adquirir ou
+obter e navegar.
+Essas discussões foram consolidadas na versão final da Declaração de Princípios
+Internacional de Catalogação publicada em 2009, sendo criado, então, o FRBR Review Group
+com a função de cuidar da manutenção da família FRBR de modelos conceituais e estimular
+sua aplicação. Como extensões do modelo foram implementados outros como os Requisitos
+Funcionais de Dados de Autoridade (Functional Requeriments for Authority Data – FRAD),
+modelo direcionado ao controle de dados de autoridade e os Requisitos Funcionais de Dados
+de Autoridade de Assunto (Functional Requeriments for subject Authority Data – FRSAD),
+modelo ainda em desenvolvimento e que tem como objetivo o controle de terminologia
+(OLIVER, 2011).
+
+3
+
+A semântica dos catálogos é garantida pela sintaxe descritiva, pela ordem dos elementos descritivos e
+por sua respectiva pontuação. Suas informações estão encapsuladas nos campos e subcampos dos
+formatos eletrônicos. E só quem sabe acessar essas bases de dados, consegue recuperar as
+informações. Fora desse ambiente, (como no ambiente web 3.0) estas informações não são
+recuperadas e sua semântica gera ambiguidades. Por exemplo: “[...] o número ‘1984’ pode
+representar: uma data de publicação, o número de páginas de um livro, o título de uma obra ou o
+pseudônimo de um autor” (MEY; SILVEIRA, 2009, p. 5). Ao propor bases de dados bibliográficas
+concebidas a partir dos conceitos de entidades, atributos e relacionamentos, a intenção dos
+profissionais da informação é superar essa contradição, além de buscar através do uso da linguagem
+RDF para a descrição dos conteúdos a possibilidade dessas informações serem acessadas não só por
+humanos, mas também por máquinas.
+
+De acordo com o documento da IFLA (2009) os FRBR são extensíveis a qualquer
+sistema de informação. Daí a necessidade de testá-los em repositórios, ferramenta
+bibliográfica cujo pressuposto metodológico vai ao encontro dos novos princípios da
+catalogação: servir a conveniência dos usuários. A arquitetura de um repositório, diferente da
+de um catálogo, prima por esse cuidado, oferecendo ao autor/contribuidor uma base de dados
+com estrutura simples, sintaxe extensível e próxima de sua linguagem, de modo que ao
+autoarquivar um documento possa descrevê-lo.
+Nessa direção, a presente pesquisa parte do pressuposto de que o modelo conceitual
+FRBR quando usado em repositórios, pode contribuir para uma melhor organização dos
+registros de informação das bibliotecas digitais, permitindo que tanto o especialista como o
+usuário leigo possa descrever, identificar, navegar, selecionar, recuperar e acessar os
+documentos ali depositados de forma mais simples e precisa.
+Seu objetivo é demonstrar como, conceitualmente, podemos aplicar o modelo FRBR
+em um repositório, pois como ressalta Moreno (2006, p.34), o modelo E-R, que caracteriza o
+FRBR, “é um modelo lógico, com base em objetos, e na identificação de entidades e
+relacionamentos [...] não visa à implementação e sim à modelagem/representação dos dados”.
+O trabalho que ora apresentamos é resultado da dissertação de mestrado apresentada
+ao PPGCI/UFF cujo objetivo é discutir os limites e as possibilidades de uso do modelo
+conceitual FRBR em repositórios digitais com vista à organização e recuperação da
+informação. Com isso, procura demonstrar que os repositórios face à diversidade de suas
+coleções, que abrigam diferentes manifestações e expressões de obras ali depositadas, são
+campos profícuos para a aplicação de modelos conceituais; através de testes buscou-se
+verificar se sua estrutura descritiva se ajusta ao novo paradigma das entidades, atributos e
+relacionamentos.
+
+2 MARCO TEÓRICO
+O acirramento da preocupação com a representação da informação dos documentos
+está inserido no contexto do advento da explosão bibliográfica no âmbito da web/internet,
+onde grande quantidade de informações começou a ser disseminada de forma acelerada e
+incontrolável por diferentes produtores gerando problema na identificação, armazenamento e
+recuperação do que possa ser relevante ao usuário. Como consequência foram desenvolvidas
+ferramentas de busca automática para auxiliar o usuário em suas pesquisas. Nessa direção, as
+linguagens documentárias, as normas e padrões para o controle bibliográfico, intercâmbio e
+compartilhamento de dados também sofreram adequação às novas tecnologias da web.
+
+Segundo Marcondes (2001, p.64) representação é um processo que ocorre “[...] na
+mente de alguém, produzindo nesta mente algo distinto do objeto a que se refere”. Não existe
+uma única forma de representação que atenda todas as necessidades dos usuários, podendo
+servir para uns e não para outros. O que existe é o aspecto significativo em que a forma de
+representação da informação será apresentada.
+Em se tratando de representação descritiva, a mesma vem sofrendo mudanças em seu
+enfoque desde o final da década de 1990. Seu “cerne deslocou-se do item para o usuário,
+visando permitir-lhe as tarefas de encontrar, identificar, selecionar e obter uma ‘entidade’
+adequada aos seus propósitos” (MEY, 2003, p.1). A resposta a essa mudança de paradigma
+foi a publicação, em 1998, do relatório final do Grupo de Estudo da IFLA (Study Group on
+the Functional Requirements for Bibliographic Records) contendo a descrição do modelo
+conceitual FRBR. Em 2009, como síntese desses estudos, é publicada a Declaração de
+Princípios Internacionais de Catalogação, que estabeleceu as novas diretrizes para a descrição
+de recursos em catálogos em linha, repositórios e outras bases de dados criadas por bibliotecas
+e outras comunidades (IFLA, 2009).
+O modelo FRBR foi desenvolvido com o objetivo de reestruturar os registros
+bibliográficos, reorganizando os seus elementos através da análise de entidades, atributos e
+relacionamentos proporcionando não só uma nova sintaxe à catalogação, mas principalmente
+uma nova semântica.
+A fim de superar as ambiguidades semânticas dos registros de informação, o modelo
+conceitual FRBR aprimorou sua sintaxe, tornando-a extensível e compreensível aos usuários;
+identificando para cada entidade atributos únicos, individualizando-as para depois integrá-las
+nas ações de relacionamento durante os processos de busca e recuperação.
+A proposta inovadora dos FRBR é mostrar as relações bibliográficas de forma mais
+clara e útil ao usuário para que “ele possa navegar em ‘espaços’ de informações complexas
+através das relações, de maneira que as informações nos registros, recuperadas através da
+expressão de busca do usuário, reflitam um apropriado ‘rol’ de registros (BEACOM, 2003
+apud MORENO; ARELLANO, 2005, p. 24).
+Os FRBR não são uma norma. Ou seja: não se atém a prescrever a forma de
+representação dos elementos descritivos conforme determinam os códigos de catalogação.
+Trata-se de um modelo conceitual para a representação do domínio bibliográfico em ambiente
+digital. Além da representação dos dados bibliográficos o modelo se estende aos dados de
+autoridade e assunto. Conforme Oliver (2011, p.1):
+
+[os FRBR] constituem uma forma de compreender o universo bibliográfico.
+Identificam as tarefas que os usuários devem empreender durante o processo
+de descobrimento dos recursos e demonstram como diferentes tipos de dados
+bibliográficos e de autoridade servem de suporte à execução bem-sucedida
+dessas tarefas. [...] proporcionam uma base teórica e logicamente coerente
+para que sobre ela se construa uma prática de descobrimento de recursos que
+seja melhor para o usuário.
+
+As entidades FRBR são dividas em três grupos. As entidades do grupo 1 são as
+responsáveis pelos produtos do trabalho intelectual ou artístico que correspondem aos
+interesses do usuário: obra, expressão, manifestação e item. De acordo com Silveira (2007) o
+grupo 1 é responsável pelo grande diferencial na forma como o profissional deve perceber o
+objeto de informação no momento da sua descrição.
+Para uma melhor compreensão das entidades do grupo 1, segue algumas observações,
+a saber: a obra é abstrata e refere-se a uma criação intelectual ou artística distinta. De acordo
+com Mey e Silveira (2009) é o conteúdo intelectual em si, independentemente de seu suporte
+ou de sua forma. Pode ser assunto de outra obra nas relações do FRBR e é reconhecida como
+entidade por meio de suas diversas expressões. Por exemplo, ao citarmos Memórias Póstumas
+de Brás Cubas de Machado de Assis, estamos fazendo referência ao conteúdo intelectual da
+obra completa e não a edições ou texto específico. Diante de um esforço intelectual, como
+uma adaptação de uma obra, esta sofre modificações sendo considerada uma nova obra.
+A expressão também é abstrata e refere-se à realização do conteúdo intelectual ou
+artístico de uma obra, ou seja, é a maneira de expressar o conteúdo intelectual, que pode ser
+através de uma tradução, uma edição crítica, entre outras possíveis formas. Se o conteúdo
+intelectual ou artístico sofrer mudanças, ela será uma nova obra. Nesse caso, uma adaptação é
+uma nova obra.
+A manifestação é a materialização de uma expressão de uma obra, ou seja, a
+concretização em termos físicos, dentre os quais podem ser livros, monografias, periódicos,
+filmes, entre outros. Ao publicar dois textos iguais, sendo um livro e outro uma gravação
+sonora, teremos a mesma obra, a mesma expressão e duas diferentes manifestações, pois não
+se tratam do mesmo suporte físico.
+O item é uma entidade concreta que corresponde a um exemplar individual de uma
+manifestação. Há exceções quando um objeto é dividido em volumes, como uma monografia
+publicada em três volumes. O item representa tanto um objeto físico disponível numa
+biblioteca tradicional quanto um objeto em rede visualizado em uma biblioteca digital.
+
+As entidades do grupo 2 são as responsáveis pela criação de uma obra, a realização de
+uma expressão, a produção ou disseminação de uma manifestação ou a posse de um item
+(OLIVER, 2011). Este grupo se constitui das seguintes entidades: pessoas e entidades
+coletivas, vindo a compor uma extensão do novo modelo: o FRAD.
+A entidade pessoa refere-se a um indivíduo. Está relacionada à criação ou realização
+de uma obra ou de uma expressão e podem ser: autores, editores, tradutores, artistas,
+compositores, entre outros, ou também pode estar relacionada com o assunto de uma obra.
+Nesse caso a entidade pessoa é o assunto da obra.
+A entidade coletiva refere-se a uma organização ou grupo de indivíduos que incluem
+também grupos temporários (encontros, conferências, reuniões, festivais, etc.) e autoridades
+territoriais como uma federação, um estado, uma região, uma municipalidade (MORENO
+2006).
+A entidade família, apesar de não definida no FRBR, é considerada pertencente ao
+Grupo 2 do modelo. Refere-se a “duas ou mais pessoas relacionadas pelo nascimento,
+casamento, adoção ou outro estado legal semelhante, ou que de outro modo se apresentam
+como uma família” (IFLA, 2009, p.10).
+As entidades do grupo 3 são os assuntos das obras representados por quatro entidades
+específicas: conceito, objeto, evento, lugar. As entidades do grupo 1 e 2 também estão
+incluídas no grupo 3 pelo fato de poderem ser assuntos de obras.
+
+Figura 1: Entidades FRBR
+
+Fonte: Mey;Silveira (2009)
+
+As entidades são individualizadas por atributos. Os atributos são as características
+apresentadas pelas entidades que auxiliam o usuário a encontrar, identificar, selecionar e obter
+um recurso e também possibilitam o usuário a “navegar” nos catálogos e repositórios. Estes
+
+podem ser ‘intrínsecos’, quando se referem aos aspectos físicos das entidades, como as
+dimensões, a data de publicação, o título na página de rosto de um livro impresso, entre outros
+e podem ser ‘extrínsecos’ quando se referem aos aspectos contextuais, como um identificador
+da entidade. Os atributos são importantes por ajudar na recuperação da informação; por
+atribuir às entidades características que levam o usuário a alcançar suas respostas.
+Porém não são todas as entidades que apresentam a totalidade de atributos sugeridos
+pelo modelo FRBR. Considera-se para cada tipo de entidade primeiramente os atributos que
+podem ser aplicados à entidade como um todo e depois aqueles aplicáveis somente a um
+subtipo da entidade. A nível de exemplo, o atributo “meio de execução”, que faz parte da
+entidade “obra”, só pode ser aplicado ao subtipo “obra musical”, uma vez que esse atributo
+representa um instrumento vocal e/ou outro dispositivo destinado a uma obra musical [para]
+piano, violino, orquestra, etc. (IFLA, 2008, p.48-49).
+Além disso, os atributos possuem valores diferentes entre eles devido à importância
+que cada um representa nas tarefas realizadas pelos usuários (encontrar, identificar,
+selecionar, obter e navegar). Conforme a explicação de Moreno (2010) o valor de um atributo
+varia de acordo com a natureza da tarefa, por exemplo, um atributo que é utilizado pelo
+usuário numa ação para identificar uma entidade é diferente de um atributo usado para refinar
+a busca, sendo a primeira ação considerada de valor superior à segunda ação.
+O atributo ajuda-nos a refinar as relações entre as entidades, ação fundamental do
+modelo FRBR, pois auxilia o usuário a executar as tarefas de encontrar, identificar, selecionar
+e obter, e também ‘navegar’ no universo bibliográfico de forma mais simples e objetiva.
+Segundo Silveira (2007, p.9) “as relações refletidas no registro bibliográfico proporcionam
+uma informação adicional ao usuário, ajudando-o a estabelecer conexões entre a entidade
+encontrada e outras entidades relacionadas com a mesma, ampliando as possibilidades de
+escolha por parte do usuário”.
+No entanto, identificar as entidades, atributos e ralações FRBR em repositório não é
+tão simples como identificar uma obra literária registrada em um catálogo, em vista que nas
+obras literárias é possível encontrar atributos que demonstrem de forma mais clara as
+diferentes expressões/manifestações de uma obra, enquanto que nas obras científicas as
+expressões aparecem de forma implícita, o que exige um olhar mais crítico.
+Nas obras científicas a forma de realização de seu conteúdo intelectual, seja como um
+artigo científico, uma monografia, um resumo, etc. confundem-se com a forma de
+manifestação/materialização da obra. Por exemplo, uma obra cientifica expressa (realizada)
+como um artigo, pode se manifestar tanto em um periódico como nos anais de um congresso
+
+Ou seja, trata-se da mesma expressão, manifesta em espécies documentais distintas
+(periódicos e anais de congresso). Isso ocorre devido à natureza do campo cientifico, onde
+uma obra original, como uma dissertação, desdobra-se em outras sem que haja mudança
+significativa de seu conteúdo.
+No entanto, há casos em que um autor publica um artigo em português e num outro
+momento publica uma tradução do mesmo artigo, sendo esta depositada no repositório como
+sendo uma nova obra. Há casos em que o autor publica um resumo expandido e depois
+publica o mesmo como parte de um artigo, passando este a ser considerado uma nova obra.
+No entanto, comparando o resumo expandido com o artigo, percebe-se que houve acréscimo
+de informações, mas não mudança no conteúdo.
+De acordo com Oliver (2011), uma obra pode se concretizar numa única expressão ou
+em várias, dependendo do seu grau de importância. Além disso, “a expressão acrescenta um
+grau de precisão à identificação das semelhanças e diferenças entre o conteúdo dos recursos”
+(OLIVER, 2011, p.28). A precisão da informação é essencial para o usuário realizar suas
+tarefas, sobretudo as de identificar e selecionar o recurso apropriado. Por isso, a
+individualização das entidades através de seus atributos faz com que um registro de
+informação seja descrito de forma única evitando ambiguidades.
+Conforme Oliver (2011, p.29):
+As entidades obra e expressão permitem a disposição de conteúdo que seja
+similar, e a identificação de conteúdo que realiza a mesma obra, mas pode
+ser uma realização levemente diferente. O usuário pode ser levado a
+conteúdo idêntico em manifestações diferentes, e pode também ver o mesmo
+conteúdo disponível em diferentes realizações ou expressões.
+
+Diante dessas situações, escolhemos três tipos de registros DC para análise e
+simulação da aplicação do modelo FRBR na reestruturação do esquema de metadados visando
+representar os recursos de forma consistente, otimizando, assim, os processos de busca e
+recuperação da informação. Os registros escolhidos nesse estudo expressam o conteúdo
+informacional de uma dissertação, um artigo de periódico e um resumo.
+
+3 PROCEDIMENTOS METODOLÓGICOS
+Segundo Goldenberg (2004) a metodologia científica é responsável por induzir um
+“novo” olhar sobre o mundo, o qual ela define como um olhar científico, curioso, indagador e
+criativo. Nesta pesquisa procurou-se demonstrar como essas características se plasmam em
+nosso processo de investigação científica ao aproximar-nos dos fundamentos da área de
+organização da informação utilizando métodos capazes de aferirem os pressupostos aventados
+
+na preposição desse estudo – a possibilidade de aplicação do modelo conceitual FRBR em
+repositórios. Para avaliarmos essa possibilidade escolheu-se como campo empírico o
+Repositório LUME (RI-LUME), desenvolvido pela Universidade Federal do Rio Grande do
+Sul (UFRGS) com o software livre DSPace. Sua política segue o protocolo de Arquivos
+abertos (OAI) e para a descrição dos metadados o padrão Dublin Core (DC).
+O repositório LUME é uma biblioteca digital de grande prestígio junto à comunidade
+científica. Armazena cerca de 150 mil objetos digitais organizados em seis comunidades
+(acervos, eventos UFRGS, trabalhos acadêmicos e técnicos, produção científica, teses e
+dissertações, recursos educacionais), que guardam diferentes expressões e manifestações de
+estudos científicos produzidos por alunos e professores da UFRGS, publicados como teses,
+dissertações, resumos de anais de evento, capítulos de livro, artigos de periódicos, etc.
+Testar o uso dos FRBR na representação dos metadados DC fez-se necessária para
+demonstrarmos as contribuições do modelo no processo de organização e recuperação da
+informação em sistemas de acesso aberto, como os repositórios e; as vantagens da
+“modelagem” para os usuários e as suas tarefas de navegar, encontrar, identificar, selecionar e
+obter os recursos, evitando perda de tempo e garantindo-lhes maior consistência na qualidade
+das respostas.
+Antes de iniciarmos a modelagem conceitual foi feita uma análise para sabermos os
+limites e as possibilidades de aplicação dos FRBR em repositórios, para depois demonstramos
+as possíveis melhorias que o uso de modelos conceituais traz para os processos de
+organização e recuperação da informação em bibliotecas digitais como o RI-LUME. O
+pressuposto que norteia a pesquisa baseia-se na afirmação feita pela IFLA em sua Declaração
+de Princípios (2009) que estende o uso dos FRBR para além dos catálogos, sugerindo seu uso
+em outras ferramentas bibliográficas.
+Indo nessa direção, propôs-se (re)modelar a estrutura DC tomando como princípio os
+novos fundamentos da catalogação visando observar se tal procedimento de fato otimizará os
+processos de busca e recuperação da informação, permitindo que os usuários naveguem,
+identifiquem, selecionem e obtenham com mais rapidez e precisão as diferentes obras e suas
+respectivas expressões e manifestações depositadas no repositório.
+A fim de demonstrar os pressupostos levantados nessa pesquisa, o primeiro passo foi
+analisar o repositório institucional LUME em busca de um autor que apresentasse diferentes
+expressões e manifestações de uma mesma obra e que ao mesmo tempo fosse um autor com
+expressivos números de produções científicas.
+
+O autor escolhido foi Roger Flores Ceccon justamente por ser um pesquisador
+produtivo da área da Ciência da Saúde, com trabalhos publicados em diferentes periódicos
+científicos e anais de eventos, além de produções indexadas na base Scielo (Scientific
+Electronic Library Online). Há no repositório LUME 20 trabalhos do autor, sendo a maioria
+em parceria com outros pesquisadores. A obra escolhida foi “Mulheres que vivem com HIV:
+violência de gênero e ideação suicida” pelo fato de apresentar diferentes expressões e
+manifestações.
+A fim de demonstrar as possibilidades de uso do modelo conceitual FRBR na estrutura
+descritiva de um repositório e aferir quais vantagens essa ação traz para a recuperação da
+informação, foi realizada uma simulação.
+
+Para chegarmos a tal simulação analisamos,
+
+primeiramente, três registros de documentos depositados pelo autor Roger Flores Ceccon, no
+RI-LUME, sendo uma obra original (dissertação) e duas expressões/manifestações da mesma
+obra (resumo e artigo de periódico).
+Figura 2 - Metadados DC: Entidade e atributos (dissertação de mestrado)
+
+Fonte: Criação do autor
+
+Nessa obra, o esforço intelectual do autor resulta em uma dissertação a qual traz um
+olhar particular sobre o tema “mulheres que vivem com HIV” e que originará duas outras
+expressões (obras derivadas da original) manifestas como: resumo e artigo de periódico.
+Como vimos, os atributos ajuda-nos a identificar uma obra. No caso de uma obra
+científica, o atributo “data” pode, inclusive, anteceder sua publicação original. Isso é comum
+no campo científico, onde pré-prints de artigos e resumos de trabalho são divulgados antes de
+sua publicação em revista, anais, etc. Para vencer os limites impostos pela concessão dos
+direitos autorais, as instituições gestoras sugerem que trabalhos aceitos para publicação por
+editores que não permitem o livre acesso tenham uma cópia do pré-print depositada no RI.
+Para tanto se deve acrescentar dois novos atributos: um identificando o “pré-print” e outro o
+link (DOI) do artigo cujos direitos autorais estão submetidos a um editor.
+
+Figura 3 - Metadados DC, entidades e atributos (resumo)
+
+Fonte: Criação do autor
+
+Apesar do título da obra sofrer uma alteração, não podemos considerá-la como uma
+nova obra e sim uma nova manifestação da obra original. Isso acontece porque o autor Roger
+Flores Ceccon não criou um conteúdo que fosse diferente de sua dissertação e que
+apresentasse modificações da ideia original, ele apenas fez um resumo juntamente com sua
+orientadora Stela Nazareth Meneghel e uma pesquisadora Lilian Zielke Hesler sobre sua
+dissertação e apresentou num evento. Para ser considerada uma nova obra deveria haver, por
+exemplo, um esforço intelectual e criativo dos autores que provocasse um outro tipo de
+discussão, sendo a proposta do texto do original nitidamente alterada.
+
+Cabe ressaltar que esse tipo de procedimento é comum na área científica, não se
+tratando de uma ação mal intencionada do autor e seus colaboradores. Pelo contrário, todo
+pesquisador quer divulgar o que vem estudando, e isso é bom. Percebe-se que à medida que a
+pesquisa avança, o cientista sente necessidade de compartilhar as informações em diferentes
+canais de comunicação, formais e informais (revistas, eventos, etc.). O que estamos chamando
+a atenção é a forma como as mesmas expressões da obra e suas manifestações são registradas
+no repositório e de que forma o uso dos FRBR poderá minimizar esse problema inspirando
+uma nova maneira de se reestruturar os metadados, ajudando o usuário a identificar a natureza
+de uma dada expressão/manifestação.
+
+Figura 4 - Metadados DC, entidades e atributos (artigo de periódico)
+
+Nessa expressão (mais uma obra derivada da obra original - a dissertação) podemos
+perceber que há outra expressão: uma publicação do artigo no idioma inglês, porém não está
+armazenada no RI-LUME. Ao fazermos uma pesquisa na base de dados Scielo encontramos o
+artigo na referida base. Isso mostra que nem todos os artigos do autor estão depositados no
+RI-LUME, não que seja uma limitação do repositório, mas sim uma questão de direitos
+autorais.
+
+Enquanto a revista detiver os direitos autorais do artigo expresso em inglês, o mesmo
+não poderá ser depositado em um repositório de acesso livre 4. Por isso, aproximar obras e
+expressões através de links semânticos mostrou-se ser uma opção viável.
+Conforme Marcondes (2012, p. 173):
+A proposta de dados abertos interligados oferece grande potencial ao
+conectar recursos informacionais através de links semânticos, links que são
+significativos também para programas. [...] Sendo significativos para
+programas, links semânticos podem ser processados de forma mais rica por
+eles, explorando e enriquecendo cognitivamente o significado (legível por
+máquina) da ligação entre ambos os recursos.
+
+Para resolver o problema, os gestores do RI-LUME registraram o link interligando o
+artigo “Mulheres com HIV: violência de gênero e ideação suicida” com sua expressão em
+inglês publicada sob o título “Women with HIV: gender violence and suicidal ideation” no
+periódico Rev. Saúde Pública, vol.48, n.5, Oct. 2014, indexado na base de dados Scielo,
+abrindo o repositório “para fora” e dando ao usuário outras possibilidades de escolha.
+O que podemos perceber nesses exemplos é o fato de que, se o usuário pesquisar por um
+desses títulos no repositório LUME o mesmo não recupera os outros dois títulos por terem
+alterações no atributo título, o que impede o software de fazer essa relação. São para
+minimizar esses conflitos que servem as entidades, os atributos e os relacionamentos. Ao
+identificarmos um título, ainda que a grafia não seja a mesma usada na obra original, mas cujo
+conteúdo revela uma obra derivada, podemos registrá-lo como uma expressão e não como
+uma nova obra. Também podemos mapear seus relacionamentos mostrando ao usuário o que
+há sobre um tema ou sobre um autor dentro de um catálogo ou de uma biblioteca digital,
+poupando, assim, o seu tempo para identificar, selecionar e obter o que lhe interessa.
+Nesse contexto, entra em prática a proposta do FRBR: reunir e relacionar as obras,
+expressões, manifestações e itens de forma a facilitar a recuperação da informação para o
+usuário. O ideal seria que o registro da obra “Mulheres que vivem com HIV: violência de
+gênero
+
+e
+
+ideação
+
+suicida”
+
+no
+
+repositório
+
+estivesse
+
+relacionada
+
+às
+
+suas
+
+expressões/manifestações.
+
+4
+
+O movimento do Acesso Livre é baseado em duas estratégias: a via verde e a via dourada. Na primeira, as
+universidades e instituições de pesquisa são estimuladas a construírem os seus repositórios institucionais e
+estabelecer políticas de informação que incentivem os pesquisadores a depositarem uma cópia de seus trabalhos
+publicados em revistas científicas com revisão pelos pares. Já na via dourada, a estratégia é estimular a
+construção e/ou conversão de revistas científicas em revistas de acesso livre. (KURAMOTO, 2008)
+
+4 ANÁLISES E RESULTADOS
+A seguir, procuramos mostrar como seria o resultado de uma pesquisa se a arquitetura
+do RI-LUME fosse adequada aos princípios do FRBR. Sendo assim, usando como estratégia
+de busca o nome do autor Roger Flores Ceccon simulou-se uma pesquisa para em seguida
+visualizarmos como esta seria exibida ao usuário. Na figura 5 esquematizamos essas relações
+e exibimos o resultado de uma busca no RI-LUME caso sua estrutura de metadados fosse
+modelada tomando com referência o modelo conceitual FRBR. O exercício proposto foi
+executado com base em Moreno (2006) e Silveira (2007).
+Figura 5: Relacionamentos Obra, Expressões e Manifestações
+Simulação de resultado de busca no RI-LUME modelado em FRBR
+
+Fonte: Criação do autor
+
+Como ressaltam Tillett (2003), Moreno e Arellano (2005) e Mey e Silveira (2009) há
+nos FRBR relacionamentos bibliográficos implícitos, chamados de relacionamentos de
+primeiro nível: uma obra é realizada através da expressão, e pode sê-lo em mais de uma
+forma. Já uma expressão/manifestação pode ser materializada em um ou mais tipos
+documentais, que por sua vez pode ser exemplificada por um ou mais de um item.
+Nesse contexto, entra em prática a proposta do FRBR: reunir e relacionar as obras,
+expressões, manifestações e itens de forma a facilitar a recuperação da informação para o
+usuário. O ideal seria que a obra “Mulheres que vivem com HIV: violência de gênero e
+ideação suicida” no repositório estivesse relacionada às suas expressões (resumo, artigo,
+etc.), pois as entendemos como obras derivadas da obra original: a dissertação.
+Avançando, com o objetivo de testar a funcionalidade do modelo FRBR
+demonstramos conceitualmente as vantagens de usarmos as entidades e atributos FRAD na
+representação dos dados de autoridade. Para além dos atributos tradicionais, incluímos outros
+que achamos importantes na identificação de autores que produzem obras tipo “textos
+científicos”.
+O quadro abaixo exibe os atributos de autoridade e indica adição de novos atributos
+FRAD aos elementos dc.contributor.author, dc.contributor.advisor. e dc.degree.program. O
+objetivo desta simulação e demonstrar o quanto podemos remodelar a estrutura de metadados
+DC de modo a oferecermos ao usuário do repositório mais informações sobre o criador da
+obra e suas expressões/manifestações e os diferentes relacionamentos que este mantém com
+outras entidades como: seu orientador, o programa no qual está filiado, grupos de pesquisa,
+etc.
+Figura 6: Metadados DC acrescidos de novos atributos FRAD
+
+Fonte: Criação do autor
+
+O RI-LUME é uma biblioteca digital e não um catálogo. Por isso no lugar do
+identificador VIAF 5 optou-se em incluir um link para o currículo lattes. O mesmo
+procedimento foi usado para a entidade – o Programa de Pós-Graduação em Enfermagem. No
+entanto, o VIAF pode ser uma fonte de consulta para os gestores dos RI para a normalização
+dos nomes/responsabilidades, pessoas e entidades
+O acréscimo de novos atributos (currículo lattes, identificador Orcid 6 , filiações
+institucionais, etc.) aos metadados de autoridade em repositórios auxilia-nos a representar de
+forma mais consistente dados de autoridade relacionando autores e colaboradores com o
+contexto produção das obras; possibilita que o usuário navegue, através de hiperlinks, para
+conteúdos relacionados ao autor/obra; expressões/manifestações. Para recursos como as
+dissertações e teses, tais relacionamentos são fundamentais para a interlocução entre
+pesquisadores, o que faz dos repositórios uma poderosa ferramenta de comunicação científica.
+A estratégia de complementar o elenco de atributos FRBR e FRAD através do
+entrelaçamento de dados disponibilizados na web, como o Currículo Lattes, produções
+submetidas a periódicos de acesso aberto (via dourada) depositados em bases de dados como
+o Scielo, amplia as possibilidades de se conhecer melhor um cientista e de se ter acesso a
+outras expressões de suas obras. Isso faz com que um repositório institucional ultrapasse os
+estreitos limites de armazenar basicamente literatura cinzenta, abrindo-se à web de dados e
+interligando-a as suas coleções.
+Sabemos da questão dos direitos autorais em que os autores cedem às editoras o direito
+de divulgação da obra e pensando nessa questão entendemos que o acréscimo de atributos
+FRBR permite minimizar esse problema no âmbito dos repositórios por meio da associação de
+seus atributos às informações disponibilizadas na web, em especial aquelas que possuem os
+identificadores estáveis conhecidos como URIs (Uniform Resource Identifier).
+5
+
+O VIAF - Virtual International Authority File ( Base Virtual Internacional de Autoridade) é um projeto
+conjunto de várias instituições implementado pela OCLC. Seu objetivo é reduzir o custo e aumentar a utilidade
+dos arquivos de autoridade por meio da correspondência e vinculação de registros de autoridade e da
+disponibilização destes na web. O projeto iniciou apenas com pontos de acesso para pessoas, mas hoje cobre
+também entidades coletivas, obras e expressões, totalizando quase 20 milhões de registros de autoridade.
+Maiores informações podem ser obtidas na pagina do próprio projeto: http://viaf.org
+6
+
+ORCID (Open Researcher and Contributor ID) um identificador digital com código alfanumérico de 16
+caracteres, cuja finalidade é diferenciar um autor de qualquer outro, mesmo que esse tenha um homônimo ou
+tenha sido publicado, citado e/ou indexado com formas variadas. Cada código Identifica um único autor fazendo
+conexão automática com toda sua produção científica, onde quer que tenha sido publicada. O cadastro para
+obtenção do ORCID é gratuito e poderá ser feito individualmente ou pela instituição. Informações retiradas da
+página do ORCID. Ver: http://orcid.org
+
+5 CONSIDERAÇÕES FINAIS
+Este trabalho - fruto de pesquisa realizada no Mestrado em Ciência da Informação
+(PPGCI/UFF), teve como objetivo discutir os limites e as possibilidades de uso do modelo
+conceitual FRBR em repositórios digitais com vista à organização e recuperação da
+informação. Para tal feito procuramos identificar as entidades, atributos e relações existentes
+em um repositório, para então simularmos a representação/modelagem de seus metadados
+usando o modelo FRBR.
+A pesquisa demonstrou que há possibilidades de utilizar o modelo conceitual FRBR na
+estrutura descritiva de um repositório digital, uma vez que é praticável usá-lo pelo fato de ser
+baseado no modelo E-R, modelo este que qualifica as entidades de uma obra, as individualiza
+através de seus atributos e concomitantemente as relaciona, o que torna as buscas muito mais
+dinâmicas e precisas dando ao usuário a oportunidade de encontrar, identificar, selecionar e
+obter as informações de forma simples e rápida, conforme demonstramos ao simularmos
+resultado de uma busca em estrutura modelada em FRBR (figura 5).
+Pelo fato de o repositório LUME ter sido desenvolvido no padrão Dublin Core, cujas
+características primam pela interoperabilidade e extensibilidade, foi possível explorarmos sua
+estrutura de metadados, estendendo-a, agregando novos metadados referentes a atributos que
+qualificam e complementam as informações sobre as entidades, como, por exemplo, a
+entidade pessoa. Isso permite que um atributo referente à produção científica de um autor
+possa ser repetido quantas vezes forem necessárias, pois seu objetivo é enlaçar as diferentes
+obras produzidas por uma pessoa, depositadas no ambiente web e que têm a ela associado um
+identificador único, URI, ou seja, um link semântico. A experiência mostrou que a criação de
+novos campos de metadados abre as ferramentas bibliográficas digitais, como os repositórios,
+ao diálogo com outros dados disponíveis na web, como os artigos de periódicos depositados
+no Scielo, em bases de dados de pré-prints e outras.
+Conforme
+
+vimos,
+
+(figura
+
+6)
+
+links
+
+semânticos
+
+associados
+
+aos
+
+metadados
+
+dc.contributor.author e dc.contributor.advisor na qualidade de atributos, ampliam as
+possibilidades de conhecermos a produção intelectual de uma entidade (no exemplo, entidade
+pessoa) à medida que permite associá-la a links significativos como o seu Currículo Lattes,
+como também a outras obras depositadas pelo autor na web, como os artigos científicos
+enviados para periódicos de acesso aberto. Outra possibilidade que pode ser aventada, diz
+respeito ao ponto de acesso de autoridade, caso o autor possuísse um registro no arquivo de
+autoridades científicas com o que vem sendo idealizado por meio do ORCID (Open
+
+Researcher and Contributor ID) poderíamos substituir a descrição textual de seu metadado
+pela URI do registro/autoridade.
+Dessa forma, pode-se dizer que o modelo FRBR contribui para melhorar a organização
+e o acesso aos recursos digitais, criados e/ou depositados na web. A modelagem/representação
+dos metadados pautada nos novos fundamentos da catalogação libertará o usuário das
+pesquisas exaustivas em esquemas hierárquicos; de ter que conhecer operadores booleanos,
+formular estratégias de buscas, etc. A descrição pautada no conceito entidade-relacionamento
+permitirá que o usuário encontre, selecione e obtenha diferentes expressões e manifestações
+de uma mesma obra depositada no repositório a partir de uma única pesquisa.
+Em relação aos limites do uso do modelo conceitual FRBR em repositórios digitais, o
+que percebemos foi a dificuldade em discernir as entidades obra e expressão, pelo fato de suas
+distinções conceituais ainda serem muito tênues. Acreditamos que à medida que os grupos de
+estudos da IFLA avancem nas pesquisas sobre o vocabulário FRBR conseguiremos ter
+conceitos claros sobre as entidades e atributos do universo FRBR. Esse vocabulário será
+fundamental para que os robôs de busca encontrem com segurança (sem ambiguidades) as
+entidades bibliográficas, seus registros e conteúdo.
+É indiscutível que o modelo FRBR apresenta diversas vantagens na descrição dos
+documentos melhorando consideravelmente a atividade de busca e recuperação da informação
+para o usuário. Por que então não explorá-lo mais? Não só essa pesquisa como outras já
+realizadas vêm mostrando que as vantagens de sua aplicação nos catálogos em linha e
+repositórios são maiores do que o risco de não fazê-la, principalmente porque há na web
+milhares de recursos que precisam ser descritos e recuperados. A adoção de um modelo
+conceitual como o FRBR amplia a capacidade semântica das ferramentas de busca devendo
+sua aplicação ser priorizada pelos gestores dos sistemas de informação, sendo este um bom
+desafio para seus profissionais e pesquisadores.

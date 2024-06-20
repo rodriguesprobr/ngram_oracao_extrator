@@ -1,0 +1,358 @@
+
+
+ANÁLISE DOS MODELOS DE DADOS SKOS e BIBFRAME: novas perspectivas de
+representação na era dos dados interligados
+Modalidade da apresentação: Comunicação Oral
+Resumo: O artigo apresenta uma análise dos novos modelos de dados Simple Knowledge
+Organization System – SKOS e Bibliographic Framework – BIBFRAME a partir do enfoque da área
+de Ciência da Informação. Considerando a necessidade de uma melhor compreensão destes modelos, a
+pesquisa caracteriza-se como teórica e exploratória, com finalidade descritiva, objetivando analisar os
+modelos SKOS e BIBFRAME, descrever suas principais características e relacionar os fundamentos
+que norteiam sua utilização com a literatura da área de Ciência da Informação. Constatou-se que o
+modelo SKOS representa um avanço em relação às formas tradicionais de disponibilização de
+vocabulários em ambientes digitais, favorecendo que recursos conceituais possam ser referenciados a
+partir de aplicações baseadas em tecnologias semânticas. Verificou-se que em nível conceitual o
+modelo BIBIFRAME possui três Entidades principais que podem ser descritas sucintamente como:
+Work (Obra) representa o nível mais alto de abstração e reflete a essência conceitual do recurso
+catalogado; Instance (Instância) caracteriza uma manifestação e expressão de uma Obra; Item (Item)
+corporifica uma instância, de forma física ou virtual. Além das três Classes correspondentes às
+Entidades principais o BIBFRAME provê dezenas de outras Classes e Subclasses para categorizar
+diferentes tipologias de recursos e Propriedades para descrever os respectivos metadados. Conclui-se
+que os modelos SKOS e BIBIFRAME favorecem novas possibilidades no âmbito da área de Ciência
+da Informação, contribuindo para o aperfeiçoamento de processos de representação, organização e
+recuperação de informações. A crescente importância de modelos de representação fundamentados em
+linguagens formais, como SKOS e BIBFRAME, destaca a necessidade de fortalecimento da formação
+lógico-matemática no âmbito da área de Ciência da Informação, a partir da sistematização de diretrizes
+teórico-metodológicas que favoreçam o ensino e utilização de linguagens computacionais,
+principalmente XML e RDF, contribuindo para o desenvolvimento de novas competências
+relacionadas à identificação, modelagem e representação formal de recursos disponíveis em ambientes digitais.
+Palavras-chave: Sistemas de Organização do Conhecimento. Tecnologias da Informação e
+Comunicação. Modelagem de Dados. Ontologias. Web Semântica.
+1 INTRODUÇÃO
+À medida que as novas tecnologias de representação têm evoluído o ambiente Web tem
+se transfigurado em uma rede de documentos interligados. Tal cenário contemporâneo tem
+influenciado a concepção de novos padrões e tecnologias de representação, evidenciando a
+importância dos dados e relacionamentos existentes entre os documentos.
+No âmbito da área de Ciência da informação observa-se a necessidade de uma
+reconfiguração disciplinar, no intuito de favorecer o desenvolvimento e uso de novas
+tecnologias informacionais que sejam capazes de incorporar as bibliotecas e unidades de
+informação tradicionais nesta nova e instigante rede de dados conectados.
+Entre os novos formatos e modelos de dados utilizados para a representação de recursos
+informacionais pode-se destacar o Simple Knowledge Organization System (SKOS) que
+possibilita a representação da estrutura básica e conteúdo de Sistemas de Organização do
+Conhecimento e o Bibliographic Framework (BIBFRAME) um modelo de dados para a
+descrição de recursos bibliográficos baseado na concepção de dados interligados. O objetivo
+central da presente pesquisa, em andamento, é analisar estes novos modelos de representação,
+descrever suas principais características e relacionar os fundamentos que norteiam a utilização e
+desenvolvimento destes instrumentos a partir do enfoque da área de Ciência da Informação.
+A pesquisa possui caráter teórico e metodológico e objetiva oferecer respostas aos
+problemas de pesquisa apresentados. Possui abordagem qualitativa, pois busca apresentar
+características voltadas à descrição, compreensão e explicação de relações de um determinado
+fenômeno de modo a considerar o caráter interativo entre os objetivos definidos e as orientações
+
+teóricas da pesquisa. Caracteriza-se, também, como pesquisa de natureza aplicada, uma vez que
+“objetiva gerar conhecimentos para aplicação prática, dirigidos à solução de problemas
+específicos” (SILVEIRA; CÓRDOVA, 2009, p.35).
+2 SIMPLE KNOWLEDGE ORGANIZATION SYSTEM
+No ano de 2009 o Word Wide Web Consortium (W3C) formalizou como Recomendação
+o padrão Simple Knowledge Organization System – SKOS (Sistema de Organização do
+Conhecimento Simples) um modelo de dados para a representação de Sistemas de Organização
+do Conhecimento no ambiente Web, com o objetivo de atender às novas demandas
+informacionais relacionadas ao compartilhamento e interoperabilidade de vocabulários no
+ambiente Web (MILES; BECHHOFER, 2009).
+O modelo SKOS proporciona um modelo para a representação formal da estrutura
+básica e conteúdo de Sistemas de Organização: como tesauros, esquemas de classificação, listas
+de cabeçalho de assunto, taxonomias, entre outros tipos similares de vocabulários controlados
+(RAMALHO; VIDOTTI; FUJITA, 2007). Sua codificação é baseada no padrão RDF
+(Resource Description Framework), favorecendo a representação de informações de maneira
+estruturada, assim como a integração de diferentes esquemas conceituais.
+O RDF tem se destacado como a uma das principais tecnologias responsáveis pela
+estruturação dos dados em formatos que possam ser representados formalmente. A partir da
+tríade Recurso; Propriedade; Valor; favorece a interligação de dados para os mais diferentes
+propósitos. Conforme destaca Lassila (1999)
+RDF é uma aplicação da linguagem XML que se propõe ser uma base para o
+processamento de metadados na Web. Sua padronização estabelece um
+modelo de dados e sintaxe para codificar, representar e transmitir metadados,
+com o objetivo de torná-los processáveis por máquina, promovendo a
+integração dos sistemas de informação disponíveis na Web.
+
+A linguagem XML tem como principal objetivo descrever formalmente os elementos
+que compõem a estrutura interna de um recurso. Contudo, para formalizar as relações existentes
+entre diferentes recursos é recomenda a utilização do Resource Description Framework (RDF)
+que tem como foco principal a representação dos relacionamentos.
+Ao longo da última década a linguagem XML passou a ser conhecida no campo da
+Ciência da Informação, sendo cada vez mais utilizada para a representação de recursos
+informacionais. Contudo, a tecnologia RDF ainda é pouco explorada. Tal fato pode ser
+justificado por se tratar de uma tecnologia mais recente e que possui ainda um número restrito
+de aplicações conhecidas na área de Ciência da Informação.
+Conforme relatam Pastor-Sanchez, Martínez-Mendez, e Rodriguez-Muñoz (2009) o
+desenvolvimento do modelo SKOS começou em 2002, com as atividades do grupo de trabalho
+Semantic Web Advanced Development for Europe (SWAD-E) e foi difundido publicamente a
+em de novembro de 2005, com a publicação do documento SKOS Core Guide (MILES;
+BRICKLEY, 2005a). Contudo, apenas em agosto de 2009 com a publicação do SKOS Simple
+Knowledge Organization System Reference (MILES; BECHHOFER, 2009) SKOS passou ser
+considerado como uma recomendação oficial do W3C, como modelo de dados para a
+disponibilização e compartilhamento de sistemas de organização do conhecimento na Web.
+Tendo como principal objetivo possibilitar a representação de vocabulários no ambiente
+Web como base em um modelo simplificado, o SKOS não tem a função de substituir
+vocabulários controlados em seu contexto original de uso, e sim favorecer uma maior
+reutilização e interoperabilidade entre os vocabulários existentes (RAMALHO, 2015). Segundo
+Isaac e Summer (2009) o padrão SKOS possibilita que conceitos possam ser identificados
+
+utilizando Uniform Resource Identifiers (URI), rotulados com sequências textuais em uma ou
+mais línguas naturais, documentados por meio de diferentes tipos de notas, relacionados
+semanticamente entre si, a partir de hierarquias informais e redes associativas; e agregados em
+diferentes esquemas conceituais.
+Conforme destaca Mustafa El Hadi (2015) desde a padronização do modelo SKOS
+muitos vocabulários passaram a ser protegidos por direitos autorais para serem publicados como
+dados ligados na Web, proporcionando uma dimensão semântica praticamente inexplorada
+anteriormente.
+Dextre Clarke e Zeng (2012, p.23) destacam a importância do padrão SKOS
+As Recomendações SKOS do W3C são projetadas para suportar publicações
+de vocabulários, como tesauros na Web. E na sua essência é um modelo de
+dados que distingue expressamente entre os conceitos e etiquetas para
+representar conceitos. (...) Além disso, que é veiculado pelo SKOS Core para
+as relações entre conceitos, a extensão fornece suporte adicional para
+identificar, descrever e linkar entidades lexicais.
+Os elementos em SKOS podem ser categorizados como: Conceitos, Propriedades e
+Relacionamento. Conceitos são identificados a partir de URIs e são representados pelo uso de
+
+notações, que são códigos lexicais usados para representar exclusivamente conceitos no âmbito
+de um determinado esquema conceitual; Propriedades possuem como principal função
+descrever formalmente atributos dos Conceitos, de acordo com o propósito do esquema
+conceitual; Relacionamentos incorporam semântica aos esquemas, a partir do estabelecimento
+de diferentes categorias e hierarquias e conceitos (RAMALHO, 2015).
+Os Relacionamentos em SKOS podem ser classificadas em três categorias: Relações
+Hierárquicas, Relações Associativas e Relações de Equivalência. A figura 01 apresenta uma
+síntese dos tipos de Relações suportados pelo modelo SKOS.
+Figura 01 – Tipos de Relacionamentos SKOS
+Categoria
+Relações
+Hierárquicas
+Relações
+Associativas
+
+Notação
+skos:broader
+skos:narrower
+skos:related
+skos:ExactMatch
+skos:closeMatch
+
+Relações de
+Equivalências
+
+skos:broadMatch
+skos:narrowMatch
+skos:relatedMatch
+
+Breve Definição
+Define Relações Hierárquicas entre conceitos, indicando que
+determinado conceito possui um significado mais amplo.
+Define Relações Hierárquicas entre conceitos, indicando que
+determinado conceito possui um significado mais específico.
+Define Relações Associativas entre conceitos
+Define Relações de Equivalências entre conceitos que possuem alto
+grau de correspondência e podem ser utilizados indistintamente em
+uma ampla gama de aplicações.
+Define Relações de Equivalências entre conceitos que podem ser
+considerados como similares em contexto previamente determinado.
+Define Relações de Equivalências, considerando a estrutura hierárquica
+de um conceito que possui um significado mais amplo.
+Define Relações de Equivalências, considerando a estrutura hierárquica
+de um conceito que possui um significado mais específico.
+Define Relações de Equivalências, considerando as estruturas
+associativas existentes entre conceitos.
+
+Fonte: RAMALHO (2015)
+
+A Figura 02 apresenta um trecho de código referente a representação em SKOS no
+formato XML/RDF do Tesauro Brasileiro em Ciência da Informação. Conforme pode ser
+observado na linha 30 é definido o URI do Recurso e nas linhas subsequentes suas
+características e relacionamentos.
+
+Figura 02 – Exemplo de Representação SKOS
+
+Fonte: Elaborado pelo autor
+
+No intuito de facilitar a compreensão a Figura 03 apresenta visualmente a mesma
+representação SKOS, destacando os links identificadores de cada um dos conceitos, seus
+relacionamentos e propriedades.
+
+Figura 03 – Exemplo de Representação SKOS
+
+Fonte: Elaborado pelo autor
+
+Como pode ser observado o modelo SKOS possibilita publicar vocabulários no
+ambiente Web e declarar formalmente o URI que identifica cada recurso com base em um
+modelo simplificado, possibilitando que os recursos possam ser referenciados por meio de
+aplicações baseadas em tecnologias semânticas.
+Em um mundo cada vez mais conectado, onde proliferam-se iniciativas baseadas em
+dados interligados, tais características tornam-se cada vez mais importantes. Para que tais
+relacionamentos possam ser aproveitados nas bibliotecas é necessário padrões e tecnologias que
+possibilitem a interligação dos recursos disponíveis em bibliotecas com o ambiente Web. Nesta
+perspectiva, tem sido desenvolvido a Bibliographic Framework Initiativ (BIBIFRAME).
+3 BIBLIOGRAPHIC FRAMEWORK INITIATIVE
+O Bibliographic Framework (BIBFRAME) foi lançado oficialmente em maio de 2011 a
+partir de uma iniciativa da Library of Congress (EUA) com o objetivo de revistar e, a longo
+prazo, implementar um novo modelo e dados para a descrição de recursos bibliográficos que
+possibilitasse a incorporação das bibliotecas em um novo cenário de dados interligados.
+A concepção do modelo BIBFRAME está baseada nas tendências e práticas
+contemporâneas que incentivam a disponibilização e interligação de dados na Web em formatos
+que sejam legíveis por máquinas. A medida que a Web evolui, de uma rede de documentos para
+uma rede de dados interligados, torna-se cada vez mais evidente a necessidade de identificação
+das entidades envolvidas na criação dos recursos (autores, editores) e dos conceitos (assuntos)
+relacionados, tais dados são cruciais para que os usuários possam localizar informações na Web
+(LIBRARY OF CONGRESS, 2012).
+O modelo BIBFRAME está baseado na representação formal de entidades por meio de
+Classes RDF, seus são formalmente identificados a partir da utilização de Uniform Resource
+Identifier (URI). Conforme apresentado pela Library of Congress (2012, p.3, tradução livre),
+tais características visam contemplar os principais objetivos que direcionaram a criação do
+padrão:
+1. Diferenciar claramente o conteúdo conceitual e suas manifestações físicas
+(por exemplo, obras e instâncias);
+2. Focar na identificação de forma inequívoca das entidades de informação
+(por exemplo, as autoridades);
+3. Alavancar e expor as relações entre entidades;
+
+O vocabulário BIBIFRAME é formado por um conjunto de Classes e Propriedades que
+representam formalmente entidades, suas características e relacionamentos. Em abril de 2016
+foi publicada uma atualização do vocabulário, denominada como BIBIFRAME 2.0.
+Considerando as melhorias e avanços identificados em relação a versão anterior, o presente
+artigo tem como foco de análise esta última versão publicada do modelo, denominando-o
+doravante simplesmente como BIBFRAME. A figura 05 apresenta as principais Classes deste
+modelo.
+
+Figura 05 – Modelo BIBFRAME 2.0
+
+Fonte: Library of Congress (2016, on line)
+
+As três Classes principais do modelo BIBFRAME podem ser descritas sucintamente
+como: Work (Obra) representa o nível mais alto de abstração e reflete a essência conceitual do
+recurso catalogado; Instance (Instância) caracteriza uma manifestação e expressão de uma
+Obra; Item (Item) corporifica uma instância, de forma física ou virtual. Conforme destaca
+Mitchell (2013) as Classes Work e Item do BIBFRAME são análogas às entidades de mesmo
+nome previstas nos Functional Requirements for Bibliographic Records (FRBR). Contudo, a
+Classe Instance pode ser considerada como uma fusão das entidades Expression e
+Manifestation previstas no FRBR.
+
+Além das três Classes principais (Obra, Instância e Item) é importante destacar que o
+BIBFRAME também utiliza outras Classes e Subclasses para categorizar as diferentes
+tipologias de recursos, ultrapassando os limites tradicionais da representação de registros
+bibliográficos. Conforme descrito pela International Federation of Library Associations and
+Associations (2005) registro bibliográfico é um conjunto de dados, compostos por entidades,
+que descrevem ou identificam uma ou mais obras, expressões, manifestações ou itens.
+O BIBFRAME está baseado na formalização dos relacionamentos existentes entre os
+recursos e não em registros isolados, deste modo possibilita explorar as relações de forma
+independente, evitando duplicidades de informações e favorecendo a interligação de recursos
+de naturezas distintas. Baseando-se em um conceito amplo de recurso, além das entidades
+principais, o BIBFRAME possibilita representar ‘Registros de Autoridade’, ‘Conceitos’,
+‘Lugares’ e praticamente qualquer entidade do mundo real que possa ser associada a um
+identificador controlado e possua um conjunto específico de atributos.
+Propriedades são utilizadas para definir formalmente os atributos e relacionamentos e
+representam os metadados dos recursos. Entre as dezenas de Propriedades previstas no
+BIBFRAME destacam-se algumas ‘Propriedades Gerais’ que são herdadas pela maioria das
+Classes:
+ bf:label: propriedade para definição de etiquetas a partir de uma sequência textual;
+ bf:identifier: propriedade que especifica um identificador para informações sobre um
+recurso;
+ bf:authorizedAccessPoint: propriedade formulada de acordo com as regras de descrição;
+
+Também as Propriedades bf:hasAnnotation e bf:hasAuthority podem ser consideradas
+como ‘Propriedades Gerais’ devido ao fato da maioria dos recursos estarem associados à
+anotações (bf:hasAnnotation) e recursos de autoridade (bf:hasAuthority).
+O controle de autoridade busca a consistência dos pontos de acesso e correta
+identificação das entidades responsáveis pelas obras e historicamente é um dos aspectos mais
+dispendiosos na descrição bibliográfica (BURGER, 1985; GORMAN, 2003; ASSUMPÇÃO;
+SANTOS, 2012). Um registro de autoridade pode estar associado a milhares de outros
+registros, exigindo a atualização de todos caso alguma informação de autoridade seja alterada,
+gerando retrabalho e um alto custo de manutenção.
+
+O BIBIFRAME baseia-se no uso de links e identificadores controlados, favorecendo a
+diminuição dos custos associados a manutenção de recursos de autoridade, pois evita o
+retrabalho e a duplicidade de informações. Além disso, o uso de links possibilita uma maior
+visibilidade dos recursos na Web, extrapolando os limites tradicionais dos catálogos das
+bibliotecas.
+A Figura 06 apresenta graficamente um exemplo simplificado de duas instâncias e um
+registro de autoridade relacionado a Obra ‘FRBR: Final Report’. Em destaque é apresentado o
+identificador associado ao ‘IFLA-Study-Group’, que se encontra disponível no link
+<http://id.loc.gov/authorities/names/nr98013265>.
+Figura 06 – Entidades Principais do BIBIFRAME
+
+Fonte: Elaborado pelo autor
+
+A Figura 06 apresenta três Instâncias, duas correspondentes a diferentes tipos de
+manifestações da uma Obra (‘FRBR Final Report – PDF’; ‘FRBR Final Report – HTML’) e
+uma terceira que correspondente ao recurso de autoridade ‘IFLA’. Com o objetivo de facilitar
+a visualização foram ignoradas as outras propriedades das Instâncias, apresentando apenas as
+Propriedades relacionadas com o recurso de autoridade responsável pela publicação
+(‘Publisher’) e três propriedades que descrevem o recurso de autoridade (link; label;
+Identifier). Como pode ser observado as duas Instâncias correspondentes a tipos de
+manifestações da Obra estão vinculadas ao mesmo identificador de recurso de autoridade,
+
+caso alguma Propriedade deste recurso seja alterada automaticamente serão atualizados todos
+os recursos vinculados ao seu identificador.
+Outra vantagem da utilização de URIs para identificar e disponibilizar os
+relacionamentos existentes entre os recursos é a possibilidade de interligar dados armazenados
+em diferentes fontes, contribuindo para a construção de padrões e vocabulários distribuídos, e
+favorecendo uma maior interoperabilidade e visibilidade dos recursos disponíveis em
+diferentes catálogos de bibliotecas.
+Conforme destaca a Library of Congress (2012) os registros de autoridade
+representados em BIBFRAME não são projetados para competir ou substituir as iniciativas de
+controle de autoridade existentes, mas sim fornecer uma camada de abstração padronizada
+acima dos diferentes esforços de controle de autoridade baseados na Web para torna-los ainda
+mais eficazes. Assim, os recursos de autoridade assumem um papel de destaque no modelo
+BIBFRAME, conforme apresentado na figura 07.
+Figura 07 – Representação gráfica de elementos do Modelo BIBFRAME
+
+Fonte: RAMALHO (2016)
+
+A figura 07 apresenta a representação gráfica de um Obra (Work) que é identificada
+como FRBR Report’ e possui três Instâncias (‘HardCover Book’; ‘PDF’; ‘HTML’). A Obra
+está associada a dois recursos de autoridade (‘Cataloging’; ‘IFLA Study Group’) e as
+Instâncias estão associadas a outros dois recursos de autoridade (‘K. G. Saur’; ‘IFLA’). Podese observar que a autoridade responsável pela publicação da Instância ‘HardCover Book’ é
+diferente da autoridade responsável pela publicação das outras duas Instâncias da mesma
+Obra. Também pode ser observado que a Instância ‘HardCover Book’ está vinculada a três
+Propriedades (‘callNumber’, ‘subLocation’, ‘circulationStatus’), a partir da atribuição dos
+valores correspondentes às Propriedades de uma Instância temos a corporificação de um
+Item.
+Conforme pode ser observado o BIBFRAME deve ser capaz de acomodar um número
+abrangente de modelos de representação e padrões de metadados, favorecendo o
+compartilhamento e interligação dos relacionamentos no ambiente Web sem limitar as
+atividades de catalogação. Conforme destaca a Library of Congress (2012) embora seja
+importante compreender o BIBIFRAME a partir de visão mais abrangente que ultrapassa os
+limites tradicionais das bibliotecas, também é imprescindível que os profissionais envolvidos
+nas bibliotecas se identifiquem com a proposta deste novo modelo.
+
+4 CONSIDERAÇÕES FINAIS
+O presente artigo apresenta subsídios teóricos no intuito de contribuir para uma melhor
+compreensão dos novos modelos de dados utilizados para a representação de informações em
+ambientes digitais. Observou-se que o modelo SKOS representa um avanço em relação às
+formas tradicionais de disponibilização de vocabulários em ambientes digitais, favorecendo
+que recursos conceituais possam ser referenciados a partir de aplicações baseadas em
+tecnologias semânticas. Em relação ao modelo BIBIFRAME verificou-se que em nível
+conceitual tal modelo possui 3 Entidades principais que podem ser descritas sucintamente
+como: Work (Obra) representa o nível mais alto de abstração e reflete a essência conceitual do
+recurso catalogado; Instance (Instância) caracteriza uma manifestação e expressão de uma
+Obra; Item (Item) corporifica uma instância, de forma física ou virtual. Para descrever
+formalmente atributos e relacionamentos o BIBFRAME utiliza Propriedades que descrevem
+os metadados dos recursos e, além das 3 Classes correspondentes às Entidades principais,
+também provê dezenas de outras Classes e Subclasses complementares, utilizadas para
+
+categorizar diferentes tipologias de recursos, possibilitando representar qualquer Entidade do
+mundo real que possa ser associada a um identificador controlado.
+A partir do levantamento bibliográfico realizado verificou-se que os modelos de dados
+SKOS e BIBFRAME favorecem novas possibilidades de representação de informações,
+contribuindo para o aperfeiçoamento de processos de representação, organização e
+recuperação de informações em ambientes digitais, apontando perspectivas inovadoras no
+âmbito da área de Ciência da Informação, tais como: recuperação automática de dados
+formalmente relacionados; integração de informações disponibilizadas em fontes distribuídas;
+desenvolvimento de métodos automáticos ou semi-automáticos de seleção de conteúdos;
+compatibilização linguística e semântica de informações, entre outras.
+A crescente importância de modelos de representação fundamentados em linguagens
+formais, como SKOS e BIBFRAME, destaca a necessidade de fortalecimento da formação
+lógico-matemática no âmbito da área de Ciência da Informação, a partir da sistematização de
+diretrizes teórico-metodológicas que favoreçam o ensino e utilização de linguagens
+computacionais, principalmente XML e RDF, contribuindo para o desenvolvimento de novas
+competências relacionadas à identificação, modelagem e representação formal de recursos
+disponíveis em ambientes digitais.
