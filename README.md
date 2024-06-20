@@ -42,6 +42,7 @@ O _script_ _processar.py_ pode demorar algumas horas para terminar a execução.
 No _config.json_ também pode ser alterado se os dados serão excluídos na execução (atributo _excluir_dados_) e o local em que o algoritmo fará a varredura procurando os textos a serem processados (atributo _comunicacoes_cientificas_dir_).
 
 # _TODO List_
+- [ ] Separar Comunicações Científicas (_e.g._ poster, resumo, etc.)
 - [ ] Refatoração de parte do algoritmo
 - [ ] Orientação a Objetos
 - [x] Melhorias no processamento paralelo para evitar _OutOfMemoryError_. (Commit 
