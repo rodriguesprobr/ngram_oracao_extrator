@@ -4,7 +4,7 @@ Código-fonte utilizado na Versão *alpha* do Projeto de Extração de [*n-grams
 
 O conteúdo deste projeto é de livre distribuição, desde que seja referenciado e utilizada a Licença [Creative Commons 4.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
-Este projeto foi inspirado no software White, desenvolvido em Linguagem de Programação [Delphi](https://www.embarcadero.com/products/delphi) pelo Professor Dr. [Ricardo César Gonçalves Sant'Ana](http://lattes.cnpq.br/1022660730972320), utilizado nos artigos _Informação e Tecnologia no ENANCIB: Percurso do GT 08 no período de 2008 - 2015_ e _Informação e Tecnologia: Percurso Temático do GT 08_, liderados pela Professora Dra. [Plácida Leopoldina Ventura Amorim da Costa Santos](http://lattes.cnpq.br/7408791408049766). 
+Este projeto foi inspirado no software _White_, desenvolvido em Linguagem de Programação [Delphi](https://www.embarcadero.com/products/delphi) pelo Professor Dr. [Ricardo César Gonçalves Sant'Ana](http://lattes.cnpq.br/1022660730972320), utilizado nos artigos _Informação e Tecnologia no ENANCIB: Percurso do GT 08 no período de 2008 - 2015_ e _Informação e Tecnologia: Percurso Temático do GT 08_, liderados pela Professora Dra. [Plácida Leopoldina Ventura Amorim da Costa Santos](http://lattes.cnpq.br/7408791408049766). 
 
 # Colaboradores do Projeto:
 
@@ -32,7 +32,7 @@ Além disso, são requeridas as seguintes bibliotecas:
 
 O algoritmo faz o uso do [SQLite3](https://sqlite.org/) como [Sistema de Gerenciamento de Banco de Dados](https://pt.wikipedia.org/wiki/Sistema_de_gerenciamento_de_banco_de_dados). Todavia, o código-fonte já possui uma instância para facilitar a sua execução. O _SQLAlchemy_ possui o dialeto para integração automática dos dados com o algoritmo.
 
-Foi utilizado uma adaptação do código-fonte de pré-processamento de textos para o _spacy_, desenvolvido por [Omri Mendels, da Cientista de Dados da Microsoft](https://gist.github.com/omri374/ec1c243a5a94a657dae40078d47977b6). Parte do seu código pode ser encontrada no diretório _util_, arquivo _preprocessamento.py_.
+Foi utilizado uma adaptação do código-fonte de pré-processamento de textos para o _spacy_, desenvolvido por [Omri Mendels, da Cientista de Dados da Microsoft](https://gist.github.com/omri374/ec1c243a5a94a657dae40078d47977b6). Parte do seu código pode ser encontrado no diretório _util_, arquivo _preprocessamento.py_.
 
 # Como utilizar
 
