@@ -1,0 +1,718 @@
+
+SOLUÇÕES EM ECM (ENTERPRISE CONTENT MANAGEMENT) E SOFTWARES
+PARA REPOSITÓRIOS: CONVERGÊNCIA DE REQUISITOS NAS ATIVIDADES
+PARA GESTÃO DOCUMENTAL
+Modalidade da apresentação: Comunicação Oral
+
+Resumo: O uso de softwares para gestão de documentos remonta ao princípio dos anos 1990 e apesar
+da presença em diversas empresas, sua adoção pelas instituições que trabalham com ensino e pesquisa
+ainda carece de debate. O conteúdo informacional produzido nestas instituições está mais próximo dos
+repositórios institucionais do que de soluções para ECM e GED. Esta investigação aborda os conceitos
+envolvidos no processo de gestão documental e sua compatibilização com soluções de ECM e GED,
+bem como ferramentas para estruturação de repositórios institucionais, em especial nas
+funcionalidades de captura, gestão, armazenamento, entrega e preservação, incluindo aspectos de
+certificação digital. Por meio de análise bibliográfica, foi elaborado um estudo exploratório para
+identificar as características e requisitos. São analisados os reflexos dos conceitos de gestão
+documental em quatro softwares de código aberto, sendo dois para ECM e dois para a montagem de
+repositórios institucionais. Foi desenvolvida uma análise destas características, buscando a
+convergência dos requisitos identificados para auxiliar na proposição de projetos de melhoria, bem
+como na possibilidade de integração dessas ferramentas ao cenário da gestão documental tanto para a
+documentação do cotidiano das instituições de ensino e pesquisa quanto para documentos originados
+em atividade puramente pautada no processo de pesquisa em Ciência e Tecnologia.
+
+Palavras-chave: ECM. GED. Repositórios. Gestão de Documentos. Requisitos.
+1 INTRODUÇÃO
+Organizações em geral possuem um terreno extremamente fértil para a produção de
+conteúdo informacional originário da sua produção documental. Nesta direção, verifica-se que a
+discussão sobre o alto volume de documentos vem inundando o nosso cotidiano de maneira
+frequente nas instituições que trabalham com guarda permanente de registros sobre o exercício
+de atividades profissionais e/ou empresariais. (RIBEIRO, 2012).
+Esta discussão também tem sido conduzida no âmbito da produção em Ciência e
+Tecnologia, pois surge uma outra percepção sobre o que vem a ser o produto da pesquisa, uma
+vez que os objetos, dados intermediários, imagens, sons, dentre outros, podem ser descritos e
+armazenados em bases de dados, podendo ser utilizados e reutilizados segundo propósitos de
+pesquisa. (SAYÃO; SALES, 2014).
+Mas, como encaminhar a questão sobre a gestão de conteúdo informacional se cada vez
+mais surgem registros de informação de diferentes naturezas e propósitos? Há previsões de que
+apontam para o crescimento de dados e informações digitais no mercado brasileiro, chegando
+ao volume de 1,6 Zetabytes no ano de 2020. São registros gerados por transações comerciais,
+educação e expansão das fontes de dados para pesquisas, que precisam ser tratados,
+armazenados, geridos e preservados. (RIBEIRO, 2014).
+Em notícia recente veiculada por redes sociais, a UFRGS (Universidade Federal do Rio
+Grande do Sul) apresentou um ambiente para gestão de documentos, SDE - Sistema de
+Documentos Eletrônicos, que tem por objetivo automatizar a emissão de documentos oficiais da
+Universidade (UFRGS, 2016). Este esforço pode ser considerado um primeiro passo importante
+na direção de homogeneizar o entendimento e integração de diversos aparatos tecnológicos, que
+podem auxiliar na produção de conteúdo informacional destas instituições.
+
+Por outro lado, é possível perceber, ainda hoje, a pequena base teórica compatível com a
+problemática da gestão de conteúdo informacional baseado em documentos, conforme apontado
+por Baldam (2004a) há cerca de doze anos. Especialmente no âmbito da gestão de documentos
+originários da execução de atividades profissionais do cotidiano, esta percepção continuou
+presente, pois na revisão de literatura encaminhada nesta pesquisa junto às principais bases de
+dados em Ciência da Informação e periódicos disponíveis no portal da Capes, utilizando um
+recorte temporal entre cinco e dez anos foram recuperados poucos artigos relacionados à
+temática.
+A proposta desenvolvida nesta investigação identifica pontos de contato entre atividades
+para gestão documental de unidades que trabalham com a guarda permanente de registros, e em
+instituições que precisam gerir a documentação decorrente dos processos de pesquisa em
+Ciência e Tecnologia (C&T). Não é objetivo desta investigação esgotar as análises de
+funcionalidades necessárias para o processo de gestão documental, nem tampouco de softwares
+para ECM (Enterprise Content Management) e para repositórios, mas sim alinhavar os
+requisitos de ambas as soluções com o intuito de aprofundar e estimular as discussões acerca da
+implantação destas ferramentas tecnológicas.
+2 UMA VISÃO DAS FUNCIONALIDADES NECESSÁRIAS PARA O PROCESSO DE
+GESTÃO DOCUMENTAL
+Partiu-se do pressuposto que a atividade de gestão documental consiste em um conjunto
+de procedimentos e operações técnicas referentes à produção, tramitação, uso, avaliação e
+arquivamento dos ativos de informação documental. Estes procedimentos devem ocorrer para
+os ativos produzidos pela instituição e que estão posicionados nas fases do seu ciclo de vida2
+(CONARQ, 2011).
+Essencialmente, o recorte adotado para esta investigação estruturou a gestão documental
+por meio da execução das atividades para controlar a produção documental, contemplando a
+formalização, digitalização e pesquisa (RIBEIRO, 2008), além de funcionalidades para trâmite,
+arquivamento e preservação (CUNHA, 2010), com atividades apoiadas em uso de taxonomias e
+vocabulários (TAMANE, 2010). O quadro 1 reúne a coleção de funcionalidades identificadas:
+Quadro 1: Funcionalidades para gestão documental
+Funcionalidade
+Formalizar
+
+2
+
+Descrição
+Conjunto de atividades ligadas à verificação da forma do documento (digital ou
+analógico) e a respectiva necessidade de digitalização, com identificação de
+
+Considera-se o ciclo de vida de um ativo de informação documental as fases: corrente, intermediária, e
+destinação final. Esta última visa sua eliminação ou recolhimento para guarda permanente. (ROSSEAU;
+COUTURE, 1998)
+
+Digitalizar
+
+Pesquisar
+
+Gerir taxonomias e
+vocabulários
+
+Tramitar
+
+Arquivar
+Preservar
+
+metadados (tipo, assunto, classificação, restrição de acesso, dente outros) e
+posterior indexação. Adicionalmente pode-se incluir em atividades de
+formalização as tarefas ligadas ao protocolo de documentos.
+Conjunto de atividades ligadas à digitalização do documento, incluindo o
+processo de preparação (remoção de sujeiras, grampos e separação e/ou
+agrupamento em lotes), uso de hardware e software para digitalização, além de
+controle de qualidade das imagens com validação dos metadados.
+Conjunto de atividades ligadas à pesquisa do documento, com a identificação do
+usuário e suas necessidades, a verificação de permissões de acesso do usuário ao
+objeto pesquisado, bem como a verificação da disponibilidade do documento.
+Conjunto de atividades ligadas à estruturação de objetos, unidades
+documentárias e/ou ativos de informação, propondo categorizações hierárquicas
+e associações entre elementos em conjunto com instrumentos para normalizar e
+controlar os termos em uso.
+Conjunto de atividades ligadas à circulação do documento, incluindo controle de
+empréstimos e controle de versão de objetos. Dependendo do escopo do
+trabalho, pode prever também funcionalidades para efetuar protocolo de
+documentos, com a identificação de fases, além de ações para juntada,
+apensação e desapensação, desmembramento, desentranhamento.
+Conjunto de atividades ligadas à guarda de unidades documentárias para
+posterior recuperação.
+Conjunto de atividades ligadas à guarda de unidades documentárias para
+controlar as condições do ambiente de guarda do acervo, a obsolescência
+tecnológica, avaliando condições de acesso mudança de mídia por
+vencimento ou por necessidade de acesso.
+
+Fonte: Elaborado pelo autor
+3 TECNOLOGIAS PARA APOIAR A GESTÃO DOCUMENTAL
+Segundo Conarq (2011), o conjunto de tecnologias para tratar a gestão de documentos
+em um órgão ou entidade, deve cobrir a organização da informação disposta em documentos
+não estruturados, ou seja, sem uma estruturação prévia produzida por modelos de dados, ou
+ainda imagens e sons. Neste estudo verificou-se que existem dois tipos de soluções que podem
+ser enquadradas nesta categoria: as soluções de ECM e as soluções em repositórios
+institucionais.
+3.1 PANORAMA DAS TECNOLOGIAS DE ECM
+Uma solução de ECM contempla um conjunto de estratégias, métodos e ferramentas,
+utilizadas para capturar, gerenciar, armazenar, preservar e entregar conteúdos e documentos
+relacionados aos processos organizacionais chave de uma empresa. (AIIM, 2009a; 2009b;
+BOIKO, 2002). É possível categorizar seus componentes em duas grandes divisões: tecnologias
+essenciais e tecnologias correlatas.
+São consideradas essenciais as tecnologias advindas da visão histórica da Gestão
+
+Eletrônica de Documentos (GED), que tinham por objetivo principal armazenar, localizar e
+recuperar documentos gerados ou convertidos para o ambiente digital (BALDAM, 2004a),
+adicionada das tecnologias necessárias para tratar os novos tipos de unidades documentarias
+(páginas Web, imagens e sons, dentre outros) (AIIM, 2008; 2009b; BALDAM, 2004b;
+JENKES, 2004).
+As tecnologias correlatas podem ser entendidas como o conjunto de funcionalidades que
+são acessórias ao processo de gerir documentos, mas que possuem papel relevante na garantia
+de qualidade do produto e dos serviços decorrentes da sua utilização. (AIIM, 2009b; BALDAM,
+2004b).
+Segundo Duhon (2006) e Ribeiro (2010), complementado pela abordagem obtida em
+Aiim (2008; 2009b) e Baldam (2004b), as tecnologias essenciais são:
+Quadro 2: Tecnologias essenciais para ECM
+Tecnologia
+DM - Document Management
+
+DI - Document Imaging
+
+RIM - Records and Information
+Management (também encontrado
+como Records Management – RM)
+
+Forms Processing (OCR/ICR)
+
+Descrição
+Entendido como gerenciamento de documentos digitais.
+Tecnologia que controla o acesso seguro aos documentos
+(objetos de qualquer tipo), as suas versões e o histórico de sua
+vida. Garante a recuperação eficiente através de indexação e
+opera em conjunto com a tecnologia de RIM, para gerir e
+organizar os documentos por meio de hierarquia de pastas.
+Entendido como gerenciamento de imagens de documentos.
+Tecnologia que trata da digitalização, indexação, captura,
+armazenamento e visualização da imagem de documentos
+originariamente analógicos (papel ou microfilme), o que pode
+ser feito em larga escala ou sob demanda, em estações
+previamente configuradas para este fim. Também pode
+abranger o controle de acesso seguro a essas imagens.
+Entendido como gerenciamento de arquivos e registros.
+Tecnologia que gerencia o ciclo de vida de documentos,
+independente da mídia em que eles se encontram, por meio da
+sua categorização e de uso de tabelas de temporalidade e
+estabelecendo um ciclo de vida rigoroso para o tratamento e a
+gestão de registros empresariais. A tecnologia de RIM
+encontra-se estruturada com o apoio da ISO 15.489:2001 e
+com normativas do Departamento de Defesa Americano (DoD
+5015.2).
+Entendido como processamento de Formulários. Tecnologia
+utilizada normalmente como recurso de automação da
+indexação em sistemas de DI para documentos em papel
+formatados como formulários. Utiliza reconhecimento de
+marcas de códigos de barras e de caracteres, através das
+tecnologias de OCR (Optical Character Recongnition) e ICR
+(Intelligent Character Recognition).
+
+Entendido como gerenciamento corporativo de relatórios
+(Computer Output to Laser Disk/Enterprise Report
+Management). Tecnologia para armazenar relatórios gerados
+por sistemas informatizados (em meio ótico ou qualquer outro)
+e gerenciar informações a partir destes, possibilitando ainda a
+ligação com documentos eletrônicos e anotações. ,
+Entendido como gerenciamento de fluxo de trabalho.
+Workflow
+Tecnologia que controla os processos de negócio ao longo da
+sua execução, possibilitando uma análise proativa,
+compreensão e automação de atividades e tarefas baseadas em
+informação, além de facilitar a interação com os usuários por
+meio de formulários eletrônicos.
+WCM
+Web
+Content Entendido como gerenciamento de conteúdo Web. Tecnologia
+que permite a criação de cojunto de páginas e sítio, a partir do
+Management
+conteúdos de outros sítios, além de possibilitar a edição,
+revisão, aprovação e publicação de conteúdo. Gerencia listas
+de discussão e permite a integração com outras ferramentass
+de editoração para Web
+DAM
+–
+Document
+Asset Entendido como gerenciamento de ativos digitais. Tecnologia
+que controla o acesso seguro e o gerenciamento de arquivos
+Management
+baseados em outras mídias (conhecidas com Rich Medias).
+São objetos de grande tamanho, imagens fotográficas, fotos de
+satélites, materiais de treinamento e de marketing,
+documentação em vídeo e som, entre outros.
+Entendido como gerenciamento emails. Tecnologia que
+Email Management
+viabiliza a gestão centralizada de e-mails, viabilizando a
+captura e guarda de e-mails ligados a assuntos e decisões
+empresariais em pastas da instituição e não em pastas das
+caixas de correspondências pessoais.
+COLD/ERM
+
+Fonte: Elaborado pelo autor a partir de Aiim (2008; 2009b), Baldam (2004b), Duhon
+(2006) e Ribeiro (2010).
+Ainda segundo Aiim (2009b) e Ribeiro (2010), as tecnologias correlatas podem ser
+consideradas como:
+Quadro 3: Tecnologias correlatas para ECM
+Tecnologia
+Certificação Digital
+
+HSM (Hierarchical
+Management)
+
+Storage
+
+Descrição
+Entendido como o conjunto de tecnologias que devem atuar
+em conjunto para garantir a integridade e autenticidade das
+ações, bem como a autenticação dos agentes envolvidos,
+conferindo eficácia probatória aos documentos e ao
+processo de trabalho;
+Entendido como o conjunto de tecnologias utilizadas para
+viabilizar o armazenamento e preservação de longo prazo. São
+definidas segundo a disponibilidade: discos rígidos (HD Hard Drive e SSD - Solid State Drive), que representam a
+capacidade de armazenamento online; mídias óticas (CD –
+
+Compact Disc e DVD – Digital Video Disc) que representam a
+capacidade de armazenamento near-line; ou ainda outros
+dispositivos que necessitam de algum esforço de recuperação
+extra, como consultas a equipamentos de microfilmagem ou a
+dispositivos de fitas que levam um tempo maior para
+disponibilização da informação para o usuário, que
+representam a capacidade de armazenamento offline (NAGY;
+SCHULTZ, 2006; SOMANI; CHOY; KLEEWEIN, 2002).
+Cabe lembrar que quanto melhor for a integração entre as
+tecnologias de HSM e RIM, mais eficiente poderá ser a
+política de preservação, pois as mídias de armazenamento
+podem ser uma vantagem na aplicação da tabela de
+temporalidade.
+
+Fonte: Elaborado pelo autor a partir de Aiim (2009b) e Ribeiro (2010)
+Com o intuito de facilitar a convergência dos conceitos entre funcionalidades e
+abordagens tecnológicas no uso de soluções de ECM, baseado em Duhon (2006), Aiim (2010a;
+2010b) e Gralmann et. al. (2011) propõe-se a seguinte arquitetura para agregar a coleção de
+tecnologias apresentada:
+Figura 1: Proposta de arquitetura de tecnologias das soluções de ECM
+
+CERTIFICAÇÃO DIGITAL
+
+PRESERVAÇÃO
+RM, HSM
+
+CAPTURA
+DI, DM, DAM
+
+GESTÃO
+WF/BPM,
+DM, DAM,
+RM
+
+ENTREGA
+WCM, COLD/ERM
+
+ARMAZENAMENTO
+WF/BPM, HSM
+
+Fonte: elaborado pelo autor
+3.2 PANORAMA DAS FUNCIONALIDADES PARA REPOSITÓRIOS
+Visando viabilizar a análise proposta nesta investigação, as funcionalidades previstas
+para os softwares de repositórios serão organizadas segundo a Arquitetura apresentada na Figura
+1. São funcionalidades esperadas em repositórios (FREITAS; SILVA; GUIMARÃES, 2009;
+LEITE et. al., 2012; SAYÃO; MARCONDES, 2009).
+Quadro 4: Funcionalidades para repositórios
+Funcionalidade
+Captura
+
+Descrição
+Prevendo a carga
+(características
+da
+
+no repositório (ingest)
+interface
+padrões,
+
+Gestão
+
+Entrega
+
+Armazenamento
+
+Preservação digital
+
+customização, usabilidade, acessibilidade e
+multilingue – além de formatos e capacidade de
+importação e exportação) e o uso de
+identifcadores persistentes para identificar
+univocamente o ativo de informação digital
+Organização e Indexação, além da possibilidade
+de interfaces com outras soluções via
+Interoperabilidade, padrões em metadados – DC,
+METS e MODS – e coleta – OAI-PMH e coleta
+com métodos de catálogos Java.
+Prevendo a Recuperação da Informação e acesso
+ao conteúdo (opções de busca e navegação pelos
+resultados e itens – browsing)
+Prevendo funcionalidades para depósito mediado
+e para autodepósito, catalogação e inserção de
+metadados.
+Possibilitando a implementação do conceito de
+memória acadêmica das instituições, permite que
+o conteúdo permaneça disponível e acessível a
+longo prazo.
+
+Fonte: elaborado pelo autor
+3.3 UM RECORTE SOBRE SOFTWARES OPEN SOURCE PARA ECM E PARA
+REPOSITÓRIOS
+Apoiado em Smith (2011), optou-se por fazer a análise de dois softwares de ECM que
+cobrem a um amplo espectro de capacidades para a gestão documental, são eles os softwares
+Alfresco e Nuxeo.
+Alfresco é um software aberto para atividades de gestão de conteúdo apto a gerir
+diferentes objetos: documentos, imagens, vídeos, fotos, páginas Web, registros, documentos
+XML e quaisquer outros documentos, sejam não estruturados ou semi-estruturados .
+(ALFRESCO, 201?; CARUANA et. al.; 2010). Usa linguagem Java e em decorrência desta
+característica o software Alfresco ganha maior estabilidade e robustez em ambientes de alto
+volume de ativos documentais. (KOEHLER-KRUENER; CHIN; ROBERT, 2015).
+De forma análoga, o software Nuxeo é uma solução de código aberto, capaz de operar
+em várias plataformas operacionais (Sistema Operacional: Linux, Mac e Windows) com
+aplicações e funcionalidades de Gestão de Documentos e Gerenciamento de Arquivos Digitais,
+cobrindo as tecnologias de workflow, gestão de registros, imagens, páginas Web, dentre outras.
+(LAMPERT; FLORES, 2016; NUXEO, 201?). Também apoiado na plataforma Java, pode ser
+considerado uma alternativa à solução Alfresco.
+Já no âmbito dos repositórios, segundo Sayão e Marcondes (2009) pode-se destacar os
+
+seguintes softwares para repositórios: DSpace, EPrints, Greenstone, Fedora e Nou-Rau
+(Unicamp). Para a análise do uso dos softwares para repositórios com acesso aberto, optou-se
+na condução deste estudo em cotejar os dois softwares mais utilizados em nível mundial:
+DSpace e EPrints. (OPENDOAR, 2016).
+O software DSpace possui funções para o gerenciamento da produção científica de
+qualquer material digital. Possui a capacidade de promover o armazenamento, gerenciamento,
+preservação e visibilidade de documentos, livros e teses, publicações multimídia, imagens,
+aquivos de aúdio e vídeo, além de programas de computador e bases de dados bibliográficas e
+páginas Web, dentre outros. No Brasil o software DSpace está disponível em versão
+customizada pelo IBICT. (IBICT, 2016).
+Também com o objetivo de gerenciar a produção científica, o software EPrints também
+contempla o armazenamento e a gestão de relatos de pesquisa, imagens, arquivos de audio e
+qualquer outro material digital. (EPRINTS, 201?). Com uma ampla base instalada e presente em
+várias instituições acadêmicas pelo mundo, de forma análoga ao DSpace, o software Eprints
+também está disponível para a comunidade científica nacional por meio de uma versão
+customizada pelo IBICT. (SAYÃO; MARCONDES, 2009).
+4 METODOLOGIA
+Esta pesquisa foi desenvolvida a partir de levantamento e revisão bibliográfica
+acompanhada de um estudo exploratório. Para Gil (2002) a pesquisa bibliográfica se desenvolve
+a partir de material presente em livros e material científico. O estudo exploratório “[..] tem o
+objetivo de reunir dados, informações, padrões, ideias ou hipóteses sobre um problema [..]”.
+(Braga, 2007, p. 25).
+A partir da revisão bibliográfica foi reunido o corpus do conhecimento que trouxe a
+fundamentação para fomentar a discussão teórica acerca do processo para gestão documental e
+para soluções de ECM e softwares para repositório. A síntese da análise desenvolvida na revisão
+bibliográfica deu origem aos quadros 1, 2 e 3. Cabe ressaltar que os instrumentos presentes
+neste ensaio não esgotam o tema e correspondem a um recorte estabelecido para os objetivos da
+pesquisa do autor que está em curso na Unirio.
+A categorização das funcionalidades foi construída segundo Sayão e Marcondes (2009),
+incrementada pela arquitetura proposta na Figura 1. Em seguida houve o cotejamento das
+funcionalidades e requisitos das soluções avaliadas. Por fim, utilizando-se o referencial teórico
+levantado foi gerado um quadro síntese para referencia com o resultado da análise e que ensejou
+o conjunto de questões a serem debatidas.
+
+5 RESULTADOS
+Funcionalidade
+Gestão
+Documental
+Formalizar
+Digitalizar 3
+Tramitar
+
+Gerir
+Tramitar
+Gerir
+Pesquisar
+
+Arquivar
+
+Preservar
+
+Softwares ECM OS
+Nativa
+no
+software
+de
+Repositório
+Captura - Carga
+no
+repositório
+(ingest)
+
+Correspondente
+ECM
+
+Gestão
+Organização,
+Indexação
+e
+Interoperabilidade
+
+Entrega
+Recuperação
+informação
+acesso
+conteúdo
+
+da
+e
+ao
+
+Captura e Gestão DI, DM, DAM
+Certificação Digital
+
+Alfresco
+(A)
+
+Nuxeo
+(B)
+
+Software
+Repositório
+Dspace
+Eprint
+(C)
+(D)
+P
+
+P
+
+P, PS
+
+P, PS
+
+Captura e Gestão DM, DAM
+Gestão - RIM
+
+P
+
+P
+
+Gestão - Workflow
+
+P
+
+P
+
+Gestão - RIM
+
+P
+
+P
+
+Gestão - Workflow
+
+P
+
+P
+
+PS
+
+PS
+
+P
+
+P
+
+P
+
+P
+
+PS
+
+PS
+
+P, PS
+
+P, PS
+
+Armazenamento
+
+Entrega - WCM,
+COLD/ERM
+Certificação Digital
+Gestão - RIM
+
+P, PS
+
+P, PS
+
+-
+
+-
+
+Preservação
+
+Armazenamento e
+Preservação - HSM
+Gestão - RIM
+Armazenamento e
+Preservação - HSM
+
+P, PS
+
+P, PS
+
+-
+
+-
+
+O quadro a seguir apresenta o cotejamento entre as funcionalidades analisadas e os
+softwares avaliados.
+Quadro 5: Atendimento às funcionalidades
+Legenda: A – versão community 4.0, B – versão 5.5, C – versão 3.x, D – versão 3
+P – Parcial – atende parcialmente à tecnologia
+PS – Parcial com uso de software – necessita de complementação da
+tecnologia fazendo uso de parcela de software externa à solução.
+Fonte: elaborado pelo autor
+Como observado na introdução deste relato, verificou-se que a literatura acadêmica
+sobre soluções de ECM não é extensa. A partir desta análise pode-se inferir que a literatura
+sobre repositórios pode auxiliar nas investigações sobre soluções de ECM, possibilitando a
+geração de uma base teórica mais apropriada para as discussões. Por outro lado, a implantação
+de soluções de ECM já percorreu uma jornada mais longa, enfrentando dificuldades e sofrendo
+3
+
+A verificação da funcionalidade para digitalização está centrada na visão das tarefas independentemente do
+software e do hardware que efetuarão a digitalização (escaners).
+
+evoluções, pois os registros sobre o início do uso de soluções em GED/ECM remonta à década
+de 1990 (RIBEIRO, 2010).
+A convergência entre as funcionalidades de Gestão Documental e de uso de repositórios
+pode apoiar a discussão sobre a evolução destas temáticas, auxiliando no desenvolvimento de
+soluções que venham a contemplar não apenas a gestão documental de documentos dos
+processos administrativos das instituições, mas também a gestão de documentos que são fruto
+das atividades de pesquisa em C&T.
+Cabe ressaltar que as tecnologias para o tratamento de Formulários (Forms Processing)
+e Gestão de e-mails (Email management) foram consideradas como específicas e com pouca
+contribuição para o recorte adotado nesta pesquisa. Portanto, estas tecnologias não foram alvo
+de análise e discussão.
+Pode-se afirmar que as tecnologias enquadradas em Captura, podem agregar requisitos
+aos processos de depósito existentes em repositórios, como por exemplo:
+
+
+a possibilidade de realizar a importação de objetos sem a necessidade de entrar
+no software que originou o objeto, facilitando o registro e utilização de vários
+produtos gerados ao longo da pesquisa e por diferentes membros e/ou equipes;
+
+
+
+a possibilidade de realizar a edição de objetos com anotações de textos sobre as
+imagens (por meio de ferramentas de marcação), sem interferência no conteúdo
+e na autoria;
+
+
+
+o uso de mecanismos para reconhecimento de caracteres em processo de
+digitalização com a possibilidade de indexação após digitalização, especialmente
+ao tratar de pesquisas que façam uso de material não digital.
+
+A contribuição das tecnologias de ECM enquadradas em Gestão e Armazenamento, por
+exemplo podem ter requisitos também estendidos para o uso de repositórios:
+
+
+na realização do controle de versão de objetos fazendo uso de instrumentos
+como uma árvore hierárquica de versões, auxiliando na publicação apenas da
+versão mais recente do objeto e restringindo o acesso, pois somente pessoas
+autorizadas podem ser autorizadas a ver versões anteriores;
+
+
+
+na publicação das versões de objetos somente a partir de perfis autorizados;
+
+
+
+no tratamento de objetos em qualquer formato, vídeo, imagens, textos, planilhas,
+relatórios armazenados por meio da tecnologia COLD e outros arquivos;
+
+
+
+na disponibilidade de uma base integrada para gestão de objetos de pesquisa,
+incluindo a capacidade de busca integrada e parametrizada ou ainda sobre
+
+conteúdo completo;
+
+
+na formação de livros digitais compatíveis com dispositivos diversos (PDF e ereaders) com agregação de diferentes objetos de pesquisa e geração de sumários;
+
+
+
+na definição do ciclo de vida dos objetos digitais e físicos, permitindo
+categorizações de forma integrada com a Tabela de Temporalidade de
+Documentos (TTD);
+
+
+
+na definição do ciclo de vida dos objetos digitais, permitindo que a TTD esteja
+integrada com a funcionalidade para HSM, contemplando o armazenamento em
+diferentes mídias magnéticas e óticas com migração entre mídias de
+armazenamento como resultado de aplicação da TTD.
+
+A contribuição das tecnologias de ECM enquadradas como Entrega podem agregar
+requisitos para repositórios em:
+
+
+disponibilização de objetos do repositório, tais como visualização em miniaturas
+(thumbnail);
+
+
+
+publicação apenas da versão mais recente dos objetos de pesquisa;
+
+
+
+visualização com facilidades para zoom, ajuste de páginas e possibilidades de
+impressão e/ou compartilhamento em mídias sociais;
+
+
+
+construção de relatórios com a tecnologia COLD a partir de outros relatórios
+depositados, como forma de contribuir para a qualidade do conteúdo, com a
+manutenção da autoria dos objetos.
+
+Adicionalmente, o mecanismo que permite a construção de Workflows pode incrementar
+a discussão sobre funcionalidades previstas em repositórios, na medida em que possibilita a
+implementação de customizações de particularidades das políticas de depósito e
+compartilhamento de objetos, que podem ser diferenciadas entre instituições. Por exemplo,
+também podem ser agregados requisitos:
+
+
+para permitir a criação de fluxos e subfluxos com comentários e definição de
+perfis;
+
+
+
+para possibilitar que usuários e perfis podem ser agregados em grupos;
+
+
+
+para permitir que vários objetos podem estar associados a um subfluxo ou fluxo;
+
+
+
+para realizar o versionamento dos fluxos;
+
+
+
+para possibilitar a criação de fluxos para aprovação, revisão e publicação de
+conteúdo.
+
+As tecnologias de RIM e HSM podem agregar requisitos ao projeto de repositórios no
+
+âmbito da preservação e do armazenamento, além da implementação de política para
+licenciamento e compartilhamento de objetos. Especialmente no âmbito da preservação no
+ambiente Web na atualidade, a árvore hierárquica de versões citada anteriormente também
+poderá auxiliar, pois possibilitará o controle e o resgate de páginas já retiradas do ar, uma vez
+que estas precisam fazer parte das políticas de preservação do mundo digital. (BRAYNER,
+2016). Por outro lado, a possibilidade de combinar as taxas de acesso aos objetos com uso de
+mídias mais adequadas e com melhor desempenho a estes objetos, podem trazer benefícios para
+a disponibilização de informações. As taxas de acesso podem ser medidas para os diferentes
+tipos de objetos depositados, possibilitando a implementação de propostas de acesso quase que
+instantâneo ao conteúdo desejado.
+Por fim, vale observar que o uso da tecnologia de certificação digital pode contribuir
+para o incremento políticas em repositórios. A possibilidade de realizar assinaturas eletrônicas
+em documentos remete a discussão para o uso de certificados digitais, pois estes permitem uma
+verificação da integridade e autoria do conteúdo de forma mais apropriada. Ademais, é possível
+efetuar o controle de privilégios de acesso, depósitos, circulação, recuperação, criptografia,
+auditagem, acessibilidade, dentre outras tarefas, incluindo a possibilidade de agregar múltiplas
+assinaturas em um determinado objeto.
+6 CONSIDERAÇÕES FINAIS
+Espera-se que a partir desta discussão seja possível incrementar o debate sobre a adoção
+de soluções, sejam elas no âmbito do uso de ECM ou para repositórios. Ambas as soluções
+devem coexistir de forma integrada, pois a prática de gestão documental deve perpassar por
+todos os documentos gerados na instituição, sejam estes originários de atividades profissionais
+e/ou empresariais, ou como produto de atividades de C&T.
+Inserida no contexto da Governança da Informação, a prática de gestão documental é
+tida como essencial às organizações e vem incorporando definições sobre metadados, fluxos
+documentais e perfis de uso, como forma de realizar a gestão dos ativos de informação
+documental no âmbito das soluções de ECM/GED e repositórios de conteúdo em geral.
+(DOCUMENT STRATEGY, 2016).

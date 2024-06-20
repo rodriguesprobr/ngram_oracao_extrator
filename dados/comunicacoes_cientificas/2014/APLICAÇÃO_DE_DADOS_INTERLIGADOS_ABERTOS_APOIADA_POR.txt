@@ -1,0 +1,592 @@
+APLICAÇÃO DE DADOS INTERLIGADOS ABERTOS APOIADA POR
+ONTOLOGIA
+
+Resumo: Aplicações de dados interligados abertos têm se constituído em poderoso
+instrumento para promover a difusão do conhecimento, na medida em que colocam em
+contexto informações de naturezas diversas e afins, fornecendo ao receptor um significado
+estabelecido justamente pelas interações entre essas informações. Nesse cenário, ontologias
+atuam como um mecanismo conceitual que dará suporte à consistência dessa rede de
+ligações entre conceitos, e, consequentemente, às aplicações que se proponham a explorála. O objetivo desse trabalho é apresentar uma aplicação de dados interligados abertos como
+prova de conceito, apoiada pelo uso de uma ontologia, com o foco em servir como base
+para explicitar informações relacionadas a teorias científicas de uma área do conhecimento.
+A fundamentação teórico-metodológica parte de um levantamento na literatura sobre
+ontologias relacionadas ao conhecimento científico como apoio para aplicações de dados
+interligados abertos. Com base nessa fundamentação, tem-se como resultado um exemplo
+de aplicação real de dados interligados abertos que permite apontar as conexões existentes
+entre um conjunto de teorias presentes em artigos científicos, as quais versam sobre um
+mesmo conceito, alvo de um objeto de pesquisa. Esse objeto de pesquisa é referenciado em
+instâncias na ontologia proposta, a qual pode ser disponibilizada como uma base de dados
+interligados aberta. Esse exemplo de aplicação permitiu evidenciar possíveis interligações
+não antecipadas entre as teorias presentes nas instâncias da ontologia e a Dbpedia, bem
+como responder a uma série de questões com base no modelo da ontologia. Como
+conclusão, são apontadas evidências da importância do uso de ontologias como uma forma
+de apoiar aplicações de dados interligados abertos.
+Palavras-chave: Ontologias. Dados interligados abertos. Teorias científicas. Aplicativo.
+
+1 INTRODUÇÃO
+Artigos científicos costumam seguir uma metodologia de pesquisa, que implica em
+adotar teorias, métodos e técnicas de pesquisa. O conjunto de teorias usado pelo autor
+reflete um recorte possível, dentre visões afins e contrárias a seu ponto de vista. Este ponto
+de vista implica um conjunto de pressupostos sobre o mundo que é alvo de seu estudo, ou
+seja, seu paradigma de pesquisa, o qual fornece um arcabouço conceitual e filosófico para
+guiá-lo, norteando inclusive a escolha de métodos a serem adotados (PONTEROTTO,
+2005).
+As noções de paradigma e teoria às vezes se confundem, mas um paradigma possui
+um escopo mais amplo que uma teoria (MERTENS, 2010). Enquanto um paradigma
+fornece uma visão geral de mundo, uma teoria representa um conjunto de conceitos
+relacionados, definições e proposições para explicar e predizer um determinado fenômeno
+(COHEN et al., 2007, p.l2). Um paradigma, então, poderia nortear a formulação de uma
+teoria, ou, em outras palavras, uma teoria poderia estar alinhada com um paradigma.
+Em uma teoria os conceitos ocupam um lugar central, pois são elementos básicos
+para a elaboração de proposições, que, por sua vez, são elementos básicos das teorias
+(GRENON; SMITH, 2011). Dessa forma, uma teoria possui um conjunto básico de
+conceitos que lhes confere um escopo (FRIEDMAN, 2003), sendo que a maneira pela qual
+esse mundo é percebido depende desse conjunto de conceitos (COHEN et al., 2007, p.l4).
+Dessa forma, dado um determinado conceito que é alvo de um objeto de pesquisa, pode-se
+ter atrelado a ele uma série de teorias afins e antagônicas entre si.
+Entretanto, os detalhes de um objeto de pesquisa, ou seja, seus conceitos, teorias,
+proposições, métodos, dentre outros, nem sempre são explicitados e por vezes são até
+adotados de forma não consciente pelo autor.
+
+Tal fato pode ocasionar uma maior
+
+dificuldade na compreensão do contexto em que se insere a problemática do objeto de
+pesquisa, e especificamente, na busca por teorias afins e em contraponto com a posição do
+autor. Cabe destacar ainda que o critério adotado para a seleção das teorias pelo autor é
+naturalmente limitado pela possibilidade de se manipular um volume cada vez maior de
+publicações disponíveis e das limitações dos próprios mecanismos existentes para a sua
+recuperação.
+Idealmente, na ausência de mecanismos que automatizem a descoberta de teorias
+relacionadas a objetos de pesquisa (dada a complexidade dessa tarefa), estas poderiam ser
+descritas em bases de dados temáticas, e disponibilizadas através de metadados acessíveis
+de forma livre e padronizada. Para isso, faz-se necessária a existência de vocabulários que
+
+
+
+contenham os conceitos a serem utilizados para a descrição de objetos de pesquisa e suas
+teorias e pressupostos. Nesse sentido, tendo-se em mente a descoberta de conhecimento
+relacionado, como, por exemplo, outras teorias de autores com pressupostos afins com os
+adotados por um pesquisador, aplicações de dados interligados abertos podem ser úteis.
+Embora o foco do presente artigo não esteja voltado para a elaboração dos vocabulários
+necessários para a descrição das teorias, é possível ilustrar a utilidade de aplicações de
+dados interligados abertos nesse cenário através do uso de ontologias de mais alto nível,
+incentivando-se, como trabalhos futuros, a criação de tais vocabulários de forma mais
+detalhada.
+Nesse sentido, o uso de uma aplicação de dados interligados abertos de teorias
+presentes em artigos científicos apoiada por ontologia poderia ajudar a entender o contexto
+de tais teorias e a sua possível relação com outras, permitindo ainda evidenciar
+possibilidades de aplicações de saberes de natureza interdisciplinar. O objetivo desse
+trabalho é apresentar uma implementação de prova de conceito de uma aplicação de dados
+interligados abertos apoiada por uma ontologia com o foco em explicitar informações
+relacionadas a teorias que embasam artigos científicos, exemplificadas em uma área do
+conhecimento. A proposta é dita prova de conceito pelo fato de não se constituir em uma
+aplicação com interface customizada para uso geral. Embora essa customização não seja
+uma tarefa complexa, ainda não se encontra concluída. Nesse sentido, a ferramenta
+apresentada é um trabalho em aperfeiçoamento fruto de um esforço colaborativo conduzido
+no âmbito de um Grupo de Pesquisa em Ciência da Informação.
+Dados abertos são instrumentos para o avanço do conhecimento científico, na
+medida em que se constituem em fontes de dados úteis de livre acesso que têm sido
+publicadas por diferentes organizações de interesse público (LIU et al, 2011), muitas delas
+ligadas à comunidade científica. Quando esses dados são interligados em um contexto,
+podemos perceber de forma mais precisa o seu significado e a partir daí, obter
+conhecimento.
+É importante destacar que o significado da informação é obtido não através da
+especificação do seu significado em si, o que não é possível de forma inequívoca, mas
+especificando como a informação interage com outra informação (JAIN et al., 2011),
+formando um contexto em que a semântica pode ser percebida de forma indireta.
+Corroborando com essa afirmativa, situa-se Kitcher (1989) que, no contexto de uma
+discussão sobre como se dá o entendimento do conhecimento, comenta que “compreender o
+fenômeno não é simplesmente uma questão de reduzir as “incompreensibilidades
+
+
+
+fundamentais”, mas de perceber conexões, padrões comuns, naquilo que inicialmente
+parecia ser situações diferentes”. Para que essa rede de informações com significado se
+estabeleça é necessário que pessoas façam um esforço extra na codificação de informações
+em representações passíveis de processamento automático. Com esse esforço computadores
+terão condições de processarem, interpretarem e concatenarem dados. Nesse cenário se
+situa a importância de se planejar o modelo dessas informações, ou seja, quais os conceitos,
+as suas naturezas, características, e de que forma se relacionam uns com os outros. Esse
+modelo ajuda a delinear a precisão das possibilidades de busca e entendimento da
+informação, tanto para as máquinas quanto para as pessoas. A máquina cumpre o seu papel
+de manipular de forma eficiente e sistemática grandes quantidades de informação, muitas
+vezes a partir de ferramentas de software já existentes, que podem ser usadas de modo
+combinado, ainda que customizadas, ou adaptadas para demandas específicas. As pessoas,
+aqui entendidas como os profissionais da informação, cumprem o papel de fornecer os
+princípios que o software
+
+deve seguir para que possa tratar a informação de forma
+
+inteligente, por exemplo, os modelos, que não podem ser definidos à revelia da validação de
+pessoas e seus pontos de vista, sejam eles sociais, políticos, epistemológicos e/ou
+pragmáticos.
+Nesse cenário, o foco do presente artigo se apresenta no âmbito dos estudos em
+dados abertos interligados enfatizando a questão da interligação semântica de dados de
+artigos científicos da área de Ciência da Informação, com foco no estudo de Ontologias.
+O restante do artigo está estruturado como se segue: na seção 2 é apresentado o
+panorama de dados abertos interligados e sua aplicabilidade e ainda ferramentas que podem
+ser usadas no contexto da aplicação proposta; na seção 3 é feita uma discussão de trabalhos
+relacionados a abordagens de dados interligados abertos voltada para artigos científicos na
+temática de ontologias; na seção 4 é apresentada a aplicação de dados interligados abertos
+desenvolvida e os resultados obtidos e, por fim, na seção 5, conclusões e trabalhos futuros.
+2 DADOS INTERLIGADOS ABERTOS: CONCEITO E FERRAMENTAS PARA
+INTERLIGAÇÃO DE CONCEITOS
+Bizer et al. (2009) definem dados interligados abertos20 como “um conjunto de boas
+práticas para estruturar e publicar dados estruturados na web”.
+As iniciativas de dados interligados abertos, doravante referenciadas como LOD,
+têm tomado proveito do avanço de padrões web e são baseadas nos seguintes princípios: (1)
+
+20
+
+Linked Open Data (LOD) em inglês.
+
+
+
+uso de URIs (uniform resource identifier) como nomes para entidades; (2) uso de URIs via
+HTTP (hypertext transfer protocol), de modo que se possam buscar informações por esses
+nomes na web; (3) informações úteis associadas às URIs, usando padrões tais como RDF
+(Resource Description Framework) e SPARQL (Protocol and RDF Query Language)
+(W3C, 2008); (4) inclusão de associações com outras URIs, de modo que se possam
+descobrir mais entidades (BIZER et al., 2009).
+URIs via HTTP na prática se constituem em um mecanismo para atribuir a cada
+entidade (concreta, abstrata, ou ainda um conceito qualquer) na web um identificador único,
+através do qual o recurso pode ser referenciado, ligado a outros recursos, ou se pode
+recuperar uma descrição do recurso que a URI representa.
+RDF é um formato padrão para representação de dados na web. Esse formato
+permite que se representem fatos através de triplas na forma de sujeito, predicado e objeto,
+que, por sua vez, representam entidades concretas ou abstratas do mundo real. Cabe
+destacar que conteúdos RDF podem estar disponíveis através de documentos (páginas)
+RDF, mas também podem estar disponíveis através de bancos de dados de triplas RDF. Seja
+como for, a linguagem SPARQL permite buscas nesse conteúdo, distribuído em diferentes
+locais na web, de forma transparente, como se fosse uma única fonte de dados. Além disso,
+SPARQL também inclui um protocolo para criação de serviços de fornecimento de dados
+na web (SPARQL endpoints), os quais são acessíveis de forma usual através da web, e que
+aceitam pesquisas, sendo os resultados fornecidos em formatos padronizados tais como
+XML e RDF, o que facilita a sua interligação com outros dados na web (D’AQUIN, 2012).
+Essa interligação, que pode ser automática ou semi-automática, é feita ligando-se
+URIs e pode ser de duas formas: através do casamento de conceitos definidos em ontologias
+ou através de casamento de suas instâncias, ou seja, quando se tenta determinar se dois
+indivíduos se referem a uma mesma entidade de um domínio (SINGH et al., 2013). Ainda,
+de acordo com Singh et al. (2013), muitas ferramentas têm sido propostas para ambas as
+formas de interligação, porém a tarefa tem se mostrado árdua, e muitas das propostas são
+voltadas para domínios específicos, ou para um tipo específico de dados. Entretanto, a
+ferramenta SILK (Silk Link Discovery Framework) (ISELE et al., 2010) parece se destacar
+nesse cenário, sendo uma das mais usadas e eficientes para interligar instâncias de dados em
+RDF.
+SILK é uma ferramenta de código aberto (open source) para descoberta semiautomática de interligações entre entidades de diferentes fontes de dados RDF, de acordo
+com heurísticas pré-definidas que podem ser configuradas pelo usuário.
+
+
+
+A ferramenta SILK possui as seguintes características principais: (i) suporta a
+geração de links do tipo owl:sameAs (para indicar equivalência de instâncias), assim como
+outros tipos de links RDF; (ii) fornece uma linguagem declarativa flexível para especificar
+as condições para que sejam propostas ligações; (iii) pode ser empregada em ambientes
+distribuídos sem que seja necessário replicar os conjuntos de dados localmente; (iv) pode
+ser usada em situações onde termos de diferentes vocabulários são misturados e não há um
+esquema consistente por sobre esses dados; (v) implementa vários métodos para aumentar o
+desempenho e a carga na rede (VOLZ et al., 2009).
+Uma forma alternativa ao uso de ferramentas prontas para determinação automática
+de links é a implementação, em um software específico, de algoritmos baseados em padrões
+(pattern-based algorithms), os quais exploram padrões de nomeação de URIs para propor
+interligações. Por exemplo, dadas duas fontes de dados RDF alvo, se o ISBN de um livro
+fizer parte de duas URIs diferentes dessas fontes, o algoritmo poderá propor que se tratam
+de conceitos equivalentes, gerando a relação owl:sameAs para conectar as duas URIs (YU,
+2011). A partir daí, por exemplo, queries SPARQL podem ser utilizadas para apresentar os
+resultados de conceitos considerados semelhantes, ou seja, que estejam ligados pela relação
+owl:sameAs. O desafio que se coloca a partir daí é identificar quais os conceitos que podem
+ser interligados e quais as relações possíveis de se estabelecer entre eles. Para isso é preciso
+conhecer os elementos básicos do domínio.
+3 TRABALHOS RELACIONADOS A ONTOLOGIAS E DADOS LIGADOS
+ABERTOS
+Na busca por trabalhos relacionados, foram consideradas ontologias e aplicações de
+dados interligados abertos que pudessem ser aplicadas à descrição de pesquisas científicas.
+Optou-se por um escopo de busca mais amplo, em vez de buscar apenas por trabalhos com
+foco em descrição de teorias, por entender que as teorias se situam no escopo das pesquisas
+científicas, levando a conceitos relacionados, como, por exemplo, autores, áreas de pesquisa
+e linha filosófica adotada. Cabe destacar que essa ontologia que aqui se coloca é a do
+artefato de software, e não a ontologia da filosofia, e seu papel é especificar e formalizar as
+entidades, relações e axiomas que correspondem ao ponto de vista ontológico adotado pelo
+pesquisador.
+3.1 Ontologias aplicáveis ao conhecimento científico
+Ontologias, em seu uso na Ciência da Informação, fornecem um modelo para
+representar os pressupostos epistemológicos e ontológicos, relevantes para o entendimento
+
+
+
+de pesquisas e seu tratamento computacional através das iniciativas de dados interligados
+abertos, mas sua elaboração é um processo custoso. Por essa razão, é importante utilizar em
+alguns casos ontologias já existentes, devido à redução de esforços e ao favorecimento da
+padronização:
+Uma parte fundamental no processo de publicação inclui a determinação e
+criação de vocabulários e ontologias que fornecem o modelo de dados
+subjacente aos conjuntos de dados interligados, objetivando uma visão
+mais integrada dos dados e a maximização da interoperabilidade
+semântica entre conjuntos de dados e entre produtores-consumidores.
+Outra parte importante na definição dos modelos de dados é a
+maximização do reúso e da extensão de vocabulários e ontologias
+existentes. Este é um elemento fundamental na redução do esforço
+envolvido no consumo e integração de conjuntos de dados interligados
+(CORDEIRO et al., 2011, p.84).
+
+Na literatura, foram encontradas algumas iniciativas de descrição de vocabulários
+com foco em aspectos específicos, tais como Bonomi et al. (2006) para descrição de dados
+de publicações científicas da arqueologia, Biolchini at al. (2006) para revisão sistemática de
+artigos de engenharia de software,
+
+Malheiros e Marcondes (2011) para publicação
+
+científica na área biomédica, Bibliographic Ontology (BIBO, 2014) para descrever citações
+e referências bibliográficas na web semântica, Colibrary (GENDARMI; LANUBILI, 2009)
+para descrever dados bibliográficos e de revisões de usuários.
+
+Essas iniciativas são
+
+voltadas, de modo geral, para os dados bibliográficos da publicação, como por exemplo, seu
+autor, veículo de publicação, ou então para capturar os elementos da temática da
+publicação, ou ainda a estrutura de afirmações científicas feitas nos artigos, neste último
+caso com o foco em descoberta de conhecimento.
+De fato, até onde pudemos perceber, não foi encontrada uma proposta de ontologia
+voltada especificamente para publicações científicas que contemplasse detalhes sobre as
+teorias utilizadas por eles. Entretanto, a ontologia Phylo (GRENON; SMITH, 2011),
+ontologia da Filosofia, criada por Pierre Grenon e Barry Smith, este último filósofo e
+ontologista que atua na comunidade biomédica, foi considerada aplicável aos propósitos do
+presente trabalho, mediante adaptação. Traçando um modelo em alto nível da Filosofia,
+onde se insere a Epistemologia, Phylo permite uma visão geral sobre aspectos
+epistemológicos e ontológicos da pesquisa científica, incluindo as teorias e suas relações:
+Os conceitos filosóficos são o mais próximo que chegaremos a unidades
+básicas de atividades filosóficas. Proposições filosóficas são em primeira
+aproximação feita de conceitos. E as teorias são feitas de proposições
+(GRENON; SMITH, 2011, p.17).
+
+A ontologia proposta por Smith propõe, de forma preliminar, quatro categorias ou
+classes principais, a saber: Philosophical Object (Objeto Filosófico), Philosophical Field
+
+
+(Área da Filosofia), Person (philoshoper) (Pessoa (filósofo)), e Group of Persons (group
+of philosophers) (Grupo de pessoas (grupo de filósofos)). Para a classe Philosophical
+Object (Objeto Filosófico), Smith propõe as seguintes subclasses:
+– concept (conceito: por exemplo, o conceito de forma)
+– proposition (proposição: por exemplo, que forma existe)
+– theory (teoria: por exemplo, teoria das formas, de Platão)
+– argument (argumento: por exemplo, argumento do Terceiro Homem, de Platão)
+– method (método: por exemplo, o método dialético).
+A ontologia Phylo propõe ainda um conjunto de relações binárias, como, por
+exemplo: memberOf (entre person e group), subgroupOf (entre group e group), workedOn
+(entre person e concept e entre group e concept), subconceptOf (entre concept e concept),
+activeIn (entre person e field e entre group e field), inField (entre concept e field e entre
+philosophical entity e field), subfieldOf (entre field e field).
+Cabe destacar que a ontologia Phylo embora contemple a associação de um conceito
+a uma pessoa ou grupo de pessoas, ela não explicita que esse mesmo conceito pode ter
+definições diferentes, de acordo com o viés determinado pelo grupo de pessoas que trabalha
+no conceito. Por exemplo, podem-se citar pelo menos três definições diferentes para o
+conceito de tropo21 (ROJEK, 2008, p.367), cada uma defendida por um grupo de pessoas
+diferente. Dessa forma, como esse importante aspecto não fica explicitado, pode dar a
+entender que grupos de pessoas distintos trabalham com a mesma noção, o que é
+equivocado. Na verdade, elas podem trabalhar o mesmo conceito, porém com diferentes
+pontos de vista. Isso é determinado pela definição. Se pudermos dizer que as definições são
+as mesmas, então podemos chegar à conclusão que grupos distintos convergem em relação
+a um conceito. Do contrário, fica explicitada a divergência.
+Embora a ontologia Phylo possua a relação subConceptOf que relaciona concept a
+concept, Smith deixa claro que essa relação é apenas para fins de especialização de um
+conceito, não estando essa especialização vinculada a uma teoria: “Nós usamos
+subconceptOf como a relação entre dois conceitos quando o primeiro é uma especialização
+do segundo. Além disso entendemos que a especialização é definitória e não sujeita a
+debate filosófico, assim, em particular, não é dependente de uma teoria” (GRENON;
+SMITH, 2011, p.17).
+Por outro lado, a ontologia Phylo possui a entidade proposition, através da qual se
+poderia diferenciar os conceitos usados nas teorias. Entretanto, para que fosse possível
+
+21
+
+São elas: Teoria de Tropos sem Universais, Teoria de Tropos com Universais Determináveis e
+Teoria de Tropos com Universais Concretos.
+
+
+
+chegar à conclusão que as teorias convergem, teríamos de associar um conjunto de
+proposições (com seus respectivos argumentos) às respectivas correntes filosóficas. Se
+tomarmos a definição de conceito de Dahlberg (1978a), onde este é uma unidade de
+conhecimento formada pelo referente, o termo e proposições sobre o referente, é possível
+considerar proposition como sendo parte de concept e, assim, associá-las indiretamente a
+group of persons (representantes das correntes filosóficas). Nesse caso, teríamos a noção de
+um conceito com um viés, este determinado pelo grupo de pessoas.
+3.2 Aplicações de dados interligados abertos relacionadas ao conhecimento científico
+Apesar de o foco do presente trabalho não ser implementar uma aplicação de LOD
+para descrição de recursos, é importante disseminar o uso e compreender os aspectos
+envolvidos nesse tipo de iniciativa, que se constitui em uma realidade cada vez mais
+proeminente na web dos dias atuais:
+Criar maneiras de facilitar o uso das informações e elaborar um ambiente
+no qual as informações estejam integradas deve ser objetivo dos
+profissionais da informação, que certamente têm um espaço na
+instrumentalização dessas tecnologias (SANTOS NETO et al., 2013,
+p.86).
+
+Dentre as aplicações de LOD pesquisadas relatadas a seguir, observou-se de fato
+que o diferencial entre elas é ontologia que apoia a aplicação em si. Entretanto, algumas
+aplicações apresentam aspectos úteis para uma aplicação de LOD, os quais podem ser
+utilizados em trabalhos futuros.
+Börner et al. (2012) apresentam uma solução denominada VIVO, a qual tem o foco
+na informação sobre pesquisa e pesquisadores e fornece, além de uma ontologia,
+ferramentas para gerenciar a ontologia e uma plataforma para usar a ontologia e criar e
+gerenciar os dados interligados abertos a ela associados. Bonomi et al. (2006), por sua vez,
+apresentam um protótipo de uma biblioteca eletrônica (e-Library), a qual permite
+descrições e buscas semânticas nas coleções descritas, cujo vocabulário é voltado
+especificamente para publicações científicas da área de Arqueologia.
+Kramer et al. (2012) propõem o uso de RDF com o foco em descrever e interligar
+dados trabalhados pelas pesquisas de ciências sociais na web. Contempla, dentre outros, os
+seguintes aspectos: interligação de publicações, pessoas e organizações a dados de pesquisa,
+interligação a dados geográficos, a estudos relacionados, e interligação de dados a licenças.
+Os autores utilizam-se do recurso de identificadores persistentes largamente usados na
+publicação acadêmica, como por exemplo DOIs (Digital Object Identifiers), para identificar
+unicamente os dados de pesquisa, assim como nas citações da publicação. Dessa forma, é
+
+
+
+possível identificar, por exemplo, publicações que utilizem as mesmas fontes de dados, ou
+ainda, publicações que utilizem as mesmas bases teóricas. Embora essa proposta se
+aproxime do objetivo do presente trabalho, é importante destacar que existe uma diferença
+primordial, posto que Kramer et al. explicitam o aporte teórico na forma de links para as
+publicações científicas e não para as teorias ali utilizadas nem as linhas epistemológicas
+adotadas. Nesse sentido, funcionam mais como uma rede de citações bibliográficas, embora
+contextualizadas.
+Todas essas aplicações evidenciam a utilidade e versatilidade de aplicações de LOD
+no que tange a representar de forma articulada dados do conhecimento científico. O desafio
+que se coloca para essas aplicações parece centrar-se não na infraestrutura tecnológica, mas
+sim na concepção do modelo da ontologia do domínio, uma vez que os resultados por elas
+apresentados são todos, em sua essência, dependentes dessa ontologia e nela apoiados.
+4 APLICAÇÃO DE LOD APOIADA POR ONTOLOGIAS: MÉTODOS E
+RESULTADOS
+Nas seções anteriores foi ilustrado o papel das ferramentas de software e dos
+aspectos epistemológicos e ontológicos voltados para a representação do domínio
+escolhido. Apontou-se também, embora não esteja no escopo do presente trabalho, a
+importância dos aspectos metodológicos, voltados para a compreensão do problema.
+Partindo desses conhecimentos, espera-se poder demonstrar a utilidade da aplicação de
+LOD para interligar teorias presentes em artigos científicos da temática de ontologias, e,
+através de um exercício simples dessa aplicação, voltar a lembrar a importância do papel do
+profissional da informação no uso de ferramentas de software e na modelagem da
+informação, conforme proposto por Campos et al. (2012).
+4.1 Ontologia do conhecimento científico para uso na aplicação LOD
+Conforme a recomendação de publicação de dados interligados abertos, procedeu-se
+à descrição de um conjunto de dados relacionados a teorias presentes em publicações
+científicas da temática de ontologias. Para isso, utilizou-se a ontologia do conhecimento
+científico que é apresentada a seguir. Essa ontologia foi inspirada na ontologia Phylo, e, tal
+como esta, é uma proposta preliminar, ainda em aperfeiçoamento.
+Das entidades propostas por Smith na ontologia Phylo, para os propósitos do
+presente trabalho, foram reutilizadas as seguintes: conceito, teoria, área, pessoa e grupo de
+pessoas. Cabe observar que a ontologia Phylo é específica da Filosofia, enquanto que na
+presente proposta, o foco foi adaptado para a descrição do conhecimento contido em artigos
+
+
+de pesquisa acadêmica, objetivando contemplar aspectos básicos desse conhecimento. A
+adaptação se aplica, pois está ancorada na descrição dos aspectos epistemológicos dos
+artigos, sendo que a Epistemologia é um ramo da Filosofia. Assim sendo, à semelhança de
+Smith, a FIGURA 1 ilustra exemplos de uso dos conceitos reutilizados.
+Cabe lembrar que se faz necessário o desenvolvimento de vocabulários que
+descrevam as instâncias dos conceitos de alto nível descritos pela ontologia proposta, e que
+poderiam ser descritas em bases de dados temáticas, conforme mencionado na introdução
+do presente artigo. Porém esse não é o foco desse trabalho, e, nesse sentido, serão utilizados
+exemplos, de modo a viabilizar a utilidade da aplicação LOD proposta.
+Ainda, com base na ontologia Phylo, a ontologia para o conhecimento científico
+também possui a preocupação para definir suas relações e minimizar ambiguidade na
+definição de conceitos. Corroborando com essa preocupação, na Ciência da Informação,
+Dahlberg (1978a, 1978b) destaca a importância das definições, na medida em que tornam
+explícito o conteúdo dos conceitos, fornecendo os elementos que vão forjar as relações
+entre eles. Dahlberg, através de sua Teoria do Conceito, propõe ainda que as definições
+revelam um conjunto de características comuns que são úteis para construir qualquer
+sistema classificatório (DAHLBERG, 1983).
+Considerando a importância da definição dos conceitos da ontologia, explicamos a
+seguir de que modo são entendidas as entidades presentes na ontologia proposta, a saber:
+research object (objeto de pesquisa), concept (conceito), biased concept (conceito com
+viés), theory (teoria), field (área), person (pessoa) e group of persons (grupo de pessoas),
+proposition (proposição), basic proposition e differential proposition. Por motivos de
+simplificação, não será considerada a entidade argument.
+Por research object entende-se a classe genérica, que agrupa os conceitos de
+concept, biased concept, bias, proposition, basic proposition, differential proposition e
+theory.
+Por field entende-se a área de pesquisa na qual se insere um pesquisador ou seu
+objeto de pesquisa. Uma área de pesquisa pode estar subordinada a outra área de pesquisa.
+Por person entende-se o pesquisador que atua ou atuou em uma área de pesquisa, e o qual
+trabalha ou trabalhou em um objeto de pesquisa. Por group of persons entende-se a posição
+filosófica de um grupo de pessoas a qual pertence um pesquisador.
+Por concept entendemos um objeto básico alvo de uma temática de pesquisa.
+Por biased concept entendemos um concept porém com um viés que o difere de
+outros biased concept. Esse viés se manifesta através de um conjunto específico de
+
+
+proposições, a saber, differential proposition. Os biased concept são assim especializações
+de um concept na medida em que todos concordam com um conjunto básico de proposições
+que está definida em concept (basic proposition), embora cada um deles possua seu próprio
+conjunto de proposições que os difere entre si. Biased concept foi criada para reforçar a
+noção do viés de um grupo de pessoas trabalhando em um conceito. Considera-se que essa
+entidade expressa um ponto de vista consensual de um grupo de pessoas sobre um
+determinado conceito, sendo definida através de um conjunto de proposições específico.
+Naturalmente, considera-se que o ponto de vista expressa uma diferença, mas também
+algum consenso sobre alguma coisa. Por exemplo, têm-se duas visões distintas para um
+mesmo conceito básico de tropo feito por grupos diferentes de pessoas: tropos são abstratos
+e tropos são particulares. Essas proposições podem nos levar a conclusões importantes,
+dependendo do escopo de instâncias de teorias de tropos considerado. Tomando-se o ponto
+de vista de Rojek (2008), por exemplo, todas as teorias de tropos têm em comum a
+proposição de que “tropos são particulares” (esse seria o conceito básico de tropo). Em
+contrapartida, algumas teorias de tropos consideram que tropos são abstratos, enquanto que
+outras consideram que tropos são concretos. Dessa forma, esse conceito consensual,
+baseado no qual derivam conceitos afins, porém com diferentes vieses, é expresso na
+ontologia como concept. Os diferentes pontos de vista são os biasedConcept. Seria possível
+representar ambos como concept, mas nesse caso não ficaria explícita essa diferença
+importante de que existe um conjunto básico de proposições consensuais, basicProposition,
+que dá origem a um concept que é um conceito base para uma divergência de posições de
+pesquisa, divergência essa representada pelo diferente conjunto de proposições específicas,
+differentialProposition, que está associado a cada biasedConcept.
+Um concept é definido ou trabalhado por um groupOfPersons, mas a tendência é
+que esse grupo seja de um escopo mais amplo do que o grupo de pessoas que trabalha no
+biasedConcept. Por essa razão, entende-se que os biasedConcept, são, de fato, trabalhados
+por um GroupOfPersons que é um subgrupo de um determinado GroupOfPersons.
+Entretanto, para fins de simplificação, esses detalhes não serão explicitados no mapa
+conceitual proposto para a ontologia do conhecimento científico (FIGURA 1).
+Por proposition entendemos uma afirmativa sobre um referente no mundo. Uma
+proposição é expressa através de conceitos, embora sejam, por sua vez, parte de um
+conceito, como propõe Dahlberg.
+basicProposition.
+
+Proposition pode ser differentialProposition ou
+
+
+
+Por theory entendemos um conjunto de afirmativas sobre o mundo, incluindo o que
+Giere (2004) descreve como teoria, lei e princípio.
+Quanto às relações, as principais que foram adotadas, reutilizadas da Phylo, são:
+memberOf (membro de), workedOn (trabalhou em), subgroupOf (subgrupo de),
+subconceptOf (sub conceito de), inField (na área), subfieldOf (sub área de), activeIn (atua
+em).
+As relações subgroupOf, subfieldOf e subconceptOf são usadas para denotar
+especialização para as entidades Group, Field e Concept, respectivamente, no sentido
+original adotado por Smith. Além dessas, foram utilizadas as relações IsA (gênero-espécie),
+para associar um biasedConcept a um Concept implicando um viés teórico distinto, partOf
+(e sua inversa hasPart), para associar um BiasedConcept a uma Theory, e para associar um
+concept a uma basicProposition. A relação partOf também é usada para associar uma
+proposition a uma Theory. Cabendo observar que nem toda proposition que compõe uma
+Theory pode estar associada a um BiasedConcept que faz parte da Theory. Por exemplo,
+uma Theory pode apresentar a proposition “formas existem”, sem que essa proposição
+específica esteja associada a um BiasedConcept.
+A relação inField entre um conceito objeto de pesquisa e uma área de pesquisa
+ocorre quando é o caso do conceito ser estudado pela área, como, por exemplo, no caso do
+conceito de categorias, o qual é estudado pela Ciência da Informação. Cabe destacar que o
+fato de um objeto de pesquisa ser estudado por uma área não impede que ele seja estudado
+também por outra área, embora provavelmente através de teorias diversas.
+A relação workedOn é a relação entre uma person ou groupOfPersons e uma theory.
+Por exemplo, entre D.C. Williams e a Teoria de Tropos. É usada também para relacionar
+person ou groupOfPersons a concept ou a BiasedConcept.
+Os conceitos da ontologia proposta são ilustrados através de um mapa conceitual, na
+FIGURA 1, sendo apoiado em uma adaptação da ontologia Philo. Nem todas as relações
+explicadas anteriormente estão ilustradas na FIGURA 1, por motivos de simplificar a
+visualização do modelo. Por exemplo, o conceito de Proposition foi omitido. Dessa forma,
+suas relações com theory (partOf) e com differential proposition e basic proposition (Isa)
+foram omitidas.
+Um trecho do código OWL de um conjunto de instâncias desse modelo, usado no
+experimento descrito na seção 4 é ilustrado na FIGURA 2.
+
+
+
+FIGURA 1: mapa conceitual simplificado da ontologia para o conhecimento científico
+
+A ontologia proposta permite responder a várias perguntas, tais como: (i) de quais
+teorias o conceito x faz parte; (ii) de quais teorias o conceito x faz parte e são trabalhadas
+por um grupo de pessoas y; (iii) a que área pertence a pessoa x que trabalha na Teoria y;
+(iv) que pessoas trabalham na teorias x e em que áreas; (v) de que teorias fazem parte os
+conceitos x com a proposição y; (vi) qual o grupo de pessoas que trabalha no conceito x.
+O conjunto de instâncias da ontologia do conhecimento utilizado como exemplo ao
+ser explorado responde a algumas questões específicas, conforme ilustrado na FIGURA 2.
+Essas respostas são fornecidas com base em Rojek (2008) e Dahlberg (1978a).
+Algumas das questões respondidas são: (i) o concept “universal” faz parte das
+theory de Tropos1, Tropos2, Tropos3 e Teoria do Conceito; (ii) o biasedConcept de
+“universal concreto”, trabalhado pelo groupOfPersons “filósofos da pan-unidade”, faz parte
+das theory de Tropo1 e Tropo2; (iii) a person Ingetraut Dahlberg trabalha na Teoria do
+Conceito e atua na área da Ciência da Informação; (iv) as person Aristoteles, Ingarden e
+Husserl trabalham na theory Teoria de Tropos na area da Filosofia; (v) o biasedConcept
+“non-abstract universal”, com a basicProposition “universals are not abstract”, faz parte
+das theory Teorias de Tropos 1, 2, 3 e 4; o biasedConcept “concrete universal” com a
+differentialProposition “universals are concrete” faz parte das theory Teorias de Tropos 1 e
+2; (vi) o groupOfPersons “realismo moderado” trabalha no biasedConcept “abstract
+universal”.
+Uma semântica mais rica de descrição, como proposto, pode ser o ponto de partida
+para ajudar a construir perguntas mais objetivas e bem construídas. A modelagem das
+questões relevantes para o domínio, incluindo seus relacionamentos e a descrição e
+
+
+
+interligação semântica dos seus dados, permitem resultados mais precisos. Por um lado, por
+auxiliar o interessado a formular a sua pergunta de forma objetiva e, por outro lado, por
+permitir que esses aspectos possam ser considerados como critério pelas ferramentas de
+software para trazer informação relevante relacionada.
+FIGURA 2: Trecho da ontologia OntoSC
+
+4.2 Aplicação LOD e resultados obtidos
+A aplicação de LOD proposta consiste em uma prova de conceito de uma
+ferramenta de software, mas envolve mais do que simplesmente uma codificação em uma
+linguagem de programação. Para que essa aplicação fosse concebida, foi necessário todo
+um estudo, conforme foi explanado nas seções anteriores, que permitiu o embasamento
+necessário para a compreensão dos problemas e dos requisitos a serem implementados na
+solução computacional. Além disso, envolveu um esforço da definição do modelo de uma
+ontologia, da seleção de um conjunto de dados adequado e da descrição desse conjunto
+como instâncias da ontologia, e ainda, da codificação da aplicação. Por questões de espaço,
+será apresentada uma breve explanação das funcionalidades da aplicação bem como do
+conjunto de dados utilizado.
+A aplicação foi implementada em Java com uso da API Jena (2014), sendo a
+ontologia desenvolvida por meio da ferramenta Protégé OWL (2014). Fornece
+funcionalidades para que sejam feitas consultas, incluindo inferências, na base de instâncias
+
+
+OWL cujo trecho é apresentado na FIGURA 2. Foi testada com sucesso para responder às
+perguntas apresentadas na seção 4.1, sendo que o resultado de um desses testes é ilustrado
+na FIGURA 3, o qual visa responder à pergunta “quais as teorias que têm como parte a
+proposição diferencial universals_are_concrete”.
+FIGURA 3: Trecho do código Java que faz busca na ontologia OntoSC, com resultado
+
+A interligação de dados se dá através dos elementos theory, person e field, sendo
+feita com a Dbpedia22. A relação para indicar a interligação com a Dbpedia é owl:sameAs.
+Para a descoberta dos possíveis recursos alvo da Dbpedia (no caso do exemplo,
+Ranganathan) foi feita uma busca manual, que, por ocasião de uma versão futura, poderá
+ser substituída pela busca automatizada da ferramenta SILK. A busca na DBpedia também
+foi implementada e apresentada como resultado complementar. Um extrato do código com
+a query SPARQL utilizada é ilustrada na FIGURA 4. Essa query tem como finalidade
+exibir todas as informações encontradas na Dbpedia associada ao recurso indicado na
+relação owl:sameAs. Dessa forma, foi possível complementar as informações contidas na
+ontologia OntoSC relacionadas a Person e de forma organizada, através de ligações
+nomeadas, trazendo uma semântica adicional que é um atrativo para o aprendizado. No caso
+de Ranganathan, por exemplo, foi possível obter a partir da Dbpedia informações sobre as
+
+22
+
+www.dbpedia.org
+
+
+
+suas obras notáveis (notableworks), a saber, Prolegomena of Library Classification,
+Ramanujan: the Man and the Mathematician, The Five Laws of Library Science, dentre
+outras informações de interesse, conforme ilustrado na FIGURA 4.
+FIGURA 4: Trecho do código Java com a query SPARQL para busca na Dbpedia com parte
+do resultado
+
+5 CONCLUSÃO
+Através de LOD, a web passa a disponibilizar um volume enorme de dados, não só
+documentos, que ao serem modelados em triplas RDF, permite que a web seja encarada
+como um grande banco de dados passível de inspeção por ferramentas de software já
+disponíveis na atualidade. Nesse cenário, ontologias são importante instrumento para
+explicitar de forma menos ambígua as informações que se disponibilizar de forma livre na
+web.
+Para mostrar essa realidade, apresentou-se um exemplo de aplicação de dados
+interligados abertos apoiada por uma ontologia para descrever teorias científicas ligadas a
+áreas do conhecimento. Essa aplicação foi concebida a partir de uma revisão teórica na área
+de ontologias relacionadas ao conhecimento científico e em dados interligados abertos,
+tendo como objetivo servir como prova de conceito da utilidade e da viabilidade de se
+implementar uma solução tecnológica apoiada pela ontologia. A partir do modelo da
+ontologia proposta, foi criado um conjunto de instâncias de teste o qual serviu para
+evidenciar, como resultado, a utilidade do modelo para responder a um conjunto prédeterminado de perguntas. Trabalhos futuros podem abordar a questão de se criar um
+conjunto real de instâncias e de tornar a implementação publicamente disponível através da
+adaptação de sua interface de busca para a web. Como conclusão tem-se que o uso de
+
+
+ontologias é útil para ajudar a conceber um modelo mais preciso com foco em responder
+perguntas, cujas respostas transcendem os dados da base de instâncias local, estendendo o
+conhecimento para uma nuvem de possibilidades ampliadas, concretizando o objetivo
+pretendido das aplicações de dados interligados abertos.

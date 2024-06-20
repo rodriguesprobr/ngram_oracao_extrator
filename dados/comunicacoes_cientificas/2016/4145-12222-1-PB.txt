@@ -1,0 +1,1332 @@
+
+PUBLICAÇÃO AMPLIADA NO CONTEXTO DE TESES E DISSERTAÇÕES
+Modalidade da apresentação: Comunicação Oral
+Resumo: O objetivo desta pesquisa é estudar aspectos envolvidos no contexto de publicação ampliada,
+em especial para os casos de teses e dissertações e os diversos documentos que passam a compor o
+novo espectro de elementos destes resultados propiciando subsídios para o desenvolvimento de uma
+base conceitual que sustente propostas de estruturas de coleta, armazenamento e recuperação deste
+novo conjunto de documentos que as compõem, a partir dos conceitos já estabelecidos na Ciência da
+Informação. A metodologia utilizada foi a triangulação metodológica, de caráter exploratório e
+descritivo, composta por: identificação de referencial teórico, através do levantamento bibliográfico
+sobre publicação ampliada em língua portuguesa, através estudos disponíveis nas bases de dados
+Google Scholar e Scielo e no mecanismo de busca Google Search; análise de requisitos, com o uso de
+fases e objetivos do Ciclo de Vida dos Dados para a Ciência da Informação (CVD), e; estudo de caso,
+a partir dos conjuntos de documentos de uma tese em processo de defesa do Programa de PósGraduação em Ciência da Informação – PPGCI da Universidade Estadual Paulista – UNESP. Os
+resultados desta pesquisa estão demonstrados na forma de análise de requisitos, a partir do uso de
+grafos para a elaboração das relações entre os documentos da publicação ampliada; e de requisitos nas
+fases de coleta, armazenamento e recuperação para a implementação das funcionalidades. Conclui-se
+que, com a explicitação da análise de requisitos das fases de coleta, armazenamento e recuperação,
+começam a surgir mais preocupações na forma em que as publicações ampliadas serão apresentadas,
+no momento da implementação de funcionalidades, como a necessidade de explicitação de aspectos de
+privacidade, além de um maior detalhamento e explicitação de ações nesta temática, e delimitação
+elementos necessários para o instanciamento de publicações ampliadas.
+Palavras-chave: Ciência da Informação. Tese. Dissertação. Publicação Ampliada. Dados.
+1 INTRODUÇÃO
+Em tempos de revoluções em inúmeras áreas do conhecimento, vivemos no chamado
+Quarto Paradigma Científico ou A Nova Ciência (HEY, 2009, 2010), permeado pelo crescente
+uso de dados; do acesso aberto a artigos científicos, bases de dados, índices, tesauros,
+repositórios e outros documentos; do barateamento do custo de armazenamento de dados; da
+popularização de dispositivos com alta capacidade de processamento de dados, e; do uso da
+internet como forma de infraestrutura de compartilhamento e de interoperabilidade
+(BULLINGER et al., 2003; CASTELLS, 2003; HEY, 2012; RODRIGUES; SANT’ANA, 2012;
+SAYÃO; SALES, 2014).
+Na comunicação científica as publicações se configuram como o capital para a ciência,
+sendo o principal critério para o estabelecimento de descobertas científicas e parte importante
+na resolução de litígios de propriedade, e as teses e dissertações fazem parte integrante deste
+cenário (SALES; SOUZA; SAYÃO, 2014). O processo de publicação destes resultados
+demanda não só a disponibilidade do texto – com já comprovada relevância – mas também de
+outros conteúdos, tais como: planilhas, algoritmos, imagens, áudios e vídeos. Estes conteúdos
+complementares apresentam importância não só para o entendimento dos resultados nos quais
+estão vinculados, mas também podem ser aproveitados em outros contextos, como na
+colaboração entre pesquisadores, de onde emerge a necessidade de ambientes que propiciem a
+ampliação do espectro de documentos disponíveis destas publicações.
+Entretanto, conforme estudado por Sales, Sayão e Souza (2013), Araya (2014), Sayão e
+Sales (2014) e Mucheroni, Silva e Paletta (2015), ainda há uma carência de ambientes
+informacionais digitais que propiciem a publicação ampliada e neste contexto também estão
+inseridos as teses e dissertações, em que estes conteúdos também são parte integrante – e não
+apenas complementar – dos resultados.
+
+2 OBJETIVOS E PROCEDIMENTOS
+O objetivo desta pesquisa é estudar aspectos envolvidos no contexto de publicação
+ampliada, em especial para os casos de teses e de dissertações e os diversos documentos que
+passam a compor o novo espectro de elementos destes resultados, propiciando subsídios para o
+desenvolvimento de uma base conceitual que sustente propostas de estruturas de coleta,
+armazenamento e recuperação deste novo conjunto de documentos que as compõem, a partir
+dos conceitos já estabelecidos na Ciência da Informação.
+A metodologia utilizada foi a triangulação metodológica (DUARTE, 2009), de caráter
+exploratório e descritivo, composta por: identificação de referencial teórico, através do
+levantamento bibliográfico sobre publicação ampliada em língua portuguesa; análise de
+requisitos, com o uso de fases e objetivos do Ciclo de Vida dos Dados para a Ciência da
+Informação (CVD), e; estudo de caso, a partir dos conjuntos de documentos de uma tese em
+processo de defesa do Programa de Pós-Graduação em Ciência da Informação (PPGCI) da
+Universidade Estadual Paulista (UNESP).
+No levantamento bibliográfico, foram recuperados estudos disponíveis nas bases de
+dados Google Scholar e Scielo; e no mecanismo de busca Google Search (com corte da amostra
+na quarta página), através da aplicação do termo “publicação ampliada”, disponíveis no mês de
+julho de 2016. Foram descartadas apresentações de slides, editais licitatórios, editoriais, citações,
+patentes, notícias, páginas de apresentação contendo perfis de pesquisadores, postagens de blog,
+verbetes de enciclopédias, e índices, bem como estudos recuperados que não apresentam
+relação com o tema.
+Foram identificados 74 (setenta e quatro) resultados: 25 (vinte e cinco) no Google
+Scholar, 4 (quatro) no Scielo e 44 (quarenta e quatro) no Google Search. Foram descartados 34
+(trinta e três) resultados: 15 (quinze) notícias, 3 (três) apresentações de slides, 3 (três) editais
+licitatórios, 3 (três) perfis de pesquisador, 2 (dois) editoriais, 2 (duas) postagens de blog, 2 (dois)
+verbetes de enciclopédias, 2 (duas) citações, 1 (um) índice de periódico e 1 (um) item que não
+estava acessível no momento da pesquisa.
+Dos 40 (quarenta) resultados restantes, foram considerados fora do escopo desta
+pesquisa 24 (vinte e quatro): 14 (catorze) artigos em periódicos científicos, 6 (seis) dissertações,
+3 (três) artigos em congresso científico e 1 (uma) tese – por não tratarem do tema publicação
+ampliada e sim documentos que citam o termo mas abordam outro assunto.
+
+Quadro 1 – Documentos sobre Publicação Ampliada
+Título
+
+Ano
+
+Autores
+
+Modelo triádico de relações:
+Luana Farias Sales e
+um protótipo de modelagem 2012
+Luís Fernando Sayão
+conceitual para a área nuclear
+
+Tipo
+
+URL
+
+Artigo em
+Congresso
+
+http://carpedien.ien.gov.br/
+bitstream/ien/650/1/artigo_e
+nancib2012_sales_say%C3
+%A3o.pdf
+
+Publicações ampliadas: um
+novo modelo de publicação
+acadêmica para o ambiente
+de e-science
+
+Luana Farias Sales,
+Luís Fernando Sayão
+2013
+e Rosali Fernandez
+de Souza
+
+Artigo em
+Congresso
+
+http://eprints.rclis.org/2066
+5/1/publica%C3%A7%C3
+%B5es_ampliadas_2013.pd
+f
+
+Publicação ampliada: um
+novo modelo de publicação
+científica voltada para os
+desafios de uma ciência
+orientada por dados.
+
+Luana Farias Sales,
+Rosali Fernandez de
+2014
+Souza e Luís
+Fernando Sayão
+
+Artigo em
+Congresso
+
+http://ridi.ibict.br/handle/12
+3456789/824
+
+Dados abertos de pesquisa:
+ampliando os conceitos de
+acesso livre
+
+2014
+
+Artigo em
+Periódico
+
+www.reciis.icict.fiocruz.br/i
+ndex.php/reciis/article/dow
+nload/611/1252
+
+Tese
+
+http://repositorio.unesp.br/b
+itstream/handle/11449/1219
+81/000812425.pdf?sequenc
+e=1&isAllowed=y
+
+Luís Fernando Sayão
+e Luana Farias Sales
+
+Comunicação científica:
+agregação, compartilhamento
+Elizabeth Roxana
+2014
+e reúso de elementos
+Mass Araya
+informacionais
+Integração semântica de
+publicações científicas e
+dados de pesquisa: proposta
+de modelo de publicação
+ampliada para a área de
+Ciências Nucleares
+
+2014 Luana Farias Sales
+
+Tese
+
+http://repositorio.ibict.br/bit
+stream/123456789/806/1/L
+UANA%20SALES%20D.p
+df
+
+Entre a publicação ampliada
+e a multimodalidade
+
+Marcos L.
+Mucheroni,
+Fernando José
+2015
+Modesto da Silva e
+Carlos Francisco
+Paletta
+
+Artigo em
+Congresso
+
+http://www.ufpb.br/evento/l
+ti/ocs/index.php/enancib201
+5/enancib2015/paper/viewF
+ile/2873/1178
+
+Artigo em
+Periódico
+
+http://revistas.ien.gov.br/ind
+ex.php/ienprogressreport/art
+icle/view/131
+
+Enhanced publication: a new
+model of scientific
+Luana Farias Sales e
+2015
+publication for the nuclear
+Luís Fernando Sayão
+area
+Dados de pesquisa em
+repositório institucional: o
+caso do Edinburgh
+DataShare
+Fonte: Autores.
+
+Denise Ramires
+2015
+Machado
+
+http://www.lume.ufrgs.br/bi
+tstream/handle/10183/1191
+Dissertação
+57/000970298.pdf?sequenc
+e=1
+
+Da recuperação dos resultados através das bases de dados foram obtidos 5 (cinco)
+documentos idênticos, ou seja, dos 19 (dezenove) resultados foram identificados 9 (nove)
+documentos que tratam sobre publicação ampliada: 4 (quatro) artigos em congressos científicos,
+2 (dois) artigos em periódicos, 2 (duas) teses e 1 (uma dissertação) – apresentadas no Quadro 1.
+
+Na análise de requisitos, utilizou-se o conceito de CVD, proposto por Sant’Ana (2013),
+para a explicitação dos elementos vinculados com a publicação ampliada para as fases: de
+Coleta, fase inicial de planejamento e outras atividades relacionadas a obtenção e
+processamento dos dados; de Armazenamento, com atividades relacionadas a estruturação, a
+inserção, a manipulação, a migração e a transmissão na persistência de dados; e de Recuperação,
+com atividades voltadas à fase em que estes dados passam a estar disponíveis para consulta e
+visualização. Foram descartadas as preocupações inerentes a fase de Descarte. Cada uma das
+fases é permeada por objetivos – delimitações temáticas de análise, sendo: Preservação,
+Disseminação, Direitos Autorais, Qualidade, Integração e Privacidade – explicitadas neste
+estudo para as fases de Coleta, Armazenamento e Recuperação.
+Para o estudo de caso foi selecionada uma tese de doutorado apresentada ao Programa
+de Pós-Graduação em Ciência da Informação – PPGCI da Universidade Estadual Paulista
+UNESP na linha de pesquisa “Informação e Tecnologia” e o conjunto de documentos
+relacionados a ela. Esta escolha se deu em função de estar baseada em forte processo de coleta e
+geração de dados o que propiciou um conjunto relevante de documentos complementares e que
+fazem parte integrante da tese. Destaca-se que outro fator determinante para a escolha foi a não
+localização de outra tese que tenha tido como característica buscar a publicação de variados
+tipos de documentos.
+A próxima seção apresenta as definições de publicação ampliada, seus requisitos e
+estruturas – identificadas no levantamento bibliográfico, bem como a análise de requisitos
+destes elementos estruturados pelo CVD e o estudo de caso. A quarta seção apresenta os
+resultados desta pesquisa que estão demonstrados na forma de análise de requisitos, com origem
+na área de Engenharia de Software, a partir do uso de grafos – com aporte da teoria matemática
+denominada Teoria dos Grafos (BIGGS; LLOYD; WILSON, 1986; WILSON, 1996) – para a
+elaboração das relações entre os documentos da publicação ampliada; e de requisitos nas fases
+de coleta, armazenamento e recuperação para a implementação das funcionalidades. A quinta
+seção apresenta as considerações finais e trabalhos futuros.
+3 DISCUSSÃO
+Em cada um dos documentos identificados nesta pesquisa, foram encontrados, no
+mínimo, uma definição sobre a publicação ampliada (Quadro 2), tendo como núcleo comum a
+definição de que a formação destas publicações é composta pela publicação digital (e-print) e
+por documentos complementares contendo conjuntos de dados.
+
+Quadro 2 – Definições sobre Publicação Ampliada
+Autoria do
+Estudo
+
+Definição
+
+Sales e Sayão “Publicação ampliada pode ser definida como um modelo de informação que apoia a
+(2012)
+integração dos e-prints ao conjunto de dados a pesquisa, por exemplo, uma tese e os
+dados que foram gerados a partir dela”.
+Sales, Sayão e “[…] objetos digitais compostos que combinam e-prints com um ou mais recursos de
+Souza (2013) dados, um ou mais registros de metadados, ou qualquer combinação destes.” (Digital
+Repository Infrastructure Vision for European Research – II )
+Sales, Souza e “[…] objetos digitais compostos que combinam e-prints com um ou mais recursos de
+Sayão (2014) dados, um ou mais registros de metadados, ou qualquer combinação destes.” (Digital
+Repository Infrastructure Vision for European Research – II)
+“[…] é formada por objetos digitais (publicações digitais, dados digitais e outros
+documentos digitais) e relações conceituais se tornando dessa forma um objeto
+digital complexo e tem, entre suas funcionalidades, a possibilidade de registrar toda a
+memória digital de uma pesquisa”.
+“[…] é uma instância de um objeto digital complexo que integra, por meio de
+relações, recursos distribuídos por diversos repositórios digitais. Os componentes
+principais de uma publicação ampliada são então os objetos digitais (e-prints, dados
+digitais de pesquisa, metadados e outros recursos) e relações – que quando possuem
+sua semântica explicitada, possibilita, entre outras coisas, que a publicação –
+integrada aos dados e documentos correlatos – seja recuperada e a disseminada
+maneira mais precisa e inteligente.
+Sayão e Sales “O documento abstrato que combina e-prints e dados de pesquisas – chamado de
+(2014)
+‘publicação ampliada’ […]”.
+“[…] é pensada como uma forma de objeto digital complexo que combina vários
+recursos heterogêneos que, porém, são relacionados.”
+“[…] pode ser considerada um veículo de comunicação científica de grande
+importância para a comunidade de pesquisadores.”
+Araya (2014)
+
+“[…] é a publicação melhorada com dados de pesquisa, materiais adicionais, dados
+posteriores à publicação, registros de bases de dados e que tem uma estrutura baseada
+no objeto com links explícitos entre os objetos. Um objeto pode ser (parte de) um
+artigo, um conjunto de dados, uma imagem, um filme, um comentário, um modulo
+ou um link para informação em uma base de dados”. (ELBAEK, PEDERSEN E
+SIERMAN 2009, tradução da autora)
+“[…] a publicação melhorada com os elementos informacionais provenientes do
+processo desenvolvido na pesquisa científica, sejam eles, por exemplo, artigos,
+conjuntos de dados, imagens, filmes, comentários, entre outros […]”.
+“[…] um modelo de publicação que permita propiciar os reordenamentos necessários
+para que a comunicação científica possa conter os elementos informacionais gerados
+ao longo de qualquer pesquisa científica […]”.
+
+Autoria do
+Estudo
+
+Definição
+“[…] é um objeto composto digital caracterizado por um identificador, de preferência
+um identificador persistente, e por informação de metadados. Esse objeto composto
+digital deve conter obrigatoriamente uma parte narrativa equivalente à descrição da
+pesquisa (como na publicação científica tradicional), além dos diversos elementos
+informacionais, heterogêneos, mas interconectados, provenientes do processo de
+pesquisa. Tanto a narrativa quanto os elementos informacionais que constituem a
+publicação ampliada devem ser compreensíveis por si só. Isto é, a publicação
+ampliada é o conjunto formado pela narrativa dos resultados da pesquisa e pelos
+elementos informacionais inerentes ao próprio processo de pesquisa. Essas partes
+podem, ou não, ter um identificador e os metadados respectivos e se enlaçam por
+relações semânticas”. (BARDI e MANGHI, 2014)
+“[…] se compõe de uma parte narrativa estruturada em várias partes interconectadas
+(resumo, seções, figuras, tabelas, bibliografia, etc.) […]”.
+
+Sales (2014)
+
+“[…] é um artefato tecnológico que visa reunir objetos digitais de diversas naturezas,
+porém de uma mesma temática […]”.
+“[…] enquanto um objeto digital complexo, pode se configurar como a combinação
+de um e-print depositado em um repositório institucional, dados de pesquisa
+depositados em um repositório de dados e ainda outros documentos depositados em
+qualquer outra base de dados de informação técnico-científica […]”.
+“[…] é uma instância de um objeto digital composto, cujo objetivo é ligar os
+resultados de pesquisa aos dados que o geraram, extrapolando o limite do documento
+físico […]”.
+“[…] objetos digitais compostos que combinam e-Prints com um ou mais recursos de
+dados, um ou mais registros de metadados, ou qualquer combinação destes”. De
+acordo com o relatório de autoria de Peter Verhaar, e-Prints são entendidos como um
+recurso textual como trabalho acadêmico original, que se destina a ser lido por seres
+humanos, que apresenta algumas reivindicações acadêmicas e que geralmente
+contém uma interpretação ou uma análise de determinados dados primários.”
+(VEHAAR, 2008, p.11).
+“[…] é formada por objetos digitais, metadados e ainda por relações conceituais que
+conectam esses objetos formando um agregado de informações […]”.
+
+Mucheroni, da “[…] uma forma de publicação eletrônica que amplia a divulgação e o
+Silva e Paletta compartilhamento dos resultados de pesquisa, de maneira que eles possam ser
+(2015)
+encontrados.” (VERNOOY-GERRITSEN, 2009)
+“[…] é uma nova forma de publicação onde a forma tradicional (um relatório, um
+artigo, um livro) é enriquecida com informações adicionais, ela depende das
+possibilidades de ligações-conexões da Web”.
+“[…] contempla os dados da pesquisa, de materiais extras, da postagem dos dados da
+publicação, ou, ainda, dos registros contidos em um banco de dados, e que tem algum
+objeto contendo uma estrutura baseada em ligações explícita entre ele (o objeto)”
+(HOGENAAR e HOOGERWERF, 2008).
+Sales e Sayão “[…] agrega, de forma padronizada, publicações, dados, conjuntos de dados e
+(2015)
+metadados”. (tradução dos autores)
+Machado
+(2015)
+
+“[…] possibilidades de vinculação entre os dados de pesquisa e o trabalho final
+(publicação) relacionada a esses dados […]”. (SALES e SAYÃO, 2012)
+
+Autoria do
+Estudo
+
+Definição
+“[…] contempla essas conexões entre dados e publicações […]”. (SALES e SAYÃO,
+2012)
+
+Fonte: Autores.
+
+Neste estudo, adota-se a publicação ampliada como sendo uma composição de objetos
+digitais: documentos, dados, metadados e outros elementos descritivos, relacionados entre si, e
+que apresentem em seu todo, uma estrutura de corpo que lhe garanta uma identidade e
+características próprias que possam ser vinculadas ao conjunto.
+Estas publicações ampliadas devem fazer uso de identificadores e, como forma de
+suporte, podem se valer de repositórios institucionais, de repositórios de dados ou outros
+sistemas de informação que permitam a sua recuperação em sua totalidade ou parte dos objetos
+que as compõem.
+Os estudos de Sales, Sayão e Souza (2013), Mucheroni, da Silva e Paletta (2015), Sales,
+Souza e Sayão (2014), Machado (2015), Araya (2014) e Sales (2014) propõem delimitações
+sobre quais são os requisitos e as estruturas necessárias para a formação da composição de uma
+publicação ampliada.
+O Quadro 3 apresenta a análise dos requisitos identificados nestes estudos,
+segmentando-os pelas fases e objetivos do CVD. Cada requisito está marcado com um número
+sobrescrito no final do período, indicando em qual estudo foi identificado-o.
+Quadro 3 – Organização no CVD dos requisitos e estruturas necessárias à publicação ampliada
+Objetivos
+
+Preservação
+
+Coleta
+
+Fases
+Armazenamento
+
+Identificação de
+Armazenamento dos
+elementos sobre os
+metadados de preservação
+objetos que viabilizem a de cada objeto1 2 3 4 5 6
+preservação1 2 3 4 5 6
+Geração de identificador
+para cada objeto: URI1 2 3 5
+6
+, DOI2 5, PURLS2 ou
+URN2
+
+Recuperação
+Disponibilização dos
+metadados de preservação dos
+objetos1 2 3 4 5 6
+Permitir acesso a cada objeto
+por identificador: URI1 2 3 5 6,
+DOI2 5, PURLS2 ou URN2
+Manter disponíveis as
+publicações em sítio web1 5
+
+Disseminação
+
+Manter acesso aos metadados
+dos objetos em versão legível
+por máquina1 2 3 6
+Possibilitar a vinculação dos
+objetos em outros contextos
+(Linked Data)2
+
+Objetivos
+
+Direitos
+Autorais
+
+Fases
+Armazenamento
+
+Coleta
+
+Recuperação
+
+Obter a descrição de
+Persistir os metadados de Permitir o acesso aos
+elementos sobre a
+autoria de cada objeto1 2 3 5 6 metadados de autoria dos
+autoria dos objetos1 2 3 5 6
+objetos1 2 3 5 6
+Garantir a autoria dos objetos5
+Propiciar ambiente para
+inserção, alteração ou
+exclusão de objetos1 5
+
+Manter registro sobre o
+controle de versões da
+publicação1 5
+
+Permitir acesso a cada objeto
+univocamente1 2 3 5 6
+
+Qualidade
+
+Propiciar ambiente para a
+Manter registro sobre o
+realização de comentários e
+controle de versões de cada avaliações1 2
+objeto1 5
+
+Obter elementos que
+possibilitem o
+Integração
+relacionamento entre
+objetos1 2 3 4 5 6
+1
+Sales, Sayão e Souza (2013)
+2
+Mucheroni, da Silva e Paletta (2015)
+3
+Sales, Souza e Sayão (2014)
+4
+Sayão e Sales (2014)
+5
+Araya (2014)
+6
+Sales (2014)
+Fonte: Autores.
+
+Persistir elementos que
+sustentem os
+relacionamentos entre os
+objetos1 2 3 4 5 6
+
+Disponibilizar a identificação
+das relações entre os objetos1 2
+3456
+
+Não foram identificados nos textos estudados elementos vinculados a privacidade que
+pudessem ser vinculados às fases de coleta, armazenamento e recuperação do CVD.
+Na fase de coleta é necessária a possibilidade de inserção e de identificação de
+elementos que viabilizem a preservação dos objetos, bem como informações de autoria que
+compõem a publicação ampliada. Também é importante que os objetos possam ser relacionados:
+por exemplo, possibilitar a vinculação um conjunto de dados com um gráfico do texto. Nesta
+fase, também deve estar disponível um ambiente com as opções de inserção, alteração ou
+exclusão de objetos da publicação ampliada.
+No armazenamento, as preocupações concentram na persistência de informações,
+principalmente no armazenamento dos metadados de preservação e de autoria, na persistência
+dos relacionamentos, e no controle de versões dos objetos e da publicação ampliada, além de
+garantir a unicidade de cada objeto (incluindo a diferenciação unívoca de cada versão) através
+do uso de identificadores, com preferência ao uso de URI, ou outros sistemas de identificação
+tais como: o DOI, o PURLS ou o URN.
+Para a fase de recuperação, é necessária a publicação dos objetos – disponibilizando
+metadados de preservação e de autoria, suas relações e seus identificadores – em formato
+
+legível por humanos e por máquinas, através de sítio web que permita realizar comentários e
+avaliações dos conteúdos, para propiciar a disseminação da publicação ampliada e a vinculação
+dos objetos em outros contextos (como a vinculação de dados legíveis por máquina via Linked
+Data). Os objetos devem estar vinculados a identificadores, com preferência ao uso de URI, ou
+outros sistemas de identificação tais como: o DOI, o PURLS ou o URN.
+Características da tese
+Os modelos de publicação impressa e digital para teses e dissertações impossibilitaram a
+inserção de todos os objetos que compõem a tese do estudo de caso. Por exemplo, uma das
+figuras da pesquisa possui tamanho de 5,2 m (cinco metros e dois décimos) de largura por 3,5 m
+(três metros e meio) de altura.
+A tese é composta por um conjunto de 389 (trezentos e oitenta e nove) documentos,
+divididos em:
+(a)
+
+1 (um) texto atual da tese, em formato Open Document Text (ODT), com
+
+tamanho de arquivo de 69 (sessenta e nove) megabytes, 64122 (sessenta e quatro mil cento e
+vinte e dois) palavras e 428476 (quatrocentos e vinte e oito mil quatrocentos e setenta e seis)
+caracteres;
+(b)
+
+18 (dezoito) versões anteriores do texto atual, em formato ODT, com tamanho
+
+total de 594,8 (quinhentos e noventa e quatro e oito décimos) megabytes;
+(c)
+
+15 (quinze) conjuntos de planilhas eletrônicas, em formato Open Document
+
+Spreadsheet (ODS), utilizadas na coleta de dados, com tamanho total de 0,9 (nove décimos)
+megabytes e 12128 (doze mil cento e vinte e oito) linhas;
+(d)
+
+2 (duas) imagens em formato Portable Network Graphics (PNG), contendo
+
+gráficos, com tamanho total de 0,1 (um décimo) megabytes;
+(e)
+
+1 (um) conjunto de planilhas eletrônicas, em formato ODS, contendo dados
+
+sobre quadro de critérios, com tamanho total de 0,75 (setenta e cinco centésimos) megabytes e
+45 (quarenta e cinco) linhas (posteriormente embarcado como tabela dentro do texto da tese);
+(f)
+
+2 (dois) bancos de dados, armazenados em Sistema Gerenciador de Banco de
+
+Dados (SGBD) MySQL, com tamanho total de 10 (dez) megabytes, contendo 25 (vinte e cinco)
+tabelas com 3977 (três mil novecentos e setenta e sete) linhas;
+(g)
+
+4 (quatro) arquivos de backup do banco de dados, em formato script SQL, com
+
+compressão em formato Tarball (tar), com tamanho total de 0,25 (vinte e cinco centésimos)
+megabytes, contendo 25 (vinte e cinco) tabelas com 3977 (três mil novecentos e setenta e sete)
+linhas em cada arquivo;
+
+(h)
+
+2 (duas) pastas de trabalho para elaboração de Modelagem Entidade-
+
+Relacionamento, em formato MWB, originário do aplicativo MySQL Workbench, com tamanho
+total de 0,4 (quatro décimos) megabytes, contendo 3 (três) Diagramas Entidade-Relacionamento;
+(i)
+
+2 (dois) Diagramas de Entidade-Relacionamento, em formato PNG, com
+
+tamanho total de 0,29 (vinte e nove décimos) megabytes (posteriormente embarcados como
+imagens dentro do texto da tese);
+(j)
+
+1 (um) algoritmo para elaboração de Dicionário de Dados, em formato de script
+
+para execução, em linguagem de programação Lua, com 45 (quarenta e cinco) linhas de código
+e tamanho de 0,01 (um centésimo) megabyte;
+(k)
+
+1 (um) algoritmo, em formato de script para execução, em linguagem de
+
+consulta a bancos de dados SQL, com 48 (quarenta e oito) linhas de código e tamanho de 0,03
+(três centésimos) megabyte;
+(l)
+
+2 (dois) Dicionários de Dados, em formato de tabela HTML, contendo 28830
+
+(vinte oito mil oitocentos e trinta) caracteres, com tamanho total de 0,29 (vinte e nove décimos)
+megabytes (posteriormente embarcados como imagens dentro do texto da tese);
+(m)
+
+7 (sete) algoritmos, em formato de script para execução, em linguagem de
+
+marcação Dot, para elaboração automatizada de grafos pelo aplicativo GraphViz, contendo 693
+(seiscentos e noventa e três) linhas, 47108 (quarenta e sete mil cento e oito) caracteres, com
+tamanho total de 0,47 (quarenta e sete décimos) megabytes;
+(n)
+
+7 (sete) imagens em formato PNG, contendo os grafos elaborados pelo
+
+aplicativo GraphViz, com tamanho total de 4,4 (quatro e quatro décimos) megabytes;
+(o)
+
+11 (onze) imagens em formato PNG, inseridas como recursos para a elaboração
+
+dos grafos pelo aplicativo GraphViz, com tamanho total de 2,9 (dois e nove décimos)
+megabytes;
+(p)
+
+279 (duzentos e setenta e nove) capturas de tela, em formato Portable Document
+
+Format (PDF), armazenados como parte da coleta de dados, com tamanho total de 104,7 (cento
+e quatro e sete décimos) megabytes;
+(q)
+
+10 (dez) desenhos vetoriais, em formato Open Document Graph (ODG), com
+
+tamanho total de 3,3 (três e três décimos) megabytes;
+(r)
+
+10 (dez) imagens em formato PNG, geradas a partir dos desenhos vetoriais, com
+
+tamanho total de 24,1 (vinte e quatro e um décimo) megabytes (posteriormente embarcados
+como imagens dentro do texto da tese);
+(s)
+
+1 (um) texto da tese, em formato PDF, enviado aos participantes da banca de
+
+qualificação, com tamanho de 17,3 (dezessete e três décimos) megabytes;
+
+(t)
+
+1 (um) texto da tese, em formato electronic publication (e-Pub), enviado aos
+
+participantes da banca de qualificação, com tamanho de 3,4 (três e quatro décimos) megabytes;
+(u)
+
+7 (sete) capturas de tela, em formato PNG, armazenados como parte da coleta de
+
+dados, com tamanho total de 6,7 (seis e sete décimos) megabytes (posteriormente embarcados
+como imagens dentro do texto da tese);
+(v)
+
+3 (três) esboços interligados (wireframes), em formato PNG, gerados no sítio
+
+Moqups, com tamanho total de 1,4 (um e quatro décimos) megabytes (posteriormente
+embarcados como imagens dentro do texto da tese).
+A publicação possui um tamanho de 845,49 (oitocentos e quarenta e cinco e quarenta e
+nove décimos) megabytes, sendo identificados 1 (um) banco de dados (armazenado em um
+SGBD) e 12 (doze) tipos de arquivos: 5 (cinco) formatos vinculados com algoritmos para a
+execução por interpretadores de códigos e por SGBD (lua, sql, sql+tarball, html e dot); 3 (três)
+para a elaboração ou disponibilização de textos (odt, pdf e epub); 2 (dois) para elaboração de
+imagens (png e odg); 1 (um) para elaboração de planilhas eletrônicas (ods) e 1 (um) para
+interpretação por aplicativo de elaboração de Modelagem Entidade-Relacionamento (mwb).
+Para cada formato de arquivo foram identificados um total de: 280 (duzentos e oitenta)
+arquivos em formato pdf; 42 (quarenta e duas) imagens em formato png; 19 (dezenove) textos
+em formato pdf; 18 (dezoito) planilhas eletrônicas em formato ods; 10 (dez) desenhos vetoriais
+em formato odg; 7 (sete) algoritmos em formato dot; 4 (quatro) scripts em formato sql com
+compressão tarball; 2 (dois) arquivos de Modelagem Entidade-Relacionamento em formato
+mwb; 2 (duas) tabelas em formato html; 1 (um) script em formato sql; 1 (um) script em formato
+lua, e; 1 (um) texto em formato e-Pub.
+4 RESULTADOS
+A Ilustração 1 apresenta as relações entre os tipos de documentos identificados no
+estudo de caso. É composto por 19 (dezenove) relacionamentos entre 14 (catorze) tipos de
+documentos. Os tipos de documentos são:
+(a)
+
+“Texto da Tese/Dissertação”: texto da publicação (e-print), incluindo versões
+
+geradas conforme o desenvolvimento da pesquisa;
+(b)
+
+“Arquivo de texto para Qualificação”, versão do “Texto da Tese/Dissertação”
+
+exportada para o envio aos membros da banca e demais participantes, que podem ter formato de
+arquivo distinto do original (como o PDF ou o e-Pub);
+(c)
+
+“Arquivo de Backup”: arquivos com a finalidade de garantir ao pesquisador a
+
+possibilidade de recuperação dos dados do banco de dados e do texto da publicação;
+
+(d)
+
+“Captura de tela (dados da coleta)”: capturas de tela realizadas na coleta de
+
+dados da tese/dissertação;
+(e)
+
+“Planilha eletrônica (dados da coleta)”: planilhas eletrônicas utilizadas na coleta
+
+de dados da tese/dissertação;
+(f)
+
+“Planilha eletrônica (tabelas e quadros no texto)”: planilhas eletrônicas utilizadas
+
+para a estruturação de tabelas e quadros da tese/dissertação;
+(g)
+
+“Desenho Vetorial”: arquivos contendo desenhos vetoriais elaborados pelo
+
+pesquisador ou por terceiros, utilizados na tese/dissertação;
+(h)
+
+“Recurso (Imagem)”: recursos imagéticos utilizados para a elaboração de
+
+diagramas, gráficos e imagens. Por exemplo, o uso de ícone sob licença Creative Commons
+para a geração de um diagrama da tese/dissertação;
+(i)
+
+“Imagem”: arquivos de imagens utilizados no texto da tese/dissertação, gerados
+
+pelo pesquisador ou por terceiros;
+(j)
+
+“Script”: algoritmos elaborados para auxiliar a geração de imagens, gráficos e
+
+diagramas, complementares ao texto da tese/dissertação; para a geração automatizada do
+Dicionário de dados, e; para a exportação da estrutura e dos dados armazenados no SGBD;
+(k)
+
+“Modelagem Entidade-Relacionamento”: arquivos utilizados para elaborar a
+
+modelagem do banco de dados (tabelas, atributos, tipos de dados, relacionamentos), bem como
+diagramas e outros artefatos, elaborado para a análise dos dados da tese/dissertação;
+(l)
+
+“Dicionário de Dados”: documentos contendo as tabelas que explicitam os as
+
+colunas das tabelas do banco de dados, elaborado para a análise dos dados da
+tese/dissertação;“Banco de dados (SGBD)”: arquivos dos bancos de dados criados para a
+análise de dados da tese/dissertação, que integram o SGBD;
+
+(m)
+
+“Wireframe”: esboços interligados utilizados na tese/dissertação que foram
+
+gerados por aplicativos ou web sites.
+Ilustração 1 – Relações entre tipos de documentos no estudo de caso
+
+Fonte: Autores.
+
+A partir da explicitação do conjunto de documentos que compõem a tese do estudo de
+caso, os tipos de documentos identificados (e seus relacionamentos), associados aos requisitos e
+as estruturas necessárias à publicação ampliada nos estudos analisados, o Quadro 4 apresenta os
+requisitos nas fases de coleta, armazenamento e recuperação para a implementação das
+funcionalidades de uma publicação ampliada.
+Quadro 4 – Análise de requisitos para cada tipo de documento, dividido nas fases de CVD
+Tipo de
+Documento
+
+Coleta
+
+Fases
+Armazenamento
+
+Recuperação
+
+Texto da Tese/ – Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+Dissertação de preservação, como a data de preservação na forma de web;
+do envio e a data da última metadados;
+Permitir o acesso direto ao objeto
+modificação;
+– Persistência de elementos pelo
+identificador
+(URI);
+– Identificação de elementos de autoria na forma de – Disponibilizar os metadados de
+sobre
+a
+autoria
+da metadados;
+autoria e de preservação, legíveis
+tese/dissertação,
+como – Geração, persistência e para
+humanos
+e
+máquinas;
+informações sobre o autor e o vinculação de identificador – Possibilitar a vinculação a objetos
+orientador;
+URI para cada versão do em
+outros
+contextos;
+– Permitir ao pesquisador a objeto;
+– Diferenciar por identificadores
+
+Tipo de
+Documento
+
+Coleta
+
+Fases
+Armazenamento
+
+Recuperação
+
+inserção, a alteração e a –
+Persistência
+dos cada versão do objeto no momento
+exclusão de versões do texto, relacionamentos de cada do
+acesso;
+com a possibilidade de versão com seus objetos.
+– Disponibilizar os relacionamentos
+recuperação
+de
+versões
+do objeto com outros objetos;
+anteriores;
+Possibilitar
+a
+realização
+de
+– Permitir o vínculo com
+comentários e avaliações do
+outros tipos de documento.
+conteúdo do objeto.
+Arquivo de
+texto para
+Qualificação
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+do envio e a data da metadados;
+– Permitir o acesso direto ao objeto
+qualificação;
+– Persistência de elementos pelo
+identificador
+(URI);
+– Identificação de elementos de autoria na forma de – Disponibilizar os metadados de
+sobre
+a
+autoria
+da metadados;
+autoria e de preservação, legíveis
+tese/dissertação,
+como – Geração, persistência e para
+humanos
+e
+máquinas;
+informações sobre o autor, vinculação de identificador – Possibilitar a vinculação a objetos
+orientador e membros da URI
+para
+o
+objeto; em
+outros
+contextos;
+banca;
+–
+Persistência
+dos – Disponibilizar os relacionamentos
+– Permitir a conversão para relacionamentos do texto de do objeto com outros objetos;
+formatos
+de
+arquivo qualificação
+com
+seus – Possibilitar a realização de
+apropriados
+ao objetos.
+comentários e avaliações do
+compartilhamento aos pares,
+conteúdo do objeto.
+como o PDF/A ou e-Pub;
+– Permitir o vínculo com
+outros tipos de documento.
+
+Arquivo de
+Backup
+
+– Identificação de elementos – Persistência de elementos – Permitir o acesso direto ao objeto
+de preservação, como a data de preservação na forma de pelo
+identificador
+(URI);
+da geração do arquivo; metadados;
+– Disponibilizar os metadados de
+– Permitir o vínculo com –
+Persistência
+dos autoria e de preservação, legíveis
+outros tipos de documento. relacionamentos de cada para
+humanos
+e
+máquinas;
+versão com seus objetos.
+– Diferenciar por identificadores
+cada versão do objeto no momento
+do
+acesso;
+– Disponibilizar os relacionamentos
+do objeto com outros objetos.
+
+Captura de tela – Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+(dados da
+de preservação, como a data de preservação na forma de web;
+coleta)
+da captura ou a data de coleta metadados;
+– Permitir o acesso direto ao objeto
+e informações da origem; –
+Persistência
+dos pelo
+identificador
+(URI);
+– Permitir o vínculo com relacionamentos de cada – Disponibilizar os metadados de
+outros tipos de documento. versão com seus objetos.
+autoria e de preservação, legíveis
+para
+humanos
+e
+máquinas;
+– Possibilitar a vinculação a objetos
+em
+outros
+contextos;
+– Disponibilizar os relacionamentos
+do objeto com outros objetos;
+– Possibilitar a realização de
+comentários e avaliações do
+conteúdo do objeto.
+Planilha
+eletrônica
+(dados da
+coleta)
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+da coleta e informações sobre metadados;
+– Permitir o acesso direto ao objeto
+pesquisadores e participantes; – Persistência de elementos pelo
+identificador
+(URI);
+– Permitir o vínculo com de autoria na forma de – Disponibilizar os metadados de
+outros tipos de documento. metadados;
+autoria e de preservação, legíveis
+
+Tipo de
+Documento
+
+Coleta
+
+Fases
+Armazenamento
+
+Recuperação
+
+– Geração, persistência e para
+humanos
+e
+máquinas;
+vinculação de identificador – Possibilitar a vinculação a objetos
+URI para cada versão do em
+outros
+contextos;
+objeto;
+– Disponibilizar os relacionamentos
+–
+Persistência
+dos do objeto com outros objetos;
+relacionamentos de cada – Possibilitar a realização de
+versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+Planilha
+eletrônica
+(tabelas e
+quadros no
+texto)
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+da geração do arquivo; metadados;
+Permitir o acesso direto ao objeto
+– Permitir o vínculo com – Persistência de elementos pelo
+identificador
+(URI);
+outros tipos de documento. de autoria na forma de – Disponibilizar os metadados de
+metadados;
+autoria e de preservação, legíveis
+– Geração, persistência e para
+humanos
+e
+máquinas;
+vinculação de identificador – Possibilitar a vinculação a objetos
+URI para cada versão do em
+outros
+contextos;
+objeto;
+– Disponibilizar os relacionamentos
+–
+Persistência
+dos do objeto com outros objetos;
+relacionamentos de cada – Possibilitar a realização de
+versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+
+Desenho
+Vetorial
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+da geração do arquivo ou a metadados;
+Permitir o acesso direto ao objeto
+data de coleta e informações – Persistência de elementos pelo
+identificador
+(URI);
+da
+origem; de autoria na forma de – Disponibilizar os metadados de
+– Permitir ao pesquisador a metadados;
+autoria e de preservação, legíveis
+inserção, a alteração e a – Geração, persistência e para
+humanos
+e
+máquinas;
+exclusão de versões do vinculação de identificador – Possibilitar a vinculação a objetos
+desenho vetorial, com a URI para cada versão do em
+outros
+contextos;
+possibilidade de recuperação objeto;
+– Disponibilizar os relacionamentos
+de
+versões
+anteriores; –
+Persistência
+dos do objeto com outros objetos;
+– Permitir o vínculo com relacionamentos de cada Possibilitar
+a
+realização
+de
+outros tipos de documento. versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+
+Recurso
+(Imagem)
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+de
+coleta,
+licenças
+e metadados;
+– Permitir o acesso direto ao objeto
+informações da origem;
+– Persistência de elementos pelo
+identificador
+(URI);
+de autoria na forma de – Disponibilizar os metadados de
+– Permitir o vínculo com
+metadados;
+autoria e de preservação, legíveis
+outros tipos de documento.
+– Geração, persistência e para
+humanos
+e
+máquinas;
+vinculação de identificador – Possibilitar a vinculação a objetos
+URI para cada versão do em
+outros
+contextos;
+objeto;
+– Disponibilizar os relacionamentos
+–
+Persistência
+dos do objeto com outros objetos;
+relacionamentos de cada – Possibilitar a realização de
+versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+
+Imagem
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+da geração do arquivo ou a metadados;
+– Permitir o acesso direto ao objeto
+data de coleta e informações – Persistência de elementos pelo
+identificador
+(URI);
+
+Tipo de
+Documento
+
+Coleta
+
+Fases
+Armazenamento
+
+Recuperação
+
+da
+origem; de autoria na forma de – Disponibilizar os metadados de
+– Permitir ao pesquisador a metadados;
+autoria e de preservação, legíveis
+inserção, a alteração e a – Geração, persistência e para
+humanos
+e
+máquinas;
+exclusão de versões da vinculação de identificador – Possibilitar a vinculação a objetos
+imagem, com a possibilidade URI para cada versão do em
+outros
+contextos;
+de recuperação de versões objeto;
+– Disponibilizar os relacionamentos
+anteriores;
+–
+Persistência
+dos do objeto com outros objetos;
+– Permitir o vínculo com relacionamentos de cada – Possibilitar a realização de
+outros tipos de documento. versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+Script
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+da geração do arquivo e a metadados;
+– Permitir o acesso direto ao objeto
+data da última modificação; – Persistência de elementos pelo
+identificador
+(URI);
+– Permitir ao pesquisador a de autoria na forma de – Disponibilizar os metadados de
+inserção, a alteração e a metadados;
+autoria e de preservação, legíveis
+exclusão de versões do script, – Geração, persistência e para
+humanos
+e
+máquinas;
+com a possibilidade de vinculação de identificador – Possibilitar a vinculação a objetos
+recuperação
+de
+versões URI para cada versão do em
+outros
+contextos;
+anteriores;
+objeto;
+– Disponibilizar os relacionamentos
+– Permitir o vínculo com –
+Persistência
+dos do objeto com outros objetos;
+outros tipos de documento. relacionamentos de cada – Possibilitar a realização de
+versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+
+Modelagem – Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+Entidadede preservação, como a data de preservação na forma de web;
+Relacionamento da geração do arquivo e a metadados;
+– Permitir o acesso direto ao objeto
+data da última modificação; – Persistência de elementos pelo
+identificador
+(URI);
+– Permitir ao pesquisador a de autoria na forma de – Disponibilizar os metadados de
+inserção, a alteração e a metadados;
+autoria e de preservação, legíveis
+exclusão de versões da – Geração, persistência e para
+humanos
+e
+máquinas;
+Modelagem
+Entidade- vinculação de identificador – Possibilitar a vinculação a objetos
+Relacionamento,
+com
+a URI para cada versão do em
+outros
+contextos;
+possibilidade de recuperação objeto;
+– Disponibilizar os relacionamentos
+de
+versões
+anteriores; –
+Persistência
+dos do objeto com outros objetos;
+– Permitir o vínculo com relacionamentos de cada – Possibilitar a realização de
+outros tipos de documento. versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+Dicionário de – Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+Dados
+de preservação, como a data de preservação na forma de web;
+da geração do arquivo e a metadados;
+– Permitir o acesso direto ao objeto
+data da última modificação; – Persistência de elementos pelo
+identificador
+(URI);
+– Permitir ao pesquisador a de autoria na forma de – Disponibilizar os metadados de
+inserção, a alteração e a metadados;
+autoria e de preservação, legíveis
+exclusão de versões do – Geração, persistência e para
+humanos
+e
+máquinas;
+Dicionário de Dados, com a vinculação de identificador – Possibilitar a vinculação a objetos
+possibilidade de recuperação URI para cada versão do em
+outros
+contextos;
+de
+versões
+anteriores; objeto;
+– Disponibilizar os relacionamentos
+– Permitir o vínculo com –
+Persistência
+dos do objeto com outros objetos;
+outros tipos de documento. relacionamentos de cada – Possibilitar a realização de
+versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+Banco de dados – Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+(SGBD)
+de preservação, como a data de preservação na forma de web;
+
+Tipo de
+Documento
+
+Coleta
+
+Fases
+Armazenamento
+
+Recuperação
+
+da geração do banco de dados metadados;
+– Permitir o acesso direto ao objeto
+e a data da última – Persistência de elementos pelo
+identificador
+(URI);
+modificação;
+de autoria na forma de – Disponibilizar os metadados de
+metadados;
+autoria e de preservação, legíveis
+– Permitir ao pesquisador a – Geração, persistência e para
+humanos
+e
+máquinas;
+recuperação
+de
+versões vinculação de identificador – Possibilitar a vinculação a objetos
+anteriores;
+URI para cada versão do em
+outros
+contextos;
+objeto;
+– Disponibilizar os relacionamentos
+– Permitir o vínculo com –
+Persistência
+dos do objeto com outros objetos;
+outros tipos de documento. relacionamentos de cada – Possibilitar a realização de
+versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+Wireframe
+
+– Identificação de elementos – Persistência de elementos – Disponibilizar objeto em sítio
+de preservação, como a data de preservação na forma de web;
+da geração do arquivo e metadados;
+– Permitir o acesso direto ao objeto
+informações
+da
+origem; – Persistência de elementos pelo
+identificador
+(URI);
+– Permitir ao pesquisador a de autoria na forma de – Disponibilizar os metadados de
+inserção, a alteração e a metadados;
+autoria e de preservação, legíveis
+exclusão de versões do – Geração, persistência e para
+humanos
+e
+máquinas;
+wireframe,
+com
+a vinculação de identificador – Possibilitar a vinculação a objetos
+possibilidade de recuperação URI para cada versão do em
+outros
+contextos;
+de
+versões
+anteriores; objeto;
+– Disponibilizar os relacionamentos
+– Permitir o vínculo com –
+Persistência
+dos do objeto com outros objetos;
+outros tipos de documento. relacionamentos de cada – Possibilitar a realização de
+versão com seus objetos.
+comentários e avaliações do
+conteúdo do objeto.
+
+Fonte: Autores.
+
+Foram identificados 170 (cento e setenta) requisitos para os 14 (catorze) tipos de
+documentos identificados, sendo: 39 (trinta e nove) relacionados a fase de coleta; 52 (cinquenta
+e dois) relacionados a fase de armazenamento, e; 79 (setenta e nove) relacionados a fase de
+recuperação. Os requisitos destas fases podem variar de acordo com os tipos de documentos que
+compõem a publicação ampliada, ou seja, para cada tipo de documento há um conjunto próprio
+de requisitos para cada fase.
+
+5 CONSIDERAÇÕES FINAIS
+Com a explicitação da análise de requisitos das fases de coleta, armazenamento e
+recuperação, começam a surgir mais preocupações na forma em que as publicações ampliadas
+serão apresentadas, no momento da implementação de funcionalidades, como a necessidade de
+explicitação de aspectos de privacidade.
+Entende-se que o quadro conceitual de elementos necessários para o instanciamento de
+publicações ampliadas (Quadro 3) identificados a partir dos estudos selecionados ainda carece
+de maior detalhamento e explicitação de ações, o que demonstra o estágio inicial que este
+
+contexto se encontra e que, portanto, merece um número maior de pesquisas e iniciativas
+concretas de implementação.
+Como trabalhos futuros, propomos um maior aprofundamento das lacunas de quais são
+os requisitos, as funcionalidades e os objetos que farão a composição de um sistema de
+informação apropriado a um repositório de publicações ampliadas.

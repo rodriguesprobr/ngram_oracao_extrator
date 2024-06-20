@@ -1,0 +1,811 @@
+XVII Encontro Nacional de Pesquisa em Ciência da Informação (XVII ENANCIB)
+GT 8 – Informação e Tecnologia
+ARQUITETURA DA INFORMAÇÃO E EYE TRACKING: O QUE O OLHAR E OS
+DADOS REVELAM
+
+Modalidade da apresentação: Comunicação Oral
+Resumo: No contexto da Arquitetura da Informação é necessário considerar a tríade usuário, contexto
+e conteúdo, como uma ecologia informacional. Assim, os aportes teóricos desta disciplina junto com o
+uso das tecnologias podem auxiliar na compreensão do comportamento de usuário em ambientes
+informacionais digitais. Nesse sentido, a tecnologia de eye tracking permite a identificação da
+interação do usuário, a partir do rastreamento do olhar. Desta forma, esta pesquisa teve como objetivo,
+utilizar a tecnologia do eye tracking para identificar e para analisar as interações e o comportamento
+de usuários no processo de localização de uma informação específica em websites de um mesmo
+contexto. Para tal, utilizamos uma metodologia exploratória e aplicada, em que se buscou na literatura
+o referencial teórico, sendo aplicado procedimentos práticos com indivíduos, visando analisar o
+comportamento informacional deles. Por meio deste estudo, gerou-se um conjunto de informações
+qualitativas e quantitativas, que possibilitou uma compreensão embasada no comportamento dos
+usuários ao realizar uma tarefa de localização de um determinado elemento dentro de websites de um
+contexto definido. As análises das métricas do eye tracking permitiram encontrar uma relação entre o
+olhar do usuário e os elementos da interface, que podem ser considerados para (re) construir os
+projetos de Arquitetura da Informação.
+Palavras-chave: Arquitetura da informação. Usabilidade. Experiência do Usuário. Eye tracking.
+Métricas.
+1 INTRODUÇÃO
+Os ambientes informacionais digitais da World Wide Web (Web) possibilitam
+diferentes níveis de interação entre os usuários e os conteúdos digitais, propiciando a
+exploração de informações em contextos e em formatos variados.
+Rosenfeld, Morville e Arango (2015) apresentam um conceito de ecologia de
+informação composto por usuários, contexto e conteúdos para abordar as complexidades
+existentes nos entornos da informação. Para o projeto de uma Arquitetura da Informação
+Digital, é imprescindível a realização de estudos relacionados a tríade usuário, contexto e
+conteúdo, e cada um desses elementos apresenta particularidades específicas, necessitando de
+aportes teóricos de diferentes áreas do conhecimento.
+No bojo da Ciência da Informação, a Arquitetura da Informação vem contribuindo
+com diretrizes para otimizar os processos de organização, de representação, de
+armazenamento, de recuperação, de disseminação e de preservação da informação em
+
+ambientes digitais, em especial da Web, visando satisfazer as necessidades informacionais dos
+usuários.
+Tecnologias têm sido desenvolvidas e utilizadas com o intuito de compreender e
+aprimorar as formas de interação dos usuários em ambientes informacionais digitais. Neste
+contexto, os estudos de comportamento de usuário podem contribuir para o projeto e a (re)
+construção de ambientes informacionais digitais que atendam aos princípios da usabilidade e
+com foco nessa ecologia informacional.
+A tecnologia eye tracking possibilita o rastreamento e o registro do olhar dos usuários
+sobre estímulos visuais em diferentes ambientes digitais e analógicos.
+Com o intuito de compreender o comportamento de usuário em ambientes
+informacionais digitais, pode-se utilizar a tecnologia eye tracking para identificar a interação
+do usuário, a partir do rastreamento do olhar. Os resultados oriundos da aplicação dessa
+tecnologia podem contribuir para a Arquitetura da Informação desses ambientes? Assim,
+objetivando responder essa questão, utilizamos a tecnologia do eye tracking para identificar e
+analisar as interações e o comportamento de usuários, via rastreamento do olhar, no processo
+de localização de uma informação específica em websites de um mesmo contexto.
+
+2 ARQUITETURA DA INFORMAÇÃO EM AMBIENTE INFORMACIONAL
+DIGITAL
+O estudo da Arquitetura da Informação vem se consolidando no passar das últimas
+décadas como uma disciplina que visa projetar as estruturas de ambientes informacionais
+digitais, desde a camada de dados até a camada de interação dos usuários, de modo a propiciar
+a criação de um ambiente com usabilidade, acessibilidade e encontrabilidade da informação.
+A Arquitetura da Informação segundo Rosenfeld, Morville e Arango (2015, p.1,
+tradução nossa) é uma disciplina focada em tornar a informação encontrável e compreensível
+e que pode ser abordada a partir de duas perspectivas: "[...] que os produtos e serviços de
+informação são percebidos pelas pessoas como lugares de informação, e que esses ambientes
+de informação podem ser organizados para uma encontrabilidade e compreensibilidade."
+Dentre as definições clássicas encontradas na literatura especializada, destaca-se a
+definição de Rosenfeld, Morville e Arango (2015, p.24, tradução nossa), na qual a Arquitetura
+da Informação pode ser entendida como:
+1. O projeto estrutural de ambientes de informações compartilhadas; 2. A
+síntese de sistema de organização, rotulagem, busca e navegação em
+
+ecossistemas digitais, físicos e cross-channel; 3. A arte e a ciência de moldar
+produtos de informação e experiências para apoiar a usabilidade, a
+encontrabilidade e a compreensão; 4. Uma disciplina emergente e
+comunidade de prática focada em trazer princípios de design e arquitetura
+para os ambientes digitais.
+
+Assim, é possível perceber que a Arquitetura da Informação tem como foco a interação
+do usuário com os ambientes informacionais. Desta forma, a tríade contexto, conteúdo e
+usuário deve guiar todos os processos e os projetos que visam tornar os ambientes digitais
+mais funcionais e melhores estruturados.
+Neste sentido para Rosenfeld, Morville e Arango (2015), os conceitos, as
+metodologias e as técnicas de Arquitetura da Informação que têm sido utilizadas em websites
+(portais e intranets) podem ser aplicadas de forma mais ampla e em novas estruturas
+semânticas em ecossistemas de informação, “[...] uma ecologia da informação composta por
+usuários, conteúdo e contexto para resolver as dependências complexas que existem nos
+ambientes de informação" (ROSENFELD; MORVILEE; ARANGO, p.32, tradução nossa), no
+qual a interação humano-informação ocorre por diferentes aplicativos de smartphones e outros
+canais que não necessariamente envolvem um navegador web.
+Essa ecologia da informação pode ser utilizada para compreender a necessidade de se
+estruturar os ambientes de acordo com esses três elementos, capazes de direcionar todo o
+projeto de Arquitetura da Informação, tornando viável de atender com eficiência as
+necessidades informacionais dos usuários.
+A importância de existir processos e componentes bem definidos durante a elaboração
+de um projeto de Arquitetura da Informação, em que as práticas dessa área requer
+entendimento de diversas outras áreas do conhecimento, corrobora com o ideal de uma
+ecologia da informação, tendo em sua base a tríade descrita.
+Um campo de estudos que apresenta grande confluência com a Arquitetura da
+Informação, é a chamada Usabilidade. Segundo Vechiato e Vidotti (2008, p. 2) a Usabilidade
+pode ser entendida: “[...] como a capacidade de um ambiente informacional se caracterizar
+usável pelo seu público-alvo, característica esta que pode ser identificada por meio de
+avaliações realizadas num projeto de arquitetura informacional”. A definição apresentada
+pelos autores aponta a relação entre Usabilidade e Arquitetura da Informação, ao mesmo
+tempo que indica a característica central deste campo de estudos, que é um produto ser usável
+pelo seu público.
+
+A Usabilidade segundo a Norma ISO 9241-210:2010 (INTERNATIONAL
+ORGANIZATION FOR STANDARDIZATION, 2010, não paginado, tradução nossa, grifo
+nosso) é: “A medida em que um sistema, um produto ou um serviço pode ser utilizado por
+usuários específicos para atingir objetivos especificados com eficácia, com eficiência e com
+satisfação em um contexto de uso especificado.” Essa definição da norma ISO tem em sua
+base a tríade da Arquitetura da Informação, relacionando o usuário, o contexto e o conteúdo,
+para ter produtos com usabilidade e pode ser aplicada na ecologia da informação.
+O Comportamento Informacional e a Experiência do Usuário também possuem
+relações intrínsecas com a Arquitetura da Informação. Essas disciplinas apresentam distinta
+importância pela necessidade de se compreender como os usuários interagem frente aos
+ambientes informacionais digitais. Assim, Vechiato e Vidotti (2009, p.289) traçam a relação
+existente entre Comportamento Informacional e Usabilidade com a Arquitetura da
+Informação, afirmando que o Comportamento Informacional:
+[...] permite o levantamento das necessidades informacionais e fontes de
+informação mais utilizadas pelas pessoas e o estudo do comportamento de
+busca e uso da informação, possibilitando a definição de interface e
+conteúdo do ambiente informacional digital.
+
+Em contrapartida, a disciplina de Experiência do Usuário, termo em inglês User
+Experience (UX), pode ser utilizada com o objetivo de entender a interação do usuário com o
+ambiente informacional digital e identificar elementos para a adequação do ambiente ao
+usuário, de modo a permitir experiências positivas no uso do ambiente.
+A Usabilidade se relaciona com a Experiência do Usuário na interação do usuário com
+a interface, com o conteúdo informacional e com a tecnologia. A UX tem sido muito
+explorada no campo de design de produtos, e no contexto da Arquitetura da Informação
+Digital deve ser considerada no planejamento do ecossistema informacional que deve estar
+relacionado com aspectos que dizem respeito a estética, design, conteúdo das informações e
+recursos, bem como por atributos agregados a personalidade dos indivíduos tais como cultura,
+talento, sensibilidade, desejos, motivações e comportamento.
+A Usabilidade e a Experiência do Usuário em um ecossistema de informação podem
+ser percebida por meio dos sistemas da Arquitetura da Informação clássica tais como
+organização, navegação, representação, rotulagem, busca, usabilidade e acessibilidade. Em
+adição, faz-se necessária a utilização de tecnologias para a compreensão do comportamento
+
+do usuário, tal como o eye tracking que capta o olhar do usuário no processo de interação em
+um ecossistema informacional.
+
+3 EYE TRACKING
+Eye tracking trata-se de uma tecnologia que permite o rastreamento e a gravação do
+comportamento ocular, ou seja, do olhar de uma pessoa, sobre um determinado ambiente.
+Diante de um estímulo, essa tecnologia permite identificar com precisão o ponto onde uma
+pessoa fixa o seu olhar, assim como a dilatação da pupila, a duração e o trajeto do olhar.
+Nos últimos anos, o eye tracking (ET) tem sido incorporado em testes com usuários,
+podendo destacar os trabalhos de Poole e Ball (2005, 2006), Poole, Ball e Philips (2004),
+Nielsen e Pernice (2010), López-Gil et al. (2010), Marcos e González-Caro (2010) e Bojko
+(2013).
+Os estudos sobre a atenção visual iniciaram-se há mais de um século, e a importância
+de se rastrear o olhar se deve ao fato de que, para visualizar algum elemento é preciso que os
+olhos se movam continuamente, pois apenas uma pequena área de nosso campo visual é
+percebida nitidamente. Além disso, é uma tendência natural que nossos olhos percorram o
+campo visual em busca de novos elementos. Assim, tais movimentos oculares refletem a
+vontade que um indivíduo tem de inspecionar os objetos em detalhes, revelando o que mais
+chama sua atenção diante de um estímulo visual (DUCHOWSKI, 2007).
+A pertinência de se desenvolver estudos com eye tracking tem como base a hipótese de
+que, aquilo que uma pessoa visualiza é assumido como indicador do pensamento
+atual/dominante nos processos cognitivos (BARRETO, 2012).
+Um componente importante entre os itens que compõem a tecnologia de eye tracking é
+conhecido como eye tracker. Trata-se do dispositivo que permite rastrear e gravar o olhar de
+um indivíduo, por meio da emissão de raios infravermelhos e uma câmera. A posição do olhar
+é identificada por meio de cálculos realizados pelo software que acompanha os sistemas de
+eye tracking.
+Ao realizar estudos com o eye tracking, são observadas principalmente duas variáveis,
+as fixações e as sacadas. A fixação (fixation) é o ponto onde uma pessoa fixa seu olhar. Uma
+fixação geralmente dura entre 100 e 500 ms. A fixação é o período em que os olhos
+permanecem praticamente parados, e é definida por dois valores: o tempo mínimo de
+permanência para ser considerada uma fixação e a amplitude do movimento máximo aceito,
+
+mas pode ser definido em relação a sua velocidade máxima, o que dependerá do algoritmo
+utilizado para identificar as fixações. Enquanto, o trajeto que se produz entre duas fixações é
+chamado de sacada (saccade) e pode durar entre 10 e 100 ms (milissegundos).
+Durante um teste com eye tracking geralmente são apresentados um ou mais estímulos
+aos usuários. No contexto digital, o “estímulo” pode ser, por exemplo, uma interface de
+website, uma imagem estática ou em movimento.
+É importante destacar que os estudos envolvendo a tecnologia de eye tracking se
+devem ao fato do olhar das pessoas, normalmente, estar associado ao assunto no qual elas
+estão interessadas, principalmente se olham para um estímulo com algum objetivo ou tarefa a
+ser efetuada. A maneira como o usuário vai perceber a informação pode ter um impacto
+importante no processo de recuperação (BARRETO, 2012; RODAS; MARCOS; VIDOTTI,
+2014).
+A partir dos dados coletados pelo equipamento eye tracker, por meio de um software
+específico, é possível extrair dados quantitativos e gerar visualizações como mapas de calor e
+de olhar, vídeos de mapa de olhar e gráficos estatísticos. Em algumas análises é necessário
+delimitar as áreas de interesse (AOI – Areas Of Interest), ou seja, as áreas de estímulo de
+onde os dados serão extraídos. Uma área de interesse alvo (AOI - alvo) é a área de um
+estímulo que uma pesquisa visa identificar.
+O Mapa de calor (heat map), figura 1 (a), e o mapa de opacidade (opacity gaze map)
+figura 1 (b) fornecem uma visão geral por meio de imagens estáticas geradas pela
+sobreposição dos mapas individuais de cada usuário. Ambos usam a cor e sua intensidade
+para mostrar o número de fixações realizadas e o tempo de duração em cada área da interface.
+O Mapa do olhar estático ou dinâmico (Gaze Plot ou ScanPaths), figura 1 (c), exibe
+as sequências das fixações e das sacadas de um usuário ou do conjunto de usuários. Além
+disso, o tamanho do símbolo gráfico, que representa as fixações indica a duração proporcional
+de tempo que o usuário fixou seu olhar sobre uma determinada área.
+Figura 1 - Visualizações mais comuns para resultados de UX utilizando eye tracking: (a)
+Mapa de calor (heat map); (b) mapa de opacidade (opacity gaze map); (c) mapa do olhar
+(gaze plot)
+
+(a)
+
+(b)
+
+(c)
+
+Fonte: Elaborado pelos autores
+Para determinar padrões de comportamento do usuário em ambiente informacional
+digital, via eye tracking, devem ser considerados os seguintes tipos de intenções para a busca
+de informações (BRODER, 2002; MARCOS; GONZÁLEZ-CARO, 2010): Informacional:
+obter uma informação específica (p.ex. número de telefone, dados de contato de um lugar ou a
+data de nascimento de uma pessoas); Navegacional: chegar a um website determinado (p.ex.
+homepage de uma escola de artes que pretende estudar ou website de notícias diárias);
+Transacional: realizar uma ação específica (p. ex., comprar um livro, realizar uma reserva de
+voo ou fazer download de um documento); e Multimídia: obter um objeto multimídia (p.ex.
+Fotografia ou vídeo).
+Segundo Cooke (2004), para a pesquisa utilizando eye tracking podem ser utilizadas
+três abordagens de investigação do rastreamento do olhar: Top-down baseada em uma teoria
+cognitiva, Top-down baseada em uma hipótese e a abordagem utilizada nesse trabalho que é a
+Bottom-up sem a base teórica ou hipótese prévia, na qual são extraídos os dados que podem
+conduzir a análise do comportamento do usuário.
+A avaliação do comportamento pode ser quantitativa e/ou qualitativa e de preferência
+com a combinação de várias medidas (p.ex. tempo, fixação, sacadas). As técnicas qualitativas
+são utilizadas para compreender as percepções, as dificuldades e as expectativas dos usuários.
+Os dados quantitativos podem ser analisados utilizando métodos estatísticos e permitem que
+os problemas complexos de usabilidade possam ser expressos com valores numéricos
+facilmente comparáveis e discutíveis.
+Para Bojko (2013), as métricas de eye tracking para análise do comportamento do
+olhar do usuário são divididas em atração e performance. A atração pode ser analisada nas
+áreas de interesse (AOI), enquanto que a performance tem foco na área de interesse alvo,
+sendo utilizadas para ambas as fixações, a duração, as visitas e o diâmetro da pupila.
+
+Para a realização deste trabalho foram utilizados oito métricas geradas pelo software
+do eye tracker obtidas a partir dos experimentos realizados:
+- Fixações antes da 1a. Fixação na AOI: mede o número de vezes que o participante fixa o
+olhar no estímulo antes de fixar-se em uma AOI pela primeira vez. A contagem de fixação
+começa quando o estímulo contendo a AOI é exibida pela primeira vez;
+- Tempo antes da 1a. Fixação: mede quanto tempo, em segundos, o participante leva para
+fixar o olhar pela primeira vez em uma Área de Interesse (AOI). A medição começa quando
+o estímulo contendo a AOI é exibida pela primeira vez;
+- Fixações a partir da 1a. Fixação na AOI fora desta área: mede o número de vezes que o
+participante fixa o olhar fora da AOI após fixar o olhar em uma AOI pela primeira vez;
+- Tempo após a 1a. Fixação: mede o tempo a partir da primeira fixação na AOI até o clique do
+mouse na mesma área;
+- Fixações na AOI: mede o número de vezes que o participante fixa o olhar dentro da área de
+interesse;
+- Tempo na AOI: mede o tempo somado de todas as fixações dentro da área de interesse;
+- Tempo para realização da tarefa (Tempo para a 1o. clique do mouse): mede quanto tempo
+um participante leva para clicar com o mouse sobre a área de interesse. No caso deste
+trabalho, essa ação era considerada como a conclusão da tarefa;
+- Fixações para realização da tarefa: mede o número de vezes que um participante fixa o
+olhar na mídia até a realização da tarefa (clique do mouse).
+Com essas métricas, busca-se analisar o comportamento dos usuários, via rastreamento
+do olhar, em ambientes informacionais digitais. Para isso, na próxima seção serão descritos os
+procedimentos metodológicos desta pesquisa.
+
+4 PROCEDIMENTOS METODOLÓGICOS
+Objetivando utilizar a tecnologia do eye tracking para identificar e analisar as
+interações e o comportamento de usuários no processo de localização de uma informação
+específica em websites de um mesmo contexto, definimos como objeto de estudo as
+homepages de três agências de turismo, representadas neste trabalho pelos códigos Ag1, Ag2
+e Ag3. Para a composição do instrumento de avaliação, buscou-se orientação nas diretrizes
+propostas por Nielsen (1993, 2000 e 2007), Poole e Ball (2005), Nielsen e Pernice (2010),
+López-Gil et al. (2010), Marcos e González-Caro (2010) e Bojko (2013). Essa pesquisa está́
+
+autorizada pelo Comitê de Ética em Pesquisa da Faculdade de Filosofia e Ciências da Unesp –
+Câmpus
+
+de
+
+Marília
+
+/
+
+Plataforma
+
+Brasil,
+
+identificada
+
+pelo
+
+registro
+
+CAAE:
+
+54877216.8.0000.5406
+Os dez usuários participantes eram adultos com mais de 50 anos de idade que, em
+caráter voluntário participaram da investigação deste estudo. Nenhum dos participantes havia
+participado de testes com eye tracking anteriormente e também nenhum tinha conhecimento
+sobre a tarefa a ser realizada. A seleção dos participantes foi feita de modo aleatório, sendo
+sete pessoas do sexo feminino e três do sexo masculino, e a média de idade das pessoas foi de
+aproximadamente 60 anos. A maioria dos usuários (70%) estava participando de atividades
+que envolviam o planejamento de viagens em ambientes informacionais digitais.
+É de fundamental importância registrar que não foi propósito deste estudo avaliar a
+competência ou a habilidade informacional ou digital dos participantes, mas avaliar o
+comportamento do usuário por meio do rastreamento do olhar com a finalidade de identificar
+se os resultados, a partir das métricas, fornecem subsídios para uma análise da Arquitetura da
+Informação.
+Para a realização dos testes e da coleta de dados optou-se pelo método de investigação
+experimental com observação direta não participante, por meio da realização de testes com
+usuários utilizando a tecnologia de eye tracking. O teste foi projetado e executado com o
+software Tobii Studio, versão 3.4, utilizando o eye tracker modelo Tobii X2-60 e um
+computador desktop, equipado de um monitor LCD de 21 polegadas.
+O Tobii Studio é um software proprietário que acompanha os modelos dos eye trackers
+da marca Tobii, utilizado para projetar os testes, além de permitir a coleta, a análise e a
+visualização dos dados oriundos do sistema de eye tracking.
+Para cada participante foi feita a calibração do equipamento, procedimento que
+permite que o aparelho faça os ajustes e consiga recuperar e gravar o olhar do usuário sobre a
+tela do computador.
+Os estímulos foram criados a partir da imagem de cada um dos websites das agências
+de turismo. Em seguida as imagens foram configuradas para serem exibidas em um navegador
+(browser), com o intuito de permitir que o usuário pudesse ter a sensação de estar online
+durante os testes. Assim, o ambiente controlado permitiu que todos acessassem ao mesmo
+conjunto de informações. Tal procedimento se justifica pelo fato dos websites online terem
+alterações constantes em seus conteúdos.
+
+Para controlar a sequência de apresentação dos estímulos foi escolhido o layout
+conhecido como Latin square, que permite que, a cada interação, os estímulos sejam
+apresentados em sequências alternadas (ULLOA et al., 2015), para que o experimento não
+tivesse um possível condicionamento dos resultados.
+Antes de cada tarefa foi apresentada uma tela contendo instruções com o propósito de
+nortear a atividade a ser realizada pelo usuário. A instrução continha a seguinte mensagem:
+“Quando o website for exibido após esta mensagem, procure pelo telefone da empresa.
+Quando encontrá-lo, clique com o botão esquerdo do mouse sobre o número de telefone e em
+seguida feche o navegador”.
+Conforme descrito anteriormente, durante a execução das tarefas, o sistema de eye
+tracking rastreia e registra o olhar de cada participante, permitindo uma posterior
+interpretação dos dados, apresentando os resultados individualmente ou de modo conjugado,
+com imagens de mapa de calor, ou de sacadas e fixações. Por meio do software Tobii Studio,
+ainda foi possível identificar diversas variáveis como o tempo que um indivíduo demora para
+olhar para determinadas partes da tela, os cliques do mouse e a definição de AOI - alvo.
+5 RESULTADOS E DISCUSSÕES
+Na busca de analisar o comportamento dos usuários utilizando a tecnologia eye
+tracking, seguindo os procedimentos metodológicos descritos anteriormente, foi definida a
+área de interesse alvo referente ao local que contém o número do telefone, conforme
+apresentado na figura 2. As AOI - Alvo estão identificadas por meio de um retângulo na cor
+vermelha em cada uma das interfaces.
+
+Figura 2 - Visualização das AOI referentes às agências analisadas: Ag1, Ag2 e Ag3.
+
+Fonte: Elaborado pelos autores
+
+Posteriormente, realizou-se a análise dos dados obtidos a partir da coleta do olhar. Para
+esta análise foram utilizadas as variáveis tempo e fixações, bem como a média aritmética e o
+desvio-padrão calculados pelo software Tobii Studio. O cálculo das estatísticas destes dados
+teve em conta:
+- N: número de valores de dados ou tamanho da amostra usada para calcular a Média e
+o Desvio-Padrão (fixações e participantes);
+- Média: média aritmética que considera a soma de todos os valores de dados dividida
+por N;
+- Desvio-Padrão: descreve a variabilidade de um conjunto de valores de dados. O valor
+é calculado pela raiz quadrada da média dos quadrados dos desvios de cada valor de
+dados a partir da média e calculado a partir da amostra (N-1).
+O filtro de fixação utilizado para a determinação das fixações durante os testes foi o
+filtro I-VT, que se baseia na velocidade das mudanças direcionais dos olhos, sendo que essa
+velocidade é dada comumente em 30 graus visuais por segundo (30°/s).
+
+Tendo como base essas configurações, elaborou-se com o auxílio do software as
+Tabelas 1, 2 e 3, em que são apresentados os dados numéricos obtidos a partir da interação de
+cada um dos participantes, bem como as médias e os desvios-padrão.
+Vale destacar que dentre os dez participantes que realizaram os testes, somente quatro
+completaram a tarefa nos três websites, sem que o aparelho perdesse o olhar do usuário ou
+descalibrasse. Desta forma, para a realização de comparações entre os dados obtidos, foram
+excluídos os demais participantes que tiveram problema em qualquer momento do teste.
+Na tabela 1 apresenta-se os dados de tempo e de fixações obtidos durante a realização
+da tarefa no website da Ag1.
+
+Tabela 1 - Dados obtidos do website Ag1.
+Ag1
+Variáveis
+P01
+P02
+P03
+P04
+Total
+Média
+DesvioPadrão
+
+Antes da 1a. Fixação
+A partir da 1a.
+na AOI
+Fixação na AOI
+Tempo (s) Fixações Tempo (s) Fixações
+4,68
+11,00
+11,58
+15,00
+4,56
+13,00
+19,09
+55,00
+12,74
+31,00
+2,09
+2,00
+0,29
+1,00
+5,40
+9,00
+22,27
+56,00
+38,16
+81,00
+5,57
+14,00
+9,54
+20,25
+5,20
+
+12,49
+
+7,48
+
+23,77
+
+Área de Interesse
+(AOI) - Telefone
+Tempo(s) Fixações
+3,72
+16,00
+3,10
+9,00
+2,37
+14,00
+3,13
+9,00
+12,32
+48,00
+3,08
+12,00
+0,55
+
+3,56
+
+Realização da Tarefa
+Tempo(s)
+16,26
+23,65
+14,83
+5,70
+60,44
+15,11
+
+Fixações
+42,00
+77,00
+47,00
+19,00
+185,00
+46,25
+
+7,37
+
+23,85
+
+Fonte: Elaborado pelos autores
+
+Similarmente, a tabela 2 contém os dados de tempo e de fixações obtidos durante a
+realização da tarefa no website da Ag2.
+A tabela 3 contém os dados de tempo e de fixações obtidos durante a realização da
+tarefa no website da Ag3.
+Tabela 2 - Dados obtidos do website Ag2.
+Ag2
+Variáveis
+P01
+P02
+P03
+P04
+Total
+Média
+DesvioPadrão
+
+Antes da 1a. Fixação
+A partir da 1a.
+na AOI
+Fixação na AOI
+Tempo (s) Fixações Tempo (s) Fixações
+6,75
+15,00
+1,43
+5,00
+20,50
+66,00
+3,65
+2,00
+0,82
+2,00
+3,01
+0,00
+3,41
+11,00
+1,63
+2,00
+31,48
+94,00
+9,72
+9,00
+7,87
+23,50
+2,43
+2,25
+8,76
+
+28,85
+
+1,07
+
+2,06
+
+Área de Interesse
+(AOI) - Telefone
+Tempo(s) Fixações
+0,18
+2,00
+3,65
+7,00
+5,15
+9,00
+1,92
+7,00
+10,90
+25,00
+2,73
+6,25
+2,15
+
+2,99
+
+Realização da Tarefa
+Tempo(s)
+8,18
+24,15
+3,83
+5,04
+41,20
+10,30
+
+Fixações
+22,00
+75,00
+11,00
+20,00
+128,00
+32,00
+
+9,41
+
+29,06
+
+Fonte: Elaborado pelos autores.
+
+Tabela 3 - Dados obtidos do website Ag3.
+Ag3
+Variáveis
+P01
+P02
+P03
+P04
+Total
+Média
+DesvioPadrão
+
+Antes da 1a. Fixação
+A partir da 1a.
+na AOI
+Fixação na AOI
+Tempo (s) Fixações Tempo (s) Fixações
+10,89
+27,00
+3,86
+2,00
+6,54
+22,00
+3,14
+1,00
+8,54
+27,00
+1,88
+1,00
+5,18
+17,00
+1,74
+1,00
+31,15
+93,00
+10,62
+5,00
+7,79
+23,25
+2,66
+1,25
+2,49
+
+4,79
+
+1,02
+
+0,50
+
+Área de Interesse
+(AOI) - Telefone
+Tempo(s) Fixações
+1,53
+12,00
+3,6
+6,00
+1,22
+8,00
+2,05
+7,00
+8,40
+33,00
+2,10
+8,25
+1,06
+
+2,63
+
+Realização da Tarefa
+Tempo(s)
+14,75
+9,68
+10,52
+6,92
+41,87
+10,47
+
+Fixações
+41,00
+29,00
+36,00
+25,00
+131,00
+32,75
+
+3,24
+
+7,14
+
+Fonte: Elaborado pelos autores.
+
+A partir das tabelas 1, 2 e 3, discute-se os resultados das métricas para análise dos
+referidos ambientes digitais na realização de uma tarefa de localização do número de telefone
+nos websites das agências de turismo. Para discutir os resultados obtidos, dividiu-se em cinco
+pontos principais de análise. As próximas subseções apresentam as análises realizadas.
+
+5.1 Total de fixações para a realização da tarefa.
+O total de fixações é uma métrica dos movimentos dos olhos, que de acordo com
+Godberg e Kotval (1999), um número alto de fixações indica uma busca ineficiente, que
+poderia ser associado ao projeto de Arquitetura da Informação com uma interface pouco
+otimizada.
+Desta forma, na comparação do comportamento dos participantes em relação as três
+agências de turismo temos que a Ag1 teve um número maior de fixações, o que pode indicar
+uma busca ineficiente de informação, possivelmente causada por um arranjo inadequado no
+projeto da AI, em especial, o endereço da empresa se encontra na parte superior da tela e não
+contem o número do telefone, sendo isso associado aos elementos da interface da Arquitetura
+da informação pouco expressivos.
+Além disso, o desvio-padrão da Ag3 é muito menor do que as demais, o que indica um
+comportamento mais similar entre os participantes. O que representa que os elementos da AI
+estão melhores estruturados na interface e que a compreensão da página é muito semelhante.
+
+Os desvios-padrão da Ag1 e da Ag2 indicam que houve uma alta dispersão na busca de
+informação.
+
+5.2 Fixações e tempo anterior a primeira fixação na AOI
+Outra métrica analisada está associada ao tempo até a primeira fixação na AOI - alvo.
+Poole e Ball (2005, p.5, tradução nossa) afirmam que esta métrica é: “[...] o tempo para a
+primeira fixação no alvo. [...] Quanto mais rápido a primeira fixação em um objeto ou área
+significa que há melhores propriedades para captar a atenção.”
+A partir disto, verifica-se que quanto menor o tempo da 1a. fixação na área de
+interesse, maior é a visibilidade da AOI - alvo. Neste sentido, a Ag1 apresentou a menor
+média de tempo, porém com um alto desvio-padrão, similar ao próprio valor da média. Da
+mesma forma, os valores da Ag2 apresentaram uma média e um desvio-padrão próximos,
+tendo inclusive, o valor do desvio-padrão acima da média. Enquanto a Ag3 obteve um desviopadrão baixo, indicando que houve uma maior constância entre o tempo para a localização da
+AOI- alvo entre todos os participantes analisados. Estas informações evidenciam que a área
+de interesse da Ag3 teve maior visibilidade em comparação com as demais.
+Com respeito ao número de fixações, a Ag1 apresentou os menores valores até a
+primeira fixação, no entanto, após a localização do alvo, houve uma grande dificuldade em
+identificar que aquela informação era o número do telefone, que pode ser comprovado pelo
+grande número de fixações após a localização do alvo.
+Ainda, analisando o número de fixações anterior à 1ª fixação no alvo, identifica-se o
+desvio-padrão elevado tanto da Ag1 quanto da Ag2, mas a Ag3 obteve um desvio-padrão
+baixo, indicando que houve pouca variação nos valores.
+
+5.3 Fixações e tempo fora da AOI- alvo após a 1ª Fixação na AOI - alvo
+Os valores de fixações realizadas após a 1ª fixação na AOI - alvo apresentam somente
+as fixações que foram realizadas externas a AOI - alvo, ou seja, o valor apresentado é uma
+subtração do total de fixações realizadas após o usuário fixar pela primeira vez na AOI - alvo
+pelo total de fixações realizadas dentro da AOI - alvo.
+Tal métrica é definida por Goldberg e Kotval (1999, p. 643, tradução nossa): “Altos
+valores de fixações fora do objetivo inicial, indicam representações do alvo com pobre
+
+significado ou visibilidade”. Assim, no contexto da Arquitetura da Informação, é possível
+analisar a visibilidade de um alvo verificando este número de fixações.
+Essa medida pode demonstrar que os usuários após passarem pelo alvo, não
+identificaram o significado que aquela área apresentava, bem como pode representar que a
+área possui baixa visibilidade. Ao comparar as três agências, verifica-se que a Ag2 e a Ag3
+apresentaram um número de fixações bem inferior a Ag1, demonstrando que a área
+apresentou uma representatividade superior nas Ag2 e Ag3. Pode ser comprovada também
+pelo tempo e pelo número total de fixações da tarefa que implicam em uma pouca eficiência
+na busca de informação.
+
+5.4 Fixações e tempo dentro da AOI
+A métrica de taxa de fixações na AOI - alvo é definida por Goldberg e Kotval (1999),
+podendo ser calculada pelo número de fixações na AOI dividido pelo total de fixações. Os
+autores afirmam que um baixo valor na taxa indica uma pouca eficiência na busca.
+A partir dos dados, observar-se que o website da Ag2 obteve a menor taxa, indicando
+uma maior dificuldade dos usuários localizarem os dados contidos na AOI - alvo. Enquanto, a
+Ag1 e Ag3 apresentaram os maiores valores, indicando uma eficiência maior na localização
+da informação.
+No âmbito da Arquitetura da Informação, essas taxas podem representar um projeto de
+website com mais eficiência na busca, que facilita a extração da informação. Tal medida pode
+auxiliar para verificar se o usuário, com um objetivo específico, não se disperse dentro do
+ambiente informacional digital.
+
+5.5 Análise dos Mapas de Calor
+O mapa de calor permite identificar as áreas mais visualizadas pelos participantes em
+um determinado estímulo. Uma visão geral do número de fixações e do tempo de duração em
+cada área do estímulo é possível de ser observada por meio da intensidade das cores presentes
+no mapa gerado. As cores mais quentes representam as áreas onde houve uma maior
+incidência de olhares, assim, de acordo com Bojko (2013, p. 224, tradução nossa) “[...] o
+
+amarelo é mais quente que o verde ou azul, a cor laranja é mais quente que amarelo, e a cor
+vermelha é considerada a mais quente de todas.”
+Conforme relatado anteriormente, dentro os dez participantes, foram utilizados para
+fim de comparações os resultados obtidos de quatro, pois somente estes completaram as três
+tarefas. Buscando demonstrar que a exclusão destes seis participantes não interferiu
+significativamente na apresentação dos mapas de calor obtidos, apresenta-se a figura 3
+contemplando as imagens dos mapas de calor das três agências analisadas, sendo que à direita
+é possível observar o mapa com os resultados de todos os participantes e à esquerda, o mapa
+com os resultados dos quatro indivíduos destacados.
+Figura 3 – Mapas de calor gerados a partir dos olhares dos participantes sobre os estímulos
+
+Fonte: Elaborado pelos autores
+A partir da análise das imagens apresentadas na figura 3, foi possível identificar alguns
+padrões de comportamento, que ocorreram durante o processo de busca, nos três estímulos.
+Além da AOI referente ao número de telefone, facilmente identificada pela cor vermelha
+intensa em todos os mapas, verifica-se que os indivíduos fixaram seus olhares em diversos
+outros pontos do estímulo durante a tarefa de localizar o número de telefone, principalmente
+
+em elementos textuais e numéricos, provavelmente influenciados pela tarefa de encontrar o
+número de telefone.
+Nas figuras 3 (a), referente a Ag1, observa-se a dispersão do olhar, como nos demais
+mapas. No entanto, destaca-se duas áreas relevantes que continham informações que induziam
+incorretamente o olhar do usuário a encontrar uma suposta resposta da busca. A primeira
+delas, a área que continha ao endereço físico da loja (canto superior esquerdo), o usuário foi
+condicionado a procurar pelo número de telefone, mas não continha tal número. Na segunda
+área que recebeu uma quantidade razoável de fixações de olhares, havia os contatos de alguns
+agentes de viagem com seus nomes e seus respectivos e-mails (canto inferior direito).
+Nesse contexto, mesmo que o número de telefone não esteja em destaque, é possível
+sugerir que se apresente o número de telefone próximo às informações relacionadas ao
+endereço físico da loja, ou ainda, próximo às informações referentes às possíveis formas de
+contato, pois os participantes buscaram informações nos rótulos que continham, ou
+aparentavam conter, informações referentes ao “endereço da loja física” ou às “formas de
+contato”.
+Nas figuras 3 (b), tratando da Ag2, nota-se que o olhar não se direcionava para
+qualquer tipo de informação textual, aparentemente os participantes buscavam elementos que
+se assemelhavam ao número de telefone, ou que estavam dentro de um contexto de “formas
+de contato”. Observa-se que as informações contidas nos anúncios foram capazes de chamar a
+atenção dos usuários, como indicado pela intensidade de fixações no canto inferior direito e
+no anúncio central. Cabe destacar que o website da Ag2 apresentou um menor número de
+pontos de alta intensidade de fixações.
+Nas figuras 3 (c), sobre a Ag3, há um comportamento a ser destacado. No canto
+superior direito era possível encontrar o rótulo “Fale Conosco”, área também visualizada
+pelos usuários, ressalva-se, porém, que apesar de ser um rótulo relacionado ao contexto de
+“formas de contato”, o número de telefone não se encontrava nesse elemento.
+Evidencia-se, assim, como os usuários podem ser influenciados por elementos
+associados ao seu contexto de busca. Isso pode destacar a importância da organização da
+informação de forma contextualizada dentro de um ambiente digital.
+Além disso, com a análise dos mapas de calor foi possível observar uma dispersão do
+olhar dos usuários sobre a interface dos três websites. Segundo Poole e Ball (2006), essa
+
+dispersão generalizada pode indicar uma busca menos eficiente, pois o usuário necessitou
+visualizar várias partes do ambiente antes de encontrar a informação desejada.
+
+6 CONSIDERAÇÕES FINAIS
+As pesquisas utilizando a ferramenta eye tracking buscam compreender o
+comportamento dos usuários, identificando que esta tecnologia poderia ser um suporte para o
+desenvolvimento de estudos, com a pretensão de entender com maior precisão como o olhar
+do usuário interage com ambientes informacionais digitais.
+Dentro desta perspectiva, a Ciência da Informação se apresenta como uma área capaz
+de desenvolver pesquisas com o eye tracking, especialmente dentro dos campos de
+Arquitetura da Informação, Experiência do Usuário, Usabilidade e Comportamento
+Informacional.
+Assim, o presente trabalho demonstra uma aproximação necessária entre a tecnologia
+eye tracking e a Arquitetura da Informação, em que os dados de pesquisa coletados são
+utilizados como base para uma análise focada no comportamento do usuário, via rastreamento
+do olhar em um ambiente informacional digital. Utilizou-se as métricas oriundas do eye
+tracking para realizar as análises, em consonância com o contexto, o conteúdo e o usuário
+dentro de uma ecologia da informação.
+Ao analisar a Arquitetura da Informação de websites utilizando a tecnologia eye
+tracking, foram encontrados por meio do olhar do usuário, relações entre as fixações e os
+tempos coletados e os elementos da Arquitetura da Informação associados a interface, a
+visibilidade e a eficiência da busca. Por meio dos testes realizados, foi possível verificar a
+existência de lacunas referentes aos projetos de Arquitetura da Informação, que dificulta a
+localização de informações dentro dos ambientes analisados, tendo em conta a percepção do
+olhar.
+O presente trabalho demonstrou que é necessário, ao realizar estudos de Arquitetura da
+Informação com o uso da tecnologia eye tracking, o uso de métricas para análises qualitativas
+e quantitativas sobre os dados coletados. Tal questão é justificada pois são complementares e
+fornecem um panorama amplo para a identificação e a análise das interações e do
+comportamento dos usuários, via rastreamento do olhar, em ambientes informacionais
+digitais.
+
+Como trabalhos futuros, cabe realizar estudos que aprofundem as relações entre as
+métricas e as análises qualitativas e quantitativas, explorando com mais detalhes os dados
+gerados a partir do eye tracking.
