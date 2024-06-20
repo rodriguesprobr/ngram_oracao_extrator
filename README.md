@@ -21,7 +21,7 @@ Os textos devem ser separados em diretórios/pastas por ano de publicação (*e.
 
 Se for de interesse, sugerimos que antes do processamento sejam removidos informações como autores, e-mails e referências biblográficas, bem como cabeçalhos e rodapés.
 
-# Dependências do Projeto:
+# Dependências do Projeto
 Foi utilizado o Python na versão 3.10.
 Além disso, são requeridas as seguintes bibliotecas:
 - [pt-core-news-lg](https://spacy.io/models/pt), versão 3.7.x (deve ser instalado pelo comando python -m spacy download pt-core-news-lg)
@@ -35,7 +35,6 @@ O algoritmo faz o uso do [SQLite3](https://sqlite.org/) como [Sistema de Gerenci
 Foi utilizado uma adaptação do código-fonte de pré-processamento de textos para o _spacy_, desenvolvido por [Omri Mendels, da Cientista de Dados da Microsoft](https://gist.github.com/omri374/ec1c243a5a94a657dae40078d47977b6). Parte do seu código pode ser encontrado no diretório _util_, arquivo _preprocessamento.py_.
 
 # Como utilizar
-
 Após a instalação do _Python_ e das bibliotecas, deve-se executar na seguinte ordem: 1) _processar.py_ e 2) _analisar.py_.
 
 O _script_ _processar.py_ pode demorar algumas horas para terminar a execução. Ele utiliza programação em _threads_ para processar múltiplos textos ao mesmo tempo. No arquivo _config.json_ você poderá aumentar ou diminuir quantos textos são processados em paralelo, alterando o valor do atributo _threads_quantidade_.
@@ -43,7 +42,6 @@ O _script_ _processar.py_ pode demorar algumas horas para terminar a execução.
 No _config.json_ também pode ser alterado se os dados serão excluídos na execução (atributo _excluir_dados_) e o local em que o algoritmo fará a varredura procurando os textos a serem processados (atributo _comunicacoes_cientificas_dir_).
 
 # _TODO List_
-
 - [ ] Refatoração de parte do algoritmo
 - [ ] Orientação a Objetos
 - [x] Melhorias no processamento paralelo para evitar _OutOfMemoryError_. (Commit 
