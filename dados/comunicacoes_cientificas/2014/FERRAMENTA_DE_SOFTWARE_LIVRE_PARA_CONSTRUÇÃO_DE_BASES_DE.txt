@@ -1,0 +1,206 @@
+
+FERRAMENTA DE SOFTWARE LIVRE PARA CONSTRUÇÃO DE BASES DE
+DADOS REFERENCIAIS DE ARTIGOS CIENTÍFICOS DIGITAIS
+Resumo: Com a especialização de conteúdos nas bases de dados, a Internet se mostra fonte
+de pesquisa para estudantes, professores e pesquisadores. Existem várias bases de dados que
+referenciam, de forma exclusiva, itens bibliográficos, como livros, artigos científicos,
+dissertações, teses etc. O portal de Periódicos Capes, o SciELO e a Brapci são exemplos de
+bases de dados referenciais. O objetivo geral desta pesquisa foi estudar requisitos para o
+desenvolvimento de um software livre para criação de bases referencias que auxilie a
+disseminação de informação científica para a comunidade científica do Brasil. Esta pesquisa
+conta com o apoio do CNpQ e foi desenvolvida em nível de mestrado. Trabalha com dois
+tópicos estudados pelos pesquisadores da Ciência da Informação, as bases de dados e os
+mecanismos de recuperação da informação em suporte digital. Como metodologia utilizou-se
+de revisão de literatura e linguagens de programação. Como resultado, foi desenvolvido um
+software livre que foca na construção de bases referenciais para recuperação de artigos
+científicos digitais por meio da disponibilização de links. O software foi denominado “Base
+de Dados Referencial de Artigos Científicos” (BADRAC), está hospedado no endereço
+eletrônico http://badrac.herokuapp.com e permite que qualquer interessado construa uma base
+de dados referencial. Por fim, deve-se considerar que o software disponibilizado está na
+versão 1.0.0 beta, e necessita de mais testes e da contribuição dos usuários e dos
+pesquisadores da área da Ciência da Informação.
+Palavras-chave: Base de Dados Referencial. Recuperação da Informação Digital. Periódico
+Científico Digital.
+1 INTRODUÇÃO
+
+
+Considerando que a evolução e o desenvolvimento da sociedade fundamentam-se na
+disponibilização, no acesso, no uso e, eventualmente, no descarte da informação, é necessário
+refletir sobre o papel e as aplicações da tecnologia para a comunicação e a sua disseminação
+na sociedade. Essa comunicação pode ser realizada por meio de diferentes canais – dentre os
+quais se destaca a comunicação científica – e alcançar públicos distintos, como a comunidade
+científica, alvo ao qual se destina esse tipo de comunicação.
+Assim, a comunicação científica é parte inerente do desenvolvimento da ciência e está
+fundamentada na informação científica, gerando conhecimento, que por sua vez é divulgado,
+sobretudo, por periódicos científicos (GUEDES, 1998).
+O periódico científico, por sua vez, desenvolve a disseminação da produção científica
+e tem um papel fundamental no meio acadêmico, promovendo avanços e destacando autores e
+editores. Na década de 1990, com a chegada da informação eletrônica e o uso da Internet,
+ocorreu a grande ruptura no modo de editoração e disseminação de informações,
+principalmente da produção científica (FACHIN, 2002). Com a Internet, o formato digital
+passou a promover a disseminação de conhecimento científico em larga escala e permitir uma
+divulgação mais eficiente de suas publicações.
+Porém, devido a grande quantidade de informação armazenada na Internet, o que se
+observa é que a heterogeneidade das informações é um problema para que uma recuperação
+de informação relevante na Web seja alcançada. Essa questão, entretanto, pode ser suavizada
+com a organização especializada das bases de dados.
+Com a especialização de conteúdos nas bases de dados, a Internet se mostra fonte de
+pesquisa para estudantes, professores e pesquisadores. Existem várias bases de dados que
+referenciam, de forma exclusiva, itens bibliográficos, como livros, artigos científicos,
+dissertações, teses etc. O portal de Periódicos Capes, o SciELO e a Brapci são exemplos de
+bases de dados referenciais.
+É fato que a organização especializada das bases de dados reduz o escopo das
+informações passíveis de busca. Diferentemente de uma pesquisa geral na Web, onde vários
+tipos de bases de dados, que referenciam os mais diversos tipos de informação, são acionadas,
+as bases de dados que referenciam apenas itens bibliográficos aumentam a relevância dos
+resultados das buscas.
+Em acréscimo a funcionalidade proporcionada pelas principais bases de dados
+referenciais em que os usuários usufruem dos serviços de busca de artigos previamente
+cadastrados, um software livre para a construção de base de dados referencial de artigos
+
+
+científicos proporciona a estudantes, professores e pesquisadores a possibilidade de criação de
+suas próprias bases de dados, auxiliando na disseminação da informação científica.
+O objetivo geral desta pesquisa foi estudar requisitos para o desenvolvimento de um
+software livre para construção de bases de dados referencias que auxilie a disseminação de
+informação científica para a comunidade científica do Brasil. Esta pesquisa conta com o apoio
+do CNpQ e trabalha com dois tópicos estudados pelos pesquisadores da Ciência da
+Informação, que são as bases de dados e o mecanismos de recuperação da informação em
+suporte digital.
+2 BASE DE DADOS
+As bases de dados provocaram um grande impacto no uso de computadores. Elas
+representam um papel crítico em todas as áreas de conhecimento em que o computador e suas
+tecnologias específicas são utilizados: nas áreas afins de Negócio e Business, nas
+Engenharias, na Matemática e na Física, na Medicina, na Educação, na Ciência da
+Informação, entre outras áreas.
+A definição de base de dados é vista por Heemann (1997, p. 2) como “um arquivo ou
+um conjunto de arquivos computacionais no qual são armazenados dados, permitindo a
+recuperação e atualização de informações”. Já para Rowley (2002, p. 125), o termo base de
+dados é conceituado como “uma coleção geral e integrada de dados junto com a descrição
+deles, gerenciada de forma a atender a diferentes necessidades de seus usuários”.
+Zaninelli e Catarino (2004) afirmam que o meio eletrônico é uma forma rápida de
+armazenar, transmitir, compartilhar e recuperar documentos e informações. As autoras ainda
+expõem que:
+Um recurso muito utilizado e eficaz para a disponibilização e troca de
+informações entre organizações públicas e privadas, é o banco de dados e,
+consequentemente, as suas bases de dados que ampliam significativamente a
+qualidade das buscas informacionais, visto que essas bases apresentam
+diversificados pontos de acesso à informação. (ZANINELLI; CATARINO,
+2004, p. 2).
+
+Existem vários tipos e nomenclaturas que diferenciam as bases de dados, como por
+exemplo: referencial, de fonte, de texto completo, numérica, multimídia, de diretórios,
+transacional (ROWLEY, 1994; FEATHER, STURGES, 2003; REITZ, 2014).
+Classificam-se como referencias e de fontes aquelas disponíveis por meio de um
+serviço de busca (ROWLEY, 1994; CUNHA, 2001). As bases referenciais remetem o usuário
+à outra fonte – base de dados de fonte – que pode conter dados digitais originais e, em muitos
+casos, de texto completo (ROWLEY, 1994).
+
+
+
+Feather e Sturges (2003) asseveram que as bases de dados bibliográficas contêm
+referências a publicações, incluindo periódicos, artigos, anais de congressos, relatórios
+governamentais, publicações legais, patentes, livros, etc. Diante desta afirmação, percebe-se
+que uma base de dados bibliográfica é uma base de dados referencial de escopo reduzido,
+especializado em itens bibliográficos.
+3 RECUPERAÇÃO DA INFORMAÇÃO DIGITAL
+Os Sistemas de Recuperação de Informação (SRIs) das bibliotecas de terracota na
+Babilônia, de pergaminho em Pérgamo e de papiro em Alexandria passaram por
+transformações significativas até chegar aos modernos sistemas com bases de dados
+(ARAÚJO, 1995). Apesar desse longo caminho percorrido, foi apenas em 1951 que Calvin
+Mooers, baseado em estudos sobre informação, criou o termo Information Retrieval
+(Recuperação da Informação). Segundo o autor “A Recuperação de Informação trata dos
+aspectos intelectuais da descrição da informação e sua especificação para busca, e também de
+qualquer sistema, técnicas ou máquinas que são empregadas para realizar esta operação.”
+(MOOERS, 1951, p. 21, tradução nossa).
+Os sistemas de recuperação de informação viabilizam o acesso aos documentos, a
+partir da execução de tarefas de representação da informação. Tal processo se materializa pela
+representação e, também, pela recuperação das informações representadas e dos documentos
+armazenados com a finalidade de atender às necessidades dos usuários (SOUZA, 2006).
+A recuperação de documentos e informações em bases de dados é um assunto
+amplamente discutido pelos profissionais da Ciência da Informação (FERNEDA, 2003;
+BRANSKI, 2004; CHU, 2010). Na conjuntura da Ciência da Informação, a recuperação de
+informação (RI) é uma operação por meio da qual são selecionados documentos a partir de
+um acervo, um repositório ou uma base de dados. Segundo Ferneda (2003, p. 14), “há ainda
+autores que conceituam a recuperação de informação de forma muito mais ampla, ao
+subordinar à mesma o tratamento da informação (catalogação, indexação, classificação)”.
+Pode-se dizer que a RI tem sido utilizada para designar a busca de literatura (LANCASTER,
+WARNER, 1993; FERNEDA, 2003) em bases de dados bibliográficas.
+Atualmente, a recuperação de informação segue o conceito do two steps information
+retrieval ou recuperação de informação em duas etapas. Gonzalez de Gomez (2004, p. 56)
+explica esses dois steps, ao afirmar que “o primeiro step consistiria em um dispositivo de
+representação que descreve, sumariza e codifica as fontes primárias de informação para
+facilitar sua busca seletiva e sua localização efetiva” e que o segundo step, seria a localização
+
+
+e disponibilização das fontes primárias escolhidas, nelas mesmas, dando acesso a seu texto
+completo.
+4 DESENVOLVIMENTO, RESULTADO E CONSIDERAÇÕES
+Como resultado desta pesquisa em nível de mestrado, foi desenvolvido um software
+livre que foca na recuperação de artigos científicos digitais por meio da disponibilização de
+links, dependendo do termo de busca pesquisado, e remete o usuário à fonte externa, que
+contém os arquivos digitais disponíveis para download. O software foi denominado “Base de
+Dados Referencial de Artigos Científicos” (BADRAC) e está hospedado no endereço
+eletrônico http://badrac.herokuapp.com.
+Este está dividido em duas interfaces: a primeira, disponível apenas para o gestor da
+base, é formada pelo menu administrativo, que tem como função principal o cadastro das
+referências dos artigos. A segunda, disponível para qualquer usuário, é formada pelo
+mecanismo de recuperação de informação ou de busca.
+Para o desenvolvimento da ferramenta, foi feito um estudo prévio no código fonte e
+base de dados dos software Open Journal System (OJS) e DSpace. Esses dois sistemas são
+exemplos de software livre que auxiliam na produção e disseminação da informação
+científica. Embora ambos possuam características de bases de dados de fonte, e não de
+referência, a lógica usada no desenvolvimento do mecanismo de busca e no processo de
+representação da informação é similar.
+Outra fonte de estudo usada para o desenvolvimento da pesquisa foi o padrão de
+metadados Dublin Core, que auxiliou a criação do Modelo de Entidade-Relacionamento
+(MER) para a descrição e representação lógica das informações na base de dados. Os
+metadados auxiliam a construção de uma base de dados por meio da descrição da realidade,
+representando logicamente as informações armazenadas nas bases de dados.
+O MER tem por base a descrição de algo do mundo real realizada por intermédio de
+um conjunto de objetos chamados “entidades” e pelo conjunto de “relacionamentos” entre
+esses objetos. Entidade é uma coisa (física ou conceitual) do mundo real. Além disso, as
+entidades possuem “atributos”, que são propriedades particulares que as descrevem. Os
+valores assumidos por cada atributo descrevem as entidades e formam o conjunto de dados
+armazenados na base de dados (ELMASRI; NAVATHE, 2005). Esses valores são as
+representações da informação, que podem ser a informação de fato, ou o fornecimento de
+pontos de acesso ao texto, ao documento, a informação completa.
+
+
+Este software foi desenvolvido sob a plataforma Linux Ubuntu 12.4 LTS por meio da
+linguagem de programação Ruby on Rails versão 4.0.2 e sistema gerenciador de banco de
+dados PostgreSQL versão 9.1.13. Ele pode ser acessado em qualquer computador ou
+dispositivo móvel, independente do sistema operacional, desde que o faça por meio dos
+navegadores Google Chrome (v. 34.0 ou superior) ou Mozilla Firefox (v. 31.0 ou superior).
+O resultado deste trabalho se caracteriza como software livre, pois o código fonte está
+hospedado no GitHub – um repositório que tem como função essencial o armazenamento e o
+compartilhamento de códigos abertos.
+A partir da utilização da Ferramenta pesquisadores, grupos de pesquisa ou interessados
+podem criar bases de dados que referenciem apenas artigos de uma linha ou assunto
+específico ou, analogamente, um programa de pós-graduação, independentemente da sua área
+de atuação, pode subsidiar estudos e propostas ao referenciar a produção de artigos daquela
+área em particular. Ou seja, sendo um software livre, pode ser manipulado tanto por uma
+universidade/faculdade quanto por um docente ou discente; é livre para que qualquer um que
+tenha interesse em criar uma base de dados referencial personalizada às suas necessidades
+usufrua de seus benefícios.
+O cadastro de referências de artigos é feito no menu administrativo e necessita seguir
+uma ordem lógica e compreensível daquilo que está sendo armazenado. Primeiro, pelo menos
+um periódico necessita ser cadastrado e, a partir de então, edições podem ser a ele vinculadas.
+Um periódico pode ter várias edições, mas uma edição pode pertencer a apenas um único
+periódico. Depois de realizado os cadastros dos periódicos e suas respectivas edições, as
+referências dos artigos podem ser armazenadas. Um artigo pertence a uma edição que está,
+por sua vez, vinculada a apenas um periódico.
+Com o artigo cadastrado, autores e palavras-chave podem ser vinculados. Um artigo
+pode ter sido escrito por diversos autores e um autor por ter escrito mais de um artigo. Essa
+mesma lógica é usada para o atributo palavra-chave. Assim, a descrição de algo do mundo
+real, nesse caso, artigos científicos, está de acordo com a percepção do usuário, evitando
+possíveis erros de busca provenientes de uma tarefa cadastral mal executada.
+A inclusão, atualização e remoção de referências a artigos científicos devem ser
+realizadas regularmente. Esse processo cadastral pode ser realizado a qualquer momento. Tão
+logo uma nova edição de um periódico de interesse for lançada, a inclusão dos artigos deve
+ser feita.
+
+
+Por fim, deve-se considerar que o software está na versão 1.0.0 beta, e necessita de
+mais testes e da contribuição dos usuários e dos pesquisadores da área da Ciência da
+Informação.

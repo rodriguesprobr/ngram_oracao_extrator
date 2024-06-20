@@ -1,0 +1,421 @@
+DESCRIÇÃO DINÂMICA PARA DOCUMENTOS MULTIMODAIS EM AMBIENTE
+DIGITAL
+
+
+RESUMO: Atualmente a informação tem sido disseminada na Web em diversos formatos
+com um grande crescimento de elementos não-textuais como vídeo, imagens, slide show.
+Também muitos usuários desejam ter apenas um aspecto da informação de um vídeo, por
+exemplo, o som de uma aula, palestra ou textos. Neste sentido este artigo propõe um modelo
+multimodal para a descrição de documentos multimídias em especial com uso de slide show
+com sons e imagens, e um sistema de descrição dinâmica que usa o modelo Dublin Core. Será
+apresentada uma ontologia desenvolvida no ambiente Protégé usando a meta-linguagem OWL
+e ela é utilizada para especificar diversos formatos servindo de apoio para inclusão dos
+elementos Dublin Core e sendo gerado, a partir dela, o formato de aplicação RDFS.
+Palavras-chave: Descrição dinâmica. Documentos multimodais. Dublin Core.
+
+1 Introdução
+
+O fenômeno do crescimento informacional não pode ser visto apenas como um
+aspecto tecnológico, mas também um aspecto humano. Segundo Freire (2007) as tecnologias
+digitais da informação e comunicação exercem uma influência direta neste “renascimento”
+informacional:
+[...] No sentido de que estas têm uma penetrabilidade até então nunca vista
+em todas as atividades da sociedade, principalmente na área de informação,
+onde revolucionaram desde os limites da estocagem de informações à sua
+disseminação e, principalmente, a sua produção (FREIRE, 2007, p. 1).
+
+Ainda Freire (2007), explica que a segunda linha responsável por este crescimento
+informacional tem um aspecto humanista, vinculado ao contexto social no qual o ser humano
+esta inserido sendo o maior responsável por este desenvolvimento, “já que a condição
+primordial para o surgimento da informação é um contexto social em que exista interação
+entre seres humanos”, aspecto essencial para uma visão ontológica da informação.
+A relação de interação usando os meios digitais levou o Brasil ao oitavo maior público
+da internet segundo dados divulgados pela ComScore (2011), ou seja, quarenta milhões é o
+número de brasileiros “online”, número esse, maior que os usuários do Reino Unido, Itália e
+Canadá. Segundo Castells (2003), no fim de 1995 – ano da popularização do uso da internet –
+haviam cerca de 16 milhões de usuários de redes de comunicação por computador no mundo,
+e a previsão era de aproximadamente 2 bilhões de usuários conectados no ano de 2010. Em
+2011, segundo dados do IBOPE Nielsen Online, o número de usuários brasileiros que
+acessam internet (seja em casa, na escola, no trabalho ou em lan houses) chegou a 73,9
+milhões, um crescimento de 23% em relação ao ano passado (IBOPE, 2011).
+A informação na Web é disseminada em diversos formatos, tais como texto, imagem,
+vídeo, e multimídias que serão tratados nesse trabalho. Ao longo da história os rolos de filmes
+transformaram-se em filmes digitais, CDs, DVDs e agora Blu-rays. Outra possibilidade nos
+dias atuais são os vídeos disponíveis na Web, os serviços de locação digital de filmes que
+estão chegando aos lares. A mudança rápida de formatos proporcionou a chamada
+obsolescência, e o problema de transformação de um formato em outro.
+Hoje os objetos de vídeos na Web são difíceis e custosos para serem pesquisados,
+principalmente, pois inexiste uma taxonomia, mesmo simples que certamente facilitaria esta
+
+atividade. Para os usuários a maioria das tecnologias que existem derivam do aspecto textuais
+e estão disponíveis a partir de um texto ou uma página Web correspondentes.
+Há poucos modelos, como o SMILL (Synchronized Multimedia Integration Language)
+do W3C, o DC (Core Metadata Element Set Dublin), o RSS de Media, que se preocupem com
+os aspectos imagéticos e os diversos formatos de metadados para estes arquivos na Internet.
+Nesse trabalho, se propõe o desenvolvimento de uma ontologia para documentos
+multimodais que incluam: vídeos, imagens (slide show) e sons. Para isso, o modelo de dados
+que será utilizado está no âmbito da arquitetura de uma base de dados para vídeo. Ele está
+fundamentado em diversas propostas encontradas na literatura a partir do modelo histórico de
+Jain e Hampapur (1994), passando pelo modelo do sistema de meta-informação, HyDoMiS
+(Hiperdocumentos Meta-Informação do Sistema), construído na base deste esquema que foi
+proposto por Suh e Lee (2002). Em geral, ele desempenha três funções: gerenciamento de
+metadados, pesquisa e relatórios e carrega consigo a proposta de que métodos de descrição
+eficazes exijam uma abordagem multimodal. Neste caso tanto a modalidade mais adequada é
+selecionada quanto as diferentes modalidades são utilizadas de forma colaborativa, como
+proposto na literatura por Snoek e Worring (2005).
+O estado atual da tecnologia em bases de dados de vídeo é abordado a partir de uma
+revisão da literatura e questões de pesquisa são destacadas para evidenciar a importância de
+padrões e disponibilização na Web dos formatos abertos para multimídia (WEB-M, 2011).
+Os primeiros documentos tratados têm aspectos educacionais: aulas, trabalhos de
+conclusão de cursos e dissertações, e nestes, os aspectos multimodais nos quais o foco é em:
+som, imagem (slide show) e vídeo. Esta é uma contribuição do presente trabalho.
+Esta separação será esclarecida a seguir, mas é sabido que um slide show pode ser
+individualmente tratado como imagem, assim como um vídeo pode ser decomposto nelas e
+em áudio. Outro ponto a se ressaltar é que dada a complexidade, foram deixados à parte
+aspectos de tratamento de imagem, segmentação de vídeos e composição com os textos.
+Apesar de ser possível utilizar imagens, planilhas, textos e diversas formas de
+tratamento computacional, na maioria das vezes para fins didáticos, se utiliza uma aplicação
+de slide show para apresentação. Considerar slide show é, portanto, uma opção, pois se trata
+do componente mais comum em atividades expositivas, principalmente aquelas acadêmicas.
+Outro aspecto a se ressaltar é que imagens podem ser utilizadas para ilustração de um
+conceito, podem ter um uso metafórico ou mesmo esquemático. Destas formas, certamente o
+entendimento a respeito do que está sendo discutido é facilitado principalmente considerando
+
+uma sequencia, como de um slide show, já que a questão temporal e a composição contribuem
+neste sentido.
+
+2 Modelos e formatos de representação de metadados
+Para Barreto (1999) existem três tipos básicos de metadados: a) os metadados para
+catalogação bibliográfica (Machine Readable Catalogue - MARC, Text Encoding Initiative –
+TEI, Encoding Archival Description – EAD); b) os metadados para descoberta de recursos na
+Web, (Internet Anonymous Ftp Archive - AIFA, Summary Object Interchange Format –
+SOIF, Dublin Core - DC); c) os metadados para infraestrutura global de informação
+(Government Information Locator Service – GILS, Federal Geographic Data committee –
+FDGC, Environmental Data Catalogue - UDK). Esses esquemas de metadados são
+desenvolvidos e mantidos por instituições padronizadoras como a ISO 1 e a W3C ou por
+organizações que tomaram para si essa responsabilidade de padronização, como a Dublin
+Core Metadata Initiative (que responde pelo padrão Dublin Core).
+Os modelos e formatos para representação de metadados existentes, entre eles o
+Dublin Core e MARC, também o RDA (Resource Description and Access) são amplamente
+utilizados, entretanto é crescente o uso de FRBR (Functional Requirements for Bibliographic
+Records) entre outros, mas na análise de alguns autores (SIQUEIRA; SILVA, 2011) se
+mostraram insuficientes e incompatíveis para documentos multimídia.
+Outro trabalho que esclarece o uso de FRBR foi elaborado por Moreno e Arellano
+(2005). Deve-se compreender o uso adequado do FRBR, desenvolvido pela IFLA (Federação
+Internacional de Associações de Bibliotecários) de 1992 a 1995, que não foi feito como
+modelo para a descrição ou catalogação de documentos, mas como uma nova perspectiva da
+estrutura e nos relacionamentos dos registros bibliográficos. A proposta dos FRBR é:
+Primeiro, fornecer um quadro estruturado, claramente definido, para
+relacionar dados registrados em registros bibliográficos às necessidades dos
+usuários destes registros. O segundo objetivo é recomendar um nível básico
+de funcionalidade para registros criados por entidades bibliográficas
+nacionais (IFLA, 1998, p. 72 apud MORENO; ARELLANO, 2005, p. 24).
+
+A grande inovação do FRBR, é que catálogos em linha, baseados no seu modelo,
+podem mostrar as relações bibliográficas de maneira clara e útil ao usuário.
+
+ISO (International Organization for Standardization) é uma organização não-governamental que desenvolve e
+publica padrões internacionais. (cf. http://www.iso.org/iso/)
+
+É, portanto um auxílio ao usuário para navegar em "espaços" de informações
+complexos, através das relações, de maneira que as informações nos registros, recuperadas
+através da expressão de busca do usuário, reflitam um apropriado "rol" de registros
+(BEACOM, 2003).
+Assim primeiro deve-se analisar concretamente a adoção de formatos e depois apontar
+as necessidades reais em cada mídia, analisando os programas disponíveis e suas capacidades.
+Por outro lado, considerando-se os documentos textuais e as iniciativas do Open
+Access, deve-se enfatizar a popularidade e a presença em documentos científicos do Dublin
+Core e as ferramentas já amplamente utilizadas expressam em estatísticas do diretório de
+revistas científicas Doaj (2011), demonstram a criação e ampliação do acesso e integração
+destes ambientes, porém ainda sem uso de multimídia.
+Para Dziekaniak e Kirinus (2004) o padrão de metadados de maior destaque é o
+Dublin Core, devido ao fato deste ser simples quanto aos seus campos de preenchimento, o
+que facilita a padronização na utilização de recursos e tratamento da informação pelos
+criadores de páginas Web (catalogadores leigos), possibilitando uma pré-classificação destas
+páginas, o que facilitaria a indexação das mesmas pelas bases de dados.
+O grande diferencial da proposta do Dublin Core é o seu comprometimento com a
+interoperabilidade, assim como na aplicabilidade das diretrizes e recomendações da
+organização para esquemas de metadados, conjunto de elementos e sintaxe de implementação
+(HARPER, 2010).
+Mas o Dubin Core foi projetado especificamente para uma geração de metadados
+inicial de documentos textuais. Embora permaneçam muitas discussões sobre a aplicabilidade
+do Dublin Core para documentos não textuais (HUNTER; IANNELLA, 1998).
+Trabalhos recentes apontam para duas abordagens para descrição autores (Colantonio,
+et. al., 2011) identificaram duas principais abordagens para processamento e representação de
+dados de conteúdos multimídia.
+
+Figura 1: Duas formas de descrição para multimídias. Fonte: Adaptado de Colantonio et al (2005).
+
+3 Informações simbólicas e semânticas na representação de imagens e vídeos
+Atualmente existem alguns projetos desenvolvidos e/ou em desenvolvimento voltados
+para representação temática de imagens. Smith (1996) diz que o estatuto da imagem
+fotográfica é diferente do texto escrito e que, além do conteúdo informacional, a dimensão
+expressiva da fotografia deve ser considerada. Ela propõe, inclusive, a seguinte equação:
+Imagem = Conteúdo Informacional + Dimensão Expressiva. Onde, dimensão expressiva é a
+parte da imagem fotográfica dada pela técnica: a aparência física através da qual a fotografia
+expressa seu conteúdo informacional, é a extensão significativa da fotografia manifestada pela
+forma como a imagem se apresenta (revelada pela técnica), é algo ligado à forma da imagem
+– que se encontra em justaposição ao seu conteúdo informacional.
+Também Manini (2007) que tem como objetivo da análise documentária fotográfica,
+elaborar representações condensadas daquilo que aparece em determinado documento e
+expressar o seu conteúdo de forma a facilitar a recuperação de suas informações. Lacerda
+(1993) acredita que a fotografia apresenta dois aspectos: imagem e objeto e um outro
+estreitamente relacionado à imagem, e que diz respeito à sua expressão, ou seja, a forma como
+uma imagem é mostrada, estando ligada a uma linguagem que lhe é própria e que envolve a
+técnica específica empregada, a angulação, o enquadramento, a luminosidade, o tempo de
+exposição, entre outros. Essas três dimensões do registro fotográfico – conteúdo, expressão e
+forma – é que constroem, em última instância, a mensagem que informa. Entre outros autores
+preocupam-se com a representação imagética, mas os formatos de representação dinâmica são
+essenciais e desconsiderados por todos eles.
+Assim, uma questão relevante diz respeito ao padrão em que a imagem esta
+armazenada, (Raster2 ou Vetoriais) acredita-se que o mais adequado, inclusive para a
+preservação e disponibilização da imagem digital, seria os formatos vetoriais, o padrão SVG
+(Scalable Vectorial Graphics) é o recomendado pelo consórcio W3C. Diferentemente da
+representação convencional de imagens que era apenas um conjunto de pontos, a
+representação em SVG inclui a descrição da imagem, embora ainda tenha pouca
+popularidade, representa uma solução importante para a representação. Do ponto de vista
+histórico ele foi criado a partir de dois grupos fundamentais:
+Gráficos vetoriais na internet surgiram a partir de dois grupos, o primeiro
+formado por: Adobe, IBM, Netscape e Sun que submeteram uma proposta a
+World Wide web Consortium sobre um documento ‘XML-based’ chamado
+
+Imagens Raster são construídas em Pixels (Picture elements) e por isto algumas vezes também chamadas de
+bitmaps, que na verdade, é um dos formatos do Raster, outros dois populares são o GIF (Graphics Interchange
+Format), o JPEG ou JPG (Joint Photographic Experts Group) e o PNG (Portable Network Graphics).
+
+Precision Graphics Markup Language (PGML) em abril de 1998 e o
+segundo grupo formado por: HP, Macromedia, Microsoft e Visio que
+também submeteram uma proposta a W3C sobre um ‘XML-based’ chamado
+Vector Markup Language (VML) em maio de 1998. Como resultado destas
+duas propostas formou-se o grupo SVG, o qual foi publicado em outubro de
+1998 (FREIRE, 2006).
+
+Outro trabalho interessante é o de Kacher, Bignon e Halin (2003), que já fazem uso da
+estrutura de campos definidos pelo “aboutness” e “offness” que tornam a documentação mais
+dinâmica, nesse caso, aplicado apenas a fotografias estáticas.
+Originalmente as páginas da internet são estruturadas com informações direcionadas
+para leitores humanos, não interpretáveis por computador, por isso é tão difícil encontrar
+informação na internet, isto é, a Web é sintática, onde os computadores apenas apresentam a
+informação. A semântica, que é a interpretação da informação fica a cabo do ser humano
+(BREITMAN, 2006), mas que a Web pode interpretar.
+Uma abordagem recente é combinar um padrão de metadados específicos de
+multimídia com outros padrões que podem ser usados para descrever domínios de aplicação
+semelhantes, a fim de proporcionar uma caracterização mais abrangente dos dados
+multimídias heterogêneos sem a criação de um novo padrão.
+Conforme proposta recente, Colantonio et. al. (2011) identificaram duas principais
+abordagens para processamento e representação de dados multimídia. Eles apontam que duas
+questões importantes devem ser consideradas de modo a alcançar uma utilização eficiente e
+integrada dos metadados multimídia: (i) um formato padrão comum multimídia capaz de
+descrever e representar a natureza intrínseca heterogênea de dados multimídia e sua
+semântica; (ii) os modelos mais abstratos (neste caso ontologias) e as ferramentas de
+mapeamento relacionados são necessários para "representar" e "traduzir" os conjuntos de
+metadados diferentes cujos elementos estão correlacionados com base nos significados iguais
+ou semelhantes para que os aplicativos possam usar o conhecimento ontológico de um
+ambiente multimídia além de apenas os metadados.
+A proposta do Dublin Core é o seu comprometimento com a interoperabilidade, seu
+uso popularizado atrás do uso dos ambientes de acesso aberto como OJS, assim como na
+aplicabilidade das diretrizes e recomendações da organização para esquemas de metadados,
+com facilidade de semântica e de sintaxe de implementação (HARPER, 2010).
+
+4 Uso de metadados em documentos digitais multimodais
+O crescimento da informação ocorre, não devido às novas tecnologias, antes disto, elas
+são um reflexo da necessidade de acesso e visibilidade da informação, segundo alguns autores
+este crescimento ocorre após a segunda guerra mundial:
+Na verdade, após a explosão documental que se seguiu à segunda guerra
+mundial, quando os métodos tradicionais de documentação deixaram de fazer
+qualquer sentido, as classificações documentais e biblioteconômicas
+passarem a ser elaboradas tendo em vista, ainda nos anos quarenta, facilitar a
+automatização das relações entre as diversas classes de documentos e, a partir
+dos anos setenta, permitir decididamente a informatização eletrônica do
+processo documental (POMBO, 1998, p. 12).
+
+Ao referir-se a diversas “classes de documentos”, pode-se ampliar para diversos tipos
+e diferentes suportes para compreender-se que estas necessidades envolvem aspectos de
+modos diferentes e transversais de documentação.
+Snoek (2005) defende que o responsável intelectual por uma obra, quando se usa
+informações modais: áudio, visual, textual e outros canais as usam para se expressar ou
+expressar suas ideias, no sentido que nem sempre usam apenas elementos orais ou textuais.
+Assim de acordo com este autor, o conteúdo de um vídeo é intrinsecamente
+multimodal, mas deseja-se neste trabalho incluir a imagem (slide show) e o áudio à parte.
+Outros autores estão trabalhando no desenvolvimento de padrões baseados em
+estrutura probabilística que busca ligar um suporte de filtragem de características e acesso
+para recuperação do conteúdo pelo usuário como Naphade e Huang (2001).
+Em multimodalidade o conteúdo é visto a partir do domínio do sistema e é
+definido como "a capacidade que um sistema tem para se comunicar com um
+usuário ao longo de diferentes tipos de canais de comunicação e para extrair
+e transmitir significado automaticamente" (SNOEK, 2005, p. 7).
+
+Pode se dizer então que o uso multimodal é praticamente intrínseco a comunicação,
+acontece que os elementos que são desenhados em um quadro negro ou mesmo gestuais não
+são captados e descritos quando tratados apenas os elementos textuais, mas estes são muitas
+vezes fundamentais em alguma forma de comunicação e constituem um elemento da
+linguagem e da expressão do autor. Portanto os elementos multimodais já existem e são
+inerentes a uma comunicação.
+
+5 Metodologia: uma proposta de ambiente multimodal para documentos multimídia
+Uma melhor estruturação dos dados representados na Web visando uma recuperação
+mais eficiente é a proposta da Web Semântica que por meio de ferramentas tecnológicas
+capazes de interpretar e distinguir o sentido das palavras em determinado contexto, tais como
+os agentes de software, a linguagem de marcação XML, arquitetura de metadados RDF
+(Resource Description Framework), ontologias e, principalmente, padrões ou formatos de
+metadados.
+Desde seus primórdios o projeto Web Semântica foi concebido como um
+conjunto de tecnologias relacionadas, de modo que no ano de 2000 o World
+Wide Web Consortium, tendo como seu maior expoente Tim Berners-Lee,
+divulgou publicamente a primeira proposta de arquitetura da Web
+Semântica, com base em uma série de camadas sobrepostas, onde cada
+camada ou tecnologia deveria obrigatoriamente ser complementar e
+compatível com as camadas inferiores, ao mesmo tempo em que não deveria
+depender das camadas superiores, possibilitando assim uma estrutura
+idealmente escalonável, que indicasse os passos e as tecnologias necessários
+para a concretização do projeto Web Semântica (RAMALHO; VIDOTTI;
+FUJITA, 2007).
+
+Para Santos e Alves (2009), a Web Semântica propõe estruturar e contextualizar
+semanticamente os dados representados no intuito de eliminar ou diminuir os problemas de
+recuperação, e para isso apresenta uma estrutura com ferramentas tecnológicas que
+possibilitarão a compreensão e o gerenciamento do conteúdo dos recursos, bem como o
+processamento e a troca de informações com outros programas (BERNERS-LEE;
+HENDLER; LASSILA, 2001).
+Segundo Tim Berners-Lee, Hendler e Lassila (2001) “A Web Semântica irá trazer
+estrutura ao conteúdo das páginas Web, criando um ambiente onde agentes de ‘software’
+navegando de página em página, poderão desenvolver tarefas sofisticadas para os usuários”.
+Jorente, Santos e Vidotti (2009) explicam que Tim Berners-Lee propõe a visão da Web
+Semântica, uma extensão da Web atual, formada por documentos compreensíveis unicamente
+por pessoas, para uma Web em que documentos seriam auto-descritíveis, de forma que seu
+conteúdo possa ser “compreendido” por programas, os agentes de “software”, que assim
+poderiam “raciocinar” e fazer “inferências” sobre o conteúdo de documentos, ajudando as
+pessoas em diferentes tarefas de recuperação de informações que exijam, raciocínio, decisões,
+inferência de conclusões a partir de informações não explicitamente disponíveis ou de
+informações contextuais.
+
+5.1 Proposta de descrição de vídeo usando Dublin Core
+Seguindo a ideia dos autores trabalhados anteriormente, como exemplo, num primeiro
+momento para estabelecer uma representação dinâmica de metadados, foi desenvolvida a
+proposta onde se sugere um conjunto de campos em XML, supondo o subconjunto de 15
+campos do Dublin Core textual, seguem os campos XML na figura explicativa abaixo.
+
+Figura 2: Exemplo de uso do Dublin core para arquivos de vídeo.
+Fonte: Adapatado de Yvonne (2008).
+
+São campos offness os quadros azuis, eles contêm dados extraídos diretamente da
+informação, ou seja, do vídeo. Os quadros amarelos são campos aboutness, aqueles que se
+concentram na aparência e que devem ser descritos dinamicamente.
+A unidade básica de indexação, semelhante a uma palavra num documento de texto
+aqui correspondem às cenas, e um conjunto de cenas que formam uma unidade serão
+indexadas pelo campo 12 do DC e podem ter a descrição semântica dinâmica. Cenas são
+
+semelhantes aos parágrafos de um documento de texto enquanto as sequências são
+semelhantes às páginas ou capítulos, um conjunto de cenas que podem sofrer um corte é um
+segmento. Por exemplo: um vídeo de TV tem 25-30 frames por segundo, cada um destes
+quadros é como se fossem uma imagem, mas se isoladas não representam além delas próprias,
+mas conectadas em sequência devem ter conexões mais dinâmicas e devem compor cenas,
+sequências e podem compor segmentos. Na imagem a seguir, diferentemente da Figura 2,
+mostramos essa diferenciação do tratamento do frame sendo tratado como um objeto isolado
+do todo. O formato MPEG-7 foi utilizado por ser considerado um padrão multimídia,
+
+Figura 3: Exemplo de uso do Dublin core para documentos multimodais.
+Fonte: Adapatado de Yvonne (2008).
+
+A segmentação de vídeos deve obedecer a uma estrutura lógica, diferentemente de
+textos onde podem ser encontrados parágrafos e tópicos de fácil segmentação. Nesta estrutura
+no caso de vídeos devem encontrar pedaços autocontidos que podem ser indexados sem
+ruptura do discurso ou mesmo do assunto, a figura 3 acima explica isto para frames.
+
+Podemos encontrar os elementos simbólicos tradicionais do DC como Title, creator,
+Description, Date, etc. os links dinâmicos podem ser estabelecidos pelo campo DC “relation
+hasPart” e os campos offness específicos de vídeos: Sequence, scene, shot e frames, que
+devem ter as especificações próprias. A descrição em RDFS que estabelece o perfil de
+aplicação (application profile) cria a estrutura dinâmica para descrição de vídeos, mas como
+um caminho alternativo para comparação, será analisada também a possibilidade da
+construção de uma ontologia.
+Segmentação de imagens em vídeos requer algoritmos de tratamento de imagem,
+porém um grande número de software já está disponível, onde os objetos podem ser obtidos
+de acordo com a cor, textura, posicionamento, volume, velocidade e trajetória conforme
+indica a figura 2 anterior, mas pode-se desejar para uso didático ter apenas os formatos de
+imagens, slide show, vídeos e som.
+
+5.2 Proposta de descrição multimodal de vídeo e slide show usando Dublin Core
+Uma abordagem recente é combinar um padrão de metadados específicos de
+multimídia com outros padrões que podem ser usados para descrever domínios de aplicação
+semelhantes, a fim de proporcionar uma caracterização mais abrangente dos dados
+multimídias heterogêneos sem a criação de um novo padrão. A partir de um levantamento
+recente do estado-da-arte, alguns autores (COLANTONIO et al, 2005) identificaram duas
+principais abordagens para processamento e representação de dados Multimídia, uma é
+usando dados consolidados para o processamento de algoritmos, estes mais utilizados para
+fins científicos, e a outra abordagem é pela consulta baseada no conteúdo que exige uma
+representação do conhecimento.
+Propõe-se então o uso os campos do Dublin Core para documentos multimodais a
+partir de vídeos, slide show e edições de vídeo e som, podem dar origem a três formatos de
+arquivos opções para uso de estudantes, professores e usuários em geral, do tipo: Vídeo, Som,
+Slide show ou uma composição multimodal de slide show e vídeo.
+A mesma figura anterior vista agora com abordagem de “frames” para inserir slide
+show de modo que alternativamente vemos o vídeo com o apresentador da aula, trabalho
+acadêmico ou conferência, e colocamos as “imagens” de slide show por intervalos que
+
+permitam a leitura dos textos e figuras disponíveis no slide, e conforme foi dito anteriormente
+também alguma figura pode ser inserida para melhor compreensão do vídeo.
+Deve-se destacar que segmentação de imagens, por exemplo, em cortes para produção
+de documentários também podem ser feitos com uso de software especial para isto, e ainda a
+documentação em trechos específicos pode ser feito com uso do campo semântico Timestamp
+que já é conhecido no processo de edição de vídeos, que normalmente são apenas data e hora
+colocadas no canto inferior direito, mas podem ser acrescentados registros de minutos e
+segundos e associá-los a trechos de entrevistas delimitados, respostas a determinadas
+questões, enfim fazer uma documentação mais detalhada no vídeo, mas este trabalho apenas
+aponta esta possibilidade.
+A ontologia que gera as especificações OWL, RDFS para estes documentos está nas
+figuras abaixo:
+
+Figura 4: Classes da ontologia para descrição multimodal de documentos.
+
+De forma geral, na Figura 4 estão as classes que compõem a ontologia do modelo
+discutido até aqui. Nela se têm o modelo Dublin Core e Multimodal como superclasses. Como
+tipo de multimodal estão destacadas as classes som, vídeo, imagem e slide show.
+Percebe-se que uma das aplicações fundamentais para este trabalho é a composição do
+slide show com imagens e vídeos produzindo uma edição final de figuras, dois trabalhos,
+sendo um de Trabalho de Conclusão de Curso e outro de Mestrado já foram documentados
+
+nesta forma servindo de testes para o ambiente, uma pasta especial de vídeos está sendo
+construída na Web e em breve estará disponibilizada.
+
+Figura 5: Classes e propriedades da ontologia destacando os campos do Dublin Core.
+
+Na Figura 5 estão destacadas, de forma complementar, as propriedades de cada uma
+das classes, em especial aquelas relacionadas ao modelo Dublin Core. Este modelo está
+relacionado com o domínio multimodal (ligação utilizando círculos pretos) através da ligação
+Has_Dublin_Core_Model, ou seja, é o “range” (em linguagem ontológica), conforme
+indicado por losangos. Seguindo o mesmo padrão, de círculos e losangos, estão presentes na
+mesma figura relações que destacam, por exemplo, que um vídeo e um slide show são
+compostos por imagem.
+Conforme foi dito, o modelo está sendo aplicado a trabalhos de teses e dissertações em
+página sendo especialmente construída para isto que está disponível em breve.
+O trabalho ainda deverá sofrer uma depuração tanto no tratamento dos campos para a
+descrição dos vídeos como em aspectos de tratamento de vídeos para que tenham uma
+qualidade compatível ao seu uso educacional.
+
+6 Considerações finais
+Há grandes vantagens em explorar a descrição de metadados usando ontologias uma
+vez que ao exportar OWL são fornecidos mecanismos de descrição semântica, incluindo os
+recursos multimídia como foi proposto neste trabalho.
+O ambiente Protégé utilizado (versão 4.1.) possibilita a geração automática não apenas
+dos formatos OWL, mas o padrão RDFS equivalente dispensando o trabalhoso processo de
+desenvolvimento do perfil de aplicação, assim como poderá ampliar o uso da ontologia a
+partir do compartilhamento não apenas dos metadados, mas da própria ontologia utilizada
+para isto.
+Embora as aplicações iniciais estejam focadas no uso de imagens de slide show, o
+ambiente poderá se expandir para outras áreas como a difusão científica em que a edição dos
+vídeos poderá ser importante.
+Ao parecer dos autores as ontologias são especialmente úteis na gerência de
+conhecimento e para recuperação da informação, pois unifica termos, conceitos e relações de
+um mesmo domínio, possibilitando não só a categorização, mas também permitindo reuso. Ao
+utilizar ontologias e linguagens de marcação na Web Semântica, as noções de representação
+do conhecimento podem ser mais elaboradas e através delas papéis dinâmicos e
+automatizados podem ser desempenhados na organização do conhecimento.
+Conforme se apontou no texto, muitas das abordagens atuais procuram combinar um
+padrão de metadados específico de multimídia os padrões que já são usados para descrever
+domínios de aplicação semelhantes, neste caso Dublin Core tem inúmeras vantagens, além da
+popularidade e da simplicidade, pois é usado em ambientes como os metadados usando em
+sistemas como OJS e seu correspondente nacional o SEER para revistas eletrônicas.
+O trabalho encontra-se em fase de tornar público os resultados através de um site
+especialmente construído para isto e já está encontrando aplicações em outras áreas como a
+elaboração de vídeos para Bibliotecas Comunitárias.
