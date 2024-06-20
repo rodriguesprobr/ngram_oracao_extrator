@@ -1,0 +1,593 @@
+
+MODELOS DE ANOTAÇÃO PARA REPRESENTAÇÃO DE DOCUMENTOS: UMA PROPOSTA
+ONTOLÓGICA PARA O DOMÍNIO DE ANOTAÇÃO MULTIMÍDIA
+Modalidade da Apresentação: Comunicação Oral
+Resumo: O artigo apresenta e discute modelos de anotação para a representação de documentos
+em ambientes digitais, como tags, atributos e relações, destacando o modelo de anotação baseado
+em ontologias numa perspectiva de tratamento semântico de documentos. Objetiva apresentar uma
+proposta de modelagem ontológica para a organização semântica de metadados destinados à
+anotação de documentos multimídia e relatar suas vantagens no uso em ambientes digitais. A
+proposta de modelagem foi fundamentada metodologicamente em ontologias multimídia mais bem
+colocadas em um ranking obtido a partir de uma avaliação criteriosa acerca de reúso de ontologias, o
+que assegurou a seleção de recursos de conhecimento adequados para a integração na conceituação
+do modelo. O modelo buscou cobrir requisitos determinados na pesquisa propondo classes e
+relacionamentos ontológicos fundamentais oriundos da combinação e alinhamentos de ontologias
+multimídia previamente analisadas e avaliadas, promovendo uma arquitetura abrangente para a
+organização semântica de metadados multimídia endereçados a aplicações que lidam com recursos
+de informação na Web.
+
+Palavras-Chave: Modelos de Anotação; Anotação Multimídia; Anotação Semântica; Ontologias.
+
+1 INTRODUÇÃO
+O significado tradicional para o termo “anotação” está relacionado a “notas
+explicativas adicionadas a um livro ou documento” (THE OXFORD ENGLISH DICTIONARY, 1989,
+p.54). O uso de anotações ou, simplesmente, metadados para descrever itens bibliográficos é
+uma prática antiga na área de Biblioteconomia (TAYLOR, 2004; ABBAS, 2010), uma vez que o
+processo de catalogação e indexação sempre foi realizado no intuito de organizar, descrever e
+melhorar o acesso à informação. Siqueira e Silva (2011) enfatizam a importância dos princípios
+teóricos e metodológicos oriundos da Biblioteconomia no processo evolutivo de técnicas de
+tratamento descritivo da informação, como é o caso dos metadados:
+Metadado é produto do desenvolvimento histórico de regras bibliográficas,
+mantendo, portanto, conexões evolutivas com os códigos, tais como o
+International Standard Bibliographic Description (ISBD), o Anglo-American
+Cataloguing Rule (AACR2); formatos como Machine-Readable Cataloging
+(MARC); e com as novas metodologias de tratamento da informação, a
+exemplo do Resource Description and Access (RDA) e do Extensible Markup
+Language (XML) (SIQUERIA; SILVA, 2011, p. 12).
+
+Contudo, com a evolução das tecnologias da informação e comunicação,
+principalmente com o paradigma da Web Semântica, o conceito “anotação” perpassa o
+universo bibliográfico (BÜRGER et al., 2009; SILVA; SOUZA, 2014). Schandl et al. (2011)
+designam “anotação” como uma informação vinculada a outro item informacional, e inserem
+“anotação multimídia” como sendo uma informação vinculada a um objeto multimídia, que
+varia de imagens estáticas a complexas animações 3D. Multimídia no contexto deste trabalho
+contempla um documento composto que faz referência a vários tipos de objetos, tais como
+vídeo, texto, som, imagem, entre outros, e que pode ser dividido em partes que contêm
+textos, imagens, e assim por diante (SITARAM; DAN, 1999). Atualmente, objetos multimídia
+tornam-se onipresentes no lazer, no aprendizado, nas artes, na comunicação, no comércio,
+nas ciências; tomando os formatos de arquivos digitais de texto, vídeo, áudio e imagens
+produzidos e disponibilizados na Internet e na Web. Podem-se citar exemplos de aplicações
+multimídia (SCHANDL et al., 2011; DOMINGUE; FENSEL; HENDLER, 2011; NIXON et al., 2011)
+voltadas a áreas de educação (ensino local e a distância; bibliotecas digitais), de saúde
+(telemedicina, bases de dados de imagens médicas), de entretenimento (bases de dados sobre
+músicas, jogos, vídeo sob demanda, TV interativa), de negócios (vídeo conferência, comércio
+eletrônico) e de patrimônio cultural (coleções digitais organizadas em bases de dados oriundas
+
+
+de museus e outras instituições responsáveis pela guarda e divulgação de obras de arte e
+documentos históricos), dentre outras.
+A natureza da representação de documentos multimídia (SITARAM; DAN, 1999) pode
+ser estática, independente de tempo (uma fotografia, por exemplo), e dinâmica, dependente
+de tempo (uma sequência de vídeo, por exemplo). Adjeroh e Nwosu (1997) acrescentam que
+alguns tipos de dados multimídia como vídeo, áudio e sequências de animação possuem
+requisitos temporais que implicam diretamente na representação, armazenamento,
+transmissão, manipulação e apresentação do dado. De forma similar, imagens, gráficos e
+vídeos possuem restrições espaciais em seus conteúdos no que diz respeito a relações
+espaciais entre objetos individuais pertencentes a uma imagem ou a um quadro (frame, em
+inglês) de um vídeo.
+Bürger et al. (2009) ponderam que anotação multimídia pode ser realizada em
+diferentes níveis, a saber: i) nível de metadados (administrativos ou descrições técnicas como
+título, identificador, formato); ii) nível de conteúdo (pessoas retratadas na mídia, localizações,
+eventos); e iii) nível multimídia (atributos técnicos de nível baixo, como cores, texturas,
+timbres de som, descrição de melodia). E enfatizam desafios para o contexto de anotação
+multimídia, principalmente na caracterização da mídia em nível de conteúdo, o que pode
+ocasionar um tipo de problema conhecido na literatura como gap semântico (SUÁREZFIGUEROA; ATEMEZING; CORCHO, 2013) entre a inteligência humana e a computacional. A
+dificuldade encontra-se na harmonização entre a forma como o conteúdo multimídia é
+percebido pelo usuário humano e o tratamento semântico deste mesmo conteúdo pela
+máquina. Já em Barreto (2007), índices ou metadados extraídos automaticamente ou
+anotados manualmente podem ser classificados de acordo com a relação estabelecida com a
+mídia nas seguintes categorias: i) metadados independentes de conteúdo; ii) metadados
+dependentes de conteúdo; e iii) metadados descritivos de conteúdo. Em (i), os dados não são
+concernentes diretamente ao conteúdo da mídia, mas estão associados a esta, como formato,
+autoria, data, local, etc.; em (ii) os dados refletem características consideradas primitivas ou de
+nível baixo (ou médio), como cor, textura, forma, relações espaciais, movimento e
+combinações destes; e em (iii) os dados referem-se ao conteúdo semântico envolvendo
+entidades da mídia com entidades do mundo real ou eventos temporais, emoções e
+significados associados a sinais audiovisuais e cenas.
+
+
+Finalmente, sistemas de informação multimídia progridem continuamente com
+soluções tecnológicas eficientes para descrição e indexação multimodal, o que afeta a
+sociedade em geral no que tange à cultura, à produção industrial, à educação, à segurança, à
+medicina, dentre outras atividades humanas. Entretanto, soluções mais efetivas só serão
+possíveis a partir de um consenso na definição de conceitos, terminologias, padrões unificados
+de metadados para representação e recuperação semântica de recursos multimídia,
+principalmente no contexto da Web Semântica.
+As subseções a seguir descrevem modelos de anotação em ambientes digitais incluindo
+tags, atributos, relações e ontologias dentre os quais se caracterizam por seus níveis de
+complexidade estrutural, a saber: i) formalismo e riqueza estrutural que promovem
+adequabilidade com tecnologias semânticas; e ii) exigência requerida do usuário envolvido no
+processo de anotação. Destaca-se que o modelo de anotação baseado em ontologias é o
+modelo de interesse do presente artigo no qual se pretende apresentar uma proposta de
+modelagem ontológica para a organização semântica de metadados destinados à anotação de
+documentos multimídia e relatar suas vantagens no uso em ambientes digitais.
+O artigo dá sequência em sua organização expondo na seção 3 os aspectos
+metodológicos aplicados na concepção da proposta do modelo de anotação; seguido da seção
+4 destinada à apresentação do modelo; e, por fim, a seção 5 que traça as considerações finais
+acerca da proposta de modelagem ontológica.
+2 MODELOS DE ANOTAÇÃO
+Um modelo de anotação define a forma real em que a anotação é expressa (por meio
+de tags, atributos, relações e ontologias) e vinculada ao conteúdo original anotado. Podem-se
+incluir várias características relacionadas à proveniência como, por exemplo, uma informação
+sobre o autor (se é humano ou máquina), um intervalo de tempo, ligações para conteúdo
+externo estruturado ou não estruturado, ou especificações de fragmentos relacionados ao
+conteúdo original que está sendo anotado (BÜRGER et al., 2009).
+Bürger et al. (2009) ressaltam que os modelos de anotação são dependentes da mídia
+e podem ser também influenciados pelo propósito do processo de anotação; e acrescentam
+que um modelo de anotação genérico constitui de um determinado recurso que é descrito por
+uma anotação fornecida por um usuário (humano ou máquina). No contexto da Web, um
+
+
+recurso é qualquer artefato identificável por um identificador único (por exemplo, um URI Uniform Resource Identifier), como documentos eletrônicos expressados em mídias diversas.
+2.1 Modelo de anotação por meio de tags
+Um elemento de anotação baseado em tag caracteriza-se por uma palavra-chave não
+hierárquica ou termo-livre associado a um recurso. Esse modelo geralmente descreve em
+linguagem natural uma propriedade particular de um recurso, como, por exemplo, o nome da
+pessoa retratada na pintura; o nome do lugar onde a pintura foi concebida; um tópico de um
+novo artigo.
+Como vantagens, o modelo não requer uma curva de aprendizagem para uso. Os
+usuários, principalmente os da Web 2.0, podem facilmente anotar um recurso Web e
+encontrar (através de consulta ou busca) outros recursos que foram anotados com a mesma
+tag. As desvantagens estariam relacionadas a um modelo de representação mínima do ponto
+de vista de complexidade estrutural. E ainda podem promover ambiguidades para máquinas e
+usuários humanos na interpretação das propriedades anotadas. Por exemplo: a tag em
+linguagem natural “John” vinculada a uma foto, não especifica se “John” é uma pessoa na foto
+ou se ele é o fotógrafo que bateu a foto.
+Algumas aplicações que fazem uso de modelos baseados em tags são citadas: o
+Delicious1 (serviço social de compartilhamento de blogs, artigos, músicas, vídeos, etc); o Flickr2
+(serviço de hospedagem de imagens); e o CiteUlike3 (serviço social para compartilhar
+referências científicas).
+2.2 Modelo de anotação por meio de atributos
+Considera-se um elemento de anotação baseado em “atributo” como um par <AN,
+AV>, em que AN é o nome do atributo e AV é o seu valor. O nome do atributo especifica a
+propriedade do recurso anotado como, por exemplo, um livro que poderia ser anotado com os
+seguintes atributos: título, editora e ano de edição. O valor do atributo especifica o conteúdo
+correspondente, respectivamente “Web Semântica: a Internet do Futuro”, “Livros técnicos e
+científicos” e “2005”. O modelo ainda possibilita consistir tipos de dados para atributos e
+habilitar verificações de tipos no momento da consulta.
+
+1
+
+https://del.icio.us/about
+http://www.flickr.com/
+3
+http://www.citeulike.org/
+2
+
+
+Como vantagens, o modelo é bem familiar para usuários e comumente usado na Web
+e em aplicações de desktops. Diferentemente das tags, atributos definem explicitamente as
+propriedades dos recursos descritos e, portanto, possibilitam um enriquecimento na anotação
+do recurso e na linguagem de consulta. Alguém pode buscar, por exemplo, por imagens de
+livros sobre Web Semântica publicados entre 2000 e 2013 por um autor específico. Como
+desvantagens, o modelo mesmo superando a tag no que diz respeito a enriquecimento da
+anotação, ainda é limitado na semântica de suas anotações. A referência deste modelo se dá
+para recursos simples e, portanto, não pode ser usado para inter-relacionamentos entre
+recursos (busca e navegação entre recursos relacionados). Além disso, anotações por meio de
+atributos requerem um maior entendimento (por parte do usuário) acerca do significado dos
+dados envolvidos do que em anotações por meio de tags. Grande parte das redes sociais
+como Facebook e Picasa consideram os usuários como um recurso e usam o modelo de
+atributos para representar seus perfis.
+2.3 Modelo de anotação por meio de relações
+Um elemento de anotação “relação” é um par <REL, REC> em que REL é o nome da
+relação e REC é outro recurso (diferente do recurso que está sendo anotado). O nome da
+relação define como o recurso anotado está relacionado com REC. Desse modo, o modelo de
+anotação de relação é uma extensão do modelo de atributos, permitindo o usuário interligar
+recursos. Em um artigo científico, por exemplo, uma citação faz referência a outro artigo,
+definindo uma relação entre documentos citantes e documentos citados.
+O modelo de anotação por meio de relações possui vantagens em fornecer um modo
+de interligar vários recursos através de links (relações). Permite o usuário navegar de um
+recurso para outro, habilitando busca e navegação baseados nesses links de relações. Os
+sistemas hipertextos e hipermídias utilizam o modelo de relações para navegação entre textos
+e mídias; a teoria dos mapas conceituais utiliza fundamentos do modelo de relações para
+definir relacionamentos entre conceitos a partir de esquemas mentais produzidos pelo
+indivíduo, processo esse auxiliado pelos fatores da cognição; e algumas linguagens para
+descrição de recursos na Web como Resource Description Framework (RDF) utilizam o modelo
+de relações (cuja fundamentação provém das redes semânticas) para descrever recursos e
+objetos como nós e predicados como arcos que ligam os nós. Como desvantagem, o usuário
+pode criar uma expectativa de ser conduzido por modelos mentais de alto nível, o que não
+
+
+ocorre devido à necessidade de conhecimento explícito sobre os dois recursos e os tipos de
+relacionamentos existentes entre eles. Tal limitação é coberta pela proposta de modelos de
+anotação baseados em ontologias que será elucidada na próxima seção.
+Aplicações como o Facebook permite a seus usuários anotarem fotos com links a perfis
+de pessoas nelas representadas. A base de conhecimento Wikidata4 é descrita como uma base
+de dados aberta e compartilhada de conhecimento sobre o mundo. É uma base editada de
+forma colaborativa através de relações cruzadas entre os dados, os quais podem ser usados
+em projetos como o Wikipedia5.
+2.4 Modelo de anotação por meio de ontologias
+Pode-se perceber nos modelos descritos anteriormente que os elementos de anotação
+são fornecidos por usuários em um formato livre, isto é, usando-se de linguagem natural, sem
+um controle de vocabulário. Neste caso, as anotações ficam sujeitas a problemas de
+heterogeneidade semântica devido à natureza ambígua da linguagem natural.
+Bürger et al. (2009) insere três principais questões relacionadas ao processo de
+anotação: i) polissemia: os elementos de anotação podem ter interpretação ambígua, por
+exemplo, o termo “Java” pode ser usado para descrever um recurso sobre a “ilha de Java” ou
+um recurso sobre a “linguagem de programação Java”; essa situação pode reduzir a precisão
+na busca em um sistema de recuperação da informação; ii) sinonímia: os elementos de
+anotação podem ser sintaticamente diferentes, mas com o mesmo significado, por exemplo,
+os nomes de atributos “é imagem de” e “é pintura de” podem ser usados alternativamente
+por usuários e, portanto, deveriam ser ligados como atributos sinônimos; e iii) gap na
+especificidade: os termos usados na anotação e na busca são diferentes em suas
+especificidades, por exemplo, quando o usuário executa a busca com o termo “queijo”, os
+recursos anotados com o termo “cheddar” (um tipo de queijo), caso não sejam vinculados, não
+serão encontrados no sistema.
+Os problemas supracitados geralmente são endereçados usando-se de instrumentos
+como vocabulários controlados (ANSI, 2005) para identificar de forma unívoca e não ambíguos
+recursos ou documentos envolvidos em sistemas de recuperação de informação. Desse modo,
+no processo de anotação, o usuário utiliza elementos do vocabulário controlado (ex. termos,
+conceitos) como forma de desambiguar termos destinados à descrição do recurso; já no
+4
+5
+
+http://www.wikidata.org
+http://www.wikipedia.org
+
+
+processo de busca, o usuário produz uma consulta buscando desambiguar os termos
+envolvidos a partir de elementos do vocabulário controlado e, em seguida, submete esta
+consulta a uma máquina de busca.
+Ontologias como suporte a anotações podem ser usadas como vocabulários
+controlados, no entanto numa perspectiva de tratamento semântico, o que permite um
+usuário descrever e interligar recursos existentes por meio de qualificadores como conceitos,
+instâncias, propriedades e restrições mantidas entre tais recursos. O modelo é endereçado à
+anotação semântica de documentos, o que os tornam inteligentes no sentido de possibilitar
+conhecimento sobre o conteúdo, viabilizando processamento pela máquina (UREN et al.,
+2005). Tradicionalmente, o uso de metadados é a forma comumente empregada para gerar
+conhecimento sobre documentos, entretanto a Web Semântica propõe anotar conteúdo de
+documentos usando ontologias de domínio (BERNERS-LEE; HENDLER; LASSILA, 2001). Para tal,
+padrões internacionais relacionados a marcações de dados, a primitivas de modelagem e a
+linguagens de representação são promovidos e mantidos pelo World Wide Web Consortium
+(W3C) para desenvolvimento de ontologias como Ontology Web Language (OWL), além do
+esquema de anotação RDF. Shadbolt, Hall e Berners-Lee (2006) acrescentam que anotação
+semântica é uma abordagem subjacente aos conceitos preconizados pela Web Semântica no
+que tange ao fornecimento de significado à organização da informação por meio de conexões
+lógicas entre os termos, o que promove interoperabilidade entre sistemas. Segundo Uren et
+al. (2005), anotação semântica identifica formalmente conceitos e relações entre conceitos
+em documentos, e vão além de anotações textuais sobre o conteúdo. E complementam
+afirmando que anotação semântica deve ser explícita, formal e livre de ambiguidade sendo,
+respectivamente, acessível, entendida e identificável publicamente.
+As ontologias podem ser usadas tanto para anotar recursos, quanto para auxiliar o
+processo de anotação. No primeiro caso, usuários (ou grupos de especialistas) constroem
+ontologias para fornecer seus componentes (ex. classes, instâncias, relações) como elementos
+de anotação. Por exemplo, para vincular uma página sobre “Napoleão” a uma página sobre
+“Pessoas” com a relação ontológica is-instance-of (é-instancia-de), o usuário anota a página
+sobre Napoleão com um elemento de anotação da ontologia; esses elementos, que
+possivelmente foram disponibilizados por diferentes usuários, são em seguida agregados a
+uma ontologia maior que pode ser vista como uma estrutura de anotação complexa usada
+para descrever os recursos anotados (BÜRGER et al., 2009). Tal cenário faz menção ao
+
+
+paradigma Linked Data (BIZER; HEATH; BERNERS-LEE, 2009), uma proposta emergente do W3C
+para expor e compartilhar dados como recursos na Web e interligá-los semanticamente por
+meio de ontologias construídas e disponibilizadas por comunidades diversas. No segundo caso,
+usuários fornecem elementos de anotação (de forma simples e transparente) e promovem
+ligações dessas anotações a fontes de conhecimento subjacentes a ontologias. Por exemplo,
+para evitar ambiguidade sobre a palavra “Paris” oriunda de um texto, uma anotação
+semântica poderia relacioná-la a um elemento da ontologia que a identificasse na categoria
+“Cidade” bem como associá-la à instância “França” pertencente à categoria “País”. Desse
+modo “Paris” não poderia ser referenciada de outra forma a não ser como uma cidade
+francesa.
+Algumas vantagens podem ser destacadas no modelo de anotação por meio de
+ontologias, a saber: i) por ser um modelo conceitual formal, permite relações explícitas e
+significativas entre dado estruturado (tal como uma ontologia) e não estruturado (um texto,
+por exemplo). Isso possibilita uma variedade de técnicas de recuperação, que podem ser
+baseadas em esquema de conhecimento expresso em uma ontologia; ii) beneficia raciocínio
+automatizado, coocorrência de anotação ou entidades no mesmo recurso ou contexto; e iii)
+combina tudo isso com tipos específicos de dados não estruturados, como busca em texto
+completo em um sistema de recuperação da informação. Desvantagens também são
+desdobradas nesse modelo o qual apresenta novos desafios para anotadores humanos,
+embora proporcione uma riqueza no processamento automático relacionado às anotações.
+Duas vertentes estão entre os principais desafios para esse modelo de anotação: (i)
+usabilidade; e (ii) manutenção dos modelos conceituais. Em (i) o aspecto de usabilidade é a
+chave para o envolvimento humano na geração de metadados semânticos e a principal
+barreira a ser enfrentada para permitir formas harmônicas de interação do usuário com o
+software e os dados. Um desafio para especialistas em usabilidade e projetistas de interface
+visual é capacitar um ser humano a encontrar um caminho para uma classe, entidade ou
+relacionamento que ele queira usar como anotação. Outra tarefa desafiadora é a (ii)
+manutenção das ontologias, que envolve a atualização do conhecimento proveniente de
+fontes externas, além de alinhamento sintático e semântico oriundo de aproveitamento de
+ontologias existentes (contexto de reúso).
+
+
+Como exemplo de aplicações citam-se a OntoWiki6, uma wiki semântica de acesso livre
+e de código aberto que serve como um editor de ontologias e sistema de aquisição de
+conhecimento; e o sistema Semantic Wikipedia (KRÖTZSCH et al., 2006), uma extensão da
+enciclopédia livre Wikipedia cuja proposta é reforçar a semântica de seu conteúdo. Neste
+sistema, os usuários podem interligar artigos através de suas anotações com links como
+“autor” ou “nasceu em”, permitindo consultas e buscas de modos mais específicos.
+Finalmente, comunidades e entidades normativas interessadas em fornecer um
+framework comum de metadados para aplicações de mídias inteligentes, como são os casos
+do W3C e da International Organization for Standardization/ International Electrotechnical
+Commission (ISO/IEC), buscam soluções inteligentes para descrição de conteúdo multimídia
+processável por máquina e baseada em semântica. Tais propostas tornam-se realizáveis por
+meio da Web Semântica e da Interface de Descrição de Conteúdo Multimídia, conhecida como
+MPEG-7. Contudo, observam-se diferenças pontuais nas propostas dos frameworks envolvidos
+no que diz respeito à descrição de conteúdo multimídia. A norma ISO MPEG-7 (NACK;
+LINDSAY, 1999a; NACK; LINDSAY, 1999b; MARTÍNEZ; KOENEN; PEREIRA, 2002) empreendeu
+esforços na proposição de uma interface comum para descrever material multimídia,
+refletindo informação sobre o conteúdo. O MPEG-7 apesar de ser um padrão de descrição
+recomendado pela comunidade multimídia, principalmente por seu background de
+conhecimento neste domínio, possui limitações de ordem semântica por ser baseado no
+formato XML Schema. Por outro lado, O W3C e comunidades afins vêm empregando esforços
+de pesquisas para ir além dos padrões de metadados correntes com a adoção de ontologias
+para anotação multimídia (SILVA; SOUZA, 2014) baseadas em RDF/OWL e no padrão MPEG-7.
+3 METODOLOGIA DE PESQUISA
+A classificação da pesquisa torna-se útil para o estabelecimento de seu marco teórico e
+da análise de seus fatos do ponto de vista empírico, de forma a confrontar a visão teórica com
+os dados da realidade. Com base na abordagem do problema, esta pesquisa pode ser
+classificada como qualitativa, pois há a necessidade de se entender o que está por detrás do
+fenômeno investigado do qual ainda pouco se conhece. Sendo assim, a determinação, a
+análise e a descrição dos métodos e das técnicas adequadas aos processos envolvidos na
+pesquisa serão possíveis através de um maior entendimento desse fenômeno presente no
+6
+
+http://aksw.org/Projects/OntoWiki.html
+
+
+domínio a ser estudado. Com base em seus objetivos, esta pesquisa pode ser classificada em
+três tipologias, a saber: i) exploratória, pois pretende investigar e aprimorar ideias sobre um
+assunto emergente no campo das ontologias – recursos de conhecimento para anotação de
+conteúdo multimídia – em que se requer uma investigação minuciosa na literatura e em casos
+específicos que fazem uso de recursos nessa perspectiva; ii) descritiva, pois pretende levantar
+e descrever características do fenômeno a ser investigado (conforme já elucidado acima) à luz
+da literatura e de material empírico específico; e iii) explicativa, pois a proposta de
+modelagem conceitual requer a elucidação de parte da realidade multimídia representada na
+conceituação do modelo. Em relação aos procedimentos técnicos para coleta e análise dos
+dados, esta pesquisa pode ser classificada como bibliográfica e documental, pois pretende
+usar como fonte de consulta materiais já publicados: artigos científicos, anais de congressos,
+relatórios técnicos de pesquisa, teses, dissertações, normas e fontes documentais subjacentes
+às ontologias estudadas. Para tal, brevemente abaixo serão descritas as orientações
+metodológicas e as regras de modelagem subjacentes a padrões multimídia que foram
+seguidas para se concretizar a proposta do modelo de anotação. Ressalta-se que por limite de
+extensão do presente artigo, detalhes importantes ao processo de construção do modelo
+foram omitidos, entretanto, poder-se-á consultá-los na íntegra em Silva (2014, p. 145).
+A proposta em si está fundamentada em recursos de conhecimento representativos
+selecionados por meio de um ranking de ontologias candidatas a reúso para o domínio de
+anotação multimídia. O ranking foi obtido pela adoção do guia NeOn Methodology (SUÁREZFIGUEROA; GÓMEZ-PÉREZ; FERNÁNDEZ-LÓPEZ, 2012), considerado atual e confiável em
+relação a testes e validações em variados domínios, inclusive o de anotação multimídia.
+O modelo conceitual de anotação multimídia foi concebido a partir de princípios
+interdisciplinares quando empregou em sua estrutura central uma ontologia conceitualista
+baseada em aspectos cognitivos, filosóficos e linguísticos, a DOLCE+DnS Ultralite (DUL7)
+(MASOLO et al., 2003), a qual fornece metacategorias abstratas envolvendo eventos,
+objetos, tempo, espaço, etc, para organizar semanticamente conteúdos advindos de
+ontologias de domínios específicos. Agregado a essa rica estrutura conceitual, encontram-se
+também os padrões de projeto de conteúdo de ontologias (GANGEMI, 2005; GANGEMI;
+PRESUTTI, 2009) que empregam soluções reusáveis para problemas de modelagem de
+conteúdo recorrente. No caso específico do modelo proposto, utilizaram-se padrões de
+7
+
+http://ontologydesignpatterns.org/wiki/Ontology:DOLCE%2BDnS_Ultralite
+
+
+projeto para a organização genérica de entidades associadas a conteúdo multimídia, como é
+o caso de anotação. Tais padrões possuem problemas e soluções comuns que podem ser
+usados em variadas áreas e domínios que lidam com recursos multimídia. Assim, os padrões
+de projeto herdam de sua ontologia fundamental os axiomas e serviços de inferência
+necessários à manutenção da semântica dos elementos constituintes.
+A comparação de nove propostas de ontologias para anotação multimídia frente a
+padrões de metadados ISO como o MPEG-7 evidenciou características relevantes que podem
+e devem ser descritas para melhor recuperação de recursos multimídia, principalmente no
+contexto da Web. A necessidade de integração semântica e disponibilização global de
+recursos multimídia na rede é um propósito comum entre as propostas de ontologias
+pesquisadas. O ranking de ontologias candidatas a reúso, produto da análise comparativa,
+evidenciou as ontologias mais proeminentes para o domínio de anotação multimídia, a
+saber, e nesta ordem: Media Ontology, M3O, COMM e M3 Multimedia (SILVA, 2014, pp.265274). A partir das constatações das características multimídia concernentes a cada uma
+delas, pôde-se selecionar os recursos de conhecimento provenientes de suas estruturas a
+partir do confrontamento com requisitos funcionais e não funcionais determinados na
+pesquisa que permitiram a proposição de um modelo conceitual para anotação de
+documentos multimídia.
+Os padrões multimídia usados na composição do modelo aqui proposto são
+fundamentados em três padrões de projeto referenciados pela DUL, a saber: Description and
+Situation, Information and Realization e Data Value. Nesse sentido, os padrões da ontologia
+M3O (ontologia selecionada como recurso de conhecimento central do modelo proposto)
+apóiam-se nas teorias fundamentais da DUL e nas abordagens baseadas em padrões para
+projeto de ontologias que representam aspectos específicos e claramente identificados para
+o domínio de anotação.
+O padrão Description and Situation fornece uma formalização ontológica de contexto
+através da introdução de papéis (MASOLO et al., 2003). A semântica embutida nesse padrão
+de projeto declara que uma situação satisfaz (relação satisfies) uma descrição em que a
+situação é um contexto específico com entidades concretas que expressam determinado
+papel; e a descrição é uma conceituação que define certos conceitos que determinam
+(relação classifies) os papéis que as entidades desempenham num determinado contexto ou
+situação. Já as entidades são indivíduos considerados relevantes ou verdadeiros apenas num
+
+
+dado contexto. Cada entidade participa de uma determinada situação por meio da relação
+‘has setting’ como, por exemplo, um metadado relacionado a histograma de cor de uma
+imagem ‘has setting’ numa situação de anotação da mídia.
+O padrão Information and Realization (PRESUTTI; GANGEMI, 2008) representa a
+distinção entre objetos de informação e realizações de informação em tipos diferentes de
+mídias como áudio, imagem, texto e vídeo. A classe relacionada ao objeto de informação
+(Information object) declara que um objeto é realizado no mínimo por uma realização de
+informação (Information realization) e a forma de ligação entre o objeto e sua realização é
+por meio da relação ‘is realized by’. Ambos os conceitos são subclasses de InformationEntity
+que permite tratar a informação em um sentido geral. Objetos de informação podem ser
+poemas, canções, romances, fórmulas e suas realizações físicas como livros impressos, faixas
+de músicas registradas, arquivos físicos, etc. A separação entre objetos e suas realizações é
+importante, pois alguns metadados independentes de conteúdo como tamanho do arquivo
+ou localização da mídia na Web são comumente aplicados à realização da informação; já os
+metadados descritivos de conteúdo multimídia buscam descrever a mensagem a ser
+transmitida para o consumidor. Portanto, esta separação torna-se relevante no sentido de
+fornecer uma distinção clara entre a semântica e o recurso de mídia.
+O padrão Data Value representa valores de dados concretos para uma entidade de
+modo a reduzir o risco de ambiguidades (SAATHOFF; SCHERP, 2010). Em DUL existem os
+conceitos de Quality e Region (MASOLO et al., 2003) os quais, respectivamente,
+representam atributos intrínsecos a uma entidade ligados a seus valores com espaços de
+dados correspondentes. No padrão, o atributo é representado pelo conceito Quality cuja
+ligação com uma Entity se dá pela relação ‘hasQuality’. O Quality é ligado ao conceito Region
+pela relação ‘hasRegion’ que, por sua vez, recebe o valor concreto usando a relação
+‘hasRegionDataValue’. As primitivas usadas no padrão Data Value mostram-se úteis para
+expressar valores de dados estruturados suportados pelo MPEG-7, especialmente para
+dados extraídos automaticamente da mídia, como cor, textura, forma, etc.
+No padrão multimídia anotação (SAATHOFF; SCHERP, 2010), a estrutura básica
+subjacente à anotação é sempre a mesma. A semântica envolvendo o conceito “anotação”
+corresponde à associação arbitrária de um metadado a uma entidade de informação que
+pode ser um objeto de informação e uma realização de informação. Metadados podem ser
+representados por descritores visuais e de áudio de nível baixo obtidos por métodos
+
+
+automáticos; informações técnicas de autoria da mídia; e anotações semânticas retratadas
+na mídia para interpretação por pessoas humanas. As restrições impostas pelo padrão de
+anotação são descritas como se segue. A classe que representa a situação de anotação
+nomeada AnnotationSituation envolve exatamente uma entidade de informação (que será
+anotada) e no mínimo uma entidade com papel de metadado. Esta classe usa a relação
+satisfies para satisfazer a descrição correspondente ao padrão nomeado AnnotationPattern.
+Este padrão define (relação defines) conceitos que determinam papéis às entidades
+envolvidas no contexto de anotação. O axioma define exatamente um AnnotatedConcept e
+ao menos um AnnotationConcept. Um AnnotatedConcept classifica (relação classifies) cada
+InformationEntity, que é o sujeito da anotação. Cada item de metadado é representado por
+uma Entity a qual é classificada por um AnnotationConcept. Como exemplo, um objeto
+imagem (Information object) que precisaria ser anotado por um conceito semântico advindo
+de uma ontologia de domínio (ex. Dbpedia) seria classificado por um AnnotatedConcept. A
+instância da ontologia de domínio que faz o papel de metadado semântico seria classificada
+em AnnotationConcept. A ligação entre o objeto imagem e a instância da ontologia Dbpedia
+é estabelecida pela relação ‘has setting’ em que, por regra do padrão, todas as Entity têm
+um ‘has setting’ com a situação de anotação que satisfaz o AnnotationPattern.
+Finalmente, a linguagem de modelagem adotada para fins de representação dos
+diagramas de classes do modelo conceitual de anotação multimídia foi a Unified Modeling
+Language (UML) por possuir uma notação gráfica simples e de ser capaz de modelar
+aspectos estruturais de um sistema (BOOCH; JACOBSON; RUMBAUGH, 2006). O software
+usado na concepção dos diagramas de classes do modelo foi o StarUML 8 versão 5.0.2.1570.
+4 APRESENTAÇÃO DO MODELO ONTOLÓGICO PARA ANOTAÇÃO MULTIMÍDIA
+A proposta do modelo conceitual para anotação multimídia buscou cobrir
+especialmente os aspectos funcionais estabelecidos na pesquisa envolvendo metadados de
+tipo multimídia para a representação de documentos dessa natureza. Desse modo, as classes e
+os relacionamentos ontológicos propostos no modelo, oriundos da combinação de
+alinhamentos de ontologias de domínio previamente analisadas e avaliadas, promoveram uma
+arquitetura abrangente para a organização semântica de metadados multimídia endereçados
+principalmente a aplicações que lidam com recursos de informação na Web.
+8
+
+http://staruml.sourceforge.net/en/
+
+
+Os diagramas a seguir apresentam a proposta do modelo conceitual destinado à
+organização de metadados multimídia. Para fins de melhor visualização e entendimento, o
+modelo foi segmentado em duas partes associadas aos padrões de projeto subjacentes à
+conceituação proposta. Os diagramas apresentam classes de âmbito mais genérico e não
+expõem, portanto, classes específicas por razões de simplificação na forma de visualização
+dos mesmos.
+Figura 1 - Modelo conceitual de referência multimídia em notação UML: classes de entidades
+centrais.
+
+Fonte: elaborado pela autora.
+
+Figura 2 - Modelo conceitual de referência multimídia em notação UML: classes de entidades de
+anotação.
+
+Fonte: elaborado pela autora.
+
+
+O diagrama exibido na Figura 1 apresenta as classes de entidades centrais do modelo
+de referência, as quais fornecem as condições necessárias para se anotar conteúdo
+multimídia e a própria mídia. Destaca-se nesse diagrama o padrão Data Value da ontologia
+de fundamentação DUL, incluindo os relacionamentos entre um Quality, um Region e uma
+Entity a fim de se obter valores concretos para esta última. O diagrama exibido na Figura 2
+apresenta as classes9 de entidades que participam de uma situação de anotação, incluindo o
+sujeito desta (InformationEntity) e as classes de tipos de metadados especializadas de
+AnnotationConcept que desempenham o papel de anotação.
+As ontologias que apresentaram modelagens centradas em relações e atributos,
+especialmente a Media Ontology, tiveram suas propriedades agrupadas em classes
+conceituais, resultando nas classes Media_Creation, Media_Classification, Media_Information
+e Media_Usage que se destinam respectivamente à criação e produção da mídia, classificação
+da mídia, informação sobre a mídia e informação sobre o uso da mídia. Tais classes se
+propõem a organizar formalmente os metadados relacionados à gestão de recursos
+informacionais, os quais podem ser aplicados na realização da mídia e no conteúdo desta,
+promovendo, assim, a organização de descrições de alto nível para variados domínios que
+necessitam desta distinção semântica para representação e recuperação de recursos de
+informação.
+As
+
+classes
+
+visual-descriptor-parameter,
+
+localization-descriptor-parameter
+
+e
+
+LL_Audio_Descriptor se propõem a organizar formalmente, e em sequência, metadados de
+nível baixo para aspectos visuais, de localização de regiões espaciais, temporais e espaço
+temporais no conteúdo da mídia, e auditivos, salientando que para esta última classe
+necessita-se de uma exploração em ontologias que cobrem metadados primitivos para áudio,
+como é o caso da ontologia MPEG-7 Rhizomik (GARCÍA; CELMA, 2005), visto que apenas uma
+taxonomia sem tratamento formal para os descritores subjacentes foi reusada da M3
+Multimedia para o modelo de anotação.
+As classes Segment_Label, Navigation_Access e HL_Audio_Descriptor se propõem a
+organizar formalmente, e em sequência, metadados descritivos de conteúdo para segmentos
+de mídia (incluindo aspectos de anotação de conteúdo semântico), navegação e acesso por
+
+9
+
+Salienta-se que a nomenclatura das classes foi mantida conforme a sua origem ontológica. As classes
+propostas foram nomeadas seguindo convenções subjacentes a casos de uso pesquisados.
+
+
+meio de sumários de conteúdo de mídia e características de áudio de nível alto, incluindo
+descritor para tratamento de conteúdo falado.
+Os requisitos não funcionais propostos para o modelo de referência se cumpriram na
+medida em que se praticou reúso de ontologias bem colocadas em um ranking obtido a partir
+de um estudo minucioso sobre nove ontologias multimídia. Desse estudo, foi possível
+estabelecer uma avaliação criteriosa em quatro dimensões concernentes a reúso, o que
+assegurou a seleção dos recursos de conhecimento para a integração na proposta de
+conceituação do modelo. Scherp, Eibing e Saathoff (2012) compartilham desse princípio de
+estudo minucioso em ontologias candidatas a reúso quando afirmam que “[...] o primeiro
+passo do alinhamento é uma análise profunda da estrutura e nas propriedades e conceitos
+centrais do modelo. Enquanto esta recomendação pode parecer óbvia, tal tarefa é facilmente
+subestimada e problemas negligenciados no estágio inicial podem causar consumo de tempo
+ao longo do processo de integração”. O requisito de seleção e reúso de ontologias adequadas
+permitiu o cumprimento dos demais quando forneceu condições necessárias para representar
+uma estrutura taxonômica abrangente capaz de comportar conceitos genéricos advindos de
+padrões de projeto multimídia e de natureza específica advindos de ontologias como a
+COMM, a Media Ontology e a M3 Multimedia.
+Problemas associados a aspectos de interoperabilidade semântica e sintática
+requeridos por aplicações multimídia na Web conseguem ser amenizados pela natureza
+formal da ontologia de fundamentação DUL e seus padrões de projeto de conteúdo de
+ontologias. Tais estruturas asseguram que o significado intencionado da semântica capturada
+no modelo de referência possa ser compartilhado entre diferentes aplicações no escopo da
+Web Semântica, além de transmitir uma sintaxe acordada por esta comunidade pelo uso da
+linguagem OWL. E os padrões de projeto multimídia juntamente com as suas classes de tipos
+de metadados propostas prevêem uma clara separação de interesses em relação à mídia, a
+saber: semântica de conteúdo, conhecimento relacionado à gestão de recursos
+informacionais, estrutura e características de documentos multimídia.
+5 CONSIDERAÇÕES FINAIS
+O propósito do modelo conceitual de referência multimídia é representar uma
+conceituação consensual e compartilhada por uma determinada comunidade para
+organização e recuperação semântica de documentos desta natureza. O sentido de consensual
+
+
+e compartilhado é o que caracteriza o modelo como um objeto de referência subjacente a
+esforços de pesquisas voltados a modelos e tecnologias para processamento de metadados
+multimídia envolvendo comunidades da Web Semântica, biblioteca digital, representação do
+conhecimento e multimídia (MARTÍNEZ; KOENEN; PEREIRA, 2002; NACK; OSSENBRUGGEN;
+HARDMAN, 2005; SAATHOFF; SCHERP, 2010).
+Como exemplos de cenários de consultas que poderiam ser instanciados com o uso do
+modelo de referência multimídia têm-se: i) especifique algumas notas em um teclado e
+obtenha uma lista de peças musicais semelhantes ao som desejado; ii) desenhe algumas linhas
+em uma tela e encontre um conjunto de imagens contendo gráficos, logos e ideogramas
+semelhantes; iii) descreva ações e obtenha uma lista de cenários contendo tais ações; iv)
+descreva os movimentos e as relações entre objetos multimídia e procure animações que
+preencham as relações temporais e espaciais descritos; v) indique cores e texturas para
+objetos multimídia e recupere exemplos de interesse para projetos específicos; e vi) use um
+trecho de voz de um cantor e obtenha uma lista de registros desse cantor, tais como vídeos,
+material fotográfico, etc.
+O modelo de referência multimídia pode ser usado em sistemas de informação
+voltados a instituições de patrimônio cultural, como arquivos, bibliotecas, museus, centros de
+documentação e projetos de memória, cujos usuários consomem, interpretam, manipulam e
+geram conteúdos multimídia nos acervos que, atualmente, se encontram em portais ou bases
+de dados online. Catalogadores é outra categoria de usuários que exerce um papel importante
+na associação de anotações em recursos multimídia, principalmente em espaços de
+conhecimento dinâmico que incluem os sistemas de bibliotecas digitais. Por fim, mas sem
+esgotar as possibilidades de uso, portais de notícias das mais variadas naturezas necessitam de
+métodos eficientes para organizar conteúdos multimídia e transmiti-los de maneira inteligente
+às pessoas usuárias.
+Finalmente, realça-se que o modelo conceitual de referência multimídia é antes de
+tudo uma proposta de recomendações de princípios de modelagem conceitual envolvendo
+ontologias multimídia e que deve, portanto, ser testado e validado em campo para a obtenção
+de conclusões consistentes sobre a sua aplicabilidade. Acredita-se que somente testando a sua
+capacidade de organização semântica de recursos informacionais, é que se descobrirá a
+potencialidade no que diz respeito à cobertura efetiva de descrições para recursos de
+informação envolvidos em acervos multimídia.
+

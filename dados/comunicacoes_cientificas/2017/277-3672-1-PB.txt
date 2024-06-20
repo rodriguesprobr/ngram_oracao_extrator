@@ -1,0 +1,399 @@
+REPRESENTAÇÃO SKOS DA CATEGORIA TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO
+DO TESAURO BRASILEIRO DE CIÊNCIA DA INFORMAÇÃO: UM ESTUDO PRELIMINAR 1
+Modalidade da Apresentação: Comunicação Oral
+Resumo: O artigo e descreve um estudo preliminar sobre as possibilidades de representação do
+Tesauro Brasileiro de Ciência da Informação no formato SKOS, apresentando trechos da representação
+da categoria “Tecnologias da Informação e Comunicação – TICs”, e realiza uma revisão de literatura
+acerca do Simple Knowledge Organization System – SKOS, um modelo de dados para a representação
+formal da estrutura básica e conteúdo de Sistemas de Organização do Conhecimento em ambientes
+digitais. A pesquisa caracteriza-se como teórica e exploratória, com finalidade descritiva e objetiva
+contribuir para um melhor entendimento do modelo SKOS, descrevendo suas principais
+características, potencialidades e limitações identificadas no estudo em andamento. A partir do
+levantamento teórico e implementações computacionais realizadas constatou-se que a representação
+no formato SKOS do Tesauro Brasileiro de Ciência da Informação é passível de ser realizada de forma
+satisfatória, possibilitando que os termos do tesauro possam ser processados por máquinas e
+impulsionando o desenvolvimento instrumentos de representação no campo da Ciência da Informação
+que estejam alinhados com às novas tendências de pesquisa envolvendo Linked Data; Data Science;
+Publicação Ampliada e Web Semântica. Observou-se que o modelo SKOS contribui para uma maior
+visibilidade da área de Ciência da Informação no cenário contemporâneo, a partir das novas
+potencialidades oferecidas, favorecendo a elaboração de sistemas de representação que possam ser
+utilizados em diferentes contextos de uso, indo além do cenário convencional das bibliotecas e
+unidades de informação tradicionais.
+Palavras-Chave: Representação da Informação; Modelagem de Dados; RDF; Tecnologias Semânticas;
+Ontologias.
+1 INTRODUÇÃO
+O avanço das tecnologias de representação tem favorecido o reposicionamento da
+área de Ciência da Informação no cenário contemporâneo, impulsionando aproximações com
+outras áreas por meio do desenvolvimento de novos instrumentos e métodos de descrição e
+organização de recursos informacionais em ambientes digitais.
+Tradicionalmente os tesauros caracterizam-se como o principal instrumento de
+controle terminológico, constituídos a partir de conjuntos de termos-descritores
+semanticamente relacionados. Conforme destaca Alvite Díez et al. (2010) a partir da
+incorporação de tecnologias computacionais nos processos de classificação tornou-se possível
+a compatibilização de vocabulários controlados com auxílio do computador, favorecendo a
+integração de tesauros em Sistemas de Recuperação de Informação e consequente novas
+possibilidades de representação.
+Entre os novos instrumentos de representação desenvolvidos na última década
+destaca-se o Simple Knowledge Organization System – SKOS, um modelo de dados para a
+representação formal da estrutura básica e conteúdo de Sistemas de Organização do
+Conhecimento (RAMALHO, 2015).
+No âmbito nacional destaca-se o Tesauro Brasileiro de Ciência da Informação (TBCI)
+lançado no ano de 2014, durante a realização do XV ENANCIB, uma publicação eletrônica do
+Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT), organizado pelas
+professoras Lena Vania Ribeiro Pinheiro e Helena Dodd Ferrez (PINHEIRO, FERRÉZ, 2014). O
+TBCI representou uma importante contribuição para a área de Ciência da Informação no Brasil,
+
+
+fornecendo um mapeamento temático e categorização da literatura da área, sendo
+recomendado, inclusive, que os aurores da área utilizem, preferencialmente, os termos
+extraídos do TBCI como palavras-chaves de suas publicações.
+Nesta perspectiva, o presente trabalho está vinculado a um projeto de pesquisa em
+andamento e possui como objetivo apresentar um estudo preliminar das possibilidades de
+representação do Tesauro Brasileiro de Ciência da Informação no formato SKOS, focando-se
+na categoria “Tecnologias da Informação e Comunicação – TICs”, descrevendo as principais
+características do modelo SKOS, potencialidades e limitações identificadas no estudo em
+andamento.
+Trata-se de uma pesquisa de cunho teórico e metodológico que se propõe a colaborar
+com a publicação de vocabulários baseados no padrão SKOS e descrever os conceitos que
+fundamentam a utilização deste novo padrão de representação. Possui abordagem
+qualitativa, pois busca apresentar características voltadas à descrição, compreensão e
+explicação de relações de um determinado fenômeno de modo a considerar o caráter
+interativo entre os objetivos definidos e as orientações teóricas da pesquisa. Caracteriza-se,
+também, como pesquisa de natureza aplicada, uma vez que “objetiva gerar conhecimentos
+para aplicação prática, dirigidos à solução de problemas específicos” (SILVEIRA; CÓRDOVA,
+2009, p.35).
+O caráter exploratório da pesquisa, segundo Cervo e Bervian (2003), consiste na busca
+de informações sobre o assunto a ser estudado, considerando os diversos aspectos de um
+problema a fim de solucioná-lo. Busca tornar o problema mais explícito a partir de hipóteses,
+o que exige descrição de fatos observados (GIL, 2007; TRIVIÑOS, 1987). Segundo Köche (2002,
+p. 126) estudos exploratórios desencadeiam “[...] um processo de investigação que identifique
+a natureza do fenômeno e aponte as características essenciais das variáveis que se quer
+estudar”. Além disso, o caráter descritivo da pesquisa permitirá descrever as características
+do objeto de estudo investigado (COSTA; COSTA, 2001).
+2 O MODELO DE DADOS SKOS
+No ano de 2009 o Word Wide Web Consortium (W3C) formalizou como Recomendação
+o padrão Simple Knowledge Organization System – SKOS (Sistema de Organização do
+Conhecimento Simples) como um modelo de dados para a representação de Sistemas de
+Organização do Conhecimento no ambiente Web, buscando atender às novas demandas
+
+
+informacionais relacionadas ao compartilhamento e interoperabilidade de vocabulários no
+ambiente Web (MILES; BECHHOFER, 2009; RAMALHO, 2015b).
+SKOS fornece um modelo baseado no padrão Resource Description Framework (RDF)
+para a representação formal da estrutura básica e conteúdo de Sistemas de Organização:
+como tesauros, esquemas de classificação, listas de cabeçalho de assunto, taxonomias, entre
+outros tipos similares de vocabulários controlados (RAMALHO; VIDOTTI; FUJITA, 2007).
+Conforme relatam Pastor-Sanchez; Martínez-Mendez e Rodriguez-Muñoz (2009) o
+desenvolvimento do modelo SKOS começou em 2002, com as atividades do grupo de trabalho
+Semantic Web Advanced Development for Europe (SWAD-E) e foi difundido publicamente a
+em de novembro de 2005, com a publicação do documento SKOS Core Guide (MILES;
+BRICKLEY, 2005a). Contudo, apenas em agosto de 2009 com a publicação do SKOS Simple
+Knowledge Organization System Reference (MILES; BECHHOFER, 2009) SKOS passou ser
+considerado como uma recomendação oficial do W3C, um modelo de dados para a
+disponibilização e compartilhamento de sistemas de organização do conhecimento na Web.
+Tendo como principal objetivo favorecer a representação de vocabulários no ambiente
+Web, como base em um modelo simplificado, o SKOS não tem a função de substituir
+vocabulários controlados em seu contexto original de uso, e sim favorecer uma maior
+reutilização e interoperabilidade entre os vocabulários existentes (RAMALHO, 2015a).
+Segundo Isaac e Summer (2009) o padrão SKOS possibilita que conceitos possam ser
+identificados utilizando Uniform Resource Identifiers (URI), rotulados com sequências textuais
+em uma ou mais línguas naturais, documentados por meio de diferentes tipos de notas,
+relacionados semanticamente entre si, a partir de hierarquias informais e redes associativas;
+e agregados em diferentes esquemas conceituais.
+Conforme destaca Mustafa El Hadi (2015) desde a padronização do modelo SKOS
+muitos vocabulários passaram a ser protegidos por direitos autorais para serem publicados
+como dados ligados na Web, proporcionando uma dimensão semântica praticamente
+inexplorada anteriormente. Catarino (2014) destaca que apesar das potencialidades
+oferecidas por este novo modelo de dados ainda existem poucos estudos no Brasil,
+evidenciando a necessidade de uma melhor compreensão deste sistema de representação,
+principalmente por parte dos profissionais da área de Ciência da Informação.
+Dextre Clarke e Zeng (2012, p.23) ressaltam a importância do padrão SKOS
+
+
+As Recomendações SKOS do W3C são projetadas para suportar publicações
+de vocabulários, como tesauros na Web. E na sua essência é um modelo de
+dados que distingue expressamente entre os conceitos e etiquetas para
+representar conceitos. (...) Além disso, que é veiculado pelo SKOS Core para
+as relações entre conceitos, a extensão fornece suporte adicional para
+identificar, descrever e linkar entidades lexicais.
+
+Os elementos em SKOS podem ser categorizados como: Conceitos, Propriedades e
+Relacionamento. Conceitos são identificados a partir de URIs e são representados pelo uso de
+notações, que são códigos lexicais usados para representar exclusivamente conceitos no
+âmbito de um determinado esquema conceitual; Propriedades possuem como principal
+função descrever formalmente atributos dos Conceitos, de acordo com o propósito do
+esquema conceitual; Relacionamentos incorporam semântica aos esquemas, a partir do
+estabelecimento de diferentes categorias e hierarquias e conceitos (RAMALHO, 2015a).
+Os Conceitos se caracterizam como o ponto central do modelo SKOS e sua
+representação pode ser realizada a por meio declaração de triplas RDF e utilização do
+elemento skos:Concept. Conceitos podem ser agrupados a partir da criação de Coleções, por
+meio utilização do elemento skos:Collection; Coleções são úteis quando um grupo de
+conceitos compartilha algo em comum, e é conveniente agrupá-los sob um rótulo comum
+(MILES; BECHHOFER, 2009).
+Contudo, apesar de ser didaticamente conveniente comparar as skos:Collection com
+as categorias utilizadas nos instrumentos de representação convencionais, observa-se que
+skos:Concept e skos:Collection representam conjuntos disjuntos, de modo que recursos
+declarados como skos:Collection não podem fazer parte de uma hierarquia conceitual que
+possua determinadas relações SKOS, pois ambos possuem relacionamentos semânticos.
+As relações representadas em SKOS podem ser classificadas basicamente em três
+categorias: Relações Hierárquicas, Relações Associativas e Relações de Equivalência. O Quadro
+1 apresenta uma síntese dos tipos de Relações suportados pelo modelo SKOS.
+
+
+Quadro 1: Tipos de relações representadas em SKOS.
+Categoria
+Relações
+Hierárquicas
+Relações
+Associativas
+
+Elemento SKOS
+skos:broader
+skos:narrower
+skos:related
+skos:ExactMatch
+
+skos:closeMatch
+Relações de
+Equivalências
+
+skos:broadMatch
+skos:narrowMatch
+skos:relatedMatch
+
+Breve Definição
+Define Relações Hierárquicas entre conceitos, indicando que
+determinado conceito possui um significado mais amplo.
+Define Relações Hierárquicas entre conceitos, indicando que
+determinado conceito possui um significado mais específico.
+Define Relações Associativas entre conceitos
+Define Relações de Equivalências entre conceitos que possuem alto
+grau de correspondência e podem ser utilizados indistintamente em
+uma ampla gama de aplicações.
+Define Relações de Equivalências entre conceitos que podem ser
+considerados como similares em contexto previamente
+determinado.
+Define Relações de Equivalências, considerando a estrutura
+hierárquica de um conceito que possui um significado mais amplo.
+Define Relações de Equivalências, considerando a estrutura
+hierárquica de um conceito que possui um significado mais
+específico.
+Define Relações de Equivalências, considerando as estruturas
+associativas existentes entre conceitos.
+Fonte: RAMALHO (2015).
+
+É por meio da descrição de Propriedades que os atributos e características dos
+Conceitos são representados formalmente em SKOS, a partir da análise da Recomendação
+SKOS (Miles; Bechhofer, 2009), no intuito de realizar aproximações com os instrumentos de
+representação tradicionalmente empregados na área de Ciência da Informação, pode-se
+categorizar as propriedades utilizadas para descrever recursos informacionais em SKOS como:
+Propriedades de Etiquetagem e Propriedades de Documentação (Quadro 2).
+Quadro 2: Principais tipos de propriedades do modelo SKOS para a descrição de recursos.
+
+Propriedades
+de
+Documentação
+
+Propriedades de
+Etiquetagem
+
+Propriedade
+
+Elemento SKOS
+
+Etiqueta
+Preferencial
+
+skos:preflabel
+
+Etiqueta
+Alternativa
+
+skos:altLabel
+
+Etiqueta
+Oculta
+
+skos:hiddenLabel
+
+Anotação
+
+skos:note
+
+Nota de
+Escopo
+
+skos:scopeNote
+
+Definição
+
+skos:definition
+
+Definição
+Define o termo preferencial de um conceito, em um
+determinado idioma.
+Define termos alternativos de um conceito, como sinônimos,
+acrônimos, abreviações, variações de ortografia, e formas de
+plural/singular.
+Define termos referentes à um conceito que devem ser
+ocultos na geração de apresentações visuais, mas que
+podemo facilitar facilitar o acesso ao conceito em operações
+de busca livre. Erros de ortografia e digitação são
+normalmente incluídos a partir desta etiqueta.
+Descreve uma nota geral, para qualquer propósito.
+Fornece informações, possivelmente parciais, para um
+melhor entendimento do significado de um conceito.
+Apresenta um explicação formal do significado de um
+conceito.
+
+Exemplo
+
+skos:exemple
+
+Fornece exemplo de uso de um conceito
+
+Nota
+Histórica
+
+skos:historyNote
+
+Nota
+Editorial
+
+skos:editorialNote
+
+Nota de
+Modificação
+
+skos:changeNote Documenta mudanças e alterações de um conceito
+
+Descreve o histórico de mudanças significativas no
+significado, ou formas de utilização, de um conceito.
+Fornece informações para a manutenção administrativa, tais
+como notas para editor, tradutor ou mantenedor de um
+vocabulário.
+
+Fonte: Ramalho (2016).
+
+Conforme pode ser observado no Quadro 1 as Propriedades de Etiquetagem
+possibilitam realizar o controle terminológico dos termos utilizados para representar os
+conceitos, enquanto as Propriedades de Documentação armazenam informações sensíveis
+para a manutenção e desenvolvimento dos esquemas representados.
+3 Representação do Tesauro Brasileiro de Ciência da Informação em SKOS
+O Tesauro Brasileiro de Ciência da Informação (TBCI) foi organizado pelas professoras
+Lena Vania Ribeiro Pinheiro e Helena Dodd Ferrez e publicado em formato eletrônico pelo
+Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT) durante a realização do XV
+ENANCIB no ano de 2014.
+O TBCI representou uma importante contribuição para a área de Ciência da Informação
+no Brasil, fornecendo um mapeamento temático da literatura da área e evidenciou a forte
+interdisciplinaridade inerente ao campo da Ciência da Informação, conforme destacado pelas
+autoras:
+A abordagem epistêmica do tesauro refletiu, naturalmente, a juventude
+científica da Ciência da Informação e a sua forte interdisciplinaridade que,
+por sua vez, atribuíram mais complexidade às questões enfrentadas durante
+a sua elaboração. Ao mesmo tempo desafiantes e didáticas, foram
+clarificadas por meio de um exercício constante de diálogo, como em um
+processo de maiêutica, e constituíram uma grande lição de Ciência da
+Informação, nos labirintos de sua construção como campo do conhecimento
+(PINHEIRO; FERREZ, 2014, p.14).
+
+Após sua publicação o TBCI passou a ser utilizado como referência nacional para
+categorização dos termos na área de Ciência da Informação, inclusive os principais periódicos
+e eventos da área passaram a recomendar que os pesquisadores utilizem preferencialmente
+os termos do TBCI para a definição de palavras-chave das publicações.
+Englobando cerca de 1.800 termos, o plano geral de classificação do TBCI foi
+organizado em 8 grandes categorias. Assim, de acordo com o propósito deste trabalho, que
+
+
+está vinculado a um projeto de pesquisa mais abrangente, são apresentados trechos da
+representação em SKOS da categoria “Tecnologias da Informação e Comunicação – TICs” do
+TBCI, conforme destacado na Figura 1.
+
+Figura 1: Plano Geral de Classificação do TBCI com destaque para a categoria “Tecnologias da
+Informação e Comunicação”.
+
+Fonte: Baseado em (PINHEIRO; FERREZ, 2014).
+
+A categoria “Tecnologias da Informação e Comunicação – TICs” apresenta-se como a
+5ª categoria de um total de 8 categorias principais do TBCI. A escolha desta categoria como
+base para um estudo preliminar se justifica devido ao forte impacto que tal temática têm
+acarretado da área de Ciência da Informação, a partir do desenvolvimento de novos
+instrumentos e produtos tecnológicos relacionados às novas tendências de pesquisa
+envolvendo Linked Data; Data Science; Publicação Ampliada e Web Semântica.
+A categoria “Tecnologias da Informação e Comunicação – TICs” por sua vez possui um
+conjunto de 6 subcategorias no TBCI. Nesta perspectiva, no intuito de favorecer um melhor
+
+
+entendimento das estruturas básicas que compõem o modelo SKOS optou-se por representar
+inicialmente a categoria “Tecnologias da Informação e Comunicação” como uma coleção de
+conceitos SKOS, utilizando o elemento skos:Collection, conforme apresentado na figura 2.
+
+Figura 3: Plano de classificação da categoria “Tecnologias da Informação e Comunicação” em SKOS.
+
+Fonte: Elaborado pelo autor – 2017.
+
+Como pode ser observado, a figura 2 representa graficamente o Plano de classificação
+da categoria “Tecnologias da Informação e Comunicação” descrito em SKOS, destacando
+algumas propriedades e relacionamentos existentes entre os recursos.
+A figura 3, a seguir, apresenta um trecho do código da representação SKOS da
+categoria “Tecnologias da Informação e Comunicação” expresso em XML/RDF, implementado
+no intuído de verificar as potencialidades e limitações da representação de conjunto de
+Conceitos em SKOS utilizando o elemento skos:Collection.
+
+
+Figura 3: Trecho de representação SKOS expresso em XML/RDF.
+
+Fonte: Elaborado pelo autor - 2017.
+
+Conforme pode ser observado na figura 3 a partir da representação de uma Coleção
+de conceitos em SKOS é necessário definir quais são os recursos que fazem parte desta
+coleção, tal declaração é realizada utilizando o elemento skos:member, descrito das linhas 310
+à linha 315 do código fonte. Da linha 316 à linha 327 são descritas as Propriedades de
+Etiquetagem e Documentação do recurso e a partir da linha 328 são descritas algumas
+relações associativas com outros recursos.
+Buscando favorecer uma melhor visualização e entendimento dos relacionamentos
+expressos no trecho de código apresentado, também foi gerada uma representação gráfica
+desta implementação SKOS que é apresentada na figura 4.
+
+
+Figura 4: Representação gráfica em SKOS dos principais relacionamentos do conceito
+“Tecnologias da Informação e Comunicação” no TBCI.
+
+Fonte: Elaborado pelo autor - 2017.
+
+A partir da análise da figura 4, é possível observar graficamente os principais elementos
+em SKOS que possibilitam descrever formalmente os relacionamentos existentes entre o
+termo “Tecnologias da Informação e Comunicação” e outros termos do TBCI. A identificação
+dos diferentes tipos de relacionamentos existentes sempre direcionou a construção de
+tesauros e constitui a teoria base, no que tange ao desenvolvimento de instrumentos de
+representação, das pesquisas na área de Ciência da Informação. Contudo, tradicionalmente
+tais relacionamentos estão implícitos, mas não representados formalmente, de modo que a
+utilização do modelo SKOS favorece que tais relacionamentos possam ser identificados e
+processados por máquinas.
+
+4 CONSIDERAÇÕES FINAIS
+O presente trabalho está vinculado a um projeto de pesquisa em andamento e teve
+como objetivo apresentar um estudo preliminar das possibilidades de representação do
+Tesauro Brasileiro de Ciência da Informação no formato SKOS, focando-se na categoria
+“Tecnologias da Informação e Comunicação – TICs”, descrevendo as principais características
+do modelo SKOS, potencialidades e limitações identificadas no estudo em andamento.
+A partir do levantamento teórico e implementações computacionais realizadas
+constatou-se que a representação no formato SKOS do Tesauro Brasileiro de Ciência da
+Informação é passível de ser realizada de forma satisfatória, possibilitando que os termos do
+tesauro possam ser processados por máquinas e impulsionando o desenvolvimento
+
+de representação no campo da Ciência da Informação que estejam alinhados
+com às novas tendências de pesquisa envolvendo Linked Data; Data Science; Publicação
+Ampliada e Web Semântica.
+Em relação aos aspectos técnicos de implementação, observou-se que o elemento
+skos:Collection apresenta limitações que comprometem sua utilização para a representação
+de tesauros em SKOS, pois como skos:Concept e skos:Collection representam conjuntos
+disjuntos, recursos declarados como skos:Collection não podem fazer parte de uma hierarquia
+conceitual e utilizados junto com declarações skos:broader e skos:narrower, pois representam
+diferentes tipos de relacionamentos semânticos. Deste modo, outras alternativas de
+representação já estão sendo implementadas e serão apresentadas em trabalhos futuros.
+Finalmente, conclui-se que o modelo SKOS contribui para uma maior visibilidade da
+área de Ciência da Informação no cenário contemporâneo, a partir das novas potencialidades
+oferecidas, favorecendo a elaboração de sistemas de representação que possam ser utilizados
+em diferentes contextos de uso, indo além do cenário convencional das bibliotecas e unidades
+de informação tradicionais.
