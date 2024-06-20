@@ -42,6 +42,7 @@ No _config.json_ também pode ser alterado se os dados serão excluídos na exec
 
 # _TODO List_
 
-- Refatoração de parte do algoritmo
-- Orientação a Objetos
-- Melhorias no processamento paralelo para evitar _OutOfMemoryError_.
+- [ ] Refatoração de parte do algoritmo
+- [ ] Orientação a Objetos
+- [x] Melhorias no processamento paralelo para evitar _OutOfMemoryError_. (Commit 
+b384192)
