@@ -1,0 +1,570 @@
+
+DESENVOLVENDO UMA PUBLICAÇÃO CIENTÍFICA AMPLIADA NA
+PLATAFORMA E-QUILT
+Resumo: A pesquisa aborda o atual cenário da comunicação científica apresentando uma
+nova modalidade de publicação científica denominada Enhanced Publication. Esse tipo de
+publicação é uma inovação científica com possibilidades de convergência, conectividade,
+compartilhamento de dados e colaboração entre pesquisadores. Discussões se dão também
+em torno das lacunas da Propriedade Intelectual e das Tecnologias Digitais da Informação e
+Comunicação. Nessa perspectiva, esta pesquisa traz como objetivo geral levantar padrões
+de estruturação de metadados adotados em Enhanced Publication para o desenvolvimento
+de um protótipo de artigo científico com características ampliadas. Adotou-se o método
+quadripolar constituído de 4 (quatro) polos: epistemológico, teórico, morfológico e técnico,
+sendo a abordagem de caráter exploratório e aplicado. Na condução da pesquisa, utilizou-se
+como subsídio uma pesquisa da área de saúde do Departamento de Clínica e Odontologia
+Social da Universidade Federal da Paraíba, Campus I, João Pessoa, Paraíba. Dentro do
+escopo da pesquisa, utilizou-se como viés do experimento o projeto intitulado
+Levantamento Epidemiológico em Saúde Bucal de Escolares do Município de Caaporã PB, Brasil, cadastrado no Grupo de Pesquisa em Odontopediatria e Clínica Integrada. O
+protótipo criado para o experimento foi denominado e-Quilt. Como resultado desta fase
+inicial foi possível identificar os padrões de estruturação de metadados adotados pelas
+iniciativas de Enhanced Publications e a agregação de dados de pesquisa ao artigo.
+Utilizaram-se o software Open Journal Systems para publicação aberta, o Cascading Style
+Sheets e a linguagem de marcação Hyper Text Markup Language. Conclui-se que o
+protótipo e-Quilt é viável como uma publicação ampliada e será aprimorado na segunda
+fase do experimento.
+Palavras-chave: Enhanced Publication. Protótipo e-Quilt. Periódico Eletrônico. Dados de
+Pesquisa. Padrão de Metadados.
+1 INTRODUÇÃO
+A infraestrutura global de informação já é uma realidade. A possibilidade de que
+governos, negócios, instituições, comunidades e pessoas pudessem estar conectados em um
+mundo interligado pelas tecnologias digitais, através de redes de comunicação, era
+inimaginável épocas atrás, o que hoje se configura como uma realidade concreta. No
+contexto da comunicação científica, o e-Science é o atual cenário que emerge com novas
+modalidades de publicações utilizando-se das Tecnologias Digitais de Informação e
+Comunicação (TDIC) para a geração de novos fluxos informacionais de dados e pesquisas.
+O termo e-Science ou e-Ciência refere-se à utilização de dados de pesquisa, por
+meio de computação intensiva, para lidar com grande volume de dados. O e-Science é
+entendido como “Ciência avançada, e-ciência, é um dos muitos termos usados para
+descrever as transformações recentes no empreendimento científico”53 (JANKOWSKI,
+2007, p. 549, tradução nossa).
+O cenário do e-Science fez surgir a necessidade de repensar a comunicação
+científica nos moldes tradicionais para um entendimento de não linearidade da publicação,
+com possibilidades de expansão e conexão. A mudança não está apenas na forma de
+publicar e no acesso entre as diversas fontes (dados, pesquisa, links, resultados, mídias,
+simulações) e públicos (pesquisador, produtor, usuário), mas também na possibilidade de
+convergência, conectividade, compartilhamento de dados e colaboração coletiva. A
+modalidade denominada de Enhanced Publication54 se apresenta como uma inovação nesse
+novo cenário da pesquisa científica. Discussões se dão também em torno das lacunas da
+Propriedade Intelectual (PI) para o compartilhamento e reutilização de dados de pesquisa.
+Respostas às questões de cunho autoral e tecnológico ainda estão sem uma definição
+integral.
+
+53
+
+
+Publicação Ampliada, Expandida ou Agregada.
+
+Nesse sentido, estabelece-se a pergunta de pesquisa: quais padrões de estruturação
+de metadados estão sendo adotados para a ambiência de um artigo científico com
+características de enhanced publication? Com base nessa problemática, propõe-se como
+objetivo geral deste trabalho levantar os padrões de metadados adotados em enhanced
+publication. Para atender à proposição geral, definiram-se como objetivos específicos
+entender uma enhanced publication; apresentar casos de enhanced publication no cenário
+internacional; e, desenvolver um experimento a partir de um protótipo de artigo científico
+com características ampliadas.
+A pesquisa adotou, para efeito desse estudo, o método quadripolar que consiste de 4
+(quatro) polos: epistemológico, teórico, morfológico e técnico. A abordagem da pesquisa
+possui caráter exploratório e aplicado. O instrumento utilizado se deu por meio do
+experimento com a criação de um protótipo.
+O trabalho está estruturado em seções. A seção inicial é composta pela introdução.
+A segunda seção abordará uma explanação sobre enhanced publication e as iniciativas no
+cenário internacional das enhanced publications e seus padrões de metadados. A terceira
+seção apresenta um experimento de protótipo de artigo científico com características
+ampliadas. E por fim, as conclusões do experimento e as referências norteadoras do estudo.
+2 ENTENDENDO ENHANCED PUBLICATION
+O atual cenário da comunicação científica exige interatividade e convergência de
+informações entre as publicações eletrônicas, permitindo que, além da geração e do uso da
+publicação, ocorram a possibilidade de reuso bem como o compartilhamento de dados e
+resultados de pesquisas. Jankowski (2007, p. 549, tradução nossa) afirma que uma
+“variedade de termos está em voga para descrever mudanças contemporâneas na condução
+da ciência. Os mais prevalentes incluem: a ciberciência, a ciberinfraestrutura e a eciência55”.
+Com base na expectativa de uma nova infraestrutura de publicação científica, surge
+o fenômeno do e-Science no universo acadêmico-científico. Quando se fala em
+comunicação científica, a primeira ideia é a geração de informações e conhecimentos sobre
+novas descobertas e avanços. Contudo, o acesso aos resultados e à troca de conhecimentos
+gerados depende do compartilhamento destes. O atual cenário da comunicação científica
+
+
+propõe que esses conhecimentos possam ser compartilhados e reutilizados proporcionando
+uma grande geração, integração e interação de dados.
+Veernooy-Gerritsen (2009, p. 21, tradução nossa) afirma que “no mundo digital dos
+estudantes, o acesso on-line é fornecido para artigos, com referência de hiperlinks e dados
+complementares. [...] a relação com outros materiais, por exemplo, multimídia e contexto
+semântico, por exemplo, XML, não é amplamente percebida no momento”56.
+Os padrões convencionais de publicações já não atendem aos novos fluxos e anseios
+da pesquisa científica. Nesse sentido, Sales, Sayão e Souza (2013, p. 1) afirmam que:
+A comunidade científica vem sentindo a necessidade de novos modelos de
+publicações que possam expressar a complexidade e a dinâmica da
+pesquisa científica contemporânea. Os pesquisadores demandam por
+modelos que explicitem mais claramente a pesquisa desenvolvida, seus
+métodos, seu material, os dados e conhecimentos gerados; que revelem
+com clareza a intenção do pesquisador; e que os resultados sejam
+avaliados de forma mais eficaz e interativa.
+
+Esta complexidade reflete o atual cenário acadêmico-científico. O padrão da
+publicação em um ambiente eletrônico traz consigo as mesmas características semânticas,
+lineares e estáticas de um documento impresso. Seu formato linear não permite a
+interatividade entre a publicação, o pesquisador e o usuário, pois conforme afirmam
+Aalbersberg, Dunham e Koers (2011, p. 2, tradução nossa): “O artigo atual é geralmente o
+mesmo dos primeiros periódicos científicos do século XVII. [...] uma nova infraestrutura
+para disseminação e compartilhamento do conhecimento científico que novos modelos de
+publicação, que utilizam o máximo potencial tecnológico, vêm sendo propostos”57.
+A infraestrutura digital que apoia as publicações científicas eletrônicas baseia-se em
+plataformas tecnológicas, padrões de metadados e protocolos de interoperabilidade cuja
+finalidade está centrada no armazenamento e na disseminação, disponibilizando o
+documento nos mais variados formatos, não permitindo a convergência, a colaboração e o
+compartilhamento entre as partes e os pares.
+Ainda atual e pertinente, afirma Dias (2003, p. 21):
+No momento em que acessamos alguma revista científica eletrônica,
+disponibilizada na web, não é difícil constatar que a vasta maioria das
+
+
+mesmas não faz bom uso dos recursos passíveis de implementação para o
+padrão web. O que encontramos, muitas vezes, são meras transcrições de
+periódicos já existentes de forma impressa para o meio eletrônico, sem
+nunca terem tido nenhum ancestral no formato impresso, não
+implementam as possibilidades inerentes ao meio eletrônico de forma
+satisfatória.
+
+A necessidade de mudanças nos modelos das publicações se configura, de maneira
+generalizada, em todas as áreas e em escala mundial. O cenário da comunicação científica
+está em ebulição e evolução, não só em sua forma e acesso entre fontes (dados, pesquisas,
+links, resultados, mídias) e públicos (pesquisador, produtor, usuário ou indivíduo), mas
+também na sua convergência, conectividade e interatividade.
+Tenopir et al (2011, p. 1, tradução nossa) complementam esse entendimento com:
+Os dados são a infraestrutura de ciência [...]. Além disso, “a ciência está se
+tornando em dados intensivos e colaborativos” [1]. A quantidade de dados
+coletados, analisados, reanalisados e armazenados tem aumentado
+enormemente devido à evolução na simulação e modelagem
+computacionais, aquisição de dados automatizados e tecnologias de
+comunicação [2]. Seguindo os paradigmas de pesquisa anteriores
+(experimentais, teóricos e computacionais), esta nova era tem sido
+chamada de “o quarto paradigma: descoberta científica intensiva de
+dados” onde “toda a literatura científica é online, todos os dados da
+ciência estão online e eles interagem uns com os outros” [3]. Os dados
+digitais não são apenas as saídas de pesquisa, mas fornecem subsídios para
+novas hipóteses, permitindo novos conhecimentos científicos e
+conduzindo à inovação [4]58.
+
+É possível perceber claramente que a pesquisa tradicional está em transição para
+uma modelagem de publicação com dados agregados de pesquisa. Os dados são
+potencializados e há, então, a possibilidade de esses serem reaproveitados para gerar novos
+estudos, pesquisas e conhecimentos científicos.
+Borgman (2010, p. 2, tradução nossa) corrobora esse entendimento afirmando que:
+Nas esferas científicas, as expectativas em torno de um mundo rico são
+imensas [...]. A relevância dos dados no contexto das “grandes ciências”,
+[...] conduziu não somente ao surgimento de novos modelos de ciência -
+
+
+
+coletivamente chamados de “Quarto paradigma científico” ou “eScience”
+[...]59.
+
+É possível constatar não só a ideia de um novo paradigma revolucionário no cenário
+da comunicação científica, mas também na complexidade de produção, compartilhamentos,
+curadoria e propriedade intelectual dos dados e das publicações geradas nesse contexto.
+Assim, “uma publicação ampliada é uma nova forma de comunicação em ciência,
+onde os pesquisadores tornam as publicações disponíveis online em conjunto com outros
+materiais. Ao adicionar os dados subjacentes e modelos em um artigo, torna-se mais fácil
+verificar os resultados, reproduzir e reutilizar”60 (DANS, 2014, online, tradução nossa).
+Reunir os dados e diferentes nuances, nesse novo cenário, requer pensar em uma
+nova modalidade de publicação científica. Nessa perspectiva do e-Science, a publicação
+ampliada, conhecida internacionalmente como Enhanced Publication (EP), pode ser
+compreendida como uma maneira totalmente nova de publicação da sua forma tradicional
+(um livro, um artigo ou um relatório), enriquecida com informações adicionais.
+O termo Enhanced Publication ainda não é usual na comunicação científica, muito
+embora existam investigações datadas de 2001, que apresentam as primeiras manifestações
+de mudanças na publicação científica. Estudos se concentraram na possibilidade de
+convergência e entrelaçamento de produtos de e-pesquisa que se encontram distribuídos,
+expandindo o conceito tradicional de documento científico (AALBERSBERG, DUNHAM
+e KOERS, 2001; KIRCZ, 2001, 2002; VEERNOOY-GERRITSEN, 2009; SAYÃO e
+SALES, 2012) para uma publicação ampliada.
+Consideram-se também as novas percepções e ações nas atividades de cooperação
+entre pesquisadores, publicações e seus componentes na sociedade em rede. A FIGURA 1
+ilustra o modelo de publicação na sua versão original, idealiza a concepção inicial de
+Enhanced Publication com os objetos agregados à publicação tradicional, em diferentes
+suportes e disponíveis em vários formatos de mídias, emergindo, assim, as possibilidades de
+convergências, interações e conexões em uma mesma publicação.
+
+
+
+FIGURA 1 – Modelo tradicional de Enhanced Publication (EP)
+
+Fonte: Openaire (2013, online).
+
+Muitos são os desafios que cercam a publicação ampliada, dentre eles a
+infraestrutura para a interoperabilidade e compartilhamento entre dados, pesquisadores e
+publicações que são destaques neste artigo.
+Estudo realizado por Veernooy-Gerritsen (2009, p. 21, tradução nossa), na
+Universidade de Amsterdam, aponta para a necessidade de construção de infraestrutura
+informacional e tecnológica quando afirma que:
+Em uma publicação ampliada, o padrão de link deve apoiar e refletir a
+relação entre a publicação e todos os relevantes objetos como dados, Web
+sites, comentários. Este padrão pode tornar-se bastante complexo e vai
+além do que pode ser capturado na estrutura linear ou sequencial do
+modelo de publicação tradicional61.
+
+A complexidade envolvida requer uma infraestrutura que abrange uma gama de
+tecnologias, técnicas, padrões e pesquisadores que possam desvendar as diferentes nuances
+desse contexto.
+Borgman (2003, p. 4, tradução nossa), em seus estudos, aponta para uma
+infraestrutura informacional global, quando afirma que: “o acesso à informação está entre
+os argumentos fundamentais para a construção de uma infraestrutura informacional global.
+
+
+Recursos informacionais são essenciais para todo manejo de um acontecimento humano,
+incluindo comércio, educação, pesquisa e políticas governamentais” 62.
+Os recursos informacionais que permeiam essa infraestrutura são compostos por
+objetos digitais de diferentes formatos e variadas mídias, bem como os relacionamentos de
+agregação existentes entre estes. Na seção a seguir, descrevem-se os objetos digitais que
+compõem as Enhanced Publications.
+2.1 Dados de pesquisa e objetos digitais
+Antes de definir quais elementos podem compor uma Enhanced Publication, é
+importante entender as nomenclaturas entre objetos digitais e dados de pesquisa. Esses
+termos são usuais e podem ser sinônimos.
+Em uma definição concisa, Borgman (2010, p. 3, tradução nossa) afirma que “os
+dados são fatos, números, letras e símbolos que descrevem um objeto, ideia, condição,
+situação ou outros fatores. A noção de dados pode variar consideravelmente entre os
+colaboradores e, mais ainda, entre as disciplinas”.63
+Desta forma, compreende-se que os dados de pesquisa são todos os elementos que
+foram produzidos e gerados a partir de uma pesquisa. Elementos esses que podem ter
+valores semânticos diferentes, com formatos e mídias variadas. Os formatos e as diferentes
+mídias de dados e informações geradas compõem os objetos digitais de uma Enhanced
+Publication.
+Ainda conforme a mesma autora, “o compartilhamento de dados é a liberação de
+dados de pesquisas para o uso de outros” (BORGMAN, 2012, p. 1060, tradução nossa).64
+Nessa perspectiva, trata-se do reuso de dados de pesquisas para continuidade de outros
+estudos. Este é o cerne do e-Science, disponibilizar dados de pesquisa a partir da agregação,
+compartilhamento e interação entre dados e pesquisadores. A agregação dos diferentes
+dados digitais, gerados na pesquisa ou em outras pesquisas, reúne objetos digitais em um
+único espaço, proporcionando a expansão do acesso e o compartilhamento dos diferentes
+objetos independentemente de sua localização.
+
+
+O padrão de ligação dos objetos é um aspecto importante da infraestrutura “em uma
+publicação ampliada, este padrão de ligação deve apoiar e refletir a relação entre a
+publicação e todos os objetos relevantes, como dados, sites, comentários. [...] bastante
+complexo e vai além do que pode ser capturado na estrutura linear ou sequencial do modelo
+de publicação tradicional”65 (VEERNOOY-GERRITSEN, 2009, p. 21, tradução nossa).
+Essa infraestrutura deve obedecer a padrões que possibilitem relações não lineares e
+agregue os dados à publicação, como também à interoperabilidade entre os diferentes
+objetos para o seu compartilhamento e reuso. A agregação dos dados de pesquisa não tem
+uma regra definida. O pesquisador e a natureza da pesquisa delineiam os objetos digitais
+que serão anexados ao artigo principal. Contudo, é nesse ambiente que surge a necessidade
+de adotar padrões que estruturem os diferentes níveis de objetos.
+2.2 Padrões de metadados
+A complexidade de estruturação de vários elementos contidos nos diferentes
+suportes de informação gera a necessidade de adotar padrões de metadados enriquecidos e
+legíveis que possam ser recuperados e compartilhados em uma publicação ampliada. Nesse
+sentido, pode-se afirmar que:
+Em cada modelo, tenta-se adicionar uma estrutura utilizando metadados
+em níveis muito diferentes [...]. Esta estrutura não é importante apenas
+para a leitura e compreensão humanas, mas também deve ser legível por
+máquina para fins de mineração de dados. Uma das dificuldades é que a
+adição de metadados e/ou estrutura rica é muito demorada. Quase todos os
+pesquisadores mencionam a importância da criação de ferramentas para
+auxiliar o autor. Além disso, (Lynch, 2007) menciona a importância de
+ferramentas: “Espero que vejamos uma nova geração de ferramentas de
+visualização e anotação implementadas, supostamente trabalhando em
+representações semanticamente ricas no documento XML”. Parece que a
+maioria dos formatos de metadados, como Dublin Core, MARC e METS,
+é muito limitada para Publicações Ampliadas66 (VEERNOOYGERRITSEN, 2009, p. 31, tradução nossa).
+
+
+Os padrões de metadados existentes e adotados, atualmente, ainda estão sendo
+aprimorados para o contexto de compartilhamento de dados e das Enhanced Publications.
+Muito embora algumas iniciativas desenvolvidas já apresentem soluções de
+estruturação, descrição dos metadados e agregação de objetos nesse contexto, “a atual
+infraestrutura de repositórios, com base em OAI-PMH, XML, Dublin Core, DIDL ou DDI,
+é capaz de lidar com os padrões mais complexos associados às publicações ampliadas”
+(VEERNOOY-GERRITSEN, 2009, p. 22, tradução nossa).
+Corroboram-se essas iniciativas por meio do padrão METS, desenvolvido para
+atender ao contexto das Bibliotecas Digitais, o qual tem a finalidade de estruturar os
+metadados de diferentes objetos e suas relações de agregações. Acerca desse padrão,
+Rodrigues (2008, p.3) afirma que, “o padrão METS é uma linguagem de marcação baseada
+em XML que provê uma estrutura capaz de registrar metadados descritivos, administrativos
+e estruturais relativos aos objetos de uma biblioteca digital”. O padrão METS é expresso
+através de um XML Schema, e um documento XML, criado com base nesse padrão, é
+denominado de documento METS.
+Nesse sentido, outra iniciativa se pauta na “Nature Publishing Group (2014,
+tradução nossa)67, uma editora internacional que publica periódicos acadêmicos, revistas,
+bases de dados on-line e serviços no domínio da ciência e da medicina”. Disponibiliza, por
+meio do periódico Nature, uma iniciativa de publicação ampliada que se apoia em
+descritores detalhados para o uso e reuso de dados.
+Descritores de dados irão fornecer descrições detalhadas das experiências
+e procedimentos envolvidos na geração de conjuntos de dados
+importantes, incluindo informações essenciais necessárias para os
+cientistas avaliar a qualidade técnica dos dados, reproduzir os principais
+métodos ou fluxos de trabalho de análise e, finalmente, voltar a utilizar os
+dados para lidar com importantes questões de pesquisa. Além disso, todas
+as publicações de dados científicos serão apoiadas por metadados que
+descrevem propriedades-chave das experiências e dados resultantes, que
+serão verificados por um curador interno e lançados no formato ISA-guia,
+e esperamos que em outros formatos padrões no futuro. Estes metadados
+ajudarão a mineração de dados, e vão ajudar os cientistas a encontrar e
+reutilizar os conjuntos de dados de alta qualidade armazenados em vários
+repositórios de dados68 (NATURE, 2014, online, tradução nossa).
+
+A Nature adota o padrão ISA-tab para a descrição detalhada dos metadados de todos
+os objetos agregados aos dados de pesquisas que irão compor a Enhanced Publication.
+Esses são imprescindíveis para possibilitar a estruturação, curadoria e interoperabilidade
+dos dados e publicação. Os padrões atuais ainda estão sendo customizados para a estrutura
+de Enhanced Publication. O XML deve proporcionar a agregação e as relações entre os
+diversos objetos.
+Nesse sentido, Veernooy-Gerritsen (2009, p. 31, tradução nossa) afirma que “a
+informação que precisa ser gravada não pode ser mapeada facilmente para uma estrutura
+XML hierárquica. Estamos lidando com objetos, propriedades e tipos de objetos e relações
+entre objetos. [...]. Para esta nova infraestrutura, precisaremos usar o modelo OAI-ORE”69.
+A afirmação sugere que o modelo OAI-ORE seja utilizado para a descrição e troca
+de agregações entre objetos digitais. O Open Archives Initiative (2014, online, tradução
+nossa) é,
+A Iniciativa de Arquivos Abertos para Reuso de Objetos e Intercâmbio
+(OAI-ORE) define padrões para a descrição e troca de agregações de
+recursos da Web. Essas agregações, às vezes chamadas de objetos digitais
+compostos, podem combinar recursos distribuídos com vários tipos de
+mídia, incluindo texto, imagens, dados e vídeo. O objetivo dessas normas
+é expor o conteúdo rico nestas agregações para aplicativos que suportam a
+criação, depósito, troca, visualização, reutilização e preservação70.
+
+Os estudos apontam para a adoção do modelo OAI-ORE, em publicações ampliadas,
+para possibilitar que os objetos digitais de pesquisa sejam agregados à publicação
+permitindo seu compartilhamento e reuso em diferentes mídias e suportes de informação.
+
+
+Para efeito desse artigo serão abordados apenas os aspectos relacionados aos
+padrões de metadados. Na seção seguinte serão demonstradas as iniciativas do cenário
+internacional.
+3 CASO DE ENHANCED PUBLICATION NO CENÁRIO INTERNACIONAL
+Esta seção aponta para uma iniciativa no cenário internacional de Enhanced
+Publication, que norteou a construção do protótipo de artigo científico com características
+ampliadas associadas a esta pesquisa. Algumas iniciativas e muitas discussões estão sendo
+desenvolvidas no cenário internacional no que tange ao e-Science, especialmente nos
+contextos do Scientific Data71, Data Sharing72 e Enhanced Publications.
+Foi delimitada, para efeito deste estudo, uma iniciativa de Enhanced Publication
+desenvolvida no cenário internacional pela Nature Publishing Group.
+3.1 Periódico Nature
+O periódico Nature apresenta uma experiência de convergência de objetos digitais
+com o artigo tradicional, fornecendo possibilidades de acesso ao conjunto dos dados
+oriundos da pesquisa. A partir da combinação da publicação científica com as informações
+estruturadas em datasets, é possível permitir o acesso aos dados de pesquisa. A Nature é
+uma plataforma que hospeda no sítio nature.com, aproximadamente, 80 revistas publicadas
+pela Nature Publishing Group, com inúmeros cientistas de acesso aberto e com um
+programa de publicação online contínua.
+Na perspectiva do e-Science, a Nature73 menciona que “os dados científicos
+objetivam se referir à crescente necessidade de tornar os dados de pesquisa mais
+disponíveis,
+
+citáveis,
+
+detectáveis,
+
+interpretáveis,
+
+reutilizáveis
+
+e
+
+reprodutíveis”.
+
+(SCIENTIFIC DATA, 2014, online, tradução nossa).
+Dessa forma, a Nature desenvolveu uma nova perspectiva de acesso aberto dos seus
+periódicos adicionando ao artigo, descritores que possibilitem acesso a dados primários e
+permitindo as funcionalidades de comunicação e interação com a publicação, conforme
+ilustrado na FIGURA 2.
+Os dados científicos, disponíveis na Scientific Data da Nature, disponibilizam os
+artigos científicos e permitem agregar diferentes dados de pesquisa, vinculando também,
+
+
+recursos e ferramentas web em uma única interface. Informações sobre os autores,
+contribuições e afiliações também estão disponíveis por meio de hiperlinks.
+A FIG. 2 apresenta ainda funcionalidades de acesso a redes e mídias sociais. No
+acesso ao artigo, há a possibilidade de serem disponibilizados o texto em PDF, as métricas,
+citações e direito de permissões.
+FIGURA 2 – Homepage dos Dados Científicos da Nature
+
+Fonte: Nature (2014).
+
+Isso é viável a partir da adoção de um padrão de estruturação de metadados, descrito
+na seção a seguir.
+3.1.1 Padrão de Estruturação da Nature
+O padrão de estruturação de metadados da Nature é o protocolo ISA. O ISA é de
+autoria de diversos colaboradores em mais de 30 (trinta) organizações científicas em todo o
+mundo. Como resultado, o projeto beneficia a colaboração, evitando a repetição
+desnecessária dos dados de pesquisa.
+A partir da descrição desses dados e metadados, esse padrão estrutura as
+informações de toda a pesquisa, além de utilizar abordagens da web semântica para tornar o
+conhecimento existente disponível para a realização de conexões que permitam que os
+dados sejam recuperados de suas fontes originais.
+
+3955
+
+Por descritores, a Nature74 define que: “Descritores de dados são uma combinação
+de conteúdo de publicação científica tradicional e informações estruturadas na curadoria
+interna e são projetados para maximizar a reutilização e permitir a pesquisa, vinculação e
+mineração de dados” (SCIENTIFIC DATA, 2014, online, tradução nossa).
+O protocolo utilizado pela Nature para as suas publicações ampliadas é o ISA-tab75.
+Para operacionalizar e usar amplamente os dados, a comunidade científica precisa adotar
+tecnologias e mecanismos que possam apoiar a interoperabilidade desses dados de pesquisa.
+O ISA-tab é um framework76 que descreve e estabelece os pré-requisitos apresentando um
+ecossistema de soluções para o compartilhamento e reutilização dos dados de pesquisa.
+A FIG. 3 ilustra as interligações que a estrutura ISA-tab utiliza: os conjuntos de
+dados de interesse para cada comunidade e como os sistemas de captação são alimentados
+pela suíte de softwares ISA.
+O framework77 ISA está estruturado de maneira hierárquica, conforme apresentado
+na FIGURA 3. Essa estrutura do formato de arquivo ISA-tab possui código aberto e foi
+desenvolvida sobre as seguintes categorias de metadados: uma sobre investigação
+(investigation) que trata do contexto do projeto; a segunda refere-se ao estudo (study) que
+define uma unidade de investigação; e, por último, o ensaio (assay) que realiza a medição
+analítica (dados quantitativos e qualitativos).
+
+
+FIGURA 3 – Categorias de metadados da estrutura ISA-tab
+
+Fonte: ISA-Tab (2014).
+
+Além da estrutura ISA-tab existe a ISA Commons78: uma comunidade crescente que
+utiliza os metadados ISA para facilitar a criação de normas compatíveis para a gestão,
+colaboração, curadoria e reutilização de conjunto de dados em uma ambiência, cada vez
+mais, diversificada de domínios das ciências.
+4 PROTÓTIPO DE ARTIGO AMPLIADO: UM EXPERIMENTO DE PESQUISA
+Esta seção apresenta a primeira fase do protótipo que compõe o experimento de
+pesquisa da tese de doutorado, ora em andamento. Dessa forma, o protótipo objetivou a
+elaboração de um artigo científico, com características ampliadas, cuja pretensão foi
+alcançar a essência de uma Enhanced Publication e desenvolver um padrão de estruturação
+de metadados. Nessa primeira fase, recorreu-se à experiência da Nature Publications para
+identificar o padrão de metadados utilizado na estruturação dos elementos e na agregação
+dos objetos de pesquisa.
+A denominação dada ao protótipo foi o e-Quilt79. Esta denominação reflete o estado
+da arte do experimento, ilustrado por meio do protótipo do artigo com características
+
+78
+79
+
+Disponível em: <http://isacommons.org/>. Acesso em: 10 jul. 2014.
+Definição dos autores (2014): Quilt = Colcha de Retalhos, o e-Quilt é uma derivação da palavra
+Quilt para o ambiente digital no e-Science.
+
+
+
+ampliadas, que apresentam, na sua essência, uma publicação ampliada composta pelo artigo
+tradicional agregando dados e objetos de pesquisa associados.
+FIGURA 4 - Logo e-Quilt
+
+Fonte: Elaborado pelos autores (2014).
+Para a realização dessa fase, utilizou-se, como subsídio, uma pesquisa da área de
+saúde, do Departamento de Clínica e Odontologia Social da Universidade Federal da
+Paraíba, Campus I, João Pessoa, Paraíba. Dentro do escopo da pesquisa, o projeto intitulado
+Avaliação de Proposta de Qualificação de Recursos Humanos e Programação no Programa
+Saúde da Família derivou várias pesquisas, dentre elas: o Levantamento Epidemiológico em
+Saúde Bucal de Escolares do Município de Caaporã - PB, Brasil, cadastrado no Grupo de
+Pesquisa em Odontopediatria e Clínica Integrada, no CNPq, utilizado para o viés deste
+experimento.
+O protótipo desenvolvido foi realizado com o propósito de agregar dados de
+pesquisa, gerados no campo da pesquisa, para o artigo tradicional. Para tanto, foi necessário
+definir uma sistemática e um framework para a estruturação do artigo na plataforma e-Quilt
+que vislumbrasse, nessa primeira fase, a adoção de critérios necessários para a arquitetura,
+agregação e linkagem dos objetos digitais relacionais da publicação.
+A sistemática para a estruturação do artigo ampliado constituiu-se de: a) elaboração
+do artigo; b) estruturação dos elementos para padrão de metadados; c) formatação
+normativa do artigo; d) instalação do Apache OpenOffice 4 para o pré-teste; e) criação de
+uma estrutura HTML; f) geração da página HTML com os conteúdos; g) agregação dos
+objetos da pesquisa (hyperlinks e âncoras); h) instalação da plataforma OJS; i)
+customização da plataforma e-Quilt; j) upload dos arquivos na plataforma e-Quilt.
+Essa sistemática foi desenvolvida, simultaneamente, com a estruturação dos
+metadados do artigo, conforme a seção seguinte.
+4.1 Estruturação dos metadados e-Quilt
+Com base no caso de Enhanced Publication da Nature, foram adotados para o
+experimento e-Quilt dois tipos de metadados, a saber: descritivos e administrativos.
+Santos et al. (2014, p. 148- 149) afirmam que,
+
+
+No ambiente digital, os metadados influenciam tanto no acesso quanto na
+recuperação da informação e são utilizados como elementos de busca para
+facilitar o acesso aos dados descritivos e a localização de recursos na web,
+e para que tenham aceitação internacional e auxiliem na interoperabilidade
+eles devem possuir uma padronização.
+
+Os metadados descritivos são usados para descrever, identificar e representar
+recursos de informações. Esses fornecem os elementos para descrição do título, autor,
+imprenta, data, resumo, palavras-chave que podem ser hiperlinks e anotações sobre
+usuários. E os metadados administrativos são usados no gerenciamento e administração dos
+recursos de informação. Esses, por sua vez, fornecem informações sobre a data de criação
+dos recursos, tipos de arquivos, formas de acesso, controle de direitos e reproduções e dos
+registros legais.
+Esses dois níveis de metadados foram utilizados para padronizar a formatação do
+artigo ampliado. Para cada tipo de metadados, foram descritos elementos oriundos do
+conteúdo e dos dados agregados à pesquisa e outros elementos e ferramentas adicionadas
+pela plataforma do periódico. Entre cada seção do artigo, hyperlinks foram adotados para
+ligar os conteúdos do texto às suas respectivas seções.
+A seguir, descreve-se brevemente a plataforma de gestão e linguagem de
+programação adotada na ambiência do e-Quilt.
+4.2 Plataforma de gestão eletrônica do e-Quilt
+Como etapa inicial do protótipo, a plataforma OJS (Open Journal System), na versão
+3.0-beta, foi utilizada para a gestão eletrônica do artigo. Inicialmente, foi criada uma nova
+interface gráfica do usuário baseada na estrutura padrão desenvolvida pela Public
+Knowledge Project (PKP)80. Em seguida, foi gerado um arquivo Cascade Style Sheets
+(CSS)81 definindo as propriedades visuais de cada elemento da interface. Foi realizado o
+upload do arquivo CSS, no CMS (Content Management System) da plataforma OJS,
+disponível na (URL: <http://wrco.ccsa.ufpb.br/escience/>).
+Para a formatação do artigo científico ampliado, também se adotaram a linguagem
+de marcação HTML e CSS na plataforma OJS. Na estruturação dos conteúdos dos dados de
+pesquisa relacionados e informações adicionais, referentes ao periódico e ferramentas, uma
+
+
+interface própria foi criada para a navegabilidade do e-Quilt, que foi desenvolvido
+especialmente para esse protótipo.
+A interface foi dividida em três partes: menu esquerdo, central e menu direito. No
+menu esquerdo, agruparam-se os metadados descritivos que estão relacionados ao conteúdo
+do artigo, tais como: sumário, resumo, autores, filiações, método e os resultados oriundos
+da pesquisa em andamento. No centro, agrupou-se o artigo principal com os metadados
+descritivos e seus respectivos hiperlinks. E no menu direito, estruturaram-se os metadados
+administrativos que estão relacionados com as informações suplementares do artigo, as
+ferramentas do periódico disponíveis pela plataforma OJS, bem como as permissões
+referentes à propriedade intelectual conforme ilustrado na FIGURA 5.
+Dessa forma, para a interface do artigo ampliado adotaram-se os objetos digitais
+compostos (formatos e extensões) agregados ao artigo principal. A primeira versão do
+protótipo e-Quilt pode ser visualizada na FIGURA 6 e acessível pela URL:
+<http://designlivre.net/artigo_ampliado/teste.html#FILE-001.
+FIGURA 5 - Interface do protótipo e-Quilt
+
+Fonte: Elaborado pelos autores (2014).
+Para vincular os diferentes objetos digitais compostos (formatos de mídia e
+múltiplas extensões), no conteúdo do protótipo do artigo ampliado, foram inseridos
+inúmeros hyperlinks e âncoras. As tags <a> <a/> são utilizadas para definir um hiperlink,
+podendo estar relacionadas a diversos atributos (href, target, accesskey e title).
+FIGURA 6 - Interface do artigo científico do protótipo de periódico e-Quilt
+
+
+
+Fonte: Elaborado pelos autores (2014).
+O uso comum das âncoras tem a finalidade de tornar as páginas acessíveis aos
+usuários. Isso proporciona uma melhor navegabilidade através da nomeação de uma região
+do conteúdo principal onde foi incluído um hiperlink no início da página que remete o
+leitor, diretamente, para o conteúdo nomeado, evitando que tenha que passar por cada uma
+das seções do artigo. A interface em HTML do protótipo e-Quilt está em fase de
+aprimoramento e agregação dos objetos, cumprindo a fase 1 do experimento. O protótipo
+está sendo aprimorado, para a segunda fase do experimento, com a complementação dos
+padrões de metadados e os protocolos de interoperabilidade adotados na ambiência da
+Enhanced Publication. A fase 2 será desenvolvida no período de agosto a novembro de
+2014.
+5 CONCLUSÕES
+As mudanças no cenário da publicação científica estão em evidência. O protótipo eQuilt criado com o intuito de apresentar um padrão de estruturação para publicação de
+artigo científico, com características ampliadas, atendeu ao objetivo inicial. A partir do caso
+da Nature, foi possível entender e identificar o padrão de metadados ISA-tab adotado na
+ambiência das suas publicações ampliadas no cenário internacional, motivando, assim, a
+estruturação preliminar do protótipo de artigo científico com características ampliadas.
+Criaram-se, nessa fase, uma interface própria e uma logomarca para o e-Quilt com
+uma comunicação visual adequada à essência de uma Enhanced Publication. A adoção do
+Software OJS de publicação aberta para a hospedagem do artigo, o CSS como linguagem de
+
+
+
+folhas de estilo, a linguagem de marcação HTML e o recurso de hyperlink foram essenciais
+para tornar o experimento acessível, com possibilidades de agregação entre os dados de
+pesquisa, objetos digitais e o conteúdo do artigo. Quanto ao artigo, vários objetos e dados
+de pesquisa foram adicionados, possibilitando, dessa feita, usar formatos com diferentes
+extensões, oriundos da pesquisa que foi utilizada como subsídio para o experimento. Dentre
+os diferentes formatos, destacam-se o resumo em áudio, dados de calibração advindos de
+software, arquivos em planilha Excel e outros documentos gerados para a pesquisa.
+Por fim, concluiu-se, nesta fase da pesquisa, que o experimento foi realizado e o
+protótipo e-Quilt é uma publicação viável e totalmente acessível pela Internet.

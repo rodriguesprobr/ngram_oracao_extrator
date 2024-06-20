@@ -1,0 +1,500 @@
+
+Comunicação Oral
+DIFUSÃO DA INFORMAÇÃO NO TWITTER: FLUXO DA INFORMAÇÃO NA
+AUDIÊNCIA INVÍSIVEL
+Resumo
+Esta pesquisa apresenta como acontece a disseminação da informação através do serviço de
+microblog Twitter. O fluxo informacional de mensagens postadas no Twitter tem uma ênfase
+maior na disseminação da informação em si através dos “retweetes”, que os usuários podem
+fazer por meio das mensagens postadas por outros usuários. Para avaliar a disseminação da
+informação no Twitter foi usada a ferramenta “Where Does My Tweet Goes” para avaliar uma
+postagem, realizada pela Liga dos Campeões da Europa postada originalmente. A coleta de
+dados foi realizada baseada na mineração de repositório, de forma automática na própria base
+de dados do Twitter. Foi analisada a relação entre os usuários da rede para estudar a forma
+como eles influenciam na disseminação de um tweet.
+Palavras-chave: Redes Sociais Virtuais. Twitter. Fluxo Informacional. Disseminação da
+Informação.
+1 INTRODUÇÃO
+Com a utilização da Internet cada vez mais integrada à vida cotidiana, as questões
+relativas sobre o uso das informações neste espaço estão mudando de quem está 'logado' no
+ambiente para uma análise mais aprofundada do que as pessoas fazem online. Entre estas
+considerações, existe um crescente reconhecimento de que a Internet está estimulando
+
+conexões e forjando novas ligações entre pessoas e organizações (HAYTHORNTHWAITE,
+2005).
+Os cientistas sociais há muito tempo reconheceram a importância das redes sociais na
+disseminação da informação (GRANOVETTER, 1973) e inovação (ROGERS, 2010).
+Tecnologias de Comunicação Modernas, tais como e-mail e mais recentemente as redes
+sociais virtuais, só têm reforçado a disseminação da informação (WU et al., 2004; Gruhl et al.,
+2004), a nova maneira sobre como buscar a informação (ADAMIC; ADAR, 2005).
+Recentemente a Agência Americana de Projetos de Pesquisa Avançadas em Defesa
+(DARPA) promoveu um desafio 1 , que testou a capacidade das redes sociais virtuais para
+mobilizar grandes equipes aleatórias, para que estas resolvessem problemas do mundo real. A
+conclusão foi que as redes sociais virtuais são quase onipresentes no mundo, uma vez que
+equipes de todos os lugares participaram dos mais diversos desafios (LERMAN; GOSH,
+2010).
+Esse desafio promovido pela DARPA corrobora com as primeiras pesquisas sobre a
+comunicação mediada por computador, que sugeriam uma mudança nas interações entre
+pessoas
+
+que
+
+passaram
+
+de
+
+face-a-face
+
+para
+
+uma
+
+mídia
+
+baseada
+
+em
+
+texto
+
+(HAYTHORNTHWAITE, 2005).
+Novos meios de comunicação se tornaram familiares ao público em geral e o seu uso
+foi adaptado através de convenções comuns. Estes novos canais chegam a ser vitais para
+manter o trabalho e conexões sociais na vida cotidiana, atravessando os diversos mundos
+sociais do indivíduo, tais como: trabalho, casa, e qualquer tipo de geografia (WELLMAN;
+HAYTHORNTHWAITE, 2008).
+Algumas redes sociais virtuais dispõem de ferramentas que fornecem aos
+pesquisadores o acesso a grandes quantidades de dados, para análise empírica. Estes
+conjuntos de dados oferecem uma rica fonte de evidências para o estudo das estruturas sociais
+e a dinâmica da troca de informação entre indivíduos (VÁZQUEZ et al., 2006),
+comportamento dos indivíduos (HOGG; LERMAN, 2009), a eficácia da recomendação de
+produtos em marketing viral (LESKOVEC; ADAMIC; HUBERMAN, 2007), propriedades
+globais da propagação de mensagens de e-mail (WU et al., 2004; LIBEN-NOWELL;
+KLEINBERG, 2008), postagens de blogs (LESKOVEC et al., 2007a), e identificação de
+blogs influentes (GRUHL et al., 2004; LESKOVEC et al., 2007b).
+
+1
+
+https://networkchallenge.darpa.mil
+
+Na maior parte destes estudos, a estrutura da rede formada não era visível aos
+pesquisadores, e esta teve que ser inferida a partir do fluxo de informações que fluia de um
+indivíduo para outro. Então identificar como se dá esse fluxo representa um sério desafio para
+os pesquisadores em compreender como a estrutura da rede afeta a dinâmica de propagação
+de informações sobre ela (HAYTHORNTHWAITE, 2005).
+Serviços de notícias, tais como o Twitter 2 , se mostram como uma alternativa para
+estudar a dinâmica de disseminação de informações em redes sociais virtuais. Considerando
+este contexto, este trabalho apresenta um estudo empírico sobre como se dá a disseminação da
+informação na rede social Twitter. Foram coletados dados sobre dezessete tweets utilizando a
+ferramenta Where Does My Tweet Goes 3 que permite identificar o comportamento de
+“retweets” de uma determinada postagem.
+As informações providas por esta ferramenta permitem caracterizar empiricamente a
+dinâmica de disseminação da informação, estrutura de disseminação e a propagação de
+interesse da postagem através da rede. Assim, o objetivo geral desta pesquisa é: identificar as
+características da disseminação da informação de postagens no Twitter.
+Este trabalho visa contribuir com o entendimento sobre como a audiência invísivel do
+Twitter auxilia na viralização/propagação da informação na rede social. Qual o potencial
+alcance da informação no Twitter? Como ela se propaga? A quem esta informação interessa?
+Como é o ciclo de vida dessa informação?
+2 LITERATURA PERTINENTE
+Para uma maior compreensão dos conceitos envolvidos neste trabalho, foram
+relacionados alguns conceitos publicados na literatura pertinente em Ciência da Informação.
+Esses serão apresentados nas subseções a seguir.
+2.1 FLUXO DA INFORMAÇÃO
+Atualmente a informação vem se tornando uma necessidade tanto para as organizações
+como para os indivíduos. Através do seu uso é possível alterar o “status quo” de uma
+determinada realidade à medida que novos conhecimentos são gerados, pois a informação é
+definida como “um tipo de dado que leva ao receptor um conteúdo novo na medida em que
+ela é compreendida e aceita graças a uma linguagem (MARTELETO, 2010, p.33 apud
+VECCHI, 2005, P.90-91).
+2
+
+http://twitter.com
+http://www.wdmtg.com
+
+3
+
+Assim, a informação permite que o indivíduo absorva conteúdo e o utilize para um
+determinado fim, como por exemplo: tomada de decisões, resolução de problemas e definição
+de estratégias. Neste fluxo é também possível que o próprio indivíduo gere novas
+informações, já que, “os dados informacionais considerados por um receptor, uma vez
+reconhecidos e compreendidos, provocam, em retorno a emissão de novos dados nas mesmas
+condições e mediações mobilizadas no processo de compreensão” (MARTELETO, 2010, p.39
+apud VECCHI, 2005).
+Essa percepção de uma nova informação por parte do receptor é possível graças à
+interação com emissor, este processo de repasse de informações entre um e outro se dá através
+do fluxo informacional, que pode ser entendido como “o processo de transferência da
+informação de um emissor para um receptor” (SAVI; SILVA, 2009, p. 180).
+Neste sentido dentro desta relação entre emissor e receptor, é interessante destacar que
+existe a possibilidade que o primeiro tem de disseminar aquilo que lhe é interessante, pelo
+fato de que “A informação que percorre este fluxo tem um valor associado às necessidades do
+receptor (usuário), associado, por sua vez, ao interesse do emissor em compartilhar a
+informação” (FERREIRA; PERUCCHI, 2011, p. 446), o indivíduo que vai receber a
+informação pode não estar com uma necessidade definida, mas aquele que a está
+disseminando pode promover o interesse pela informação através de sua transmissão.
+Assim, não é possível definir o ciclo informacional como uma forma linear de repasse
+de informação entre emissor e receptor, ele é um “processo disseminador de informações que
+media a comunicação” (GREEF; FREITAS, 2012, p. 40), dentro dele existem etapas para que
+a informação possa ser produzida, utilizada e disseminada com eficácia, para que possa ser
+extraída a maior vantagem possível.
+Dentro de um fluxo informacional é possível encontrar as seguintes etapas: obtenção,
+tratamento, armazenamento, distribuição, disseminação e uso da informação no contexto
+organizacional. (VITAL; FLORIANI; VARVAKIS, 2010). Dentro dessas etapas a que nos
+interessa é a etapa de distribuição, que abrange as atividades relativas à disseminação da
+informação. A Figura 1 apresenta um modelo de fluxo da informação proposto por Beal
+(2004).
+
+Figura 1: Modelo de representação do fluxo de informação
+
+Fonte: Beal (2004).
+A distribuição corresponde à etapa no fluxo onde a informação vai ser disseminada
+para atingir os indivíduos que necessitam da informação ou àqueles que o emissor quer que
+receba a informação. Tal processo depende das redes, pois quanto maior a rede de
+comunicação da organização mais eficiente é a distribuição interna da informação, o que
+aumenta a probabilidade de que esta venha a ser usada por aqueles que estão necessitando
+delas (FERREIRA; PERUCCHI, 2011).
+Tais formas de comunicação aliadas a uma estrutura em rede, que é definida como
+“uma estrutura que além de ser uma malha, cumpre o papel de integração do transporte de
+fluxos, sejam eles materiais ou imateriais” (FROTA; QUINTÃO, 2010, p. 68), onde as
+pessoas estão conectadas umas com as outras, de tal forma que a informação transite dentre
+vários grupos, o que é de grande valia para a disseminação da informação, pois o alcance da
+informação será maior.
+Outro fator importante nesta estrutura é que “no ambiente das redes, o
+compartilhamento de informação e de conhecimento entre as pessoas é constante, pois as
+pessoas frequentemente gostam de compartilhar o que sabem” (TOMAÉL; MARTELETO,
+2006, p.2), essa estrutura permite uma melhor forma de troca de disseminação da informação,
+por permitir que as pessoas transmitam seus conhecimentos com mais facilidade.
+
+Barreto (1999) conclui que “com a informação online, os fluxos de informação
+multidirecionados, levam a meandros virtuais, onde o tempo se aproxima de zero, a
+velocidade é próxima do infinito e os espaços são de vivência pela não-presença”.
+Lara e Conti (2003) afirmam que a disseminação da informação é a ação de tornar
+visível o conhecimento do indivíduo ou da organização. Essa disseminação “assume formas
+variadas, dirigidas ou não, que geram inúmeros produtos e serviços”.
+É percebido que as redes sociais virtuais são ferramentas de difusão da informação não
+dirigidas, pois quando é deixada alguma mensagem em uma dessas redes, não se sabe a priori
+quais são as proporções e as dimensões do alcance destas postagens. Por conseguinte, vários
+indivíduos estarão atuando junto a mesma informação, e essa interação através da rede
+promove a multiplicação da informação (FROTA;QUINTÃO, 2010).
+Então, as redes sociais virtuais possuem um importante papel junto à distribuição da
+informação e a comunicação eletrônica imprime uma velocidade muito maior na possibilidade
+de acesso e no uso da informação (BARRETO, 1998), com isto, as redes sociais,
+principalmente as virtuais, permitem que pessoas mesmo longe do local de partida da
+informação a acessem de forma rápida.
+2.2 PAPEL DO ATOR NAS REDES SOCIAIS E A AUDIÊNCIA INVISÍVEL
+Uma característica comum a qualquer rede social é o fato dela ser composta por seres
+humanos, pessoas repletas de valores, crenças, sentimentos e necessidades, sendo estes
+responsáveis por disseminar a informação dentro da rede. Segundo Sugahara e Vergueiro
+(2012) as redes sociais são um conjunto de participantes autônomos, unindo idéias e recursos
+em torno de valores e interesses compartilhados.
+Os indivíduos se alinham em uma estrutura em rede a partir do momento em que
+desenvolvem o interesse comum e o compartilham, onde “a configuração em rede é peculiar
+ao ser humano, ele se agrupa com seus semelhantes e vai estabelecendo relações de trabalho,
+de amizade, relações de interesses que se desenvolvem e se modificam conforme a sua
+trajetória.” (TOMAÉL; ALCARÁ; CHIARA, 2005, p. 93).
+Porém, é interessante ressaltar que um usuário não pertence a apenas uma
+determinada rede social, podendo estar inserido dentro de várias outras, “a vasta trama de
+relacionamentos entre pessoas com atividades comuns propicia uma aproximação entre os
+integrantes periféricos e centrais da rede e que a inversão desses papéis leva ao
+compartilhamento de informações” (SUGAHARA; VERGUEIRO, 2012, p.4).
+
+O indivíduo vai ser determinante para que a informação flua de uma rede para outra,
+pois os espaços sociais não são homogêneos como o processamento técnico dos estoques de
+informação. Em uma rede social virtual como o Twitter, que possui várias “micro-redes”,
+menores, formadas pelos próprios usuários, a informação vai transitar por diferentes contextos
+e os participantes desses contextos irão definir se a informação vai continuar circulando
+dentro da grande rede ou se será interrompida em algum usuário no caminho. Neste sentido o
+usuário pode potencializar a informação ou ser uma barreira para ela.
+Essa característica do usuário tem relação com seus aspectos culturais, pelo fato de
+que “a cultura comum é ressaltada como um aspecto importante para melhor transferência do
+conhecimento” (TOMAÉL; ALCARÁ; DI CHIARA, 2005, p. 99) e quanto mais próximas as
+pessoas estão da cultura do conhecimento que está sendo transferido, mais fácil é o
+compartilhamento e a troca (DAVENPORT; PRUSAK, 1998), o individuo tende a
+compartilhar a informação que está mais próxima a seu contexto cultural, por ela lhe
+apresentar mais segurança, estar mais próxima à imagem que ele tem dentro da rede e a outras
+características que são intrínsecas a ele.
+A questão cultural do ator da rede social é importante, pois ela pode criar barreiras
+para a transferência da informação. Davenport e Prusak (1998) ressaltam que as diferenças
+culturais podem servir de barreira para a difusão da informação, pois “as redes estabelecem
+um espaço aberto, com livre fluxo de informações, intercâmbio cultural e “uma interação
+dialógica e multidirecional entre sujeitos” (BARICHELLO; OLIVEIRA, 2010, p.33).
+Através de suas características, os usuários dentro de uma rede têm uma ação atuante
+junto ao trânsito das informações, “o poder de ação do indivíduo na rede é acompanhado e
+potencializado, desse modo, por uma série de outros dispositivos, o usuário é um dos
+elementos que a fazem movimentar-se (LONGHI; SOUZA, 2012), o indivíduo dentro de
+uma rede social virtual como o Twitter, atua como produtor e disseminador da informação,
+dando movimento ao fluxo informacional dentro da rede.
+A partir desta capacidade de dar movimento às informações dentro da rede, o usuário
+cria interações com outros usuários, isso é corroborado por Sugahara e Vergueiro (2012) que
+afirmam:
+São as interações entre indivíduos e a realidade em que se encontram inseridos que
+conformam seu contexto informacional, ou seja, que definem estruturas e orientam
+suas ações. No espaço em rede, as relações são tecidas à medida que se compartilha
+informação e conhecimento oriundos de práticas e vivências do grupo.
+(SUGAHARA; VERGUEIRO, 2012, p.2)
+
+As relações que o usuário possui desempenham um papel determinante para o
+processo de disseminação da informação, “pode-se dizer que as relações de interação entre os
+indivíduos de uma rede social oportunizam a troca e o compartilhamento de informação e
+conhecimento” (SUGAHARA; VERGUEIRO, 2012, p.7), neste sentido, o indivíduo tende a
+ter maior afinidade com as pessoas que ele mantém uma relação direta dentro da rede, dando
+assim um maior valor às informações que são produzidas por alguém próximo a ele.
+O ator da rede social pode assumir o papel de filtro informacional, ele decide que
+conteúdo vai ser repassado para as pessoas presentes na sua rede, a partir da sua visão de
+mundo.
+No passado, imaginava-se que haveria programas capazes de filtrar informações por
+temas, como agentes inteligentes de conteúdo. Hoje, se alguém segue as pessoas
+certas no Twitter, terá em sua página um grande filtro com inteligência humana. É
+uma multidão trabalhando para ele gratuitamente (ALVES, 2011, p. 101).
+
+Os primeiros modelos sobre a dinâmica de comunicação foram inspirados por
+estudos de epidemias, assumindo que um pedaço de informação pode passar de uma pessoa
+para outra através de contatos sociais (DALEY; KENDALL, 1964). Estes modelos foram
+estendidos para incluir fenômenos em cascata, os fatores que influenciam a velocidade de
+propagação de novas informações (MORENO; NEKOVEE, 2004), a heterogeneidade de
+padrões conectividade (PASTOR-SATORRAS, R.; VESPIGNANI, 2001), clustering
+(WATTS, 2004), o conteúdo criado pelo usuário (WENG et al., 2013), e os padrões de
+conectividade temporais (PERRA et al., 2012).
+Enxergar através da “translucidez” das redes sociais se torna um desafio para os
+analistas de mídia social. Já se sabe que para o Facebook e Blogs, o público alvo não são os
+colegas e amigos próximos e sim os laços mais fracos. A noção da audiência invisível está
+ligada ao público imaginado nas mídias sociais. Esse conjunto de pessoas geralmente está
+ligado ao círculo social, tais como amigos do trabalho, faculdade ou quaisquer outros
+(BERNSTEIN et al., 2013).
+Litt (2012) aponta que, os usuários só reconhecem um quarto (1/4) da sua audiência e
+que mesmo fontes normais como curtir, compartilhar e comentários não trazem uma
+estimativa sequer aproximada da audiência real. Então os próprios analistas de mídia social
+ainda não sabem exatamente como estimar a audiência de um determinado canal.
+3 METODOLOGIA
+
+Este trabalho é caracterizado como uma pesquisa empírica quanto aos meios, e
+aplicada quanto aos fins. Primeiramente, foi necessário identificar uma ferramenta que fosse
+capaz de “rastrear” o fluxo dos tweeters, a partir dos retweets dados naquelas postagens. Foi
+encontrada a ferramenta Where Does My Tweet Goes4 que pode apresentar a disseminação de
+um tweet específico de forma longitudinal a partir do seus retweets.
+A ferramenta tem a finalidade de verificar o alcance de um tweet e o caminho que ele
+percorre através dos usuários que o “retweetam”. A ferramenta foi desenvolvida pelo
+arquiteto da informação francês Benoît Vidal. Esta ferramenta utiliza um algoritmo para
+verificar como os “tweets” se propagam entre os seguidores de um determinado perfil, a partir
+dos seguidores dos seguidores, medindo assim o alcance de usuários de uma mensagem. Ela
+apresenta ligação direta com o Twitter.
+Em seguida foi necessário escolher tweets de diferentes usuários específicos para
+serem analisados. Assim, foram escolhidos dezessete tweeters listados na Tabela 1 abaixo.
+Tabela 1 - Twitters Utilizados na Pesquisa
+
+4
+
+ID
+
+Autor
+
+Endereço
+
+1
+
+@wbpictures
+
+http://wdmtg.com/graph/354721805275115521
+
+2
+
+@cnnbrk
+
+http://wdmtg.com/graph/357256998514995200
+
+3
+
+@nfl
+
+http://wdmtg.com/graph/357229406529392641
+
+4
+
+@James_BG
+
+http://wdmtg.com/graph/357416334809772033
+
+5
+
+@algore
+
+http://wdmtg.com/graph/357289311248465921
+
+6
+
+@LeoDiCaprio
+
+http://wdmtg.com/graph/357529716024025088
+
+7
+
+@instagram
+
+http://wdmtg.com/graph/355096156117807104
+
+8
+
+@VEVO
+
+http://wdmtg.com/graph/358632627751751681
+
+9
+
+@ChampionsLeague
+
+http://wdmtg.com/graph/353542315597512707
+
+http://.www.wdmtg.com
+
+10
+
+@washingtonpost
+
+http://wdmtg.com/graph/355309019474296832
+
+11
+
+@Roghetti
+
+http://wdmtg.com/samples/hobbyte
+
+12
+
+@Rugbyworldmag
+
+http://wdmtg.com/graph/358195033323102208
+
+13
+
+@Independent
+
+http://wdmtg.com/graph/359418694696321024
+
+14
+
+@oxfamgb
+
+http://wdmtg.com/graph/359397337489096706
+
+15
+
+@nokeydokey
+
+http://wdmtg.com/graph/360446914740776960
+
+16
+
+@FOXSoccer
+
+http://wdmtg.com/graph/359069015479549952
+
+17
+
+@THR
+
+http://wdmtg.com/graph/358462857215610880
+
+Fonte: Os Autores (2013)
+
+Esses tweets foram escolhidos por apresentar um considerável e provável
+representatividade dos usuários e da possibilidade de alcance em um espaço de tempo
+relativamente pequeno. Os que possuem um grande número de seguidores podendo aumentar
+a chance do tweet circular por mais tempo na rede.
+A própria ferramenta mostra: (i) o caminho que o tweet percorreu, (ii) os usuários que
+o retweetaram, (iii) os graus de separação das pessoas do usuário que foi ponto de partida do
+tweet, (iv) o alcance de cada usuário e (v) quantos retweets foram dados a partir de um
+determinado usuário. Além disto, a ferramenta permite que sejam visualizados os perfis das
+pessoas que estão no caminho do tweet.
+4 RESULTADOS
+O tweet que ficou mais tempo em uso foi criado pelo usuário @washingtonpost (ID
+10) o tempo entre a data do lançamento original e do último retweet foi de 27 dias, 12 horas e
+54 minutos. O que ficou menos tempo em uso foi do @wbpictures (ID 1) que ficou 2 dias, 18
+horas e 13 minutos.
+O tweet de maior alcance foi o do @instangram (ID 7) com o total de 23 milhões, 964
+mil e 850 (23.964.850) perfis em que a mensagem foi exibida. O tweet de menor alcance foi
+apresentado pelo usuário @nokeydokey (ID 15) com o total de 305 mil e 971 (305.971) perfis
+que a mensagem alcançou. O tweet mais retweetado foi do @instagram (ID 7) com 1964
+retweets, enquanto o menos retweetado foi o do perfil wbpictures (ID 1).
+
+O tweet com o maior número de graus de separação é o do usuário @Roghetti com 17
+graus de separação, ou seja, sua postagem foi retweetada 17 vezes. O que apresenta um
+menor número de grau de separação é o da @wbpictures com apenas 2 graus de separação.
+Figura 2 - Análise Geral do Tweet do usuário @instagram (ID 7)
+
+Fonte: Os Autores, (2013)
+
+A Figura 2 apresenta a análise do tweet do usuário @instagram (ID 7), apresentando a
+interface da ferramenta. Pode ser visto na Figura 2 as diversas linhas azuis que representam
+um retweet dado por alguém que teve acesso ao tweet original.
+5 CONSIDERAÇÕES FINAIS
+Esta avaliação do fluxo informacional da disseminação de postagens feito no
+microblog Twitter trouxe a tona algumas descobertas sobre como se comporta um tweet na
+rede em que os usuários estão envolvidos.
+Também é possível verificar que o contexto dos usuários em relação ao conteúdo da
+mensagem pode influenciar na difusão do tweet, no caso do tweet a respeito de futebol
+colocado pelo usuário @ChampionsLeague (ID 9) este se propagou na rede de usuários que
+apresentam afinidade com o tema. Isso foi verificado por que o usuário @alexmorgan13, por
+ser jogadora de futebol, possui seguidores influentes como @NicoleLizurej, que se interessou
+em retweetar este determinado conteúdo, se não fosse esse retweet, o alcance do mesmo cairia
+em mais da metade.
+
+Esse tweet, junto com aquele postado pelo usuário @nfl (ID 3), representa um
+fenômeno que foi observado na maioria das postagens investigadas, que é o papel daqueles
+usuários que fazem parte de mais de uma rede social, chamados de hubs, que disseminam
+informação entre micro-redes, que não seguem originalmente o autor da postagem. Ao
+alcançar estes hubs, a postagem reinicia um novo ciclo informacional, fazendo com que a
+mensagem
+
+se
+
+propague
+
+por
+
+mais usuários.
+
+O
+
+exemplo
+
+do
+
+tweet
+
+criado
+
+pelo
+
+@ChampionsLeague mostra que cerca de 120 pessoas retweetaram a mensagem do usuário
+original, enquantos outros 200 retweetaram a postagem da usuária @alexmorgan13.
+É possível também verificar a situação a respeito do conteúdo em relação ao contexto
+do usuário no tweet do @instagram (ID 1), que foi a respeito de uma festividade mulçumana,
+o Ramadan. Os principais “retweeters” foram usuários que têm interesse na cultura
+mulçumana. O mesmo ocorre como o tweet do @VEVO (ID 2), cujo o conteúdo é a respeito
+da cantora Selena Gomez, e os principais potencializadores do alcance desse tweet foram
+perfis de fãs dela.
+Outro fator interessante é observar que a maioria dos tweets não passam do 1º grau de
+separação. Ou seja, esse conteúdo só é retweetado uma vez, na maioria das vezes, o que
+minimiza o efeito em cascata na ferramenta. Alguns fatores que podem influenciar neste
+comportamento é a natureza dinâmica do Twitter, onde as pessoas postam muitas coisas e
+nem sempre é interessante retweetar tudo que alguém posta e também quem normalmente
+gosta do conteúdo a ponto de compartilhá-lo, já está seguindo o perfil de interesse.
+A média dos graus de separação máximo nos tweets investigados são seis pessoas. Ou
+seja, a teoria do mundo pequeno (WATTS, 1999) onde há a teoria que uma pessoa está em
+média a 6 pessoas de outra no mundo se mostra razoável. Seria esperado que o número de
+graus de separação nestes perfis fosse menor, devido a popularidade. Alguns casos anormais,
+como o tweet do @Roghetti (ID 11) com 17 graus de separação, não significa que este tenha
+poucos seguidores, ou que este está longe da maioria das pessoas, mas que conteúdo
+interessante atingiu o alcance de pessoas muito “distantes” dele, e um grau de separação 17
+implica que aquele conteúdo atingiu pessoas bem isoladas.
+Por fim, vale ressaltar que analisando a média de compartilhamento e seguidores/
+alcance dos tweeters, corroboramos com as ideias de Bernestein (2013) e Litt (2012) que
+apontam que não parece existir uma correlação entre o número de seguidores e retweets com
+o alcance. O tweet do @rugbyworldmag apesar de ser retweetado 957 vezes e possuir 55787
+seguidores, o que é um número alto, só atingiu um alcance de 308 mil 202 perfis (308.202).
+
+Neste sentido, concluímos que assim como os trabalhos de Bernestein (2013) e Litt
+(2012), a disseminação da informação no Twitter segue o mesmo padrão do Facebook e que
+as ferramentas de análise de mídias sociais de maneira geral, supõe muito em cima de
+indicadores, tais como retweets e seguidores, que não tem uma correlação com a
+disseminação em si.
