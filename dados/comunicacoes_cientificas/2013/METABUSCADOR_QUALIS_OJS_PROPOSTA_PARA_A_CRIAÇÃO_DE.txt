@@ -1,0 +1,477 @@
+
+Comunicação oral
+METABUSCADOR QUALIS OJS: PROPOSTA PARA A CRIAÇÃO DE
+PORTAIS DE PERIÓDICOS INSTITUCIONAIS OU POR ÁREA DE
+CONHECIMENTO
+Resumo
+A plataforma OJS contempla a princípio todo o processo de editoração de um periódico
+eletrônico, inclusive a gestão da revisão por pares, e o presente trabalho tem foco na
+recuperação de informações dessa plataforma. Discute-se a criação de uma ferramenta que
+permite a busca simultânea a diversos periódicos OJS que podem ser filtrados por sua
+classificação QUALIS CAPES, região geográfica, instituição responsável, área e subárea
+de conhecimento. Entre os diferenciais buscados com a criação da ferramenta proposta
+podem ser citados a recuperação de um subconjunto qualquer de periódicos cadastrados e o
+baixo investimento em infraestrutura. O teste inicial foi realizado com os periódicos OJS
+listados na página da Associação Nacional de Pesquisa em Ciência da Informação, com a
+criação do Portal de Periódicos OJS ANCIB. A ferramenta apresentou resultados
+satisfatórios nos diversos testes realizados, quando comparados com o acesso individual à
+página de cada periódico pesquisado. São introduzidas as propostas de criação do Portal de
+Periódicos OJS da UFMG e do Portal de Periódicos OJS do IBICT – esse último proposto
+a partir do uso de todos os periódicos usuários do OJS/SEER. Em contraposição à criação
+de múltiplos periódicos em uma instalação OJS centralizada, o metabuscador OJS proposto
+não interfere na gestão descentralizada dos periódicos, permitindo o agrupamento de
+periódicos de instalações OJS diversas e a recuperação simultânea em um conjunto parcial
+de periódicos, além dos filtros indicados.
+Palavras-chave: Ciência da Informação. Portal de Periódicos. OJS. SEER.
+1 INTRODUÇÃO
+O crescimento da importância dos periódicos científicos como instrumento de
+avaliação dos programas de pós-graduação aumenta o interesse das instituições de ensino
+na manutenção e qualificação dos periódicos vinculados à organização – especialmente os
+de acesso livre e com arquivos abertos – e gera novas questões organizacionais cujos
+estudos apenas se iniciam. A própria Coordenação de Aperfeiçoamento de Pessoal de
+Nível Superior (CAPES) recomenda que os periódicos adotem práticas e normas
+internacionais, indicando, inclusive, sistemas brasileiros de editoração eletrônica que
+obedeçam aos padrões internacionais, o que propicia o reconhecimento dos títulos e
+aumenta a visibilidade da produção científica brasileira. Nesse contexto, o Sistema
+Eletrônico de Editoração de Revistas (SEER) apresenta-se como uma das possíveis
+soluções para os programas de pós-graduação. Ele foi desenvolvido pelo Instituto
+Brasileiro de Informação em Ciência e Tecnologia (IBICT) em 2003 a partir da
+customização do Open Journal System (OJS) – software de gerenciamento e publicação de
+revistas eletrônicas desenvolvido pelo Public Knowledge Project (PKP), da University of
+British Columbia.
+O trabalho de Rodrigues e Fachin (2010) descreve a migração dos periódicos
+eletrônicos da UFSC para o SEER. De acordo com as autoras, as formas de “organizar,
+tratar, disponibilizar, recuperar e preservar informações científicas é uma discussão a
+descoberto, fortemente influenciada pela evolução das Tecnologias de Informação e
+Comunicação (TIC)” (RODRIGUES e FACHIN, 2010, p.34). Elas enfatizam que “a
+quantidade de informações na web forma um ambiente caótico, onde recuperar
+informações torna-se mais difícil e a relevância e precisão são quase nulas, embora os
+sistemas de indexação e recuperação de informações estejam cada dia mais sofisticados”
+(RODRIGUES e FACHIN, 2010, p.36).
+Ainda conforme as autoras, “o estudo, pesquisa, criações e adaptações [do processo
+de comunicação científica] são realizados a fim de melhor disponibilizar e recuperar
+informações em periódico científico, sempre atendendo os aspectos evolutivos de cada
+época” (RODRIGUES e FACHIN, 2010, p.34). Elas discutem a existência de diversas
+ferramentas disponíveis para a coleta, organização, tratamento, disseminação e preservação
+de periódicos científicos, mas ressaltam também a grande importância da revisão pelos
+
+pares como uma forma de validação da informação científica. Na opinião das autoras, esse
+procedimento é tão importante que “é um dos critérios que mais distingue os periódicos
+científicos de qualquer outro tipo de publicação. Esse aspecto diferencia também um portal
+de periódicos científicos de um repositório institucional ou temático.” (RODRIGUES e
+FACHIN, 2010, p.36). Stumpf (2006, p.21) também ressalta que a presença do sistema de
+arbitragem ou pela revisão pelos pares (referee system ou peer review) é o fator que
+distingue o grau de confiabilidade das publicações científicas.
+A instalação da plataforma OJS contempla a princípio todo o processo de
+editoração de um periódico eletrônico, inclusive a gestão da revisão por pares. Em termos
+técnicos, o OJS permite duas modalidades de instalação: simples, para um único periódico,
+ou para múltiplos periódicos. Na modalidade simples, o periódico é criado isoladamente e
+a principal limitação é a pesquisa isolada, obrigando o usuário a consultar cada página
+específica de cada periódico e repetir seus critérios de busca.
+Quando são instalados múltiplos periódicos na mesma plataforma OJS surgem dois
+problemas. O primeiro é a obrigatoriedade da instalação de todos os periódicos na mesma
+plataforma/servidor OJS. Esse procedimento exige um servidor mais potente (maior custo);
+se esse servidor parar por algum motivo, todos os periódicos ficam indisponíveis; o
+processo de centralização pode criar resistências culturais na instituição quando os
+periódicos já estão instalados nos respectivos programas de pós-graduação. O segundo
+problema refere-se à recuperação: somente é possível pesquisar em um único periódico, ou
+em todos, não sendo permitida a escolha de um subconjunto diferente de periódicos.
+Entre as vantagens da proposta deste trabalho, podem ser citadas: a pesquisa
+permite filtrar por área e subárea de conhecimento, região geográfica e instituição
+responsável pelo periódico; é possível filtrar pelo estrato QUALIS CAPES de avaliação do
+periódico; o usuário pode escolher, depois dos filtros anteriores, em quais periódicos deseja
+pesquisar (um subconjunto qualquer). É importante destacar que o processo de revisão por
+pares não é tratado pela ferramenta, que atua somente na fase de recuperação dos artigos já
+publicados em cada periódico.
+Após a descrição dos passos metodológicos adotados para a criação da ferramenta,
+é apresentado o teste inicial – que está disponível para acesso em www.cmca.srv.br/ojs –
+com os periódicos listados na página da Associação Nacional de Pesquisa em Ciência da
+Informação (ANCIB). Em seguida sugere-se a implantação do Portal de Periódicos OJS da
+UFMG e do Portal de Periódicos OJS do IBICT.
+
+2 PASSOS METODOLÓGICOS
+A seguir são descritos os passos metodológicos utilizados para o desenvolvimento
+deste
+
+trabalho,
+
+desde
+
+a
+
+escolha
+
+as
+
+ferramentas
+
+tecnológicas,
+
+passando
+
+pelo
+
+desenvolvimento dos experimentos e criação de sistemas, e chegando até a validação final
+do teste inicial.
+2.1 DEFINIÇÃO DAS FERRAMENTAS PARA DESENVOLVIMENTO
+Para o desenvolvimento da ferramenta foi usado o MySQL, um sistema de
+gerenciamento de banco de dados (SGBD) com base na General Public License (GPL), e
+que apresenta uma fácil integração com a linguagem de programação PHP, além de ser
+multiplataforma (funciona tanto no sistema operacional Windows como no sistema
+operacional Linux), e ter excelente desempenho e estabilidade. (GUIMARÃES, SILVA,
+SANTANA, BRAGA, BOCHNER e GOLDBAUM, 2011).
+Para a realização dos experimentos foi usado o sistema operacional Windows 7
+Home Premium, service pack 1, 64 bits; editor de PHP Zend Studio 5.0.0 e Zend Guard
+4.0.0 para criptografia dos programas disponibilizados na internet; SQLyog 7.02 para
+manipulação do banco de dados MySQL.
+No ambiente web funcionam os programas PHP desenvolvidos, criptografados
+com a ferramenta Zend Guard e transmitidos com a ferramenta FileZilla; o banco de dados
+MySQL é administrado a partir do uso da ferramenta PHPMyAdmin em ambiente Linux.
+Os navegadores Chrome e Firefox foram usados ao longo do desenvolvimento
+dos experimentos e desenvolvimento de sistemas, sempre atualizados com a versão mais
+recente. Os dois navegadores foram usados aleatoriamente, tanto no ambiente de
+desenvolvimento quanto no ambiente web.
+A
+
+lista
+
+de
+
+2.2 Seleção dos periódicos
+periódicos foi obtida diretamente
+
+no
+
+site
+
+da
+
+ANCIB
+
+(www.ancib.org.br/pages/periodicos-em-ci.php), sendo considerados apenas os periódicos
+instalados com a plataforma OJS. Em seguida realizou-se o levantamento do estrato
+QUALIS
+
+CAPES
+
+de
+
+cada
+
+periódico
+
+selecionado,
+
+no
+
+site
+
+do
+
+WebQUALIS
+
+(qualis.capes.gov.br/webqualis/publico/pesquisaPublicaClassificacao.seam?conversationPr
+opagation=begin). Foram considerados apenas os estratos para a área de avaliação de
+“Ciências Sociais Aplicadas I”, para a versão online de cada periódico.
+
+Dos 15 periódicos listados no site da ANCIB, a TAB. 1 apresenta os 14 que
+utilizam a plataforma OJS. As informações foram obtidas no WebQUALIS1.
+TABELA 1 – Classificação QUALIS dos periódicos OJS em Ciência da Informação
+
+ISSN
+
+Título
+
+1809-4775
+1981-1640
+1518-8353
+1518-2924
+2178-2075
+1809-4783
+1981-8920
+1808-3536
+1981-5344
+1981-6766
+1678-765X
+1983-5213
+1983-5116
+0103-3786
+
+Estrato
+
+Biblionline (João Pessoa)
+Brazilian Journal of Information Science
+Ciência da Informação (Online)
+Encontros Bibli
+InCID: Revista de Ciência da Informação e Documentação
+Informação & Sociedade (UFPB. Online)
+Informação & Informação (UEL. Online)
+Liinc em Revista
+Perspectivas em Ciência da Informação (Online)
+PontodeAcesso (UFBA)
+Revista Digital de Biblioteconomia e Ciência da Informação
+Revista Ibero-americana de Ciência da Informação - RICI
+Tendências da Pesquisa Brasileira em Ciência da Informação
+Transinformação
+
+B3
+B2
+A2
+B1
+B5
+A1
+B2
+B2
+A1
+B3
+B1
+B1
+B1
+A1
+
+Fonte: desenvolvida pelo autor
+
+Após esse levantamento, foram identificadas as Instituições responsáveis, sua
+região geográfica e o link para acesso a cada periódico, apresentados na TAB. 2:
+TABELA 2 – Instituições responsáveis e link de pesquisa dos periódicos OJS
+
+ISSN
+
+Instituição
+
+1809-4775
+1981-1640
+1518-8353
+1518-2924
+2178-2075
+1809-4783
+1981-8920
+1808-3536
+1981-5344
+1981-6766
+1678-765X
+1983-5213
+1983-5116
+0103-3786
+
+UFPB
+UNESP/Marília
+IBICT
+UFSC
+USP-Ribeirão
+UFPB
+UEL
+UFRJ-IBICT
+UFMG
+UFBA
+Unicamp
+UNB
+ANCIB
+PUC-Campinas
+
+Região
+Nordeste
+Sudeste
+Centro-Oeste
+Sul
+Sudeste
+Nordeste
+Sul
+Sudeste
+Sudeste
+Nordeste
+Sudeste
+Centro-Oeste
+Sudeste
+Sudeste
+
+Link
+periodicos.ufpb.br/ojs2/index.php/biblio
+www2.marilia.unesp.br/revistas/index.php/bjis
+revista.ibict.br/ciinf/index.php/ciinf
+www.periodicos.ufsc.br/index.php/eb
+revistas.ffclrp.usp.br/incid
+www.ies.ufpb.br/ojs2/index.php/ies
+www.uel.br/revistas/uel/index.php/informacao
+revista.ibict.br/liinc/index.php/liinc
+portaldeperiodicos.eci.ufmg.br/index.php/pci
+www.portalseer.ufba.br/index.php/revistaici
+www.sbu.unicamp.br/seer/ojs/index.php/rbci
+seer.bce.unb.br/index.php/rici
+inseer.ibict.br/ancib/index.php/tpbci
+revistas.puc-campinas.edu.br/transinfo
+
+Fonte: desenvolvida pelo autor
+
+2.3 CRIAÇÃO DO MODELO RELACIONAL E DO BANCO DE DADOS
+A técnica usada na construção do modelo relacional foi baseada – apesar de não
+seguir rigidamente suas notações – na modelagem relacional proposta por Codd (1969;
+1970) e no Modelo Entidade-Relacionamento (CHEN, 1976; 2002). O uso dessas técnicas
+visa, em parte, a generalização do modelo construído para aplicações em outras
+plataformas, e não exclusivamente para OJS.
+1
+
+Consultas realizadas em 27/12/12.
+
+A partir da estrutura dos dados levantados na TAB. 1 e na TAB. 2, foram criadas
+tabelas de acordo com o modelo a seguir:
+FIGURA 1 – Modelo relacional
+
+Fonte: desenvolvida pelo autor
+
+Conforme a FIG. 1, a tabela regiaogeografica contém as cinco regiões brasileiras,
+enquanto a tabela instituicao armazena as instituições responsáveis, sendo essas últimas
+vinculadas a uma regiaogeografica. As tabelas area e subarea armazenam a estrutura de
+áreas e subáreas de conhecimento, respeitada a hierarquia.
+A tabela periodico contém as informações sobre cada periódico da TAB. 1: título,
+link e issn. A tabela periodicoinstituicao permite a criação do vínculo entre um periódico e
+uma instituição responsável ou várias simultaneamente.
+A tabela periodicosubarea guarda o vínculo de um periódico a subáreas de
+conhecimento e o estrato QUALIS CAPES para essa subárea. Um periódico pode ser
+vinculado a diversas subáreas de conhecimento.
+2.4 VALIDAÇÃO DO TESTE INICIAL
+Após a implantação do sistema foram realizadas buscas individualizadas em todos
+os periódicos da TAB. 1, com os mesmos parâmetros, e os resultados foram comparados
+com a pesquisa na ferramenta proposta. Não foram encontradas divergências nos testes
+realizados.
+Um dos testes realizados merece destaque, pois aponta para um possível problema
+na recuperação de informações do OJS. Mesmo com o uso de aspas duplas para
+
+recuperação do texto exato, a pesquisa pelo título “Information Science: what is it?”
+retornou resultados totalmente diferentes. A FIG. 2 ilustra alguns desses resultados:
+FIGURA 2 – Possíveis erros de recuperação da informação: pesquisa pelo título exato “Information Science:
+what is it?” no Portal OJS – retorno parcial
+
+Fonte: desenvolvida pelo autor
+
+A pesquisa realizada diretamente no site das revistas retornou o mesmo conteúdo, o
+que demonstra a validade dos resultados do protótipo e aponta para a necessidade de novas
+pesquisas sobre esse problema no OJS. A FIG. 3 adiante apresenta o resultado no site das
+revistas identificadas na FIG.22.
+
+2
+
+As FIGURAS 2 e 3 apresentam resultados um pouco diferentes, pois a ordem de apresentação dos
+artigos aparentemente difere quando a consulta é realizada manualmente no site e quando é feita
+automaticamente via programação. Mas a lista completa em cada periódico foi conferida e a
+correspondência foi total.
+
+FIGURA 3 – Possíveis erros de recuperação da informação: pesquisa pelo título exato “Information Science:
+what is it?” no site de alguns periódicos
+
+Fonte: desenvolvida pelo autor
+
+3 O PORTAL DE PERIÓDICOS OJS ANCIB
+Para a realização do teste inicial, o banco de dados criado recebeu as seguintes
+informações: foram cadastradas as cinco regiões geográficas, porém apenas as instituições
+listadas na TAB. 2. As áreas e subáreas da CAPES foram cadastradas. Todos os periódicos
+listados na TAB. 1 foram cadastrados e vinculados à instituição responsável listada na
+TAB. 2 e à subárea Ciência da Informação, recebendo o respectivo estrato QUALIS
+CAPES.
+As etapas de uso da ferramenta são descritas a seguir, e representam os momentos
+de escolha dos periódicos, de informação dos parâmetros para pesquisa e os resultados
+obtidos para um exemplo de consulta.
+3.1 PRIMEIRA ETAPA: FILTRAR OS PERIÓDICOS
+Nesta primeira etapa, de acordo com a FIG. 4, podem ser escolhidas a região
+geográfica e instituição responsável pelos periódicos, a área e subárea de conhecimento e o
+estrato QUALIS CAPES.
+FIGURA 4 – Primeira ETAPA: filtrar os periódicos
+
+Fonte: desenvolvida pelo autor
+
+Ao selecionar uma região, por exemplo “Sudeste”, serão listadas as instituições
+pertencentes a ela, como mostra a FIG. 5:
+FIGURA 5 – Filtrar região geográfica e instituição responsável
+
+Fonte: desenvolvida pelo autor
+
+Outra opção é a seleção de uma área de conhecimento, a exemplo de “Ciências
+sociais aplicadas”, quando serão listadas as subáreas vinculadas a ela de acordo com a FIG.
+6:
+FIGURA 6 – Filtrar área e subárea de conhecimento: Ciências sociais aplicadas
+
+Fonte: desenvolvida pelo autor
+
+O último filtro disponível, o estrato de avaliação QUALIS CAPES apresentado na
+FIG. 7, pode também ser usado para filtrar os periódicos a partir da seleção de um estrato
+qualquer:
+FIGURA 7 – Filtrar avaliação QUALIS CAPES
+
+Fonte: desenvolvida pelo autor
+
+Todos os filtros citados podem ser usados simultaneamente.
+
+3.2 SEGUNDA ETAPA: INFORMAR OS PARÂMETROS DE PESQUISA
+A segunda etapa contém duas fases: primeiro, é possível escolher um subconjunto
+qualquer de periódicos entre aqueles resultantes da primeira etapa, a exemplo daqueles
+mostrados na FIG. 8. Para isso, basta marcar os periódicos nos quais se deseja pesquisar.
+FIGURA 8 – Seleção de subconjunto de periódicos
+
+Fonte: desenvolvida pelo autor
+
+Para facilitar a marcação dos periódicos, é possível inverter a seleção na opção
+“Para inverter os campos selecionados clique aqui”. Os resultados serão mostrados
+somente para os periódicos marcados nesta tela.
+A informação dos parâmetros de pesquisa deve ser realizada na parte inferior dessa
+tela, e foi usado um layout muito similar àquele da plataforma de pesquisa do OJS,
+conforme a FIG. 9 a seguir:
+FIGURA 9 – Informação de parâmetros de pesquisa
+
+Fonte: desenvolvida pelo autor
+
+Após a informação dos termos desejados, basta clicar em “pesquisar” e
+aguardar os resultados, discutidos no tópico a seguir.
+
+3.3 TERCEIRA ETAPA: RESULTADOS
+Para cada periódico selecionado na etapa anterior, o sistema apresenta um quadro
+com os resultados. A FIG. 10 a seguir apresenta um resultado simulado para o termo
+“ciência da informação” pesquisado em “todas as categorias”.
+FIGURA 10 – Resultados parciais da pesquisa para o termo “ciência da informação”
+
+Fonte: desenvolvida pelo autor
+
+Em cada quadro, é possível navegar diretamente para o periódico em questão, para
+o volume específico de cada resultado encontrado, ou para o resumo ou texto do artigo. O
+formato de apresentação é idêntico ao retorno da plataforma OJS, mesmo porque a
+ferramenta usa a informação html retornada pelo periódico.
+Caso não seja encontrado nenhum resultado, a FIG. 11 apresenta a forma como o
+quadro será apresentado:
+FIGURA 11 – Resultados da pesquisa: não encontrado
+
+Fonte: desenvolvida pelo autor
+
+4 CONCLUSÕES E RECOMENDAÇÕES
+Em relação às limitações apontadas para a recuperação da informação na
+plataforma OJS, a ferramenta mostrou-se capaz de realizar a busca simultânea a diversos
+periódicos e também foi possível filtrar um subconjunto qualquer de periódicos – o que
+não é possível nas instalações atuais de múltiplos periódicos em um mesmo servidor OJS.
+Em termos práticos, isso significa que uma pesquisa do termo “ciência da
+informação” em todas as categorias, sem o uso da ferramenta proposta, exigiria a consulta
+individual a cada periódico listado (ou seja, 14 consultas) com o referido termo –
+desconsiderada a pesquisa na base SciELO ou similar.
+Outro aspecto importante é que a ferramenta não exige a centralização dos
+periódicos em um único servidor – apenas o registro das informações cadastrais de cada
+periódico, permitindo assim a administração descentralizada de cada instalação OJS
+participante.
+Sugere-se a ampliação do escopo de aplicação para outros periódicos OJS, com a
+criação de Portais institucionais ou por área de conhecimento. Uma das aplicações
+sugeridas é a criação do Portal de Periódicos da UFMG, o que exigirá a migração de todos
+os periódicos para a plataforma OJS, porém sem a necessidade de investimento
+significativo em infraestrutura, pois cada Programa de Pós-Graduação poderá continuar
+com seu periódico em instalação local.
+Outra aplicação sugerida é a criação de Portais para áreas de conhecimento, o que
+poderia ser feito de forma similar ao teste inicial com os periódicos da ANCIB – para áreas
+como Medicina, Odontologia e Saúde Coletiva, entre outras.
+Em última instância, é sugerida a criação de um Portal SEER QUALIS, que
+abrigaria todos os periódicos que usam o SEER no Brasil, vinculando a avaliação QUALIS
+CAPES e permitindo o desenvolvimento de uma ferramenta de gestão interessante para as
+Agências envolvidas no desenvolvimento científico nacional.
+A identificação do problema no retorno da consulta ao título exato “Information
+Science: what is it?” no site de algumas revistas indica a necessidade de realização de
+pesquisas mais detalhadas sobre o mecanismo de busca da plataforma OJS.
+Em relação aos recursos da ferramenta, o ano de atribuição da classificação
+QUALIS CAPES também poderá ser armazenado, permitindo uma avaliação histórica dos
+resultados obtidos para cada região geográfica, instituição, área ou subárea de
+
+conhecimento e mesmo para um único periódico. Outra modificação em estudo é a
+recuperação em outras plataformas, não ficando restrita ao OJS.

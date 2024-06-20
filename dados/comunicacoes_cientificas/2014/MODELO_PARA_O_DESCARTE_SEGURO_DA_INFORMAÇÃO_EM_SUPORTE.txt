@@ -1,0 +1,260 @@
+
+
+MODELO PARA O DESCARTE SEGURO DA INFORMAÇÃO EM SUPORTE
+DIGITAL
+Resumo: Ao se observar uma das etapas do ciclo de vida da informação como o descarte,
+percebe-se que este procedimento em suporte digital difere do descarte de informações em
+suporte físico. Verificou-se na literatura uma lacuna sobre este tema na área da Ciência da
+Informação, pois ao se descartar uma informação em suporte digital, é preciso considerar o
+tipo de mídia na qual a informação está registrada e sua possível reutilização. O descarte deve
+considerar os requisitos de gestão de segurança da informação, de tal forma que impossibilite
+a recuperação posterior dessa informação. Esta pesquisa teve como objetivo elaborar uma
+proposta de modelo para o descarte seguro da informação em suporte digital, considerando
+que alguns procedimentos de descarte inviabilizam o uso posterior da mídia informática. No
+caso dos sistemas gerenciadores de banco de dados (SGBDs) que são utilizados em sistemas
+de informação de muitas organizações, por exemplo, os equipamentos não podem ser
+destruídos nem os sistemas podem ser suspensos por longos períodos de tempo para aplicação
+de uma técnica de sobrescrita. Esta pesquisa foi desenvolvida como um estudo de caso,
+descritiva, com coleta de dados implementada de forma empírica realizada por anotações de
+testes de laboratório. Como resultado é apresentado uma proposta de modelo que leva em
+conta as necessidades das organizações fundamentada na literatura e nos resultados dos testes
+de laboratório.
+Palavras-chave: Gestão da informação e do conhecimento. Tecnologia da informação e
+comunicação. Gestão da segurança da informação. Documento digital.
+1 INTRODUÇÃO
+A sociedade sempre passa por diferentes transformações em todas as áreas do
+conhecimento. Nestas transformações, a informação assume um papel de destaque não só
+para as pessoas, mas também para as organizações.
+
+Dentro deste contexto, as tecnologias da informação e comunicação (TICs)
+contribuíram para o desenvolvimento da chamada “sociedade da informação”, através das
+mais diversas formas como, por exemplo, dispositivos de hardware e sistemas de software
+para disseminação, armazenamento, e recuperação da informação. Conforme ressaltam
+Capurro e Hjørland (2007, p. 149), “é o surgimento da tecnologia da informação e seus
+impactos globais que caracterizam a nossa sociedade como uma sociedade da informação”.
+Sendo a informação definida como um conhecimento inscrito de forma impressa ou
+digital em um suporte (LE COADIC, 2004), ela necessita seguir os preceitos do ciclo de vida
+da informação, como caracteriza Beal (2008), através de sete etapas distintas: identificação
+das necessidades e dos requisitos, obtenção, tratamento, distribuição, uso, armazenamento e
+descarte.
+Ao se observar uma das etapas do ciclo de vida da informação, “o descarte”, percebese que este (em suporte digital) difere do descarte de informações em suporte físico. Descartar
+a informação em suporte físico (papel) pode ser realizado através de processos
+mecânicos/manuais como fragmentação e/ou incineração, enquanto a informação em suporte
+digital carece de metodologias próprias. Deve-se ter o cuidado para evitar que a informação
+gravada em mídia digital seja recuperada, posteriormente, por terceiros não comprometendo
+assim sua confidencialidade.
+Foi verificado que existe uma lacuna sobre esse tema no campo da Ciência da
+Informação (CI), tendo esta pesquisa o objetivo de elaborar uma proposta de modelo para o
+descarte seguro da informação em suporte digital, sendo desenvolvida em nível de mestrado.
+2 O DESCARTE DE INFORMAÇÕES EM DISPOSITIVOS DE ARMAZENAMENTO
+DIGITAL
+A informação em suporte digital encontra-se registrada em diversos dispositivos
+informáticos, por exemplo: discos rígidos (Hard Disk Drives – HDs), pen drives, cartões de
+memória, CDs, DVDs, etc., denominados de dispositivos de armazenamento. Estes
+dispositivos são constituídos por um material específico no qual a informação fica
+efetivamente registrada: mídias magnéticas ou mídias em estado sólido. O Quadro 1
+exemplifica o tipo de mídia utilizada nos dispositivos de armazenamento.
+QUADRO 11 – Dispositivo informático X Tipo de mídia utilizada
+Dispositivo informático
+Disco Rígido (Hard Disk – HDD)
+Pen Drive
+
+Mídia utilizada para
+armazenamento de
+informações
+Magnética
+Memórias FLASH
+
+Exemplo de utilização da tecnologia
+Computadores, notebooks, storages
+Armazenamento e transporte de
+
+Cartões de Memória (internos ou
+externos)
+Solid State Drive (SSD)
+Fitas Magnéticas (LTO, DAT)
+Compact Disks (CDs), Digital
+Versatile Disks (DVDs), BDs (BluRay Disks) - regraváveis ou não
+
+Memórias FLASH
+Memórias FLASH
+Magnética
+Óptica
+
+documentos
+Câmeras
+fotográficas
+digitais,
+tablets, smartphones
+Notebooks compactos
+Cópias de segurança (backup)
+Cópias de segurança (backup), CDs
+de áudio / filmes / jogos para
+computador / vídeo games, dentre
+outros.
+
+Fonte: Elaborado pelos autores.
+
+Com o objetivo de organizar as informações registradas, os dispositivos de
+armazenamento utilizam-se de tecnologias para gerenciar a gravação das informações,
+denominadas sistemas de arquivos como, por exemplo, FAT, NTFS (criados pela Microsoft),
+EXT2, EXT3, EXT4 e ReiserFS (pertencentes aos sistemas operacionais UNIX e LINUX),
+além das tecnologias de armazenamento utilizadas em storages127, como Storage Area
+Network (SAN), entre outras.
+Estas se utilizam de uma tabela (um índice), gravada em uma área determinada da
+mídia, que permite ao sistema operacional recuperar as informações disponíveis, seguindo um
+mecanismo de endereçamento específico de cada tecnologia. Ao apagar informações, os
+sistemas de arquivos removem a informação presente neste índice, ou seja, apagam somente a
+informação de onde o arquivo está localizado fisicamente na mídia e não a informação em si.
+Consequentemente, a informação gravada continua intacta, sendo passível de recuperação.
+Farmer e Venema (2007, p. 131) afirmam que “uma grande quantidade de informações
+excluídas podem ser recuperadas [...], mesmo quando essas informações foram excluídas há
+muito tempo”. Quando se trata da gestão documentos digitais, tal característica não está de
+acordo com as recomendações feitas pelo Conselho Nacional de Arquivos (CONARQ) para a
+eliminação da informação:
+[...] a eliminação deve ser realizada de forma a impossibilitar a recuperação
+posterior de qualquer informação confidencial contida nos documentos
+eliminados, como, por exemplo, dados de identificação pessoal ou
+assinatura; todas as cópias dos documentos eliminados, inclusive cópias de
+segurança e cópias de preservação, independentemente do suporte, deve ser
+destruídas. (CONARQ, 2011, p.30).
+
+Semelhante às questões ligadas ao espaço utilizado por documentos físicos em um
+arquivo, o espaço liberado por um documento digital após o seu descarte pode ser ocupado
+por novos documentos. Consequentemente, descartar a informação digital, além de satisfazer
+
+127
+
+Storages são dispositivos que permitem o armazenamento de grandes volumes de informações de
+forma descentralizada.
+
+à confidencialidade (ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS, 2006), libera
+espaço nos dispositivos de armazenamento.
+Ao descartar-se a informação em suporte digital, é preciso considerar o tipo de mídia
+na qual a informação está registrada e sua possível reutilização. O descarte deve considerar os
+requisitos de gestão de segurança da informação, de tal forma que impossibilite a recuperação
+posterior dessa informação (seja esta recuperação de forma intencional ou não).
+De acordo com o National Institute of Standards and Technology (2012, p. 39,
+tradução nossa), o termo sanitização é utilizado para descrever um processo capaz de “[...]
+tornar o acesso aos dados presentes na mídia inviáveis para um dado nível de esforço”, sendo
+este termo utilizado para identificar diferentes técnicas responsáveis por remover, de forma
+segura, informações existentes nos diversos dispositivos de armazenamento, a exemplo de
+discos rígidos, CDs, DVDs, cartões de memória, pen drives, smartphones e tablets, dentre
+outros. Nos casos em que a mídia será reutilizada, aplicam-se métodos que se sobrescrevem
+às informações, a exemplo da técnica DoD 5220.22M, que consiste em sobrescrever a
+informação três vezes (UNITED STATES DEPARTMENT OF DEFENSE, 1995) e técnica
+criada por Peter Guttman, que consiste em sobrescrever a informação trinta e cinco vezes
+(DIESBURG; WANG, 2010) através de aplicativos como o File Shredder128. Para os casos
+onde a mídia não será reutilizada, aplicam-se as técnicas de fusão, fragmentação, lixamento,
+pulverização, banho de ácido e desmagnetização, que podem variar de acordo com o tipo de
+mídia a ser descartada ou necessidade da organização que está descartando estas informações.
+3 DESENVOLVIMENTO E PROCEDIMENTOS METODOLÓGICOS
+Esta pesquisa foi desenvolvida como um estudo de caso, descritiva, com coleta de
+dados implementada de forma empírica realizada por caderno de anotações em laboratório,
+tendo como foco identificar procedimentos que viabilizem o descarte seguro da informação
+gravada em um disco rígido, utilizando-se de aplicativos específicos para tal fim.
+Para o procedimento prático, utilizou-se de uma máquina virtual com o sistema
+operacional Microsoft Windows 7 Thin PC (versão de avaliação), com a configuração de 7
+GBytes de disco rígido e utilizando-se do sistema de arquivos New Technology File System
+(NTFS). A configuração dispunha de 2 GBytes de memória RAM, processador Intel Core i5
+64 bits e os softwares WinHEX 16.7129 e o aplicativo gratuito Recuva130 versão 1.51.1063, que
+
+128
+129
+130
+
+File Shredder. Disponível em: <http://www.fileshredder.org>. Acesso em: 15 nov. 2013.
+WinHEX. Disponível em: < http://www.winhex.com/>. Acesso em: 28 abr. 2014
+Recuva. Disponível em < https://www.piriform.com/recuva>. Acesso em: 1 mai. 2014.
+
+permite a recuperação de arquivos e pastas removidas previamente. Optou-se pela escolha
+das ferramentas WinHEX
+
+e Recuva por serem ferramentas indicadas na literatura.
+
+(BUCHNAN-WOLLASTON et al., 2014; SCHWAMM, 2014; SHAVERS e ZIMMERMAN,
+2014). Como sistema gerenciador de banco de dados (SGBD), optou-se pelo aplicativo
+Mysql131 versão 5.6.17 também de uso gratuito e por possuir versões de avaliação ou de uso
+livre (opensource).
+A coleta de dados aconteceu em maio de 2014. A primeira parte do procedimento
+consistiu em se gravar um documento texto no disco e na remoção (apagamento) desse
+(“ArquivoTeste1.txt”) com a utilização do conjunto de teclas “SHIFT + DELETE” do
+computador e sua posterior procura no sistema de arquivos do disco rígido com a ferramenta
+Recuva. Verificou-se que mesmo com o apagamento do documento, a informação continuava
+presente no disco rígido do computador, conforme indicado na Figura 1, sendo passível de
+recuperação posterior.
+FIGURA 1 - Documento “ArquivoTeste1.txt” passível de recuperação
+
+Fonte: Dados da pesquisa.
+
+Na segunda etapa do procedimento, buscou-se verificar se as informações
+armazenadas em um sistema gerenciador de banco de dados (SGBD) são removidas
+completamente de uma tabela após o uso do comando “delete”, presente nos SGBDs. Para a
+execução do procedimento, foi criado um banco de dados de nome “teste” e a tabela
+“trabalhos_academicos”. Nesta tabela foram inseridos cinco registros com informações e teses
+e dissertações da Universidade Federal da Paraíba (UFPB), com o objetivo de se ter
+informações para o procedimento.
+Após a inserção das informações na tabela, removeu-se o primeiro registro utilizandose o comando “delete” do SGBD e, posteriormente, foi utilizado o aplicativo WinHEX para
+
+131
+
+Mysql. Disponível em <http://www.mysql.com>. Acesso em: 5 mai. 2014.
+
+
+verificar se a informação foi removida do disco rígido utilizado na simulação. A Figura 2
+demonstra que a informação continua presente no dispositivo, mesmo após a sua exclusão.
+FIGURA 2 – Informações excluídas em um SGBD: sem criptografia e criptografada
+
+Fonte: Dados da pesquisa.
+
+Portanto, foram evidenciados que mesmo depois de emitidos os comandos usuais para
+eliminação de um arquivo digital, seja em uma tabela de banco de dados ou em sistema de
+arquivo, as informações gravadas no disco rígido continuam presentes conforme indicado na
+literatura por Farmer e Venema (2007), o que justifica o desenvolvimento de procedimentos
+que possibilitem o descarte dessas informações.
+Conforme verificado, a exclusão de determinado registro ou documento armazenado
+nos SGBDs e no NTFS não resultou na remoção segura da informação ali contida. Portanto,
+para as informações registradas em bancos de dados (SGBDs), optou-se por criptografar132 as
+informações que foram descartadas com uma senha aleatória, impossibilitando sua
+recuperação posterior, pois elas tornaram-se incompreensíveis após a realização do
+procedimento, de acordo com o resultado demonstrado na FIG. 2.
+4 CONSIDERAÇÕES E PROPOSTA DE MODELO PARA O DESCARTE SEGURO
+Diversas verificações são necessárias para que o descarte ocorra de forma segura, a
+exemplo da reutilização da mídia informática e a forma como as informações estão registradas
+em documentos digitais ou em registros em um banco de dados. Alguns procedimentos de
+descarte inviabilizam o uso posterior da mídia informática. No caso dos SGBDs que são
+utilizados em sistemas de informação de muitas organizações, por exemplo, onde os
+equipamentos não podem ser destruídos nem os sistemas podem ser suspensos por longos
+períodos de tempo para aplicação de uma técnica de sobrescrita, os registros precisam ser
+criados no formato binário133 e, para documentos armazenados no sistema de arquivos, em
+
+132
+
+133
+
+O processo de criptografia consiste em transformar a informação deixando-a ilegível através de
+uma chave (senha), onde apenas o detentor dessa chave é capaz de decifrá-la, trazendo novamente
+a informação para a sua forma original.
+Os campos em formato binário permitem que dados em linguagem de máquina sejam registrados
+neles.
+
+sistemas em produção, é necessário um estudo mais detalhado, pois a rotina para a exclusão
+segura varia de acordo com o sistema operacional utilizado.
+Portanto, ao descartar informações em suporte digital, é necessário considerar se a
+mídia será reaproveitada ou não. O modelo ilustrado na FIG. 3 apresenta uma proposta de
+modelo para descarte seguro da informação em suporte digital.
+FIGURA 3 – Proposta de Modelo de Descarte Seguro em Suporte Digital
+
+Fonte: Elaborado pelos autores.
+
+Neste trabalho, os níveis de classificação da informação não foram avaliados,
+considerando-se apenas que a informação, independentemente de sua classificação, precisa
+ser eliminada de forma segura após o fim de sua utilidade. Ademais, a remoção segura em
+storages também não foi considerada por esses serem mais complexos e necessitarem, assim,
+de um estudo mais aprofundado do seu funcionamento.
+Um dispositivo que não foi descartado corretamente pode conter informações que
+comprometem a reputação de uma organização. O descarte seguro da informação em suporte
+digital é uma temática nova e que precisa ser levada em consideração não somente nas
+organizações, mas em toda a sociedade. Não são raros os casos de informações recuperadas
+em dispositivos que foram descartados sem que a devida importância fosse dada às
+informações ali contidas.

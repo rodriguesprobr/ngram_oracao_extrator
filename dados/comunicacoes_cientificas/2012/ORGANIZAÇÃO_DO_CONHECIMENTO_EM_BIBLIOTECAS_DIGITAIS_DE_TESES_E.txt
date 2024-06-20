@@ -1,0 +1,544 @@
+ORGANIZAÇÃO DO CONHECIMENTO EM BIBLIOTECAS DIGITAIS DE TESES E
+DISSERTAÇÕES: UMA ABORDAGEM BASEADA NA CLASSIFICAÇÃO FACETADA
+E TAXONOMIAS DINÂMICAS
+
+RESUMO
+Observa-se que as bibliotecas digitais carecem de mecanismos mais eficientes para representação,
+organização e recuperação da informação. Nossa proposta é baseada no uso intensivo de estruturas
+semânticas para representação e organização do acervo. Nesse sentido, utiliza-se um modelo baseado na
+Teoria da Classificação Facetada para representação e organização do acervo de uma biblioteca digital
+de teses e dissertações, bem como Taxonomias Dinâmicas, para compor o mecanismo de busca e
+navegação. Foram desenvolvidos novos componentes de recuperação e acesso, na forma de um protótipo
+computacional, que será objeto de um estudo comparativo que visa a avaliar o desempenho desses
+mecanismos na melhoria da recuperação da informação e na satisfação do usuário da biblioteca digital.
+Os resultados obtidos apontam para algumas vantagens da abordagem utilizada. O mecanismo de busca
+dinâmica facetada fornece suporte a um novo paradigma de acesso, permitindo a exploração guiada do
+acervo e fazendo uma ponte entre os processos de busca e a navegação. Além disso, o uso dessa
+abordagem parece ser intuitivo e fácil para os usuários da biblioteca. O controle do usuário e o
+mecanismo adaptativo claro e consistente encorajam o usuário a experimentar e explorar,
+proporcionando a sensação de ter considerado todas as alternativas para chegar ao resultado.
+PALAVRAS-CHAVE: bibliotecas digitais, representação da informação, organização da
+informação, teoria da classificação facetada, recuperação da informação, taxonomias dinâmicas.
+
+1 INTRODUÇÃO
+Nossa pesquisa problematiza questões relacionadas às bibliotecas digitais. Partindo de uma
+comparação com as bibliotecas convencionais, e colocando à parte o componente tecnológico que
+potencializa o acesso a partir do momento em que retira as barreiras de tempo e espaço, observa-se que
+as bibliotecas digitais não proporcionam a mesma eficácia das bibliotecas tradicionais no que se refere
+aos mecanismos de organização e recuperação da informação. Aparentemente, os conhecimentos
+desenvolvidos pela Biblioteconomia e pela Ciência da Informação não têm sido amplamente aplicados
+ou adaptados para o ambiente digital. Isso ocorre, principalmente, no que diz respeito ao uso de
+estruturas de representação e organização do conhecimento. A abordagem de busca textual (full-text)
+predomina como mecanismo hegemônico para a recuperação da informação nesses ambientes, apesar
+dos processos de tratamento da informação que ocorrem nas bibliotecas digitais. Podemos dizer que
+essas bibliotecas são, na maioria dos casos, meros sistemas executores de consultas que precisam ser
+formuladas e objetivadas por seus usuários, sujeitas aos problemas relacionados à ambiguidade da
+linguagem natural.
+Nossa proposta é baseada no uso intensivo de estruturas semânticas para representação e
+organização do acervo. Nesse sentido, utiliza-se um modelo baseado na Teoria da Classificação
+Facetada, para representação e organização do acervo de uma biblioteca digital de teses e dissertações, e
+Taxonomias Dinâmicas, para compor o mecanismo de busca e navegação. O objetivo é tornar mais
+intuitiva e eficiente a recuperação da informação na Biblioteca Digital.Foram desenvolvidos novos componentes de recuperação e acesso, na forma de um protótipo
+computacional, que será objeto de um estudo comparativo. Esse estudo, que está sendo desenvolvido na
+forma de um experimento, procura determinar a contribuição do uso dos mecanismos de representação e
+organização do acervo na eficácia da descoberta e recuperação da informação, assim como no aumento
+da satisfação dos usuários da biblioteca digital.
+
+2 JUSTIFICATIVA
+Até alguns anos atrás, as bibliotecas convencionais eram a principal fonte de informação para
+pesquisadores e estudantes. Hoje em dia, estas informações se encontram espalhadas em meio digital,
+principalmente na grande rede de computadores. Bibliotecas digitais já entraram em cena há vários anos.
+Greenstein e Thorin (2002) apresentam a seguinte definição de biblioteca digital: “(...) é uma biblioteca
+na qual as coleções são armazenadas em formato digital (ao invés dos formatos tradicionais como
+impressos, microfilme e outras mídias) acessíveis por computadores”. (tradução nossa).
+Em geral, as bibliotecas digitais permitem buscas com base em metadados descritivos (autor,
+data de publicação, etc), buscas textuais em campos específicos (título, palavras chave, resumo, etc), ou
+ainda através do texto completo dos objetos do acervo (full text). Os usuários geralmente desejam fazer
+buscas por assuntos, conceitos ou ideias, e essas são as buscas mais difíceis em uma biblioteca digital.
+Na maioria das vezes, o usuário tem de fornecer palavras, mas essas palavras nem sempre expressam de
+forma adequada o que se tem em mente. Muitas vezes os usuários não conseguem elaborar uma
+expressão de busca. As bibliotecas digitais deveriam dar suporte ao usuário nesse tipo de busca por
+significado, e esse é o principal papel das estruturas semânticas de representação e organização do
+conhecimento. São exemplos dessas estruturas, com grau variável de formalismo: dicionários,
+glossários, tesauros, listas de cabeçalhos de assunto, mapas conceituais, esquemas de classificação,
+taxonomias, mapas de tópicos e ontologias.
+O usuário necessita de um sistema exploratório eficiente ao invés de um sistema executor de
+consultas. Essa capacidade de exploração pode ser encontrada nas bibliotecas tradicionais, na figura do
+bibliotecário de referência, dialogando com o usuário em torno de uma consulta para melhor defini-la,
+mas é raramente encontrada nos esquemas de recuperação da informação presentes nas bibliotecas
+digitais e na Internet.
+As bibliotecas digitais, apesar das novas possibilidades trazidas pela tecnologia, apresentam
+limitações que impactam no processo de comunicação do qual são mediadoras. Essas limitações estão
+relacionadas à sua incapacidade de prover mecanismos que possibilitem a formação de um entendimento
+compartilhado como condição necessária para a eficiência e eficácia do processo de comunicação. Uma
+
+possível solução é o uso de estruturas semânticas de representação e organização do conhecimento.
+Entre essas estruturas, as classificações facetadas têm sido apontadas como adequadas para a
+organização do conhecimento em ambientes digitais (GODERT, 1991; INGWERSEN e WORMELL,
+1992; KWASNIK, 1999; ELLIS e VASCONCELOS, 2000; LOUIE et al., 2003; ADKISSON, 2005; LA
+BARRE, 2006; BROUGHTON, 2006). No entanto, faz-se necessário verificar até que ponto a aplicação
+dessas estruturas pode melhorar a comunicação e a recuperação da informação em uma biblioteca
+digital. Esse é o problema a ser tratado em nossa pesquisa.
+
+3 OBJETIVO
+Nossa pesquisa tem como objetivo implementar novos mecanismos para a representação e
+organização do acervo de uma biblioteca digital de teses e dissertações, com base em uma estrutura
+classificatória facetada e em taxonomias dinâmicas. Objetiva também avaliar o desempenho desses
+mecanismos na melhoria da recuperação da informação e na satisfação do usuário.
+
+4 FUNDAMENTAÇÃO TEÓRICA
+Nesta seção, serão apresentadas as bases teóricas da classificação facetada e serão discutidas
+suas vantagens em relação a outras estruturas classificatórias. Visando à manipulação computacional do
+esquema classificatório no contexto de uma biblioteca digital, será apresentado, em seguida, o conceito
+de taxonomias dinâmicas, bem como um modelo formal de implementação computacional baseado
+nesse conceito.
+
+4.1 A organização do conhecimento em bibliotecas digitais e a Teoria da Classificação
+Facetada
+O objetivo do processo de organização da informação é possibilitar o acesso ao conhecimento
+contido na informação. No entanto, nesse processo de organização da informação, faz-se uso de
+mecanismos (ou sistemas) de organização do conhecimento. Como afirma Vickery (2010), organizar o
+conhecimento é reunir o que conhecemos em uma estrutura sistematicamente organizada. Entendemos
+que a organização do conhecimento é condição necessária para a organização da informação, ou, mais
+especificamente, dos recursos informacionais, sob o aspecto do seu conteúdo. A organização do
+conhecimento produz representações sistematizadas de conhecimento, que podem ser utilizadas na
+organização da informação para padronizar as representações dos conteúdos dos recursos
+informacionais, visando facilitar sua recuperação e o uso.
+
+Nesta pesquisa estamos interessados em ambos os processos, organização do conhecimento e da
+informação. Estamos interessados em analisar e determinar o valor da adoção de um sistema de
+organização do conhecimento, estruturado na forma de uma classificação facetada, para a organização da
+informação em uma biblioteca digital de teses e dissertações.
+As classificações facetadas representam uma abordagem alternativa para o processo
+classificatório através da análise facetada. O processo utilizado na análise facetada tem suas origens em
+Shiyali Ramamrita Ranganathan (GARFIELD, 1984), um pesquisador indiano que propunha que
+qualquer entidade complexa poderia ser representada a partir de certo número de perspectivas ou facetas.
+Ao invés de criar compartimentos para depois colocar os objetos dentro deles, Ranganathan buscava
+uma forma de partir do objeto e, então, coletar e arranjar aspectos (ou facetas) que pudessem descrever
+aquele objeto. Essa abordagem possibilita maior flexibilidade e um alto grau de especificidade no
+sistema de classificação. Ao longo dos anos, as ideias de Ranganathan foram reinterpretadas,
+desenvolvidas e utilizadas em diversos contextos, envolvendo representação, organização e recuperação
+da informação. Ranganathan argumentava que qualquer objeto (ou qualquer conceito ou assunto de um
+objeto de informação) poderia ser representado através da seleção de elementos de cinco categorias
+fundamentais (Personality, Matter, Energy, Space e Time), conhecidas pela sigla PMEST.
+O Classification Reseach Group (CRG), grupo de pesquisadores que se estabeleceu na
+Inglaterra a partir de 1952 com o objetivo de realizar estudos sobre a natureza do processo classificatório
+e das classificações existentes, considerou essas categorias limitadas para representar algumas
+disciplinas, e expandiu as categorias fundamentais para 13: thing, kind, part, property, material, process,
+operation, agent, patient, product, by-product, space, e time. Estas categorias poderiam acomodar os
+conceitos da maioria das disciplinas, apesar de que disciplinas como arte e humanidades requerem
+categorias adicionais (como forma, estilo, gênero), e não há nada que impeça que novas categorias
+fundamentais possam ser definidas ou inventadas (BROUGTON, 2006).
+Kwasnick (1999) destaca várias vantagens das estruturas classificatórias facetadas: elas não
+requerem conhecimento completo sobre as entidades e seus relacionamentos; elas são hospitaleiras, na
+medida em que podem acomodar facilmente novas entidades; elas são flexíveis; são expressivas; podem
+ser criadas para finalidades específicas e de forma livre; e permitem variadas perspectivas e abordagens
+sobre os objetos a serem classificados. Nas abordagens mais recentes para aplicação de estruturas facetas
+em ambientes digitais, os relacionamentos entre facetas podem ser facilmente visualizados por evidência
+empírica, através do uso de estruturas dinâmicas (SACCO e TIZITZICAS, 2009). Com relação à
+dificuldade de visualização, Kwasnick (1999, 42) destaca que “a tecnologia da informação promete
+trazer novas formas para possibilitar a visualização multidimensional”, fato que já pode ser comprovado
+pelas interfaces avançadas disponíveis nos dias atuais.
+
+Quando se considera a aplicação de esquemas facetados em ambientes digitais, a ordem de
+citação adquire menor importância, dada a flexibilidade e facilidade com que o usuário pode fazer uso da
+interface do sistema a fim de estabelecer as categorias a serem utilizadas na busca ou navegação.
+Diversos autores (GODERT, 1991; INGWERSEN e WORMELL, 1992; ELLIS e VASCONCELOS,
+2000) reconhecem que os esquemas facetados são adequados para o uso em ambientes digitais,
+especialmente na Web, onde todo o seu potencial pode ser explorado. Denton (2003) acrescenta que,
+depois que o esquema de classificação é construído, o desafio é tornar seu uso fácil e intuitivo. Com o
+hipertexto e a Web, variadas visões podem ser dinamicamente construídas. As facetas possibilitam um
+esquema organizacional multidimensional, que, com o uso de ferramentas disponíveis em ambientes
+digitais e na Web, pode ser facilmente consultado e navegado em suas diversas dimensões, de modo que
+todos os benefícios das classificações facetadas podem ser aproveitados nesses ambientes.
+Observa-se, na literatura recente, uma visão diferenciada sobre o conceito de facetas. Tal visão
+estende o entendimento do que vem a ser uma faceta, de modo a incorporar vários aspectos não
+semânticos de um documento. A norma NISO afirma que “a análise facetada é às vezes usada para
+indicar atributos de objetos de informação” (NISO, 2005) e lista, em seguida, as seguintes facetas
+potenciais: tópico, autor, localização, formato, idioma e local de publicação. Essa lista apresenta muitos
+aspectos em comum com o projeto FAST (Faceted Application of Subject Terminology) (CHAN et al.,
+2001), na medida em que “tópico” (ou assunto) é visto como uma faceta entre várias outras que
+representam elementos da descrição bibliográfica não relacionados ao assunto. Essa visão de faceta
+parece ser equivalente ao conceito de atributo de uma entidade (documento) no modelo EntidadeRelacionamento (NAVATHE; ELMASRI, 2003) ou no FRBR (IFLA, 1998). Nesse sentido, essas
+“facetas” podem ser facilmente mapeadas nos campos do MARC ou nos elementos do padrão de
+metadados Dublin Core. Broughton (2006) assinala que esse tipo de aplicação da classificação facetada
+parece ser exclusivo dos pesquisadores americanos. Dessa forma, parece haver duas visões distintas da
+classificação facetada: (A) Um conjunto de “entidades” é classificado de acordo com suas propriedades.
+Por exemplo, um conjunto de vinhos é classificado por “cor”, “origem”, “variedade de uva”, “ano de
+produção”, “preço” e “qualidade”. Nesse caso, cada uma dessas propriedades representa uma “faceta”
+através da qual um conjunto de instâncias (vinhos) pode ser visualizado. (B) Um conjunto de
+“conceitos” é agrupado de acordo com o seu tipo mais primitivo. Por exemplo, o conceito “madeira” é
+colocado na faceta “materiais”. O conceito “inseto”, por sua vez, é colocado na faceta “organismos”.
+Nesse caso, uma faceta é essencialmente uma classe primitiva, e cada membro do agrupamento
+representado pela faceta é uma instância ou subclasse dessa classe primitiva.As duas visões parecem ser
+consequência da diferença entre “classificar entidades” e “classificar conhecimento”. Quando se
+considera a classificação de documentos, as duas visões ficam ainda mais evidentes, visto que um
+
+documento tanto pode ser visto como uma entidade, possuindo propriedades (ou atributos) tais como
+forma, idioma, data de publicação, bem como pode ser visto como uma forma de representação de
+informação e conhecimento a serem compartilhados. Neste último caso, o conhecimento pode ser
+classificado de modo a facilitar o acesso ao documento e seu conteúdo. Em suma, se o intuito é a
+classificação de objetos/entidades (vinhos, câmeras fotográficas, carros, softwares), então a estrutura
+classificatória resultante será baseada na visão A. Por outro lado, se a intenção é classificar o
+conhecimento, então existirão facetas fundamentais em um nível mais alto de abstração, de modo a
+permitir a organização dos conceitos de acordo com a visão B.
+Uma vantagem de uma visão ampliada da classificação facetada (visão A + B) pode estar na
+possibilidade de desenvolvimento de um modelo único de busca e navegação, baseado na Teoria da
+Classificação Facetada, que incorpore tantos os aspectos semânticos (temáticos) como os aspectos
+descritivos dos documentos. Nesse sentido, a Teoria da Classificação Facetada atuaria como alicerce
+comum, na medida em que serviria tanto à representação temática dos documentos em um determinado
+campo de estudo, como também poderia incorporar os elementos da representação descritiva,
+usualmente representados por meio de padrões de metadados. Essa possibilidade foi explorada em nossa
+pesquisa.
+As bibliotecas aplicam varias técnicas para criar representações dos documentos, como a
+indexação, sumarização e catalogação. Quando se considera o ambiente digital, essas representações são
+mais conhecidas atualmente como metadados. Entre os padrões de metadados, o Dublin Core (DUBLIN
+CORE METADATA INITIATIVE, 2003) foi o que mais se destacou, por ter sido amplamente adotado
+nos mais variados contextos, bem como por ter servido de base para a definição de outros padrões
+bastante semelhantes, como ETD-MS (ATKINS et. al., 2008) e MTD-BR (LOURENÇO, 2005), que são
+utilizados em bibliotecas digitais de teses e dissertações.
+O padrão Dublin Core foi concebido para ser extremamente flexível: nenhum dos seus
+elementos é obrigatório, e cada elemento pode ser aplicado mais de uma vez para descrever
+adequadamente um recurso. Além disso, o Dublin Core pode ser estendido a partir do uso de
+qualificadores. Tendo em vista uma representação temática mais apurada através da adoção de uma
+estrutura facetada, o elemento SUBJECT pode ser estendido com a aplicação de qualificadores de modo
+a contemplar diferentes aspectos (facetas) do assunto. Se considerarmos as categorias fundamentais de
+Ranganathan (PMEST) teríamos os seguintes qualificadores: SUBJECT.Personality, SUBJECT.Matter,
+SUBJECT.Energy, SUBJECT.Space e SUBJECT.Time. Tendo em vista que os aspectos espaciais e
+temporais do conteúdo já estão contemplados pelo elemento COVERAGE, esses aspectos poderiam,
+então, ser retirados do elemento SUBJECT e inseridos como qualificadores no elemento COVERAGE:
+COVERAGE.Space e COVERAGE.Time.
+
+É importante ressaltar que o PMEST foi escolhido somente para ilustrar a aplicação de
+categorias fundamentais a partir de qualificadores no Dublin Core. A escolha de um conjunto de
+categorias fundamentais, seja o PMEST ou aquelas propostas pelo CRG, pode ser interessante na medida
+em que possibilita interoperabilidade semântica entre as diversas áreas de conhecimento. Por outro lado,
+a escolha de categorias específicas de uma determinada área de conhecimento pode resultar em um
+esquema facetado mais intuitivo para o usuário e, assim, tornar a recuperação mais efetiva em uma
+determinada aplicação.
+Para que se possa fazer uso de uma classificação facetada na representação e organização do
+conhecimento no contexto de uma biblioteca digital de teses e dissertações, existe a necessidade de
+construir tal estrutura. Maculan (2011) tratou em sua pesquisa de mestrado1 da construção de uma
+taxonomia facetada para a área de Organização e Uso da Informação. O resultado obtido por Maculan
+(2011) foi uma taxonomia facetada que pode ser utilizada para facilitar a recuperação dos documentos
+no contexto da Biblioteca Digital de Teses e Dissertações da Escola de Ciência da Informação da
+UFMG. Essa taxonomia facetada está sendo utilizada no contexto da presente pesquisa, servindo como
+instrumento de organização do conhecimento, sendo utilizada pelos componentes de busca e acesso de
+um protótipo computacional. As categorias principais utilizadas por Maculan (2011) para caracterizar
+cada documento (tese ou dissertação) foram: Tema, Objeto de Pesquisa, Escopo, Ambientação, Tipo de
+Pesquisa, Coleta de Dados, Métodos, Fundamento Teórico, Fundamento Histórico-Conceitual e
+Resultados.
+Com uma abordagem teórica sólida, a classificação facetada tem o potencial de produzir
+estruturas organizacionais versáteis, facilitando o acesso aos catálogos on-line e às bibliotecas digitais.
+Uma classificação facetada traz diversas vantagens quando aplicada na forma de um mecanismo de
+organização para o acesso a recursos digitais. O formato lógico e previsível da classificação facetada se
+torna bastante intuitivo e útil ao usuário, podendo ser usada na construção da interface de navegação e
+exploração do acervo, como alternativa à estrutura hierárquica de diretórios, típica das classificações
+tradicionais. As classificações facetadas podem fornecer aos usuários pontos de acesso
+multidimensionais e altamente estruturados aos documentos, e esses pontos de acesso podem ser
+livremente combinados pelo usuário de modo a construir sua estratégia de busca.
+
+4.2 Taxonomias Dinâmicas Facetadas
+Visando a manipulação computacional do esquema classificatório no contexto de uma biblioteca
+digital, faz-se necessário representar formalmente tal esquema. Buscando formalizar matematicamente o
+1
+
+O autor participa do mesmo grupo de pesquisa da referida autora.
+
+esquema classificatório facetado, apoiamos-nos em Tzitzikas e outros (2002), que trabalham o conceito
+de taxonomias facetadas. Tzitzikas e outros (2002) definem formalmente uma taxonomia facetada como
+um conjunto finito de facetas. Cada faceta consiste de uma terminologia, ou seja, um conjunto finito de
+termos estruturados por relação de subsunção (hierárquica). Cada faceta é projetada separadamente e
+modela um aspecto distinto do domínio. A descrição de um objeto no processo de indexação ou
+classificação usando uma taxonomia facetada é dada pela associação do objeto com uma combinação de
+termos das diferentes facetas. Na sequência, apresentamos um modelo genérico para implementação
+computacional de taxonomias dinâmicas, conforme proposto por Sacco e Tzitzicas (2009).
+Taxonomias dinâmicas representam uma abordagem mais flexível, que pressupõe apenas a
+classificação multidimensional dos objetos, ou seja, a possibilidade de um objeto poder ser classificado
+por mais de um conceito ou classe da taxonomia, em qualquer nível da estrutura taxonômica. Essa
+classificação multidimensional representa uma generalização do esquema de classificação
+monodimensional, usado nas taxonomias convencionais. Num primeiro caso, os objetos podem ser
+classificados tematicamente sob diferentes conceitos. Num segundo caso, os objetos a serem
+classificados podem possuir diferentes características, perspectivas ou facetas (tempo, localização, etc),
+cada qual podendo ser descrita por uma taxonomia independente. Taxonomias com uma classificação
+multidimensional são chamadas de taxonomias multidimensionais ou facetadas (SACCO; TZITZICAS,
+2009).
+O esquema conceitual (intencional) de uma taxonomia dinâmica é composto por uma taxonomia
+simples projetada por especialistas do domínio: uma hierarquia de conceitos partindo de conceitos
+genéricos para conceitos mais específicos, apresentando apenas relacionamentos hierárquicos. Um
+conceito A é um subconceito do conceito B, se o conjunto de instâncias classificadas sob o conceito A é
+um subconjunto do conjunto formado pelas instâncias classificadas sob o conceito B. Os objetos que
+constituem a extensão (instâncias) são genéricos, de modo que qualquer tipo ou formato de objeto pode
+ser gerenciado pelo modelo de maneira uniforme. Os objetos podem ser livremente classificados sob n
+conceitos (n1) em qualquer nível de abstração, ou seja, em qualquer nível da estrutura conceitual da
+taxonomia.
+Os conceitos são definidos a partir de suas extensões (instâncias), ao invés de propriedades
+específicas que possuam. São definidos dois tipos diferentes de extensões para um dado conceito C: a
+extensão rasa de C é definida como o conjunto de objetos diretamente classificados sob C. A extensão
+profunda de C inclui todas as extensões rasas dos conceitos que compõem a subárvore com raiz em C.
+Sacco e Tzitzicas (2009) afirmam que a semântica natural de um conceito C é dada pela sua extensão
+profunda, visto que um dado nível de abstração engloba todas as suas especializações. Quando nos
+referimos a animais, incluímos cães, gatos, aves e todos os objetos classificados sob esses conceitos.
+
+Dessa forma, a semântica de um conceito C será dada pelo conjunto dos objetos descritos pelo conceito
+C, que corresponde à extensão profunda do conceito. Em nossa pesquisa, adotamos essa visão.
+Nas taxonomias convencionais, os conceitos estão ligados apenas por relacionamentos
+hierárquicos. Já em uma taxonomia dinâmica, outros relacionamentos (não hierárquicos) podem ser
+inferidos através da extensão (instâncias), a partir da seguinte regra de inferência extencional: Dois
+conceitos A e B são relacionados se existe ao menos um objeto D na extensão que é classificado
+simultaneamente sob o conceito A, ou um de seus descendentes, e sob o conceito B, ou um de seus
+descendentes. Por exemplo, um relacionamento entre “terrorismo” e “Nova York” pode ser inferido se
+existir um objeto classificado sob ambos os conceitos. Como “Nova York” é um conceito descendente
+de “EUA”, também poderá ser inferido um relacionamento entre “terrorismo” e “EUA”. A regra de
+inferência extensional pode ser vista como um mecanismo para inferir relacionamentos com base em
+evidência empírica.
+Dado um conjunto de objetos S, a regra de inferência extensional pode ser usada para produzir
+um sumário conceitual de S de acordo com a taxonomia original, retirando da taxonomia todos os
+conceitos C que não são relacionados a S. A taxonomia obtida a partir desse processo é chamada
+taxonomia reduzida.
+A ideia principal para permitir a exploração do acervo centrada no usuário é usar a taxonomia
+para: (a) definir um foco de interesse a partir da combinação lógica de conceitos ou a partir de uma
+consulta externa, e (b) sumarizar os conceitos relacionados ao foco de interesse através da taxonomia
+reduzida, na qual os conceitos não relacionados são eliminados. Dessa forma, a taxonomia original pode
+se adaptar e sumarizar qualquer subconjunto de objetos do universo. Daí decorre o fato de ser chamada
+de taxonomia dinâmica. As taxonomias tradicionais (estáticas) somente são capazes de sumarizar o
+universo inteiro.
+Nas abordagens tradicionais, somente os relacionamentos explicitamente descritos no esquema
+conceitual podem ser utilizados pelos usuários para navegação e recuperação. Dessa forma, todos os
+relacionamentos possíveis precisam ser antecipados e descritos, tarefa extremamente difícil de ser
+executada. Nas taxonomias dinâmicas, cujo modelo de operação foi descrito acima, nenhum tipo de
+relacionamento, além dos relacionamentos hierárquicos, precisa ser definido. Os relacionamentos
+conceituais são automaticamente derivados a partir da classificação do acervo, pela regra de inferência
+extensional. Por essa razão, as taxonomias dinâmicas adaptam-se facilmente a novos relacionamentos e
+são capazes de permitir a descoberta de relacionamentos novos e não previstos. As taxonomias
+dinâmicas são também capazes de sintetizar conceitos compostos, que não precisam ser representados
+explicitamente. Essa propriedade permite lidar com o problema do crescimento combinatorial (SACCO,
+
+2000) presente nas taxonomias tradicionais, nas quais os conceitos compostos são explicitamente
+representados.
+Observando um exemplo que segue as diretrizes para a construção facetada da taxonomia, e
+considerando o conceito composto “pinturas francesas do século XV”, teríamos: uma subtaxonomia de
+locais (da qual o conceito “França” é descendente), uma subtaxonomia temporal (da qual “século XV” é
+descendente), e uma subtaxonomia de artes (da qual “pintura” é descendente). Os objetos a serem
+classificados sob o conceito composto seriam classificados pela taxonomia da seguinte forma:
+Local>França, Tempo>século XV e Arte>pintura. A regra de inferência extensional poderia, então,
+estabelecer o relacionamento entre esses conceitos, fazendo com que o conceito composto pudesse ser
+recuperado por operações executadas sob qualquer combinação das facetas. O projeto facetado da
+taxonomia dinâmica torna simples para o usuário focar em um determinado conceito como, por
+exemplo, “século XV”, e visualizar imediatamente, a partir da aplicação da regra de inferência
+extensional, todos os conceitos relacionados, como literatura, pintura, política. Em uma abordagem que
+faça uso do conceito composto, essas correlações não seriam possíveis, devido ao fato de estarem
+ocultas sob o rótulo do conceito composto.
+Neste trabalho de pesquisa, optamos por utilizar um modelo formal para taxonomias dinâmicas,
+conforme proposto por Sacco e Tizitzicas (2009). Esse modelo foi utilizado para a implementação do
+sistema de busca no protótipo computacional. O projeto e construção da taxonomia para a área de
+Organização e Uso da Informação, realizado no contexto do trabalho de pesquisa de Maculan (2011), se
+baseia nos princípios da classificação facetada. Dessa forma, utilizou-se uma taxonomia facetada na
+implementação do protótipo.
+
+5 METODOLOGIA
+Nesta seção serão apresentados os métodos e procedimentos adotados para o desenvolvimento
+deste trabalho de pesquisa. Em relação aos seus objetivos, nossa pesquisa se enquadra como descritiva,
+tipo que, de acordo com Gil (1991), visa a descrever determinado fenômeno ou estabelecer relações
+entre variáveis. Também é de caráter aplicado, tipo que, segundo Lakatos e Marconi (1991), caracterizase por seu interesse prático, isto é, que os resultados sejam aplicados, imediatamente, na solução de
+problemas que ocorrem na realidade. Com relação aos procedimentos técnicos a serem empregados, ou
+seja, seu delineamento geral, a presente pesquisa pode ser enquadrada na modalidade experimental.
+Deseja-se determinar a influência ou impacto da organização do acervo que utiliza uma estrutura
+classificatória facetada, assim como da implementação de mecanismos de recuperação da informação
+baseado nessa estrutura, na eficácia da recuperação da informação e na satisfação do usuário da
+
+biblioteca digital. Para tanto, foi desenvolvido um protótipo de biblioteca digital e, posteriormente,
+pretende-se realizar um experimento, objetivando avaliar comparativamente o protótipo construído.
+Todas as etapas da pesquisa foram desenvolvidas no contexto da Biblioteca Digital de Teses e
+Dissertações da Escola de Ciência da Informação da UFMG (BDTD/ECI/UFMG). Dessa forma, deste
+ponto em diante, a sigla BDTD será utilizada como referência à biblioteca citada. A Figura 1, a seguir,
+ilustra as principais etapas metodológicas.
+ETAPA 1 - Estudo Exploratório
+Análise de ferram entas de software e esquemas de metadados.
+ETAPA 2 - Desenvolvimento do protótipo computacional
+2.1. Formalização matemática e implementação computacional do esquema classificatório.
+2.2. Desenvolvimento dos componentes para classificação do acervo da BDTD utilizado a estrutura classificatória facetada.
+2.3. Desenvolvimento dos componentes para busca e navegação facetada sobre o acervo da BDTD.
+ETAPA 3 - Experimento
+Avaliação comparativa.
+
+Figura 1 - Etapas metodológicas.
+
+Para o desenvolvimento do protótipo computacional (Etapa 2), optou-se pela utilização da
+plataforma DSpace. O DSpace2 é um sistema gerenciador de bibliotecas digitais desenvolvido pelo
+grupo de bibliotecas do MIT 3 (Massachusetts Institute of Technology) em parceria com a empresa
+Hewlett Packard (HP). Dessa forma, o protótipo foi desenvolvido de forma acoplada ao DSpace, de
+modo a poder utilizar e tirar proveito das funcionalidades já disponíveis nessa plataforma. Para o
+desenvolvimento do protótipo, foi utilizada a linguagem Java e o sistema gerenciador de banco de dados
+Postgres.
+O acervo, utilizado no contexto do protótipo desenvolvido, consiste das teses e dissertações que
+foram importadas da Biblioteca Digital de Teses e Dissertações da Escola de Ciência da Informação da
+UFMG. Foram importados cerca de 200 documentos, entre teses e dissertações. A taxonomia utilizada
+foi desenvolvida no contexto da pesquisa de Maculan (2011). A autora desenvolveu uma taxonomia
+facetada para a linha de pesquisa Organização e Uso da Informação, tendo também realizado a
+classificação de 41 documentos do acervo, utilizado a taxonomia desenvolvida. A Figura 2, a seguir,
+ilustra os principais componentes do protótipo desenvolvido.
+
+A implementação do protótipo foi baseada no modelo genérico para taxonomias dinâmicas,
+conforme proposto por Sacco e Tzitzicas (2009) e descrito anteriormente.
+A arquitetura projetada no protótipo prevê uma separação clara dos diversos aspectos da
+taxonomia e do acervo. Em primeiro lugar, a identificação de um objeto (documento) está separada do
+conteúdo do mesmo, de modo que a taxonomia dinâmica possa ser usada para gerenciar qualquer tipo ou
+formato de objetos heterogêneos. Cada objeto é identificado no sistema por um identificador único que
+chamamos ID-O (IDentificador do Objeto). Assume-se que o conteúdo de cada objeto seja armazenado
+em um repositório (DSpace), que é responsável por oferecer mecanismos para o armazenamento,
+extração e exibição do objeto, com base no ID-O. Dessa forma, separamos os metadados do conteúdo
+dos objetos, sendo que a comunicação entre os dois níveis se dá pelo identificador do objeto (ID-O).
+Por outro lado, adota-se uma separação da camada de metadados na intensão (representada pela
+estrutura conceitual da taxonomia) e na extensão (objetos classificados com os conceitos da taxonomia).
+A interoperabilidade entre a intensão e a extensão é dada pela identificação de cada conceito com um
+identificador numérico único, que chamamos de ID-C (IDentificador do Conceito). Dessa forma, a
+intensão compreende os relacionamentos entre os conceitos na estrutura taxonômica, enquanto a
+extensão compreende a classificação dos objetos, sendo que cada objeto é representado pelo seu ID-O e
+classificado sob conceitos que são representados pelos seus respectivos ID-C.
+O uso de um identificador numérico para cada conceito (ID-C) permite ainda separar os rótulos
+textuais do conceito do seu conteúdo (que é representado pelo conjunto de objetos que são classificados
+sob o conceito). Os rótulos textuais de cada conceito podem, ainda, ser armazenados separadamente em
+dicionários, um para cada idioma. A Figura 3, a seguir, representa a arquitetura ora descrita.
+
+
+6 RESULTADOS
+Nesta seção serão descritos os resultados parciais já alcançados por nossa pesquisa. O protótipo
+computacional, que foi chamado TDF-Biblio4, foi desenvolvido no formato de uma biblioteca digital de
+teses e dissertações. O mecanismo de recuperação da informação implementado foi chamado de Busca
+Dinâmica-Facetada. O mecanismo utiliza um modelo baseado na classificação multidimensional
+(facetada) dos documentos do acervo e permite a exploração e a navegação no acervo de uma forma
+guiada, porém não restritiva, por meio de uma interface visual fácil e intuitiva. O mecanismo de busca
+implementado se apresenta em duas modalidades: “Pelos Metadados” e “Pela Taxonomia Facetada”.
+A modalidade “Pelos Metadados” utiliza atributos descritivos, representados nos elementos de
+metadados Dublin Core: Orientador (advisor), Tipo do Documento (type) e Ano de Publicação
+(date.issued). Além desses atributos descritivos, são também utilizados aspectos temáticos dos
+documentos, modelados pela taxonomia facetada e representados através de novos elementos de
+metadados que foram criados através da qualificação do elemento “subject”, quais sejam: Tema, Objeto
+de Pesquisa, Escopo, Ambientação, Tipo de Pesquisa, Coleta de Dados, Métodos, Fundamento Teórico,
+Fundamento Histórico-Conceitual e Resultados. Já na modalidade de busca “Pela Taxonomia Facetada”,
+são utilizados apenas os aspectos temáticos das teses e dissertações que compõem o acervo. Nessa
+modalidade, a Taxonomia Facetada é exibida para o usuário, permitindo que ele possa navegar pela
+estrutura da Taxonomia, selecionando os conceitos a serem utilizados na busca.
+Em ambas as modalidades, as categorias são apresentadas ao usuário seguidas de um número,
+que aparece entre parênteses, representando o total de documentos classificados na respectiva categoria.
+O usuário pode elaborar a sua busca progressivamente, ao mesmo tempo em que pode observar o efeito
+que sua escolha por uma categoria determina quais outras categorias estarão disponíveis na sequência. O
+processo de recuperação da informação pode ser visto como um processo interativo de redução ou
+filtragem do acervo: o usuário seleciona um foco de interesse, que restringe o acervo a partir do descarte
+de todos os documentos que não pertencem ao foco em questão. Apenas as categorias usadas para
+classificar os documentos presentes no foco de interesse, além de seus antecessores na hierarquia, são
+mantidas na taxonomia reduzida. Essas categorias, que sumarizam o foco de interesse atual, são somente
+aquelas que podem ser utilizadas para refinamentos posteriores. A partir da perspectiva de interação
+homem-máquina, o usuário é efetivamente guiado para atingir seu objetivo através de uma lista clara e
+consistente de alternativas possíveis.
+
+
+Na modalidade de “Busca Dinâmica-Facetada pelos Metadados”, à medida que o usuário
+seleciona o valor em uma dada categoria (um Orientador, por exemplo), os resultados são prontamente
+exibidos, e a estrutura é dinamicamente reconstruída para representar somente os documentos que
+tiveram a participação do respectivo orientador. Dessa forma, o usuário pode dar sequência em sua
+busca, através da seleção de valores em outras categorias (Tipo de Documento, Ano de Publicação,
+Tema, etc).
+Tomando como exemplo a Figura 4, a seleção da professora “Lídia Alvarenga” produzirá como
+resultado 14 documentos em que o nome da professora aparece na qualidade de orientadora. Nesse
+momento, a estrutura será reconstruída para representar o resultado parcial, permitindo ao usuário
+visualizar a distribuição dos documentos nas demais categorias. Esse resultado pode ainda ser filtrado na
+sequência através das categorias Tipo do Documento (tese ou dissertação), Data de Publicação, ou ainda
+algum aspecto referente ao conteúdo do documento, como Tema, Objeto de Pesquisa, Fundamento
+Teórico, Metodologia, entre outros.
+
+Figura 4 - Exemplo da Busca Dinâmica-Facetada pelos Metadados.
+
+Na modalidade “Busca Dinâmica-Facetada pela Taxonomia Facetada”, o usuário pode navegar
+na estrutura hierárquica da taxonomia, selecionando opções em diferentes categorias, de modo a compor
+a sua busca. O resultado da busca será composto pelos documentos classificados em qualquer uma das
+categorias selecionadas, quando utilizado o operador OR. No caso do operador AND, o resultado será
+composto dos documentos classificados simultaneamente em todas as categorias selecionadas. Os
+
+resultados são exibidos, e a estrutura taxonômica é dinamicamente reconstruída de modo a representar
+os resultados parciais exibidos. Dessa forma, o usuário pode dar sequência a sua pesquisa, fazendo o
+refinamento a partir da seleção de outras categorias.
+Tomando como exemplo a Figura 5, a seleção de uma opção na categoria “OBJETO” fará com
+que sejam exibidos todos os documentos que tiveram como objeto de pesquisa a opção selecionada. Na
+sequência, a taxonomia será dinamicamente reconstruída para descrever o conjunto de resultados
+parciais exibidos. Assim, o usuário pode dar sequência em sua busca, selecionando, por exemplo, uma
+opção dentro da categoria “FUNDAMENTO TEÓRICO”. Em seguida serão exibidos como resultado,
+dentre os documentos que compunham o resultado parcial inicial, somente aqueles que tiveram como
+fundamento teórico a opção selecionada.
+
+Figura 5 - Exemplo da Busca pela Taxonomia Facetada.
+
+Outra funcionalidade que também foi implementada no protótipo, diz respeito à possibilidade de
+integração da busca dinâmica-facetada com a busca textual, conforme foi apontado na fundamentação
+teórica. Essa integração acontece de duas formas. No primeiro caso, o usuário pode iniciar fornecendo
+uma expressão para o mecanismo de busca textual, sendo que os resultados retornados pela busca textual
+serão dinâmicamente descritos pela taxonomia. Dessa maneira, o usuário poderá dar sequência à sua
+busca utilizando o mecanismo de busca dinâmica-facetada, partindo dos resultados parciais fornecidos
+pela busca textual. No segundo caso, o usuário pode iniciar utilizando o mecanismo de busca dinâmicafacetada, sendo que, a qualquer momento, ele poderá fazer uso da busca textual, tendo como escopo os
+resultados parciais obtidos até o momento.
+
+A Figura 6 ilustra um exemplo da integração descrita acima. Neste caso, o usuário iniciou a sua
+busca fornecendo o termo “ontologia” para o mecanismo de busca textual. Conforme ilustrado pela
+Figura 6, foi obtido um conjunto de 12 documentos como resultado. Conforme pode ser observado, esse
+resultado parcial aparece distribuído nas diversas categorias da taxonomia, à esquerda. Desta forma, o
+usuário poderia dar sequência à busca a partir do Mecanismo de Busca Dinâmica Facetada, selecionando
+opções sob as categorias Orientador, Tipo de Documento, Data de Publicação, Tema, etc.
+
+Figura 6 - Integração da Busca Dinâmica Facetada com a Busca Textual.
+
+Cabe destacar que, até o momento da escrita deste texto, somente uma parte do acervo (41
+documentos) encontra-se classificado pela taxonomia facetada. Está em andamento o trabalho de
+construção de uma nova versão da taxonomia, assim como a classificação da totalidade do acervo (cerca
+de 200 documentos). No entanto, os resultados parciais já alcançados permitem comprovar a utilidade da
+abordagem utilizada. A utilização de uma classificação facetada, assim como a sua implementação,
+fazendo uso do conceito de taxonomias dinâmicas para compor o mecanismo de recuperação da
+informação, permitem melhorar a experiência do usuário na busca e exploração do acervo da biblioteca
+digital. Essa melhoria pode ser observada, principalmente, em três cenários de uso:
+1. Seleção pragmática de documentos: neste caso, o usuário deseja acessar um conjunto de
+documentos com base em um conjunto de critérios pré-estabelecidos. Por exemplo, deseja-se
+encontrar todos os documentos de tipo “Tese de Doutorado” publicados a partir do ano de
+“2000”, que tenham tido a participação de um determinado “Orientador”, em uma determinada
+“Linha de Pesquisa”.
+
+2. Exploração do acervo: neste caso, o usuário deseja explorar o acervo de forma livre, buscando
+aumentar seu nível de conhecimento acerca dos documentos e seus relacionamentos. Por
+exemplo, no caso de uma biblioteca de teses e dissertações, um estudante, no início de seu
+trabalho de pesquisa, deseja saber quais as “Metodologias” utilizadas em pesquisas sobre um
+determinado “Tema” ou, ainda, quais os principais “Fundamentos Teóricos” adotados nessas
+pesquisas.
+3. Análise do acervo: neste caso, o usuário deseja descobrir e analisar “leis internas” ao acervo, de
+modo a perceber e compreender questões relacionadas ao mesmo. Por exemplo, no caso de uma
+biblioteca de teses e dissertações, o coordenador do Programa de Pós Graduação, pode estar
+interessado em analisar a produção de uma determinada linha de pesquisa, quais os
+“Orientadores” mais produtivos, quais os “Temas” mais pesquisados, como a produção
+encontra-se distribuída de acordo com os documentos publicados nos últimos anos, etc.
+
+Esses cenários demonstram a importância da capacidade exploratória oferecida pela abordagem
+adotada nesta pesquisa, que não pode ser encontrada nos mecanismos de recuperação da informação
+tradicionalmente oferecidos pelas bibliotecas digitais.
+
+CONSIDERAÇÕES FINAIS
+
+Os testes iniciais do protótipo implementado já apontam para algumas vantagens da abordagem
+utilizada. A busca dinâmica facetada fornece suporte a um novo paradigma de acesso, permitindo a
+exploração guiada do acervo e fazendo uma ponte entre os processos de busca e a navegação. Além
+disso, o uso desta abordagem parece ser intuitivo e facilmente utilizado pelos usuários. As taxonomias
+dinâmicas projetadas de forma facetada requerem um esquema conceitual simples e são capazes de se
+adaptar a relacionamentos novos e não previstos, permitindo aos usuários descobrir esses
+relacionamentos nas operações de navegação e recuperação. O controle do usuário e o mecanismo
+adaptativo claro e consistente proporcionado pelas taxonomias dinâmicas encorajam o usuário a
+experimentar e explorar, proporcionando-lhe a sensação de ter considerado todas as alternativas para
+chegar ao resultado. No entanto, essas vantagens deverão ser comprovadas a partir de testes com
+usuários, conforme previsto nas próximas etapas da pesquisa.
+Outra questão que merece destaque é a possibilidade, já explorada, de integração com outros
+mecanismos de recuperação da informação, como a busca textual. A busca dinâmica facetada pode ser
+facilmente integrada às bibliotecas digitais, assim como em outros contextos de recuperação da
+informação em ambientes digitais.
+
+Finalmente, é importante destacar a importância em se resgatar importantes conhecimentos
+desenvolvidos no campo da biblioteconomia e ciência da informação, como a Teoria da Classificação
+Facetada. Esses conhecimentos, utilizados em conjunto com técnicas desenvolvidas no contexto da
+computação, e potencializados com as tecnologias da Internet, podem trazer importantes avanços nas
+pesquisas. Tais avanços são certamente mais fáceis de serem alcançados em contextos nos quais exista o
+adequado tratamento da informação, como no caso das bibliotecas digitais.

@@ -1,0 +1,680 @@
+
+UTILIZANDO O GOOGLE ANALYTICS PARA MONITORAR A AUDIÊNCIA DE
+BLOGS
+Resumo: Realizar as atividades de monitoramento de mídias sociais se mostra como um
+trabalho complexo devido ao comportamento passivo que a maioria dos usuários (lurkers)
+exercem em sites de redes sociais e não deixam rastros perceptíveis da participação dos
+mesmos nestes espaços. Para realizar esse monitoramento, foram adotadas atividades de
+web analytics que podem auxiliar os administradores destas mídias sociais a avaliar a
+audiência “invisível” do seu canal de comunicação. Este trabalho tem como objetivo
+apresentar a ferramenta Google Analytics, como ela pode ser utilizada para monitorar a
+audiência de blogs e que tipos de indicadores são coletados. Para avaliar a ferramenta, esta
+foi aplicada ao o blog vernasunhas.blogspot.com por um período de 8 meses para coletar
+informação sobre a audiência do blog. A coleta dos dados da audiência foi realizada pela
+própria ferramenta enquanto a análise se deu a partir uma análise temática baseada nos tipos
+de métricas encontrados. Foi percebido que a ferramenta auxilia apenas em parte no
+trabalho do monitoramento dos dados relativos à audiência uma vez que ela se mostra capaz
+de coletar os dados relativos às métricas frias que refletem apenas a participação do usuário
+nos blogs não se mostrando adequada para coletar dados relativos às métricas mornas e
+quentes relativas a engajamento e fidelização. Desta forma, o Google Analytics não pode
+ser utilizado como única fonte de informação para um monitoramento eficiente da
+audiência de um blog.
+Palavras-chave: Blogs. Google Analytics. Web Analytics.
+1 INTRODUÇÃO
+Atualmente vivemos em um mundo no qual os crescentes avanços da tecnologia e
+da comunicação vêm exercendo uma forte influência sobre a sociedade (SCHONS, 2007, p.
+
+
+1) Dentre os avanços na comunicação, o meio que mais se destaca é a internet, devido a sua
+amplitude global e facilidade de acesso (JARDIM, 2010, p. 6).
+A Internet se mostra cada vez mais integrada à vida cotidiana em questões relativas
+ao uso das informações neste espaço estão mudando do “quem está logado” para uma
+análise mais aprofundada do que as pessoas fazem online. Entre estas considerações, existe
+um crescente reconhecimento de que a Internet está estimulando conexões e forjando novas
+ligações entre pessoas e organizações (HAYTHORNTHWAITE, 2005).
+Com o advento da Web 2.0, termo cunhado pela empresa norte-americana O’Reilly
+Media para designar a segunda geração da Web. Diversas ferramentas de Tecnologia de
+Informação e Comunicação (TIC) foram construídas criando assim novos espaços para
+construção do conhecimento, além de proporcionar a iteração entre usuários em tempo real
+bem como a participação destes usuários de forma mais atuante (ALEXANDER, 2006).
+Novos meios de comunicação se tornaram cada vez mais familiares ao público em
+geral e o seu uso foi sendo adaptado a partir de convenções comuns. Estes novos canais se
+mostram essenciais para manter o trabalho e conexões sociais da vida cotidiana
+atravessando os diversos mundos sociais do indivíduo tais como: trabalho, casa, e qualquer
+tipo de geografia (WELLMAN; HAYTHORNTHWAITE, 2008).
+Esta nova geração da Internet foi caracterizada pelo surgimento das mídias sociais
+que logo se tornaram populares reunindo um número considerável de usuários em um
+mesmo espaço. Neste contexto, podemos considerar que a primeira mídia social a atingir
+um número massivo de usuários foram os Blogs e, por este motivo, provavelmente, é a
+ferramenta da Web 2.0 mais conhecida e utilizada pelos usuários (JARDIM, 2010).
+Bruns (2008) define blogs como uma página na internet que, se pressupõe, ser
+atualizada com frequência através da publicação de mensagens – chamados de posts –
+constituídas por imagens e/ou textos normalmente de pequenas dimensões, muitas vezes
+incluindo hiperlinks para outras páginas de interesse e/ou comentários e pensamentos
+pessoais do autor, e apresentadas de forma cronológica, sendo as mensagens mais recentes
+normalmente apresentadas em primeiro lugar.
+Barros (2004) sugere que uma das vantagens em se utilizar dos blogs, é que
+qualquer usuário que tenha acesso a Internet pode criar uma página deste tipo, uma vez que
+a tecnologia empregada é bastante simples. E que o sucesso no uso dos blogs se dá devido à
+facilidade de se publicar conteúdo online. Neste contexto, os blogs são parte de uma
+crescente conjunção de comunicação pessoal e ferramentas de gerenciamento de
+
+
+informação que fornecem um mar infinito de histórias para leitores que compartilham dos
+mesmos interesses.
+Scoble e Israel (2006) sugerem que com a popularização dos blogs, diversos
+fenômenos relativos ao comportamento dos usuários na Internet foram observados. O
+primeiro deles é a que os usuários passam não somente a consumir informações, mas
+também, produzir conteúdo neste espaço. Esse novo perfil de usuários foi denominado
+prosumers, expressão oriunda da língua inglesa a partir da junção das palavras Producer e
+Consumer. Este neologismo foi registrado por Alvin Toffler (1980) na obra “A Terceira
+Onda”, onde ele sugere o novo papel do consumidor da informação e bens culturais na
+sociedade pós-moderna. Nielsen (2006) observa outro fenômeno que é a massiva presença
+de usuários que não geram nenhum tipo de conteúdo em um blog, estes usuários são
+chamados de Lurkers.
+Nielsen (2006) sugere que 90% do conteúdo publicado em mídias sociais são
+produzidos por apenas 1% dos usuários, enquanto 9% dos usuários geram os outros 10% e
+90% dos usuários são lurkers. Isso implica que para cada usuário que comenta, realiza uma
+marcação, curte ou compartilha conteúdo de um blog, outros nove visitaram e consumiram
+aquele conteúdo.
+O uso de blogs no meio empresarial fica evidenciado no estudo state of blogosphere
+(2011). Este sugere que uma em cada oito empresas mantém um blog ativo. A pesquisa
+também indicou que 57% das empresas com blogs adquirem pelo menos um novo
+cliente/consumidor através deste canal de comunicação. E por fim aponta 61% dos
+consumidores que compram em lojas virtuais nos Estados Unidos fizeram compras baseada
+em recomendações de blogs. Cerca de 46% dos blogueiros entrevistados se consideram
+probloggers, ou seja, blogueiros que se tornaram referência para determinados assuntos de
+interesse e acabaram por transformar os seus blogs em um meio rentável caracterizando,
+portanto, a profissionalização destes. (AKRITIDIS; KATSAROS; BOZANIS, 2009).
+Devido ao caráter comercial alcançado pelos blogs, se tornou uma prática comum o
+monitoramento do conteúdo por parceiros ou concorrentes promovido nestes canais
+(HONSCHA, 2009) ou até mesmo monitorar a própria audiência com o intuito de conhecer,
+e se comunicar, melhor com os usuários “consumidores” (PIKAS, 2005).
+Blogs são considerados fontes de informação “potencialmente útil” e devido à sua
+numerosa quantidade, elaborar uma lista destes e monitorá-los é considerada uma tarefa
+exaustiva (NANNO ET. AL, 2004). Por movimentarem uma quantidade muito grande de
+dados, em um espaço tão curto de tempo, a tarefa de monitorar as informações que circulam
+
+
+nestas mídias seria impossível sem o auxílio de ferramentas técnicas adequadas
+(CARVALHO, 2012).
+Uma empresa com uma visão estratégica online bem estabelecida não pode mais
+ignorar o potencial dos blogs como ferramenta de comunicação. Tornou-se vital
+Acompanhar as conversações que ocorrem na rede para conseguir agir rapidamente às
+movimentações do mercado (CIPRIANI, 2006, p.113). Por isso, mais importante para as
+empresas do que avaliar o conteúdo das mídias sociais relativos aos concorrentes, é
+monitorar o público que consome o conteúdo criado em suas próprias mídias sociais
+(HONSCHA, 2009).
+A motivação deste trabalho vem do reconhecimento da complexidade em monitorar
+a audiência dos próprios visitantes em blogs. Então perguntas do tipo: como perceber a
+audiência de um blog específico? Como coletar essas informações? As informações
+disponibilizadas são suficientes para determinar a satisfação dos usuários com um blog?
+O presente trabalho tem como objetivo geral apresentar a ferramenta Google
+Analytics e utilizá-la para realizar o monitoramento de um blog real com o intuito de
+verificar quais informações sobre os visitantes são coletados pela ferramenta e se é possível
+avaliar a audiência do blog a partir destas informações. Este estudo justifica-se pela analise
+das métricas fornecidas pela ferramenta de web analytics e determinar se ela é,
+efetivamente, satisfatória no processo de monitoramento de blogs.
+2 LITERATURA PERTINENTE
+2.1 Blogs
+Enquanto fenômeno emergente e persistente da cibercultura, os blogs demonstram
+um sintoma (e consequência) do desejo das pessoas de manter-se conectadas e em
+comunicação (LEMOS, 2009). Inicialmente os blogs foram considerados “diários online”,
+contudo, com o desenvolvimento desta mídia social, houve uma evolução em termos das
+ferramentas em si e em tendências temáticas até atingir a profissionalização (HINERASKY,
+2012).
+O termo “weblog” foi dado pelo norte-americano Jorn Barger para referir-se ao seu
+jornal online e este se deriva da junção das palavras “web” (rede) e “log” (diário de
+navegação) e foi utilizada para designar uma página que permite a construção de um diário
+pessoal da rede (HINERASKY, 2012). A abreviação “blog” teria surgido apenas em maio
+de 1999, quando Peter Merholz divide o termo em “we-blog” (nós blogamos) ou apenas
+“blog”, criando ao mesmo tempo o verbo blogar e o sujeito blogueiro (MALINI, 2008).
+
+Ordunã (2007) sugere que blogs são páginas pessoais na Internet que, devido à
+semelhança de diários online, tornam possíveis a todos publicar na rede. Por ser uma
+publicação focada no usuário e no conteúdo, e não na programação ou no design gráfico, os
+blogs multiplicaram o leque de ações dos usuários de Internet de levar para a rede conteúdo
+próprio e atualizado, sem intermediários (MALINI, 2008; ORDUNÃ, 2007).
+Sendo assim, podemos considerar os blogs como espaços democráticos onde os
+usuários são livres para opinar sobre qualquer assunto e discutir a respeito de qualquer tema
+de seu interesse, compartilhando suas ideias com os usuários da rede, permitindo a
+disseminação de informações que eram, muitas vezes, subestimadas pelas mídias
+tradicionais. Essa maior possibilidade de interconexões promovida pela internet permite que
+os blogueiros acessem o conteúdo uns dos outros, por meio de referências, formando assim
+uma comunidade ou rede social (SPYER, 2007; ORDUNÃ, 2007).
+Ordunã (2007) sugere que o principal elemento de um blog são as postagens (posts),
+ordenadas segundo a cronologia inversa (com as publicações mais recentes primeiro), em
+que cada uma possui um endereço URL permanente que facilita sua conexão a partir de
+sites externos. As histórias podem ser arquivadas e apresentadas, ou cronologicamente (por
+meses e anos) ou por temática (categorias/tags). A maior parte dos blogs traz uma seleção
+de conexões (blogroll) que reúne os websites lidos ou pelo menos recomendados pelo autor
+e alguma referência pessoal que, com o título e a descrição do blog que ajudam o leitor a
+situá-lo.
+Esta interconexão entre todos os tipos de blogs por meio das blogrolls e suas
+hiperligações configura um fenômeno social, um “ente coletivo”, denominado por Willian
+Quick, em 2001, como blogosfera (MALINI, 2008), caracterizado pelo espírito comunal
+que distingue preferências, popularidades de estilos e produtos (HINERASKY, 2012). A
+blogosfera é um espaço no qual são estabelecidas milhares de conversações paralelas e
+muitas delas podem possuir informações úteis para as organizações e até mesmo para os
+indivíduos (ORDUNÃ, 2007).
+Hinerasky (2012, p. 43) afirma que é possível diferenciar, na prática, as etapas que
+envolvem a conexão entre autores e leitores: a) tomada de conhecimento do blog pelo
+leitor; b) descoberta de um interesse comum; c) trocas individuais e trocas em grupo; d)
+confiança e construção da autoridade. Estas etapas levam aos blogueiros à conquista da
+audiência e a possibilidade de notoriedade e legitimidade entre os pares, leitores e
+empresas.
+
+Neste sentido, a audiência de um blog se constitui, basicamente, das relações
+estabelecidas entre os interagentes e é medida de duas formas, (i) por captação e (ii) por
+interação (HINERASKY, 2012).
+
+
+2.2 Web analytics e monitoramento de mídias sociais
+Segundo o Aberdeen Group (2000), web analytics é o monitoramento e
+comunicação de uso de uma página na internet de modo que empresas possam entender
+melhor a complexa relação entre as ações dos visitantes e uma página em si com o intuito
+de otimizar o sítio para aumentar as vendas e a lealdade do cliente. Waisberg e Kaushik
+(2009) apontam que a web analytics é a ciência de aprimorar websites com o intuito de
+aumentar a sua rentabilidade através da promoção de uma melhor experiência do usuário
+quando este o visita. É uma ciência porque a web analytics utiliza estatísticas, técnicas de
+mineração de dados, e um processo metodológico.
+Inan (2002) aponta que o surgimento da web analytics se deu por entender que a
+internet representa um canal de negócios em si mesmo, ao invés de ser apenas uma
+ferramenta de publicidade, e como tal, necessita de uma abordagem holística para a
+medição de elementos na rede.
+Quando tratamos de redes sociais em si as técnicas de web analytics são conhecidas
+como monitoramento de mídias sociais. E neste sentido, esta surge como uma nova área de
+conhecimento que visa “captar, agregar, analisar e auxiliar as organizações na criação de
+ações e estratégias para o negócio de forma rápida e com base nas informações geradas de
+forma espontânea pelos consumidores nesses canais” (E-LIFE, 2012). O papel do
+monitoramento é ser um radar da empresa no “burburinho” online, que remete não só as
+opiniões e avaliações dos consumidores, mas também o comportamento do mercado com
+relação à marca e seus concorrentes. Os depoimentos espontâneos disponíveis nas redes
+sociais são também “fonte para novas ideias e possibilidades para produtos e serviços”
+(LIFE, e. 2013b).
+A empresa SocialMedia Monitor (2013) afirma que a complexidade deste
+monitoramento parte da nova realidade uma vez que “[...] as marcas já tiveram controle
+absoluto sobre o conteúdo exposto de sua imagem enquanto hoje, com a internet e, mais
+especificamente, com as redes sociais, são os consumidores que criam o conteúdo”. Neste
+contexto, o consumidor, que também é usuário das redes sociais, assume também outro
+importante perfil: o de influenciador (SOCIALMEDIA MONITOR, 2013).
+Silva (2010) define monitoramento de mídias sociais como:
+Coleta, armazenamento, classificação, categorização, adição de
+informações e análise de menções online públicas a determinado(s)
+termo(s) previamente definido(s) e seus emissores, com os objetivos de:
+(a) identificar e analisar reações, sentimentos e desejos relativos a
+produtos, entidades e campanhas; (b) conhecer melhor os públicos
+
+pertinentes; e (c) realizar ações reativas e proativas para alcançar os
+objetivos da organização ou pessoa (SILVA, 2010).
+
+Quando tratamos especificamente sobre o monitoramento de blogs, Orduña (2007,
+p. 179) elucida:
+A opinião dos consumidores está ali, esperando ser ouvida pelas empresas,
+e pode ser consultada gratuitamente. Informações sobre referencias, idéias,
+propostas, necessidades, sonhos e aspirações de indivíduos, que até então
+somente eram obtidas mediante pesquisa de mercado cara, agora estão
+disponíveis e ao alcance de todo mundo, inclusive dos concorrentes
+(ORDUÑA, 2007, p.179).
+
+A E-Life (2013) aponta que algumas vantagens diferenciam o monitoramento de
+mídias sociais das demais metodologias de investigação do mercado e do comportamento
+do consumidor dentre as quais se destacam: (i) Velocidade e custo, (ii) Informações sem
+filtro, (iii) Informações espontâneas e contextualizadas, (iv) dados qualitativos e
+quantitativos, (v) Informações vão além das perguntas.
+Existem duas maneiras de monitoramento de mídias sociais (i) Reativo e (ii)
+Proativo. No monitoramento reativo, a marca responde às citações diretas do consumidor,
+seja positiva ou negativa. Já no monitoramento proativo, a marca deve monitorar as
+empresas concorrentes e a sua própria marca a fim de captar potenciais clientes (MEDIA,
+2013).
+2.3 Ferramentas para o monitoramento de mídias sociais
+Para auxiliar no processo de coleta de dados para o monitoramento da audiência das
+mídias sociais existem inúmeras ferramentas. Laine e Fruhwirth (2010) ressaltam que:
+Ferramentas para monitoramento de mídias sociais são (na maioria das
+vezes) serviços de software oferecidos através da Internet para filtrar e
+analisar o conteúdo textual produzido por e na mídia social. As
+ferramentas encontram conteúdo baseados nas palavras-chave definidas
+pelos usuários. As ferramentas incorporam múltiplas funcionalidades,
+como análise de volume, fonte, autor, palavra-chave, região e sentimento,
+e reportam estas análises convenientemente de modo gráfico (LAINE, M.;
+FRUHWIRTH, C., 2010).
+
+Na concepção de Faustino (2013) a importância em medir o impacto social de uma
+publicação específica ou do próprio blog como um todo tem como objetivo se adequar as
+preferências do usuário. Medir este impacto social possibilita a compreensão de quais os
+tipos de conteúdo os leitores preferem. Desta forma, o blogueiro pode criar novos posts,
+direcionados, com o intuito atrair mais leitores para o blog.
+
+
+Por isso, algumas ferramentas de monitoramento de audiência já são
+disponibilizadas pelas próprias ferramentas de blogs. Para o Wordpress4 existe o plugin
+Social Metrics que permite uma análise sobre os posts mais curtidos e divulgados. Já o
+Blogger5 fornece ao administrador uma “visão geral” das métricas, indicadores e medição
+de audiência que englobam as visualizações por página, hora, dia, semana, mês e total de
+visualizações do blog (FAUSTINO, 2013).
+Neste sentido, cabe citar a ferramenta ADDThis6, responsável por mostrar números
+relacionados ao engajamento dos visitantes, mostrando como eles estão compartilhando o
+conteúdo do blog – seja copiando a URL e compartilhando com outras pessoas, quantos
+cliques a URL recebe, qual rede social é mais influente para o um blog, qual o conteúdo
+tem maior “efeito viral”. Com esses dados é possível entender o comportamento do usuário
+dentro da mídia social, a partir a visualização dos conteúdos que são mais acessados e a
+forma como são acessados (EIS, 2011).
+O Google disponibiliza um serviço gratuito de análise de audiência de qualquer
+página na Internet chamado Google Analytics. A ferramenta é adicionada a um blog através
+de um código HTML. O Google Analytics gera relatórios de medição de audiência do blog
+e é capaz de identificar além das tradicionais métricas de taxa de exibição, “hit” de uma
+página, localização geográfica do visitante, forma com a qual chegou à página seja através
+de links de outros sites, buscador e quais as palavras chaves utilizadas (KRISHNAMURTHY; WILLS, 2009). Para o monitoramento de blogs, especificamente,
+algumas ferramentas são listadas por Silva (2012) tais como: Radian6, Scup, Trendrr,
+Alterian SM2, Seekr, Livebuzz, PostX, SocialMetrix, ScoutLabs.
+2.4 Classificações de métricas para monitoramento
+Diferente do mundo “não conectado” onde é difícil precisar números e estatísticas
+sobre como as pessoas interagem com as marcas que elas consomem, na web isso acontece
+de forma muito natural. A Internet é repleta de dados e números disponíveis chamadas de
+métricas e se faz necessário utilizar os métodos adequados para o monitoramento adequado
+nesse meio. (DINAMIZE, 2011).
+Uma pesquisa intitulada “Mídias Sociais nas Empresas” realizada pela Deloitte
+Touche Tohmatsu (2010) afirmou que as empresas mensuram as iniciativas de mídias
+
+4
+5
+6
+
+www.wordpress.com
+www.blogger.com
+http://www.addthis.com/
+
+
+
+sociais através, principalmente, das métricas e indicadores. Silva (2012) sugere que o uso
+de métricas voltadas para mídias sociais tem pontos positivos no que tange a persistência e
+”buscabilidade” dos dados. As informações são públicas e disponíveis e existem diversos
+níveis de mensuração. Contudo, vale ressaltar que esta medição varia de acordo com a
+mídia social pesquisada e assim, o profissional tem que lidar com as diversas terminologias
+diferentes presentes na rede.
+Tuten (2008) destaca que medidas como número de visitantes únicos, páginas vistas,
+frequência de visitas, duração de visitas e taxas de cliques são inapropriados para captar as
+informações realmente relevantes para campanhas realizadas em mídia social. O aspecto
+quantitativo na mensuração de número de pessoas presentes em uma comunidade virtual,
+por exemplo, é útil, mas insuficiente para entender a essência da interação que os
+consumidores estabeleceram com a marca e o grau de engajamento.
+Silva (2012) aponta que o monitoramento de mídias sociais se dá em quatro níveis:
+(i) Engajamento, (ii) Alcance, (iii) Adequação e (iv) Influência que são definidos como:
+Engajamento: Se refere ao grau de participação e envolvimento de determinado
+perfil ou grupo de pessoas em relação a um tema ou assunto;
+Alcance: Se refere ao grau efetivo de disseminação de determinado conteúdo ou
+grau de disseminação potencial que um perfil possui;
+Influência: Se refere ao grau de atenção e mobilização que um determinado perfil
+pode gerar em outros;
+Adequação: Se refere ao grau de proximidade que determinado conteúdo tem com
+as características e valores desejados.
+Outra classificação bastante utilizada é apresentada por Albee (2014) que são as
+métricas Hard e Soft. As métricas “Hard” são relacionadas às vendas, importando-se
+somente com os resultados relativos à receita. Já as métricas Soft são focadas em iniciativas
+que impulsionam o engajamento e a interação com o usuário. Segundo a mesma autora,
+apesar da dicotomia, a utilização de ambos os tipos são igualmente importantes para uma
+organização Não se consegue obter receita sem iniciativas que impulsionem o
+comportamento do usuário na rede.
+Broek (2011) sugere outra classificação que engloba três tipos de métricas: as (i)
+frias, (ii) mornas e (iii) quentes. As métricas frias se referem aos dados quantitativos que
+medem o comportamento da audiência em geral tais como alcance, frequência e
+visualizações. As métricas mornas são ligadas ao engajamento dos usuários com a mídia
+social em questão e avalia comportamentos específicos como análise de sentimento e
+
+
+
+avaliação de fatores virais. As métricas quentes avaliam comportamentos relativos a
+conversão, ou seja, mede como o negócio é alavancado a partir da mídia social em análise e
+para isso pode ser usado avaliações de leads ou mesmo uma avaliação do ecossistema.
+Medina (2013) afirma que as métricas frias têm por finalidade a avaliação do valor de
+mercado, faturamento, Market Share, lucro e preço. As métricas mornas objetivam a
+medição de opiniões, vínculo emocional, relevância, sustentabilidade e percepção.
+Levando em conta a tipologia das métricas, Silva (2013) afirma que existem três
+grupos de métricas sociais que necessitam de um cuidado maior no monitoramento: (i)
+Alcance, (ii) Engajamento, (iii) Influência. As métricas de Alcance e impressões se referem
+à audiência real ou potencial de uma mensagem, através das visualizações, seguidores,
+membros, entre outros. O Engajamento permite analisar qual parcela da audiência interage
+de algum modo com o perfil e o conteúdo. As métricas de influência e relevância permitem
+analisar o quanto a marca são percebidas pelos consumidores.
+3 METODOLOGIA
+Esta pesquisa utilizou de abordagens tanto quantitativas, tanto qualitativas para a sua
+realização. A parte quantitativa se refere à avaliação do desempenho do blog e da validação
+da regra 90-9-1 proposta por Nielsen (2006). A parte qualitativa da pesquisa refere-se à
+avaliação daquilo que o google analytics se propõe a medir de todo o universo identificado
+no monitoramento de mídias sociais.
+Para tanto, utilizou-se o google analytics para monitorar o blog Ver nas Unhas7
+durante o período de Julho de 2013 a Fevereiro de 2014 com o intuito de coletar
+informações sobre a audiência da página e avaliar quais métricas foram, de fato, foram
+coletadas pela ferramenta. A escolha do blog se deu por duas razões: (i) pelo fato do blog
+possuir certa influência no nicho de mercado de beleza e (ii) os administradores do blog
+permitiram o monitoramento do mesmo e compartilharam todos os dados coletados.
+Esta pesquisa é classificada como uma pesquisa empírica quanto aos meios, sem o
+controle ou interferência do pesquisador, e a busca pelas respostas é dada pela observação
+do fenômeno. Quanto aos fins esta pesquisa é classificada como uma pesquisa descritiva
+pelo objetivo de verificar o fenômeno e inferir relações com o meio a partir da observação
+(Michel, 2009).
+O método de pesquisa utilizado foi o comparativo dos dados coletados com a teoria
+90-9-1 de Nielsen (2006) para a parte quantitativa e das métricas coletadas pelo google
+7
+
+HTTP://vernasunhas.blogspot.com
+
+analyitcs com as categorias propostas por Broek (2011) e Silva (2013). A técnica de coleta
+de dados foi a observação intensiva direta a partir da própria ferramenta google analytics.
+Os passos realizados para esta pesquisa estão listados na FIGURA 1 a seguir:
+FIGURA 1 - Fluxo de execução da pesquisa
+
+Fonte: Os Autores (2014)
+
+Inicialmente foi realizada uma pesquisa bibliográfica a respeito do monitoramento
+de blogs e de sua investigação na Ciência da Informação. Parte considerável do material
+encontrado não são artigos de conferências e periódicos e sim publicações em meios
+especializados e livros. Outro fato relevante identificado é que grande parte do corpus
+relativo aos artigos acadêmicos são de áreas humanas como Marketing e Administração o
+que sugere uma lacuna de pesquisa do tema em Ciência da Informação.
+A seguir foi necessário escolher um blog que possuísse certo volume de postagens
+para que pudéssemos avaliar dados mais próximos daqueles blogs que possuem grande
+reputação. Além disso, todas as ferramentas gratuitas para o monitoramento exigem um
+acesso privado, o que foi gentilmente atendido pelos administradores do blog Ver nas
+Unhas. A escolha da ferramenta Google Analytics se deu por, além de ser gratuita, possuir
+uma comunidade de prática relevante, sendo uma das mais populares para realizar o
+monitoramento de blogs.
+Uma vez selecionada as ferramentas, foi necessário escolher, as métricas que seriam
+utilizadas nesta pesquisa. Foram consideradas aquelas que captaram pelo menos um evento
+no blog entre Julho de 2013 e Fevereiro de 2014. Após a escolha das métricas foi iniciado o
+processo de coleta de dados que foi realizada pela própria ferramenta.
+A análise dos dados foi realizada a partir das informações capturadas pela
+ferramenta. Para a parte quantitativa foi coletado o total de visitantes, e no blog foram
+
+
+coletados os comentários, curtidas e compartilhamentos para outras mídias sociais. Nesta
+etapa se fez necessário excluir os “visitantes” referentes a outras ferramentas de
+monitoramento tais como Scoop e Social Media Monitor que também monitoravam o blog.
+Para a parte qualitativa foi necessário identificar as métricas que tinham coletado no
+mínimo uma ocorrência do evento e classifica-la em uma das categorias de Broek (2011) ou
+Silva (2013).
+4 RESULTADOS
+Os dados demográficos do blog nos nove meses de coleta estão apresentados no
+QUADRO 1 a seguir.
+QUADRO 1 – Dados Demográficos do Blog
+Métrica
+
+Quantidade
+
+Número de Visitantes
+Número de Visitantes Únicos
+
+401
+
+Ferramentas de Monitoramento
+
+4
+
+Usuários que Comentaram,
+Compartilharam ou Curtiram.
+
+32
+
+Total de Lurkers
+
+365
+
+Número de Postagens
+
+88
+
+Tempo médio por Visualização
+
+2 Min. e 15 Seg.
+
+Visitas por Visitante
+
+9,3
+
+Visualizações de Páginas por Visitante
+
+3,2
+
+Visualização de Páginas
+
+9328
+
+Fonte: Os Autores (2014)
+
+Olhando para estes dados podemos perceber que a regra 90-9-1 se aplica a este blog
+ficando com a seguinte distribuição: Produtor de Conteúdo (0,2%), Pessoas que Comentam,
+Curtem e Compartilham (8%) e Lurkers (91,7%). Vale ressaltar que esse resultado não tem
+como objetivo generalizar como verdadeira a regra de Nielsen, mas apenas constatar que a
+mesma se mostra verdadeira nos 8 meses em que este blog foi avaliado.
+As métricas consideradas por este estudos estão listadas no Quadro 2 a seguir
+
+QUADRO 2 – Métricas identificadas pelo Google Analytics
+
+
+Métrica
+Visualização da
+Página
+Visualização da
+Página por usuários
+Visitas
+
+Visitantes Únicos
+Página de Entrada
+Página de Saída
+Duração da Visita
+Página Referência
+Taxa de Cliques
+Próxima Página
+Segunda Página
+Novos Visitantes
+Visitantes Antigos
+Visitas por
+Visitante
+Tempo para
+Retorno
+
+Descrição
+
+Classificação
+
+Quantas vezes a página foi visualizada
+
+Métrica Fria
+
+Quantos usuários visualizaram uma página
+
+Métrica Fria
+
+Quantas visitas uma página obteve. Uma visita é
+definida por um intervalo de 30 minutos, se um
+mesmo usuário visualiza a mesma página mais de
+uma vez em 30 minutos essa métrica só será
+incrementada uma vez.
+Quantos visitantes o site obteve, excluindo os
+retornos (visitantes repetidos).
+Qual página do blog os usuários costumam acessar
+primeira (chegada ao blog)
+Qual página do blog os usuários costumam acessar
+por último (saída no blog)
+Quanto tempo dura a visita
+Qual página o usuário estava imediatamente antes de
+chegar ao blog (quem indicou o blog)
+Quantos cliques, em um determinado hiperlink,
+foram dados por um usuário.
+Qual a página o usuário vai imediatamente após sair
+do blog.
+Quais páginas o usuário visitou dentro do blog
+Quantos visitantes são novos no blog
+Quantos visitantes retornaram ao blog
+Vistas por Visitante
+Quanto tempo um visitante demora a retornar
+
+Conversão
+Páginas visitadas a
+partir de buscas
+
+Quantas vezes uma ação foi realizada por um
+visitante
+Quantidade de Saídas do Blog (a partir de uma
+determinada página) pela quantidade de vezes em
+que ela foi visualizada.
+Porcentagem de Visitas que só visualizaram uma
+página.
+Quantas visualizações de uma página foram
+realizadas em uma visita.
+Quanto tempo uma visualização de uma página
+durou
+Taxa de usuários que se tornam assíduos no blog
+Quantas vezes uma página foi visitada a partir de
+uma busca interna no blog.
+
+Buscas usadas
+
+Textos de buscas utilizados
+
+Categorias de
+Busca
+
+Quais categorias de busca foram utilizadas
+
+Buscas Únicas
+
+Quantas dessas buscas foram únicas
+
+Frequência
+Taxa de Saída de
+Página
+Taxa de Rejeição
+Visualização por
+Visita
+Tempo na Página
+
+Métrica Fria
+
+Métrica Fria
+Métrica Fria
+Métrica Fria
+Métrica Fria
+Alcance
+Métrica Fria
+Influência/Alcance
+Métrica Fria
+Métrica Fria
+Métrica Fria
+Engajamento/Métrica
+Morna
+Engajamento
+Engajamento
+Métrica Fria
+Métrica Fria
+Métrica Fria
+Engajamento
+Métrica Quente
+Métrica Morna/
+Engajamento
+Métrica Morna/
+Engajamento
+Métrica Morna/
+Engajamento
+
+Fonte: Os Autores (2014)
+
+Existem outras métricas que não puderam ser avaliadas neste blog por se tratar de
+indicadores relativos a comércio eletrônico. Como o blog não promove vendas ou mesmo
+
+
+
+campanhas, não foi gerado eventos que acionassem essas métricas. Outras métricas
+referentes à estrutura do blog, como por exemplo, quantas páginas têm um blog, ou mesmo
+dados demográficos do usuário tais como localidade, tipo de navegador e etc., não se
+encaixaram em nenhuma das categorias selecionadas e foram desconsideradas.
+5 CONSIDERAÇÕES FINAIS
+A Internet vem recebendo uma crescente atenção por parte das empresas por se
+apresentar como mais um veículo de comunicação de massa, onde novas formas de
+divulgação se mostram necessárias devido a como este espaço é percebido pelos usuários.
+Neste contexto, as mídias sociais surgem como espaços de interação onde pessoas revelam,
+mesmo que de forma fragmentada, suas necessidades e anseios.
+Toda e qualquer ação realizada na Internet pode ser registrada e transformada em
+informação. Que, devidamente trabalhada, pode desvendar o comportamento e preferências
+dos usuários e assim, auxiliar as empresas, a identificar meios para se aproximar de
+potenciais clientes. Esse novo posicionamento, por parte das organizações, extrapola o
+conceito de relacionamento com o cliente e passa a modificar toda a estratégia de marketing
+e vendas exigindo uma gestão da informação também desses canais.
+O trabalho de web analytics, e especialmente o monitoramento de mídias sociais,
+está diretamente ligado ao entendimento das organizações relativas à sua presença online.
+Para tanto, se perfaz a necessidade de controlar também, em um fluxo de informação
+coerente, as informações da audiência e da reputação das empresas na Internet.
+Ao avaliar, de forma exploratória, o blog ver nas unhas utilizando a ferramenta
+google analytics, foi possível perceber, primeiramente, que a teoria de Nielsen, que sugere
+que cerca de 90% dos visitantes de uma página são “invisíveis”, também era um fato real
+naquele espaço. Muito mais do que certificar do fato, este número revela a importância de
+desvendar o comportamento de um visitante que praticamente não interage com o blog.
+Esse fato reforça a necessidade do monitoramento do blog enquanto espaço de
+interações com esses usuários que naquele momento se mostram invisíveis, mas que podem
+ser influenciados pelo conteúdo do blog, ou até mesmo se tornarem consumidores daqueles
+produtos e serviços.
+Nisso a ferramenta google analytics se mostra deficiente, uma vez que as métricas
+apresentadas são meramente quantitativas, desprovidas de significados e principalmente
+sem nenhuma conotação de contexto. O monitoramento de mídias sociais hoje está voltado
+para buscar cinco “tipos” de informação entre a interação com os usuários: (i) Informações
+quantitativas relativas à interação do usuário com a página (métricas frias), (ii)
+
+Engajamento dos usuários com a marca, (iii) Influência da marca entre os usuários, (iv)
+alcance do canal de comunicação e (v) Capacidade de convencer os usuários a consumir a
+marca (conversão). O google analytics auxilia apenas na obtenção das métricas
+quantitativas não devendo assim ser usado como única fonte de informação sobre a
+interação de usuários e canais online.
+Não há dúvidas que as métricas frias sejam relevantes, pois elas indicam cenários,
+tendências e anomalias que são identificadas e auxiliam organizações a modificar as suas
+estratégias. No entanto, ainda há uma visão, de certa forma enganosa, em que se acredita
+que apenas as métricas quantitativas são capazes de demonstrar fielmente a realidade da
+popularidade e consumo de uma página, sendo assim, creem que quanto maior a quantidade
+de números (visualização de páginas, visitantes únicos), mais bem colocada está a presença
+online da página analisada. Isso pode ser visto em artigos científicos onde bibliotecas que
+avaliam sua presença online baseada apenas no google analytics e diversos artigos da
+indústria apontando casos de sucesso na utilização da Internet.
+Trabalhar com monitoramento de mídias sociais, não se resume apenas em utilizar
+uma ferramenta de gerenciamento de tráfego para saber a quantidade de visitas e usuários
+únicos que entram em uma página, mas sim procurar formas de efetuar análises
+comparativas, qualificar o tráfego no ponto de vista da conversão e métricas quentes,
+entender os principais caminhos utilizados pelos usuários dentro de seus sites/blogs e
+principalmente saber o propósito pelo qual sua instituição está na se posicionando na
+Internet.
+O monitoramento de blogs não é capaz, sozinho, de apontar o posicionamento
+online de uma empresa ou marca. Entender este posicionamento se torna importante para
+uma companhia por que uma parte considerável de seu mercado consumidor está emitindo
+opiniões espontâneas sobre a marca/produto/serviço que podem influenciar outros
+potenciais consumidores e dirigir ações de marketing neste nicho pode ser mais efetivo do
+que ações realizadas em outros meios de comunicação. Então este monitoramento de blogs
+não consegue capturar o sentimento dos usuários e, em muitos casos, o quanto as suas
+opiniões estão circulando na Internet. Por isso, outras técnicas/ferramentas que são capazes
+de analisar as métricas quentes e mornas devem ser utilizadas em conjunto do
+monitoramento do blog.
+Este nicho de mercado abre mais uma porta para profissionais da informação, que
+necessita identificar quais informações são necessárias para entender o status atual de uma
+empresa na Internet, identificar as fontes de informação que capturem estes dados, elaborar
+
+meios para transformar essa informação desestruturada e distribuída em conhecimento com
+detalhes o suficiente para o apoio a tomada de decisão, decidir políticas e fluxos de
+informação do relacionamento online com o cliente e tantas outras competências que devem
+fazer parte da formação de profissionais da informação.
+5.1 Trabalhos futuros
+Esta pesquisa, por se tratar de uma pesquisa ainda embrionária, possui um conjunto
+de lacunas que podem ser elucidadas a partir de pesquisas futuras. O primeiro trabalho
+futuro é utilizar outras ferramentas que coletem informações referentes às outras atividades
+relativas ao monitoramento de mídias sociais, e a partir disso, sugerir um portfólio de
+ferramentas que supra todas as necessidades informacionais relativas ao monitoramento de
+mídias sociais.
+Outro trabalho futuro sugerido é elaboração de referências para relacionar os dados
+coletados para finalidades diferentes no monitoramento. Por exemplo, podemos descobrir
+que por uma análise de sentimento (engajamento) os usuários estão insatisfeitos com a
+marca e com isso o número de visitas cai (métrica fria), ou por causa de um evento negativo
+(engajamento) a marca atinja usuários que não tinham acesso à mesma (alcance). Então
+relacionar estas métricas se mostra como outro desafio da área.
+Outro trabalho futuro é identificar quais competências o profissional da informação
+deve possuir para trabalhar com este monitoramento de mídias sociais uma vez que este
+mercado é amplamente ocupado por profissionais de marketing e comunicação.
+Um último trabalho futuro sugerido é mensurar o quanto este tipo de monitoramento
+traz de vantagem competitiva para empresas. É uma avaliação do retorno de investimento
+não das ações online em si, mas sim, de conhecer estas informações e avaliar o quão
+benéfico é interagir na internet com potenciais consumidores.

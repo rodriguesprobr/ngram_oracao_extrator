@@ -1,0 +1,552 @@
+
+Comunicação Oral
+ORGANIZAÇÃO DA INFORMAÇÃO NO SISTEMA DE CONTROLE DE
+MANUTENÇÃO DA UNIVERSIDADE ESTADUAL DE LONDRINA
+
+Resumo
+A pesquisa investiga a organização da informação e o Sistema de Controle de Manutenção da
+Universidade Estadual de Londrina, com o objetivo de analisar o sistema à luz da organização
+da informação e propor a organização das informações de solicitação de serviço, de forma a
+contribuir com a apropriação da informação por seus usuários. Para alcançar este objetivo,
+indica e caracteriza as informações registradas pelos usuários no formulário de entrada de
+dados do usuário da solicitação de serviços no Sistema de Controle de Manutenção; identifica
+as ocorrências de ambiguidade e repetição no conteúdo das informações já registradas no
+campo de descrição da solicitação de serviços; propõe a organização e representação
+adequada do conteúdo a ser solicitado e registrado pelo usuário na solicitação de serviço;
+sugere um modelo de inserção de dados pelo usuário conforme padrão ANSI/NISO. O estudo
+teve caráter exploratório e para sua execução foram utilizadas pesquisa bibliográfica e
+documental. Para análise dos dados foi utilizada a pesquisa documental em fonte primária.
+Propõe a utilização de vocabulário controlado e uma representação gráfica de um sistema
+protótipo. Entre as considerações finais estabelece a aplicação da organização da informação
+no desenvolvimento de um sistema voltado para o ambiente web e fornece sugestões para
+outras demandas do sistema.
+Palavras-chave: Organização da Informação. Sistema de Controle de Manutenção. Ciclo da
+Informação. Vocabulário Controlado.
+1 INTRODUÇÃO
+O advento e expansão da Tecnologia da Informação e Comunicação (TIC) causou um
+aumento exponencial do volume de informações disponíveis. Nesse contexto a Ciência da
+Informação (CI) tem empenhado esforços de pesquisa para o desenvolvimento teórico e
+aplicado que, por meio da TIC, maximize o uso e disseminação da informação.
+Ao investigar as propriedades e o comportamento da informação, os fluxos e os meios
+de processá-la, a CI propõe a sua organização, armazenamento, recuperação e disseminação, e
+tem como premissa maior, garantir o acesso do usuário aos conteúdos informacionais no
+menor tempo possível, com o mínimo custo. Nesse sentido, manifesta-se como uma forma de
+comunicação entre o usuário e os estoques informacionais, expondo o conteúdo neles
+inseridos de forma condensada. Os serviços de informação têm nos computadores a sua
+principal base de trabalho. Sendo assim, é necessária a disponibilidade dos sistemas
+operacionais, sistemas de informação, softwares, conexões de rede entre outros para que se
+desenvolva um trabalho de longo alcance, relevante e de qualidade.
+Partindo desses pressupostos, a presente pesquisa buscou na Assessoria de Tecnologia
+de Informação (ATI) da Universidade Estadual de Londrina (UEL) o Sistema de Controle de
+Manutenção (SCM) para avalia-lo do ponto de vista da organização da informação proposta
+pela CI. O SCM é um sistema que atende à Diretoria de Suporte ao Usuário (DSU) com o
+propósito de registrar e contabilizar solicitações feitas por usuários para manutenção em
+computadores. O número de registros tem um crescimento proporcional ao acesso e utilização
+da tecnologia por parte dos servidores da UEL, número que no ano de 2010 (recorte utilizado
+para a pesquisa) foi de 3.516.
+Choo (2006) coloca a informação como componente intrínseco em tudo o que uma
+organização faz, sendo necessária a compreensão dos processos organizacionais e humanos
+pelos quais a informação se transforma em três sentidos: percepção, conhecimento e ação,
+para que percebam a importância de suas fontes e tecnologias de informação.
+Nesse sentido, busca-se conhecer o SCM para entender como a informação técnica é
+utilizada e organizada, observando se há contribuição no uso estratégico das informações para
+o aprendizado na UEL.
+Entende-se que, em um sistema voltado para a gestão da informação, o fluxo da
+informação, ou seja, da descrição do problema solicitado até chegar ao atendimento
+executado, tem informações valiosas que podem contribuir para que ocorra o ciclo da
+informação e, assim, permitir o aprendizado promovendo a geração de novos conhecimentos.
+
+Foca-se, nesta pesquisa, o início do ciclo onde o usuário faz a descrição do seu
+problema, comunicando a sua necessidade, que será analisada pela diretoria e distribuída aos
+técnicos. Essa comunicação é feita em linguagem natural, ficando, assim, registrada em um
+formato complexo para ser indexado e recuperado pelo sistema, utilizando-se a descrição
+como campo de busca. Entende-se o termo linguagem natural, definido na ANSI/NISO
+Z39.19-2005 como aquela utilizada pelo homem para comunicação verbal. É aquela que surge
+e se desenvolve a partir de uma capacidade natural.
+O problema que fundamenta esta pesquisa baseia-se, então, na seguinte questão: Como
+aplicar a Organização da Informação de forma a tornar as informações do SCM relevantes
+para seus usuários?
+Entende-se que de posse de uma informação organizada sobre uma solicitação de
+serviço para resolução de problemas técnicos, é possível capacitar um técnico para resolução
+de novos problemas ou mesmo dispor de informação consistente que permita ao usuário fazer
+uma intervenção e solucionar problemas por si mesmo.
+Justifica-se a temática apresentada em razão de as informações de usuário do SCM ser
+uma comunicação registrada em campo livre para linguagem natural, ou seja, não é feito
+controle de vocabulário nem mesmo a organização dessas informações, para que possam ser
+indexadas ou recuperadas e contribuam para alavancar o conhecimento por meio dos registros
+no sistema. Quando é feita uma solicitação, o usuário apresenta informações do problema,
+conforme os valores e a linguagem de seu contexto e conhecimento. Ao receber as
+informações das necessidades do usuário, o setor responsável da DSU, por meio de suas
+chefias, analisa os pedidos e distribui aos técnicos que tem disponibilidade, ou melhor
+condição de atender à solicitação e resolver o problema, conforme entendimento da diretoria a
+respeito do conhecimento do técnico em relação ao caso.
+Feita uma prévia avaliação, empírica, do problema no SCM e justificativas
+argumentadas, delineou-se como objetivo do estudo analisar o sistema SCM à luz da
+organização da informação para propor melhorias que tornem relevantes as informações
+registradas pelos usuários e contribua com o fluxo do ambiente informacional.
+Para alcançar essa meta buscou-se os seguintes objetivos específicos:
+a)
+
+indicar e caracterizar as informações registradas pelos usuários no formulário
+
+de entrada de dados do usuário na solicitação de serviços do SCM;
+b)
+
+identificar as ocorrências de ambiguidades e repetições no conteúdo das
+
+informações registradas no campo de descrição de solicitação de serviços;
+
+c)
+
+propor a organização e representação adequada do conteúdo a ser solicitado e
+
+registrado pelo usuário na solicitação de serviço.
+d)
+
+sugerir um modelo de inserção de dados pelo usuário, seguindo padrão de
+
+organização da informação.
+2 O SISTEMA DE CONTROLE DE MANUTENÇÃO
+O Sistema de Controle de Manutenção está incluso em um conjunto de sistemas
+chamado de Sistema UEL. Criado em 2005, o SCM foi desenvolvido na plataforma clienteservidor utilizando o Oracle, que exige a instalação de software cliente na máquina de cada
+usuário para que ele tenha acesso ao sistema.
+Desenvolvido em plataforma cliente-servidor, tem um acesso restrito, considerando o
+número de funcionários da Universidade. Atende, atualmente, a três órgãos executantes:
+Prefeitura do Campus Universitário (PCU); ATI; Divisão de Manutenção Predial e
+Equipamentos - Hospital Universitário (DMPE).
+O Sistema de Controle de Manutenção (SCM) foi desenvolvido a partir de um
+processo feito em papel e atualmente faz tão somente o papel de controle estatístico de
+solicitações de serviço, não permitindo que os usuários usufruam de valiosas informações
+que, organizadas, poderiam agregar valor e conhecimento.
+O SCM foi desenvolvido para atender à crescente demanda de solicitações e controlar
+o fluxo de trabalho da DSU. O sistema hoje está instalado e disponível a 783 usuários.
+Apresenta ao usuário um formulário para registro de solicitações de serviço (figura 1),
+no qual observa-se as mesmas informações do formulário em papel utilizado anteriormente.
+Os dados de usuário são recuperados em banco de dados, mas o campo de descrição do
+serviço é livre para que o usuário registre sua necessidade, o que permite a ocorrência de
+erros, múltiplas palavras-chave para um mesmo problema e dificuldade para a gestão da
+informação.
+
+Figura 1 - Tela de Cadastro de Solicitação de Serviço
+
+Fonte: Sistema de Controle de Manutenção (SCM).
+3 INFORMAÇÃO: CICLO E ORGANIZAÇÃO
+Para compreender a importância da informação na sociedade atual e a necessidade de
+gestão da informação, refletiu-se sobre alguns fatos que levaram a esta condição de sociedade
+da informação e fez-se uma pesquisa bibliográfica sobre o ciclo da informação e sua
+organização.
+Diferentes enfoques levaram o processamento da informação para Ciência da
+Informação, decorrente da demanda social de grande impacto para os indivíduos e
+organizações e a necessidade de aprofundamento em estudos da área. A Ciência da
+Informação tem, na informação, seu objeto de estudo e analisa seu fluxo, produção,
+organização, armazenamento, disseminação e uso.
+Essas informações são resultados de dados informacionais interpretados e
+transformados em conhecimento. O ato de significar os dados e transformá-lo em informação
+útil promove a geração de conhecimento de valor social e econômico.
+Segundo Araújo (2002), é a partir de dados e de significação, julgamentos e
+interpretações que se formula a informação. Esta por sua vez, mediante a ação do indivíduo,
+agrega valor e transforma-se em insumo básico e/ou recurso estratégico, possibilitando que o
+indivíduo alcance o conhecimento e tome decisões.
+É possível, ainda, que se forme novo ciclo de geração de conhecimento, retomando-se
+o ponto inicial (os dados) ou informações obtidas em ciclos anteriores que integram a base do
+conhecimento da organização ou dos indivíduos. Forma-se, então, um patrimônio intangível,
+que constitui importante recurso estratégico.
+
+Os dados constituem, pois, o elemento de partida no ciclo de formação do
+conhecimento. Nada significam antes de analisados, julgados e interpretados dentro de
+determinado contexto.
+Em um sistema de informação, o ciclo da informação se repete na mesma estrutura
+(construção, comunicação e uso) para garantir o status de ciclo, gerador de conhecimento. As
+características dos ciclos informacionais são outros ciclos: o ciclo produtivo e o ciclo
+documentário, compreendido dentro do ciclo informacional. Esses ciclos possuem processos
+de geração, identificação, seleção, aquisição e disseminação da informação.
+Para Le Coadic (2004), a comunicação é parte responsável e intermediária do ciclo de
+informação que não se limita a uma relação bilateral como no modo convencional, de emissor
+e receptor, e sim de troca de informações entre pessoas de maneira formal ou informal,
+situação referente ao estudo proposto em que o usuário comunica suas necessidades, mas elas
+não são aproveitadas em toda sua potencialidade.
+O presente estudo preocupa-se em fundamentar o uso da informação para melhor
+gestão e aproveitamento das informações no setor de Suporte ao Usuário por meio da
+aplicação de OI no seu sistema de controle de manutenção.
+3.1 ORGANIZAÇÃO DA INFORMAÇÃO
+Informação é definida por Haghirian (2007) como resultado de colocar dados dentro
+de um contexto significativo, muitas vezes sob a forma de uma mensagem.
+Para Taylor (2007) informação é um conjunto de dados contextualizados que podem
+ser analisados e aplicados em certas circunstâncias para tomada de decisão. Partindo desses
+conceitos de informação, entende-se porque a organização da informação é um processo
+importante na gestão da informação.
+Para Victorino e Medeiros (2009, p. 8), o objetivo da OI “[...] é dar suporte ao fluxo de
+tratamento e recuperação dos objetos informacionais estruturados, semiestruturados e não
+estruturados nas organizações”.
+De acordo com Taylor e Joudrey (2009), a psicologia diz que o cérebro do bebê
+organiza imagens em categorias como rostos e alimentos; organizar e encontrar são uma
+brincadeira para as crianças que, quando crescem, desenvolvem maiores habilidades
+cognitivas para categorizar, reconhecer formas, ordenar, relacionar, criar grupos de coisas e
+ideias. A organização é uma necessidade básica do ser humano.
+Organizamos a informação, segundo Taylor e Joudrey (2009), para que outros possam
+encontrar e ler ou absorver e utilizá-la para agregar a sua própria reserva de conhecimento. A
+
+organização da informação ocorre em diferentes contextos, como: bibliotecas; arquivos;
+museus; Internet; bibliotecas e arquivos digitais; arquitetura da informação; indexação e
+abstração; gestão de registros; gestão do conhecimento.
+Bräscher e Café (2008) expõem que o objetivo do processo de organização da
+informação é possibilitar o acesso ao conhecimento contido na informação. Então pode-se
+dizer que a organização da informação é um processo que permite criar um ambiente
+informacional de fácil acesso à informação.
+Dentre os diversos processos de organização de informação, destaca-se, nesta
+pesquisa, o Vocabulário Controlado: uma lista ou uma base de dados de termos sobre o
+assunto em que todos os termos ou frases, representando um conceito, são agrupados.
+3.1.1 VOCABULÁRIO CONTROLADO
+Segundo Lancaster (2004), vocabulário controlado é "essencialmente uma lista de
+termos autorizados."
+A norma ANSI/NISO Z39.19-2005, que traz diretrizes para construção, formato e
+gestão de vocabulários controlados monolinguístico, faz a seguinte definição de Vocabulário
+Controlado:
+Uma lista de termos que foi enumerada explicitamente. Esta lista é controlada e
+disponibilizada por uma autoridade registradora. Todos os termos em um vocabulário
+controlado devem ter uma definição não ambígua e não redundante. […] (ANSI/NISO)
+Vocabulários controlados permitem mostrar diferentes tipos de relacionamento entre
+os termos que contêm e, conforme sua complexidade e requisitos de relacionamento que
+precisa acomodar dividem-se em quatro tipos: lista, anel de sinônimos, taxonomia e tesauro
+Figura 2 – Complexidade estrutural entre vocabulários controlados.
+
+Fonte: ANSI/NISO (2005, tradução nossa).
+
+A figura 2 mostra os tipos de vocabulário controlado segundo seu grau de
+complexidade e destaca os controles que podem ser feitos com sua utilização.
+Por ter menor complexidade, o que favorece à implantação no sistema, e por resolver a
+questão de controle de ambiguidade, elegeu-se a Lista de Termos como uma solução em
+organização da informação para o sistema SCM.
+Lista, segundo a ANSI/NISO (2005), é um conjunto limitado de termos organizados
+em uma lista simples em ordem alfabética ou lógica evidenciando um domínio. São utilizadas
+para descrever aspectos de conteúdo de objetos ou entidades que têm um número limitado de
+possibilidades. Para Bräscher (2002) Ao criar uma lista de termos, pode-se controlar a
+ambiguidade. Entende-se, ambiguidade como uma expressão em linguagem natural que
+possui vários significados distintos, podendo ser compreendida de diversas maneiras por um
+receptor.
+Ao tratar de vocabulário controlado, não se pode deixar de lado a questão da
+indexação. Lancaster (2004) entende que a lista de termos serve como ponto de acesso para
+recuperação e localização na busca de um documento específico. Ao fazer uma busca m base
+de dados busca-se encontrar documentos úteis para satisfazer uma necessidade de informação
+evitando itens inúteis.
+Lancaster (2004) define dois tipos de indexação: a indexação seletiva, que apresenta
+uma indicação geral do tema, não ultrapassando cinco termos (nível de acesso limitado) e a
+indexação exaustiva, que proporciona uma indicação mais específica, criando um maior
+número de pontos de acesso.
+4 PROCEDIMENTOS, ANÁLISE E RESULTADOS
+Este estudo objetivou analisar o Sistema de Controle de Manutenção da UEL, à luz da
+Organização da Informação, para propor melhorias no procedimento de registros do sistema e
+tornar relevantes as informações, de maneira a contribuírem com a gestão de informação dos
+serviços atendidos neste ambiente informacional.
+4.1. PROCEDIMENTOS METODOLÓGICOS
+Partindo de uma abordagem qualitativa, foram identificadas e analisadas as
+informações registradas pelos usuários no SCM por meio de uma abordagem qualitativa, que,
+segundo Creswell (2007), é feita em cenários naturais, onde ocorrem o comportamento
+humano e os fatos. Entende-se que, embora armazenado em formato digital, por permitir o
+
+uso de linguagem natural, os registros do sistema como um cenário natural que registra o
+comportamento do usuário ao descrever sua necessidade.
+O fenômeno estudado foi tratado de forma qualitativa, não se utilizou de
+procedimentos estatísticos para análise do problema. Os dados quantitativos serviram de
+referência para identificar o problema e construir a proposta de lista de vocabulário
+controlado. A investigação foi desenvolvida sob a ótica construtivista, a partir de informações
+do problema relatado pelo usuário nos documentos de solicitação de serviço e das inferências
+entre a relação da solicitação com a real necessidade. Foi realizada uma leitura interpretativa
+das descrições de serviço.
+Quanto aos objetivos, esta pesquisa se enquadra como exploratória. Conforme Gil
+(2008) deve-se priorizar uma maior familiaridade com o problema, com a intenção de torná-lo
+mais explícito ou de construir hipóteses. Tem como objetivo principal o aprimoramento de
+ideias ou a descoberta de intuições. Já quanto aos procedimentos técnicos adotados, foram
+realizadas pesquisas bibliográfica e documental.
+Segundo Moreira (2009), a pesquisa documental compreende a identificação,
+verificação e apreciação de documentos para determinado fim. É qualitativa, pois verifica o
+teor, o conteúdo do material selecionado para análise.
+Optou-se pela análise documental, porque “o pesquisador possui […] informação
+suficiente para guiá-lo na consulta a determinadas bases documentais”. (MOREIRA, 2009)
+Trabalhou-se com fontes primárias, utilizando-se documentos internos da DSU.
+Moreira (2009) afirma que:
+Ainda que exista um objeto, ao qual se aplica um método para explorá-lo na dimensão
+pretendida, a disposição dos documentos e a legibilidade das referências são elementos que
+interferem no processo da coleta de dados e que, de alguma forma, afetam mais tarde a análise
+crítica do material documental.
+Para evitar interferência na análise documental e não haver risco de alteração nas
+informações do sistema, durante o processo de análise, elegeu-se os relatórios referentes ao
+ano de 2010 por já terem sido encerrados, filtrando-se apenas as solicitações de serviço já
+concluídas.
+4.2 ANÁLISE E APRESENTAÇÃO DE RESULTADOS
+Para acionar os serviços da DSU o usuário (docentes e funcionários administrativos)
+precisa fazer uma solicitação de serviço. A solicitação de serviço, registrada pelos usuários
+era feita em papel, em três vias e o mesmo tramitava pelas secretarias até chegar à DSU.
+
+Atualmente apenas 783 dos 5.344 usuários tem acesso a ele, sua contribuição ao
+atendimento é restrita considerando o número de funcionários da instituição, e mesmo com
+este número restrito, no ano de 2010 foram feitas 3.516 solicitações.
+Para atender à demanda de solicitações e controlar o fluxo de trabalho, a DSU
+solicitou junto à DDS um sistema informatizado. Desenvolveu-se assim, por meio da DDS, o
+SCM, para atender à demanda de controle do fluxo de trabalho da DSU.
+4.2.1 ANÁLISE DOCUMENTAL
+A partir de semelhanças e diferenças ocorre a análise documental. Para Moreira
+(2009), “uma forma de investigação que consiste em um conjunto de operações intelectuais
+que têm como objetivo descrever e representar os documentos de uma maneira unificada e
+sistemática para facilitar a sua recuperação”.
+O campo DESCRIÇÃO é utilizado em seus 255 caracteres para que o usuário descreva
+o problema que ocorre em sua máquina, podendo utilizar-se de caracteres alfanuméricos. Este
+campo é registrado em banco de dados (BD), a partir do qual foi gerado o relatório que é
+utilizado para avaliar o atendimento da DSU, bem como documento de nossa análise. Buscase, assim, contextualizar os fatos e as situações que ocorrem com os usuários para sugerir
+novas perspectivas para o sistema na criação, comunicação e uso das informações em outro
+ambiente informacional, respeitando a real necessidade do usuário.
+Tomou-se como objeto de análise a entrada de dados registrada e estabeleceu-se o
+relatório de solicitações para análise com base nas solicitações datadas do ano de 2010, com
+os seguintes parâmetros:
+
+
+
+
+
+
+
+Tipo: Relatório
+Agrupamento: Data de solicitação
+Início: 01/01/2010
+Final: 31/12/2010
+Situação: Concluída
+Setor Executante: Divisão de Suporte Técnico ao Usuário
+
+Reforça-se que o período de 2010 foi escolhido, para garantir a confiabilidade da
+referência, por ser um ano já concluso onde não se tem o risco de haver alterações. A análise
+do relatório do período de 2010 revela a ocorrência de 3.516 solicitações de serviço, feitas por
+servidores, com problemas relacionados à utilização de microcomputadores da UEL. Salientase que as solicitações, direcionadas à Diretoria de Suporte ao Usuário, referem-se tão somente
+a softwares (sistemas operacionais, softwares de segurança, sistemas próprios da UEL,
+sistemas de terceiros) e acesso a rede local e Internet.
+
+Fez-se uma cópia das informações do campo descrição para o software Microsoft
+Office - Excel, no qual, utilizando-se das seguintes ferramentas, fez-se a análise: classificar;
+remover duplicatas (para encontrar solicitações iguais), localizar.
+Ao remover duplicatas, as repetições e as solicitações que representam o mesmo
+pedido foram identificadas (entende-se aqui pedidos iguais feitos por diferentes usuários).
+Além disso, no campo descrição (informação do usuário sobre o problema em linguagem
+natural), constatou-se que 617 (17,5%) dessas solicitações de serviços utilizaram palavras
+iguais, mais de uma vez, para registro do problema do usuário, como exemplificado na tabela 1.
+Tabela 1 - Exemplo de solicitações iguais
+
+Fonte: Sistema de Controle de Manutenção (SCM).
+Constatou-se, então, que 2.899 (82,5%) solicitações se diferenciam em alguma
+palavra, termo ou erro de escrita na sua descrição em linguagem natural. Verificam-se, na
+tabela 3, exemplos que retratam essa ocorrência em solicitações onde o pedido é o mesmo,
+mas a descrição se diferencia em alguns termos.
+Tabela 2 - Exemplo de solicitações semelhantes
+
+Fonte: Sistema de Controle de Manutenção (SCM).
+Com os exemplos da tabela 2, observa-se que nas seis descrições acima, encontra-se a
+mesma necessidade, ou seja, a verificação do computador que não está ligando. Assim, por
+meio da linguagem natural, a gestão da informação é dificultada e não há organização da
+informação, gerando problema de múltiplas palavras-chave para uma única necessidade e
+ruído na recuperação automatizada.
+Para Davenport (1998, p. 125), esse problema de definições múltiplas para palavraschave de informação ocorre quando um grupo procura criar listas de informações para serem
+utilizadas por terceiros, já que sempre se tem a questão de manter o significado.
+
+Considerando o fato de haver múltiplas definições para apenas uma palavra-chave,
+fizeram-se algumas buscas por palavras chave, ignorando prefixos e sufixos, visando observar
+a recorrência de partes dos termos mais utilizados, conforme conhecimento prévio do
+pesquisador. Foram selecionados apenas seis termos, dentre as ocorrências observadas, apenas
+para demonstrar o que ocorre no uso da linguagem natural.
+Como o sistema tem por objetivo a execução de serviços, buscamos então verbos mais
+utilizados (considerando todos os prefixos e sufixos), dos quais selecionamos aqui quatro
+exemplos mais comuns.
+Para o grupo de técnicos que precisam solucionar o problema, não é difícil entender os
+pedidos, mas para prover gestão da informação automatizada, faz-se necessário o
+desenvolvimento de um sistema complexo que faça o processamento da linguagem natural
+para agrupar e avaliar os serviços que ocorrem. Portanto, considerou-se que, adotar termos
+mais comuns com base nas solicitações já existentes, inicialmente é possível propor um
+vocabulário controlado. Porém, o sistema deverá dispor de uma opção para inclusão de novos
+termos que seja avaliado sistematicamente e inserido na lista se for detectada a necessidade.
+4.2.2 RESULTADOS OBTIDOS
+O SCM tem por objetivo principal auxiliar o fluxo de trabalho na DSU. No entanto,
+percebe-se que suas informações não são de fácil recuperação. Os usuários e técnicos de
+informática poderiam se utilizar das informações das ocorrências para satisfazer diferentes
+necessidades de informação. Para fazê-lo, segundo Lancaster (2004), essa necessidade de
+informação deve ser convertida em uma "estratégia de busca", porque pode ser simples como
+um índice de termos ou complexa com a combinação de termos.
+Atualmente as solicitações são listadas apenas por número de solicitação, não
+permitindo que o usuário realize buscas por descrição do serviço. A partir da análise
+realizada, entende-se que por meio de uma lista de termos podemos contribuir para que o
+sistema SCM melhore a gestão da informação e desta forma crie-se uma opção de busca de
+informações para a solução dos problemas em meio a outros que já foram executados.
+Na análise dos relatórios, foram encontrados poucos termos utilizados, demonstrando
+que existem muitas solicitações que têm o mesmo significado. Entre as palavras listadas na
+tabela 6, por exemplo, está implícita em 1.175 solicitações, a palavra instalar (e suas variações
+de prefixo e sufixo) que, escrita em formas diferentes, impossibilita que, por meio de uma
+simples indexação, seja possível recuperar a informação de quantas vezes foi necessário
+executar uma instalação.
+
+Na análise dos casos de palavras-chave que aparecem no relatório identificou-se que,
+por meio de três questões básicas, que podem ser respondidas com listas de termos, a
+construção das informações de solicitação pode melhorar permitindo sua gestão. Com o uso
+de vocabulário controlado, é possível colocar termos que respondam a três perguntas:
+Tabela 4 - Sugestão de perguntas e termos.
+
+Fonte: o autor
+4.2.3 PROPOSTA PARA A ORGANIZAÇÃO DA INFORMAÇÃO NO SISTEMA
+SCM.
+Partindo-se do tema de pesquisa, Organização da Informação no Sistema de Controle
+de Manutenção da Universidade Estadual de Londrina, e considerando a gestão da informação
+nesse sistema informatizado, sugere-se trabalhar com listas de termos em vocabulário
+controlado, de forma a permitir que o sistema recupere informações importantes nesse
+ambiente informacional ao criar uma linguagem com definições unívocas, mantendo o
+significado do serviço solicitado.
+Para uma representação adequada do conteúdo da solicitação, sugere-se utilizar o
+vocabulário controlado. Para fazê-lo, devem ser seguidos os padrões definidos pelas diretrizes
+para construção, formato e gestão de vocabulários controlados monolíngues propostos na
+American National Standards Institute (ANSI/NISO) Z39.19-2005. Sob essa perspectiva,
+destacam-se os cinco propósitos para que serve o vocabulário controlado:
+1.
+
+Tradução: prover meios para converter a linguagem natural de usuários e
+
+técnicos em um vocabulário que pode ser usado para indexação e recuperação.
+2.
+
+Consistência: promover uniformidade de atribuição e formato de termos.
+
+3.
+
+Indicação de relacionamentos: indicar relacionamento semântico entre termos.
+
+4.
+
+Etiqueta e navegação: prover hierarquia clara e consistente em um sistema de
+
+navegação para auxiliar o usuário ou técnico a localizar objetos de conteúdo desejado.
+5.
+
+Recuperação: servir como auxílio na busca e localização de objetos de
+
+conteúdo (AMERICAN NATIONAL STANDARDS INSTITUTE, 2005, tradução nossa).
+
+Para um projeto de vocabulário controlado, deve-se considerar o princípio de eliminar
+ambiguidade, controlar sinônimos, estabelecer relacionamento entre termos onde for
+apropriado, testar e validar os termos.
+Como esta pesquisa observa apenas o sistema, utilizando-se apenas de fonte primária e
+sem interação com seus usuários, as sugestões apresentadas foram feitas com referência no
+modelo ANSI/NISO Z39.19-2005. Propõe-se, também, que em uma nova versão do sistema
+se utilize da Web como plataforma.
+Considerando que os sistemas de informação têm uma intensa interação com seu
+ambiente, a proposta de trabalhar em um novo sistema SCM com enfoque na organização da
+informação visa o ponto central, o usuário do serviço para que o atendimento seja realizado
+com qualidade e eficiência.
+Para conseguir qualidade, eficácia e efetividade em seus serviços e produtos, os
+sistemas informacionais devem reduzir a incerteza e aumentar a informação sobre a
+ambiência que os envolve, particularmente nos insumos que recebem (TARAPANOFF, 1995.
+p. 14).
+A informação do usuário no SCM leva a uma ação que responda à solução do
+problema, ou seja, requer uma tomada de decisão que retorne com qualidade, eficácia e
+efetividade. Para que isto ocorra é preciso seguir alguns passos no processo decisório.
+Por estar descrito em linguagem natural, o técnico não tem como recuperar para
+identificar e selecionar, automaticamente, os problemas dos usuários e, assim, facilitar a
+solução do problema, optando por fazer melhor a distribuição e execução dos serviços.
+O Controle de vocabulário é utilizado para melhorar o armazenamento e recuperação
+de informação em sistemas, sistemas de navegação Web, e outros ambientes que buscam
+identificar e localizar conteúdo por meio de alguma descrição utilizando a linguagem. O foco
+primário do controle de vocabulário é alcançar consistência na descrição do conteúdo de
+objetos e facilitar sua recuperação.
+Com a análise documental do relatório identificou-se que as solicitações da amostra
+podem ser organizadas em termos específicos que, delimitados em uma lista, podem permitir
+uma automatização da seleção e caracterização de um domínio de problemas que ocorrem
+com mais frequência.
+Buscamos então, seguindo a proposta de se fazer três perguntas, termos recorrentes
+nos documentos de 2010 que pudesse integrar uma primeira lista de termos de serviços. A
+seguir, as três tabelas originadas desta busca.
+
+Por ser uma pesquisa que observou uma parte do sistema, as sugestões aqui
+enumeradas são para fins de incentivar trabalhos futuros e que em um novo sistema, a
+organização da informação passe a ser considerada.
+Conforme tabelas de termos propostas, para trazer uma prévia de como ficaria o
+sistema proposto, utilizou-se do software Axure para simular entradas de solicitação de
+serviço com vocabulário controlado. O protótipo está disponível em: http://goo.gl/Oc3N4
+Observando as funções descritas por Taylor e Joudrey (2009) no contexto de sistemas
+de registro, tem-se com sugestão para organização da informação do SCM implantar os
+seguintes procedimentos:
+•
+
+analisar sistematicamente os registros de solicitação de serviço, observando o
+
+escopo das necessidades e a necessidade de inserir novos termos;
+•
+
+organizar os registros de execução de forma que estas informações contribuam
+
+para resolução de problemas semelhantes;
+•
+
+funcionar rotineiramente como fonte primária de informação para ações de
+
+atendimento;
+•
+
+prover acesso dos solicitantes aos registros de execução relevantes para a
+
+solução do problema descrito.
+5 CONSIDERAÇÕES FINAIS
+A Universidade Estadual de Londrina, por meio da Assessoria de Tecnologia da
+Informação, tem desenvolvido diversos sistemas de informação para automatizar rotinas
+diversas.
+O Sistema de Controle de Manutenção, desenvolvido para o controle de fluxo de
+trabalho no atendimento técnico ao usuário, e por registrar relevantes informações a respeito
+de necessidades do usuário e soluções técnicas, justificou-se o estudo da organização da
+informação em relação a este sistema, para contribuir na melhoria deste ambiente
+informacional.
+A proposta inicial desta pesquisa sustenta-se na ideia de contribuir com o
+desenvolvimento de um sistema de controle de manutenção na web para que busque, além da
+tecnologia, a gestão da informação utilizando-se da organização da informação para
+compartilhar e contribuir com os usuários e promover o aprendizado dos usuários e dos
+técnicos por meio de suas necessidades informacionais.
+O objetivo geral, analisar o SCM à luz da organização da informação nos mostrou que
+mesmo que já seja utilizada, em alguns campos, a lista de termos para a organização da
+
+informação, essa não tem sido aproveitada no contexto da solicitação observando-se que dessa
+forma o comportamento informacional do usuário, em um contexto de linguagem natural,
+gera ambiguidade.
+Assim, seguindo os objetivos específicos, tem-se a análise por meio da caracterização
+das informações do SCM, onde cada um dos campos de entrada de dados do sistema mostram
+como os dados são inseridos no sistema atual.
+Fez-se um levantamento com indexação e buscas automatizadas de ocorrências no
+campo solicitação. Isso possibilitou conhecer o comportamento informacional do usuário no
+momento de explicitar sua necessidade, contribuindo para chegar a proposta onde tem-se a
+sugestão para direcionar o usuário na elaboração da solicitação com três perguntas
+específicas.
+Com essas informações do usuário agregadas às perguntas levantadas para a
+organização da informação por meio da lista de termos, utilizou-se de uma ferramenta de
+Arquitetura da Informação para sugerir uma representação das informações do sistema, no
+momento da solicitação, utilizando-se do ambiente Web.
+Além de melhorar a representação da informação, a migração do SCM para um
+sistema Web, permitiria seu acesso por mais usuários, sem depender de instalação do sistema
+como ocorre atualmente.
+Entende-se que por meio da organização da informação aplicada ao SCM, será
+possível conseguir:
+•
+
+Reestruturar o atendimento técnico;
+
+•
+
+Melhorar o acesso à informação, propiciando a resolução de problemas de
+forma mais rápida;
+
+•
+
+Melhorar os serviços realizados e oferecidos;
+
+•
+
+Melhorar a adaptação dos técnicos com novos problemas e tecnologias;
+
+•
+
+Torná-lo mais que uma base de dados, um ambiente informacional que
+contribui para o aprendizado.
+
+Como trabalhos futuros e complementares, sugere-se que esta pesquisa seja uma base
+para continuidade dos estudos nas demais funções do Sistema de Controle de Manutenção,
+contribuindo para o desenvolvimento de uma nova versão na Web com base nas propostas de
+organização da informação.
+

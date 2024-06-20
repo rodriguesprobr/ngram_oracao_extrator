@@ -1,0 +1,417 @@
+
+Comunicação oral
+REQUISITOS FUNCIONAIS PARA DADOS IMAGÉTICOS DIGITAIS (RFDID): UM
+MODELO CONCEITUAL DE ENTIDADES E RELACIONAMENTOS
+Resumo
+O ambiente digital oferece a possibilidade de armazenamento e acesso instantâneos às
+imagens capturadas a todo o momento por diversos dispositivos, como celulares e câmeras;
+entretanto, transformar a imensa quantidade de dados disponíveis diariamente em informações
+consistentes e que garantam uma economia no processo de acesso e de recuperação da
+informação é um desafio. A construção de formas de representação passa a ser uma exigência
+para que dados, informações e recursos possam ser gerenciados para a otimização da
+identificação, localização, acesso, recuperação, uso, reuso e preservação de objetos imagéticos
+digitais. A metodologia consiste em uma observação sistemática qualitativa da bibliografia
+coletada e utiliza como método a modelagem conceitual Entidade-Relacionamento (E-R),
+proposta por Peter Chen na década de 90. O objetivo é contribuir com construção de formas
+para representação de informações imagéticas por meio de uma estrutura conceitual em que a
+concepção dos atributos e relacionamentos serão incorporados ao processo fragmentação do
+recurso imagético. Como resultados, têm-se a apresentação do modelo conceitual Requisitos
+Funcionais para Dados Imagéticos Digitais – RFDID e os apontamentos de que a
+persistência dos dados descritivos, a flexibilidade, a consistência e a integridade são requisitos
+essenciais para a representação da imagem digital.
+Palavras-chave: Imagem digital. Requisitos Funcionais para Dados Imagéticos Digitais –
+RFDID. Requisitos funcionais. Modelagem conceitual. Informação e tecnologia.
+1 INTRODUÇÃO
+No ambiente informacional digital, a ocorrência de conflitos entre as informações e os
+atributos dos dados representados são ocasionados por inconsistências tanto na padronização
+dos atributos quanto na forma de localização e acesso dos materiais digitais. Essas
+propriedades que auxiliam na localização e no acesso dos recursos informacionais apontam
+que algumas intervenções estão na preconcepção de ambientes informacionais, processo este,
+denominado como persistência de dados.
+A persistência de dados referenciada pela a área de Ciência da Informação possui o
+mesmo parâmetro imposto pelo campo da Representação da Informação que é capaz de
+intermediar os processos de redução de incoerências do campo informacional ao campo
+descritivo para a indicação de meios eficazes para a construção de registros íntegros dos
+próprios objetos a serem descritos.
+Nesse caso, a relação entre a persistência de dados e o processo de Representação da
+Informação, é o mapeamento dos elementos como em uma catalogação de recursos
+informacionais e essa intersecção nada mais é do que uma “[...] estrutura conceitual de
+entidade, atributos e relacionamentos entre os itens bibliográficos, e consequentemente são
+responsáveis pela construção do modelo conceitual.” (SANTOS, 2010, p. 219).
+Por meio dessa semelhança e através de novas estratégias e métodos para o acesso e a
+localização dos recursos informacionais, a Representação da Informação torna-se um processo
+mais conceitual e teórico que deve contemplar novas formas de objetos informacionais, que
+em muitas vezes fogem das regras do conteúdo tipográfico, como exemplo os recursos
+imagéticos, que compreendem tanto o material tradicional - as fotografias - quanto aos mais
+recentes - a imagem híbrida e a digital.
+Os recursos imagéticos podem ser compostos por qualquer pessoa, a qualquer instante
+e muitos tipos de aparatos sensíveis e capazes de fragmentar momentos. E isso é um fator
+importante à esse tipo de recurso informacional seja cada vez mais popularizado e tendo uma
+quantidade imensa e crescente de recursos disponíveis. Entretanto, o problema não está na
+explosão imagética, mas sim, no despreparo técnico de muitos bancos e bases de imagens e
+outros tipos de diretórios para imagens para o armazenamento desse tipo de recurso e a falta
+de registros descritivos eficientes para o acesso e a recuperação desse tipo de informações.
+Nesse sentido, é encontrado diversas iniciativas para a forma de organização e
+recuperação dos recursos imagéticos digitais e na maioria das vezes está relacionada com a
+
+área de Ciência da Computação, como o exemplo da Recuperação de Imagens com Base no
+Conteúdo (Content Based Information Retrieval – CBIR).
+Contudo, os estudos sobre o processamento de imagens com base no conteúdo e o
+CBIR são estudos em expansão e não apresentam garantias que o recurso informacional
+imagético será localizado ou mesmo identificado como único dentre os outros registros. Nesse
+ponto, a representação da imagem possui garantias mais satisfatórias de que uma descrição
+adequada do recurso o identificará que as especificidades do recurso serão registradas.
+Dentre os motivos apontados, esse trabalho se utilizará de uma metodologia de
+observação sistemática qualitativa da bibliografia coletada e como método a modelagem
+conceitual Entidade-Relacionamento (E-R), proposta por Peter Chen na década de 90, este
+trabalho tem como objetivo é contribuir com a construção de formas para representação de
+informações imagéticas, apresentando o modelo conceitual Requisitos Funcionais para Dados
+Imagéticos Digitais (RFDID).
+O modelo RFDID se propõe a suportar uma estrutura conceitual de entidade, em que a
+concepção dos atributos e relacionamentos já estarão incorporados ao processo fragmentar a
+representação do recurso imagético.
+
+2 A CONSISTÊNCIA DA REPRESENTAÇÃO DO RECURSO IMAGÉTICO
+Para a representação de uma imagem digital são necessários elementos como: a
+consistência de dados; a garantia da persistência dos dados; e o instanciamento do recurso
+com consistência e integridade. Essas propriedades requerem consequentemente o processo de
+descrição do objeto informacional sendo algo único e de modo que possa ser inserido em
+diferentes contextos mantendo sua integralidade. Dessa forma, a consistência da
+representação do recurso imagético digital se dá pela especificidade e detalhamento de
+descrição do material.
+O termo persistência “[...] refere-se ao armazenamento não volátil de dados. O dado é
+armazenado de modo que a informação não desapareça facilmente [...]” (ALVES; SANTOS,
+2013, p. 12). E o instanciamento dos recursos pode ser entendido como “[...] a ação de tornar
+a informação persistida disponível para uso em ambientes informacionais digitais.” (FUSCO,
+2010, p. 21).
+Segundo Booch; Jacobson e Rumbaugh (1998, tradução nossa) a persistência de dados
+é uma propriedade do objeto em que ele pode existir mesmo depois que o programa que o
+
+originou, ou o localizou, não seja o mesmo. E a partir de tal certeza, afirma-se que projeto
+bem estruturado na camada de persistência dos dados, não necessitará de uma reestruturação
+do projeto inteiro quando necessário, mas somente uma nova remodelação da camada que
+apresenta problemas.
+Nesse sentido, a cautela é imprescindível no desenvolvimento de um ambiente
+informacional, pois a concepção e o planejamento de catálogos que comporão esse ambiente
+auxiliam determinarão o processo de descrição dos recursos nele disponíveis, desde o início com a aquisição do recurso até a sua disponibilização ao usuário final. Ou seja, para a
+recuperação de um recurso informacional, em especial as imagens digitais, a representação
+deve ser projetada por meio de uma modelagem que garantam a persistência de seus dados,
+que tenha seus objetivos voltados para as tarefas do usuário e por fim, estabeleça a camada de
+apresentação.
+A concepção e a implementação de metadados consistentes é uma das questões-chave
+no campo de pesquisa da representação da imagem digital. A questão mais importante é a
+definição e a representação dos metadados de imagens, e consequentemente a extração
+dinâmica de imagens de acordo com impressão do usuário e o conteúdo da imagem.
+A definição dos metadados é a etapa em que o catalogador identifica os atributos que
+serão utilizados para representar uma entidade, esses atributos têm como objetivos cumprir as
+tarefas do usuário e de atender a outros requisitos levantados no processo de construção do
+catálogo.
+Os diferentes tipos de instrumentos de trabalho para a construção de formas de
+representação orientam a construção de registros descritivos na apresentação das
+características dos recursos tendo como fio condutor uma lógica de descrição que
+independentemente do seu contexto (científico, acadêmico, cultural, econômico, social, etc.)
+trará orientações para a construção padronizada na apresentação dos dados buscando
+minimizar, de alguma forma, as barreiras linguísticas e facilitar a compreensão e a
+interpretação do conteúdo do registro descritivo para usuários humanos e não humanos.
+Na tarefa de representar a informação imagética são encontrados diversos
+instrumentos de trabalho, entre eles se destacam os específicos para a representação do
+recurso visual: Graphic Materials: rules for describing original items and historical
+collections, Categories for the Description of Works of Art (CDWA), Cataloging Cultural
+Objects (CCO), Metadata for Digital Still Images Standards Committee (MIX), IPTC Core &
+Extension for-photo metadata standard, VRA Core Schema e o Exchangeable Image File
+Format (EXIF).
+
+Esses instrumentos de trabalho são denominados de padrão de metadados e contém
+orientações que definem a sintática e a semântica do registro descritivo de uma ou mais
+categorias de recursos, com o propósito de padronizar a representação otimizando os
+resultados no acesso aos dados, na localização da informação e na recuperação de recursos.
+Os padrões de metadados são elementos descritores que segue um determinado
+modelo de dados que contém um conjunto de conceitos e de requisitos, com o objetivo de
+descrever recursos de um domínio específico. (BARRETO, 1999). Segundo El-Sherbini
+(2000, p. 188, tradução nossa), os padrões de metadados “[...] têm um importante papel no
+suporte ao uso de serviços e recursos eletrônicos. No entanto, para maximizar o uso destes e
+assegurar consistência, são necessários padrões universalmente aceitos que orientem a criação
+de metadados.”
+Conforme aponta Zeng e Qin (2008, tradução nossa) existe uma intrínseca ligação
+entre estabelecimento de metadados e formatos de metadados. O estabelecimento de um
+formato de metadados exige a construção padronizada de metadados (atributos que
+representarão uma entidade), assim como os metadados precisam estar em uma estrutura de
+descrição padronizada (esquema de metadados) que irá compor o formato para serem úteis e
+válidos em um sistema de informação.
+Assim, os padrões de conteúdo de dados, padrões externos, códigos e regras que
+auxiliam a descrição e, consequentemente, o estabelecimento dos metadados, determinam não
+só a sintaxe e a padronização dos metadados, mas também, os valores e a padronização de sua
+representação. (ZENG; QIN, 2008, tradução nossa).
+
+3 REQUISITOS FUNCIONAIS PARA DADOS IMAGÉTICOS DIGITAIS (RFDID)
+Os Requisitos Funcionais para Dados Imagéticos Digitais (RFDID) foram um dos
+resultados apresentados na dissertação de Simionato (2012) e propõem um sistema de acesso
+e localização de recursos imagéticos digitais.
+O modelo conceitual RFDID traz considerações que vão além do conteúdo da
+informação extraída da leitura da imagem e a sua descrição em texto, que, em muitos casos,
+
+são baseadas na interpretação do assunto da imagem, ou na descrição de dados técnicos
+extraídos automaticamente.
+O desenvolvimento deste modelo está pautado na concepção do Functional
+Requirements for Bibliographic Records (FRBR), publicado em 1998, com o objetivo de que
+sua estrutura (framework),
+[...] proporcionasse uma compreensão clara, definida com precisão e
+comumente compartilhada de como o registro bibliográfico pode
+proporcionar informação sobre o que se espera que o registro possa arquivar
+em termos de resposta às necessidades do usuário [...] (LE BOEUF, 2005, p.
+01, tradução nossa).
+
+A proposta está fundamentada nas orientações do modelo FRBRer
+
+1
+
+e das
+
+performances de desempenho dos relacionamentos para a descrição das imagens digitais e dos
+conceitos de construção da modelagem conceitual.
+E considera ainda que,
+[...] os relacionamentos bibliográficos servem como meio para descrever a
+relação entre uma entidade e outra, assim como, meio de auxiliar o usuário
+"navegar" no universo que é representado em uma bibliografia, catálogo ou
+banco de dados bibliográficos. Normalmente o usuário vai formular uma
+consulta de busca usando um ou mais atributos da entidade para a qual ele
+está à procura, e é por meio do atributo que o usuário encontra a instância da
+entidade requerida. (FUSCO, 2010, p. 183).
+
+Os modos de representação também podem interferir na capacidade de identificação
+do registro e para responder às necessidades dos usuários, o FRBRer é definido a partir das
+tarefas genéricas realizadas pelos usuários quando fazem buscas em bases bibliográficas,
+chamadas user tasks (TILLET, 2003; IFLA, 1998, p. 8) descritas a seguir:
+
+
+Uso dos dados para encontrar materiais que correspondam aos critérios estabelecidos
+para a busca do usuário;
+
+
+
+Uso dos dados recuperados para identificar uma entidade;
+
+
+
+Uso dos dados para selecionar uma entidade adequada às necessidades do usuário;
+
+
+
+Uso dos dados para encomendar, adquirir ou obter acesso à entidade descrita.
+Para Jonsson (2002, p. 6) o FRBRer oferece um marco conceitual que possibilita aos
+
+estudiosos da representação descritiva, uma maneira de juntar harmoniosamente as diferentes
+
+1
+
+Requisitos Funcionais para Registros Bibliográficos Entidade – Relacionamento (Functional Requirements for
+Bibliographic Records Entity – Relationship).
+
+regras de catalogação, promovendo assim, o aperfeiçoamento da interoperabilidade, tão
+necessária em ambientes digitais.
+Cada uma das entidades dos FRBRer está associada a uma série de propriedades ou
+características: os atributos. Esses atributos são responsáveis por descrever as entidades e a
+permitir que as questões dirigidas ao sistema sobre esta entidade sejam respondidas com
+êxito.
+Entidade, no modelo E-R, é entendida como uma “coisa” ou um “objeto” no mundo
+real que pode ser identificada de forma unívoca em relação a todos os outros objetos. Uma
+entidade pode ser concreta ou abstrata. Por sua vez, atributos são as diversas características
+que um tipo de entidade possui, ou propriedades descritivas de cada membro de um conjunto
+de entidades. Um relacionamento “[...] é uma associação entre uma ou várias entidades [...]”
+(CHEN, 1990, p. 21-24).
+A modelagem conceitual E-R, em suma, descreve quais são os dados que devem estar
+armazenados no banco de dados e quais os relacionamentos existentes entre os dados, além de
+fornecer uma visão mais próxima da visualização dos usuários e definir especificações
+necessárias para a qualidade das informações no ambiente informacional criado.
+A abstração para a definição dos dados está relacionada com o domínio que estão
+conceitualmente representadas e com a metodologia de construção de modelos conceituais. A
+modelagem conceitual é uma fase importante no projeto de bancos de dados, logo o modelo
+Entidade – Relacionamento se baseia na percepção do domínio do cenário com um conjunto
+de objetos representados por entidades e atributos. Nesse sentido “[...] entidades individuais e
+relacionamentos são distintos, mas na perspectiva do banco de dados a diferença entre eles
+precisa ser expressa em termos dos seus atributos [...]” (FUSCO, 2010, p. 110).
+Por esse motivo, os diagramas baseados no modelo FRBRer já são compostos com os
+elementos descritivos. O modelo está integralmente apresentado na figura 1, denominado
+como Requisitos Funcionais para Dados Imagéticos Digitais - RFDID, apresentando os três
+grupos conceituais e seus relacionamentos e atributos.
+
+Figura 1. Requisitos Funcionais para Dados Imagéticos Digitais
+
+Fonte: Adaptado de Simionato, 2012, p. 123.
+
+O modelo apresentado na figura 1, define um número de entidades relevantes para a
+descrição de recursos imagéticos em contextos específicos, com atributos de cada uma dessas
+entidades e os relacionamentos que podem existir entre instâncias dessas várias entidades.
+A contribuição do RFDID se insere tanto na área de descrição dos recursos
+informacionais quanto para área da imagem digital. Pois, o modelo estabelece um nível de
+organização dos dados nos sistemas digitais e um grau de padronização que favorece a
+interoperabilidade entre sistemas e possibilitar o compartilhamento de dados e de serviços
+informacionais.
+Cada grupo e seu diagrama para a composição dos Requisitos Funcionais para Dados
+Imagéticos Digitais – RFDID estão apresentados a seguir.
+O Grupo 1 representa a base conceitual do modelo, referindo-se ao trabalho intelectual
+ou artístico, suas entidades são: obra, expressão, manifestação e item. Como apresentado o
+Grupo 1, no quadro 1.
+Quadro 1. Entidades do Grupo 1 do RFDID
+Entidade
+
+Descrição
+
+Obra
+
+Definida como a criação intelectual subjetiva de quem irá capturar uma
+imagem.
+
+Expressão
+
+Realização intelectual ou artística específica e ainda subjetiva, que assume
+uma obra ao ser elaborada, ou seja, a expressão no contexto imagético é o
+processo de criação intelectual a ser transformada em imagem digital, ou seja,
+a transformação em pixels.
+
+Manifestação
+
+Forma física e concreta da expressão de uma obra.
+
+Item
+
+Imagem que o usuário busca em um catálogo, é a imagem que se vê e a sua
+representação deve conter atributos que a tornem única a partir de uma
+descrição de dados persistidos no sistema que garantam o seu instanciamento.
+
+Fonte: Autoras.
+
+A principal dificuldade do Grupo 1 está em delimitar os conceitos de obra e de
+expressão, como as propriedades de uma nova obra ou uma nova expressão, nesse sentido, a
+Figura 2 apresenta os limites entre obra e expressão em relação à imagem digital.
+
+Figura 2. Limites entre as entidades obra e expressão para o recurso imagético digital
+
+Fonte: Simionato, 2012, p.117.
+
+Com base nas quatro entidades do grupo 1, os relacionamentos entre as entidades e
+entre eles, é apresentado o primeiro grupo de entidades do RFDID na figura 3.
+Figura 3. RFDID - Primeiro Grupo de entidades e seus relacionamentos
+
+Fonte: Autoras.
+
+No segundo grupo, as entidades são Pessoa e Entidade Coletiva explicitadas no quadro
+2, elas estruturam a base das entidades do primeiro grupo: pessoa e entidade coletiva:
+
+Quadro 2. Entidades do Grupo 2 do RFDID
+Entidade
+
+Descrição
+
+Pessoa
+
+Indivíduo responsável pela criação ou realização de uma obra, ou seja, o
+responsável pela captura da imagem digital ou por sua realização.
+
+Entidade coletiva
+
+Organizações ou grupos de indivíduos responsáveis pelo conteúdo intelectual
+da imagem digital, inclusive grupos temporários (encontros, conferências,
+reuniões, festivais, etc.) e autoridades territoriais como uma federação, um
+estado, uma região, entre outros.
+
+Fonte: Autoras.
+
+Com base nas entidades do Grupo 2 do RFDID e seus relacionamentos, segue a
+ilustração do segundo grupo de entidades do RFDID na figura 4.
+Figura 4. RFDID - Segundo grupo de entidades e seus relacionamentos
+
+Fonte: Autoras.
+
+O terceiro grupo, por sua vez, corresponde às entidades que representam o conjunto de
+temas que caracterizam uma obra, ele abarca os dois outros grupos anteriormente descritos e
+implementa quatro novas entidades conforme demonstra o quadro 3.
+
+Quadro 3. Apresentação de Entidades do Grupo 3 do RFDID
+Entidade
+
+Descrição
+
+Conceito
+
+Uma noção abstrata ou uma ideia que podem ser amplas ou específicas,
+abrangendo abstrações de uma obra e podem ser temáticas: áreas de
+conhecimento, disciplinas, escolas de pensamento, teorias; ou ainda as
+técnicas fotográficas que podem ser incorporadas nas imagens digitais.
+
+Objeto
+
+A coisa material, que abrange uma completa categoria de coisas materiais que
+podem ser as temáticas de uma obra: objetos da natureza, objetos da criação
+humana ou objetos que já não existam.
+
+Evento
+
+Inclui uma variedade de ações, ocorrências ou acontecimentos: momento
+histórico, época, período de tempo.
+
+Lugar
+
+Uma localização ou uma série de localizações como: terrestres e
+extraterrestres, históricas ou contemporâneas, características geográficas e
+jurisdições geopolíticas.
+
+Fonte: Autoras.
+
+Os relacionamentos das entidades do terceiro grupo do RFDID estão descritas na
+figura 5:
+Figura 5. RFDID - Terceiro grupo de entidades e seus relacionamentos
+
+Fonte: Autoras.
+
+Assim, o modelo E-R (Entidade-Relacionamento) estabelece conceitos sobre muitos
+tipos de recursos informacionais descritos nas bases de dados pertencentes a uma biblioteca
+ou a uma unidade de informação, tornando os catálogos automatizados mais amigáveis para
+os usuários e universais, pois tem como propósito favorecer compatibilidades sobre seus usos,
+de modo a tornar o acesso, a busca e a recuperação cada vez mais eficientes.
+A adoção da metodologia de modelagem conceitual de dados permite ao catalogador
+atuar no processo de construção de banco de dados que reflitam na construção de sistemas de
+informação e principalmente em catálogos, o que possibilita novos conceitos, fundamentos, e
+perspectivas para catalogação, possibilitando uma visão não linear dos elementos descritivos
+de um item imagético.
+
+4 CONSIDERAÇÕES FINAIS
+Os recursos imagéticos se demostram como grande atrativo no processo de
+transmissão e intercâmbio de informações e sua, comunicação e leitura se configuram, na
+maioria das vezes, como de rápida e de fácil interpretação. Dessa forma, no tratamento desses
+recursos são necessários catálogos mais eficientes, acessíveis e amigáveis para o usuário.
+O processo de modelagem para imagens digitais proposto neste trabalho visa
+transformar esse tipo de recurso informacional disponível em grandes quantidades nos bancos
+de dados em informação acessível ao usuário. Nesse contexto, a modelagem permeia os
+fundamentos relacionados pela persistência de dados em catálogos ou banco de dados, para
+descrever de modo consistente o recurso informacional, facilitando a sua localização,
+identificação e acesso pelo usuário, permitindo assim, o instanciamento para o uso, reuso e
+preservação de recursos e da informação e a apropriação do conhecimento representado nos
+recursos disponíveis.
+Entretanto, há que se considerar que a representação de imagens digitais em um
+ambiente dinâmico como a Web é uma tarefa árdua e complexa, que exige maior cooperação
+entre as instituições fornecedoras de metadados no desenvolvimento de um trabalho
+estratégico no uso de esquemas, de linguagens e de codificações para construção de formas de
+representação estruturadas com o foco na persistência de dados e principalmente na
+apresentação da informação. Estruturas essas, responsáveis pelo encaminhamento de
+operações de acesso aos dados, de busca de informações, de localização e de recuperação de
+recursos informacionais.
+
+Nesse sentido, o modelo conceitual para a descrição de imagens digitais, Requisitos
+Funcionais para Dados Imagéticos Digitais – RFDID aqui apresentado, se configura em uma
+proposta na configuração da modelagem de banco de dados e catálogos, e que se propõe como
+uma forma de organização para representação de recursos imagéticos.
+Dessa forma, a utilização dos RFDID na modelagem de dados permitirá uma maior
+economia no processo de representação de recursos imagéticos favorecendo a reutilização de
+componentes e o aumento da flexibilidade da construção do próprio registro bibliográfico.
+Assim, a reutilização de seus componentes promove um relacionamento de seus valores
+conectivos as entidades previamente definidas pelo modelo conceitual e isso permitirá que os
+dados imagéticos sejam descritos somente uma vez. A flexibilidade, por sua vez, contemplará
+as mudanças que possam ocorrer em diferentes ambientes digitais.
+Desse modo, conclui-se que o RFDID oferece contribuições para quebra na estrutura
+rígida dos registros descritivos elaborados até então, facilitando a interoperabilidade e
+intercâmbio de informações, transformando em descrições de estruturas de dados mais
+flexíveis, e que podem se relacionar a partir de suas entidades e atributos, otimizando os
+processos de descrição, de acesso, e os de localização e de recuperação dos recursos
+informacionais imagéticos, e ainda, favorecer a interoperabilidade entre sistemas de
+informação e catálogos.

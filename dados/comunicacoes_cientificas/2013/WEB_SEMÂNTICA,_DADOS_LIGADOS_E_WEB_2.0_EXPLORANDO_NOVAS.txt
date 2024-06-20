@@ -1,0 +1,791 @@
+
+Comunicação Oral
+WEB SEMÂNTICA, DADOS LIGADOS E WEB 2.0: EXPLORANDO NOVAS
+FRONTEIRAS PARA OS ARQUIVOS ABERTOS
+Resumo
+Este artigo explora novas fronteiras para os Arquivos Abertos e para a disseminação da
+ciência, proporcionadas pelo surgimento da Web 2.0, da Web Semântica e dos Dados Ligados
+(Linked Data). Apresenta avanços na produção e na divulgação de textos científicos obtidos
+através dos Arquivos Abertos e do modelo de interoperabilidade OAI-PMH. Caracteriza
+Arquivos Abertos, Web 2.0, Web Semântica e Dados Ligados, indicando aspectos que estes
+podem contribuir para a disseminação de ativos da ciência. Apresenta e destaca benefícios de
+Fabrico/Ciência, que é um ambiente experimental desenvolvido para explorar as fronteiras
+entre Arquivos Abertos, Web 2.0, Web Semântica e Dados Ligados, que colhe metadados de
+revistas eletrônicas da Ciência da Informação, disponibiliza estes metadados na plataforma da
+Web Semântica, e oferece recursos da Web 2.0 para análise e para captura da inteligência
+coletiva.
+Palavras-chave: Arquivos abertos. Web Semântica. Dados Ligados. Web 2.0.
+SEMANTIC WEB, LINKED DATA AND WEB 2.0: EXPLORING NEW FRONTIERS
+FOR OPEN ARCHIVES
+1 INTRODUÇÃO
+A internet e os movimentos do software livre e do acesso aberto proporcionaram
+grandes avanços à publicação e à disseminação da produção científica. A rede rompeu
+barreiras ligadas à produção e à distribuição de publicações científicas, à medida que não
+exige os complexos e caros processos para geração de conteúdos em papel, assim como para o
+envio desses materiais aos seus leitores.
+
+A rede e o suporte digital tornaram viável a
+
+disseminação de materiais que até então tinham circulação restrita, como teses e dissertações
+e relatórios de pesquisa.
+O movimento do software livre também foi um grande aliado à publicação científica
+na internet, pois vários sistemas de bases de dados para documentos digitais foram
+desenvolvidos dessa forma. O software OJS1 é uma base de dados para revistas eletrônicas
+que gerencia todo o processo de revisão por pares dos artigos submetidos, e o TEDE2 é uma
+biblioteca de teses e dissertações que dá suporte ao programa de pós-graduação em atividades
+ligadas à defesa e à elaboração da versão final do texto. O DSPACE3 é uma base de
+documentos que permite o gerenciamento de coleções por comunidades, com a configuração
+de fluxos para recepção de conteúdos. Esse novo cenário provocou o surgimento de novos
+tipos de bases de dados, como os repositórios institucionais, que possibilitam que as
+instituições reúnam sua produção intelectual em uma única base de dados; e os repositórios
+temáticos, em que autores podem arquivar textos científicos em coleções referentes aos temas
+abordados.
+Tudo isso deu força para o surgimento e a concretização de um movimento para a
+publicação aberta de textos científicos, isto é, o movimento do acesso livre, que prega que “a
+literatura em Acesso Livre (Open Access - OA) é digital, em linha, gratuita e livre de muitas
+restrições de direitos autorais e licença de uso.” (SUBER, 2004)
+A visibilidade de uma base de dados documental não é plenamente atingida apenas ao
+a disponibilizá-la na internet, pois na web muitos usuários não chegam aos documentos via
+seu portal, mas por meio de outros ambientes. Por isso, é preciso que esta base de dados
+opere em conjunto com outros sistemas, como mecanismos de busca que atuam sobre várias
+bases de dados, organizadas em uma federação. Essas bases de dados devem atender a
+requisitos de interoperabilidade. Interoperabilidade compreende na
+habilidade com que múltiplos sistemas, com diferentes plataformas de
+hardware e software, estruturas de dados e interfaces, trocam dados com
+perdas mínimas de conteúdo e funcionalidade. (NATIONAL
+INFORMATION STANDARDS ORGANIZATION, 2004)
+
+Com o objetivo de promover a interoperabilidade entre bases de dados de acesso livre,
+chamadas de Arquivos Abertos, padrões técnicos de interoperabilidade foram estabelecidos
+através da Iniciativa dos Arquivos Abertos. A Iniciativa dos Arquivos Abertos desenvolveu o
+1
+
+OPEN JOURNAL SYSTEM. Disponível em http://pkp.sfu.ca/?q=ojs
+SISTEMA DE PUBLICAÇÃO ELETRÔNICA DE TESES E DISSERTAÇÕES. Disponível em:
+http://tedesite.ibict.br/
+3
+DSPACE. Disponível em http://www.dspace.org/
+2
+
+protocolo OAI-PMH4, que permite que metadados sobre os documentos armazenados em uma
+base de dados possam ser colhidos por componentes integradores, como motores de busca que
+atuam sobre uma federação de bases de dados.
+Esses padrões técnicos foram incluídos nos grandes sistemas de bases de dados
+desenvolvidos na forma de software livre, como TEDE, OJS e DSPACE. Isso viabilizou o
+surgimento de federações formadas por bases de dados de textos científicos, em que um
+componente global promove a busca unificada, envolvendo todas as bases de dados membros
+da federação. Sob essa arquitetura de federação de bases de dados, surgiram as bibliotecas
+nacionais e internacionais de teses e dissertações, como BBTD5, EThOS6 e DART-Europe7.
+Também surgiram federações de repositórios institucionais, como DRIVER8, de bibliotecas
+digitais de patrimônio cultural, como Europeana9, e federações de revistas eletrônicas de
+acesso livre, como DOARJ10.
+A web, o software livre, o acesso aberto, e os padrões de interoperabilidade
+proporcionaram grandes avanços à publicação de textos científicos. Hoje temos uma nova
+realidade, em que canais abertos de comunicação científica passam a assumir destaque e
+rivalizar com os canais tradicionais, estabelecidos pelas grandes editoras científicas.
+Esse avanço, entretanto, não se encerra, pois a web está em constante evolução, e esta
+evolução determina novas possibilidades para a publicação e a disseminação da ciência. Web
+2.0, Web Semântica e Dados Abertos e Ligados são termos usados para designar novos
+avanços da web. A Web 2.0 é a identificação de uma nova web em que os seus usuários
+passam de meros consumidores de informação para produtores de informação,
+disponibilizando e construindo coletivamente conteúdos, assim como agregando valores a
+conteúdos já produzidos, através de comentários, relações, avaliações, etiquetas, etc. Já a Web
+Semântica representa uma iniciativa em prover significado compreensível por máquinas aos
+recursos da web, a fim de viabilizar o desenvolvimento de ambientes de software inteligentes
+(agentes inteligentes). A web, originalmente centrada em documentos interligados
+(hipertexto), também está evoluindo para incorporar dados interligados, permitindo o
+relacionamento e o cruzamento de dados provenientes de fontes diversas. Essa web dos dados
+tem sido chamada de Dados Ligados (Linked Data).
+4
+
+Open Archives Initiative Protocol for Metadata Harvesting. Disponível em http://www.openarchives.org/pmh/
+Biblioteca Brasileira de Teses e Dissertações. Disponível em http://bdtd.ibict.br/
+6
+EThOS. Biblioteca de Teses e Dissertações do Reino Unido Disponível em: http://ethos.bl.uk
+7
+DART-Europe. Biblioteca de Teses e Dissertações da Europa. Disponível em: http://www.dart-europe.eu
+8
+Digital Repository Infrastructure Vision for European Research. Disponível em http://www.driverrepository.eu/
+9
+Europeana. Disponível em http://www.europeana.eu
+10
+Directory of Open Access Journals. Disponível em http://www.doaj.org/
+5
+
+Este artigo apresenta o ambiente Fabrico/Ciência11, que explora o uso de recursos dos
+Arquivos Abertos (OAI-PMH), da Web 2.0, da Web Semântica e dos Dados Ligados, na
+comunicação científica. O ambiente Fabrico/Ciência é uma base de dados construída de
+acordo com a arquitetura da Web Semântica, que permite a colheita de metadados através do
+protocolo OAI-PMH, e disponibiliza estes metadados de acordo com os princípios
+estabelecidos para os Dados Ligados. A Web 2.0 está presente ao possibilitar que os usuários
+adicionem valores aos objetos descritos, via anotações semânticas; ao disponibilizar, para
+exploração dos dados, técnicas de agregação de sistemas de folksonomias; e ao explorar a
+atuação dos seus usuários através de uma rede social, com foco nos conteúdos descritos.
+A seguir, as seções dois, três e quatro apresentam, respectivamente, interoperabilidade
+entre bases de dados via OAI-PMH, Web 2.0 e Web Semântica/Dados Ligados, destacando
+benefícios destas para a disseminação de recursos científicos. A seção cinco descreve o
+ambiente Fabrico, e seção seis aborda a experimentação deste ambiente como um provedor de
+serviços a partir metadados colhidos de revistas eletrônicas da Ciência da Informação
+(chamado de Fabrico/Ciência). Considerações finais são realizadas na seção sete.
+2 INTEROPERABILIDADE EM ARQUIVOS ABERTOS E O PROTOCOLO OAIPMH
+A
+
+Iniciativa
+
+dos
+
+Arquivos
+
+Abertos
+
+estabeleceu
+
+uma
+
+arquitetura
+
+para
+
+a
+
+interoperabilidade entre bases de dados documentais denominada OAI-PHM. A arquitetura
+OAI-PMH é composta por provedores de dados, provedores de serviços e por um protocolo
+de colheita de metadados.
+Os provedores de dados são bases de dados documentais independentes, autônomas e
+heterogêneas. São independentes e autônomas, pois possuem autonomia de gestão e
+características próprias para atender às demandas de seus usuários (requisitos de submissão,
+interface de consulta e navegação, plataforma de software, etc.). São heterogêneas, pois
+possuem estruturas internas e softwares diferentes. Entretanto, para fins de interoperabilidade,
+devem prover uma funcionalidade padrão, especificada por OAI-PMH, que permite que os
+metadados que descrevem os conteúdos armazenados sejam colhidos pelos provedores de
+serviços.
+Os provedores de serviços são componentes que proporcionam serviços a partir de
+metadados colhidos dos provedores de dados. Um exemplo de provedor de serviço é um
+
+11
+
+Fabrico/Ciência. Disponível em http://www.ufrgs.br/fabrico/ciencia
+
+mecanismo de busca de uma federação de repositórios. No contexto de OAI-PMH, os
+ambientes BBTD, EThOS, DART-Europe, DRIVER e Europeana são provedores de serviços.
+A troca de informações entre provedores de serviço e provedores de dados é
+estabelecida por um protocolo de colheita de metadados. Através deste protocolo, um
+provedor de serviço submete a um ou a vários provedores de dados comandos que
+determinam que estes provedores de dados devem enviar
+
+determinados conjuntos de
+
+metadados para o provedor de serviço. Os metadados são enviados dos provedores de dados
+para os provedores de serviços através de documentos XML, via protocolo HTTP. OAI-PMH
+estabelece que um provedor de dados deve, no mínimo, fornecer os seus metadados no
+esquema Dublin Core.
+O padrão OAI-PMH possibilitou o surgimento de vários provedores de serviços, como
+BBTD, EThOS, DART-Europe, DRIVER e Europeana. Entretanto, observa-se uma
+concentração no desenvolvimento de provedores de serviço especializados na busca da
+informação, embora OAI-PMH viabilize o desenvolvimento de outros tipos de serviços. Por
+exemplo, OAI-PMH permite a construção de provedores de serviços que realizem tarefas
+agregação de dados, indicando coautoria, autores mais atuantes, relacionado autores a
+assuntos, etc.
+Serviços de agregação de informação são comuns na Web 2.0, em ambientes de
+catalogação social (folksonomias). Metadados colhidos de provedores de dados também
+poderiam ser utilizados em ambientes semânticos (provedores de serviços para Web
+Semântica) e em Dados Abertos. Esses aspectos são abordados nas próximas seções.
+
+3 A WEB 2.0
+A Web 2.0 é uma designação para um novo cenário que surge em torno da web, cuja
+característica principal e diferenciadora é que os seus usuários passam de meros consumidores
+de informação para parceiros no seu desenvolvimento. Caracterizam a Web 2.0 ambientes de
+compartilhamento de conteúdos (como YouTube12, Scribd13, Flickr14), redes sociais de
+relacionamento (como Facebook15 e a blogosfera), redes de catalogação coletiva de filmes,
+
+12
+
+YouTube. Ambiente de Compartilhamento de Vídeos. Disponível em: http://www.youtube.com
+Scribd. Ambiente de Compartilhamento de documentos. Disponível em: http://pt.scribd.com/
+14
+Flickr. Ambiente de Compartilhamento de fotos. Disponível em: http://www.flickr.com/
+15
+Facebook. Rede Social. Disponível em: https://pt-br.facebook.com/
+13
+
+livros, músicas (como Filmow16, Skoob17, LibraryThing18), ambientes de escrita coletiva
+(como Wikipedia19), sistemas de classificação social, chamados de folksonomias (como
+CiteUlike20, Bibsonomy21), entre outros.
+Estes ambientes da Web 2.0 apresentam como diferencial competitivo “saberem tirar
+proveito da inteligência coletiva”, e são desenvolvidos a partir de uma arquitetura de
+participação (O´REILLY, 2007).
+Lévy (1998, p.28) caracteriza inteligência coletiva como “inteligência distribuída por
+toda parte, incessantemente valorizada, coordenada em tempo real, que resulta em uma
+mobilização efetiva das competências”. Os sistema da Web 2.0, ao tirarem proveito da
+inteligência coletiva, giram em torno
+da existência de um saber coletivo; que é necessário reconhecer que a
+inteligência coletiva está distribuída em qualquer lugar onde há humanidade
+e que esta pode potencializar-se através dos dispositivos tecnológicos
+(COBO ROMANI; PARDO KUKLINSKI, 2007, p.47, tradução nossa).
+
+Estes ambientes também possuem uma arquitetura tecnológica que se configura em
+torno da participação dos usuários:
+A estrutura tecnológica se expande de maneira conjunta com as interações
+sociais dos sujeitos que utilizam a Internet. Cada vez que uma pessoa cria
+um novo link, a rede se completa e, portanto, enriquece. A ideia de uma
+arquitetura de participação se baseia no princípio de que as novas
+tecnologias potencializam o intercâmbio e a colaboração ente os usuários
+(COBO ROMANI; PARDO KUKLINSKI, 2007, p.47, tradução nossa).
+
+Nas bases de dados tradicionais, os conteúdos são classificados pelos seus autores
+(palavras-chaves) e por indexadores especializados. Já na Web 2.0, a classificação também é
+realizada pelos usuários (leitores) dos conteúdos. Isso é chamado de classificação social ou
+folksonomia. Nas folksonomias, usuários atribuem livremente assuntos (chamados de
+etiquetas) aos recursos, não havendo controles de sinônimos, siglas, número, etc. O poder das
+folksonomias está nos seus mecanismos de agregação e de relacionamento. Estes sistemas
+agregam e relacionam etiquetas, conteúdos e etiquetadores. Por exemplo, possuem
+funcionalidades que mostram etiquetas de acordo com suas frequências de uso, geralmente em
+nuvens de etiquetas, em que estas são apresentadas em ordem alfabética, com o tamanho da
+letra de cada etiqueta indicando a sua frequência. Ambientes de folksonomias também
+16
+
+Filmow.Comunidade de apreciadores de filmes. Disponível em: http://filmow.com/
+Skoob.Comunidade de leitores de livros . Disponível em: http://www.skoob.com.br/
+18
+LibraryThing. Comunidade de amantes de livros. Disponível em: http://br.librarything.com/
+19
+Wikipedia. Enciclopédia desenvolvida coletivamente. Disponível em: http://pt.wikipedia.org/
+20
+Citeulike.Catalogação social de material acadêmico. Disponível em: http://www.citeulike.org/
+21
+Bibsonomy. Catalogação social publicações e favoritos. Disponível em: http://www.bibsonomy.org/
+17
+
+mostram, por exemplo, relações entre etiquetas, entre usuários e etiquetas, e entre conteúdos e
+etiquetas. Para uma etiqueta, apresentam as etiquetas a esta relacionadas por serem atribuídas
+a mesmos conteúdos, assim como os conteúdos que receberam a etiqueta, e os usuários que
+atribuíram a etiqueta a estes conteúdos. Para um usuário, apresentam seus conteúdos e suas
+etiquetas; e para um conteúdo, mostram suas etiquetas e usuários.
+A ciência também está presente na Web 2.0 através dos blogs publicados por
+pesquisadores, dos ambientes de classificação social voltados a conteúdos científicos (como
+Binsonomy e CiteULike), pelo uso de ambientes wiki para projetos de pesquisa
+(OpenNetware22), e pela publicação de revistas eletrônicas (revisadas por pares) em que os
+usuários expressam suas opiniões através de comentários (PLOS-ONE23).
+Entretanto, ainda é pequena a exploração de recursos da Web 2.0 por partes dos
+Arquivos Abertos e dos provedores de serviços da arquitetura OAI-PMH. A combinação da
+Web 2.0 com a arquitetura OAI-PMH possibilita, por exemplo, a construção de federações de
+bases de dados com foco no aproveitamento da inteligência coletiva que se forma em torno
+dos usuários da federação, através do uso de folksonomias ou sistemas que capturam opiniões
+de usuários.
+
+Técnicas de agregação presentes nas folksonomias podem ser usadas para
+
+realizar agregações e relacionamentos em torno de autores e das palavras chaves, com nuvens
+indicando autores mais frequentes, autores de uma palavra chave, etc.
+4 WEB SEMÂNTICA E DADOS LIGADOS
+A Web foi projetada para ser operada por pessoas e não por máquinas.
+A web desenvolveu linguagens excelentes para expressar a informação que
+se destina a ser utilizada pelo homem, porem, foi falha quando da
+manipulação desta pelas máquinas. (BERNERS-LEE,1998, tradução nossa)
+
+Softwares inteligentes somente poderão operar na web à medida que forem capazes de
+compreender o significado dos seus recursos. Hoje, somente humanos possuem a capacidade
+de identificar se um determinado recurso da web é uma tese, ou um artigo, ou um mecanismo
+de busca, ou uma revista eletrônica, ou uma homepage de uma instituição ou pesquisador. Por
+isso,
+Web Semântica surge como uma proposta de trazer à rede global uma
+estrutura e significado, que permitem a sua evolução de uma rede de
+documentos para uma rede de dados na qual toda a informação tem um
+significado bem definido, podendo ser interpretada e processada por
+22
+
+OpenNetWare. Compartilhamento da ciência – biologia e engenharia biomédica (projetos, protocolos,
+materiais) via wiki. Disponível em http://openwetware.org/wiki/Main_Page
+23
+PLOS-ONE. Periódico científico que incentiva diálogos sobre os artigos. Disp. em: http://www.plosone.org/
+
+humanos e computadores. BERNERS-LEE, HENDLER e LASSILA, 2001,
+tradução nossa).
+
+A Web Semântica não é uma web separada da atual, mas sim uma extensão desta, em
+que a informação é provida com um significado bem definido, permitindo que pessoas e
+computadores trabalhem em cooperação (BERNERS-LEE, HENDLER e LASSILA, 2001).
+Para prover significado aos recursos da web, a Web Semântica está estruturada em uma
+arquitetura baseada em metadados e ontologias.
+Na Web Semântica, metadados significam informações compreensíveis por máquinas
+sobre recursos da web ou outros objetos e possuem estrutura e semântica bem definidos
+(BERNERS-LEE,1997). Os conceitos expressos nos metadados são especificados através de
+ontologias. Ontologia é uma especificação explícita e formal de uma conceitualização
+compartilhada (GRUBER, 1993). Ela é explícita, pois os tipos dos conceitos e as restrições de
+seus usos são definidos explicitamente; é formal, pois é compreendida por máquinas; é
+compartilhada por capturar o conhecimento consensual aceitável a um grupo.
+Na Web Semântica, objetos da web são chamados de recursos; os metadados que
+descrevem os significados destes objetos são representados através a linguagem RDF24
+(Resource Description Framework); e as ontologias que especificam os conceitos usados nos
+metadados são desenvolvidas através da linguagem RDFS25 (RDF Schema), ou extensões
+desta, como a linguagem OWL26 (Web Ontology Language).
+
+24
+
+Resource Description Framework. Especificada em http://www.w3.org/TR/REC-rdf-syntax/
+RDF Schema. Especificada em http://www.w3.org/TR/rdf-schema/
+26
+Web Ontology Language. Especificada em http://www.w3.org/TR/owl2-syntax/
+25
+
+Figura1 - Exemplo de representação em triplas e gráfica de sentenças RDF
+A) Sentenças RDF representadas através de triplas
+
+Sujeito
+www.sciam.com/article.cfm?id=the-semantic-web
+www.sciam.com/article.cfm?id=the-semantic-web
+www.sciam.com/article.cfm?id=the-semantic-web
+www.w3.org/People/Berners-Lee/
+www.w3.org/People/Berners-Lee/
+
+Predicado
+dc:date
+rdf:type
+dc:creator
+rdf:type
+foaf:name
+
+Objeto
+2001
+bibo:AcademicArticle
+www.w3.org/People/Berners-Lee/
+foaf:Person
+Tim Bernersl-Lee
+2001
+
+B) Sentenças RDF representadas graficamente
+
+dc:type
+bibo:AcademicArticle
+
+dc:date
+www.sciam.com/
+article.cfm?id=the-semantic-web
+dc:creator
+
+foaf:name
+
+rdf:type
+
+foaf:Person
+
+www.w3.org/People/Berners-Lee/
+
+Tim Berners-Lee
+
+bibo: http://purl.org/ontology/bibo/
+dc: http://purl.org/dc/elements/1.1/
+foaf: http://xmlns.com/foaf/0.1
+rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+
+Fonte: Autor.
+
+Metadados representados em RDF são triplas, chamadas de sentenças, cujas três partes
+são: o sujeito, o predicado e o objeto. O sujeito é o recurso da web que está sendo descrito, e
+deve ser identificado através de sua URI (Uniform Resource Identifier). O predicado indica
+uma propriedade, isto é, um aspecto, característica, atributo ou relação atribuída ao recurso
+pela sentença. O objeto é o valor dado ao recurso pela propriedade. Na figura 1a, as três
+primeiras
+
+sentenças
+
+(triplas)
+
+descrevem
+
+o
+
+recurso:
+
+http://www.sciam.com/
+
+article.cfm?id=the-semantic-web. A primeira sentença indica que o recurso foi criado em
+2001 (propriedade dc:date), a segunda afirma que o recurso é um artigo científico (predicado
+rdf:type), e a terceira sentença indica que um dos seus criadores é Tim Berners-Lee
+(predicado dc:creator), cujo valor é a homepage do autor . Também apresenta duas sentenças
+que descrevem http://www.w3.org/People/Berners-Lee/, indicando que este recurso
+representa uma pessoa (propriedade rdf:type) e que o nome desta pessoa é Tim Berners-Lee
+(propriedade foaf:name). A figura 1b apresenta estas mesmas sentenças em uma notação
+gráfica, em que os predicados indicam as ligações entre sujeitos e objetos. Em RDF, os tipos
+(como artigo científico) e propriedades (como criador), especificados em ontologias, também
+são identificados via URI. Por exemplo, o tipo artigo acadêmico é representado pelo endereço
+
+http://purl.org/ontology/bibo/AcademicAticle27, e a propriedade criador é identificada por
+http://purl.org/dc/elements/1.1/creator28.
+RDFS é uma linguagem para a representação de ontologias. RDFS permite a
+especificação formal de conceitualizações através de dois instrumentos básicos, classes e
+propriedades, e restrições para classes e propriedades. Classes e propriedades usam URIs
+como identificadores, tendo assim uma identificação única no domínio da web.
+Várias ontologias surgiram para a Web Semântica. Para descrever recursos da ciência,
+são bastante usadas as ontologias Foaf29, que conceitualiza pessoas (pesquisadores) e suas
+relações, BiBO30, que conceitualiza recursos acadêmicos, como artigo, livro,
+
+tese,
+
+conferência, periódico, e SIOC31, que especifica elementos de comunidades online, como
+comunidade, fórum, post, blog, e artigo de wiki. Muitos esquemas de metadados
+desenvolvidos para bases de dados também possuem representações na Web Semântica,
+especificadas em RDFS ou OWL, como Dublin Core32, CIDOC/CRM33.
+A Web Semântica, além de dar significado para os recursos da web, também está
+sendo usada como plataforma para a publicação de dados. Dados Ligados (Linked Data) é o
+termo usado para referir dados publicados e interligados na web através da infraestrutura da
+Web Semântica. Dados publicados como dados ligados são identificados via URI e
+representados através de triplas RDF. A identificação de dados via URI facilita a interligação
+de dados, pois dados provenientes de fontes distintas passam a utilizar mesmas URIs para
+referenciar (identificar) os mesmos objetos. Nos Dados Ligados, o valor e a utilidade dos
+dados aumenta à medida que estes estão interligados com outros dados.
+
+(BIZER,
+
+CYGANIAK e HEATH, 2007)
+Vários projetos envolvendo recursos científicos têm sido desenvolvidos no cenário da
+Web Semântica/Dados Ligados (quadro 1). Semantic Web Dog Food34, Faceted DBLP35 e
+JISC Open Citations36 são bases de dados bibliográficas em RDF. Archaeology Data
+27
+
+Na figura 1, a notação bibo:AcademnicArticle corresponde à URI
+http://purl.org/ontology/bibo/AcademicArticle, em que bibo é nome dado ao endereço onde está
+AcademicArticle.
+28
+Na figura 1, http://purl.org/dc/elements/1.1/creator está representada pela notação dc:creator, em que dc
+corresponde à http://purl.org/dc/elements/1.1
+29
+Friend of a Friend. Especificada em: http://xmlns.com/foaf/spec/
+30
+Bibliographic Ontology. Especificada em http://bibliontology.com/
+31
+Semantically-Interlinked Online Communities. Especificada em http://www.w3.org/Submission/sioc-spec/
+32
+Dublin Core em RDF. Especificada em http://dublincore.org/documents/dc-rdf/
+33
+CIDOC. Conceptual Reference Model. Usada na descrição de bens culturais. Especificada em
+http://www.cidoc-crm.org/official_release_cidoc.html
+34
+Semantic Web Dog Food. BD Bibliográfica em RDF. Disponível em: http://data.semanticweb.org/
+35
+Faceted DBLP. BD Bibliográfica DBLP em RDF. Disponível em http://dblp.l3s.de/d2r
+36
+JISC Open Citations . BD PubMed Central em RDF. Disponível em http://opencitations.net/
+
+Service37, VIVO38, Eagle-i39 e LODUM40 são ambientes que descrevem recursos da ciência,
+envolvendo não somente publicações científicas, mas também dados de pesquisas,
+pesquisadores, centros de pesquisa e projetos. VIVO e Eagle-I são ambientes que envolvem a
+descrição de recursos da ciência, abrangendo redes de universidades e centros de pesquisa.
+LODUM é um ambiente de caráter institucional, pois descreve os recursos de ciência da
+Universidade de Muenster. Europeana Linked Data Pilot41 é um projeto que disponibiliza na
+Web Semântica metadados de bases de dados culturais, coletados via OAI-PMH. O cenário
+em torno desses ambientes tem sido chamado de Linked Science.
+Quadro 1 – Projetos Linked Data na Ciência
+Europeana Linked Data Publicação dos dados da Europeana, um provedor de serviços
+Pilot
+que colhe metadados de 1500 instituições culturais da Europa
+Semantic Web Dog Food
+Artigos, conferências, organizações e pessoas da área da Web
+Semântica
+Faceted DBLP
+Publicação em Linked Data da base de dados bibliográfica
+DBPL, da Ciência da Computação
+Archaeology Data Service Publicação da base de dados Archaeology Data Service (ADS),
+que envolve recursos de pesquisa, aprendizado e ensino,
+preservando e disseminando dados de arqueologia
+JISC Open Citations
+Publicação da base de dados Open Citations, uma base de
+dados de citações de literatura biomédica, colhida s a partir das
+referências de artigos abertos de PubMedCentral-UK
+LODUM
+Linked Open Data University of Muenster. Ativos de ciência
+produzidos pela Universidade de Muenster
+VIVO
+Rede interdisciplinar que viabiliza a colaboração e a descoberta
+entre cientistas de todas as disciplinas
+Eagle-i
+Plataforma de descoberta de recursos para auxiliar cientistas
+biomédicos a busca e encontrar recursos previamente invisíveis
+mas altamente valioso (instrumentos, protocolos, reagentes,
+modelos animais, etc)
+Fonte: Autor.
+Estes ambientes demonstram novos horizontes para a disseminação da ciência.
+Caracterizam-se não somente por descreverem autores e publicações científicas, mas também
+por incluírem descrições de outros tipos de recursos, como centros de pesquisa, projetos de
+pesquisa, pesquisadores, e dados primários utilizados nas pesquisas. Tudo isso, em uma
+plataforma em que os recursos têm seus significados descritos de forma compreensível por
+37
+
+Dados de arqueologia representados em RDF. Disponível em:http://data.archaeologydataservice.ac.uk/page/
+VIVO. Plataforma que descreve recursos da ciência. Disponível em: http://vivoweb.org/about
+39
+Eagle-i. Plataforma que descreve recursos da ciência. Disponível em: https://www.eagle-i.net/
+40
+LODUM. Descreve os recursos científicos da Universidade de Muenster. http://data.uni-muenster.de
+41
+Metadados em RDF do provedor de serviço Europeana. Disponívem em: http://europeana.ontotext.com
+38
+
+máquinas, e representados em estruturas simples, que são as triplas RDF. Além disso, estes
+recursos são facilmente interligados, pois utilizam URIs como identificadores.
+5 O AMBIENTE FABRICO
+Visando investigar as fronteiras entre Arquivos Abertos, Web 2.0, Web Semântica e
+Linked Data, o ambiente Fabrico foi desenvolvido. Tem como objetivo ser uma plataforma
+para desenvolver estudos e experimentos que combinam características de Arquivos Abertos,
+Web 2.0, Web Semântica e Dados Ligados.
+O ambiente seguiu os princípios de O´Reilly (2007) para o desenvolvimento de
+software para Web 2.0: é um serviço para plataforma web (e não um produto de prateleira),
+que tira proveito da inteligência coletiva, e é focado em uma arquitetura de participação. Sua
+estrutura interna segue a arquitetura da Web Semântica: as informações são armazenadas em
+RDF e de acordo com ontologias especificadas em RDFS/OWL. Pelo ponto de vista dos
+Arquivos Abertos, o ambiente é um provedor de serviços que utiliza o protocolo OAI-PMH
+para colher metadados de provedores de dados e armazena estes metadados como triplas
+RDF.
+A figura 2 apresenta a arquitetura de Fabrico, cuja cor identifica a origem de cada um
+de seus componentes: Web 2.0, Web Semântica/Dados Ligados e Arquivos Abertos. No
+Fabrico, os metadados podem ser obtidos de três formas: além colheita de metadados (via
+componente OAI-PMH, figura 2), metadados podem ser importados a partir de triplas RDF
+codificadas em documentos XML (módulo de importação, na figura 2), ou criados por
+usuários através de anotações. As anotações de usuários são realizadas através do componente
+denominado anotador (fig. 2). Nele, usuários descrevem recursos da web, produzindo
+sentenças RDF de acordo com ontologias. Ao anotar um recurso da web, um usuário informa
+a URI do recurso, e indica o seu tipo, selecionando uma classe da ontologia. O anotador,
+então, gera um formulário cujos campos correspondem às propriedades especificadas na
+ontologia para a classe selecionada. Esses campos representam as sentenças RDF possíveis
+para anotar um recurso da classe informada. O anotador também é configurado para atuar
+como editor de ontologias (fig. 2), isto é, para construir ontologias.
+Sob o ponto de vista da Web 2.0, o anotador é desenvolvido de acordo com uma
+arquitetura de participação, em que a interface de anotação adapta-se de acordo como as
+classes selecionadas para o recurso que está sendo descrito. Também é um ambiente de
+catalogação coletiva, no qual os usuários descrevem (anotam) coletivamente os recursos da
+web. O anotador registra o histórico das anotações, incluindo quem executou cada anotação.
+
+Esses registros, com o intuído de incentivar a anotação colaborativa, são usados para
+identificar uma rede social de colaboração entre usuários (figura 2). O ambiente mostra
+usuários que estão relacionados por descreverem mesmos recursos, apresenta os últimos
+recursos descritos, assim como os recursos mais descritos e os usuários mais ativos. A
+catalogação colaborativa também é apoiada por fóruns e wikis (figura 2), pois o ambiente
+permite a criação destes instrumentos para resolver conflitos, incrementar a discussão, ou
+agregar conhecimentos, tendendo como foco os recursos anotados.
+O ambiente também explora folksonomias (figura 2), em que usuários, através de
+anotações em RDF, atribuem livremente etiquetas a recursos. As etiquetas são agregadas e
+relacionadas. O ambiente apresenta as etiquetas na forma de nuvem, em que o tamanho
+indica a frequência de uso. Para uma determinada etiqueta, mostra as etiquetas relacionadas
+(por serem atribuídas a mesmos recursos), e os usuários que atribuíram esta etiqueta a
+recursos. Para um determinado usuário, mostra suas etiquetas e os conteúdos etiquetados.
+Também utiliza medidas de similaridade (coeficientes de Jaccard42, Dice43 e Cosine44) para
+identificar similaridades entre etiquetas e usuários (usuários próximos por utilizarem etiquetas
+similares).
+Figura 2 - Arquitetura do Fabrico
+Provedor de Serviços - OAI
+Wiki
+
+Fórum
+
+Rede de
+Colaborações
+
+Folksonomias
+
+Anotador
+
+Editor de
+Ontologias
+
+Busca
+
+Ontologias
+OWL
+
+Repositório
+Triplas no formato RDF
+
+Importação/Exportação
+RDF/XML
+
+Colheita de Metadados via
+OAI-PMH
+Web 2.0
+
+Web Semântica
+
+Arquivos Abertos
+
+Fonte: Autor.
+
+Essas técnicas de agregação, relacionamento e similaridade não são exclusivas para
+etiquetas. Elas podem ser utilizadas para analisar qualquer propriedade utilizada em sentença
+42
+
+Fórmula disponível em: http://en.wikipedia.org/wiki/Jaccard_index
+Fórmula disponível em: http://en.wikipedia.org/wiki/Dice%27s_coefficient
+44
+Fórmula disponível em: http://en.wikipedia.org/wiki/Cosine_similarity
+43
+
+RDF, isto é, para agregar valores de uma propriedade, verificar coocorrências desses valores,
+relacionar valores com usuários, e apresentar similaridades entre valores e entre usuários.
+6 O EXPERIMENTO FABRICO/CIÊNCIA
+No cenário atual, os Arquivos Abertos são uma realidade. Repositórios e revistas
+eletrônicas multiplicam-se em universidades e instituições de pesquisa. Estas bases de dados
+são desenvolvidas como provedoras de serviços da arquitetura OAI-PMH e compõem imensas
+federações de bases de dados que provém de serviços de consulta.
+Também presenciamos uma web que está em constante evolução, principalmente em
+aspectos de “tirar proveito da inteligência coletiva” (Web 2.0), permitir que os recursos da
+web possam ser “entendidos por programas de computador inteligentes” (Web Semântica) e
+ligar dados provenientes de várias fontes (Dados Ligados). Os Arquivos Abertos estão
+focados em armazenar e descrever documentos científicos, mas a perspectiva que se forma em
+torno da publicação e de disseminação de recursos da ciência é mais ampla quando
+consideramos uma web que evolui para uma Web Semântica e com Dados Ligados. Além da
+descrição de textos científicos, Web Semântica e Dados Ligados envolvem a descrição de
+outros tipos de recursos da ciência, como instituições, pesquisadores, projetos, dados da
+ciência, etc. Essa nova perspectiva para descrever recursos da ciência é experimentada em
+projetos recentes, descritos no quadro 1, como VIVO, Eagle-i, LODUM e Europeana Linked
+Data Pilot.
+O experimento Fabrico/Ciência é um provedor de serviços que colhe metadados de
+revistas eletrônicas da Ciência da Informação e os armazena na forma de triplas RDF, e de
+acordo com uma ontologia que expressa Dublin Core. Nesse ponto, o ambiente assemelha-se
+em funcionalidade com o projeto Europeana Linked Data Pilot.
+O módulo de colheita dispõe de um mecanismo, baseado em regras de transformações
+sintáticas, para uniformização de formatos de representação de valores colhidos, como, por
+exemplo, transformar nomes de autores da notação “Sobrenome, Nome” para “Nome
+Sobrenome”, ou para lidar com campos com valores repetidos, individualizando as repetições
+(individualizar vários autores ou palavras-chave codificados em um único campo, sendo
+separados por vírgula ou ponto e vírgula). Para identificar a proveniência dos metadados
+colhidos, o ambiente utiliza o recurso da reificação45, em que cada tripla RDF colhida é
+
+45
+
+Reificação em RDF: Especificada em: http://www.w3.org/TR/REC-rdf-syntax/#section-Syntax-reifying
+
+considerada um recurso, com descrições indicam sua proveniência (data da colheita e
+conjunto colhido).
+A partir dos dados colhidos, Fabrico/Ciência disponibiliza aos seus usuários recursos
+poderosos de agregação que permitem investigar os rumos da ciência. Mostra frequências de
+valores e valores relacionados de forma semelhante com que folksonomias apresentam nuvens
+de etiquetas e etiquetas relacionadas. O quadro 2 enumera algumas investigações possíveis
+através do Fabrico/Ciência, e exemplos são mostrados por meio das figuras 3 e 4.
+Quadro 2 - Exemplos de exploração dos dados em Fabrico/Ciência
+Função
+Valores de Propriedades
+(incluindo frequência)
+Totais e médias de valores e
+recursos
+usados
+em
+propriedades
+Coocorrência entre valores
+de uma propriedade
+Coocorrência entre valores
+de uma propriedade com
+valores de outra propriedade
+Similaridade entre valores de
+propriedade
+Fonte: autor
+
+Exemplo
+Autores que mais publicam, palavras chave mais frequentes
+Média de autores por publicação, total de autores, total de
+assuntos, total de publicações por ano, etc.
+Termos relacionados (cotermos), autores relacionados
+(coautoria), etc.
+Assuntos de um autor, anos de produção de um autor,
+assuntos de um ano, autores de um assunto, anos de um
+assunto, etc.
+Similaridade entre autores por utilizarem mesmos assuntos
+ou por escreverem com mesmos autores, etc.
+
+Fabrico/Ciência permite investigar a frequência dos valores de cada propriedade
+(figura 3) através da exibição destes valores na forma de nuvem (listados em ordem
+alfabética, com a frequência de ocorrência sendo indicada pelo tamanho das letras). Para cada
+propriedade, mostra o total de recursos descritos, totais e médias de valores, e a ocorrência de
+valores. Por exemplo, a figura 3 apresenta a propriedade dc:creator (autor) tendo como base
+nos metadados colhidos da revista Em Questão46. Nela, podemos identificar a média de
+autores por publicação, e os totais de autores e de publicações. A nuvem indica os autores
+que mais comunicaram por meio desta revista, isto é, os autores mais frequentes. Essa mesma
+funcionalidade, se fosse aplicada à propriedade dc:subject (assunto), permitiria identificar os
+assuntos mais frequentes, média de assuntos por artigo, etc.
+
+46
+
+Revista em Questão. Disponível em: http://seer.ufrgs.br/EmQuestao
+
+Figura 3 – Fabrico/Ciência: Propriedade dc:criador para a revista Em Questão
+
+Fonte:Autor.
+A figura 4 apresenta três exemplos de uso do mecanismo de análise de coocorrência,
+que pode ser configurado para analisar a coocorrência para qualquer valor de uma
+propriedade, incluindo valores que coocorrem em outras propriedades. O primeiro exemplo da
+figura 4 apresenta a análise de coocorrência para o autor (propriedade dc:creator) mais
+frequente da revista Em Questão (autor da figura 3 escrito com as maiores letras). Para este
+autor, mostra os autores corelacionados (coautoria), em uma nuvem cujo tamanho de letra
+indica a frequência da coautoria. A segundo exemplo da figura 4 apresenta os assuntos deste
+mesmo autor, isto é, os assuntos (propriedade dc:subject) que foram atribuídos aos artigos do
+autor (propriedade dc:creator), com a frequência sendo representada pelo tamanho da letra.
+O último exemplo da figura 4 tem como foco a análise da propriedade dc:subject (assunto)
+para o valor “identidade cultural”. Nesse caso, apresenta os valores do campo dc:creator que
+ocorrem em artigos cujo assunto é ”identidade cultural”, isto é, apresenta os autores
+relacionados a este assunto, em que o tamanho da letra indica a frequência.
+As funcionalidades do ambiente foram utilizadas em uma investigação sobre qualidade
+dos metadados em revistas eletrônicas (RETANCOURT e ROCHA, 2012). Nesse trabalho o
+ambiente mostrou-se útil, à medida que proporcionou mecanismos para analisar a frequência
+de uso de cada propriedade, média de valores por propriedade, os valores mais usados, os
+
+valores fora da normalização, etc. Por exemplo, o ambiente mostrou-se eficiente para
+identificar valores não normalizados de forma correta (como nome de autor representado de
+formas diferentes), em que mecanismo de análise de coocorrência e similaridade facilitam a
+identificação destas. Por exemplo, funções de similaridade normalmente apresentam, como
+similares, mesmos autores com nomes escritos de forma diferente.
+Figura 4 – Fabrico/Ciência: Análises de Coocorrência
+
+O ambiente também foi investigado sob a ótica das ferramentas para o mapeamento da
+ciência (ROCHA, 2012). Nessa investigação, os recursos de Fabrico/Ciência foram analisados
+
+de acordo com ferramentas/atividades para o mapeamento da ciência47 apresentadas por Cobo
+et al (2011) em que:
+Conclui-se que o Fabrico/Ciência apresenta predicados para dar apoio a
+diversas pesquisas na área do mapeamento da ciência, com destaque para
+investigações
+que
+envolvem
+fontes
+de
+dados
+(colheita,
+representação/ontologias, agregação de dados de usuários, relacionamento
+com outros tipos de dados disponibilizados via Linked Data), préprocessamento (integração baseada em ontologias, interligação com Linked
+Data, preparação coletiva de dados) e normalização de dados (redes de
+similaridades) (ROCHA, 2012).
+
+Este estudo observa que o ambiente “não dispõe de métodos para construção de mapas
+e reduções de redes”, desencadeando uma nova atividade de pesquisa que envolve o
+desenvolvimento de ontologia e funcionalidades para, respectivamente, representar e analisar
+redes.
+7 CONSIDERAÇÕES FINAIS
+Fabrico/Ciência demonstra a relevância da exploração combinada de instrumentos dos
+Arquivos Abertos, da Web 2.0, da Web Semântica e de Dados Ligados para a comunicação e
+disseminação da ciência. É um experimento que agrega valor aos Arquivos Abertos, à medida
+que é um provedor de serviços (segundo OAI-PMH) que não limita-se a oferecer mecanismos
+de busca, mas que também disponibiliza os metadados provenientes dos Arquivos Abertos no
+ambiente da Web Semântica/Dados Ligados, e oferece instrumentos de agregação, baseados
+nas folksonomias, para a exploração destes metadados.
+A disponibilização de metadados de Arquivos Abertos na plataforma Web
+Semântica/Dados Ligados é experimentada pelo projeto Europeana Linked Data Pilot.
+Entretanto, este projeto explora somente instrumentos de busca da Web Semântica. Ao
+utilizar a Web Semântica como plataforma, Fabrico/Ciência permite não somente a
+disponibilização nessa plataforma de metadados proveniente dos Arquivos Abertos, mas
+também a descrição de outros tipos de recursos da ciência, como pesquisadores, centros de
+pesquisa, projetos de pesquisa, dados de pesquisa, e o relacionamento entre estes recursos. A
+interconexão semântica de dados bibliográficos e de ativos de ciência proporciona maior
+transparência dos resultados científicos obtidos (KAUPPINEN; BAGLATZI; KESSLER,
+2011). Nesse sentido, o experimento Fabrico/Ciência alinha-se a VIVO, Eagle-I e LODUM. .
+O experimento Fabico/Ciência iniciou pela colheita de metadados em Arquivos
+Abertos, pela representação destes na Web Semântica e pelo uso de mecanismos de agregação
+47
+
+Busca de dados, Pré-processamento, Normalização, Mapeamento, Análise e Visualização
+
+para a exploração dos dados (foco deste artigo). Investiga-se agora a descrição de novos tipos
+de recursos da ciência (como pesquisadores, instituições, dados da ciência, etc.). Para tal,
+analisa-se ontologias existentes e usadas para descrever estes recursos (incluindo ontologias
+dos ambientes VIVO, Eagle-I e LODOM), e o uso de links (URIs) para identificar as
+entidades (como seus endereços na Wikipedia, Facebook, etc.). Nesta investigação, o editor
+de ontologias do Fabrico (ROCHA, 2010) está sendo utilizado. O uso da anotação semântica,
+de wiki e de fórum, por parte dos usuários, para agregar valor a estes conteúdos (Web 2.0),
+embora já presente no ambiente, somente será experimentado após a conclusão do
+desenvolvimento/uso da ontologia para descrever os recursos da ciência.

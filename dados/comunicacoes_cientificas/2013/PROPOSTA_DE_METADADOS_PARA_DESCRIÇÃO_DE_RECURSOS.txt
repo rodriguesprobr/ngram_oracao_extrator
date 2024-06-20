@@ -1,0 +1,212 @@
+
+Pôster
+PROPOSTA DE METADADOS PARA DESCRIÇÃO DE RECURSOS
+INFORMACIONAIS DIGITAIS CRIADOS DINAMICAMENTE
+
+Resumo
+A Lei de Acesso à Informação, sancionada em 18 de novembro de 2011, regulamenta o
+direito constitucional de acesso às informações públicas pelos cidadãos brasileiros, sendo
+aplicada aos 3 poderes do Governo Federal, Governo Estadual e Governo Municipal. Com
+esta lei, os sítios oficiais do governo foram obrigados a disponibilizar informações de
+interesse público em seus portais. Porém a mesma não define uma arquitetura ou um formato
+no qual dados e informações devam estar disponibilizadas de forma inteligível para o cidadão.
+O objetivo desse trabalho é definir um conjunto de metadados capaz de representar a estrutura
+desses dados, servindo como um elemento mediador entre eles, sistemas e aplicações que
+possam utilizar tais dados para as mais variadas finalidades. Destaca-se ainda a necessidade
+de propor um modelo de representação descritiva de Recursos Informacionais Digitais criados
+dinamicamente disponibilizados pelos governos em seus sítios oficiais usando metadados que
+possam ser utilizados em processos de recuperação. Desta forma, o cidadão poderá localizar o
+ponto exato em que é gerada uma tabela de resultado de uma determinada consulta sem passar
+pela estrutura (caminho) que hoje é hierarquizado. Vale lembrar que o foco deste trabalho está
+na recuperação e não na preservação do recurso. Como resultado deste trabalho foi proposto
+um conjunto de metadados para descrição de Recursos Informacionais Digitais criados
+dinamicamente e uma ferramenta capaz de materializar tais recursos.
+Palavras-chave: Dados abertos. Metadados. Recursos Informacionais Digitais.
+
+INTRODUÇÃO
+A Lei de Acesso à Informação (LAI), sancionada em 18 de novembro de 2011, passou
+
+a regulamentar o direito constitucional de acesso às informações públicas pelos cidadãos
+brasileiros, sendo aplicada aos 3 poderes do Governo Federal, Governo Estadual e Governo
+Municipal. De acordo com o Artigo 8º, é dever dos órgãos e entidades públicas promover,
+independentemente de requerimentos, a divulgação em local de fácil acesso, no âmbito de
+suas competências, de informações de interesse coletivo ou geral por eles produzidas ou
+custodiadas. (BRASIL, 2012).
+Entretanto, a LAI não define a forma como essas informações e dados deverão estar
+disponíveis. A falta de uma padronização pode ser facilmente observada ao acessar os sítios
+oficiais dos governos. Mesmo a lei não sendo clara, infere-se que tais dados e informações
+devam estar em formato de dados abertos. Para o Open Knowledge Foundation, dados abertos
+são aqueles que qualquer pessoa pode usar livremente, reutilizar e redistribuir, estando sujeito,
+no máximo, à exigência de creditar a sua autoria e compartilhar pela mesma licença. Essas
+exigências são geralmente satisfeitas pela publicação dos dados em formato aberto e sob uma
+licença aberta.
+Verifica-se, portanto, que os sítios oficiais dos governos não seguem o princípio de
+dados abertos. Em muitos casos, tais dados são disponibilizados em páginas dinâmicas, só
+existentes durante e enquanto sua visualização no navegador. Essa “imaterialidade” restringe
+o acesso, a descrição, a recuperação e a utilização desses dados por ferramentas
+automatizadas.
+O objetivo principal deste trabalho é propor um conjunto de metadados que seja capaz
+de descrever, representar e materializar páginas criadas dinamicamente. O desenvolvimento
+dessa proposta tornou-se possível por meio do estudo de padrões de metadados capazes de
+representar as páginas criadas dinamicamente. Além disso, propõe-se o desenvolvimento de
+um software que faça a descrição, o registro e o armazenamento físico dessas páginas.
+2
+
+METADADOS PARA DESCRIÇÃO DE RECURSOS INFORMACIONAIS
+DIGITAIS CRIADOS DINAMICAMENTE
+O termo metadados está relacionado com o tratamento da informação, em especial às
+
+formas de representação que caracterizam um recurso informacional para fins de
+identificação, de localização e de recuperação (GILLILAND-SWETLAND, 1999).
+Fusco (2010), afirma que os padrões de metadados têm como objetivo principal
+estabelecer um grau de normalização, padronização de representação descritiva automatizada
+dos dados informacionais, favorecendo a compatibilidade e a transferência de dados legíveis
+
+por computador, possibilitando o compartilhamento e a cooperação de recursos e serviços
+entre diferentes unidades de informação.
+Atualmente, as consultas realizadas em um sítio oficial do governo apresentam
+resultados de acordo com filtros (parâmetros) cujos valores devem ser previamente definidos
+pelo usuário. A página resultante é criada em tempo de execução, ou seja, só existe este
+recurso enquanto o navegador estiver aberto. Caso o navegador seja fechado, o resultado da
+consulta se perde sendo necessário executar todo o procedimento novamente incluindo a
+seleção dos mesmos filtros (parâmetros) para acessar o mesmo recurso. Esses Recursos
+Informacionais Digitais precisam ser descritos por meio de metadados para que possam ser
+localizados e recuperados.
+Vale lembrar que a cada nova consulta e dependendo do caminho percorrido, os
+resultados podem e serão diferentes. Para contornar essa situação, é apresentada uma proposta
+de metadados para descrição de Recursos Informacionais Digitais criados dinamicamente;
+esses metadados descreverão o caminho do Recurso Informacional Digital e permitirão o
+acesso direto à tal recurso.
+Para se chegar a proposta do conjunto de metadados objeto deste trabalho, foi feita
+uma análise detalhada do grau de aderência dos padrões de metadados MARC, Dublin Core e
+e-PMG na descrição de Recursos Informacionais Digitais criados dinamicamente analisando
+cada um de seus elementos e verificando se seria possível utilizá-lo na descrição de tal
+recurso. Devido a natureza deste recursos, foram utilizados alguns elementos dos padrões
+citados anteriormente e propostos novos elementos que são capazes de descrever os recursos.
+Os Recursos Informacionais Digitais criados dinamicamente, diferem de páginas físicas pois
+só existem em tempo de execução enquanto o navegador estiver aberto e, na maioria das
+vezes, não podem ser acessados apontando diretamente seu endereço eletrônico.
+Para tornar possível a descrição e recuperação de um Recurso Informacional Digital
+criado dinamicamente, é necessário definir dois tipos de Recursos Informacionais Digitais e
+seus respectivos metadados:
+Página Menu (PM): define-se como a página web física onde constam os filtros
+(parâmetros) que serão selecionados para formar o Recurso Informacional Digital (Página
+Resultado), está página web pode ser acessada diretamente via endereço eletrônico.
+Metadados: URL, Filtro (Filter), Titulo (Title), Assunto (Subject), Descrição (Description),
+Autor (Author), Data (Date) e Colaborador (Contributor).
+Página Resultado (PR): define-se como a página web abstrata formada pela seleção
+dos filtros (parâmetros) na Página Menu, é uma página web que geralmente não pode ser
+
+acessada via endereço eletrônico (URL) diretamente, seja pela complexidade do endereço seja
+pela característica da mesma. Esta página só existe enquanto o navegador estiver ativo, ao
+fechá-lo esta referência é perdida. Metadados: URL, Campo (Field), Formato (Format), Título
+(Title), Assunto (Subject), Descrição (Description), Autor (Author), Data (Date) e
+Colaborador (Contributor).
+Esse novo conjunto de metadados se difere dos padrões já consagrados apresentados
+anteriormente, pois são capazes de unir as páginas menu e as páginas resultados em um único
+conjunto de metadados. Além disso, é de suma importância a propostas de elementos
+específicos para os Recursos Informacionais Digitais criados dinamicamente uma vez que é
+intenção criar mecanismos de recuperação efetiva de tais recursos sem ter que fazer toda a
+seleção de filtros (parâmetros) e recuperá-los mesmo que estejam indisponíveis via web por
+meio do recurso materializado.
+Para exemplificar o uso da proposta de metadados para descrição de Recursos
+Informacionais Digitais, o Quadro 1 - Representação de um Recurso Informacional Digital
+criado dinamicamente apresenta os elementos de um recurso criado dinamicamente a partir do
+sítio da Controladoria Geral da União. É importante salientar que os metadados referentes à
+Página Menu são identificados por "PM" e os metadados referentes às Páginas Resultados são
+identificados por "PR" .
+Quadro 1 - Representação de um Recurso Informacional Digital criado dinamicamente
+Elemento
+Descrição
+PM.URL
+http://www.portaldatransparencia.gov.br/
+PM.Autor
+Controladoria Geral da União
+PM.Título
+Transferências de Recursos
+PM.Assunto
+Transferências de recursos do Poder Executivo Federal
+Esta pesquisa permite acompanhar os recursos públicos transferidos pela União ao
+exterior, a estados e municípios brasileiros, ao Distrito Federal, a instituições privadas
+PM.Descrição
+e aos cidadãos, bem como conferir os gastos diretos do Poder Executivo Federal. A
+atualização dos dados é mensal.
+PM.Data
+2013-07-24
+PM.Colaborador
+Lisandro Rogério Modesto
+PM.Filtro
+Exercício; 2013
+PM.Filtro
+Programa
+http://www.portaldatransparencia.gov.br/PortalTransparenciaTRProgramaPesquisaPro
+PR.URL
+grama.asp?Exercicio=2013
+PR.Autor
+Controladoria Geral da União
+PR.Título
+Transferências de Recursos por Programa
+PR.Assunto
+Recursos do Poder Executivo Federal
+PR.Descrição
+Total destinado pelo Governo Federal em âmbito nacional em 2013
+PR.Data
+2013-07-24
+PR.Colaborador
+Lisandro Rogério Modesto
+PR.Campo
+Total no Ano (R$)
+PR.Campo
+Programa
+PR.Formato
+HTML
+
+3
+
+SISTEMA WEB PARA DESCRIÇÃO DE RECURSOS INFORMACIONAIS
+DIGITAIS CRIADOS DINAMICAMENTE
+O sistema Web MDDIR (Metadata for Describing Digital Information Resources -
+
+MDDIR-TOOL) é caracterizada por funcionalidades que possibilitam o processo de descrição
+de Recursos Informacionais Digitais criados dinamicamente.
+Este sistema poderá ser usado toda vez que for feita uma consulta em um sítio e, ao
+selecionar filtros (parâmetros) específicos, um Recurso Informacional Digital for criado
+dinamicamente. Por meio deste sistema é possível fazer a descrição do recurso, materializá-lo
+e posteriormente localizá-lo.
+O sistema possui 3 funcionalidades básicas, são elas: Cadastro, Consulta por Filtro e
+por Palavras-Chaves. A funcionalidade de Cadastro permite efetuar o lançamento dos
+metadados que descreverão a Página Menu (Figura 1a). Após serem preenchidos os campos o
+usuário pode FINALIZAR ou prosseguir com a descrição de uma nova Página Resultado
+(Figura 1b) por meio da opção PRÓXIMO. Os campo URL e Título são de preenchimento
+obrigatório tanto na Página Menu como no cadastramento das Páginas Resultado.
+A funcionalidade Consulta por Filtro, apresenta uma tela de seleção de parâmetros
+(Campos, Filtros e Formato) que poderão ser selecionados a fim de recuperar páginas que
+possuem determinados campos e/o filtros, ou de algum determinado formato.
+Consulta por Palavras-Chave permite que o usuário digite dados presentes em um dos
+recursos (páginas) cadastrados no banco de dados do sistema, a fim de localizar um recurso
+específico.
+Figura 1 - Telas do sistema MDDIR Tool
+
+(a)
+
+(b)
+Fonte: Elaborada pelos autores
+
+As páginas descritas são materializadas e ficam armazenados no banco de dados da
+ferramenta. Assim, caso a página venha a deixar de existir ou não possa mais ser localizado,
+basta efetuar uma consulta e clicar no link da Cópia Local para que seja apresentada.
+4
+
+CONSIDERAÇÕES FINAIS
+Para que leis como a Lei de Acesso à Informação surtam efeito, é necessário que o
+
+cidadão reivindique a disponibilização efetiva de dados que sejam passíveis de serem
+utilizadas para finalidades variadas, de acordo com sua necessidade. Para tanto, é necessário
+que sejam criados mecanismos que facilitem a busca e a recuperação desses dados.
+No ambiente Web a descrição de recursos informacionais é fundamental para a sua
+efetiva e eficiente recuperação. Atualmente os sítios do governo não realizam essa descrição
+de forma padronizada, utilizando padrões de metadados já consagrados. Este trabalho propõe
+um conjunto de metadados que possa descrever os recursos informacionais apresentados em
+páginas Web criadas dinamicamente para que estas possam ser utilizadas a qualquer tempo.
+Para tanto, está sendo desenvolvido um sistema web que “materializa” e descreve recursos
+informacionais que originalmente não estão prontamente acessíveis.

@@ -1,0 +1,444 @@
+
+ONTOLOGIA BASEADA NOS FRBR: PROPOSTA DE APLICAÇÃO EM
+CATÁLOGOS ONLINE
+Resumo: Com o desenvolvimento e a popularização de tecnologias informacionais
+ampliaram-se e inovaram-se as formas de produção e registro do conhecimento humano de
+modo a ser possível recorrer aos mais variados suportes para seu registro. Observa-se,
+também, que, com o aumento exponencial da criação, da transmissão e da transferência de
+informações em meios digitais, um novo paradigma informacional é apresentado, com
+destaque ao acesso e não à propriedade. Diante desse cenário, e com o intuito de garantir a
+recuperação e o (re)uso de informações, (re)definem-se métodos e instrumentos de
+organização, disseminação e acesso aos registros, no qual destacam-se as ontologias e a
+catalogação. Neste sentido, apresenta-se a seguinte questão de pesquisa: é possível utilizar as
+relações existentes entre as entidades dos Requisitos Funcionais dos Registros Bibliográficos
+como substratos teóricos no desenvolvimento de ontologias, para que seja possível garantir
+aos usuários pela navegação, o desenvolvimento de tarefas que permitam encontrar,
+identificar, selecionar e obter acesso aos recursos bibliográficos? Apresenta-se como objetivo
+geral desenvolver um protótipo de ontologia baseada nas relações previstas entre as entidades
+dos Requisitos Funcionais dos Registros Bibliográficos (FRBR), que considera, em seu bojo,
+as tarefas a serem desempenhadas pelos usuários. Define-se, como objetivos específicos,
+analisar as contribuições teórico-metodológicas da Ciência da Informação no
+desenvolvimento de ontologias na representação da informação, com suas ferramentas,
+técnicas, tecnologias e metodologias; e descrever entidades e relacionamentos previstos nos
+Requisitos Funcionais de Registros Bibliográficos e sua correlação com as tarefas a serem
+desempenhadas pelos usuários. A pesquisa caracteriza-se com abordagem qualitativa, de
+natureza aplicada, com objetivos exploratórios e descritivos e recorre-se à pesquisa
+bibliográfica e documental para a construção do arcabouço teórico. Optou-se, como
+procedimento metodológico que permita viabilizar a resposta à questão de pesquisa, pelo
+desenvolvimento de um protótipo que se utiliza das entidades e relacionamentos previstos nos
+FRBR como substrato teórico para a elaboração da ontologia. Os resultados demonstram
+viabilidade parcial de se recorrer às entidades dos Requisitos Funcionais de Registros
+Bibliográficos para fundamentar o desenvolvimento de ontologias. Esse resultado é
+decorrente do fato de serem encontradas dificuldades conceituais para a modelagem, haja
+vista os FRBR considerarem que algumas das entidades podem estar previstas em dois
+grupos. Tal situação faz com que a modelagem seja considerada conceitualmente incorreta,
+uma vez que não é possível satisfazer aos critérios de entidades pertencerem a diferentes
+grupos, caracterizando polissemia.
+Palavras-chave: Ontologias. Representação da Informação. Catalogação. Requisitos
+Funcionais para Registros Bibliográficos.
+1 INTRODUÇÃO
+Ao longo dos anos, com o desenvolvimento e a popularização de tecnologias
+informacionais, ampliaram-se e inovaram-se as formas de produção e registro do
+conhecimento humano de modo a ser possível recorrer aos mais variados suportes para seu
+registro, quer sejam analógicos, eletrônicos ou digitais. Observa-se, também, que, com o
+aumento exponencial da criação, da transmissão e da transferência de informações em meios
+digitais, um novo paradigma informacional é apresentado, com destaque ao acesso e não à
+propriedade, sendo possível ignorar barreiras geográficas, culturais e temporais.
+Identificam-se, entretanto, problemas advindos da relação intrínseca dessa situação
+junto ao pressuposto apresentado por Ranganathan (2009), Poupe o tempo do leitor, que, por
+extensão, associa-se a todo e qualquer processo que deva ser envidado de modo a garantir
+satisfatoriamente a recuperação e o acesso ao documento pelo usuário, e quanto às críticas
+apresentadas por Bush (1945), de que um registro do conhecimento torna-se útil à Ciência a
+partir do momento em que se é ampliado, armazenado e, sobretudo, consultado. Se, à época,
+Bush (1945) apresentava críticas às limitações dos sistemas de organização e representação da
+informação e à “artificiality of systems of indexing”, o que dizer da aplicabilidade de métodos
+
+
+e de instrumentos do século passado em uma era em que tablets, e-readers, smartphones,
+bases de conhecimento colaborativo (wikis), portais, blogs, microblogs e redes sociais fazem
+parte do cotidiano?
+Diante desse cenário, e com o intuito de garantir a recuperação e o (re)uso de
+informações, (re)definem-se métodos e, consequentemente, instrumentos de organização,
+disseminação e acesso aos registros, no qual destacam-se as ontologias, os catálogos e a
+catalogação.
+Neste sentido, apresenta-se a seguinte questão de pesquisa:
+
+é possível utilizar as
+
+relações existentes entre as entidades dos Requisitos Funcionais dos Registros Bibliográficos
+como substratos teóricos no desenvolvimento de ontologias, para que seja possível garantir
+aos usuários pela navegação, o desenvolvimento de tarefas que permitam encontrar,
+identificar, selecionar e obter acesso aos recursos bibliográficos?
+As ontologias têm favorecido uma aproximação entre os modelos e métodos
+tradicionalmente utilizados no âmbito da Ciência da Informação com as novas tecnologias
+semânticas. “[...] as ontologias têm sido apontadas como uma nova possibilidade de
+representação de recursos informacionais em bibliotecas.” (RAMALHO, 2010, p. 17). As
+tecnologias, por sua vez, como extensoras das atividades de coleta, processamento, memória e
+transmissão de dados, contribuem para um sistema de acesso à informação. Svenonius (2000),
+entretanto, ressalva que a eficácia do sistema é função direta da inteligência adotada para
+organizá-lo.
+Nesta perspectiva, a principal motivação nesta pesquisa advém da contribuição que se
+espera dar no âmbito da implementação de novos recursos que recorrem à tecnologia para o
+atingimento da missão fundamental das bibliotecas, tal qual apresentado por Ranganathan
+(2009, p. 263): “[...] ser um instrumento de educação universal que reúne e difunde livremente
+todos os recursos de ensino e dissemina o conhecimento com a ajuda delas”.
+Apresenta-se, assim, o objetivo geral desse trabalho: desenvolver um protótipo de
+ontologia baseada nas relações previstas entre as entidades dos Requisitos Funcionais dos
+Registros Bibliográficos, que considera, em seu bojo, as tarefas a serem desempenhadas pelos
+usuários. Com vistas ao cumprimento deste objetivo definem-se os seguintes objetivos
+específicos: a) analisar as contribuições teórico-metodológicas da Ciência da Informação no
+desenvolvimento de ontologias na representação da informação, com suas ferramentas,
+técnicas, tecnologias e metodologias; e b) descrever entidades e relacionamentos previstos nos
+Requisitos Funcionais de Registros Bibliográficos e sua correlação com as tarefas a serem
+desempenhadas pelos usuários.
+Esta pesquisa caracteriza-se com abordagem qualitativa, pois, segundo Silveira e
+Córdova (2009), apresenta características voltadas à descrição, compreensão e explicação de
+relações de um determinado fenômeno de modo a considerar o caráter interativo entre os
+objetivos definidos e as orientações teóricas da pesquisa. Determina-se, também, como
+pesquisa de natureza aplicada, uma vez que “objetiva gerar conhecimentos para aplicação
+prática, dirigidos à solução de problemas específicos” (op. cit., p. 35). Quanto aos objetivos, a
+pesquisa compreende aspectos exploratórios e descritivos, uma vez que busca tornar o
+problema mais explícito a partir de hipóteses, o que exige descrição de fatos observados (GIL,
+2007; TRIVIÑOS, 1987). Recorre-se a procedimentos de pesquisa bibliográfica e documental
+para a construção do arcabouço teórico, uma vez que recorre a fontes de informação primárias
+e secundárias, e a partir do desenvolvimento de um protótipo busca-se analisar a possibilidade
+da utilização das entidades dos Requisitos Funcionais de Registros Bibliográficos como
+substratos teóricos para a elaboração de ontologias.
+A pesquisa consolida, no tópico dois, as ontologias como instrumento de
+representação, no tópico três, as entidades e relacionamentos dos Requisitos Funcionais dos
+Registros Bibliográficos e as tarefas dos usuários, e, no tópico quatro, apresenta um protótipo
+de ontologia que possibilita a junção dos conceitos relacionados ao desenvolvimento de
+ontologia com os padrões já sedimentados na área de Catalogação a partir da realização de
+inferências automáticas baseadas nas entidades e relacionamentos previstos nos Requisitos
+Funcionais dos Registros Bibliográficos.
+2 ONTOLOGIAS COMO INSTRUMENTO DE REPRESENTAÇÃO
+No âmbito da área de Ciência da Informação o termo ontologia passou a ser utilizado
+no final da década de 1990, quando instrumentos de representação de informações
+despertaram maior interesse dos pesquisadores das mais diversas áreas do conhecimento,
+impulsionados pela criação do ambiente Web e desenvolvimento de novas tecnologias digitais
+(SOERGEL, 1999; VICKERY, 1997).
+García-Marco (2007) ressalta que o crescente aumento do número de pesquisas
+relacionadas com ontologias e metadados na área de Ciência da Informação constitui a “ponta
+do iceberg” de um processo de reconfiguração disciplinar, como resultado da integração de
+diversas Ciências. Deste modo, verifica-se ao longo da última década um maior empenho na
+consolidação das definições de ontologia e análise das possibilidades de uso como
+instrumento de representação (SANTOS; CORREA; SILVEIRA, 2013).
+
+Entre as definições de ontologia mais referenciadas na literatura destaca-se a
+apresentada por Gruber (1993, p. 1) de que “é uma especificação explícita de uma
+conceitualização”. Contudo, tal definição remete o conceito de ontologia a aspectos
+filosóficos, favorecendo a geração de conflitos terminológicos, conforme destaca Guarino
+(1998, p. 5):
+No sentido filosófico, podemos nos referir a uma "ontologia" como um
+sistema particular de categorias que versa sobre uma certa visão do mundo.
+Desta forma, este sistema não depende de uma linguagem particular: a
+ontologia de Aristóteles é sempre a mesma, independente da linguagem
+usada para descrevê-la. Por outro lado, em seu uso mais prevalecente na IA
+[inteligência artificial], uma ontologia é referida como um artefato de
+engenharia, constituído de um vocabulário específico usado para descrever
+uma certa realidade e um conjunto de pressupostos explícitos relacionados
+com o significado pretendido para as palavras do vocabulário.
+
+Nesta perspectiva, com o intuito de aproximar o conceito de ontologia aos
+pressupostos da área de Ciência da Informação, principalmente quanto aos processos de
+representação, tratamento, organização e recuperação de recursos informacionais, recorre-se a
+Ramalho (2010, p. 107) que define ontologia como
+[...] um artefato tecnológico que possibilita representar formalmente as
+propriedades e relacionamentos de um determinado modelo conceitual,
+favorecendo a utilização de inferências automáticas nos processos de
+organização e recuperação de recursos informacionais.
+
+Tal definição caracteriza as ontologias no âmbito da área de Ciência da Informação
+como instrumentos de nível epistemológico, concebidos a partir de linguagens
+computacionais com o intuito de favorecer a representação formal dos relacionamentos
+existentes entre os conceitos de um domínio específico.
+Neste contexto, as ontologias figuram como uma nova abordagem computacional de
+representação, descrição e organização de conteúdos informacionais, favorecendo a
+aproximação dos modelos clássicos de representação, utilizados tradicionalmente no âmbito
+da área de Ciência da Informação, com as novas tecnologias semânticas desenvolvidas ao
+longo dos últimos anos.
+As ontologias potencializam a representação dos relacionamentos existentes entre os
+conceitos que traduzem os conteúdos informacionais de modo a possibilitar representações
+semânticas que não poderiam ser obtidas a partir de descrições textuais, caracterizando-se
+como um tipo de fonte secundária, instituindo novas formas de acesso e favorecendo maior
+flexibilidade na recuperação de informações, por meio da realização de inferências. Quanto ao
+enfoque das representações semânticas, Zafalon (2013) esclarece que “é a semântica que dá
+
+conta dos processos mentais segundo os quais se produz, constitui, compreende e descreve a
+representação de um recurso informacional.”
+Deste modo, verifica-se que a Ciência da Informação pode contribuir para o
+desenvolvimento de ontologias a partir do fornecimento de substratos teóricos e
+metodológicos que possibilitam o reaproveitamento de instrumentos e métodos já
+sedimentados em seu campo de atuação.
+Ao longo dos últimos anos inúmeras metodologias têm sido propostas para o
+desenvolvimento de ontologias. Dentre elas, destacam-se a de Uschold e King (1995), a de
+Uschold e Gruninguer (1996), a de Férnandez, Gómez-Pérez e Juristo (1997), e o método 101,
+proposto por Noy e McGuinness (2001). No âmbito da área de Ciência da Informação
+destacamos o método proposto por Ramalho (2010) para o desenvolvimento de ontologias a
+teoria do conceito e a teoria da classificação facetada utilizadas na elaboração de tesauros
+(CAMPOS; GOMES, 2006; GOMES, et al., 1990), bem como a norma ANSI/NISO Z39.192005, que apresenta diretrizes para a elaboração de vocabulários controlados.
+No escopo desta pesquisa recorre-se, dentre os diversos métodos, modelos e
+instrumentos adotados na Ciência da Informação, às relações previstas entre as entidades dos
+Requisitos Funcionais de Registros Bibliográficos (FRBR), estabelecidos pela International
+Federation of Library Associations and Institutions (1998), para o desenvolvimento de um
+catálogo baseado em ontologia. Esta opção foi feita com base na aproximação cada vez mais
+notável entre a Ciência da Informação e a Ciência da Computação e pelo fato de que o
+desenvolvimento de ontologias apresentar-se como um processo não-linear, que requer
+refinamentos e interações sucessivas até a obtenção de um modelo que se mostre adequado às
+necessidades propostas. Conforme destacam Zhao e Hu (2007) a utilização de ontologias
+mostra-se como uma abordagem promissora que possibilita expressar formalmente a
+semântica de informações estruturadas e semiestruturadas, a fim de apoiar a aquisição,
+manutenção e acesso de informações.
+3 REQUISITOS FUNCIONAIS PARA REGISTROS BIBLIOGRÁFICOS (FRBR) E AS
+TAREFAS DOS USUÁRIOS
+Catalogar recursos informacionais mostra-se como atividade que fundamenta a
+recuperação e o acesso aos documentos uma vez que é por meio do registro bibliográfico que
+se torna possível efetivar o processo comunicativo entre unidades de informação e seus
+usuários; em outras palavras, é por meio dos registros, resultados da catalogação, que os
+documentos tornam-se recuperáveis e acessíveis em catálogos. Afinal, conforme afirma
+
+Zafalon (2012, p. 46), “As bibliotecas utilizam-se de catálogos, instrumentos disponíveis em
+diversas formas ou suportes (livros, folhas soltas, fichas ou eletrônicos) com o objetivo de
+garantir a recuperação dos registros bibliográficos pelo público a que se destina.”
+Segundo Santos e Correia (2009), o registro bibliográfico compreende um conjunto de
+elementos que apresentam funcionalidades de unicidade, instanciamento e armazenamento do
+item. De acordo com a International Federation of Library Associations and Institutions
+(2005) o registro bibliográfico é um conjunto de dados, compostos por entidades, que
+descrevem ou identificam um ou mais obras, expressões, manifestações ou itens.
+Em se tratando do universo bibliográfico, a International Federation of Library
+Associations and Institutions (2009) afirma que as entidades, seus atributos e relacionamentos
+estão presentes no registro bibliográfico uma vez que “baseia-se, tipicamente, no item
+enquanto representante da manifestação e pode incluir atributos que pertençam à(s) obra(s) e
+expressão(ões) nela contidas”. As entidades representam conceitos chaves para uso em
+registros bibliográficos pois é na catalogação que há sistematização dos atributos e dos
+relacionamentos característicos das entidades. Zafalon (2011, p. 136) afirma que o processo
+de representação “visa, por um lado, a individualização de registros do conhecimento, pelos
+seus diferenciados aspectos físicos, ou de suas manifestações, ou de seus itens; e, por outro, a
+reunião por meio de suas características de conteúdo, ou de suas expressões ou de suas obras.”
+Desse modo, com vistas ao estudo sobre a apresentação de resultados de pesquisa ao
+usuário estabeleceu-se o modelo conceitual de um conjunto de entidades, seus atributos e
+relacionamentos, consolidados nos Requisitos Funcionais de Registros Bibliográficos (FRBR)
+e publicados pela International Federation of Library Associations and Institutions (1998).
+Dentre os objetivos traçados para os FRBR está incluso o de “fornecer um quadro
+estruturado, claramente definido, para relacionar dados registrados em registros bibliográficos
+às necessidades dos usuários destes registros.” (op. cit.). O modelo apresenta um conjunto de
+dez entidades, subdivididas, a partir da função que desempenham, do seguinte modo: obra,
+expressão, manifestação e item consolidam o grupo que retrata o produto do esforço
+intelectual e artístico (o quê); pessoa e entidade coletiva retratam o grupo responsável pelo
+conteúdo intelectual ou artístico bem como pela produção e disseminação (quem); obra,
+expressão, manifestação, item, pessoa, entidade coletiva, conceito, objeto, evento e lugar
+consolidam as entidades que servem como assunto de um obra (sobre).
+A consolidação de tais entidades, representadas por meio de seus atributos, estabelece
+relacionamentos dos mais variados tipos. Svenonius (2000) ressalta que relações entre obras
+incluem relações generalizadas (é uma subclasse de), relações de agregação (é parte de), e
+
+
+relações associativas (é uma seqüência de, é uma adaptação de, é uma abreviação de, é
+descrito por). Relações entre nomes de atributos de obra incluem equivalência, hierarquia e
+relações associativas. A figura abaixo exemplifica a distribuição de entidades e
+relacionamentos previstos nos FRBR para a obra Dom Casmurro, de Machado de Assis.
+FIGURA 1 - Exemplo de relacionamentos e atributos de entidades na obra Dom Casmurro
+
+Fonte: Elaborado pelos autores.
+
+Por meio das relações estabelecidas entre as entidades torna-se possível compreender,
+segundo International Federation of Library Associations and Institutions (2009), que a
+funcionalidade de pesquisa é característica dos pontos de acesso estabelecidos em um registro
+bibliográfico e de autoridade, uma vez que delimitam os resultados apresentados, e que,
+diante da recuperação de vários registros que correspondem a um mesmo ponto de acesso, se
+faz necessária a apresentação dos resultados de uma forma que faça sentido e seja conveniente
+ao usuário. Assim, de acordo com a Declaração de Princípios Internacionais de Catalogação,
+publicada pela International Federation of Library Associations and Institutions (2009), aos
+
+
+usuários deve ser possível, por meio da navegação entre os registros de um catálogo,
+encontrar documentos que atendam às suas expectativas, de modo a ser confirmada a
+correspondência entre a entidade descrita e a procurada e a escolha do recurso a ser obtido,
+independente de onde esteja localizado.
+Estabelece-se, portanto, que a eficácia no processo de recuperação e acesso aos
+recursos informacionais depende tanto da qualidade dos registros bibliográficos, ao indicarem
+a relação entre entidades, atributos e relacionamentos, quanto da forma de apresentação dos
+resultados de pesquisa em catálogos, uma vez que esta é uma ação determinante para o
+sucesso no desenvolvimento de tarefas a serem desempenhadas pelos usuários.
+Ressalta-se que, apesar de já se ter conhecimento de algumas iniciativas que
+consideram o desenvolvimento de catálogos baseados nos FRBR, apresenta-se, no tópico
+seguinte, um protótipo de ontologia baseado nas entidades e relacionamentos previstos nos
+FRBR.
+4 ONTOLOGIA BASEADA NOS FRBR
+Construir uma ontologia compatível tanto com os hábitos da comunidade quanto com
+as normas que possibilitam usufruir das capacidades oferecidas pelas tecnologias semânticas,
+é o primeiro passo para que as bibliotecas digitais possam mudar nossa forma de pesquisa,
+acesso e utilização dos recursos (DABROWSKI; SYNAK; KRUK, 2009).
+Nesta perspectiva, com base no método proposto por Ramalho (2010) propõe-se o
+desenvolvimento de uma ontologia baseada nas entidades, atributos e relacionamentos
+previstos nos FRBR, cujo escopo considera as tarefas a serem desempenhadas pelos usuários,
+e que inicia estudos para aplicação em catálogos online que possam favorecer melhor
+representação e interoperabilidade de registros bibliográficos, frente a crescente necessidade
+de compartilhamento de recursos.
+De acordo com o método utilizado, após a definição do propósito e escopo da
+ontologia, realizou-se estudo com o intuito de identificar instrumentos tradicionalmente
+utilizados no âmbito da Ciência da Informação que pudessem servir de substrato teórico para
+a modelagem da ontologia. Para que uma ontologia represente de forma fidedigna o
+conhecimento de um determinado domínio, a definição das classes e conceitos exige cuidado
+especial na precisão conceitual e identificação de suas relações. Neste sentido, as entidades e
+relacionamentos previstos nos FRBR serviram de arcabouço teórico para a definição dos
+componentes estruturais da ontologia.
+
+Conforme destacam Ramalho e Fujita (2011) podem ser considerados como
+componentes estruturais de uma ontologia as Classes/Subclasses; Propriedades Descritivas;
+Propriedades Relacionais e Regras/Axiomas. Tais componentes formam a espinha dorsal da
+ontologia, permitindo a representação formal dos elementos e relacionamentos do domínio
+modelado.
+Na perspectiva de reuso de ontologias identificou-se na literatura vocabulários e
+outras ontologias que possuem relação com a proposta nesta pesquisa. Porém devido ao
+escopo baseado nas entidades e relacionamentos previstos nos FRBR, recorreu-se ao
+reaproveitamento de padrões de metadados já sedimentados na área de Catalogação.
+Em relação à nomeação dos componentes da ontologia, com o objetivo de facilitar a
+compreensão e evitar possíveis problemas de interoperabilidade, seguiu-se a convenção de
+não utilizar acentuação, espaços e caracteres especiais. Definiu-se, também, a utilização de
+letras maiúsculas no início e em todas as palavras subsequentes contidas no nome das classes
+e subclasses, notação comumente denominada como CamelBack. O mesmo procedimento foi
+adotado para representar as propriedades relacionais da ontologia, com exceção do uso de
+letras minúsculas no início de seus nomes, diferenciando-as das classes. Quanto às
+propriedades descritivas, com o intuito de facilitar a assimilação dos componentes da
+ontologia, utilizou-se como padrão a denominação prevista nos FRBR, em língua inglesa, sem
+espaçamento.
+Conforme destacado anteriormente, para que todo o potencial das ontologias possa ser
+explorado, torna-se necessário sua formalização a partir de linguagens que possam ser
+processadas por máquinas. Deste modo, após as definições conceituais das etapas anteriores,
+realizou-se a implementação da ontologia e formalização das regras e axiomas de modo a
+possibilitar a realização de inferências automáticas.
+De acordo com os objetivos da ontologia proposta elegeu-se a linguagem OWLDL/XML para a implementação, dada a aderência aos padrões do W3C e às características
+que possibilitam maior decidibilidade lógica/computacional. Como ferramenta de apoio para a
+modelagem e formalização das regras e axiomas utilizou-se a ferramenta Protégé versão 4.3.0
+(Build 304) e o motor de inferência padrão da ferramenta FaCT++.
+Após a implementação, realizou-se a avaliação e a documentação da ontologia,
+utilizando-se dos próprios recursos da ferramenta Protégé (a partir da inserção de anotações
+em seus componentes). Os procedimentos de avaliação, podem ser divididos em duas
+categorias:
+
+• Avaliação da hierarquia de classes e componentes da ontologia: realizada a partir dos
+critérios da metodologia OntoClean, (re)adequando ontologicamente os componentes
+estruturais da ontologia até a obtenção do modelo desejado;
+• Avaliação das regras e axiomas: efetuada por meio do julgamento do resultado de
+buscas que se aproximem das necessidades informacionais de usuários em potencial,
+simuladas para avaliar a capacidade representação, recuperação e realização de
+inferências automáticas de acordo com os objetivos propostos.
+Tal processo foi realizado interativamente e de forma não-linear, por meio de
+refinamentos sucessivos, para se chegar ao resultado esperado. Nesta perspectiva, apresentamse, nos próximos tópicos, alguns trechos sobre os componentes estruturais da ontologia
+baseada nos FRBR.
+4.1 Estrutura de Classes
+As Classes e Subclasses de uma ontologia são estruturadas por meio de uma
+taxonomia de conceitos, organizados a partir das características essenciais das instâncias
+representadas na ontologia e interligadas por relações hierárquicas. A relação de subordinação
+is_a (é_um) é a primitiva de estruturação mais utilizada no âmbito da Ciência da Informação e
+apresenta-se como uma forma bastante útil para representar a hierarquia de classes de uma
+ontologia, pois possibilita uma visão geral da ontologia modelada.
+Assim, baseando-se nos princípios classificatórios utilizados na construção dos FRBR
+foram especificados os relacionamentos hierárquicos existentes entre classes da ontologia
+proposta, de modo que todas as propriedades existentes em uma Classe são herdadas por suas
+Subclasses, conforme apresentado na FIGURA 2, a seguir.
+
+
+FIGURA 2 - Estrutura de Classes e Subclasses da ontologia
+
+Fonte: Elaborado pelos autores
+Conforme pode ser observado na figura 2 são apresentadas as classes que representam
+as 10 entidades previstas nos FRBR, organizadas em 3 hierarquias que refletem os 3 Grupos
+dos FRBR, as Subclasses são especializações das Classes, criadas para agrupar instâncias que
+possuem propriedades que não são comuns a todas as instâncias da classe superior, por este
+motivo graficamente as Subclasses são representadas como a origem de uma seta única
+direcionada para a classe superior.
+4.2 Propriedades Descritivas
+As propriedades descritivas são utilizadas para descrever as características, atributos
+e/ou qualidades das instâncias da ontologia de modo a possibilitar a atribuição de valores
+concretos. A utilização de propriedades descritivas aproxima-se do uso dos padrões e
+instrumentos da Catalogação.
+
+
+QUADRO 1 – Propriedades descritivas da Classe Work
+
+Fonte: Adaptado pelos autores com base nos FRBR (INTERNATIONAL FEDERATION OF
+LIBRARY ASSOCIATIONS AND INSTITUTIONS, 1998)
+
+Na ontologia desenvolvida as propriedades descritivas representam os atributos das
+entidades previstas nos FRBR. O quadro 1 apresenta as principais propriedades descritivas da
+classe Work e suas respectivas descrições, por se tratar de um protótipo, com o objetivo de
+analisar a possibilidade de utilização dos FRBR como substrato para o desenvolvimento de
+ontolgias, não foram representados todos os atributos das entidades.
+4.3 Propriedades Relacionais
+As Propriedades Relacionais permitem a definição de relacionamentos que vão além
+das relações hierárquicas presentes na estrutura de Classes e Subclasses. Essas propriedades
+caracterizam-se como relações ônticas e não-hierárquicas, possibilitando maior liberdade para
+a representação de relacionamentos entre as instâncias e favorecendo uma representação mais
+eficiente. As relações ônticas, segundo Dahlberg (1978), podem ser subdivididas em diversos
+tipos, podendo variar de acordo com o contexto. Nesta perspectiva, com vistas a possibilitar
+melhor compreensão da ontologia, apresenta-se, na figura 3, a representação gráfica das
+classes e das propriedades relacionais da ontologia baseada nos FRBR.
+
+FIGURA 3 - Classes e Propriedades Relacionais da ontologia
+
+Fonte: Elaborado pelos autores
+Verifica-se que as propriedades relacionais representam os relacionamentos existentes
+entre objetos, sendo necessário indicar a classe origem, a classe destino e o rótulo do
+relacionamento, o qual normalmente é definido por meio de verbos (ex.: is, has), ou verbos
+preposicionados (ex.: IsRealizadBy).
+4.4 Regras e Axiomas
+As Regras e Axiomas são enunciados lógicos que possibilitam impor condições,
+restrições para a realização de inferências automáticas. Tais componentes apresentam-se como
+o principal avanço das ontologias frente aos demais instrumentos de representação.
+De acordo com o escopo da ontologia as Regras e Axiomas foram elaborados para
+atender às tarefas dos usuários em um ambiente que tem por base os FRBR. Para sua
+definição são utilizadas sentenças descritas em Lógica de Primeira Ordem (LPO), conhecida
+também como Cálculo de Predicados de Primeira Ordem (CPPO), que possibilitam a definir
+formalmente a semântica dos formalismos.
+
+QUADRO 2 – Descrição de Axiomas da ontologia
+Descrição de Axiomas
+Para cada expressão (Expression) pode haver “n” manifestações (Manifestation)
+Para cada obra (Work) pode ter 1 ou mais instâncias do grupo do grupo 2
+(Responsible) como responsáveis
+Para cada obra (Work) pode haver “n” expressões (Expression)
+Para cada manifestação (Manifestation) pode haver “n” itens (Item)
+Para cada obra (Work) pode ter um ou mais elementos do grupo 3 (Subject) como
+assunto
+Cada manifestação (Manifestation) pode ter um ou mais instâncias do grupo 2
+(Responsible) como publicadores
+Fonte: Elaborado pelos autores
+
+No QUADRO 2 apresentam-se algumas regras implementadas na ontologia, tais
+regras consideram aspectos iniciais para a compreensão dos relacionamentos entre as
+entidades previstas nos FRBR.
+5 CONSIDERAÇÕES FINAIS
+A partir do estudo realizado foi possível verificar que as ontologias podem contribuir
+para uma melhor estruturação e representação de informações em catálogos bibliográficos
+online, possibilitando a realização de inferências automáticas visando facilitar aos usuários a
+identificação, seleção e acesso de recursos bibliográficos.
+Constatou-se a partir do protótipo desenvolvido que a área de Ciência da Informação
+pode contribuir para o desenvolvimento de ontologias, a partir do aproveitamento de métodos
+e técnicas para a elaboração de ontologias, tesauros e vocabulários controlados presentes na
+literatura da área, favorecendo a aplicação conceitos e relacionamentos previstos nos
+Requisitos Funcionais dos Registros Bibliográficos em catálogos bibliográficos online.
+O protótipo de ontologia desenvolvido baseou-se nas relações previstas entre as
+entidades dos FRBR e mostrou-se como uma alternativa viável para a representação de
+informações em meios computacionais, contudo é necessário uma análise ontológica
+
+adequada, em especial na modelagem do Grupo 3 (assunto), onde muitas vezes é considerado
+que entidades do Grupo 1 (produto) e entidades do Grupo 2 (responsável) também fazem
+parte do Grupo 3, configurando uma modelagem ontológica incorreta. Destaca-se que apenas
+as entidades originais do Grupo 3 são subclasses da classe “Subject”, estabelecendo uma
+relação hierárquica de subordinação com esta classe. As entidades do Grupo 1 e Grupo 2
+estabelecem relações ônticas com a classe “Subject”, representadas a partir de propriedade
+relacionais, não estando subordinadas hierarquicamente a esta classe, pois cada um dos
+Grupos dos FRBR possuem diferentes critérios de identidade, caracterizando polissemia.
+Nesta perspectiva, verifica-se que a utilização de ontologias favorece a transposição
+dos métodos convencionais de representação, contribuindo para a realização de inferências
+automáticas, como, por exemplo: localizar um termo em diversas fontes de informação,
+detectar termos genéricos e equivalentes, eliminar ambiguidades, identificar hipônimos,
+categorizar recursos bibliográficos, entre outras.
+Assim, as ontologias possibilitam ir além da representação dos aspectos descritivos e
+temáticos dos documentos, fornecendo subsídios computacionais que permitem representar os
+próprios domínios, favorecendo a recuperação de informações contextualizadas. Deste modo,
+as possibilidades profissionais apresentam condições de ampliação por meio da incorporação
+de novas potencialidades aos processos de representação, estruturação, disseminação e
+recuperação de informações em ambientes digitais.

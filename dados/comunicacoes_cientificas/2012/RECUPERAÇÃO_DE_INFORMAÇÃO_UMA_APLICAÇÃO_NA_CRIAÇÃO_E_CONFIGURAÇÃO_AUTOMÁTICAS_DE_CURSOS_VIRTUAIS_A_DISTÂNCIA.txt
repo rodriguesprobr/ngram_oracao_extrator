@@ -1,0 +1,469 @@
+RECUPERAÇÃO DE INFORMAÇÃO: UMA APLICAÇÃO NA CRIAÇÃO E
+CONFIGURAÇÃO AUTOMÁTICAS DE CURSOS VIRTUAIS A DISTÂNCIA
+
+Resumo:
+A área de pesquisa Recuperação de Informação (RI) tem avançado e conseguido resolver
+diversos problemas em várias áreas do conhecimento. Este trabalho explora a RI para resolver
+um problema demandado pelos ambientes virtuais de aprendizagem (AVAs) na educação a
+distância (EAD). Apesar de eles terem trazido benefícios significativos para a educação,
+agregando funcionalidades para auxiliar na gestão e acompanhamento de cursos e alunos,
+através de ferramentas administrativas, avaliativas e de interação, ainda existem problemas
+em vários segmentos no seu uso, entre eles, destaca-se no design instrucional, a ineficiência
+na criação e configuração de cursos virtuais. Neste contexto, e sob uma metodologia
+exploratória e de estudo de caso, foi realizado um experimento com o AVA Modular ObjectOriented Dynamic Learning Environment (Moodle) de uma instituição educacional federal
+reconhecida em cursos na modalidade EAD, onde a entrada de dados para a configuração dos
+cursos era feita pelos professores através de formulários off-line, a fim de minimizar e tornar
+mais preciso o trabalho. O estudo inicial mostrou que, apesar da diminuição do esforço do
+usuário que cria a sala virtual através dos formulários off-line, o método adotado para a
+recuperação desta informação e sua inserção no sistema ainda se mostrava ineficiente e
+vulnerável a erros devido ao procedimento manual de alimentação nas bases de dados do
+Moodle. Desta forma, foi proposto um sistema automático para recuperar as informações dos
+formulários e, através de dois compiladores complementares, as traduzisse para uma
+linguagem de marcação e posteriormente em informações registradas no banco de dados do
+Moodle eliminando erros da operação manual além de tornar a tarefa mais ágil. Foi construído
+um protótipo, com o escopo restrito a questões lógicas, mas completo no fluxo de
+informações, que validou a factibilidade da ideia e resultando em possibilidades na expansão
+da solução proposta para um universo mais amplo de um AVA qualquer.
+Palavras-chave: recuperação de informação, ambiente virtual de aprendizagem, Moodle,
+arquitetura da informação, compilador, linguagem de marcação.
+1 INTRODUÇÃO
+A Recuperação de Informação (RI), é uma subárea da Arquitetura da Informação na
+Ciência da Informação com abrangência crescente na resolução de problemas devido a
+métodos modernos e uso de tecnologias inovadoras. Segundo Saracevic (1995), a maioria dos
+esforços e recursos em Ciência da Informação foram e ainda são dedicados a problemas
+associados com a RI. A urgência dos usuários em conseguir novas informações a todo
+instante de forma eficiente fez com que o processo de recuperação da informação fosse
+repensado ao longo dos anos. Variáveis anteriormente não consideradas nesse processo pelo
+modelo tradicional, como o ambiente e conhecimento do usuário, seus objetivos, intenções e
+
+crenças, começaram a ganhar força com o surgimento de novos modelos (ROBINS, 2000).
+Beppler (2008) faz uma revisão bibliográfica elencando vários modelos de RI e de uma
+maneira geral sinaliza também a tendência dos autores na preocupação com as variáveis
+citadas, inclusive, no modelo que propõe, emprega o uso de ontologias e hermenêutica para
+adequar ainda mais o atendimento às necessidades do usuário.
+O termo informação será tratado aqui, segundo Le Coadic (2004), como um
+conhecimento registrado em forma escrita, oral ou audiovisual, que, é compatível com a
+definição de Hagedorn (2000), no contexto da Arquitetura da Informação, apesar de mais
+abrangente, que é qualquer coisa que possa ser armazenada e recuperada. O termo documento,
+ainda segundo Le Coadic, é um objeto portador de informação. Sendo assim, no contexto
+desta pesquisa, formulário off-line é considerado um documento.
+A educação a distância tem conseguido quebrar barreiras de tempo e espaço, onde
+alunos interagem com os seus pares e professores localizados geograficamente distantes e no
+seu horário de disponibilidade de forma assíncrona. Isto é mais evidenciado devido aos
+ambientes virtuais de aprendizagem (AVAs) que integram vários componentes e ferramentas
+de interação, controle e organização num único ambiente virtual. É natural que surjam
+problemas no uso dos AVAs, pois o ensino a distância se difere muito do ensino presencial,
+além disto, há expectativas no uso dos AVAs quanto à resolução de problemas diversos
+oriundos ou não do ensino presencial. Alguns destes problemas estão situados na área
+pedagógica, voltada a métodos de ensino e aprendizagem, outros no design instrucional,
+voltado para a construção e configuração do ambiente, e outros ainda na área administrativa,
+visando a gerência de alunos.
+Para a realização deste estudo, decidiu-se pela utilização do AVA Modular ObjectOriented Dynamic Learning Environment (Moodle) por possuir código aberto sendo
+distribuído pela Licença Púbica GPL1, possuindo, atualmente, uma utilização difundida em
+vários países com grande comunidade de desenvolvedores espalhados pelo mundo e sendo
+aprimorado de forma rápida com versões que atendem as diversas demandas. Apesar de todo
+o esforço por parte da comunidade desenvolvedora em prover estabilidade, robustez e
+eficiência ao Moodle, ainda constata-se lacunas e deficiências que frequentemente são
+relatadas pela comunidade de usuários e desenvolvedores.
+Dentre os vários problemas identificados por entrevistas realizadas nesta pesquisa,
+escolheu-se um na área do design instrucional, onde a configuração e preparação de salas
+
+
+virtuais de cursos no ambiente ocorrem de forma trabalhosa e com ações repetitivas e
+enfadonhas através de muitas janelas e múltiplas navegações que fazem esta tarefa ser
+desgastante para o usuário professor incumbido de configurar a sua própria sala virtual. A
+instituição de ensino escolhida para realização da pesquisa, elaborou um sistema de
+informações onde esse professor apenas preenche formulários off-line com os dados de seu
+curso. A escolha por formulários off-line, ao invés de online, foi devido a não exigência de
+conexão com a internet, facilitando o trabalho do professor e evitando perdas de dados em
+decorrência e problemas na rede. As informações destes formulários, após serem entregues à
+instituição, em formato digital, são recuperadas por um profissional que a traduz,
+manualmente, para o formato de entrada de dados do Moodle. Constatou-se que esse fluxo
+de informação sofria erros devido à operação manual da tradução, gerando resultado diferente
+do desejado pelo professor, além da falta de dinâmica e eficiência na realização de alterações
+da configuração.
+Diante deste contexto, o problema desta pesquisa emergiu: como melhorar a
+recuperação de informação em formulários off-line de configuração de cursos virtuais a fim
+de obter o curso virtual configurado da forma como foi planejado, minimizando os erros e
+aumentando a eficiência?
+Pensando na resolução do problema, elaborou-se o projeto de um compilador capaz de
+recuperar as informações dos formulários off-line, registradas no formato de linguagem de
+marcação, e traduzi-las, automaticamente, para a linguagem da base de dados do Moodle. Foi
+implementado um protótipo para demonstrar a viabilidade da elaboração completa do
+compilador e também a possibilidade de tradução dos formatos dos formulários para a
+linguagem do Moodle. Espera-se com este desenvolvimento que os professores possam focar
+o seu trabalho mais na esfera pedagógica de preparação do curso virtual do que na
+configuração ou conferência dos cursos criados. Além disto, espera-se também que a etapa
+manual de recuperação de informação e a sua replicação para a base do Moodle seja
+completamente eliminada aumentando a eficiência e diminuindo os erros do processo. O
+design instrucional do Moodle tem sido analisado em outras pesquisas, Wagner (2011)
+constatou diversos problemas oriundos de processos manuais, especificamente nas ações de
+solicitação e criação de áreas das disciplinas, e conseguiu melhorias significativas eliminando
+erros e otimizando a mão de obra de sua equipe, a partir do sincronismo automático e diário
+das informações do sistema acadêmico da instituição, na qual realizou o trabalho, com a base
+de dados do Moodle.
+
+O método de pesquisa, considerado como etapa fundamental para as diversas fases do
+trabalho (BRAGA, 2007), se enquadra na abordagem qualitativa, e como tipo de pesquisa
+exploratória, pois visa proporcionar maior familiaridade, reunir dados, informações e padrões
+sobre o problema exposto, e metodologia do tipo estudo de caso, pois permite o amplo e
+detalhado estudo sobre a recuperação de informação no contexto da criação de cursos virtuais
+por intermédio de formulários off-line para uma ação específica e depois obter a
+generalização para os outros elementos do ambiente.
+As duas próximas seções fornecem subsídios para fundamentar a proposta:
+recuperação de informação linguagem de marcação, o AVA Moodle com o seu design
+instrucional e a sua programação. Em seguida é apresentada a proposta de solução do
+problema, a implementação do protótipo com os testes, resultados e as considerações finais.
+2 RECUPERAÇÃO DE INFORMAÇÃO (RI) EM FORMULÁRIO OFFLINE
+Formulários coletam informações de usuários para alimentarem, de forma automática
+ou não, sistemas de informações através de seus dados semiestruturados. Enquanto os
+formulários online dão mais rapidez ao fluxo de informações possibilitando o repasse das
+informações coletadas imediatamente aos sistemas, os formulários off-line não necessitam
+conexão simultânea com a rede permitindo uma comunicação assíncrona facilitando, em
+alguns casos, o processo de coleta de informações. Estes são normalmente executados por
+aplicativos comuns, tais como, editores de texto e planilhas eletrônicas, e em alguns casos
+trazem mais segurança contra perda de dados e conforto ao usuário que possui recursos
+limitados de acesso à rede.
+Informações contidas em formulários são semiestruturadas e podem ser recuperadas de
+forma manual ou por sistemas computadorizados simples ou até mesmo com recursos de
+mineração de texto. As linguagens de marcação, desempenham papel importante na tarefa de
+recuperação das informações contidas num formulário, pois delimitam a sintaxe e a semântica
+das informações, ou seja, os tipos e significados das informações para, posteriormente,
+permitirem o acesso por outro sistema automático de RI. Esta seção traz esses dois assuntos, a
+RI e as linguagens de marcação, para fundamentar a proposta apresentada na seção 4.
+2.1 Recuperação de informação (RI)
+Segundo Salton (1968, apud ROBINS, 2000) RI é a área de pesquisa que se preocupa
+com a estrutura, análise, organização, armazenamento, recuperação e busca de informação. A
+representação e a organização dessa informação devem permitir que os usuários tenham fácil
+e rápido acesso à informação desejada. Um sistema de RI tem como principal objetivo
+
+minimizar as dificuldades do usuário em localizar a informação requisitada, ou seja, diminuir
+o tempo gasto em um processo de busca até que a informação desejada possa ser acessada.
+Em consonância com esta definição, Hagedorn (2000) simplifica a RI como sendo o estudo de
+sistemas de indexação, busca, armazenamento e recuperação de conteúdo. Também
+considerada como sinônimo de busca e acesso à informação, segundo XIE (2002) a RI tem
+contribuído significativamente para a melhoria da área de busca de informações. Kowalski
+(1997, apud BEPPLER, 2008) indica que o principal objetivo de um sistema de RI é
+minimizar a dificuldade do usuário em localizar a informação requisitada.
+As pesquisas na área de RI têm explorado muitas técnicas, mas ainda os sistemas
+modernos de recuperação tendem a ser instrumentos fechados, recuperando muitos
+documentos não relevantes (com erros de precisão) e deixando de recuperar muitos
+documentos relevantes. O usuário fica com a importante tarefa de ler ou analisar os resultados
+obtidos para determinar se na verdade eles têm as informações solicitadas e descobrir como
+reformular um pedido para novamente verificarem se existem documentos relevantes que
+foram perdidos na busca (WOODS, 2004).
+Apesar destes problemas, há avanços na área de RI, por exemplo, quando unida a
+mineração de textos, segundo Araujo Junior (2007) e Gurrin (2010) ou à linguística
+computacional e ontologias, segundo Duque (2005). Gurrin cita o exemplo de um sistema que
+recupera um link quebrado de um site substituindo-o pela página correta através de técnicas
+de mineração de textos, Araujo Junior (2007, p. 149) defende a tese de que a “[...] mineração
+de textos pode, em associação com o processo de indexação manual, trazer ganhos no índice
+de precisão no processo de busca e recuperação da informação [...]”, e Duque explora o uso
+da linguística computacional associada a ontologias para otimizar o desempenho de Sistemas
+de RI por meio da utilização de técnicas que permitam contextualizar as palavras dos textos a
+serem indexados. Desta forma, associações da RI com determinadas áreas de estudo
+emergentes podem trazer contribuições significativas para o avanço das pesquisas e suas
+aplicações.
+2.2 Linguagem de marcação
+A preocupação humana com a formatação de documentos é bem anterior aos
+computadores, pois já existiam marcações representadas por símbolos, letras e caracteres
+especiais inseridas nos textos com o intuito de torna-los mais legíveis. Com o crescente uso
+dos computadores houve necessidade do surgimento e melhoria de linguagens que pudessem
+identificar elementos dentro de um documento, chamadas de linguagens de marcação. As
+
+marcas inseridas no documento identificam elementos tais como títulos, tabelas, gráficos,
+formatações diversas e tem como finalidade permitir uma melhor compreensão dos elementos
+do documento, facilitando a recuperação, tratamento e processamento das informações.
+Segundo Bax (2001) as linguagens de marcação podem ser divididas basicamente em
+dois tipos: as marcações procedimentais e as marcações descritivas. As marcações
+procedimentais inserem símbolos especiais no próprio texto definindo como ele deverá ser
+apresentado, sendo que estas marcações ainda podem ser inseridas de forma implícita pelo
+ambiente tal como ocorre num editor de textos, como o Microsoft Word2, ou de forma
+explícita pelo usuário como acontece no processador de textos LaTex3. Por outro lado as
+marcações descritivas utilizam marcas ou tags4 pré-definidas que qualificam o texto de acordo
+com sua localização. Este tipo de marcação é o primeiro passo para transformá-lo em
+informação tratável pelo computador. Linguagens populares que possuem este tipo de
+marcação são HTML e XML.
+A partir disso, acredita-se que há um campo muito grande de atuação para os sistemas
+de RI, principalmente na mineração de textos associados aos formulários de coleta de
+informações e com auxílio de linguagens de marcação.
+3 CRIAÇÃO DE CURSOS NO MOODLE
+Os AVAS diferem-se um dos outros pela quantidade, qualidade e diversidade das
+ferramentas oferecidas. Uma das razões para escolha do Moodle enquanto AVA para esta
+pesquisa foi a sua popularidade, que de acordo com o seu próprio site oficial de divulgação5,
+possui quase seis milhões de cursos virtuais com 60 milhões de usuários espalhados em mais
+de 220 países no mundo. Também contribuiu para a escolha o fato dele ser de código aberto
+(open source) distribuído sobre a Licença Púbica GPL, ou seja, possui uma distribuição livre
+para uso e modificação, porém, qualquer módulo adicionado ou alterado deve ser distribuído a
+comunidade também sobre a mesma licença. Além disto, existem diversas pesquisas
+acadêmicas sobre este AVA, tal como a desenvolvida por Paula (2009), no âmbito da Ciência
+da Informação, quando se verifica que as relações informacionais entre os usuários do Moodle
+favorece a organização da informação no ambiente, e os trabalhos de Wagner (2011) e Costa
+Junior e outros (2011) que propõe melhorias em processos do design instrucional no
+ambiente.
+
+A grande comunidade de usuários administradores e programadores deste ambiente,
+com mais de um milhão de colaboradores, também é algo que facilita muito o acesso às
+informações quanto a sua configuração e programação, através de trocas de experiências e
+consultas a problemas já solucionados e disseminados nos fóruns de discussão. Aqui nesta
+seção será abordado o aspecto do design instrucional e da programação, pois fornecem
+subsídios importantes para a proposta apresentada na seção 4.
+3.1 Design instrucional no Moodle
+O funcionamento e até o sucesso de um curso virtual depende da forma como ele é
+planejado e construído sob uma organização pedagógica, isto é, o design instrucional
+utilizado. Filatro (2004) apresenta o termo design instrucional como sendo o conjunto de
+ações intencionais e sistemáticas de ensino de forma
+
+planejada e também o “[...]
+
+desenvolvimento e a utilização de métodos, técnicas, atividades, materiais, eventos e produtos
+educacionais em situações didáticas especificas, a fim de facilitar a aprendizagem humana a
+partir dos princípios de aprendizagem e instrução conhecidos”.
+O design instrucional no Moodle é realizado através de uma interface visual rica e
+acessível ao usuário com o papel de administrador. Com uma grande quantidade de
+possibilidades, esta interface permite que sejam configuradas várias opções num nível macro,
+tais como, a duração de um curso, os grupos de trabalho, a forma de apresentação de um
+conteúdo, as possíveis interações entre os agentes do processo educativo e as formas
+avaliativas da aprendizagem do aluno. Opções também num nível micro, tais como, um fórum
+configurado para somente ser lido após a publicação de alguma mensagem, o feedback que
+será dado para uma escolha de uma alternativa específica numa questão objetiva entre outros.
+Há uma quantidade muito grande de opções para a criação e configuração de cursos
+virtuais no Moodle. Pesquisa realizada por Freitas e Dutra (2009) apontam falhas na
+usabilidade do Moodle. Profissionais que trabalham diretamente na administração deste AVA
+também relatam dificuldades na sua operação: repetições excessivas, trabalho entediante,
+muitas janelas de configuração, excesso de detalhes numa mesma janela de configuração entre
+outros problemas.
+3.2 Programação no Moodle
+A distribuição do Moodle sob a Licença Pública GPL garantem o acesso ao seu código
+fonte que pode ser obtido integralmente no seu site oficial6. A instalação do Moodle é
+
+
+
+diretamente pelo banco de dados.
+As alterações nas funcionalidades do Moodle diretamente no seu código através da
+linguagem PHP devem seguir as normas de codificação da W3C10 que deixa o código mais
+fácil e legível. O trabalho de programação pode ser viabilizado através do conhecimento
+aprofundado dos módulos do ambiente, chamadas de funções, parâmetros, tipos de dados
+utilizados, além do acesso à documentação e fóruns de discussão oferecidos pelo site oficial.
+Através de comandos SQL executados diretamente no banco de dados também é
+possível realizar varias operações como a geração de relatórios específicos não oferecidos
+pelo Moodle, cadastro de usuários, questionários, questões entre outros. Esta abordagem é
+mais complexa, pela grande quantidade de tabelas existentes e também pela falta de
+tratamento automático de consistência no banco de dados, como deveria ser, por exemplo,
+com as chaves estrangeiras. É um caminho que deixa o programador mais vulnerável a obter
+um conjunto de tabelas com falta de coesão.
+4 PROPOSTA PARA A RECUPERAÇÃO DE INFORMAÇÃO EM FORMULÁRIOS
+DE CRIAÇÃO E CONFIGURAÇÃO DE CURSOS NO MOODLE
+Criar e configurar um curso virtual em um AVA é normalmente uma tarefa que exige
+grande esforço com trabalho repetitivo e cansativo, especialmente no Moodle de acordo com
+constatação feita nesta pesquisa. Esta seção apresenta o levantamento de requisitos realizado
+nas entrevistas, delimita o problema e apresenta uma proposta de solução através da
+recuperação de informação realizada em formulários offline.
+4.1 Análise de requisitos e delimitação do problema
+Antes da delimitação do problema, foi realizado um amplo levantamento de requisitos
+em uma instituição de ensino federal que atua na modalidade EAD desde 2006 atendendo a
+mais de três mil alunos em vários cursos de graduação e especialização. Através de reuniões e
+entrevistas com os professores de alguns destes cursos foram detectadas diversas necessidades
+e deficiências no ambiente Moodle, entre elas destacam-se, problemas na avaliação dos
+alunos, na formação de grupos de trabalho, no acompanhamento individualizado, e no design
+
+
+instrucional. Este último foi relatado de forma incisiva e se revelou uma grande vertente para
+o desenvolvimento deste trabalho. A diversidade de opções e as interfaces visuais que exigem
+muitas seleções via mouse para realização das configurações necessárias são fatores que
+inibem o usuário iniciante e torna a tarefa mais vulnerável a erros ou ajustes inadequados.
+Critérios de usabilidade indicados por Nielsen (1993) tais como facilidade de
+aprendizagem, facilidade de utilização e facilidade de relembrar, também se mostraram falhos
+no ambiente. A constatação do excesso de opções para a criação e configuração de cursos
+torna a tarefa mais complexa e mais difícil de ser lembrada, e também a repetição excessiva
+de ações dificulta uma utilização mais dinâmica e eficiente.
+Em função destes problemas pertencentes a área de design instrucional, algumas
+instituições, inclusive a que foi pesquisada, oferecem aos seus usuários professores,
+formulários off-line para o preenchimento dos dados do curso, sendo alguns específicos para
+cada elemento de interação, tais como, fórum, questionário, lição, animação entre outros.
+Também com o intuito de melhorar a linguagem de especificação do curso para o professor,
+são usados outros artefatos, tais como o Mapa de Atividades, implementado por Costa Junior
+e outros (2011) que reúne todos os elementos do curso em ordem cronológica e numa única
+tabela fazendo ligação com os formulários que especificam cada atividade. Esse novo fluxo
+de informações está em consonância com o “paradigma do uso” apresentado por Le Coadic
+(2004) quando enfatiza a passagem da orientação ao sistema para uma orientação ao usuário,
+ou seja, a melhoria no processo de comunicação com a satisfação das necessidades do
+usuário. Casado (1994) também prima pela satisfação das necessidades do usuário, mas alerta
+que nem sempre ele é capaz de expressar o que necessita, pois muitas vezes o seu desejo não
+corresponde a sua necessidade.
+Uma vez que os formulários são preenchidos com as informações do curso ou
+específicas de uma atividade, elas são recuperadas por profissionais da equipe de produção de
+design instrucional e transformadas para a linguagem do Moodle, através de um processo
+manual de digitação e seleção das respectivas opções na sua interface visual. Este fluxo de
+informações melhora a padronização na criação de cursos e elimina problemas associados ao
+professor que tem pouca habilidade na configuração do Moodle, mas os repassa para os
+profissionais da equipe de produção que terão que realizar a tarefa de configuração baseada
+nas informações coletadas nos formulários.
+Por outro lado, este novo fluxo de informações cria outros dois problemas: (i) a falta
+de dinamicidade na reparação ou reconfiguração do curso uma vez que, agora, existe o papel
+do intermediário (profissional da equipe de produção) que irá exigir maior tempo para
+
+responder as solicitações que antes poderiam ser feitas imediatamente pelo professor; e (ii) a
+ocorrência de erros advindos do processo manual, uma vez que a recuperação de informação
+dos formulários não é automática. De acordo com Belkin (2008) não resta dúvida que os
+objetivos que levam as pessoas a se inserirem em processos de recuperação de informação, as
+atividades relacionadas a estes objetivos, seus comportamentos e as intenções incluídas nestes
+comportamentos, afetam substancialmente o seu julgamento quanto à utilidade dos objetos
+informacionais e a forma com que ocorre a interação com eles. Desta forma, o profissional
+que recupera estas informações não o faz de forma isenta, mas insere a sua interpretação que
+muitas vezes modifica o desejo inicial de quem preencheu o formulário. Wilson (2000)
+também demonstra preocupação sobre isto quando expõe o conceito de comportamento
+informacional que representa o comportamento humano em relação às fontes e canais de
+informação.
+
+Portanto, o problema desta pesquisa é delimitado por estas duas situações
+
+problema que foram expostas, cuja proposta de solução será apresentada na próxima
+subseção.
+4.2 Proposta de solução e esquema geral da recuperação de informação
+A proposta de solução, representada pelo fluxo da figura 1, é baseada na
+automatização do processo de recuperação de informação dos formulários off-line através de
+um compilador primário que irá reescrever estas informações para um formato intermediário
+denominado de linguagem de descrição. A linguagem de descrição é da categoria das
+linguagens de marcação, tal como apresentado na subseção 2.2, e contém marcações para
+separar cada elemento de configuração recuperado do formulário. Além disto, ela possui as
+características de legibilidade e modificabilidade, recomendados por Sebesta (2003), para
+permitir o acesso fácil e direto às informações que ainda estão no meio do processo, seja
+como motivo de debug ou até para uma nova alimentação de informações.
+
+Figura 1 – Fluxo de informações da proposta.
+
+Em seguida o compilador secundário traduz as informações representadas na
+linguagem de descrição para a linguagem PHP, usada pelo Moodle, pois é através desta e de
+seu interpretador que são feitas as alterações no banco de dados do curso, diretamente no
+servidor onde o Moodle está instalado.
+Esta proposta sugere que o formulário off-line seja o mesmo usado pela instituição de
+ensino que oferece o curso virtual. A linguagem de descrição e os compiladores primário e
+secundário devem ser especificados e construídos de tal forma que atenda o fluxo sugerido
+fazendo devidamente as análises léxica, sintática e semântica bem como a geração dos
+códigos intermediário e destino. Na próxima seção será apresentado um protótipo que foi
+desenvolvido a partir deste fluxo proposto, mas num escopo menor de solução para viabilizar
+a implementação nesta fase do trabalho.
+5 PROTÓTIPO
+Foi selecionada uma parte reduzida da tarefa de design instrucional do Moodle para
+realização da implementação que se constitui num protótipo capaz de demonstrar o fluxo de
+informações da figura 1 apresentado na seção anterior. A intenção deste protótipo foi propor,
+
+dentro da metodologia de estudo de caso, que é possível a implementação completa,
+sinalizando e antecipando possíveis problemas, e generalizando para o restante do ambiente.
+5.1 Delimitação do escopo do protótipo
+Após análise dos procedimentos de configuração do Moodle e também dos
+formulários usados pela equipe de design instrucional da instituição educacional desta
+pesquisa, decidiu-se, pela delimitação do escopo do protótipo nas atividades do tipo
+questionário e mais especificamente nas questões objetivas do tipo verdadeiro-falso. Esta
+escolha, indicada aqui como estudo de caso, foi realizada por se compreender que a obtenção
+de resultados satisfatórios para uma determinada funcionalidade do ambiente poderia ser
+expandida através da aplicação de técnicas e métodos encontrados para abranger a totalidade
+de configurações do ambiente. Por resultados satisfatórios, neste trabalho, compreende-se a
+inserção de dados de configuração no Moodle de maneira automática, eficaz, descobrindo e
+evitando possíveis erros e minimizando o gasto de tempo.
+Para os formulários off-line, optou-se em adotar o mesmo formato usado pelos
+usuários da instituição, ou seja, o formato de arquivos doc do editor de textos Microsoft
+Word11. Como este software é proprietário, é possível substituí-lo sem dificuldades por outro
+da categoria de software livre, por exemplo, o Writer do OpenOffice12. Para isto, basta usar
+uma biblioteca específica para o tipo adotado, de acordo com o que será exposto na próxima
+seção.
+Apesar de o editor de textos usado possuir linguagem de marcação procedimental, tal
+como abordado na seção 2.2, a linguagem de descrição, explicada na seção 4.2, é classificada
+como linguagem de marcação descritiva, uma vez que construções previamente definidas, ou
+tags, serão utilizadas para agregar informações ao texto. Desta forma, facilita-se a
+implementação do compilador primário, apresentado no fluxo da figura 1, para realizar a
+conversão das informações contidas nos formulários off-line para o formato da linguagem de
+descrição, e consequentemente tornar mais viável a construção do protótipo.
+5.2 Implementação
+O estudo das tabelas da arquitetura do Moodle foi fundamental para a descoberta da
+entrada de informações no banco de dados, especificamente para o caso das questões do tipo
+verdadeiro-falso. A escolha das ferramentas adequadas também trouxe mais produtividade na
+
+implementação do protótipo. Utilizou-se o pacote EasyPHP13 contendo o servidor Apache14,
+banco de dados MySQL e um interpretador PHP.
+A etapa da recuperação de informação do formulário off-line, do editor de textos
+adotado para o protótipo e a sua tradução para a linguagem de marcação, denominada de
+compilador primário na proposta deste trabalho, foi simplificada com o uso de funções
+definidas na biblioteca gratuita Apache POI15 que fazem a leitura das informações e as
+transformam para um formato mais limpo, ou seja, com poucas marcações, o suficiente para a
+leitura posterior pelo compilador secundário.
+O compilador secundário foi desenvolvido usando-se uma tradução dirigida pela
+sintaxe, onde a gramática da linguagem é o elemento que conduz o processo de análise e
+geração de código (AHO, 2008). Devido ao escopo reduzido, as análises léxicas e semânticas
+ficaram bastante simples. Como de praxe no desenvolvimento de compiladores, para uma
+produtividade maior, optou-se pelo uso de uma ferramenta compiler-to-compiler, sendo
+escolhido o JavaCC16, que trabalha sob a organização top-down de análise gramatical, e por
+ser software livre, estável e compatível com aplicações JAVA17 gerando código mais portável.
+Um plugin do JavaCC foi usado no IDE (integrated development environment) Eclipse18 para
+a implementação do código.
+Os códigos desenvolvidos para este protótipo, bem como os formulários off-line
+usados nos testes e também as bibliotecas de software usadas, estão disponíveis para
+download19.
+5.3 Testes com o protótipo
+Esta subseção relata um teste completo de uso do protótipo com as respectivas telas
+que apresentam o estado da informação de acordo com fluxo apresentado na figura 1 da seção
+4.2.
+Inicialmente o formulário off-line foi preenchido com uma questão do tipo verdadeirofalso, figura 2. Em seguida o protótipo recuperou as informações deste formulário e as
+transformou para a linguagem de marcação, figura 3.
+
+Figura 2 – Exemplo de formulário off-line com uma questão objetiva.
+
+Figura 3 – Informações da questão recuperadas e traduzidas para a linguagem de marcação.
+
+O compilador secundário traduziu as informações escritas na linguagem de marcação
+para a linguagem PHP que, copiado para o ambiente de instalação do Moodle, foi executado
+gerando as questões no banco de dados do Moodle, figura 4. Nesta etapa também foram
+checados erros léxicos, sintáticos e semânticos, que se encontrados parariam o processo para
+que o usuário verificasse irregularidades no formulário off-line.
+
+Figura 4 – Questão adicionada e disponível no banco de dados do Moodle.
+
+Neste momento as questões foram geradas no banco de dados de questões. Em seguida
+estas questões foram inseridas manualmente no questionário desejado, sendo que este
+processo pode também ser automatizado com relativa facilidade. A figura 5 apresenta o curso
+virtual já funcionado com as questões dentro do questionário.
+
+Figura 5 – Curso virtual já funcionando após a inserção das questões no questionário.
+
+6 CONCLUSÕES
+Sendo a RI uma das atividades mais importantes da Arquitetura da Informação e,
+consequentemente, da Ciência da Informação como um todo, e cada vez mais com
+contribuições significativas na resolução de problemas em diversas áreas, esta pesquisa
+mostrou a viabilidade de uma aplicação prática com benefícios para a construção e
+configuração de cursos em AVAs.
+
+Estes ambientes contribuíram para a evolução e
+
+consolidação da EAD, porém ainda possuem funcionalidades e características que devem ser
+melhoradas de forma a proporcionar maior usabilidade tanto para o usuário aluno quanto para
+o usuário professor ou administrador.
+O foco deste trabalho foi delimitado pela demanda que emergiu de entrevistas
+realizadas com usuários do AVA Moodle de uma instituição de ensino que oferece cursos de
+graduação e especialização na modalidade EAD. Constatou-se dois problemas em potencial
+no design instrucional do Moodle usado nesta instituição, o primeiro, na falta de eficiência na
+manutenção ou reconfiguração do curso, e o segundo, na ocorrência de erros advindos do
+processo manual de recuperação de informação dos formulários off-line.
+
+Desta forma,
+
+elaborou-se uma proposta de solução para diminuir o gasto de tempo e a quantidade de erros,
+aumentando a confiabilidade na atividade de criação e configuração de cursos virtuais através
+da automatização do processo de recuperação de informação de formulários off-line.
+A proposta foi implementada através de um protótipo com escopo delimitado para as
+questões objetivas do tipo verdadeiro-falso do Moodle. Apesar desta restrição, houve a
+implementação completa de todas as etapas do fluxo de informações da proposta, viabilizando
+um teste completo desde a recuperação de informação no formulário off-line até a geração e
+execução do curso virtual num navegador de internet. As técnicas de compilação foram
+determinantes tanto na proposta de solução do problema quanto na implementação do
+protótipo por trazer benefícios quanto à confiabilidade e robustez do software criado.
+Pelos testes realizados verificou-se maior eficiência e ausência de erros na recuperação
+de informação do formulário, pois excluiu-se o processo manual de alimentação do banco de
+dados. O protótipo demonstrou a viabilidade técnica para a implementação completa da
+proposta, ou seja, considerando-se todos os recursos de um AVA, pois os procedimentos
+realizados juntamente com as técnicas e ferramentas empregadas foram suficientes para a
+configuração de uma funcionalidade pequena, porém completa, do Moodle. A partir dos
+resultados obtidos, o próximo passo deste trabalho é implementar um grupo maior de
+elementos do Moodle para então submeter a uma validação completa com usuários numa
+situação real de uso.
+

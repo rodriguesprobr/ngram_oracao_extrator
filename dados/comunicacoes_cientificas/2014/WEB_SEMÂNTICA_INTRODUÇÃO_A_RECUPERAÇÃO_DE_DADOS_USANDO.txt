@@ -1,0 +1,701 @@
+WEB SEMÂNTICA: INTRODUÇÃO A RECUPERAÇÃO DE DADOS USANDO
+SPARQL
+Resumo: A Web Semântica faz parte do cotidiano de nossas vidas, a publicação de grandes
+volume de dados através do Linked Data é um dos principais produtos materializados como
+resultado da proposta inicial de Tim Berners-Lee, publicada na Scientific American, em
+2001. Diante do exposto é necessário concentrar esforços que vão além dos modelos para
+estruturar e efetivar a publicação de dados em formato semântico, torna-se necessário
+estudar atentamente modelos de recuperação que tornem usuais estes dados. O objetivo
+deste trabalho é apresentar o protocolo SPARQL e suas possibilidades, como um dos
+principais aliados no processo de recuperação da informação em ambientes semânticos. A
+metodologia utilizada nesta pesquisa conta com uma pesquisa bibliográfica e documental
+seguida de um procedimento exploratório em torno do uso do protocolo SPARQL. Como
+resultado verificou-se a disponibilidade de ferramentas que tornam possível o efetivo uso
+do protocolo SPARQL para recuperação da informação em ambientes semânticos.
+Palavras-chave: Web Semântica. Recuperação da Informação. SPARQL. Linked Data.
+1 INTRODUÇÃO
+Além das “nuvens”: expandindo as fronteiras da Ciência da Informação, tema do
+Enancib 2014, retrata com muita clareza a situação atual das pesquisas e principalmente das
+perspectivas de pesquisa que envolvem a Ciência da Informação atualmente.
+Enquanto grande parte dos chamados objetos de estudo da Ciência da Informação
+encontram-se em processo de mudança para o contexto digital, outros já estão a algum
+tempo encapsulados nas nuvens. Dentre estes estudos e pesquisas encontram-se os
+conceitos e tecnologias que envolvem a Web Semântica, proposta descrita pela primeira vez
+em 2001, quando Tim Berners-Lee, James Hendler e Ora Lassila, publicaram na revista
+Scientific American o texto “The Semantic Web”.
+
+Desde a proposta inicial de 2001, a Web Semântica vem ganhando força e
+agregando novas tecnologias, funcionalidades e evoluindo para tornar real o processo de
+construção de ambientes semânticos. Tecnologias como RDF (Resource Description
+Framework), XML (eXtensible Markup Language), OWL (Web Ontology Language) e
+todos os conceitos que as envolvem, ganham novas versões, descritos com clareza no W3C
+(World Wide Web Consortium), e tornam possível a materialização do conceito da Web
+Semântica. As tecnologias citadas estão diretamente relacionadas ao processo de construção
+da informação e armazenamento das mesmas, constituindo assim ambientes que possam ter
+conjunto de dados ligados semanticamente.
+O conceito de Web Semântica e de ligação entre dados deu origem ao Linked Data,
+um conjunto de dados em formato aberto, que se apresenta como um grande ambiente de
+informação através de dados ligados semanticamente entre si em vários lugares ao redor do
+mundo, caracterizando-se por utilizar a internet (a nuvem) como seu hospedeiro. É possível
+afirmar que o Linked Data é uma materialização dos conceitos da Web Semântica.
+Não é necessário muito esforço para ter acesso a toda essa imensidão de tecnologias
+que tem tornado real a ideia da construção de uma Web Semântica. Apesar do mapa do
+Linked Data não ser atualizado desde 2011, o conjunto de dados disponíveis continua
+crescendo em escala logarítmica e é possível identificar muita informação pronta para
+acesso em vários datasets (nome dados as bases de dados no Linked Data) ao redor do
+mundo.
+Essa grande disponibilidade sugere que utilizemos formatos e estruturas adequadas
+de pesquisa para encontrar e principalmente fazer uso de todo esse conjunto de dados.
+Desta forma o objetivo deste trabalho é apresentar o protocolo SPARQL e suas
+possibilidades como um dos principais aliados no processo de recuperação da informação
+em ambientes semânticos. A metodologia utilizada nesta pesquisa conta com uma pesquisa
+bibliográfica e documental seguida de um procedimento exploratório, sendo que a parte da
+pesquisa que envolveu a metodologia de pesquisa bibliográfica e pesquisa documental
+foram realizadas em literatura da área de Ciência da Informação e documentação técnica
+disponível no site do W3C. A pesquisa de caráter exploratório foi realizada através de
+aplicações sucessivas de consultas a conjuntos de dados diversos em formato de arquivos
+RDF e também em ambientes de dados disponíveis no ambiente Linked Data, sempre
+utilizando-se o protocolo Sparql para recuperação de dados.
+
+2 WEB SEMÂNTICA: ESTRUTURA, ARMAZENAMENTO E PUBLICAÇÃO DE
+DADOS
+Após o ano 2001 quando Tim Berners-Lee, James Hendler e Ora Lassila publicaram
+na revista Scientific American o texto “The Semantic Web” algumas áreas de pesquisa, em
+especial dentro da Ciência da Informação e da Ciência da Computação, têm direcionado
+esforços para colocar em prática os conceitos abordados no texto citado.
+Nos últimos anos vários elementos foram surgindo e ampliando o contexto da ideia
+original de Berners-Lee. O W3C iniciou um processo de publicar, efetivar e disseminar um
+conjunto de tecnologias que foram se agregando em busca da Web Semântica. Vários
+projetos ao redor do mundo também evoluíram de forma a constituir ambientes semânticos,
+tanto do ponto de vista de estrutura informacional quanto da possibilidade de recuperação
+semântica da informação.
+O projeto da Web Semântica tem como ponto fundamental a criação de uma nova
+estrutura de armazenamento de dados. O ponto principal está na separação da apresentação
+do conteúdo e do conteúdo da estrutura, tratando as unidades atômicas de uma informação
+como componentes independentes.
+O desafio da Web Semântica vem sendo, a cada dia, prover uma linguagem capaz de
+expressar ao mesmo tempo dados e regras, de forma a possibilitar a dedução de novos
+dados e regras a partir de qualquer sistema de representação de conhecimento a ser
+importado ou exportado na Web (SANTAREM SEGUNDO, 2010).
+Diferente da chamada Web de Documentos (a primeira Web), tem-se promovido a
+construção da Web de Dados, uma iniciativa do W3C com grande apelo em todo o mundo.
+A Web de Dados propõe uma estrutura que sugere a ligação entre dados publicados em
+bases de dados abertas disponíveis livremente na Internet. Esses dados publicados estão
+associados a vocabulários padronizados, ontologias e aplicação de inferências (W3C, 2010).
+Para disponibilizar dados numa estrutura semântica é necessário usar partes (ou
+todo) do modelo descrito por Berners-Lee em 2001, no chamado bolo de noiva (layercake),
+estrutura de camadas que apresenta a Web Semântica. Destaca-se neste quesito a linguagem
+RDF, também indicada para representação de dados abertos.
+Um dos principais objetivos da linguagem RDF é justamente criar uma rede de
+informações a partir de dados distribuídos. Essa característica de constituição de redes se dá
+pela relação existente entre o modelo de construção de triplas do RDF e o modelo
+matemático conhecido como grafo.
+
+
+Um grafo é um modelo matemático muito poderoso que pode ser aplicado na
+resolução de um conjunto de problemas. É composto por um conjunto de vértices e
+arestas/arcos (SANTAREM SEGUNDO, 2010).
+De acordo com o W3C, o RDF é uma linguagem de uso geral para representar
+informações na Web. O RDF tem como princípio fornecer interoperabilidade aos dados, de
+forma que possa contribuir com a recuperação de informações de recursos na Web.
+Segundo Lassila,
+RDF é uma aplicação da linguagem XML que se propõe ser uma base
+para o processamento de metadados na Web. Sua padronização estabelece
+um modelo de dados e sintaxe para codificar, representar e transmitir
+metadados, com o objetivo de torná-los processáveis por máquina,
+promovendo a integração dos sistemas de informação disponíveis na Web
+(LASSILA, 1999).
+
+O modelo RDF é constituído de três objetos básicos: recursos, propriedades e
+valores. Um recurso é uma informação (página web, livro, cd, pessoa, lugar, documento
+disponível em um repositório ou biblioteca digital) que pode ser identificada por uma URI
+(Universal Resource Identificator). Propriedades são as informações que representam as
+características do recurso, ou seja, são os atributos que permitem distinguir um recurso de
+outro ou que descrevem o relacionamento entre recursos. Os valores são os dados que
+representam a informação a ser descrita.
+A declaração é a constituição da informação completa, que compreende um recurso
+com suas propriedades e valores para as propriedades. Uma URI pode ser um local ou
+página na WEB como uma URL (Unified Resource Locator) ou ainda outro tipo de
+identificador único.
+Além de representar graficamente uma informação através de grafos, o modelo RDF
+pode ser representado através da sintaxe XML para uso como artefato computacional.
+O modelo básico de representação dos dados é o RDF, porem para que se possa
+publicar dados e principalmente torna-los disponíveis para serem recuperados com mais
+eficiência e eficácia, é necessário que o esquema lógico estrutural dos dados esteja sob uma
+ontologia, ou minimamente utilizando-se de vocabulários de representação de
+conhecimento padronizados e reconhecidos.
+Utilizar ontologias e suas relações é uma das maneiras de se construir uma relação
+entre termos dentro de um domínio, favorecendo a possibilidade de contextualizar os dados,
+tornando mais eficiente e facilitando o processo de interpretação dos dados pelas
+ferramentas de recuperação da informação.
+
+Para Guarino (1998, p.7), ontologia é “uma maneira de se conceituar de forma
+explícita e formal os conceitos e restrições relacionados a um domínio de interesse”. Numa
+visão mais tecnológica, o termo refere-se a um artefato computacional, que em uma visão
+simplista, pode ser descrito como uma hierarquia de conceitos relacionados entre si através
+de uma classificação de parentesco (hipernímia e hipônimo), também chamada de
+taxonomia.
+A definição de Jacob aproxima-se muito do conceito de ontologia que mais se aplica
+à Ciência da Informação quando no contexto da recuperação semântica de informações:
+Ontologias são categorias de coisas que existem ou podem existir em um
+determinado domínio particular, produzindo um catálogo onde existem as
+relações entre os tipos e até os subtipos do domínio, provendo um
+entendimento comum e compartilhado do conhecimento de um domínio
+que pode ser comunicado entre pessoas e programas de aplicação
+(JACOB, 2003, p.19).
+
+Construir ontologias nem sempre é o melhor ou mais rápido caminho para
+disponibilizar dados em formato semântico. Em grande parte das vezes utilizar-se de
+ontologias prontas e universalmente conhecidas e reconhecidas por uma determinada
+comunidade, acelera o processo de publicação de dados, mas principalmente favorece o
+processo de recuperação da informação em ambientes semânticos.
+Não utilizar esquemas lógicos como as ontologias e os principais vocabulários para
+descrever dados a serem publicados certamente é o pior caminho para publicação de dados
+em formato semântico, principalmente do ponto de vista da recuperação da informação.
+Apesar da criação de etiquetas para representação das propriedades do RDF ser
+livre, há um grupo de vocabulários que são utilizados em larga escala nas principais
+ontologias conhecidas e também em grande parte dos exemplos de publicação de datasets
+em formato semântico disponíveis na Internet.
+Dentre os vacabulários mais utilizados encontramos:
+•
+
+Friend-of-a-Friend (FOAF) , o vocabulário para descrever pessoas.
+
+•
+
+Dublin Core (DC) define os atributos gerais de metadados, baseado no padrão de
+metadados Dublin Core.
+
+•
+
+Comunidades Online Semanticamente Interligados (SIOC) , vocabulário para
+representar as comunidades online.
+
+•
+
+Descrição de um projeto (DOAP) , vocabulário para descrever projetos.
+
+•
+
+Simples Sistema de Organização do Conhecimento (SKOS) , vocabulário para
+representar
+estruturado.
+
+taxonomias,
+
+vocabulários
+
+controlados
+
+e
+
+conhecimento
+
+pouco
+
+3868
+
+•
+
+Music Ontology, prevê condições para descrever artistas, álbuns e faixas.
+
+•
+
+Creative Commons (CC) , o vocabulário para descrever termos de licença.
+Além dos listados, há ainda uma séria de outros vocabulários disponíveis, assim
+
+como vários são os modelos de esquemas e ontologias disponíveis para serem utilizados e
+principalmente consumidos livremente. Uma das ideias materializada, que agrega e
+congrega esses esquemas, vocabulários e principalmente dados, é chamada de Linked Data.
+3 LINKED DATA
+Pensando em um modelo associativo de publicação de dados estruturados na Web,
+foi constituído o Linked Data (dados ligados). Organizado por Tim Berners-Lee tem como
+característica principal o estabelecimento de links entre dados de fontes distribuídas.
+Segundo Heath e Bizer (2011), “o Linked Data é um conjunto de melhores práticas
+para publicação e conexão de dados estruturados na Web, permitindo estabelecer links entre
+itens de diferentes fontes de dados para formar um único espaço de dados global”.
+Para Berners-Lee (2006),
+a Web Semântica não trata apenas de depósito de dados na web. Trata-se
+de fazer ligações, de modo que uma pessoa ou máquina possa explorar
+esse conjunto de dados. Com Linked Data, quando você tem um pouco de
+dados, você pode encontrar outros que estão relacionados.
+
+A construção do Linked Data está baseada em quatro princípios publicados por
+Berners-Lee (2006):
+•
+
+Usar URIs como nomes para os itens.
+
+•
+
+Usar URIs HTTP para que as pessoas possam consultar esses nomes.
+
+•
+
+Quando alguém consulta uma URI, prover informação RDF útil.
+
+•
+
+Incluir sentenças RDF com links para outras URIs, a fim de permitir que itens
+relacionados possam ser descobertos.
+O projeto tem crescido muito nos últimos anos, em 2007 o Linked Data era
+
+constituído de aproximadamente um bilhão de declarações RDF, interligados por 120.000
+links RDF. Em 2011 eram 52 bilhões de declarações RDF. Hoje não há números expressos
+sobre o conjunto de ligações que não para de crescer.
+Com certeza a base de maior tamanho e também maior destaque no Linked Data é a
+DBpedia.
+A DBpedia é uma interface orientada a dados, constituída a partir de um esforço da
+comunidade para extrair informação estruturada da Wikipédia e tornar esta informação
+disponível na web. Atualmente está sendo constituída a DBpedia Live que é uma estrutura
+
+funcional que tem como objetivo transferir diretamente os dados do Wikipédia para o
+padrão semântico do DBpedia.
+Ressalta-se a grandeza e proporção que o Linked Data vem tomando, a base de
+conhecimento DBpedia atualmente descreve mais de 4 milhão de itens, das quais 3,22
+milhões são classificados de forma consistentes por ontologias, incluindo 832 mil pessoas,
+63 mil lugares, além de músicas, filmes, games, espécies, doenças entre outras informações.
+Os dados da DBpedia apresentam estes itens em até 119 idiomas diferentes. A base de
+conhecimento DBpedia, em todos idiomas, consiste em aproximadamente 2,5 bilhões de
+declarações RDF, dos quais 470 milhões foram extraídos da edição Inglês da Wikipedia.
+(DBPEDIA, 2014).
+Outra base de destaque, principalmente porque praticamente 95% de seus dados tem
+precisão manual é a base Yago. Essa base relaciona 2 milhões de entidades (pessoas,
+organizações, cidades, etc.). São aproximadamente 20 milhões de fatos sobre essas
+entidades.
+Destaca-se ainda a integração de dados geográficos, tais como nomes de lugares em
+vários idiomas, altitude, população e outras fontes publicados pelo banco de dados
+Geonames que está disponível para download gratuitamente sob uma licença Creative
+Commons. O dataset do Geonames contém mais de 10 milhões de nomes geográficos e é
+composto por 8 milhões de recursos exclusivos. Todos os recursos são classificados em
+uma das nove classes de recurso e ainda subcategorizados em um dos 645 códigos de
+recurso. Os dados são acessíveis gratuitamente através de um número de webservices e uma
+exportação de banco de dados diariamente. O webservice Geonames.org tem atendido
+aproximadamente 30 milhões de requisições diárias. (Geonames, 2013)
+Outra característica a ser abordada nos dados publicados no Linked Data é a
+disseminação de instrumentos de controle de vocabulário e controle de autoridade. O
+AGROVOC é um tesauro desenvolvido a partir de 1980 que atualmente é referência para
+temas ligados à agricultura, piscicultura, silvicultura entre outros assuntos relacionados ao
+meio ambiente. O AGROVOC é utilizado mundialmente por pesquisadores, bibliotecários,
+gestores de informação e outros profissionais para indexar, recuperar e organizar dados em
+sistemas de informações agrícolas. Utilizando-se da terminologia SKOS, modelo apropriado
+para publicação de tesauros na web, o AGROVOC pode ser consultado assim como
+interligado com outros recursos para provimento de dados em formato semântico.
+(AGROVOC, 2014).
+
+Há ainda uma grande diversidade de bases de dados, que vão desde informações
+sobre Ciências da Vida (GeneID, PubMed, Geo Species, Gene Ontology, etc), Dados
+Geográficos (Aeroportos, Earth, Linked GeoData, etc), Dados de Uso Geral (Slideshare,
+Semantic Tweet, Delicious, Flickr, etc), Mídia (BBC, Music Brainz, New York Times,
+Last.FM, etc), Publicações (IEEE, ePrints, CiteSEER, theses.fr, etc) e Dados
+Governamentais (Patentsdata.gov.uk, researchdata.gov.uk, transportdata.gov.uk, etc).
+Todos estes chamados datasets estão listados no mapa do Linked Data publicado em
+2011. Atualmente existe uma infinidade de outros datasets, que não faziam parte do mapa
+do Linked Data em 2011, com um volume imenso de declarações RDF sobre os mais
+variados tipos de dados.
+4 PROTOCOLO SPARQL E A RECUPERAÇÃO DA INFORMAÇÃO
+Os capítulos apresentados até agora definem bem a estrutura informacional que se
+construiu a partir das tecnologias da Web Semântica. Grande parte do conteúdo de pesquisa
+disponível em bases nacionais e internacionais cita os padrões e tecnologias abordados aqui
+e indicam o caminho das pedras no processo de construção de bases de dados ligados no
+modelo do Linked Data.
+Com essa grande oferta de dados disponíveis é necessário um segundo passo, o
+desfrute desses datasets. É necessário transformar todo esse conjunto de informações em
+conhecimento útil e aplicável, de forma a mudar positivamente a vida das pessoas. Essa era
+a proposta inicial de Berners-Lee com a Web Semântica.
+A busca por pesquisas já realizadas sobre recuperação da informação em ambientes
+semânticos nos leva a um conjunto de textos publicados, sendo que a maioria deles
+apresentam contextualizações teóricas ou ainda modelos de recuperação da informação que
+podem ser aplicados a dados ligados. Poucos desses textos apresentam informações precisas
+sobre como proceder ao lidar com dados como os disponíveis no Linked Data.
+Nessa pesquisa, temos como foco apresentar e discutir o protocolo SPARQL
+(Simple Protocol and RDF Query Language) com um caráter mais pedagógico do ponto de
+vista de estímulo aos pesquisadores que desejam utilizá-lo.
+Segundo Tim Berners-Lee, tentar utilizar o potencial da Web Semântica sem
+SPARQL é o mesmo que tentar utilizar um banco de dados relacional sem usar a linguagem
+SQL.
+O SPARQL é um conjunto de especificações que fornecem linguagens e protocolos
+para consultar e manipular o conteúdo publicado em RDF na Web. O padrão compreende as
+seguintes especificações: uma linguagem de consulta para RDF; uma especificação que
+
+define uma extensão do SPARQL Query Language para executar consultas distribuídas em
+diferentes terminais SPARQL; uma especificação que define a semântica de consultas
+SPARQL sob regimes de vinculação, como RDF Schema, OWL, ou RIF; um protocolo que
+define os meios para a transmissão de consultas SPARQL arbitrárias e solicitações de
+atualização para um serviço de SPARQL; uma especificação que define um método busca e
+descoberta e um vocabulário para descrever serviços SPARQL e um conjunto de testes,
+para avaliação da especificação SPARQL 1.1 (SPARQL, 2013).
+O protocolo SPARQL 1.1 é uma versão com muitas alterações e substanciais
+evoluções em relação a primeira versão SPARQL 1.0, publicada pelo W3C como
+linguagem de consulta em Janeiro de 2008. Atualmente chamado de protocolo, a versão 1.1
+é uma recomendação W3C desde março de 2013.
+4.1 SPARQL: Como funciona
+Ao estabelecer uma metodologia de pesquisa para que se possa utilizar de forma
+consistente o SPARQL, é importante dominar exatamente como acontecem as declarações
+RDF, que podem ser apresentadas em forma de gráficos, tabelas, arquivos XML, arquivos
+em formato Turtle, N3, entre outros tantos formatos conhecidos para RDF.
+CÓDIGO 1 - Triplas RDF de uma agenda em formato Turtle
+@prefix ag: <http://meusite.com.br/namespace/agenda#> .
+ag:maria ag:fone
+"(11) 111-1111" .
+ag:maria ag:e-mail
+"maria@meuemail.com.br" .
+ag:jose
+ag:fone
+"(22) 222-2222" .
+ag:jose
+ag:e-mail
+"jose@meuemail.com.br" .
+ag:antonio ag:fone
+"(33) 333-3333" .
+ag:antonio ag:e-mail
+"antonio@meuemail.com.br" .
+ag:antonio ag:e-mail
+"toninho@outroemail.com.br" .
+Fonte: próprio autor
+
+No CÓDIGO 1, são apresentadas informações de uma agenda representada pelo
+formato Turtle do RDF. Considera-se neste caso o uso de um vocabulário estabelecido em
+<http://meusite.com.br/namespace/agenda#>. Observa-se que neste caso poderia ter sido
+utilizado o vocabulário FOAF ou algum outro vocabulário reconhecido internacionalmente,
+porém preferiu-se para o exemplo um vocabulário próprio, que estaria disponível no link
+apresentado. Considera-se também que as pessoas na agenda são recursos disponíveis no
+mesmo endereço. A TABELA 1 apresenta o mesmo conteúdo do CÓDIGO 1, porém em
+um formato diferente.
+TABELA 1 - Apresentação em forma de tabela dos dados do CÓDIGO 1
+Recurso
+maria
+maria
+jose
+jose
+antonio
+antonio
+antonio
+
+Valor
+Propriedade
+fone
+(11) 111-1111
+e-mail
+maria@meuemail.com.br
+fone
+(22) 222-2222
+e-mail
+jose@meuemail.com.br
+fone
+(33) 333-3333
+e-mail
+antonio@meuemail.com.br
+e-mail
+toninho@outroemail.com.br
+
+Fonte: próprio autor
+
+Apesar do Protocolo SPARQL apresentar um grande conjunto de funcionalidades,
+entender como funciona o processo de consulta é talvez a parte mais importante para
+dominar o funcionamento do mesmo.
+Uma consulta SPARQL é composta, em ordem, por:
+•
+
+Declarações de prefixos, para abreviar URIs
+
+•
+
+Definição do conjunto de dados, informando quais grafo(s) RDF estão sendo
+consultados
+
+•
+
+A cláusula de resultado, identificando que informação deve ser retornada a partir da
+consulta
+
+•
+
+O padrão de consulta, especificando o que consultar dentro do conjunto de dados
+
+•
+
+Modificadores de consulta, limites, ordenação, e outros que podem modificar o
+resultado final
+CÓDIGO 2 - Estrutura padrão de uma consulta SPARQL
+# declarações de prefixo
+PREFIX foo: <http://example.com/resources/>
+...
+# definição de conjunto de dados
+FROM ...
+# cláusula de resultado
+SELECT ...
+# padrão de consulta
+WHERE {
+...
+}
+# modificadores de consulta
+ORDER BY .
+Fonte: SPARQL (2013).
+
+No CÓDIGO 2 a cláusula “FROM” indica o conjunto de dados a ser pesquisado,
+que pode ser representado por um conjunto de arquivos ou de datasets publicados na
+internet através do Linked Data. A clausula “ORDER BY”, como na linguagem SQL, serve
+como modificador de apresentação resultado, podendo alterar a classificação dos dados
+resultantes da consulta.
+Ao observar o CÓDIGO 2 o motor principal de uma consulta SPARQL é realizado
+através da estrutura fundamentada pelas cláusulas “SELECT” e “WHERE”. Conforme pode
+ser observado na FIGURA 1, a cláusula “SELECT” define quais dados serão apresentados
+no resultado final da consulta, já a cláusula “WHERE” indica os dados que serão retirados
+do grafo RDF e trabalhados de forma a ser construído o conjunto de dados de resposta a
+consulta SPARQL.
+FIGURA 1 – Cláusulas WHERE e SELECT em uma consulta SPARQL
+
+Figure 1-1. WHERE specifies data to pull out; SELECT picks which data to display
+
+Fonte: DUCHARME (2011, p. 4)
+
+A submissão de uma consulta SPARQL a um conjunto de dados RDF apresenta
+resultados em forma de tabelas em grande parte das vezes.
+Os exemplos a seguir foram aplicados sobre o conjunto de dados nomeados aqui
+como CÓDIGO 1 (nosso conjunto de dados).
+O CÓDIGO 3 trata de uma simples consulta, na busca por identificar o e-mail do
+“José”.
+CÓDIGO 3 - Consulta SPARQL
+PREFIX ag: <http://meusite.com.br/namespace/agenda#>
+SELECT ?email_do_ze
+WHERE
+{ ag:jose
+ag:e-mail
+?email_do_ze . }
+Fonte: próprio autor
+
+Em uma consulta, toda vez que for utilizado o símbolo de interrogação antes de uma
+palavra ela deve ser entendida como uma variável, ou seja, valor a ser recuperado pela
+consulta. Neste caso após a cláusula “SELECT” encontramos a variável “?email_do_ze”,
+que deverá ser o único valor de retorno apresentado. A cláusula “WHERE” mostra três
+elementos, entre eles a variável “?email_do_ze” que é o valor a ser recuperado no grafo
+RDF.
+É importante esclarecer o funcionamento da cláusula “WHERE”, visto que ela é a
+responsável por selecionar o conjunto de dados a ser buscado em um dataset ou em um
+arquivo de declarações RDF.
+A cláusula “WHERE” é sempre construída por grupos de 3 elementos, que
+representam as informações de uma declaração RDF. Em publicações da área sobre
+SPARQL, encontram-se muitos exemplos da cláusula “WHERE ?s ?p ?o”, que representa
+sujeito (recurso), predicado ou propriedade e objeto (valor).
+No CÓDIGO 3, a cláusula “WHERE” apresenta os 3 elementos (recurso,
+propriedade e valor), porém 2 deles são conhecidos dentro do conjunto de dados a ser
+buscado, ou seja o único elemento apresentado como variável é o “?email_do_ze”. No caso
+do CÓDIGO 3 entende-se que a consulta será submetida ao conjunto de dados do CÓDIGO
+1, sendo que os dados a serem retornados ou recortados deverão obedecer a cláusula
+“WHERE” da seguinte forma: “retorne toda declaração RDF encontrada, que tenha como
+recurso - ag:jose -, tenha como propriedade - ag:e-mail - e tenha qualquer valor (por isso a
+variável) no elemento que representa o valor”.
+Nesse caso a consulta teria como resposta o resultado apresentado na FIGURA 2,
+uma linha apenas com a informação do e-mail do José.
+FIGURA 2 – Resultado da consulta SPARQL
+
+Fonte: próprio autor
+
+
+Ainda sobre a cláusula “WHERE” e sobre o CÓDIGO 3, alterar o primeiro elemento
+de “ag:jose” para uma variável (que poderia ser representada por qualquer palavra
+antecedida por ?) mudaria o contexto do recorte no conjunto total de dados. Neste caso o
+conjunto de dados a ser recuperado deveria ter o seguinte contexto: “retorne toda declaração
+RDF encontrada, que tenha como propriedade - ag:e-mail -, independente do recurso ou do
+valor apresentado”. Neste caso a consulta buscaria por um conjunto de dados mais
+abrangente, porque deixa de ter um valor definido para o recurso.
+Esta mudança na cláusula “WHERE” representa um possível conjunto maior de
+dados como resultado, dessa forma a informação do recurso também pode ser representada
+na cláusula “SELECT”, melhorando a informação de apresentação de resultado.
+O CÓDIGO 4 e a FIGURA 3 apresentam essa nova situação, descrita nos parágrafos
+anteriores.
+CÓDIGO 4 – Consulta SPARQL
+PREFIX ag: <http://meusite.com.br/namespace/agenda#>
+SELECT ?pessoa ?email
+WHERE
+{ ?pessoa
+ag:e-mail
+?email . }
+Fonte: próprio autor
+FIGURA 3 – Resultado da consulta SPARQL
+
+Fonte: próprio autor.
+Nota-se que no CÓDIGO 4 fora alterada a variável antes utilizada, “?email_do_ze”
+para “?email”, visto que a nova consulta apresenta todo o conjunto de declarações que
+tenham a propriedade e-mail, independente do recurso.
+Entender o conjunto de variações possíveis na clausula WHERE é um fator de
+extrema importância no desenvolvimento das consultas escritas em SPARQL.
+Ainda sobre o conjunto de dados apresentados no CÓDIGO 1, poderia propor várias
+outras alternativas na cláusula WHERE, de forma a recortar da base de dados um conjunto
+de dados diferentes. É possível pensar em buscar todos os dados de uma única pessoa, neste
+
+
+
+caso deveriam ser utilizadas variáveis nos elementos que definem propriedade e valor,
+deixando o recurso com um valor definido. Poderia-se pensar também em buscar o telefone
+ao invés do e-mail, neste caso seria necessária a substituição da informação “ag:e-mail” por
+“ag:fone”.
+4.2 SPARQL: experimentando implementações
+A falta de publicações na área de Ciência da Informação que relatem
+implementações e uso do SPARQL pode estar associada a dificuldade em entender como
+pode ser realizado o processo de experimentação do protocolo.
+O caminho mais utilizado é sempre o de operar os chamados SPARQL EndPoints,
+disponíveis na grande maioria dos datasets publicados na Internet. O DBPEDIA30, o
+GEODATA31, entre outros vários datasets disponibilizam seus “pontos de acesso”. Nesse
+caso é possível consultar suas bases de dados em formato RDF e também cruzar dados com
+outras bases de dados, entretanto há de se utilizar sempre os dados públicos
+disponibilizados.
+Um dos primeiros passos dessa pesquisa foi justamente implementar a estrutura
+funcional do SPARQL no próprio laboratório ou mais precisamente no equipamento de uso
+diário.
+Pensando sempre em ambientes opensource e em soluções livres, característica de
+pesquisa deste pesquisador, o uso do Apache Jena32 é o mais adequado para iniciar os
+estudos sobre aplicações e implementações de Web Semântica e do protocolo SPARQL. O
+Apache Jena é um framework de código aberto para construção de Web Semântica e
+aplicações Linked Data. (APACHE, 2014).
+O Apache Jena é constituído de um conjunto de aplicações com destaque para
+algumas delas: suporte a elaboração de projetos usando arquivos em formato RDF;
+implementação de banco de dados persistente do tipo triplestore (bando de dados específico
+para formato RDF); ambientes de consulta SPARQL; mecanismos de inferência e suporte a
+ontologias, entre outras implementações diversas.
+Na FIGURA 4 é possível visualizar a estrutura funcional do Apache Jena e inclusive
+relacionar os recursos ao Bolo de Noiva de Berners-Lee criando associações para constituir
+
+30
+31
+32
+
+http://dbpedia.org/sparql
+http://linkedgeodata.org/sparql
+https://jena.apache.org/
+
+
+
+implementações de Web Semântica. Na área de downloads do Apacha Jena, é fácil
+encontrar, baixar e posteriormente instalar a ferramenta, que é multiplataforma.
+Após a instalação do Jena ele fica disponível para uso na área de terminal (prompt
+de acesso) nos mais diferentes sistemas operacionais Linux, Windows ou MacOS, operando
+em processo parecido com o compilador Java.
+Os CODIGOS e FIGURAS (resultados) que apresentaram implementações neste
+texto foram todos testados utilizando-se o Apache Jena.
+FIGURA 4 – Estrutura Apache Jena
+
+Fonte: APACHE (2014).
+
+Se em um primeiro momento construir estruturas semânticas e utilizar o SPARQL in
+loco favorece e acelera o desenvolvimento de pesquisas relacionadas a Web Semântica,
+acessar e conhecer os dados disponibilizados em grandes datasets é o passo seguinte,
+porque permite vislumbrar não apenas o acesso a um determinado dataset, mas também o
+cruzamento de dados entre vários deles.
+Os datasets disponíveis, em sua maioria, oferecem acesso via SPARQL EndPoint,
+que são interfaces online que permitem a realização de consultas diretamente por um
+endereço na web. A implementação dessa ferramenta dar-se-á pelo uso de bancos de dados
+do tipo triplestore.
+Bancos de dados do tipo triplestore são diferentes dos bancos de dados relacionais,
+visto que permitem armazenar de forma nativa as declarações RDF e tem como
+característica permitir o acesso via protocolo SPARQL. Há uma lista imensa de ferramentas
+que implementam bancos de dados triplestore, entre eles o Apache Jena, já citado.
+
+
+FIGURA 5 – SPARQL EndPoint – DBPedia EndPoint33
+
+Fonte: DBPEDIA (2014)
+
+Dentre os principais datasets, a ferramenta mais utilizada para implementar o banco
+de dados do tipo triplestore é o Virtuoso Open-Source Edition34, que apesar de estar sob o
+domínio de uma empresa privada é uma plafatorma opensource.
+A interface do DBpedia, apresentada na FIGURA 5, possibilita o acesso aos dados
+disponibilizados no dataset. Para construir consultas é necessário conhecer a estrutura de
+dados disponibilizado pelo DBpedia, assim também será para utilizar outros datasets.
+Através da interface do DBpedia é possível recuperar um conjunto diverso de
+informações. Um aficionado por eventos esportivos como os Jogos Olímpicos poderia ter
+interesse em saber todos os medalhista de ouro da história ou de uma determinada
+modalidade olímpica; um fã de Ayrton Senna poderia ter interesse em saber as vitórias do
+mesmo em dias de chuva; um cinéfilo poderia se interessar por todos os filmes estrelados
+por Morgan Freeman ou então por filmes estrelados e dirigidos por Clint Eastwood.
+Buscas por países que não fazem fronteira com o oceano, ou que tem períodos
+maiores que 18 horas de sol por dia e até musicas que duram mais de 60 minutos também
+são informações disponíveis no DBpedia, passíveis de serem consultadas.
+
+33
+34
+
+http://dbpedia.org/sparql (Usando Virtuoso OpenLink)
+http://virtuoso.openlinksw.com/dataspace/doc/dav/wiki/Main/
+
+
+O objetivo deste trabalho não é discutir o uso das informações do DBpedia,
+aparentemente informal e com relevância específica para alguns contextos. Também não é
+proposta desta pesquisa analisar outros datasets disponíveis como de localização
+geográfica, dados de aeroportos, informações sobre publicações científicas que poderiam
+gerar muitos dados importantes para tomada de decisão do cotidiano das pessoas.
+Apresentar-se-á apenas a forma de se utilizar um dataset tendo como modelo o DBpedia.
+Para se recuperar informações de um determinado dataset é importante que se
+conheça a estrutura semântica utilizada por ele, os vocabulários associados e todo o
+contexto de que envolve a construção da informação que está relacionada. Utilizando o
+contexto já citado, é possível verificar a pagina oferecida no DBPedia sobre o ator Morgan
+Freeman na FIGURA 6, ela apresenta as propriedades e valores associados ao recurso que
+identifica unicamente a pagina do ator.
+FIGURA 6 – Recurso Morgan Freeman (DBpedia)
+
+Fonte: DBPEDIA (2014)
+
+No caso especifico desse recurso, é possível notar as propriedades e os valores que
+estão diretamente associados a ele. É possível notar propriedades oriundas do vocabulário
+DC (Dublin Core) além dos vocabulários próprios da DBpedia (dbpedia-owl). É possível
+também identificar que alguns valores associados as propriedades são outros recursos, o que
+efetiva a concepção de grafo ou de rede das declarações RDF.
+
+
+O CÓDIGO 5 apresenta a consulta SPARQL constituída para recuperar os filmes
+estrelados por Morgan Freeman disponíveis no DBpedia.
+CÓDIGO 5 – Consulta SPARQL em DBpedia EndPoint
+SELECT ?filme
+WHERE {
+?filme dbpedia-owl:starring dbpedia:Morgan_Freeman
+}
+Fonte: próprio autor
+
+A consulta apresentada no CODIGO 5 foi baseada em um estudo do próprio recurso
+visto na FIGURA 6. A cláusula “WHERE” identifica todos os recursos que tiveram como
+propriedade o termo “dbpedia-owl:starring”
+e como valor o termo “dbpedia:Morgan_Freeman”. Dessa forma o processador SPARQL deverá recortar de todo
+o conjunto de bilhões de declarações RDF do DBpedia apenas os que se enquadram nos
+quesitos descritos.
+O CÓDIGO 6, agrega na cláusula “WHERE” um recorte sobre os filmes produzidos
+pelo mesmo Morgan Freeman. Neste caso é possível recuperar os filmes que foram
+estrelados e produzidos pelo mesmo.
+Verifica-se neste caso que o “ponto” que liga as duas linhas que estão na cláusula
+“WHERE” serve para criar uma relação booleana do tipo AND, considerando uma
+intersecção entres o recorte produzido pelas duas linhas existentes na cláusula “WHERE”.
+CÓDIGO 6 - Consulta SPARQL em DBpedia EndPoint
+SELECT ?filme
+WHERE {
+?filme dbpedia-owl:starring dbpedia:Morgan_Freeman .
+?filme dbpedia-owl:producer dbpedia:Morgan_Freeman
+}
+Fonte: próprio autor
+
+Assim como fora apresentado o uso do DBpedia, qualquer outro dataset pode ser
+explorado e consumido utilizando-se SPARQL, desde que se conheça a estrutura lógica em
+que as informações estão disponíveis.
+5 CONSIDERAÇÕES FINAIS
+A Web Semântica é um fato, porém o uso dela passa inicialmente pela construção
+dos ambientes e posteriormente pela recuperação das informações. A área tem discutido de
+forma exaustiva o uso do padrão RDF e a construção de ontologias sólidas, porém ainda
+
+existe uma necessidade efetiva de discussão sobre a construção de estruturas claras e
+funcionais de recuperação da informação em ambientes semânticos.
+O Linked Data tornou-se a principal referencia concreta de uso da Web Semântica, e
+sua proposta de dados ligados tem motivado as mais diversas organizações, instituições e
+setores a disponibilizar dados ligados em formato aberto.
+O protocolo SPARQL apresentado e demonstrado de forma introdutória neste texto é
+a base para a recuperação da informação em ambientes semânticos, entretanto a
+maximização de seu uso efetivo está ligado diretamente ao domínio da sua grande
+diversidade de funcionalidades. Dentre as funcionalidades não apresentadas neste texto
+podemos citar ainda a atualização de dados e o uso de inferências.
+Nos últimos anos a utilização do protocolo SPARQL já é possível devido a
+existência de um grande número de ferramentas que implementam não apenas
+especificações SPARQL mas também ambientes propícios de acesso e experimentação. O
+acesso a estas ferramentas, em grande parte opensource, facilita o desenvolvimento de
+pesquisas sobre recuperação semântica da informação. O uso do Apache Jena é um ótimo
+caminho para iniciar as atividades práticas com Web Semantica e SPARQL.
+A disponibilidade de SPARQL Endpoints em grandes e conhecidos datasets é
+também um ótimo caminho para evoluir com as pesquisas sobre como o utilizar o protocolo
+SPARQL no construção de modelos de recuperação de dados ligados
