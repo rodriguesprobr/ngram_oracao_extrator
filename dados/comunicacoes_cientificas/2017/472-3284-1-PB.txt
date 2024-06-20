@@ -1,0 +1,479 @@
+
+REPOSITÓRIO DIGITAL COM O SOFTWARE LIVRE TAINACAN: REVISÃO DA FERRAMENTA E
+EXEMPLO DE IMPLANTAÇÃO NA ÁREA CULTURAL COM A REVISTA FILME CULTURA
+Modalidade da Apresentação: Comunicação Oral
+Resumo:
+Softwares livres para criação de repositório digital, na área da cultura, que disponibilizem
+recursos de colaboração e participação social em rede ainda se apresentam como um tema
+em evolução. Por isso, há espaço para o desenvolvimento de novas soluções tecnológicas
+que visem fornecer recursos inovadores a partir de uma ferramenta de fácil instalação e
+utilização, ampliando o acesso de conteúdos culturais a toda a população. Neste sentido, a
+partir de um estudo de caso sobre sua implantação na Revista Filme Cultura, apresenta-se
+neste artigo o software livre Tainacan, desenvolvido pela Universidade Federal de Goiás em
+parceria com o Ministério da Cultura e o Instituto Brasileiro de Museus (IBRAM). Para
+apresentar a ferramenta descreve-se a motivação de seu desenvolvimento e suas funções
+principais a partir da visão do usuário e do administrador. Para o estudo de caso utilizou-se
+a versão básica do Tainacan demostrando a robustez da solução e ainda a simplicidade de
+sua instalação. O Tainacan tem se mostrado uma ferramenta de fácil configuração e gestão
+por seus administradores, além de amigável e responsiva para o usuário final, se tornando
+uma contribuição importante de maneira a ampliar a criação de repositórios digitais na área
+da cultura.
+Palavras-Chave: Repositório digital; Software livre; Tainacan.
+1 INTRODUÇÃO
+O desenvolvimento e a construção de repositórios digitais na área da cultura
+utilizando softwares livres é um tema de interesse emergente, levando importantes
+organizações, como a UNESCO, a construir relatórios técnicos de comparação entre
+softwares a partir de dimensões analíticas. Bankier e Gleason (2014) mencionam que estas
+dimensões permitem comparações com foco em necessidades críticas que atendem as
+demandas de gestores, além de tornar os repositórios bem-sucedidos.
+Os benefícios da produção de repositórios digitais na área da cultura são enormes e
+documentados em uma grande quantidade de pesquisas, nas quais se evidenciam
+recomendações a respeito das características da sociedade da informação e do
+conhecimento, da necessidade da preservação da memória e da digitalização da informação
+para que se possa aproveitar as vantagens dessa sociedade de maneira estratégica. Um dos
+documentos que mais evidenciam essa perspectiva, também trazendo recomendações nessa
+direção, é o relatório "Towards knowledges society", da UNESCO (2005). Nele, a UNESCO
+recomenda uma série de ações em direção a preservação e formação de repositórios digitais
+na área da cultura, chegando a sugerir softwares livres para sua implementação, tais como o
+DSpace e o Greenstone.
+É fato que do início dos anos 2000 para cá, a Internet e seus padrões de
+desenvolvimento, interatividade e usabilidade se desenvolveram de maneira altamente
+significativa. Termos como, Web 2.0 e o paradigma das mídias sociais, tomaram a frente em
+importantes discussões técnicas e pesquisas relacionadas às melhores práticas de uso da
+
+
+
+Internet, bem como dos sistemas atualmente em uso que são reconhecidos como os mais
+bem-sucedidos em termos mundiais.
+Dessa maneira, entende-se que, apesar da existência de bons softwares livres para a
+constituição de repositórios digitais na área da cultura, esse ainda é um campo em
+desenvolvimento, havendo espaço para que novas soluções, nas quais possam ser
+implementadas funcionalidades técnicas, modos de organização da interface e melhorias na
+usabilidade, formas de organização da informação e mesmo novos paradigmas de
+participação social e colaboração na construção e manutenção desses repositórios. Vale
+ressaltar que a principal motivação para desenvolvimento do software livre Tainacan foi
+exatamente a não existência de funcionalidades de características de sistemas Web 2.0 nos
+softwares livres existentes. Exemplifica-se essas funcionalidades como recursos para
+comentários por parte dos usuários em objetos digitais, compartilhamento dos conteúdos
+em mídias sociais, capacidade de engajamento de usuários na revisão de metadados e
+sugestão de melhorias na descrição dos conteúdos, mecanismos de votação para que os
+usuários possam escolher conteúdos de sua preferência, entre tantos outros.
+É, portanto, objetivo deste artigo apresentar o software livre Tainacan para a
+construção de repositórios digitais para ações culturais, demonstrando como o software foi
+utilizado em um estudo de caso para a construção de um repositório no âmbito do
+Ministério da Cultura, especificamente da Secretaria do AudioVisual, no caso do acervo da
+Revista Filme Cultura, envolvendo mais de 60 números da revista que retratam importantes
+momentos da história do cinema brasileiro desde os anos 1960 até a contemporaneidade. O
+software vem sendo especificado e implementado desde 2014, envolvendo a parceria entre
+o Ministério da Cultura, o Instituto Brasileiro de Museus (IBRAM) e a Universidade Federal
+de Goiás (UFG), estando implantado em várias instituições, seja em fase de teste, seja em
+fase de produção.
+O artigo se organiza na seção Desenvolvimento, onde se apresenta a
+fundamentação teórica que orienta a importância do desenvolvimento de softwares para a
+apoio a construção de bibliotecas digitais e repositórios institucionais e temáticos, a
+motivação para desenvolvimento do Tainacan, onde se fala sobre características do
+
+
+
+software e parte dos resultados de pesquisa que demonstram a motivação de seu
+desenvolvimento, uma revisão da ferramenta, mostrando suas principais características
+técnicas, uma seção dedicada ao caso da revista Filme Cultura, onde se mostra como o
+Tainacan foi implementado para a construção do repositório da revista e, por fim, as
+considerações finais do artigo.
+2 DESENVOLVIMENTO
+2.1 Fundamentação Teórica
+No Tesauro Brasileiro de Ciência da Informação, um repositório digital é definido
+como um meio para armazenar, gerenciar e preservar conteúdos informacionais no formato
+eletrônico. Assim, o repositório digital é formado por "coleções digitais de documentos de
+interesse para a pesquisa científica e, no caso dos institucionais, representam a sua memória
+científica" (PINHEIRO; FERREZ, 2014, p. 195). Para Viana, Márdero Arellano e Shintaku
+(2005, p. 3): "um repositório digital é uma forma de armazenamento de objetos digitais que
+tem a capacidade de manter e gerenciar material por longos períodos de tempo e prover o
+acesso apropriado" e é destacado a possibilidade de compartilhamento dos metadados do
+seu conteúdo através do protocolo OAI-PMH, tornando o repositório digital, um arquivo
+aberto.
+É possível perceber uma grande similaridade do conceito do repositório digital com a
+definição de biblioteca digital, que segundo Toutain (2006, p. 16) é:
+biblioteca que tem como base informacional conteúdos em texto completo em formatos
+digitais – livros, periódicos, teses, imagens, vídeos e outros -, que estão armazenados e
+disponíveis para acesso, segundo processos padronizados, em servidores próprios ou
+distribuídos e acessados via rede de computadores em outras bibliotecas ou redes de
+bibliotecas da mesma natureza.
+
+Para Alvarenga (2006) uma biblioteca digital é uma reunião de documentos
+originados no meio digital ou digitalizados que foram escolhidos para serem
+disponibilizados. Segundo Marcondes (2009, p. 9) “um repositório institucional é uma
+biblioteca digital destinada a guardar, preservar e garantir livre acesso via internet, à
+produção científica no âmbito de uma dada instituição”. Dessa forma, o conceito de
+repositório digital engloba o que uma biblioteca digital realiza e adiciona outros requisitos
+
+
+
+como garantir a preservação de longo prazo e também a possibilidade de compartilhamento
+de metadados através de protocolos.
+Nesta última definição, é possível perceber que um repositório digital pode ser
+classificado também conforme o seu uso. Quando o conteúdo de um repositório é focado
+em um assunto, ele é um repositório temático e quando o conteúdo reflete a produção
+científica de uma instituição ele é chamado de repositório institucional (PINHEIRO; FERREZ,
+2014). Para Crow (2002), repositórios institucionais são coleções que capturam e preservam
+a produção intelectual de uma instituição ou comunidade. Também podem ser considerados
+como um conjunto de serviços para gerenciar e disseminar objetos digitais depositados por
+membros de uma instituição ou comunidade (LYNCH, 2003). Em uma outra definição, o
+repositório institucional é a reunião de vários repositórios temáticos de uma mesma
+instituição ou de instituições diferentes, fazendo que seu conteúdo seja bem heterogêneo
+tanto nos assuntos quanto nos formatos dos objetos digitais armazenados. O repositório
+temático pode ser considerado como um conjunto objetos digitais de uma determinada área
+do conhecimento, disponibilizados em rede de computadores (CAFÉ et. al., 2003).
+Os repositórios institucionais foram adotados principalmente por instituições de
+ensino na construção de bibliotecas de teses e dissertações que reúnem várias áreas do
+conhecimento, e no Brasil pode ser destacado o papel do Instituto Brasileiro de Informação
+em Ciência e Tecnologia (IBICT) no fomento de iniciativas dessa natureza, com a tradução e
+apoio técnico de softwares para essa finalidade e também na disponibilização de uma rede
+que agrega metadados sobre objetos digitais de diversos repositórios institucionais de
+universidades e faculdades do Brasil, utilizando o software livre DSpace.
+No âmbito cultural também existem atores importantes, como a UNESCO que lançou
+em 2007 a Biblioteca Digital Mundial, que conta com parceiros ao redor do mundo, inclusive
+o Brasil, representado pela Biblioteca Nacional (ROSETTO, 2008), que apesar de ainda
+apresentar um acervo modesto, algo em torno a 16.000 itens, se configura como uma
+iniciativa de referência. Há também a EUROPEANA, uma das maiores referências mundiais
+no tema, que foi fundada pela Comissão Europeia visando proporcionar acesso a diferentes
+tipos de objetos digitais incluindo filmes, fotografias, pinturas, registros sonoros, mapas,
+
+
+
+manuscritos, livros, jornais, entre outros. O repositório foi lançado em 2008 e reúne
+conteúdos digitalizados de museus, bibliotecas, arquivos da Europa. Ambas as soluções
+utilizam softwares livres desenvolvidos de maneira customizada para atender necessidades
+específicas do projeto.
+No caso brasileiro, não se conhece ainda iniciativas de formação de políticas públicas
+específicas para a formação de repositórios digitais na área da cultura e que permitam a
+integração de museus, bibliotecas e arquivos, tal como a Europeana. Há, de fato, muito
+ainda a se desenvolver no país, neste sentido, visando oferecer um software que abarque
+novas funcionalidades que surge o projeto Tainacan.
+2.2 Motivação para o desenvolvimento do Tainacan
+O Tainacan é um projeto que surge a partir de uma pareceria entre o MediaLab, da
+Universidade Federal de Goiás, e o Ministério da Cultura, no ano de 2014. Seu objetivo é de
+se tornar a referência técnica para a então em construção, Política Nacional de Acervos
+Digitais (MINISTÉRIO DA CULTURA, 2015).
+A solução Tainacan foi experimentada em projetos piloto do Ministério da Cultura.
+Em 2015, foi utilizado no projeto Afro Digital, iniciativa que envolveu mais de 22 instituições
+que, financiadas pelo Ministério da Cultura e orientadas pela Universidade Federal de
+Pernambuco, construíram coleções digitais com foco na cultura afro (MINISTÉRIO DA
+CULTURA, 2015). Em 2016, o Tainacan também é adotado como solução para a construção
+de acervos em rede do Instituto Brasileiro de Museus (MINISTÉRIO DA CULTURA, 2016).
+Já no âmbito do IBRAM, o projeto foi adotado pelo Museu de Arqueologia de Itaipu
+(IBRAM, 2017) e realiza no ano de 2017 ações de teste para implementação no Museu da
+República e Museu Histórico Nacional. O Tainacan também vem sendo utilizado, desde o ano
+de 2016, para a constituição do acervo do Museu de Ciências da Universidade Federal de
+Goiás (2016) e pela Biblioteca Modelo do curso de Biblioteconomia da mesma universidade
+(UNIVERSIDADE FEDERAL DE GOIÁS, 2016).
+No ano de 2017, o software é então utilizado para a disponibilização da coleção
+Filme Cultura (MINISTÉRIO DA CULTURA, 2017), formada por uma série de revistas
+
+
+
+produzidas pelo Ministério da Cultura desde os anos 1960, possuindo um acervo de mais de
+60 números e contendo importante memória da cultura cinematográfica brasileira. O
+projeto é lançado ao público na Mostra de Cinema de Florianópolis (MINISTÉRIO DA
+CULTURA, 2017).
+O Tainacan é desenvolvido com base no software livre WordPress, um dos mais
+populares sistemas para desenvolvimento de soluções para a Internet. Incorpora, dessa
+maneira, várias facilidades e funcionalidades técnicas que o tornam compatível com as
+últimas tendências das tecnologias da web. Além disso, o projeto tem por objetivo
+incorporar várias funcionalidades que facilitem a interoperabilidade com mídias sociais e
+permita ampliar o grau de participação social de usuários do repositório em atividades de
+sua gestão e manutenção, se tornando uma referência na perspectiva da cultura digital para
+o mundo dos repositórios digitais. O Tainacan tem por objetivo de possibilitar a criação um
+repositório de fácil utilização, configuração e implementação, se tornando uma alternativa
+livre e eficiente para instituições culturais que tenham por objetivo implementar
+repositórios temáticos e institucionais.
+Uma das principais motivações que levaram ao desenvolvimento do projeto
+Tainacan, e não a simples customização de uma solução livre existente, foi a realização da
+pesquisa comparativa entre os principais softwares livres existentes para as bibliotecas
+digitais (DSpace, Greenstone, Fedora, Islandora e Eprints). Os critérios estabelecidos por
+Martins e Silva (2017), demonstraram que de um total de 36 funcionalidades possíveis para
+colaboração e interação social, apenas 5 (14%) estavam implementadas nesses sistemas.
+Além do fato de não ser trivial encontrar profissionais com conhecimento prévio no
+desenvolvimento de tais sistemas para implementação de customizações e mesmo da
+ausência de comunidade de software livre dessas tecnologias em território brasileiro. O
+Tainacan, portanto, se propõe como alternativa a essas tecnologias livres, visando ofertar
+uma tecnologia mais acessível e fácil adoção social para a construção de repositórios
+brasileiros na área da cultura.
+2.3 Revisão da Ferramenta
+
+
+
+Como supracitado, a tecnologia do Tainacan é baseada no WordPress, que permite a
+configuração de blogs flexíveis e sites no topo de um backendMySQL com o processamento
+PHP (UNIVERSIDADE FEDERAL DE GOIÁS, 2017).
+Para instalação do Tainacan é preciso observar os requisitos mínimos de instalação
+do WordPress: servidor baseado em UNIX/Linux; PHP, versão 5.2.4 e o MySQL, versão 5.0;
+ter memória de 64MB para o PHP e Pacote PHP commons. Caso a intenção seja instalar
+recursos extras, torna-se necessário o mínimo de 256MB de memória para o PHP, a
+instalação do Apache ou Nginx, ter o módulo mod_rewrite, do Apache, ativo e habilitar
+algumas extensões do PHP (UFG, 2017). Todas as opções de software são livres.
+Durante a instalação é possível: ativar a funcionalidade multisite, que possibilita a
+administração de mais de uma instalação do Tainacan por meio de um único painel de
+controle, facilitando a criação de vários repositórios geridos a partir de um único painel
+administrativo; aplicar o tema do Tainacan, por meio de arquivo disponível no GitHub;
+aumentar a capacidade de armazenamento do WordPress, que tem como padrão o limite de
+2 MB; clonar um repositório, por meio do plugin Snapshot, que cria um backup; ou ainda,
+migrar os dados de outro repositório.
+Um dos pontos de destaque do Tainacan está na simplicidade de sua instalação, que
+pode ser feita rapidamente, sem a necessidade de profissionais especializados, visto que
+suas configurações, básicas ou avançadas, podem ser realizadas pela interface. Ainda, é de
+suma relevância frisar a quantidade de itens abarcados pela instalação básica, não sendo
+obrigatória adaptações para o uso, ficando estas a cargo de melhorias referentes a
+necessidade de cada projeto.
+Um exemplo é a instalação de plugins que agregam novas funcionalidades, dos
+quais cita-se o Google Analytics, que permite avaliar relatórios de visitas; o BackWPup, que
+permite a criação de cópias de segurança; o New User Approve, facilita a administração da
+aprovação de novos usuários e o W3 Total Cache, reflete em aumento de performance,
+tornando o site mais estável e rápido em termos de carregamento (UFG, 2017).
+Finalizada a instalação, o repositório está pronto para uso. A Figura 01 representa o
+conjunto de ideias por trás do funcionamento macro da plataforma, que se reverte em uma
+interface simples e intuitiva.
+
+
+Figura 01 – Mapa Conceitual do Tainacan
+
+Fonte: UFG, 2017.
+
+A construção do Tainacan teve por premissa oferecer uma ferramenta rica em
+recursos, com uma interface facilitada e voltada ao usuário comum, dessa forma, apresenta
+uma série de características pensadas para este fim, das quais damos destaque a: interface
+de busca facetada, ao recurso de auto completar na caixa de busca, a interface simplificada
+para criação de coleções, a possibilidade de submeter arquivos em massa, a importação de
+metadados via API, o modelo de colaboração, dentre outros recursos.
+Por não ser possível apresentar todo o software Tainacan em poucas linhas, optouse por apresentá-lo de forma macro, demonstrando as interfaces e principais
+funcionalidades voltadas aos usuários.
+Neste sentido, o Tainacan permite a inclusão de dois tipos de usuários: os
+assinantes, ou seja, os usuários comuns no contexto do sistema, e os administradores.
+Independentemente do tipo de usuário, a tela inicial permite acesso às coleções, por meio
+de menu e mecanismos de busca; o registro de novos assinantes e o login dos previamente
+cadastrados. Além disso, relaciona as coleções ou itens mais populares e recentes, conforme
+Figura 02.
+Figura 02. Tela inicial do Tainacan
+
+
+
+Fonte: dos autores.
+
+Após o acesso, cada tipo de usuário visualiza opções diferenciadas, as quais
+detalha-se a seguir.
+
+2.3.1 Visão do Assinante
+A visão de assinante é simplificada e permite, principalmente, a criação e busca de
+coleções. A Figura 03 apresenta a interface do Tainacan com o filtro responsável por
+apresentar apenas as coleções criadas pelo assinante, pois a partir desta tela é possível
+apresentar as principais funcionalidades da ferramenta. Vale dizer que se apresenta a seguir
+as permissões para um assinante que possa criar e configurar coleções em um repositório,
+sendo que essa permissão pode ser atribuída apenas por um administrador.
+
+Figura 03: Interface do Tainacan após uso do filtro de seleção das coleções criadas pelo assinante.
+
+
+Fonte: dos autores.
+
+O item 1 apresenta as opções disponíveis nos menus, pelos quais é possível criar e
+importar coleções, definir categorias e alterar o perfil do usuário. No item 2 está disposto o
+menu social, que possibilita a interação do usuário com as principais redes sociais, além de
+feed de notícias e exportação de arquivos. O item 3 apresenta filtro de coleções, no qual dáse destaque a possibilidade de compartilhar coleções com outros usuários. No 4, o campo de
+pesquisa por palavras-chaves e a possibilidade de busca avançada, que permite a busca por
+título, tipo de arquivo, tags ou a combinação destes. O item 5 se refere a ordenação dos
+resultados da pesquisa, que pode ser apresentado por ordem crescente ou decrescente de
+título, publicações recentes ou ainda, publicações mais populares. O item 6 permite o
+download dos resultados e o acesso a Lixeira, com os itens excluídos pelo usuário. O item 7
+apresenta as coleções ou itens destas coleções e por último, o item 8, mostra o acesso a
+coleção, propriamente dita.
+É importante frisar que o panorama apresentado se refere a instalação básica do
+Tainacan, e que diversas configurações podem ser feitas pelo administrador.
+Para uma nova coleção o assinante conta com uma série de possibilidades de
+configuração, conforme Figura 04.
+Figura 04. Menu de configuração de uma coleção.
+
+
+Fonte: dos autores.
+
+No menu “Configuração” pode-se customizar o layout, como definir o nome ou
+escolher imagem de capa, no entanto, destaca-se as possibilidades avançadas, tais como:
+criar uma home page para coleção, definir a privacidade, o controle de downloads,
+moderação e permissões para criação, edição e exclusão de itens.
+Prosseguindo, um item importante a todos os repositórios são os metadados. O
+Tainacan suporta os modelos Dublin Core, EDM, LIDO e Nobrade, mas por padrão, a
+ferramenta faz uso do Dublin Core, ou seja, os demais precisam ser devidamente incluídos
+(UFG, 2017). O Dublin Core simples é composto por 15 elementos, no entanto, o Tainacan
+apresenta por padrão apenas 9 deles, que foram considerados suficientes para descrever um
+item dentro do repositório, estando o restante disponível para configuração pelo gestor do
+repositório. As características destes metadados são globais dentro do repositório, e por
+isso, abarcam todas as coleções (UFG, 2017).
+São permitidas alterações globais, realizadas pelo administrador, ou locais, dentro
+de cada coleção, por qualquer nível de usuário, o que permite a todos a possibilidade de
+atender às especificidades de cada projeto.
+
+
+
+A adição de novos campos de metadados pode ser facilmente realizada pela
+interface, Figura 05, que oferece também opções para tipos de campos de metadados:
+texto, texto longo, data, numérico, auto incremento, relacionamento, categoria e votações.
+
+Figura 05. Interface para configuração de metadados disponível para o usuário assinante.
+
+Fonte: dos autores.
+
+O item de tags, permite a classificação dos itens da coleção, sendo possível
+configurar diferentes tags para o conteúdo. Também é possível configurar a interação do
+conteúdo com redes sociais, as licenças que dizem respeito às propriedades de uso de textos
+ou itens de uma coleção, visualizar as estatísticas da coleção dentre outras funções. Além
+disso, em Eventos, ficam disponíveis as ações efetuadas na coleção, assim como itens que
+necessitam de aprovação.
+Com universo de configurações bem mais amplo estão os usuários administradores.
+Desta forma, ao apresentar a visão do administrador, objetiva-se também explorar e
+apresentar as principais opções disponibilizadas pelo Tainacan.
+
+2.3.2 Visão do Administrador
+Os usuários administradores têm acesso ao Painel de Controle do Repositório, que
+oferece as opções: configuração, metadados, usuários, chaves de APIs/redes sociais,
+licenças, e-mail de boas-vindas, ferramentas, importação, exportação, updates, estatísticas e
+eventos.
+
+
+
+No menu Configuração, Figura 06, é possível (1) customizar o layout do repositório e
+(2) selecionar a operação do repositório ou permissões da coleção.
+
+Figura 06. Interface para configurações básicas do repositório.
+
+Fonte: dos autores.
+
+Em “Metadados e Filtros” a tela é similar à do assinante, porém, com a
+possibilidade de realizar alterações globais e locais nos itens de metadados. Em “Usuários” o
+administrador tem acesso a página de gestão de usuários do repositório, responsável, dentre
+outras funções, por aprovar a inscrição de novos usuários. A tela tem origem no WordPress,
+por isso, segue um layout diferenciado, Figura 07.
+
+Figura 07. Interface de Gestão dos Usuários.
+
+
+Fonte: dos autores.
+
+O menu “Chaves de API/Redes Sociais” têm a finalidade de integrar o repositório
+às redes sociais, seja a partir do login por meio do Facebook ou Google + ou por meio da
+criação de itens relacionados às redes, tais como, vídeos, perfis ou imagens. Em “Licenças” é
+possível, após as configurações de mapeamento das redes sociais, realizar alterações nas
+licenças que permitirão a cópia ou compartilhamento de informações dos itens da coleção
+por outros usuários ou visitantes. Em “E-mail de Boas Vindas” pode-se personalizar a
+mensagem enviada para os usuários após registro no repositório. Em “Ferramentas” podese realizar testes de integridade, optar entre diferentes mecanismos de reindexação, ou
+ainda, configurar itens referente às coleções. O Painel de Controle também disponibiliza a
+importação, exportação e atualização do repositório e por último, em “Estatísticas” é
+possível visualizar e configurar relatórios para melhor gestão do repositório.
+2.2 O caso Filme Cultura
+O Tainacan foi escolhido pelo Ministério da Cultura para dispor as edições da revista
+Filme Cultura, da Secretaria do AudioVisual. Foram catalogadas 64 edições, em coleção
+única. Este projeto foi oficialmente apresentado ao público no dia 1º de julho de 2017,
+durante o Encontro Nacional de Cinema Infantil promovido pela Mostra de Cinema Infantil
+em Florianópolis.
+
+
+Para este projeto optou-se pelo uso da instalação básica do Tainacan, utilizando o
+máximo da configuração padrão. Desta forma, o destaque está nos detalhes referentes a
+inserção dos arquivos. Para atender o projeto optou-se pela criação de novos itens de
+metadados, para então, contemplar todas as informações constantes nas revistas, tornando
+a coleção extremamente rica. Assim, a criação e preenchimento dos metadados tornou-se o
+trabalho mais extenso do projeto.
+No entanto, antes de popular o repositório, muitas etapas foram seguidas. Assim,
+para apresentar os caminhos que propiciaram a disponibilização final deste repositório,
+descreve-se, por meio de pesquisa empírica, informações sobre: instalação e configuração;
+configuração geral do repositório e resultados obtidos pelo Google Analytics.
+
+2.2.1 Instalação e Configuração
+Iniciou-se o processo por meio da instalação do servidor web Apache, versão 2.4.18
+com módulo mod_rewrite e php. Com o servidor preparado, foi instalado o sistema
+gerenciador de banco de dados MySQL, versão 5.7.18 e o PHP, versão 7.0.18, com os
+módulos: php-json, php-xml, php-curl, php-gd, php-mbstring, php-pdo, php-mysql, php-apcu,
+php-calendar, php-exif, php-mcrypt e php-ctype. Além disso, cabe ressaltar que o servidor
+executa o Sistema Operacional Ubuntu, versão 16.04.02 LTS. Preparado o ambiente,
+instalou-se o WordPress, versão 4.8.
+Aplicou-se o tema do Tainacan e a partir do arquivo .htaccess aumentou-se a
+capacidade máxima de armazenamento de mídia para 1.024 MB. Pela área administrativa
+foram incluídos os plugins: Akismet Anti-Spam, Google Analytics, New User Approve e W3
+Total Cache.
+2.2.2 Configuração Geral do Repositório
+Das opções disponíveis no Painel de Controle do Repositório, apenas o menu
+“Configuração” foi alterado. Neste item optou-se por: customizar a interface da página
+inicial, conforme Figura 08; selecionar o uso do Tainacan como repositório comum e a definir
+as permissões básicas para criação e exclusão de coleções.
+
+
+Figura 08. Interface do Repositório da Secretaria de AudioVisual, do Ministério da Cultura.
+
+Fonte: dos autores.
+
+Neste projeto optou-se por realizar apenas alterações locais, ou seja, apenas a
+Coleção Filme Cultura foi configurada. No menu “Configuração” foram inseridos o nome da
+coleção, a imagem miniatura e a imagem de capa. Além desta configuração básica, o menu
+“Metadados e Filtros” foi atualizado para atender a demanda específica da Secretaria do
+AudioVisual, para a qual optou-se pela criação de uma série de novos campos, dos quais citase, por exemplo, metadados compostos, como: equipe de revisão da revista e equipe de
+gestão do governo federal, Figura 09.
+
+Figura 09. Metadados da Coleção Filme Cultura.
+
+Fonte: dos autores.
+
+Findada a inclusão de todas as revistas, deu-se início a utilização do Tainacan como
+repositório da coleção Filme Cultura, cujo layout está apresentado na Figura 10.
+
+
+Figura 10. Interface da Coleção Filme Cultura.
+
+Fonte: dos autores.
+
+2.2.3 Resultados de acesso
+Conforme dados disponibilizados pela ferramenta Google Analytics, utilizada para
+monitorar dados de acesso ao repositório Filme Cultura, desde o dia 25 de junho de 2017 até
+o dia 23 de julho de 2017, em torno de 458 usuários diferentes já tinham acessado o
+repositório, tendo navegado em mais de 820 sessões de uso, o que dá aproximadamente 1,8
+acessos por usuário, em média. Vale mencionar nesse breve relato o papel das mídias sociais
+na divulgação do repositório, pois 162 usuários visitantes foram oriundos da rede social
+Facebook, o que representa mais de 35% do público de visitantes no período de
+aproximadamente um mês em que os dados foram coletados. A conexão com mídias sociais
+se torna um tema de enorme importância nas estratégias de difusão de informação de
+repositórios culturais nos tempos atuais.
+Apesar de breve o período de análise dos dados de acesso, se pode observar que, em
+média, mais de 15 usuários diferentes visitaram o repositório por dia, mostrando o potencial
+que essa tal solução pode ter na divulgação de acervos e no maior engajamento de um
+público interessado em seu conteúdo, que de outra maneira não teria acesso a esse
+conteúdo. Sem dúvida, em análises futuras será possível descobrir a impressão dos usuários
+a respeito do Tainacan, bem como identificar possíveis melhorias que podem ser realizadas
+no ambiente.
+
+
+
+3 CONSIDERAÇÕES FINAIS
+No presente artigo apresentou-se o Tainacan, um novo software para gestão de
+repositórios digitais, cuja aplicação para acervos culturais têm tido resultados promissores.
+Em relação a esta aplicação, enfatiza-se contribuições importantes do Tainacan em
+comparação aos demais softwares, como as possibilidades de interação, que podem ocorrer
+com as redes sociais, com outros usuários e com os próprios itens do acervo e a interface,
+que mesmo simplificada, permite a realização de praticamente todas as configurações
+necessárias para uso da ferramenta.
+Buscou-se neste estudo de caso demonstrar o sucesso em relação aos acessos e, em
+consequência, na divulgação de relevante produção cultural, e sobretudo, a robustez da
+ferramenta, que mesmo a partir de sua instalação e configurações básicas, permitiu a
+divulgação do acerto de forma satisfatória.
+O que abre um leque de possibilidades para qualquer profissional, não
+obrigatoriamente da área de TI, de instalar e gerenciar um repositório digital configurando-o
+de acordo com as necessidades do projeto a ser implantado. O Tainacan continua em
+desenvolvimento, e cada vez mais funcionalidades serão implementadas a fim de produzir
+um software completo que atenda satisfatoriamente gestores e usuários, tornando-se um
+canal aberto entre a produção cultural brasileira e a sociedade, expandindo seu alcance a
+todo país.
+Uma das contribuições significativas que se espera obter com o projeto Tainacan é a
+disponibilização de uma tecnologia para a construção de repositórios digitais para a cultura
+de baixo custo e conectada com as novas tendências de interatividade fornecidas pelo
+paradigma da Web 2.0, sendo desenvolvida em tecnologia PHP e baseadas em Wordpress,
+duas tecnologias que possuem ampla base de programadores e técnicos especializados em
+território brasileiro. Dessa maneira, futuras implementações de projeto que exijam
+customizações e adaptações podem ser feitas com baixo custo, tornando a capacidade de
+inovação e desenvolvimento para a área, acessível às condições brasileiras.
+

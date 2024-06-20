@@ -1,0 +1,709 @@
+
+PUBLICANDO DADOS NA WEB DE DADOS: UM RELATO DE EXPERIÊNCIA NA
+AUTOMATIZAÇÃO DOS PROCESSOS DE EXTRAÇÃO, TRANSFORMAÇÃO E CARGA DE DADOS
+ABERTOS PROVENIENTES DO PORTAL DADOS.GOV.BR
+Modalidade da Apresentação: Comunicação Oral
+Resumo: Em face ao grande volume de dados disponível na web, estudar as formas de preservar este
+volume é uma tarefa cada vez mais importante. Parte dos dados disponíveis são classificados como
+Dados Abertos e são disponibilizados pelos órgãos governamentais (vide o portal dados.gov.br). Esse
+tipo de dado tem despertado interesse para o uso em assuntos estratégicos, públicos ou privados.
+Neste contexto, este trabalho visa estabelecer um workflow para a extração de dados abertos governamentais, a transformação dos dados em dados abertos conectados e a carga dos dados transformados na Web de Dados, de acordo com os princípios Linked Data (Dados Conectados). Para tanto, utilizase como alicerce metodológico o ciclo de vida Linked Data Lifecycle e suas ferramentas. Em estudos de
+casos, são publicados quatro conjuntos de Dados Abertos Governamentais Conectados, os quais são
+originalmente provenientes do portal dados.gov.br. Com os estudos, computacionalmente, define-se
+um processo para a passagem dos Dados Abertos Governamentais da 3ª para 5ª Estrela, segundo a
+classificação de abertura de dados proposta por Tim Bernes-Lee. Como resultado desses experimentos, estabelece-se um processo automatizado como base a uma infraestrutura informacional a ser utilizada, futuramente, em um ecossistema para cidades de pequeno ou de médio porte.
+Palavras-Chave: Informação Governamental. Web Semântica. Armazenamento de Dados.
+
+1 INTRODUÇÃO
+Considerando a atual dinâmica das Tecnologias de Comunicação e Informação, a quantidade de dados dispersos na web cresce exponencialmente a cada ano. Diante dessa realidade,
+os estudos para organizar, representar e gerenciar esse volume crescente de dados tornam-se
+imprescindíveis na geração de novos conhecimentos a partir da Internet (ISOTANI;
+BITTENCOURT, 2015).
+Parte dos dados publicados na web são classificados como Dados Abertos. Estes são regidos por regras de livres utilização, reutilização e redistribuição por pessoas e organizações em
+vários contextos. Recentemente, os Dados Abertos têm despertado interesse para uso em assuntos estratégicos, tanto governamentais quanto privados. Na esfera pública, tem-se os Dados
+Abertos Governamentais Conectados, os quais são resultados da adoção de tecnologias da Web
+Semântica para conectar, expor e usar os dados dos sistemas governamentais (WOOD, 2011).
+O Brasil é um dos países pioneiros no compartilhamento dos Dados Abertos Governamentais. Tal fato é ratificado a partir da publicação da Lei de Acesso a Informação (BRASIL,
+2011), a qual inspira o portal de Dados Abertos (dados.gov.br) na disponibilização de dados sobre a prestação de contas de todas as esferas públicas. Entretanto, no referido portal somente
+são dispostos os Dados Abertos Governamentais que em sua origem não são conectados a outros dados na web.
+Segundo Lebo et al. (2011), a publicação de Dados Abertos Governamentais Conectados,
+conforme os preceitos da Web Semântica, requer um esforço humano substancial para tornar
+os conjuntos de dados primários compreensíveis para os indivíduos e processáveis por computadores no ambiente distribuído da Internet. Os referidos autores pontuam que, para acelerar
+
+
+o progresso na abertura de mais dados do governo, são necessárias novas abordagens para produzir a referida classe de Dados Abertos. Neste sentido, o presente trabalho tem como objetivo
+a discussão de uma abordagem automatizada para transformação dos Dados Abertos Governamentais brasileiros em Dados Abertos Governamentais Conectados. Como resultado desse desenvolvimento, é estabelecido um workflow computacional que realiza: (i) a extração de dados
+primários do portal dados.gov.br; (ii) a transformação dos dados primários em recursos de dados de acordo com os preceitos da Web Semântica; e (iii) a carga dos recursos em repositórios
+na Web de Dados.
+Para discutir o workflow proposto, além desta seção introdutória, este artigo aborda: (i)
+a fundamentação teórica, estabelecendo o entendimento do conceito de Dados Abertos Governamentais Conectados; (ii) os materiais e métodos, principalmente, apontando o processo metodológico na publicação de Dados Abertos Conectados, os conjuntos de dados abertos considerados e os vocabulários usados para representar os recursos na web; (iii) a definição do workflow automatizado para a publicação dos Dados Abertos Governamentais Conectados; e (iv) as
+considerações finais e a apresentação dos trabalhos futuros.
+
+2 DADOS ABERTOS GOVERNAMENTAIS CONECTADOS
+Esta seção apresenta a base constitutiva dos Dados Abertos Governamentais Conectados. Abordam-se os conceitos: Dados Abertos, Dados Abertos Conectados e Dados Abertos Governamentais.
+Na web, alguns dados publicados são classificados como Dados Abertos. Estes dados são
+regidos por regras claras (licenças) de livre utilização, reutilização e redistribuição por parte de
+pessoas e/ou organizações, nos mais variados contextos e finalidades (OPEN KNOWLEDGE
+INTERNATIONAL, 2017). Nesse entendimento, o termo Dados Abertos aponta para três dimensões (ISOTANI; BITTENCOURT, 2015):
+• disponibilidade e acesso - os dados devem estar disponíveis sob custo que não seja
+maior que um custo razoável de reprodução, devendo estar disponível de uma forma
+conveniente e modificável;
+• reuso e redistribuição - os dados devem ser fornecidos sob termos que permitam a
+reutilização, a redistribuição e a combinação com outros conjuntos de dados; e
+• participação universal - os indivíduos devem ser capazes de usar, reutilizar e redistribuir os dados, sem discriminação de domínios, pessoas ou grupos.
+
+
+Ao atender as dimensões anteriores, os Dados Abertos são categorizados quanto ao grau
+de abertura. Uma classificação conhecida é denominada “5-Estrelas” (5-STARS, 2017). Nesta
+classificação, quanto maior for o número de estrelas atribuído, maiores são o grau de abertura
+e a facilidade de interconexão a outros dados. Tal classificação é representada na Figura 1,
+sendo:
+1ª Estrela - atribuída aos dados que são publicados sob licença aberta (Open License OL), independente do formato em que se apresenta;
+2ª Estrela - atribuída aos dados que além de publicados sob licença aberta são estruturados e legíveis por máquinas (Readable Machine - RE);
+3ª Estrela - atribuída aos dados que são publicados em formato aberto não proprietário
+(Open Format - OF), sendo possível a manipulação dos dados sem a necessidade de
+uso de um software proprietário;
+4ª Estrela - atribuída aos dados que possuem as classificações anteriores e que utilizam
+Identificadores Uniforme de Recursos (Uniform Resource Identifier - URI) para nomear os dados, permitindo criar ligações que façam reuso dos dados disponibilizados
+na web; e
+5ª Estrela - atribuída aos dados que são conectados (Linked Data - LD) a outros dados.
+Permite ampliar o contexto e a descoberta de informações.
+Figura 1: Representação da Classificação 5-Estrelas.
+
+Fonte: Adaptado de (5-STAR, 2017).
+
+
+
+Ressalta-se que, considerando essa classificação 5-Estrelas, o ideal para a geração de
+Dados Abertos Conectados é alcançado na 5ª Estrela. Ou seja, quando os Dados Abertos estão
+conectados a outros dados existentes na web, estes compõem a classe dos Dados Abertos Conectados. Conceitualmente, tal classe de dados é regida por um conjunto de boas práticas para
+publicar e conectar conjuntos de dados estruturados na web, com o intuito de subsidiar uma
+infraestrutura informacional global, a Web de Dados (BIZER; HEATH; BERNERS-LEE, 2009).
+Outra classe especial de Dados Abertos são os Dados Abertos Governamentais. Esse tipo
+de dado é produzido, coletado ou custodiado por autoridades públicas e disponibilizados em
+formatos abertos (TRIBUNAL DE CONTAS DA UNIÃO, 2017). Internacionalmente, o Brasil é reconhecido como um dos pioneiros na produção e distribuição de Dados Abertos Governamentais.
+Conforme a Lei de Acesso à Informação, os dados sobre os indicativos e as prestações de contas
+de todas as esferas públicas devem estar à disposição do cidadão (BRASIL, 2011). Neste sentido,
+o governo federal fomenta uma plataforma de acesso aos dados governamentais públicos, o
+portal dados.gov.br. Neste portal, por exemplo, são publicados os dados gerados pelos Ministérios: da Educação (provas do Exame Nacional do Ensino Médio); da Agricultura, Pecuária e Abastecimento (Indicadores sobre PRONAF - Programa Nacional de Fortalecimento da Agricultura
+Familiar); ou do Trabalho e Previdência Social (Anuário Estatístico de Acidentes de Trabalho –
+AEAT). No momento da escrita deste trabalho, por exemplo, eram disponibilizados 2938 conjuntos de Dados Abertos na referida plataforma governamental (PORTAL, 2017).
+Diante das classes de Dados Abertos apresentados, pode-se entender o que são os Dados Abertos Governamentais Conectados. Constitutivamente, para este trabalho, os Dados
+Abertos Governamentais Conectados são aqueles: (i) produzidos pelos sistemas de informações
+governamentais; (ii) acessados sem restrições de acordo com suas licenças de uso; e (iii) interligados a outros dados da Web de Dados.
+
+3 MATERIAIS E MÉTODOS
+Nesta seção são abordados os insumos utilizados no estabelecimento de um workflow
+automatizado para a publicação de Dados Abertos Governamentais Conectados na Web de Dados. Metodologicamente, utiliza-se o Linked Data Lifecycle, um ciclo de vida que define as atividades para publicação de Dados Abertos. Alguns conjuntos de Dados Abertos do Ministério da
+
+
+Agricultura são usados para a verificação do workflow. Também são apresentados os vocabulários que representam os Dados Abertos na web e as ferramentas utilizadas no processo de publicação.
+
+3.1 O Linked Data Lifecycle
+O procedimento metodológico empregado baseia-se no Linked Data Lifecycle, um ciclo
+de vida derivado das práticas do projeto LOD2 - Creating knowledge out of Interlinked Data
+(AUER, 2014). Tal projeto é um empreendimento conjunto de grupos de pesquisa de vanguarda
+na evolução das metodologias e tecnologias voltadas aos Dados Abertos Conectados. O Linked
+Data Lifecycle consiste em oito atividades, executadas conforme os requisitos de publicação de
+Dados Abertos. As referidas atividades são: Extraction; Storage/Querying; Authoring; Interlinking/Fusion; Classification/Enrichment; Quality Analysis; Evolution/Repair; e Search/Browsing/Exploration. Conforme os requisitos deste trabalho, o subconjunto de atividades é destacado na Figura 2, sendo utilizadas conforme descrito na seção 4 - EXTRAÇÃO,
+TRANSFORMAÇÃO, CARGA E EXPLORAÇÃO DOS DADOS ABERTOS GOVERNAMENTAIS. As atividades são:
+Figura 2: Representação do Linked Data Lifecycle.
+
+Fonte: Adaptado de (AUER, 2014).
+
+
+• Extraction – extrair os dados não estruturados, estruturados em diferentes formatos,
+ou provenientes de sistemas legados;
+• Classification/Enrichment – utilizar as ontologias ou os vocabulários para representar
+os dados, suportando as atividades de recuperação de dados;
+• Storage/Querying – utilizar as soluções computacionais para o armazenamento e a
+recuperação de dados no padrão RDF (Resource Description Framework) (PINHEIRO;
+FERREZ, 2014); e
+• Search/Browsing/Exploration - empregar as soluções computacionais para consultar
+e/ou explorar os dados, de acordo com os objetivos do usuário.
+
+3.2 Os Conjuntos de Dados Abertos Governamentais Utilizados
+Para promover os estudos de caso de verificação do workflow, quatro conjuntos de dados circunscritos ao contexto do Ministério da Agricultura do Brasil são usados.
+
+Quadro 1: Relação dos conjuntos de dados recuperados do portal dados.gov.br.
+Origem dos Dados
+
+Formato
+
+Ano
+Coleta
+
+Descrição
+
+Número de contratos firmados
+pelo PRONAF
+http://api.pgi.gov.br/api/1/serie/32.json
+JSON
+2017
+Valores contratados pelo PRONAF
+Número de contratos firmados
+http://api.pgi.gov.br/api/1/serie/405.json
+JSON
+2017
+pelo programa Mais Alimentos
+Valor financeiro aplicado no
+http://api.pgi.gov.br/api/1/serie/407.json
+JSON
+2017
+programa Mais Alimentos.
+Fonte: Elaborado pelos autores – 2017.
+http://api.pgi.gov.br/api/1/serie/31.json
+
+JSON
+
+2017
+
+Enumerados no Quadro 1, os conjuntos de dados são provenientes do portal dados.gov.br e compreendem as séries históricas de indicadores governamentais relativos ao Programa Nacional de Fortalecimento da Agricultura Familiar (PRONAF).
+
+3.3 Os Vocabulários Utilizados para Representar os Dados Abertos Governamentais
+Para representar dados de acordo as práticas de Dados Abertos Conectados, requer-se
+um estudo acerca de vocabulários e ontologias existentes e comumente utilizados na Web de
+Dados. Neste sentido, o principal vocabulário a ser reutilizado é o SCOVO - The Statistical COre
+VOcabulary (SCOVO, 2017). Este se caracteriza como um vocabulário simples para representar
+dados estatísticos na web. Conforme a Figura 3, o SCOVO define três elementos principais:
+
+
+• Item - representa uma única parte do dado;
+• Dimension - representa parte da unidade de um dado; e
+• Dataset - representa a unidade do dado como um todo.
+
+Figura 3: Representação do vocabulário SCOVO.
+
+Fonte: (SCOVO, 2017).
+
+Outro vocabulário utilizado na Web de Dados é o Dublin Core (DMCI, 2017). Pontualmente, neste trabalho, utiliza-se o predicado dc:identifier para representar os identificadores
+de estado ou de município nos recursos de dados publicados.
+3.4 As Ferramentas para Publicar os Dados Abertos Conectados
+O emprego de ferramentas são parte dos esforços empreendidos frente às boas práticas
+para publicação de Dados Abertos Governamentais Conectados. Neste sentido, o Linked Data
+Lifecycle encontra alicerce em um conjunto de ferramentas computacionais open-source, o pacote LOD2 Stack (AUER et al., 2012). Dentre as ferramentas disponibilizadas neste pacote, destacam-se: a Sparqlify (SPARQLIFY, 2017) e a Open Link Virtuoso (VIRTUOSO, 2017).
+A Sparqlify é disponibilizada na plataforma Linux e possui como característica principal a
+conversão de um arquivo CSV (Comma-Separated Values) para um arquivo com recursos RDF,
+conforme um arquivo de configuração declarado segundo a linguagem SML (Sparqlification Mapping Language).
+A ferramenta Open Link Virtuoso é um sistema universal para acesso, integração e gerenciamento de dados baseados no modelo RDF na web.
+
+
+4 EXTRAÇÃO, TRANSFORMAÇÃO, CARGA E EXPLORAÇÃO DOS DADOS ABERTOS
+GOVERNAMENTAIS
+Para publicar os quatro conjuntos de dados na Web de Dados, foi estabelecido um workflow automatizado, no qual os Dados Abertos Governamentais que estão na 3ª Estrela são elevados à 5ª Estrela, tornando-se Dados Abertos Governamentais Conectados. Os elementos
+deste workflow são descritos a seguir, de acordo com as atividades de: extração, transformação,
+carga e exploração de dados.
+
+4.1 Extração de Dados
+No primeiro passo do workflow, um conjunto de dados primários é extraído diretamente
+do portal dados.gov.br para um arquivo local em formato CSV. Para obter os conjuntos de dados
+de forma automatizada, como resultado, foi desenvolvido um script em linguagem PHP (acrônimo recursivo para Hypertext Preprocessor) parametrizável a cada conjunto de dados desejado. Conforme destacado na Listagem 1, são parametrizados:
+
+Listagem 1: Script parcial em PHP para extração de dados no portal dados.gov.br.
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+
+<?php
+$str = file_get_contents($argv[1]);
+$json = json_decode($str, true);
+$fp = fopen($argv[2], 'w');
+$array = array();
+$fj = fopen("data/json/data.json", 'w');
+fwrite($fj, json_encode($json));
+fclose($fj);
+foreach($json[$argv[3]] as $cabecalho){
+$array = array_keys($cabecalho);
+}
+for($i = 0; $i < sizeof($array); $i++) {
+fputs($fp, $array[$i]. ",");
+}
+fputs($fp, "\n");
+foreach($json[$argv[3]] as $item) {
+for ($i = 0; $i < sizeof($array); $i++) {
+if(!is_null($item[$array[$i]])) {
+fwrite($fp, $item[$array[$i]] .",");
+}
+}
+fputs($fp, "\n");
+}
+?>
+
+Fonte: Elaborada pelos autores – 2017.
+
+• linha 2 - o endereço web do arquivo de origem em formato JSON (JavaScript Object
+Notation) que contenha o conjunto de dados primários;
+
+
+• linha 3 - uma palavra-chave que identifique o nome do registro que representa os
+dados a serem extraídos; e
+• linha 4 – o nome do arquivo CSV de destino a ser criado.
+Salienta-se que este processo de extração mantém os dados na 3ª Estrela, preparandoos para serem convertidos para o modelo RDF (4ª Estrela).
+
+4.2 Transformação de Dados
+O próximo passo do workflow é a conversão do arquivo CSV para RDF. Para tanto, transforma-se os itens de dados para recursos RDF. De acordo com o ciclo de vida Linked Data Lifecycle essa atividade é denominada Classification/Enrichment. Para a realização desta atividade, utiliza-se a ferramenta Sparqlify usando um arquivo de configuração SML.
+
+Listagem 2: Script SML de mapeamento do Indicador Número de Contratos PRONAF.
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+
+PREFIX
+PREFIX
+PREFIX
+PREFIX
+PREFIX
+PREFIX
+
+fn:
+<http://aksw.org/sparqlify/>
+rdf:
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+dc:
+<http://purl.org/dc/elements/1.1/>
+scovo: <http://purl.org/NET/scovo#>
+scipnc: <http://lod.unicentro.br/SmartCities/PRONAF/NumeroContratos/>
+municipios: <http://lod.unicentro.br/SmartCities/IBGE/Municipios/>
+
+CREATE VIEW Template DefaultView As Construct {
+?Item rdf:type
+rdf:Class ;
+rdf:type
+scovo:Item ;
+rdf:type
+scipnc:Item ;
+scovo:dimension
+?Mun ;
+scovo:dimension
+?Ano
+;
+rdf:value
+?valor
+;
+scipnc:temMunicipio ?Mun ;
+scipnc:temAno
+?Ano
+.
+?Municipio
+
+?Ano
+
+rdf:type
+rdf:type
+rdf:type
+dc:identifier
+
+rdf:type
+rdf:type
+rdf:value
+
+rdf:Class
+;
+municipios:Municipio ;
+scovo:Dimension ;
+?codMunicipio
+.
+
+rdf:Class
+;
+scovo:Dimension ;
+?ano
+.
+
+}
+WITH
+?Item = uri(concat("http://lod.unicentro.br/SmartCities/PRONAF/NumeroContratos/Item_",
+fn:urlEncode(?2),"_",fn:urlEncode(?3)))
+?Mun = uri(concat("http://lod.unicentro.br/SmartCities/IBGE/Municipios/Municipio_",
+fn:urlEncode(?2)))
+?codMunicipio = plainLiteral(?2)
+?Ano = uri(concat("http://lod.unicentro.br/SmartCities/Unidades/Ano_", :urlEncode(?3)))
+?ano = plainLiteral(?3)
+?valor = plainLiteral(?1)
+
+Fonte: Elaborada pelos autores – 2017.
+
+Para cada conjunto de dados, um arquivo de configuração deve ser definido. Na Listagem 2 é exemplificado o arquivo SML para mapeamento dos dados primários do número de
+contratos firmados no PRONAF em recursos RDF. A estrutura do arquivo SML é composta por:
+
+
+• prefixos – no exemplo linhas 1 a 6 – define os vocabulários e ontologias utilizadas na
+representação dos Dados Conectados;
+• modelo RDF – no exemplo linhas 7 a 25 – estabelece o mapeamento das colunas do
+arquivo CSV para com os recursos RDF; e
+• colunas CSV – no exemplo linhas 28 a 33 – padroniza e transforma os conteúdos das
+colunas do arquivo CSV conforme os requisitos do RDF.
+
+Figura 4: Representação genérica dos grafos produzidos pelo workflow.
+
+Fonte: Elaborada pelos autores – 2017.
+
+Considerando o exemplo da Listagem 2, a Figura 4 ilustra o modelo RDF resultante. Salienta-se que tal representação é genérica aos quatro conjuntos de dados utilizados neste trabalho. Nesta etapa do workflow, ao utilizar a Sparqlify, efetua-se a passagem dos dados da 3ª à 4ª
+Estrela.
+
+4.3 Carga dos Dados
+O passo seguinte do workflow consiste na carga dos dados na ferramenta Open Link Virtuoso.
+
+Listagem 3: Script para carregamento dos grafos no servidor Open Link Virtuoso.
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+
+#!/bin/bash
+virt_isql="isql-vt"
+unzip_source=$1
+virt_graphName=$2
+virt_userName=$3
+virt_passWord=$4
+virt_port=1111
+echo "concatenating the nt files"
+for file in /home/ale/Documents/nt/*.nt;
+do
+FILESIZE=$(stat -c%s $file)
+if [ $FILESIZE -eq 0 ];
+then
+echo "$file is empty" >> errors.txt
+$ERROR=1
+else
+grep "^<http" $file;
+
+
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+
+fi;
+done 2>/dev/null >> /home/temp/nt/tudo.nt
+echo "SPARQL CLEAR GRAPH <$2>;" | isql-vt -S "$virt_port" -U "$virt_userName"
+-P "$virt_passWord"
+[...]
+# Phase 1: Unzip
+#echo "Target: $unzip_target, Extension: $unzip_extension"
+[...]
+# Phase 2: Convert to n-triple
+# FIXME Skip this step if the source file is already in n-triples format
+[...]
+# Phase 3: Split
+split_source=$rapper_target
+[...]
+# Phase 4: Load
+echo "creating load statement"
+[...]
+echo "$virt_isql $virt_port $virt_userName $virt_passWord $load_query"
+$virt_isql "$virt_port" "$virt_userName" "$virt_passWord" "$load_query"
+fi
+
+Fonte: Elaborada pelos autores - 2017.
+
+Com o objetivo de automatização, o armazenamento é realizado através de um script
+desenvolvido para ser executado no ambiente Linux (Listagem 3). Como parâmetros do script,
+devem ser informados no ato de sua execução:
+• linha 03 - a localização e o nome do arquivo RDF de origem;
+• linha 04 – o nome do grafo RDF a ser criado no servidor Open Link Virtuoso;
+• linha 05 – o usuário de conexão ao servidor Open Link Virtuoso; e
+• linha 06 – a senha de acesso ao servidor.
+
+4.4 Exploração dos Dados
+No consumo dos Dados Abertos Governamentais Conectados, para obter informações
+dos dados publicados, foram elaboradas algumas consultas na linguagem SPARQL (Simple Protocol and RDF Query Language), uma linguagem de consulta para extrair informações de dados
+baseados em triplas. Estas consultas configuram algumas informações sob o domínio da Agricultura, considerando a cidade de Guarapuava - PR.
+
+Listagem 4: Exemplo de consulta em SPARQL para o consumo dos dados.
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+
+PREFIX
+PREFIX
+PREFIX
+PREFIX
+PREFIX
+PREFIX
+
+dc:<http://purl.org/dc/elements/1.1/>
+rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+foaf:<http://xmlns.com/foaf/0.1/>
+scipnc:<http://lod.unicentro.br/SmartCities/PRONAF/NumeroContratos/>
+scipvc: <http://lod.unicentro.br/SmartCities/PRONAF/ValoresContratados/>
+municipio:<http://lod.unicentro.br/SmartCities/IBGE/Municipios/>
+
+SELECT ?codIBGE ?nmMunicipio ?vlrAno ?qtdeContratos ?vlrContratos WHERE {
+?qc
+rdf:type
+scipnc:Item .
+?qc
+scipnc:temAno
+?ano .
+
+
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+
+?qc
+?qc
+
+scipnc:temMunicipio ?municipio .
+rdf:value
+?qtdeContratos .
+
+?qv
+?qv
+?qv
+?qv
+
+rdf:type
+scipvc:temAno
+scipvc:temMunicipio
+rdf:value
+
+scipvc:Item .
+?ano .
+?municipio .
+?vlrContratos .
+
+?municipio rdf:type
+municipio:Municipio .
+?municipio dc:identifier ?codIBGE .
+?municipio foaf:name
+?nmMunicipio .
+?ano
+rdf:value
+?vlrAno .
+FILTER (?nmMunicipio = "Guarapuava (PR)")
+}
+ORDER BY ?vlrAno
+
+Fonte: Elaborada pelos autores – 2017.
+
+Por exemplo, a Listagem 4 apresenta uma consulta que retorna o número de contratos
+firmados pelo PRONAF e o total de valores assumidos por esses contratos, em cada ano, na
+cidade de Guarapuava. O contexto ampliado é alcançado ao se relacionar informações advindas
+de três conjuntos de dados:
+• prefix scipnc – linha 04 – contabiliza o número de contratos PRONAF firmados nos
+munícipios brasileiros, ano a ano;
+• prefix scipvc – linha 05 – compreende os valores monetários totais dos contratos
+PRONAF firmados pelos munícipios, ano a ano; e
+• prefix municipios – linha 06 – contém o nome das cidades brasileiras e o código do
+IBGE destas localidades.
+Quadro 2: Resultado da execução da consulta da Listagem 4.
+?codIBGE
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+410940
+
+O
+
+?nmMunicipio
+?vlrAno
+?qtdeContratos
+Guarapuava
+2000
+395
+Guarapuava
+2001
+1042
+Guarapuava
+2002
+542
+Guarapuava
+2003
+280
+Guarapuava
+2004
+327
+Guarapuava
+2005
+348
+Guarapuava
+2006
+498
+Guarapuava
+2007
+440
+Guarapuava
+2008
+359
+Guarapuava
+2009
+277
+Guarapuava
+2010
+410
+Guarapuava
+2011
+380
+Guarapuava
+2012
+474
+Guarapuava
+2013
+286
+Guarapuava
+2014
+317
+Guarapuava
+2015
+279
+Fonte: Elaborado pelos autores – 2017.
+
+?vlrContratos
+2.739.411,89
+2.237.019,79
+1.043.429,97
+1.092.130,67
+1.379.899,93
+1.921.974,24
+2.476.473,40
+1.551.840,25
+1.598.917,71
+2.191.134,96
+4.111.368,52
+4.564.174,76
+6.456.236,02
+3.691.361,99
+4.969.663,27
+3.903.092,30
+
+
+Quadro 2 apresenta o resultado da execução da consulta explicitada na Listagem 4.
+Neste cenário de exploração de dados, exemplifica-se como unir os dados de diversas fontes.
+Salienta-se que tal fato corrobora à elevação dos recursos de dados da 4ª Estrela à 5ª Estrela,
+ao se criar um contexto informacional mais ampliado entre os Dados Conectados disponibilizados.
+
+5 CONSIDERAÇÕES FINAIS
+Este artigo está circunscrito na interdisciplinaridade dos conceitos Dados Abertos Governamentais e Dados Abertos Conectados. Teve como propósito formalizar um workflow automatizado para publicação de Dados Abertos Governamentais Conectados provenientes do portal
+brasileiro de dados abertos. Resumidamente, os dados primários são oriundos do portal dados.gov.br e elevados da 3ª Estrela ao patamar da 5ª Estrela, segundo a classificação de Dados
+Abertos. O processo de publicação seguiu o ciclo de vida Linked Data Lifecycle. As ações que
+permeiam o workﬂow são aderentes às atividades de: (i) extração de dados primários; (ii) transformação de dados para o modelo RDF; (iii) carga dos recursos RDF na Web de Dados e (iv)
+exploração dos dados. Como resultado, permite-se o consumo e a exploração de Dados Abertos,
+alcançando a 5ª Estrela. Em resumo, com o workflow estabelecido, foi possível organizar, formalizar e compartilhar Dados Abertos Governamentais Conectados na Web de Dados, de forma
+automatizada.
+Ademais, neste trabalho conﬁrma-se o potencial da Web de Dados como uma plataforma global, em que os Dados Abertos Conectados são disponibilizados para o reuso em contextos ampliados. Observa-se como a disponibilização de recursos de dados na web pode ser
+útil no fomento de um ecossistema para cidades de pequeno ou de médio porte municiada com
+Dados Abertos Governamentais Conectados.
+Com a experiência adquirida, como trabalhos futuros são traçados a manutenção do
+compartilhamento ao nível da 5ª Estrela das séries históricas trabalhadas nesta pesquisa; o início do compartilhamento de demais bases de dados circunscritas sob os demais órgãos da esfera
+federal; a construção de novos estudos de casos; e a remodelagem dos grafos usando o vocabulário Model for Tabular Data and Metadata on the Web estabelecido pelo World Wide Web
+Consortium (MODEL, 2017).

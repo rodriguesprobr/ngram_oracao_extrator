@@ -1,0 +1,555 @@
+
+SNIIC: A PLATAFORMA DIGITAL DE CULTURA BRASILEIRA SOB A PERSPECTIVA DAS
+CONVERGÊNCIAS ENTRE O DESIGN E A CIÊNCIA DA INFORMAÇÃO
+Modalidade da Apresentação: Comunicação Oral
+Resumo: Esta comunicação traz resultados da pesquisa de mestrado defendida em um Programa de
+Pós-graduação em Ciência da Informação no ano de 2016. Esta pesquisa teve como objeto o Sistema
+Nacional de Informações e Indicadores Cultural (SNIIC), criado pelo governo federal com o objetivo
+de mapear e agregar, em base de dados única, informações referentes à cultura brasileira e que
+apresenta grandes desafios para sua implementação e execução, ante suas características de sistema
+complexo, híbrido e convergente. Nesse sentido nos propomos a analisar o SNIIC sob as perspectivas
+da Ciência da Informação e do Design da Informação, estabelecendo como objetivo geral identificar
+recursos e subsídios que ampliem as possibilidades de acesso, compartilhamento e apropriação da
+informação. A pesquisa é classificada como bibliográfica, exploratória, teórico-aplicada, pois visa
+estabelecimento de um produto/serviço para melhorar o sistema de busca e recuperação da
+informação. Os resultados da análise confirmaram o grande potencial da plataforma, mas revelaram
+algumas dificuldades, como o sistema de busca e recuperação da informação. Para a correção deste
+problema sugerimos a aplicação prática de um tesauro sobre cultura, convertido no modelo Simple
+Knowledge Organization System (SKOS) em padrão Resouce Description Framework (RDF), com vistas
+à organização, recuperação e interoperabilidade entre diferentes sistemas de informação e Web
+Semântica, permitindo que o usuário realize consultas utilizando seu vocabulário de comum uso,
+provendo assim uma maior acessibilidade às informações mantidas pelo SNIIC.
+Palavras-Chave: Ciência da Informação. Design da Informação. Convergências de Linguagens.
+Sistema Nacional de Informações e Indicadores Culturais. Curadoria digital da Cultura.
+
+1 INTRODUÇÃO
+O Projeto Padrões Web em Governo Eletrônico (e-PWG), Programa de Governo
+Eletrônico do Governo Federal (GOVERNO ELETRÔNICO, 2010), define as estratégias de
+divulgação, estrutura de informação, conteúdo disponibilizado, bem como estabelece o nível
+de interação com os sujeitos, que podem ser classificados como:
+● página: é a unidade mínima de informação;
+● sítio: é um conjunto de páginas contendo serviços e informações de um dado
+órgão, empresa ou departamento;
+● portal ou plataforma: agrega conjunto de informações de órgãos e
+departamentos diferentes, oferece acesso direto a diversas aplicações,
+informações e serviços de outros sítios a ele agregado, unificados pelo
+desenho e pelo fluxo de interação.
+Segundo a classificação acima, as chamadas “plataformas digitais de cultura” são
+ambientes informacionais que visam medir e processar informações de forma colaborativa.
+Estas plataformas digitais correspondem a sistemas integrados de informações
+culturais que promovem mediações entre as esferas econômicas, culturais e políticas. São
+progressivamente utilizadas pelos governos para auxiliar na gestão da cultura com o fim de
+buscar transparência das ações governamentais e cumprimento de questões afetas ao
+direito à informação (CALCAGNO; LERMAN, 2007, p.101).
+No Brasil, o Governo Federal propôs a elaboração do Sistema Nacional de
+Informações e Indicadores Culturais (SNIIC), uma plataforma que pode ser considerada
+híbrida, convergente e complexa, na medida em que é criada e disponibilizada pelo poder
+público e precisa da participação popular para sua consecução, reúne objetos e recursos
+digitais, com o objetivo de agregar, em base de dados única, informações referentes à
+cultura brasileira e realizar o mapeamento de manifestações artísticas e culturais,
+localizando-as geograficamente.
+A formação deste repositório de dados e informações governamentais pressupõe a
+colaboração de sujeitos registrados, os quais fornecem informações que lhes são solicitadas
+em formulários eletrônicos (RAC), posteriormente armazenados nesse sistema para consulta
+e formação de estatísticas e indicadores.
+O SNIIC é um sistema de informações de grande importância nas formas de
+interação, participação social e construção da memória coletiva e, apesar de já ter sido
+
+
+
+implementado, percebe-se que há um grande volume de informações que ainda precisam
+ser inseridas, organizadas, classificadas, descritas, catalogadas e disponibilizadas.
+Em razão do tema ser relativamente recente no Brasil, verificamos a escassez de
+estudos sob o prisma da Ciência da Informação e do Design da Informação, e que desperta
+uma ampla agenda de pesquisa, pois apresenta questões importantes a serem consideradas:
+● quais as possibilidades de construção colaborativa que a plataforma digital de
+cultura pode oferecer para a promoção da diversidade cultural;
+● qual seu papel na construção, preservação e disseminação da memória
+coletiva e do patrimônio cultural;
+● se os documentos produzidos nesse contexto subsumem ao conceito de
+documento arquivístico eletrônico e assim podem ser considerados;
+● a possibilidade de utilização de um tesauro de patrimônio cultural brasileiro
+no SNIIC, como instrumento para transferência efetiva da informação;
+● quais as vantagens de utilização de um tesauro de patrimônio cultural
+baseado no conceito de metadados e RDF, adotado pelo Simple Knowledge
+Organization Sistem (SKOS).
+Todos estas questões foram trabalhados na dissertação de mestrado, estruturada em
+cinco capítulos, pensados e distribuídos conforme os objetivos específicos a serem
+alcançados. A dissertação foi realizada na linha de pesquisa Informação e Tecnologia da área
+da Ciência da Informação na Universidade Estadual Paulista, por entendermos que é tarefa
+da academia fomentar a reflexão e o debate sobre temas atuais que envolvam, sobretudo, a
+disseminação e a mediação da informação em ambientes informacionais digitais, por meio
+do uso dos recursos tecnológicos.
+No caso desta comunicação oral, optamos por destacar “A importância do tesauro no
+Sistema Nacional de Informações e Indicadores Culturais (SNIIC)”, onde discutimos a
+importância da utilização de um tesauro de patrimônio cultural brasileiro no Mapeamento
+da Diversidade Cultural, convertido no modelo Simple Knowledge Organization System
+(SKOS) em padrão Resouce Description Framework (RDF), com vistas à organização,
+recuperação e interoperabilidade entre diferentes sistemas de informação e Web Semântica
+e apresentamos os resultados deste desenvolvimento e aplicação.
+A pesquisa é classificada como bibliográfica, exploratória, teórico-aplicada, pois visa
+estabelecimento de um produto/serviço para melhorar o sistema de busca e recuperação da
+informação, cujo processo de execução será apresentado nas próximas seções, com o
+
+detalhamento de cada etapa.
+
+XVIII ENCONTRO NACIONAL DE PESQUISA EM CIÊNCIA DA INFORMAÇÃO – ENANCIB 2017
+23 a 27 de outubro de 2017 – Marília – SP
+
+2 SNIIC: A PLATAFORMA DIGITAL BRASILEIRA DE CULTURA
+A plataforma digital cultural SNIIC, ao lado das tradicionais bibliotecas, arquivos e
+museus, representa espaço e ambiente de registro projetado para guardar, preservar e
+disseminar a informação e a memória; trata-se de um repositório de dados e informações
+para estudos, consultas, criação de indicadores.
+O SNIIC está disponível ao público em um URL próprio 1, foi baseado na colaboração
+aberta para a composição de uma base de dados pública, elenca os conceitos da web 2.0
+(web colaborativa), com as potencialidades da participação direta da sociedade civil através
+de interfaces típicas das mídias sociais somados aos da web 3.0 (a web semântica) na
+elaboração e implementação de arranjos de metadados integradores para recuperação da
+informação e gerenciamento de identidade (atribuição/autoria) e serviços de busca de dados
+georreferenciados empregados na elaboração de mapa cultural (cartografias colaborativas)
+(BRASIL, 2011).
+Essa dinâmica interativa pode ser realizada em diversos graus de participação pelo
+cidadão, de acordo com a atividade realizada, desde sua inscrição no sistema, com o
+preenchimento do formulário RAC, ao compartilhamento de tipos variados de mídia
+(fotografias, audiovisuais, etc), relativas às experiências culturais vividas ou realizadas em
+sua comunidade local (CULTURA DIGITAL, 2012).
+As opções de consulta relacionadas aos sujeitos inscritos no SNIIC são: através do
+número do cadastro SNIIC, ou de sua localização (Estado/Cidade) georrefenciado no mapa,
+pela identificação de parte do número do CPF, se pessoa física ou CNPJ, caso trate de pessoa
+jurídica, bem como o mantenedor, tipo de objeto cultural e a ação pretendida (no caso
+visualização).
+
+1
+
+http://sniic.cultura.gov.br/
+
+
+Figura 1: Interface de consulta de sujeito.
+
+Fonte: SNIIC (BRASIL, 2011)
+
+A partir desse resultado geral, o usuário pode refinar sua busca, elegendo qual dos
+resultados pretende visualizar. Assim, após a escolha, o sistema apresenta uma tela
+contendo detalhadamente as informações constantes no formulário de cadastro, que foram
+prestadas pelo usuário, onde destacamos na Figura 2 o locus da atividade cultural e sua
+descrição através da auto-declaração.
+Figura 2: Interface de resultado à consulta de usuário.
+
+
+Figura 3: ítem destacado na Figura 22.
+
+Fonte: SNIIC (BRASIL, 2011)
+
+Neste caso específico utilizado como exemplo do processo de busca e recuperação
+da informação no SNIIC, percebe-se que a informação descrita pelo usuário cadastrado
+localizado na cidade de Parnaíba, no Estado do Piauí, acerca de sua atividade cultural, é
+realizada em Linguagem Natural (LN) 3. A partir desse texto descrito é possível identificar
+palavras-chaves: peças artesanais, palha de carnaúba, processo artesanal, tradição.
+
+2
+
+3
+
+http://sniic.cultura.gov.br/index.php/usuarioInternetAction/consultaInformacoesView/40654
+
+A linguagem natural (LN) é definida por Lancaster (1993, p. 200) como “Esta linguagem é pouco usada porque
+apresenta grande inconsistência devido inúmeras inconsistências causadas pela subjetividade. Para que o
+usuário venha obter uma maior precisão na sua busca a maior parte dos sistemas adota linguagens controladas
+com normas previamente estabelecidas. A linguagem controlada (LC), também denominada de vocabulário
+controlado, pode ser definida como um conjunto limitado de termos autorizados para uso na indexação e
+busca de documentos.
+
+
+
+Por outro lado, além dessas informações revelarem o contexto de atividade
+vivenciada por uma pessoa inscrita no SNIIC, referidos termos destacados também possuem
+uma carga semântica e sintática com carga informacional de conceitos e deﬁnições próprias,
+que podem ser representadas na Web Semântica:
+• Carnaúba é uma palmeira nativa do Nordeste do Brasil.
+• Processo artesanal utilizando a palha da carnaúba.
+• Processo artesanal que mantém toda a tradição local.
+• Grupo de mulheres produzem artesanato com palha de carnaúba.
+Dessa forma, a partir da Web Semântica, o computador consegue entender e fazer
+relações que carnaúba é uma palmeira nativa do nordeste e que com sua palha um grupo de
+mulheres da cidade de Parnaíba, no Estado do Piauí produzem peças de artesanato
+mantendo a tradição daquela comunidade local.
+Ainda, tem-se que essas palavras-chaves serviriam como descritores para
+indexação, assumindo papel crucial na formulação correta da consulta com vistas à
+recuperação automática, bem como para própria formulação da política e dos indicadores
+culturais.
+Inúmeros estudos sobre o uso da Linguagem Controlada e da Linguagem Natural na
+recuperação da informação têm se concentrado na utilização conjunta das duas linguagens
+na estratégia de busca, comprovando que o uso simultâneo dessas linguagens proporciona
+melhor desempenho nos resultados (LOPES, 2002).
+Na prática, quem procura no SNIIC informações sobre determinada manifestação
+ou expressão cultural, ou mesmo aquele que insere informações na plataforma, o fazem a
+partir da linguagem natural com a qual está familiarizado (muitas vezes utilizando-se de
+termos locais, regionais ou coloquialismos) e em razão disso, têm grande chance de não
+obter êxito em sua busca.
+Isso se deve ao fato do SNIIC não contar com uma política clara de tratamento da
+informação, nem instrumentos de controle de vocabulário, instrumentos básicos para a
+organização da informação; Além disso, também não oferece o usuário outros meios
+internos de busca e recuperação da informação.
+2.1 TESAURO EM AMBIENTE DIGITAL
+
+
+O conceito tradicional de tesauro indica-o como linguagem de representação com a
+finalidade de homogeneizar terminologias e controlar vocabulários, conforme a norma norte
+americana ANSI/NISO Z39.19-2003:
+“Vocabulários controlados organizados em uma ordem conhecida em
+que as relações de equivalência, homográficas, hierárquicas e
+associativas entre os termos são claramente exibidas e identificadas
+por indicadores padronizados de relacionamentos” (ANSI/NISO
+Z39.19-2003).
+Apesar do tesauro ser uma linguagem documental que usa o controle de
+vocabulário para resolver problemas de ambiguidade da linguagem natural, a literatura
+mostra que a função do tesauro modificou-se ao longo do tempo (SERGE, 1997;
+
+SPARCK
+
+JONES, 1997) podendo ser utilizado como apoio:
+1) para classificação de documentos, na caracterização de temas e categorização
+de conceitos;
+2) à produção e à tradução de textos, principalmente na seleção de vocabulário;
+3) à comunicação e aprendizado, na geração da estrutura conceitual;
+4) e base conceitual para projetos, na produção do contexto conceitual;
+5) à tomada de decisão, na classificação de assuntos;
+6) à sumarização de textos, na identificação e associação dos principais conceitos
+desenvolvidos;
+7) nos sistemas de recuperação de informação;
+8) nos sistemas de navegação e rotulagem.
+Assim, percebe-se que a função de tesauro em ambientes digitais vai além de uma
+mudança de suporte impresso para o digital, corresponde a uma mudança de paradigma
+com verdadeira redefinição dos princípios conceituais (Arano e Codina 2004).
+De acordo com a norma ANSI/NISO Z39.19-2003 os tesauros em meio digital podem
+desempenhar 4 funções, sendo que uma quinta função foi incorporada pela revisão
+ANSI/NISO Z39.19-200X (MURAKAMI, 2005):
+1.
+Tradução: promove um modo para traduzir a linguagem natural dos
+autores, indexadores e usuários para um vocabulário controlado usado para
+indexação e recuperação;
+2.
+Consistência: promove consistência na designação de termos de
+indexação;
+3.
+Indicação de Relacionamentos: indica relacionamentos semânticos
+entre termos;
+4.
+Recuperação: serve como uma ajuda na busca e recuperação de
+documentos;
+
+
+
+5.
+Navegação: provê hierarquias claras e consistentes em um sistema de
+navegação para ajudar usuários a localizar objetos de conteúdo desejados.
+Referidas modificações no uso dos tesauros ocorreram à medida do
+desenvolvimento das tecnologias da informação e comunicação, e à nova dinâmica de
+gestão de informações na Web, cujas relações semânticas existentes tornam-se essenciais
+para o aprimoramento da Web Semântica (ARANO, 2005; RAMALHO, VIDOTTI, FUJITA, 2008;
+PASTOR SÁNCHEZ et al, 2009; ALVITE DÍEZ et al, 2010; PEÑA et al, 2013, p.110).
+Shiri et al fizeram uma listagem dos tipos de tecnologias de representação dos
+tesauros presentes na Web (SHIRI, CHOWDHURY, CRAWFORD, 2002) :
+1. Tesauro em um formato de texto estático simples;
+2. Tesauro no formato HTML mas ainda estático, sem o uso efetivo de
+hyperlinks;
+3. Tesauro no formato HTML com hyperlinks completamente navegáveis;
+4. Tesauro com interface gráfica e visual avançada;
+5. Tesauro em formato XML.
+Além dessas, a representação de tesauros em Resource Description Framework
+(RDF)4 proposto pela World Wide Web Consortium (W3C)5 visa e promover
+interoperabilidade entre aplicações, trocando informações processáveis por máquinas na
+Web.
+Apesar dessa recomendação da W3C, ainda a maioria dos tesauros são
+representados em bases de dados como linguagens de marcação tipo XML (Extensible
+Markup Language) e muito raramente são publicados em RDF, problema que pode ser
+resolvido através da aplicação de métodos para conversão de seu formato nativo para RDF
+(Miles et al. 2006).
+Em razão da temática do objeto desta pesquisa versar sobre a cultura brasileira,
+pesquisamos tesauros como instrumento terminológico para realizar o controle de
+vocabulário. Para tanto, elegemos o Tesauro de Folclore e Cultura Popular Brasileira do
+Centro Nacional de Folclore e Cultura Popular do Instituto do Patrimônio Histórico e Artístico
+4
+
+O Resource Description Framework (RDF) não é linguagem, é um modelo, um padrão para descrição de
+metadados, sendo possível descrever fatos sobre recursos da Web e promover interoperabilidade entre
+aplicações, trocando informações processáveis por máquinas na Web, recomendado pela W3C (MENDEZ,
+1999) .
+5
+o World Wide Web Consortium (W3C) é um consórcio internacional para difundir recomendações e
+tecnologias com padrões universais com vistas à Web Semântica, a fim de tornar todos os dados da Web
+legíveis tanto pelos humanos, quanto por máquinas. Dentre as recomendações da Web Semântica está o RDF.
+
+
+
+Nacional (CNFCP, 2004), o qual consiste em um instrumento terminológico de indexação
+com classificação e conceituação dos termos associados à arte popular, ao indivíduo
+produtor, o produto e os processos empregados. Pode-se dizer que este tesauro possui um
+caráter inédito nas áreas de conhecimento denominadas folclore e cultura popular brasileira
+(MENDONÇA, 2012).
+Figura 4: Tesauro de Folclore e Cultura Popular Brasileira do IPHAN
+
+Fonte: Tesauro de Folclore e Cultura Popular Brasileira
+Nossa proposta é que esse tesauro digital seja utilizado experimentalmente no
+SNIIC como parte de um design conceitual e estruturador desse ambiente digital como
+formas
+
+de
+
+representação,
+
+gestão
+
+uso
+
+e
+
+integração
+
+de
+
+recursos
+
+multimídias,
+
+complementando de forma mais eficaz e eficiente a consulta e a recuperação da informação.
+2.2 SIMPLE KNOWLEDGE ORGANIZATION SISTEM (SKOS)
+Para a consecução do tesauro, além das normas internacionais, que servem como
+diretrizes para sua elaboração, formatação e manutenção (ISO 2788 de 1986; ISO 5964 de
+1985; ANSI/NISO Z39.19-2003 e ISO 25964-1 de 2011), o uso do padrão Simple Knowledge
+
+Organization Sistem (SKOS) passou também a ser recomendado pelo W3C a partir de 2009
+(MOREAL et al 2010).
+O SKOS foi desenvolvido pelo Grupo de Pesquisa em Tecnologia da Informação na
+Universidade de Murcia e da Cátedra UNESCO em Gestão da Informação nas Organizações. É
+um modelo que deve ser aplicado na construção de esquemas de conceito, fornece uma
+linguagem de modelagem conceitual simples e intuitiva, baseada em RDF, fazendo com que
+sejam lidos por agentes inteligentes e interoperáveis entre diferentes tipos de sistemas de
+organização do conhecimento (PÉREZ AGÜERA, 2004), visando a Web Semântica (BAKER et
+al, 2013).
+Assim, o SKOS possibilita publicar linguagens de indexação através de um
+mecanismo (triplos - RDF) para representar relações entre diferentes esquemas conceituais,
+visando a recuperação de informação documental, o que possibilita migrar para a web
+semântica a baixo custo (MOREIRO GONZALEZ, 2011, p. 45)
+O modelo SKOS relaciona os nós que representam o sujeito, predicado ou
+propriedade, e objeto, e triplos de formulário, ou seja, conecta conceitos seguindo a
+premissa de que o significado é expresso em RDF (LARA, 2013).
+Segundo Moreiro Gonzalez, a finalidade do SKOS está em representar a realidade
+dos termos incluídos em um determinado vocabulário controlado, respeitando a finalidade e
+o uso para o qual foi concebido (MOREIRO GONZALEZ, 2011, p. 46), aumentando o valor dos
+modelos configurados pelos tesauros e a capacidade de estabelecer relações entre unidades
+léxicas ou etiquetas, entre esquemas de conceitos e agrupá-los em coleções (PASTOR et al,
+2009, p.12).
+Isso se deve ao fato dos conceitos estarem ligados entre si por hierarquias,
+associações e agregados em esquemas conceituais que podem ser mapeados para os termos
+de outros regimes (LARA, 2013), propiciando padrões de interoperabilidade entre aplicações
+que são legíveis por máquinas e facilmente recuperar a informação.
+No mundo, várias iniciativas, incluindo alguns vocabulários importantes, foram
+migrados para o formato SKOS e estão disponíveis no domínio público, a exemplo do
+EuroVoc, AGROVOC e GEMET. A “skosificação” já se faz presente em outros países, com base
+nisso, sugere-se sua replicação no SNIIC para uma melhor interatividade do sistema, bem
+como para a sua eficaz interoperabilidade entre outras aplicações e sistemas.
+
+
+2. 3 DA TEORIA À PRÁTICA: APLICAÇÃO DO TESAURO NA PLATAFORMA SNIIC
+A implementação da teoria descrita nesta comunicação envolveu uma equipe
+multidisciplinar para sua consecução, formada pelo grupo de estudo sob orientação do
+professor e pesquisador Ricardo da Silva Torres, do Instituto de Computação da
+Universidade Estadual de Campinas (UNICAMP), discentes Alberto Arruda de Oliveira, Karina
+Olga Maizman Bogdan e Pedro Ribeiro Mendes Júnior.
+Este grupo desenvolveu um sistema de expansão de consultas para a plataforma
+SNIIC, para minimizar os casos de consultas mal sucedidas, permitindo que sujeito
+informacional realize consultas utilizando seu vocabulário natural, provendo assim um maior
+acesso às informações mantidas pelo SNIIC. O processo de execução do trabalho foi dividido
+em etapas nas quais se deu:
+1. o processamento de consultas no TFCPB, subdividida em: (a) obtenção do
+tesauro, (b) representação no modelo RDF/SKOS e (c) elaboração e expansão de
+consultas utilizando o novo modelo do tesauro baseado no SKOS;
+2. o processamento de consultas na base de dados do SNIIC,
+
+que consiste
+
+essencialmente no processamento das consultas, expandidas e não expandidas,
+diretamente na base do SNIIC.
+
+O sistema de processamento de consultas desenvolvido, cujo código-fonte está
+disponível para download6, abrangeu duas funcionalidades principais: (1) Interface de
+expansão de consultas; (2) e interface de consultas (aplication programming interface - API)
+no SNIIC com termos expandidos; A primeira funcionalidade é provida por uma interface
+web que permite ao usuário a inserção de múltiplos termos que deseja expandir e selecionar
+os termos expandidos resultantes que julgar mais interessantes para busca no SNIIC.
+O internauta pode entrar com um ou mais termos que deseja expandir, se deseja
+expandilos ou não e qual a profundidade de expansão desejada. Os termos devem ser
+inseridos separados por espaço ou unidos por símbolos “+”, “,” e “;”.
+Caso o termo desejado seja composto de diversas palavras, como, por exemplo,
+“Teatro de boneco”, este deve estar entre aspas duplas. Se o botão de expansão de
+6
+
+Disponível em: https://bitbucket.org/pedrormjunior/mo410-query-expansion/wiki/Home
+
+
+consultas for marcado, o sistema buscará no TFCPB representado em RDF os termos
+inseridos, listando como resultado os termos sinônimos, genéricos, especíﬁcos e associados.
+A partir do tesauro anteriormente definido foi construído o grafo de representação
+considerando a definição de tripla- recurso, propriedade e valor- onde:
+● recurso: representado pela URI do termo;
+● propriedade: relacionamentos prefLabel, altLabel, broader, narrower ou
+related;
+● valor: representado por um termo literal para as propriedades prefLabel (o
+termo) e altLabel (sinônimo do termo), ou por uma outra URI para as
+propriedades broader, narrower e related, que indicam o relacionamento
+entre conceitos.
+Figura 5: Exemplo de mapeamento do termo “Teatro de boneco”
+
+Fonte: Relatório final dos pesquisadores da Unicamp
+
+Por ﬁm, no campo Search Depth, o sujeito informacional indica a profundidade
+máxima de expansão, que só se aplica para a expansão de termos associados. Esse valor, um
+inteiro entre 1 e 4, indica se para os termos resultantes da busca original, novas buscas
+deverão ser realizadas.
+
+
+
+A profundidade 1, indica que apenas os termos originais, entrados pelo usuário,
+serão expandidos. Uma profundidade de 2, por exemplo, indica que para cada termo
+associado aos termos entrados pelo usuário, o sistema também realizará a expansão para
+eles. A profundidade é limitada em 4 pois, além de números maiores resultarem em uma
+expansão em termos que muitas vezes fogem do escopo do esperado pelo usuário, o
+processo de busca também torna-se muito lento.
+Uma vez buscados os termos, o sistema avança para a tela de resultados da
+expansão, apresentada na Figura 6a. A tela é separada de acordo com a categorização dos
+resultados em termos sinônimos, genéricos, especíﬁcos e associados.
+Cada um dos termos resultantes possui links para a página com sua descrição no
+site do TFCPB e uma caixa para marcar se o termo será utilizado na busca na base de dados
+do SNIIC. Permitindo ao internauta quais dos termos expandidos ele deseja utilizar na busca,
+o sistema torna possível uma melhor análise do impacto da expansão de consultas. É
+importante citar que os termos “entrados” pelo sujeito (que foram expandidos) aparecem
+na listagem de sinônimos, e devem ser marcados para serem adicionados à consulta ﬁnal.
+Os termos marcados aparecem unidos por “+” na caixa de texto mostrada abaixo da
+listagem de termos resultantes, podendo ser copiados para busca em outras plataformas. O
+sujeito então seleciona em qual das bases do SNIIC gostaria de realizar a busca, cujas opções
+são: Agentes, Eventos, Projetos e Espaços culturais. Clicando no botão Search, a consulta é
+realizada no SNIIC e o sujeito é direcionado para a página de resultados (ver Figura 6b). Se o
+internauta não selecionou nenhum termo para busca, o sistema volta para a tela inicial.
+
+
+
+Figura:
+
+Expansão
+
+de
+
+consulta
+
+(6a).
+
+Resultados
+
+da
+
+consulta
+
+(6b).
+
+Fonte: Relatório final dos pesquisadores da Unicamp
+
+Os resultados apresentados na página de resultados (Figura 6 b) os termos originais
+são mostrados destacados em negrito e azul e os termos expandidos em negrito. Uma das
+limitações da API de busca do SNIIC é não considerar os termos buscados como partes de
+palavras existentes nos campos buscados. O código-fonte do sistema desenvolvido está
+disponível para download e as instruções para uso encontra-se acessível pelo mesmo link7.
+3 CONSIDERAÇÕES FINAIS
+Organizar, sistematizar e difundir informações objetivas sobre cultura, não é uma
+atividade simples ou auto-descritiva; representa grande desafio para a Ciência da
+Informação (CI). Torna-se, portanto, indispensável o emprego de novas abordagens
+tecnológicas de representação e recuperação de recursos informacionais (RAMALHO,
+VIDOTTI, FUJITA, 2007).
+O SNIIC já continha um grande volume de informações culturais que necessitava ser
+processado e estruturado por meio de um Design de Informação apropriado para que os
+7
+
+Disponível em: https://bitbucket.org/pedrormjunior/mo410-query-expansion/wiki.
+
+
+
+aspectos inerentes às informações fossem tratados e recuperados. Assim, idealizamos o uso de
+
+um tesauro de patrimônio e expressões culturais para auxiliar na organização de
+informações no ambiente digital.
+No primeiro momento o tesauro serviria para controle terminológico na indexação
+e disponibilização para o cidadão, leigo ou especializado e no momento da interação,
+converteria a linguagem natural em uma linguagem controlada. A seguir, tra utirmação
+lização dos padrão SKOS em RDF possibilitaria a criação de ligações e permitiria a melhoria
+da interoperabilidade entre outros sistemas de informação.
+A utilização do tesauro também contribuiria para a construção de ontologias,
+possibilitando níveis de relacionamentos avançados que podem ser processados de forma
+automatizada por computadores (RAMALHO, VIDOTTI, FUJITA, 2007; BAÑOSMORENO et al,
+2013).
+No entanto, pesquisas sobre conhecimento tecnológico representam um grande
+desafio, pois de um lado estão os pesquisadores diretamente envolvidos com o
+desenvolvimento de sistemas e produtos e, de outro, os que são afetados pelas
+incorporações desses aperfeiçoamentos e avanços e finalmente, e aqueles que pesquisam e
+estudam esses fenômeno.
+Esse
+
+desafio promovido pelas
+
+mudanças
+
+e
+
+alterações
+
+tecnológicas
+
+foi
+
+experimentado durante o desenvolvimento dessa pesquisa de mestrado, uma vez que a
+plataforma SNIIC, objeto de nosso estudo, sofreu profundas alterações em sua configuração
+inicial e isso nos leva a traçar algumas comparações e refletir sobre o assunto sob os pontos
+de vista da Ciência da Informação e do Design da Informação.
+O sistema criado para solucionar problemas na recuperação da informação no SNIIC
+foi afetado pelas grandes alterações em sua interface gráﬁca e em suas funcionalidades
+advindas no fim de outubro de 2015. Isso porque a parte do sistema que havia sido
+implementado e que direcionava a consulta diretamente para a plataforma SNIIC, foi
+inutilizada e essa mudança afetou a disponibilidade dos dados referentes aos eventos
+culturais, o que impossibilitou testes do API.
+Embora a plataforma SNIIC da maneira que foi projetada e apresentada
+primeiramente, não exista mais, nosso estudo e as sugestões desenvolvida a partir do
+Laboratório multidisciplinar com o docente Ricardo Torres e seus discentes para a
+
+
+
+incorporação de um Tesauro no ambiente, permanecem válidas e aplicáveis de forma
+genérica em outras plataformas digitais. Referidas mudanças intensificam ainda mais a
+necessidade de continuidade das pesquisas sobre a plataforma, sobretudo questões afetas
+às áreas da CI e do Design da Informação, que podem oferecer subsídios na construção de
+soluções.
+Observou-se
+
+que
+
+estudar
+
+aspectos
+
+relacionados
+
+ao
+
+desenvolvimento
+
+e
+
+implementação de soluções na busca e recuperação da informação na plataforma SNIIC
+configurou-se em trabalho metodológico complexo e de difícil aplicação que na prática,
+extrapolava a área de conhecimento da Ciência da Informação, e, portanto, foi preciso a
+formação de equipe multidisciplinar.
+Concluímos que a convergência entre a Ciência da Informação e o Design da
+Informação na plataforma SNIIC se dá em diversas camadas e diferentes graus de aplicações,
+tanto teórico como prático. Preferimos explorar a dimensão da interface de apresentação do
+SNIIC sob a perspectiva das duas áreas, e cuja pesquisa se direcionou para a necessidade de
+atuação pós-custodial do profissional da informação, por meio da curadoria digital e
+contextos multirelacionais de criação e uso da informação pelos sujeitos.
