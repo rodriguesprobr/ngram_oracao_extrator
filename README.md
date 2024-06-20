@@ -1,6 +1,6 @@
 # Apresentação
 
-Código-fonte utilizado na Versão *alpha* do Projeto de Extração de [*n-grams*](https://pt.wikipedia.org/wiki/N-grama) e Isolamento de Orações de textos do [Encontro Nacional de Pesquisa em Ciência da Informação (ENANCIB)](https://ancib.org/diretrizes-gerais/).
+Código-fonte utilizado na Versão *alpha* do Projeto de Extração de [*n-grams*](https://pt.wikipedia.org/wiki/N-grama) e Isolamento de Orações de textos, inicialmente voltado para processamento de comunicações científicas do [Encontro Nacional de Pesquisa em Ciência da Informação (ENANCIB)](https://ancib.org/diretrizes-gerais/).
 
 O conteúdo deste projeto é de livre distribuição, desde que seja referenciado e utilizada a Licença [Creative Commons 4.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
