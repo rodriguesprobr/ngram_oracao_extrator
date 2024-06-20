@@ -6,7 +6,7 @@ O conteúdo deste projeto é de livre distribuição, desde que seja referenciad
 
 Este projeto foi inspirado no software _White_, desenvolvido em Linguagem de Programação [Delphi](https://www.embarcadero.com/products/delphi) pelo Professor Dr. [Ricardo César Gonçalves Sant'Ana](http://lattes.cnpq.br/1022660730972320), utilizado nos artigos _Informação e Tecnologia no ENANCIB: Percurso do GT 08 no período de 2008 - 2015_ e _Informação e Tecnologia: Percurso Temático do GT 08_, liderados pela Professora Dra. [Plácida Leopoldina Ventura Amorim da Costa Santos](http://lattes.cnpq.br/7408791408049766). 
 
-# Colaboradores do Projeto:
+# Colaboradores do Projeto
 
 - Profa. Dra. [Ana Carolina Simionato Arakaki](http://lattes.cnpq.br/9896600626524397) (Instituto Brasileiro de Informação em Ciência e Tecnologia - IBICT)
 - Prof. Dr. [Felipe Augusto Arakaki](https://www.pesquisar.unb.br/professor/felipe-augusto-arakaki) (Universidade de Brasília - UnB)
