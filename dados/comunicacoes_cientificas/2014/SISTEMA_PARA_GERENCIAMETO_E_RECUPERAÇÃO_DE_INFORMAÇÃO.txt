@@ -1,0 +1,581 @@
+
+
+SISTEMA PARA GERENCIAMETO E RECUPERAÇÃO DE INFORMAÇÃO
+Resumo: Atualmente, em diferentes áreas tanto o gerenciamento quanto a recuperação da
+informação constituem um desafio. São comuns problemas de recuperação da informação
+quando temos pessoas que dela necessitam em locais distantes de onde a mesma é mantida.
+Essa pesquisa desenvolve um modelo e um protótipo de organização e recuperação de
+informação referente a Objetos Arquitetônicos Edificados (OAE). Os sistemas de ambientes
+informacionais turísticos, bibliotecários, arquivísticos, museológicos, patrimoniais, hoteleiros,
+governamentais necessitam cada vez mais de sistema de informação eficiente na busca,
+disseminação e recuperação da informação sobre objeto arquitetônico. No modelo proposto,
+recursos tecnológicos foram utilizados para facilitar o acesso à informação, garantir sua
+integridade e permitir que a mesma esteja disponível sempre que possível. Buscou-se facilitar
+a gerência do produto permitindo que usuários sem grandes conhecimentos de informática
+pudessem manter o conteúdo atualizado de acordo com as necessidades. O processo de
+indexação é automático e a estrutura utilizada para seu armazenamento é a de índice invertido
+em que para cada termo indexado existe uma lista de documentos onde o mesmo ocorre. O
+modelo de recuperação é o vetorial sendo a ponderação dos termos realizada utilizando-se o
+método tf-idf e os documentos recuperados são ordenados mediante cálculo de similaridade.
+O modelo prevê a correção dos termos digitados pelo usuário no momento da consulta
+buscando aumentar a eficácia da recuperação. Os resultados obtidos são refinados mediante a
+utilização de filtros os quais ajudam o usuário a encontrar o que deseja de forma mais rápida e
+direta. Outro ponto importante é o uso das coordenadas dos objetos arquitetônicos edificados
+(OAE) de forma a localizá-los em um mapa, bem como permitir encontrar outros objetos
+próximos a ele fazendo inferências a determinadas informações. Tem-se como resultado um
+protótipo para recuperação e disponibilização de informações referentes aos OAE de forma
+simples e direta.
+Palavras-chave: Recuperação da informação. Arquitetura da informação. Gestão da
+informação. Sistemas de informação. Organização da informação.
+1 INTRODUÇÃO
+Em todas as áreas o gerenciamento e recuperação da informação são um desafio. Um
+problema recorrente é como encontrar a informação mais adequada à necessidade do usuário.
+Tendo isso em mente, buscou-se propor uma solução no âmbito da gestão dos Objetos
+Arquitetônicos Edificados (OAE), termo utilizado na pesquisa para definir casas, igrejas,
+palácios, palacetes, construções militares, mausoléus, edifícios dentre outras construções,
+sendo selecionados aqueles que possuam alguma característica histórica ou artística que os
+destaque.
+OAE tombados possuem as características históricas e artísticas supracitadas. “Os
+tombamentos são realizados com o intuito de preservar bens de valor histórico, cultural,
+arquitetônico, ambiental e também de valor afetivo para a população, impedindo a destruição
+e/ou descaracterização de tais bens.” (IPHAN). Suas informações despertam interesse nas
+comunidades locais e, por vezes, até mesmo internacionais quando tratamos daqueles de
+grande repercussão, o que justifica o corpus da pesquisa. A proposta é um modelo simples
+para gerenciar e disseminar a informação acerca dos mesmos.
+No Brasil, a gerência pelos bens tombados em âmbito nacional pertence ao Instituto do
+Patrimônio Histórico e Artístico Nacional (IPHAN) e em âmbito estadual ao Instituto
+Estadual do Patrimônio Histórico e Artístico (IEPHA). Internamente às organizações
+supracitadas existem os arquivos referentes ao tombamento de cada bem os quais são ricos em
+informação de qualidade. No caso do IEPHA, vemos a preocupação referente a essa
+documentação no art. 11 da portaria nº 29, de 03 de Julho de 2012
+O dossiê técnico, mencionado no inciso II do art. 10, deverá ser elaborado
+por equipe técnica interdisciplinar especialmente formada em função da
+categoria do bem e que deverá atuar em todas as etapas de pesquisa e
+redação dos textos de acordo com a metodologia adotada pelo IEPHA/MG.
+
+No entanto nem sempre é simples ter acesso a tal informação que em alguns casos
+deve ser solicitada e, somente após um certo período, pode ser acessada uma vez que o pedido
+é enviado a outra cidade, é copiado e enviado de volta. Em outros casos, a consulta é
+permitida apenas presencialmente, o que dificulta o acesso de uma parcela publico.
+
+Existe informação acerca dos OAE na internet em maior ou menor grau de acordo com
+a sua visibilidade. As iniciativas para sua divulgação costumam ser em nível local, onde cada
+região busca valorizar as suas obras para aumentar a visibilidade. Nem todos os OAE
+possuem informações disponibilizadas via web fazendo com que seja necessário ir
+fisicamente ao local a procura das mesmas. Considera-se a potencialidade dos recursos
+computacionais para por meio deles ampliar a disseminação da informação referentes a
+objetos arquitetônicos. Faz-se um paralelo com o conceito de expor objetos de forma virtual
+vencendo limitações de tempo e espaço. Essa situação pode ser exemplificada com o conceito
+de museu uma vez que o público interessado deve ir até eles para conhecer suas peças, no
+entanto a distância é por vezes impeditiva. De acordo com isso “A implantação do museu
+virtual pode disponibilizar as principais edificações e objetos em âmbito mundial além de
+reconstituir os espaços e os objetos para estudos avançados com uso de tecnologias”
+(BARACHO; BARBOSA, 2011, p. 201).
+A tecnologia vem para auxiliar nos processos de forma a permitir que os mesmos
+tenham um maior alcance.
+Não se pode compreender a atualidade, sem confrontar no dia a dia com a
+importância crescente dos recursos informacionais nas suas várias
+dimensões. As formas atuais de se produzir, transferir e usar informações,
+associadas aos padrões tecnológicos cada vez mais sofisticados, traduzem e
+provocam alterações significativas nos conceitos e práticas das organizações,
+método de trabalho, parâmetro de disseminação e difusão (CASTRIOTA,
+2007, p. 202)
+
+Os dados da pesquisa apontam que diversos sites, que divulgam o patrimônio
+arquitetônico permitem a busca a partir da navegação entre os itens, entretanto torna-se
+necessária uma estratégia de busca que vise facilitar o processo permitindo que pessoas,
+mesmo sem treinamento, consigam encontrar a informação que desejam. Procurando novas
+soluções para a recuperação da informação dos OAE de forma mais eficiente, tem-se como
+base conceitos de informação e serviços de informação. Para Tarapanoff (2006, p. 23), “O
+Objeto da área é a informação e o trabalho com a informação, transformando-a em produtos e
+serviços de utilidade (com valor agregado) para o cliente usuário”. Borges (2007), em seu
+artigo, deu as seguintes ideias sobre o que poderia compor um serviço de informação:
+Processo de auxílio ao usuário na busca de informação ou na satisfação de suas necessidades
+informacionais, interface direta entre a informação e o usuário e como atividade destinada à
+identificação, aquisição, processamento e transmissão de informação e ao seu fornecimento
+em um serviço ou produto de informação. No mesmo artigo, a autora realiza a revisão de
+alguns trabalhos citando o que seria, de acordo com os mesmos, essencial ao gerenciamento
+
+
+de um produto de informação: levantar as necessidades de informação dos usuários,
+estabelecer fontes de informação relevantes, disseminar e divulgar os produtos de informação,
+definir as tecnologias de informação apropriadas para os produtos e ter uma equipe de
+profissionais de informação que tenham as competências necessárias para o gerenciamento
+dos produtos de informação.
+Levando em conta esses conceitos, a pesquisa tem o intuito de servir como modelo
+para criação de um produto de informação, não somente para OAE, mas que também possa
+ser utilizado em outros domínios.
+No modelo proposto a tecnologia é utilizada para facilitar o acesso à informação,
+garantir sua integridade e permitir que a mesma esteja sempre disponível. Também buscou-se
+facilitar a gerência do produto permitindo que usuários sem grandes conhecimentos de
+informática pudessem, sem muito esforço, manter o conteúdo atualizado de acordo com as
+necessidades.
+No intuito de facilitar a busca da informação para atender às necessidades do usuário,
+o protótipo desenvolvido utilizou-se do modelo de busca vetorial e do cálculo de similaridade.
+As respostas são ordenadas de acordo com a similaridade entre os documentos e a consulta.
+Para utilização do modelo, a base deverá ser indexada seguindo o processo descrito na
+pesquisa.
+Outras técnicas utilizadas para facilitar o acesso à informação incluem um corretor
+ortográfico na entrada da consulta do usuário, exibição de objetos fisicamente próximos ao
+objeto procurado e formas para refinar a pesquisa através de filtros aplicados sobre os
+documentos recuperados.
+Para facilitar o gerenciamento do produto, foi proposto que o responsável pelo
+conteúdo não tenha que criar as páginas web diretamente. Ao responsável é computada a
+responsabilidade de alimentar e manter o sistema com informações pertinentes e atualizadas
+sem que sejam necessários conhecimentos em linguagens para criação de websites. Desta
+forma a única preocupação é com a gestão do conteúdo e não do produto em si.
+A proposta é a criação de um modelo de gestão e disseminação de informação que se
+utilize de tecnologias apropriadas para facilitar a gerência e a recuperação da informação
+sobre Objetos Arquitetônicos Edificados e que possa ser aplicada também em outros domínios
+com poucas alterações.
+
+
+2 FUNDAMENTAÇÃO TEÓRICA CONCEITUAL
+De acordo com a conceituação apresentada os OAE se aproximam do conceito de
+monumento, sendo:
+A constituição federal brasileira de 1988, no seu artigo 216, dispõe sobre o Patrimônio
+Cultural nos seguintes termos: constituem patrimônio cultural brasileiro os bens de natureza
+material e imaterial, tomados individualmente ou em conjunto, portadores de referência à
+identidade, à ação, à memória dos diferentes grupos formadores da sociedade brasileira, nos
+quais se incluem: as formas de expressão; os modos de criar, fazer e viver; as criações
+científicas, artísticas e tecnológicas; as obras, objetos, documentos, edificações e demais
+espaços destinados às manifestações artístico-culturais; os conjuntos urbanos e sítios de valor
+histórico, paisagístico, artístico, arqueológico, paleontológico, ecológico e científico.
+Torna-se premente um estudo sobre a gestão da informação e em que medida a
+arquitetura da informação contribui para uma eficaz disseminação e recuperação da
+informação sobre os objetos arquitetônicos.
+Quanto à gestão da informação Davenport (1998, p. 170) diz tratar-se de um conjunto
+estruturado de atividades que incluem o modo como as empresas obtêm, distribuem e usam a
+informação e o conhecimento.
+Os sistemas de recuperação de informação (SRI) apresentam-se aptos a cumprir o
+papel de disseminação dos objetos. Nesse contexto, os SRI são a interface entre uma coleção
+de recursos de informação, em meio impresso ou não, e uma população de usuários.
+(LANCASTER;WARNER, 1993, p.4-5).
+Souza (2006, p. 163) afirma que os SRI trabalham com a organização e viabilização
+do acesso aos itens de informação desempenhando as atividades de representação e
+recuperação das informações e documentos de forma a satisfazer a necessidade dos usuários.
+Para Hiemstra(2000, p. 2) os SRI devem possuir três características: a capacidade de receber
+termos em linguagem natural sem a necessidade de operadores, ordenação dos resultados de
+acordo com a relevância e permitir o refinamento dos resultados de forma a auxiliar o usuário.
+A representação é parte importante nos sistemas de informação e reflete diretamente
+na recuperação da informação. De acordo com Alvarenga (2003), podemos considerar como
+representação primária aquela feita por autores a partir da observação dos fenômenos naturais
+e sociais e representação secundária, que geralmente é utilizada nos sistemas de informação,
+como pontos de acesso fundamentais na representação dos documentos para futura
+recuperação.
+
+
+Como pontos de acesso aos documentos, os metadados são fundamentais para a
+organização do sistema de informação. O termo surgiu em Dublin durante um simpósio, o
+qual deu origem à iniciativa Dublin Core. Segundo Alvarenga (2001), pode ser conceituado
+como “dado sobre dado”; dado que descreve, a essência, atributos e contexto de emergência
+de um recurso (documento, fonte, etc.) e caracteriza suas relações, visando o acesso e o uso
+potencial. Ainda segundo Alvarenga (2001), no novo contexto de produção, organização e
+recuperação de objetos digitais, as metas de trabalho não se restringem à criação de
+representações simbólicas dos objetos físicos constantes de um acervo, compreendem
+estabelecimento dos denominados metadados(...) constituindo-se esses em chaves de acesso a
+serviço dos usuários da internet.
+Os metadados constituem a base da indexação e recuperação da informação. Nessa
+pesquisa a indexação dos termos é realizada de forma automática por meio da extração destes
+e a estrutura utilizada para armazenamento é a do índice invertido. “Um índice invertido é um
+mecanismo orientado para a indexação de uma coleção de texto a fim de acelerar a tarefa de
+busca.” (NAVARRO, 2013, p. 339). "Cada documento no sistema possui um identificador
+único e a forma de encontrar uma palavra é por via dicionário, o qual é uma lista de palavras
+que não se repetem e um apontador para a lista dos documentos onde os termos ocorrem."
+(KOWALSKY; MAYBURY, 1945 p. 82). A FIGURA 1 apresenta essa representação.
+Para realizar a indexação várias etapas devem ser seguidas para tratar o texto e dele
+extrair os termos que irão compor o índice. A FIGURA 2 apresenta as etapas seguindo um
+fluxo para terminar com a indexação do documento.
+FIGURA 1 - Índice invertido
+
+Fonte: Elaborado pelo autor
+
+FIGURA 2 - Processo de indexação
+
+
+Fonte: Adaptado pelo autor
+
+No pré-processamento, o texto é normalizado. No caso das páginas da internet, por
+exemplo, as tags html são retiradas, a codificação do arquivo é verificada e normalizada para
+permitir o correto tratamento de palavras acentuadas por exemplo.
+A filtragem e quebra dos termos considera pontuação, dígitos, hifens e diferenciação
+entre maiúsculas e minúsculas. Para cada um desses itens tem-se um problema peculiar.
+Fox(1992) demonstra diversos problemas com os quais nos deparamos durante esta tarefa
+como, por exemplo,quando separar palavras com hifens. Podemos ter o hífen utilizado para
+unir palavras separadas em final de linha. Os dígitos podem fazer ou não diferença durante a
+recuperação, não podemos, por exemplo, excluir o numeral 6 do termo B6 (vitamina). Dessa
+forma vemos que a cada um dos aspectos apresentados cabe uma tratativa que geralmente
+difere em relação ao objeto tratado pela base estudada. Após a filtragem para a indexação a
+quebra do texto é realizada passando-se à próxima etapa.
+As stopwords podem ser consideradas como palavras com frequência alta entre os
+documentos. Lancaster (1993, p.232) cita como exemplo os artigos, preposições, conjunções e
+assemelhados que estão presentes em grande parte dos documentos de qualquer base. E apesar
+de sua retirada diminuir bastante o tamanho do índice facilitando sua manutenção diversas
+máquinas de busca não o fazem. O Google é um exemplo, sabemos disso pois há diferença
+em pesquisar por “os outros” ou apenas “outros”, sendo que no primeiro caso os resultados
+mais pertinentes são relativos ao filme que leva esse nome.
+Por fim é realizada a indexação dos termos que permanecerão após aplicados os filtros
+do processo. Será necessário armazenar o número de vezes que o termo ocorre na base como
+um todo e em cada documento da mesma. Caso se trabalhe com um índice completo também
+será necessário armazenar a posição do termo no documento de forma a permitir a busca
+levando em consideração a proximidade entre os termos.
+Para permitir a recuperação e ordenação dos resultados, optou-se por utilizar o modelo
+vetorial utilizando o tf-idf (Term Frequency-Inverse Document Frequency) como forma de
+ponderar os termos.
+De acordo com Souza (2006) “nesse modelo, os documentos são tratados como “sacos
+de palavras” (bags of words) e são representados como vetores no espaço n-dimensional, no
+qual n é o total de termos índices”. Esse espaço, segundo Salton, Wong e Yang (1975, p.613)
+
+
+consiste de documentos, que serão identificados por um ou mais termos de indexação sendo
+que os termos podem ser ponderados de acordo com sua importância.
+No modelo vetorial, a pesquisa é feita a partir de texto livre na interface de busca, sem
+a utilização de conectores como na busca booleana (Manning, Raghavan, Schutze 2009,
+p.107). Esse estilo, segundo os autores, é muito comum em sistemas web devido em parte a
+facilidade no uso, bastando apenas que os usuários entrem com uma lista de palavras.
+Quanto a ponderação dos termos, podemos dizer que existem diversos métodos que
+podem ser utilizados, sendo um dos mais utilizados o tf-idf (Term Frequency * Inverse
+Document Frequency).
+A forma mais simples de ponderação é a tf que considera a freqüência do termo no
+documento, ou seja, quanto maior o número de vezes que determinado termo aparecer em um
+documento, maior será a relevância do documento para um usuário que pesquisar por aquele
+termo. O problema de se utilizar apenas essa medida conforme descrito por Lancaster (1993,
+p.232 – 233) está no fato de que “algumas palavras que ocorrem freqüentemente num
+documento podem não ser bons discriminantes – que sirvam para diferenciar este documento
+de outros da base de dados – porque também ocorrem com freqüência na base de dados como
+um todo”.
+Sendo assim, para complementar foi necessário encontrar um fator que
+contrabalançasse o tf. O idf cumpre esse papel uma vez que varia inversamente ao número de
+documento que contem determinado termo. Um fator idf típico pode ser calculado como
+log(N/n), onde N é o número de documentos na coleção e n a freqüência do termo nesta
+mesma coleção. (SALTON,BUCKLEY 1988, p.516). A freqüência com que uma palavra
+ocorre na base de dados como um todo é ainda mais importante que a freqüência da palavra
+nos documentos. (LANCASTER, 1993, p.233). Ainda de acordo com o autor as palavras que
+aparecem pouco em uma coleção são boas discriminantes para um documento ou no máximo
+um pequeno grupo, com isso é possível afirmar que podemos aumentar a precisão da
+recuperação ao utilizar esse fator.
+Os pesos tf e idf apresentam comportamento de lei de potência que se equilibram.
+Valores altos de tf tendem a estar associados a baixos valores idf e vice-versa. Como
+conseqüência os maiores valores de tf-idf são alcançados por valores de idf intermediários.
+Assim tanto termos que aparecem com freqüência muito alta nos documentos, como as
+stopwords, ou termos raros como palavras estrangeiras ou erros de digitação não ficarão no
+topo com o maior valor uma vez que não serão de grande valia para o ranqueamento, o que
+comprova a eficácia do método.
+
+
+
+Com o índice pronto o próximo passo é referente a busca onde o usuário poderá
+realizar sua consulta utilizando linguagem natural e sem necessidade de conectores entre os
+termos. Os que forem utilizados na pesquisa irão passar por um filtro como aqueles dos
+documentos indexados. Os que forem utilizados receberão um peso e comporão o vetor da
+consulta. Esse vetor será comparado com os vetores dos documentos presentes na base e o
+documento que apresentar a menor distância entre seu vetor e o da consulta será o primeiro a
+ser devolvido e o mais distante o último. Essa distância é medida pelo valor obtido a partir do
+cálculo da similaridade entre os vetores, sendo realizado a partir da seguinte equação.
+
+onde e Outro ponto importante da pesquisa é a geolocalização dos OAE bem como o cálculo
+da distância entre eles. Para localizar um ponto na terra é necessário sabermos sua latitude e
+longitude. Latitude é a distância ao Equador medida ao longo do meridiano de Greenwich.
+Esta distância mede-se em graus, podendo variar entre 0º e 90º para Norte(N) ou para Sul(S).
+Longitude é a distância ao meridiano de Greenwich medida ao longo do Equador. Esta
+distância mede-se em graus, podendo variar entre 0º e 180º para Leste(E) ou para Oeste(W).
+A FIGURA 3 ilustra o que foi explicado.
+Ou seja, dada uma latitude e longitude é possível identificar qualquer ponto no
+planeta.
+
+
+
+FIGURA 3 - Latitude e Longitude
+
+Fonte: Laboratório de Cartografia da UFSM
+
+Uma das formas existentes para o cálculo da distancia entre dois pontos é a partir da
+fórmula de Haversine. Apesar desta fórmula considerar a terra como uma esfera perfeita a
+aproximação do resultado é muito bom, sofrendo pequena degradação apenas em distancias
+muito grandes.
+Abaixo vemos a fórmula de Harversine
+
+d é a distância entre dois pontos com latitude e longitude (Ø, ϑ) e r é o raio estimado
+da terra tendo sido considerado como 6371 km.
+3 DESENVOLVIMENTO
+A pesquisa foi desenvolvida em etapas entre seleção de fontes, aquisição,
+organização de informação e desenvolvimento do protótipo.
+Segundo Sapiro (1993), uma escolha acertada das fontes de dados é crítica para a
+coleta e a classificação das informações. A primeira fase da pesquisa foi o levantamento das
+informações acerca dos OAE selecionados. Foi realizada nos institutos responsáveis pelas
+informações e em publicações oficiais. A documentação que se encontrava em meio digital
+foi copiada, e a que estava em papel foi fotografada para posterior pesquisa. Como os OAE
+escolhidos estão em Belo Horizonte, mesma cidade em que se encontram os escritórios dos
+institutos responsáveis pelas informações foi possível o acesso direto às mesmas. Somente
+para alguns OAE como aqueles que fazem parte do complexo da Pampulha foi necessário
+solicitar a documentação de outro escritório que não o local.
+Além da documentação recolhida nos institutos foram tiradas fotografias de cada um
+dos OAE estudados para fim de documentação de seu estado atual bem como para ilustração
+
+
+
+dos mesmos no protótipo desenvolvido. Para capturar as imagens foi utilizada uma câmera
+Nikon D3100 na sua maior resolução e com o método automático ligado de forma a ter
+sempre uma imagem de qualidade e com certo padrão entre si. Não foi utilizado nenhum tipo
+de filtro ou efeito uma vez que apesar da imagem ser utilizada de forma a valorizar o objeto
+frente aos usuários ela também será utilizada como documento arquitetônico. Vemos um
+exemplo na FIGURA 4, a qual faz parte do acervo criado para a pesquisa.
+FIGURA 4 - Instituto de Educação
+
+Fonte: Foto tirada pelo próprio autor
+
+Para as fotos adotou-se a licença da Creative Commons do tipo AtribuiçãoNãoComercial-CompartilhaIgual CC BY-NC-SA. Segundo o próprio site essa licença permite
+que outros remixem, adaptem e criem a partir do seu trabalho para fins não comerciais, desde
+que atribuam ao autor o devido crédito e que licenciem as novas criações sob termos
+idênticos.
+De posse da documentação coletada foram selecionadas as informações com o intuito
+de demonstrar a funcionalidade do modelo e protótipo. As informações coletadas não foram
+disponibilizadas na integra. “A variedade de informação deve ser administrada de modo que
+as informações coletadas reflitam a complexidade do ambiente sem sobrecarregar os usuários
+com excesso de informação” (CHOO 2006, p.419).
+Os metadados principais utilizados foram baseados nas fichas do SICG M301 e M302.
+SICG - Sistema Integrado de Conhecimento e Gestão, essa é uma iniciativa do IPHAN para
+gerir informação acerca do patrimônio material cujo processo vem desde 2006. Até o
+momento, o sistema era composto apenas de fichas em Word e Excel, contudo no inicio de
+2014 foi marcado o primeiro treinamento do sistema sendo que o mesmo pode ser visto, sem
+os dados oficiais inseridos, em: http://portal.iphan.gov.br/sicg/pesquisarBem.
+
+Com base nas fichas foram elencados os seguintes metadados para fazerem parte do
+cadastro como informações principais a serem extraídas da documentação coletada.
+Título: Nome oficial do Objeto Arquitetônico Edificado.
+Título Alternativo: Outros nomes pelos quais o OAE seja reconhecido.
+Descrição: Descrição histórica e ou arquitetônica acerca do objeto. Foi retirada dos
+documentos coletados nos institutos e do livro de Bens tombados do IEPHA-MG.
+Localização: UF / Município / Logradouro / Número / Complemento / Código Postal:
+Os dados referentes ao estado e município foram cadastrados no sistema para que o usuário
+realize apenas a escolha em uma lista. Os dados foram extraídos do site do IBGE para poder
+compor a listagem no protótipo. As demais informações deverão ser informadas pelo usuário.
+Coordenadas Geográficas: As coordenadas são consideradas no padrão
+decimal, utilizando ponto ( . ). Exemplo: -19.865960, -43.962208, como as duas coordenadas
+estão negativas significa que o local indicado fica ao sul do equador e a oeste de Greenwich.
+Data construção: Data em que o objeto arquitetônico foi construído.
+Uso Original: Qual foi a primeira utilização do bem. Como exemplo podemos citar o
+Cassino da Pampulha
+Uso Atual: Qual a utilização atual. Seguindo o exemplo anterior o Cassino hoje é
+utilizado como Museu de Arte.
+Tipologia: (Religiosa, civil, oficial, militar, industrial, outra)
+Estilo Arquitetônico: O estilo de cada obra foi retirado da documentação, mas antes da
+inserção cada estilo foi verificado em um thesauro de arquitetura e livro especifico acerca de
+estilos arquitetônicos. Os estilos são inseridos sob demanda, ou seja, um estilo só é inserido
+quando necessário. O thesauro utilizado foi o do getty o qual trata justamente de arquitetura.
+Pessoas: Indicar as pessoas identificadas que trabalharam na construção do OEA, tais
+como engenheiros, arquitetos, paisagistas e quaisquer outros que tiveram relação com a obra.
+Algumas informações foram pré-cadastradas no sistema para facilitar o cadastro e evitar
+duplicidades e erros no momento do cadastro. Dessa forma busca-se padronizar a informação
+evitando o uso de nomes diferentes para o mesmo autor. Além de provocar dúvidas ao usuário
+iria atrapalhar ao realizar um agrupamento por pessoas. Teríamos um agrupamento com
+"Aleijadinho", por exemplo, e outro com "Antônio Francisco da Costa Lisboa" sendo que
+deveria ser apenas um. Para esta pesquisa foi utilizado a própria documentação referente aos
+tombamentos. Em alguns casos foi utilizado o serviço “Union List of Artists Names” o qual
+pode ser acessado em http://www.getty.edu/research/tools/vocabularies/ulan/. O serviço
+permite a pesquisa pelo nome e retorna o nome preferencial e outras variações do mesmo. È
+
+
+um thesaurus on-line muito útil para pesquisa, no mesmo site é possível encontrar ainda
+informações referentes a material utilizado em construções bem como outras informações
+referentes à arquitetura. O mesmo está em inglês e existe uma versão em espanhol, até o
+momento parece que nenhuma parceria foi feita para realizar a tradução do mesmo para o
+português.
+Os dados necessários para o cadastro das imagens são:
+Título: Título da obra, necessários para casos como o de complexos arquitetônicos.
+Como exemplo, podemos citar o complexo da Pampulha o qual terá fotos de diversos objetos
+tais como a Igreja de São Francisco de Assis e do Museu de Artes, nesse caso é necessário
+identificar qual imagem pertence a qual objeto.
+Autor Imagem: Quando possível identificar o autor de determinada imagem
+Tipo da licença: Informar se a imagem pode ou não ser reproduzida e sobre quais
+termos, todas as fotos que foram tiradas para a pesquisa poderão ser utilizadas por terceiros
+desde que a fonte seja identificada.
+Origem: Informar se a foto foi tirada para compor a documentação ou sua fonte.
+Por referência a indexação. Esse passo será feito conforme descrito no referencial
+teórico.
+A FIGURA 5 apresenta uma tela do sistema com os metadados propostos de um dos
+objetos arquitetônicos cadastrados.
+Após a definição dos metadados e a indexação, a base está preparada para a
+recuperação da informação. Para recuperar a informação desejada o usuário poderá entrar
+com um texto em linguagem natural sem necessidade da utilização de termos específicos ou
+prévios conhecimentos em lógica de conjuntos como acontece na busca booleana.
+A consulta passa pelos mesmos processos dos documentos antes da indexação. A
+diferença é que ao final destes os termos são verificados frente a um dicionário da língua
+portuguesa o qual é incrementado com palavras presentes na base e que por ventura ainda não
+fazem parte do mesmo. Isso pode ocorrer com nomes próprios por exemplo.
+Caso o termo não possua uma ocorrência no dicionário, sofrerá mutações, procurando
+encontrar outros para os quais sejam necessárias até duas alterações. Se com até duas
+alterações, seja de inclusão, alteração ou exclusão de letras se consiga chegar a um exemplar
+válido, este será considerado como sugestão. Ao final é retornado uma lista de palavras que
+atendem ao requisito sendo que a escolhida é aquela com maior número de aparições na base
+de dados. Ao retornar o resultado será informado ao usuário quais termos foram utilizados
+para evitar quaisquer enganos.
+
+
+FIGURA 5 – Tela do Protótipo com os metadados referentes à Igreja da Pampulha
+
+Fonte: Foto tirada pelo próprio autor
+
+Com o intuito de aproximar o protótipo ao que foi descrito nas palavras de Hiemstra
+durante o referencial, foi criada uma forma para o refinamento dos resultados por parte do
+usuário. Eles podem ser refinados a partir de filtros pré definidos, que serão exibidos ao
+usuário e o ajudarão na tarefa de restringir os resultados facilitando assim no processo da
+recuperação da informação de forma mais precisa e menos trabalhosa.
+A estrutura dos documentos inseridos na base é normalizada para todos os OAE,
+facilitando assim a identificação de características comuns entre os mesmos. Consideremos
+
+uma coleção composta por diversos documentos que compartilham a mesma estrutura. Essa
+estrutura além de título e descrição contem algumas características especificas, características
+que são comuns a todos os documentos da base. Em alguns documentos o conteúdo dessas
+características são semelhantes e em outros não, fazendo com que um filtro aplicado ao
+resultado ajude o usuário a encontrar de forma mais rápida o que deseja.
+Por exemplo, se o usuário digitar igreja, ele poderá, hipoteticamente, receber dois
+resultados. Um referente à igreja de São Francisco de Assis e outra referente à igreja da Boa
+Viagem. Os filtros então serão carregadas com informações alusivas a essas duas igrejas.
+Sendo:
+Cidade: Belo Horizonte (2)
+Pessoa: Oscar Niemeyer (1), João Morandi (1)
+Estilo: Moderno (1), Eclético (1)
+No filtro Pessoa, teríamos mais resultados no caso real, aqui foi reduzido apenas como
+efeito didático. Os números logo após o termo indicam em quantos documentos os termos
+estão presentes. Seguindo o exemplo, os dois resultados pertencem a “Belo Horizonte” mas
+apenas um tem o estilo Eclético e apenas em um consta que João Morandi trabalhou na obra.
+Se o usuário selecionar qualquer um desses termos os resultados serão filtrados passando a
+exibir apenas aquele OAE referente à Igreja da Boa Viagem.
+Essa funcionalidade utiliza o conceito de interseção entre os conjuntos, sem que o
+usuário precise ter domínio do mesmo. Dessa forma sempre que um usuário clicar em um
+termo ele estará restringindo o resultado da consulta textual que ele efetuou. Ao digitar o
+termo “igreja” e depois dos resultados visualizados selecionar o termo “João Morandi” no
+filtro Pessoa é compatível a dizer que o mesmo quer ter acesso aos OAE referentes à igrejas
+onde João Morandi tenha trabalhado.
+O protótipo se baseia nas linguagens asp.net MVC e C# com banco de dados MySQL
+e servidor IIS7. O asp.net é o padrão da Microsoft para o desenvolvimento de páginas web
+enquanto que o c# é utilizado para o desenvolvimento de rotinas e regras de negócio. O banco
+de dados MySQL foi escolhido por ser estável, prova são as diversas aplicações que utilizamno na web, e gratuito. IIS7 (Internet Information Services) é um servidor de web que pode
+hospedar páginas, streaming, aplicativos web. Para que um site, por exemplo, funcione é
+necessário que o mesmo esteja hospedado em um servidor web, seja ele apache, IIS ou outro
+qualquer.
+Um dos pontos colocados como objetivo para o desenvolvimento do protótipo foi o
+fato de que não deveria ser necessário conhecimento em desenvolvimento web por parte do
+
+
+usuário. O que gerou um problema, devido à forma como os sites são desenvolvidos. Um web
+site comum é composto por páginas as quais estão presentes no servidor web. O usuário faz
+uma requisição ao servidor e esse por sua vez devolve uma página ou algum outro recurso
+como resposta.
+Aqui faz-se necessário entender o que é Uniform Resource Locator (url) ou como
+também é chamado “endereço da página”, a url é o caminho que indica onde está o recurso
+que o usuário deseja. Como exemplo de url considera-se:
+
+HTTP://exemplo.com/software/windows.html. Se quebrarmos o nosso exemplo em partes
+teremos:
+HTTP – Protocolo de transferência de hipertexto
+Exemplo.com – endereço do nosso site ou domínio. Podemos ter o site exemplo com a
+extensão .com, .com.br, org, .edu. Mas não faz parte dessa pesquisa o aprofundamento nesse
+ponto.
+Software – iremos considerar nessa pesquisa que software é uma pasta em nosso
+servidor e que essa pasta esta na raiz de nosso site exemplo. Dentro dela podemos ter diversas
+páginas relacionadas com software.
+Windows.html – essa seria a página com informações referentes a Windows. Dentro
+da pasta software poderíamos ter diversas outras páginas que resultariam em endereços como
+HTTP://exemplo.com/software/linux.html por exemplo.
+Isso demonstra é que a estrutura dos sites se parecem com a estrutura de arquivos que
+temos em nossas máquinas. Onde temos um diretório raiz com diversos outros diretórios ou
+pastas dentro desse e em cada um diversos arquivos.
+Para que o usuário não tenha que criar páginas e nem inserir arquivos diretamente no
+servidor foi preciso encontrar uma forma para que o endereço não aponte diretamente para um
+arquivo. Parte da solução foi dada com a utilização de rotas e páginas dinâmicas. Rota nesse
+contexto é uma forma que nos possibilita mapear um endereço (uma url) para um
+controlador/ação e qualquer parâmetro adicional bem como construir essa url.
+No protótipo ao invés de um endereço mapear um arquivo ou diretório mapeia uma
+ação e seus parâmetros. Considerando uma parte do exemplo anterior temos http (protocolo)://
+exemplo.com (domínio) / software (controle / ação) o termo software deixa de representar um
+diretório e passa a ser um controlador que pode receber como parâmetro uma string por
+exemplo, no exemplo esse parâmetro é Windows (agora sem o .html) pois não representa um
+arquivo. A url ficou então http://exemplo.com/software/windows. Ao receber o parâmetro
+"Windows" o controlador irá solicitar as informações referentes a esse software e receberá,
+
+
+caso o mesmo exista na base de dados, as informações necessárias para preencher a página
+que o usuário visualizará.
+A FIGURA 5 mostra de forma simplificada o processo explicado. É feita uma
+solicitação, é verificado a partir das definições de rotas qual o controlador/ação será chamado.
+Esse controlador sabe quais as operações serão executadas e que informações devem ser
+passadas para a camada de visão de forma a enviar uma resposta ao usuário.
+FIGURA 6 - Modelo utilizado no protótipo (resumido)
+
+Fonte: elaborado pelo autor
+
+A visão retornada ao usuário é um modelo que será preenchido com as informações do
+software que ele procura, ou com as informações do OAE que ele deseje visualizar.
+As rotas são tratadas com cuidado, da mesma forma que ao mudar uma pasta de lugar,
+ao alterar uma rota endereços antigos que o usuário considerava válidos deixarão de funcionar
+tornando os usuários insatisfeitos.
+Considera-se, para simplificar que o endereço do site seja http://pesquisa.com.br, o
+endereço não é válido e não pretende-se adquirir esse domínio. Foi escolhido de forma
+aleatória visando apenas facilitar o entendimento. Para esse domínio cria-se as rotas,
+conforme TABELA 1.
+
+TABELA 1 - rotas do site
+1
+2
+3
+
+URL
+http://pesquisa.com.br/
+http://pesquisa.com.br/oae/<param>
+http://pesquisa.com.br/cad/<param>
+
+Descrição
+Página inicial do protótipo com a tela de busca
+“param” será o título do objeto arquitetônico
+“param” será o cadastro a ser tratado
+
+Fonte: Elaborado pelo autor
+
+Um exemplo utilizando a rota 2 seria http://pesquisa.com.br/oae/palacetedantas assim
+que o servidor web receber essa requisição ela será enviada para um controlador que
+entendera “palacetedantas” como um parâmetro e realizará as tratativas necessárias para
+devolver as informações necessárias para que um modelo seja preenchido e devolvido ao
+usuário. E é ai que está a beleza, não existe amarração com arquivos e sim processos.
+O padrão de arquitetura utilizado no sistema foi o MVC (Model-View-Controller).
+Padrão consolidado e aceito no desenvolvimento de sistemas. Baseando o aplicativo nessa
+arquitetura temos três componentes principais: modelo, visão e controle. Sendo que cada um é
+responsável por determinadas tarefas sem a necessidade de conhecer como as demais são
+executadas nos outros componentes. Apesar de parecer não é o mesmo paradigma do
+desenvolvimento em camadas.
+Os três componentes do MVC da seguinte forma:
+Modelo: As classes que representam a regra de negócios e o acesso aos dados da base
+de dados. Muitas vezes encapsula os dados que estão armazenados na base bem como a lógica
+para manipulá-los.
+Visão: É responsável por gerar a interface que será apresentada ao usuário. Isso é
+realizado recebendo um objeto de modelo a partir do controle renderizando isso em html, ou
+outro tipo de conteúdo, para ser apresentado ao usuário.
+Controlador: Essa classe é responsável pelo relacionamento entre a visão e o modelo,
+bem como responder às entradas do usuário. Além disso, a decisão quanto a rotas e chamadas
+a visões para atender a demanda do usuário é realizada neste componente.
+A idéia é facilitar a manutenção uma vez que cada um dos componentes é responsável
+por uma tarefa. É mais fácil dividir essas tarefas de forma a serem tratadas de forma separada
+por pessoas ou equipes diferentes dentro do projeto.
+4 CONCLUSÃO
+Com o desenvolvimento da pesquisa procurou-se atender aos objetivos de permitir o
+acesso da informação ao maior número de usuários independentemente da distancia do OAE,
+e isso foi realizado mediante a utilização de plataforma web.
+
+
+Outro ponto importante é a tentativa de desvincular a necessidade de um profissional
+de tecnologia para a inserção de conteúdo na base. Dessa forma o usuário tem maior
+independência para realizar essa tarefa. As informações entram no sistema mediante cadastro
+simples e as páginas que são disponibilizadas ao usuários externos tem um suporte visual
+mais elaborado sendo preenchidas a partir de um modelo com as informações disponibilizadas
+no cadastro.
+Buscou-se facilitar a recuperação da informação a partir de técnicas como correção
+ortográfica dos termos da consulta baseando-se em dicionário da língua portuguesa e termos
+presentes na base, refinamento da pesquisa a partir de filtros, ordenação dos resultados
+baseando-se no cálculo de similaridades.
+De acordo com as colocações acima temos como resultado um protótipo para
+recuperação e disponibilização de objetos arquitetônicos edificados. Desenvolvido com
+técnicas de representação e indexação para recuperação. Apresenta recursos de filtros e
+facilidade de uso para melhorar o processo de mediação entre o usuário e o sistema.
+Esses fatores são essenciais para ampla divulgação da informação, possibilitando de
+amplo acesso e insumos para gestão da informação.

@@ -1,0 +1,625 @@
+
+Comunicação Oral
+REPRESENTAÇÃO DA INFORMAÇÃO MULTIMODAL E ORGANIZAÇÃO DO
+CONHECIMENTO: INTEROPERABILIDADE
+Resumo
+Este trabalho é um estudo exploratório interdisciplinar, pois converge de duas áreas não
+pertencentes à mesma classe acadêmica, Ciência da Informação e Ciência da Computação. O
+objetivo é encontrar uma forma de representar a informação não textual que atenda as novas
+necessidades e possibilidades que a web Semântica requer no desenvolvimento de contextos
+com uso do XML, a opção encontrada, visando também a interoperabilidade da descrição foi
+representar o contexto destes documentos com uso de ontologia. A descrição desta ontologia
+será feita em dois formatos interoperáveis, MARC21 e Dublin Core, utilizando o software
+Protégé. Para validação da ontologia, será feita uma aplicação com vídeo de uso acadêmico
+(um trabalho de conclusão de curso), que possuem imagens retiradas dos slideshows e
+compostas num documento final. O resultado alcançado é uma representação dinâmica de
+vídeo, que faz relações com os outros objetos que o vídeo trás além da interoperabilidade dos
+formatos de descrição utilizados.
+Palavras-chave: Web Semântica. Metadados. Ontologia.
+1 INTRODUÇÃO
+De acordo com Ingwersen (1992) a principal questão que a Ciência da Informação
+espera resolver é basicamente facilitar a comunicação efetiva da informação desejada entre o
+humano gerador da informação e humano usuário da informação. Continua justificando seu
+argumento ao utilizar Belkin (1978) e suas cinco principais áreas de estudo de impacto sobre
+ciência da informação. A primeira preocupa-se com a transferência formal e informal de
+informação. A segunda área busca entender a geração e o desenvolvimento das necessidades
+
+de informação na sociedade, entre grupos específicos de pessoas ou individualmente. A
+terceira área estuda os métodos e tecnologias que podem melhorar o desempenho e a
+qualidade da informação em sistemas de informação, e também o desenvolvimento de teorias
+e formas de processos de transferência de informações entre produtores e usuários. Esta área
+está intimamente ligada à quarta área, que lida com o conhecimento gerado e as formas de sua
+análise e representação em sistemas de informação. A quinta área de estudo principal tem seu
+foco sobre a relevância da utilização e valor da informação.
+A visão de Ingwersen antecipa os acontecimentos que a web, na medida em que se
+desenvolveu buscou esclarecer, como conceitos e razões práticas para seu desenvolvimento, a
+Recuperação da Informação vista como uma prática interativa foi assim descrita por
+Ingwersen (1992):
+O tipo de representação conceitual ou de tópicos e seus problemas, de
+tematicidade ou de relacionamento com adequada função correspondente ou
+técnicas, está normalmente no núcleo de estudos em Recuperação de
+Informação. Tradicionalmente, a representação tópica de documentos
+combina os textos, títulos, resumos aos termos de indexação atribuídos ou
+frases para formar o chamado índice básico invertido. Em ambos os sistemas
+de texto comercial e experimental de recuperação da informação, a busca por
+tópicos pode ser realizada tanto no índice básico ou nos tópicos individuais
+de áreas inversas. Cada tipo de dado forma por si exclusivos e inversos
+índices. No total de documentos ou textos-base dos sistemas de recuperação
+de informação operam com um arquivo de texto linear e uma estrutura de
+arquivo invertido (INGWERSEN, 1992, p. 53, tradução nossa).
+
+Recuperação da informação na web consiste em três processos: coleta, indexação e
+ordenação (CLEVELAND; CLEVELAND, 2000), sendo a segunda e a terceira muitas vezes
+negligenciadas ou feitas de modo obscuro. A coleta refere-se na maioria dos casos a
+documentos textuais, o Harvesting (coleta em inglês) feito de maneira sistemática e a partir de
+documentos científicos é feito em ambientes especializados que estão fundamentados em OJS
+(Open Journal System), mas os dois outros processos não são extensíveis a outros dados na
+web como vídeos, imagens e sons. Indexação é um processo que consiste em definir palavraschave ou termos que representem o documento e por fim o processo de ordenação consiste em
+disponibilizar os documentos de acordo com um tipo de relevância que responda às
+necessidades do usuário.
+O aumento de informações na web ocorre, não devido às novas tecnologias, antes disto
+é um reflexo da necessidade de acesso e visibilidade da informação. Esse crescimento trouxe
+consigo a convergência dos documentos, do impresso para o eletrônico, mas também do
+visual e pictórico, dessa forma a informação na Internet é disseminada em diferentes
+formatos, como músicas, vídeos, imagens e animações, extrapolando as técnicas clássicas de
+
+recuperação de informações baseadas principalmente em formatos textuais. As “novas formas
+de comunicação” e o aumento exagerado de materiais bibliográficos, em especial os
+disponíveis na Internet, tem dificultado a recuperação da informação, pois, a evolução
+tecnológica, social e econômica fez com que a informação seja processada rapidamente, quase
+em tempo real.
+A “Era da Internet” está transformando a relação do indivíduo com sua própria
+sociedade, surgindo assim novas formas de sociabilidade (CASTELLS, 2003). A identidade
+cultural de um país e de um povo dependem, entre muitos outros fatores sociais e econômicos,
+dentro de um contexto atual, de sua inserção na web.
+Em função das novas tecnologias relacionadas à representação e recuperação da
+informação, torna-se cada vez mais difícil conceber a Ciência da Informação como uma
+ciência isolada, os documentos passam por uma convergência do impresso para o eletrônico.
+Para alcançar maior eficiência na recuperação da informação torna-se necessário conhecer
+onde as informações estão localizadas e de que forma elas podem ser manipuladas. Dessa
+forma, a representação do conhecimento torna-se um elemento fundamental para acesso
+rápido à informação (FURGERI, 2006).
+A recuperação da informação tem como foco a forma de interatividade do usuário com
+o sistema de informação e as interfaces de busca, sem esquecer os instrumentos (softwares)
+desenvolvidos para o seu acesso, a criação de códigos para a localização de objetos na rede de
+forma inequívoca e finalmente, a questão da descrição da informação contida nesse ambiente
+(NASCIMENTO, 2008).
+Com isto observa-se que a representação descritiva do conhecimento desenvolvida
+pela Ciência da Informação não é incompatível, mas complementar a representação do
+Conhecimento e da informação na web Semântica.
+
+2 REPRESENTAÇÃO DA INFORMAÇÃO E DO CONHECIMENTO
+Tratando-se de representação da Informação e do Conhecimento, é necessário falar
+dos conceitos desses termos (informação e conhecimento). Contudo se faz necessário adotar
+um conceito para informação nesse trabalho, por isso adota-se Buckland (1991) que considera
+a informação como “algo usado, atribuído a objetos, tal como dados e documentos que se
+referem à informação, porque deles se espera que sejam informativos”. Também Furgeri
+(2006) considera relevante esse conceito de informação como coisa uma vez que o objetivo
+
+maior da representação é permitir recuperar algo. Ainda segundo o autor, “nesse contexto, a
+própria representação do conhecimento pode ser considerada como coisa, uma vez que ela
+procura substituir aquilo que representa: algo que mantém informações sobre um domínio
+qualquer e de forma semântica” (FURGERI, 2006, p. 26).
+De acordo com Hjorland (2008), a representação da informação esta dentro de um
+processo que realiza a descrição do conteúdo, as características e objetivos. Esse processo está
+inserido na disciplina de Organização da Informação e tem como fim tornar os documentos
+acessíveis a usuários que os procuram ou que procuram por mensagens neles contidas.
+Na visão de Brascher e Café (2008) o processo de organização, se aplica às
+ocorrências individuais de objetos informacionais, existe ainda outro que se aplica a unidades
+do pensamento (conceitos, ou ainda, informação interpretada) que é o processo de
+organização do conhecimento que por sua vez, visa à construção de modelos de visões de
+mundo que se constituem em abstrações da realidade.
+Esses dois processos produzem consequentemente, dois tipos distintos de
+representação: a representação da informação, compreendida como o conjunto de atributos
+que representa determinado objeto informacional e que é obtido pelos processos de descrição
+física e de conteúdo; e a representação do conhecimento, que se constitui numa estrutura
+conceitual que representa modelos de mundo, os quais permitem descrever e fornecer
+explicações sobre os fenômenos que observamos. Portanto, a descrição física e de conteúdo
+dos objetos informacionais fazem parte da organização da informação, e o produto dessa
+atividade é a representação da informação, entendida como um conjunto de elementos
+descritivos que representam os atributos de um objeto informacional específico
+(BRASCHER, CAFÉ, 2008), i.e., o mundo dos objetivos físicos que se opõem à cognição.
+A representação do conhecimento é um assunto multidisciplinar para o qual se aplicam
+várias teorias e técnicas, tais como: Lógica - que fornece a estrutura formal e regras de
+inferência; Ontologia - estruturação hierárquica do conhecimento sobre coisas, de acordo com
+suas qualidades essenciais ou relevantes; e a Computação – que suporta todas estas
+aplicações, mas se distinguem da representação do conhecimento da filosofia pura (SOWA,
+2006).
+
+2.1 REPRESENTAÇÃO DO CONHECIMENTO E ONTOLOGIAS
+Na perspectiva da Ciência da Computação, a representação do conhecimento, em
+conexão com ontologias pode ser vista como “um conjunto de compromissos ontológicos, ou
+seja, uma resposta para a pergunta: Em que termos devo pensar sobre o mundo? (...) É um
+
+meio de expressão humana, isto é, uma linguagem na qual dizemos coisas sobre o mundo
+(DAVIS; SHROBE; SZOLOVITS, 1993, p. 2)”. Assim trabalha com objetos e não com
+conceitos, embora ambos possam ser associados e a principal diferença é que elas são
+desenvolvidas para o uso por computador, tornando-se assim dinâmicas porque suas relações
+podem ser inferidas pela máquina, embora permaneçam informação.
+As ontologias surgiram para tentar minimizar o problema da representação e recuperação
+da informação que até então eram baseados em aspectos sintáticos e estáticos, considerando a
+frequência e distribuição de palavras presentes em documentos. A Web Semântica busca criar
+ontologias para permitir a classificação automática da informação nos documentos, baseada nos
+aspectos semânticos das linguagens usadas.
+Poderá se transformar em conhecimento se os receptores receberem esta informação num
+formato que seja parte de sua capacidade cognitiva.
+
+2.2 ONTOLOGIA NA WEB SEMÂNTICA
+Desde seus primórdios o projeto Web Semântica foi concebido como um conjunto de
+tecnologias relacionadas, de modo que no ano de 2000 o World Wide Web Consortium, tendo
+como seu maior expoente Tim Berners-Lee, divulgou publicamente a primeira proposta de
+arquitetura da Web Semântica, com base em uma série de camadas sobrepostas, onde cada
+camada ou tecnologia deveria obrigatoriamente ser complementar e compatível com as
+camadas inferiores, ao mesmo tempo em que não deveria depender das camadas superiores,
+possibilitando assim uma estrutura idealmente escalonável, que indicasse os passos e as
+tecnologias necessários para a concretização do projeto Web Semântica (RAMALHO;
+VIDOTTI; FUJITA, 2007).
+Para Santos e Alves (2009) a Web Semântica propõe estruturar e contextualizar
+semanticamente os dados representados no intuito de eliminar ou diminuir os problemas de
+recuperação, e para isso apresenta uma estrutura com ferramentas tecnológicas que
+possibilitarão a compreensão e o gerenciamento do conteúdo dos recursos, bem como o
+processamento e a troca de informações com outros programas (BERNERS-LEE;
+HENDLER; LASSILA, 2001).
+Segundo Tim Berners-Lee, Hendler e Lassila (2001) “A Web Semântica irá trazer
+estrutura ao conteúdo das páginas web, criando um ambiente onde agentes de “software”
+navegando de página em página poderão desenvolver tarefas sofisticadas para os usuários”. O
+modelo idealizado por Tim Berners-Lee é uma arquitetura que permite ver que algumas
+
+tecnologias utilizadas atualmente se encaixam para se criar toda a estrutura da Web
+Semântica.
+Para a Web Semântica, segundo Rocha (2004) esquemas de metadados formam uma
+boa base para proporcionar um entendimento semântico comum. Entretanto, para permitir que
+máquinas utilizem metadados para auxiliar humanos no uso dos recursos descritos, técnicas
+de Inteligência Artificial são necessárias. Nesse sentido a Web Semântica estende o conceito
+de metadados, à medida que incorpora a estes técnicas de raciocínio e inferência. Na
+Inteligência Artificial, os instrumentos para descrição semântica são chamados de ontologias.
+Concluem Dias e Santos (2003) quando dizem que a heterogeneidade estrutural e
+semântica da informação na web atualmente é imensa e a maioria das propostas de integração
+ainda adota soluções com alto índice de centralização, tornando seu uso na web inviável. Para
+tratar esses problemas é necessário considerar questões relevantes como a utilização de
+metadados e ontologias, visando a busca de uma linguagem única, capaz de estruturar e
+representar conhecimento e regras.
+De uma maneira geral, ontologia (do grego ontos “ente” e logoi “estudo” então
+“ciência do ser”) como um ramo da filosofia é a ciência do que é dos tipos e estruturas de
+objetos, propriedades, eventos, processos e relações em todas as áreas da realidade, é a parte
+da filosofia que trata da natureza, realidade e existência dos entes.
+Para a Ciência da Informação ontologias são termos usados para referenciar um
+conhecimento compartilhado em algum domínio de interesse que pode ser usado como uma
+aplicação unificada para resolver problemas. Uma ontologia incluirá necessariamente um
+vocabulário de termos com especificação de seu significado, esse vocabulário pode ser
+representado com distintos graus de formalismo: desde o mais informal, utilizando-se
+linguagem natural, até o rigorosamente formal, representando-se os termos por meio de uma
+linguagem formatada como uma classificação (SILVA, 2009).
+De acordo com Lima-Marques (2006, p. 50):
+[...] a formalização da Ontologia iniciada por Husserl e Lesniewski
+possibilitou seu uso pelas áreas de Inteligência Artificial, de Representação do
+Conhecimento e de Arquitetura da Informação, especialmente para o
+desenvolvimento da Web Semântica, cujo futuro está intimamente relacionado
+com aquela que constitui, atualmente, a sua questão principal. Categorização
+da informação em uma estrutura coerente, preferencialmente aquela que a
+maioria das pessoas possa compreender rapidamente.
+
+O World Wide Web Consortium (2004) entende que uma ontologia define os termos
+utilizados para descrever e representar uma área do conhecimento. Ontologias são usadas por
+
+pessoas, bases de dados e aplicações que precisam compartilhar a informação de um domínio
+(um domínio nada mais é que um assunto ou área do conhecimento em particular), entende
+ainda, que as ontologias precisam especificar descrições para os seguintes tipos de conceitos:
+- classes (“coisas” em geral) nos diversos domínios de interesse; - as relações que podem
+existir entre as classes; - as propriedades (ou atributos) que as classes possam ter (RIBEIRO,
+2012, p. 28).
+Uma abordagem que combina um padrão de metadados específicos de multimídia com
+outros padrões que podem ser usados para descrever domínios de aplicação semelhantes, a
+fim de proporcionar uma caracterização mais abrangente dos dados multimídias sem a criação
+de um novo padrão. Conforme proposta recente, Colantonio et al (2011) identificaram duas
+principais abordagens para esse processamento. Eles apontam que duas questões importantes
+devem ser consideradas de modo a alcançar uma utilização eficiente e integrada dos
+metadados multimídia:
+(i)
+
+um formato padrão comum multimídia capaz de descrever e representar a natureza
+intrínseca heterogênea de dados multimídia e sua semântica;
+
+(ii)
+
+os modelos mais abstratos (neste caso ontologias) e as ferramentas de mapeamento
+relacionadas são necessárias para "representar" e "traduzir" os conjuntos de metadados
+diferentes cujos elementos estão correlacionados com base nos significados iguais ou
+semelhantes para que os aplicativos possam usar o conhecimento ontológico de um
+ambiente multimídia além de apenas os metadados.
+Os campos de representação da informação em banco de dados geralmente empregam
+
+um conjunto de taxonomias concebidas como ontologias em que propriedades das classes
+mais gerais são herdadas pelas mais específicas. Assim as ontologias de sistemas mais
+expressivos e complexos da informação satisfazem a definição de Gruber, e todos podem estar
+associados sob a rubrica de "ontologia". Fora deste caos aparente da internet atual, alguma
+coerência está começando a ser elaborada na Web Semântica e as ontologias e linguagem
+OWL favorecem esta organização.
+Por isso, a representação dinâmica que este trabalho propõe, fundamenta-se no uso de
+ferramentas que possibilitem a descrição com metadados em ambientes da Web Semântica,
+uma vez que tesauros, taxonomias e ontologias estão em ordem diferente de complexidade e
+só a partir de certa complexidade de tesauros, com uso de ferramentas computacionais podese ter uma descrição dinâmica, isto é com uso de recursos lógicos e computacionais.
+
+2.3 METADADOS PARA WEB SEMÂNTICA
+Para esta descrição dinâmica proposta, fundamentou-se no uso de ferramentas que
+possibilitem a automação da descrição de metadados usando ambientes da Web Semântica.
+Para Taylor (2004), metadados constitui a unidade de informação organizável - a
+informação registrada, que inclui, dentre outros, textos, imagem, registros sonoros,
+representações cartográficas e páginas web (BRASCHER, CAFÉ, 2008).
+De acordo com Souza e Alvarenga (2004), um documento na web é composto por uma
+mistura de dados e metadados. “Meta” é um prefixo de auto referência, de forma que
+“metadados” sejam “dados sobre dados”, ou como são denominados coloquialmente
+“informação da informação”, que é a informação que descreve a estrutura dos dados a qual
+referencia.
+Para o W3C, metadados são informações para web que podem ser compreendidas por
+máquinas. Ou seja, metadados são instrumentos que facilitam a inserção de conteúdo na web e
+proporcionam sua eficiente recuperação. Barreto (1999) classifica os metadados em três tipos
+básicos: a) os metadados para representação bibliográfica (Machine Readable Catalogue MARC, Text Encoding Initiative – TEI, Encoding Archival Description – EAD); b) os metadados
+para descoberta de recursos na web, (Internet Anonymous Ftp Archive - AIFA, Summary Object
+Interchange Format – SOIF, Dublin Core); c) os metadados para infraestrutura global de
+informação (Government Information Locator Service – GILS, Federal Geographic Data
+committee – FDGC, Environmental Data Catalogue - UDK).
+
+Neste trabalho, abordamos os formatos de metadados descritivos, pois como já
+dissemos, buscamos a representação descritiva de informações multimodais através de
+ontologias.
+Os metadados descritivos que compõe os atributos das sub-classes multimodais foram
+pensados em duas subclasses que fossem não estruturados e altamente estruturados.
+Formatos de metadados estabelecem as formas de apresentação dos dados e
+apresentam as seguintes características conforme apontado nos estudos de Alves (2005):
+ Formatos de metadados simples: constituídos por metadados não-estruturados,
+extraídos de forma automática por robôs, apresentam na maioria das vezes uma semântica
+reduzida. Ex.: MetaTag (s) e metadados utilizados na transferência de dados utilizando o
+protocolo HTTP.
+ Formatos estruturados: constituídos por metadados mais estruturados baseados em
+normas emergentes e que proporcionam uma descrição mínima do recurso para sua
+identificação, localização e recuperação. A descrição geralmente é feita em campos e
+
+nessa categoria começa a ser inserida a ajuda de especialistas em informação. Ex.: Dublin
+Core.
+ Formatos altamente estruturados ou ricos: constituídos por metadados complexos,
+apresentam uma estrutura de descrição mais formal e detalhada. São baseados em normas
+e códigos especializados de um domínio particular; possibilitam a descrição de um
+recurso informacional individual ou pertencente a uma coleção e facilitam a localização,
+recuperação, intercâmbio dos recursos informacionais. Ex.: MARC 21.
+Santos e Alves (2009) destacam que, cada formato de metadados fornece um tipo de
+representação, e ressaltam também que a tendência dos formatos de metadados é a
+coexistência, ou seja, cada formato apresenta características específicas que atendem às
+necessidades de descrição de determinados recursos informacionais e comunidades de
+interesse. Há diversos formatos e para este trabalho adota-se o MARC e Dublin Core, mas a
+ontologia prevê a extensão de outros formatos.
+O Dublin Core fornece dois níveis de descrição: simplificado e qualificado. O nível
+simplificado possui um conjunto de 15 elementos descritores planejados para facilitar a
+descrição de uma grande parte dos recursos eletrônicos, de forma a facilitar a pesquisa,
+compartilhamento e gerenciamento das informações (HIILMAN, 1995). Esses elementos são
+opcionais e repetíveis, o que significa que não existem restrições acerca de uma quantidade
+mínima ou máxima referente a qualquer dos elementos no registro de um item por eles
+descrito. As descrições são estruturadas por pares propriedade-valor, ou seja, para cada
+elemento (propriedade) usado em uma descrição, existe um valor correspondente
+(ALENCAR, 2011).
+Segundo Alves (2009) o formato de metadados Dublin Core vem ganhando destaque
+em diversos ambientes informacionais devido a sua simplicidade, flexibilidade e abrangência.
+Sendo assim, o princípio de criação ou a razão da origem do formato é promover a descoberta
+de recursos informacionais na web. Esse princípio norteará as características da estrutura
+descritiva e consequentemente a representação dela originada.
+No entanto, Alves (2009) acredita que o formato de metadados DC apresenta certa
+limitação quando se refere à descrição de acervos específicos disponíveis no ambiente web,
+pois apresenta uma estrutura descritiva simples e genérica para abranger a maior variedade de
+tipos de recursos informacionais e, portanto, não possui a especificidade necessária de certos
+domínios.
+Diferente do Dublin Core, pois é classificado como formato de metadados altamente
+estruturado, o MARC (Machine-Readable Cataloguing) apresenta uma estrutura de descrição
+
+formal que se baseia em normas e códigos especializados. Foi desenvolvido pela Library of
+Congress na década de 60, desenvolvido com o intuito de ser um formato padronizado para a
+criação, armazenamento e intercâmbio de registros bibliográficos legíveis por máquina. Desta
+forma, pode-se dizer que o princípio que norteou seu desenvolvimento, a razão de origem do
+formato MARC é ser uma estrutura padronizada e automatizada de descrição para
+compartilhamento de registros bibliográficos (ALVES, 2009).
+Um registro MARC é dividido em campos. Uma marca de três dígitos é identificada
+pela designação da natureza de seu conteúdo, eles são organizados em centenas (0XX - 9XX)
+com XX na faixa de 00-99. Em geral, os registros MARC são divididos em quatro grupos:
+líder; diretório; campos de controle de variáveis, e campos de dados variáveis (AHN-KIM,
+2004). Como afirmado acima os números variam 000-999, no entanto elas podem ser
+divididas em 16 elementos (comparável aos 15 elementos Dublin Core, que veremos em
+seguida).
+Neste momento será apresentada uma relação entre os dois formatos citados
+anteriormente e a interoperabilidade deles para posterior uso na elaboração da nossa
+ontologia.
+De acordo com uma publicação do DCMI (2001), existe um interesse crescente em
+descrições de recursos que são fáceis de criar. O potencial para aumentar a visibilidade de
+recursos em uma coleção em todos os setores e domínios de assunto, com baixo custo, é
+bastante apelativo. Serviços que necessitam de descrições semanticamente ricas continuarão a
+fornecê-las, mas é atrativa a descoberta interdisciplinar que fornece também descrições
+universalmente compreensíveis entre as disciplinas.
+Podemos dizer que as palavras de ordem são facilidade e interoperabilidade, ou seja, a
+capacidade que permite que diferentes sistemas de computador compartilhem informações
+através de uma rede. A interoperabilidade pode ser conseguida usando sistemas existentes,
+assegurando práticas locais. Já os dados podem ser compartilhados utilizando formatos
+normalizados de metadados, desde que estejam em conformidade com os protocolos de
+interoperabilidade ANSI Z39.508 e OAI-PMH9 (COLABORATIVE..., 2006). Ou seja, ao
+adotar um conjunto de práticas (vocabulários controlados, e arquitetura de sistema
+interoperável), as instituições podem aumentar a sua visibilidade e oferecer oportunidades
+para novas conexões que atendam as necessidades comuns das comunidades constituintes. O
+uso de vocabulários controlados e as práticas de controle de autoridade aumentam a
+capacidade de encontrar, identificar e selecionar os recursos desejados.
+
+Uma iniciativa da Network Development and MARC Standards Office da Library of
+Congress, chamada de Crosswalks, busca fornecer a capacidade de criar e manter um
+conjunto local de metadados e mapear metadados em qualquer formato de metadados
+relacionados.
+A Crosswalks é um mapeamento de elementos, semântica e sintaxe de um esquema de
+metadados para outro. Permite que metadados criado por uma comunidade possa ser usado
+por outra comunidade, que emprega um padrão de metadados diferente. O sucesso da
+Crosswalks depende do nível do registo e da semelhança entre os dois padrões, a
+granularidade dos elementos do registro alvo em relação ao da fonte, e a compatibilidade das
+regras de conteúdo utilizadas para preencher os elementos de cada esquema (LIBRARY OF
+CONGRESS, 1999). São importantes para coleções virtuais quando os recursos são extraídos
+de uma variedade de fontes, e espera-se que atuem como um todo, talvez com um único motor
+de pesquisa aplicada (NATIONAL..., 2004).
+O DC foi concebido como uma maneira simples para que pessoas leigas em
+catalogação de recursos de informação pudessem utiliza-lo. Isso influenciou muito a
+linguagem utilizada pelo formato DC que, em vez de adotar palavras como etiquetas, campos
+e subcampos (usadas no formato MARC), usa elementos. É também por esta razão que o DC
+tem 15 elementos, enquanto o MARC tem 999, que podem ser considerados os campos de
+descrição de nível superior (não que todos os recursos necessitam de 999 tags, a maioria usa
+apenas cerca de 5 a 10 na descrição). Enquanto isso certamente é mais fácil criar 15 elementos
+em oposição a 'tags, campos e subcampos' também é menos fácil de identificar recursos de
+informação (COLEMAN, 2005).
+Adaptou-se uma tabela Dutta (2003) comparando Dublin Core e Marc 21.
+Tabela 1 - Comparação Dublin Core X MARC21 Fonte: Adaptado de Dutta (2003, p. 6).
+Dublin Core
+Simples
+Metadados são identificados usando o termo
+<label>
+Recentemente começou a adicionar mais
+"qualificadores" para fazer o DC mais
+extensível para atender certas necessidades.
+DC não tem muitos campos correspondentes
+aos campos do MARC 21
+
+Fonte: Adaptado de Dutta (2003).
+
+MARC21
+Relativamente Complexa
+Metadados são identificados usando o termo
+<tag>, <identifier> e <subfield code>
+Extensível
+
+Os campos 006-019, 025-033, 046-099, 210243, 254-257, 261-265, 300-307, 521-533,
+584-599,730-785, 790-852, etc. são também
+utilizados. Isto indica a sofisticação e o nível
+de detalhe, oferecida pelo MARC
+
+Uma característica comum de registros MARC é que alguns dos campos são repetíveis,
+por exemplo, campo #500 é o campo de notas geral e, teoricamente, um catalogador pode repetilo o quanto desejar, quando este atributo é comparado com Dublin Core, visto que todos os
+elementos DC são repetíveis (AHN-KIM, 2004). Por ter como objetivo ser um formato mais
+completo o MARC possui um número bem maior de atributos, apesar das diferenças e da
+complexidade de descrição dos metadados, Gonçalves (2005) constata que o conjunto de
+descritores deve conter apenas informações apropriadas e suficientes para descrever os dados de
+forma que a informação nele contida, além de ser compreendida por qualquer pessoa, possa
+também ser compilada e/ou interpretada pelas novas tecnologias para tratamento da informação,
+pois deve servir de subsídio a sistemas de buscas e recuperação de informações.
+
+3 ONTOLOGIAS PARA INFORMAÇÃO MULTIMODAL
+As ontologias são especialmente úteis na gerência de conhecimento para recuperação
+da informação, pois unificam termos, conceitos, categorias e relações de um mesmo domínio,
+permitindo o reuso. A partir do uso de ontologias e de linguagens de marcação na Web
+Semântica as noções de representação de conhecimento podem ser melhor desenvolvidas e
+através delas desempenhar papéis dinâmicos e automatizados na organização do
+conhecimento.
+De acordo com Colantonio et al (2005), o uso de uma ontologia de nível superior é a
+melhor maneira de abordar o problema da descrição de multimídia para fins de representação
+e recuperação e destacam duas questões importantes para atingir uma utilização integrada dos
+metadados multimídia: primeiro que haja um formato de descrição de metadados que possa
+definir sua semântica; e segundo, uso de modelos mais abstratos (ontologias) para representar
+e traduzir os conjuntos de metadados diferentes correlacionados entre si pelas semelhanças.
+A informação multimodal é essencialmente dinâmica, por que a inclusão de mais de
+um modo torna necessário a alteração dinâmica da informação modal inicial.
+
+3.1 INSTANCIAÇÃO DA ONTOLOGIA DA INFORMAÇÃO MULTIMODAL
+A ontologia foi desenvolvida no ambiente Protégé que é um editor de ontologias de
+código aberto criado pelo Stanford Center for Biomedical Informatics Research, da Stanford
+University School of Medicine. A versão utilizada foi a 3.4, lançada em março de 2012. O
+Protégé possibilita a geração automática não apenas dos formatos OWL, mas o padrão RDFS
+equivalente dispensando o trabalhoso processo de desenvolvimento do perfil de aplicação,
+
+assim como amplia o uso da ontologia a partir do compartilhamento não apenas dos
+metadados, mas da própria ontologia utilizada para isto. Segundo Ribeiro (2012), trata-se de
+um software de uso, navegação e visualização razoavelmente fácil.
+Pensado num público alvo que inclui pesquisadores e professores universitários
+interessados em representação para multimodais, os termos relacionados para seu
+desenvolvimento são normalizados de acordo com padrões e formatos de metadados
+escolhidos e como apresentado no item 2.2 desse trabalho elaborou-se uma sequência onde os
+campos Dublin Core e MARC21 foram comparados e classificados com um nome genérico.
+Para a validação da ontologia usando conteúdo multimodal segue a representação descritiva
+de um dos objetos que compõe o ambiente apresentado.
+
+Novembro de 2012, na Escola de Comunicações e Artes da Universidade de São Paulo.
+
+Title
+Creator.p
+Creator.e
+Subject
+Description
+Publisher
+Date
+Type
+Format
+Identifier
+Source
+Language
+Relation
+IsVersionOf
+Coverage
+Rights
+
+Tabela 2 - Definição dos Campos DC - TCC
+A informação e o ser: uma visão ontológica-fenomenológica para a Ciência da
+Informação
+Marcos Luiz MUCHERONI (orientador)
+Robson ASHTOFFEN
+Epistemologia da Ciência_crítica à a Ciência da Informação
+Identifica aspectos ontológicos da informação dentro de um contexto de
+desenvolvimento de Ontologias em Sistemas Digitais
+Escola de Comunicações e Artes_Universidade de São Paulo
+07/2011
+Apresentação de Trabalho de Conclusão de Curso
+Slideshow
+http://youtu.be/4ouSBc9AmAY
+Proveniente do Banco de Dados Bibliográficos da USP
+Português
+http://dedalus.usp.br/F?func=direct&local_base=USP01&doc_number=002280054
+Av. Prof. Lúcio Martins Rodrigues, 443 – Cidade Universitária, São Paulo
+Livre acesso
+
+Fonte: Elaborado pelos autores.
+
+O vídeo gravado durante a apresentação do TCC esta disponível no canal do Youtube
+criado para esta demonstração, pode ser encontrado em <http://youtu.be/4ouSBc9AmAY>. O
+texto integral do arquivo está disponível no banco de dados Dedalus, descrito em formato
+MARC21.
+As Classes correspondem a objetos, ou a tipos de objetos no domínio da ontologia. De
+forma geral, na figura 3 pode-se ver as classes que compõem a ontologia do modelo proposto.
+Nela há o “Model”, “Multimodal” e “Field”. O termo “Thing” é a raiz de todas as classes.
+
+Figura 1 - Formato Geral da Ontologia
+Fonte: Elaborado pelos autores.
+
+Observa-se que na classe “Model” existem as subclasses “Dublin_Core” e “MARC”,
+podendo ter novas subclasses através do modelo genérico de metadados desenvolvido a partir
+da correspondência dos valores dos formatos de metadados Dublin Core e MARC21. As
+subclasses do “Multimodal” são “sound”, “vídeo”, “image” e “Slide_Show”. A classe “Field”
+estabelece os campos para metadados DC ou MARC, mas que podem ser ampliados ou
+criados a para um novo modelo de metadados.
+A subclasse “Slide_Show” é considerada um conjunto de imagens com transições que
+incluem efeitos e duração como características. “Video” tem “slideshow”, pois inclui parte da
+apresentação em .ppt; também tem “Imagem” que são cortes da apresentação em.ppt; e vídeo
+tem “Sound” que é a fala do aluno apresentando seu trabalho.
+As propriedades das classes são as características ou parâmetros que os objetos podem
+ter e compartilhar; podem ser descritos através de atributos. Cada atributo tem pelo menos um
+nome e um valor, e é utilizado para armazenar informação que é específica para o objeto
+ligado a ele. Os nomes dos atributos são formados por palavras justapostas, pois o Protégé
+não permite espaços nos nomes.
+
+Figura 2 – Propriedades das Classes
+Fonte: Elaborado pelos autores.
+
+A instanciação da classe “Field” inclui os campos genéricos de formato de metadados
+onde a aplicação dos campos na representação descritiva é feita.
+A subclasse “Slide_Show” tem imagem, conforme explicamos, com característica
+“transition”
+
+que
+
+inclui
+
+“Efect”
+
+e
+
+“duration”,
+
+e
+
+recebeu
+
+o
+
+nome
+
+“ApresentacaoDoRobsonAshtoffen” e Multimodal_format é ppt. A subclasse “Image” tem
+nome “ImagemDoRobsonAshtoffen” e Multimodal_format é JPG. A subclasse “Video”,
+sendo o som considerado parte do vídeo (poderia ser descrito a parte), esta descrita na tabela a
+seguir e encontra-se no apêndice D deste trabalho:
+Tabela 3 - Classe Multimodal Vídeo
+Video
+Objeto com metadados genéricos, contendo os “modos”: “Slide_Show” e
+“Image”
+Multimodal
+Video
+Tem Som
+Video
+Tem Imagem
+Video
+Tem Slideshow
+Atributos da classe
+Atributo VideoName
+Tipo de dado Cadeia de caracteres
+Descrição Nome atribuído ao vídeo na publicação.
+
+Classe
+Descrição da
+classe
+É subclasse de
+É superclasse de
+Relacionamentos
+
+Fonte: Elaborado pelos autores.
+
+Na figura 3, as classes “image” e “slide_show” entram na composição da
+representação descritiva dos campos (Field): do “vídeo”, do “slide_show” e da “image”, que
+são instanciadas na composição do vídeo multimodal, uma vez que neste modelo o som é
+parte integrante do vídeo.
+A representação dos campos do “Slide_Show” e da “Image” são exemplificadas com a
+instanciação
+
+dos
+
+objetos
+
+“OntologiaModelMultimodalCampos_Class24”
+
+e
+
+“OntologiaModelMultimodalCampos_Class25”. Os campos de metadados Dublin Core e
+Marc, e outros se houverem, podem ser preenchidos a partir da equivalência destes com a
+descrição de metadados genéricos inseridos na instanciação do exemplo, conforme a tabela 1.
+
+Figura 3 - Representação Final de Vídeo Multimodal
+Fonte: Elaborado pelos autores.
+
+4 CONSIDERAÇÕES FINAIS
+Conclui-se que o levantamento bibliográfico realizado permitiu um melhor
+entendimento do conceito de representação da informação e do conhecimento nas duas
+diferentes áreas que o trabalho abrange: Ciência da Informação e Ciência da Computação.
+Percebeu-se que as áreas se interrelacionam, assim como a informação e o conhecimento,
+também a Representação da Informação e a Representação do Conhecimento são próximas e
+compartilham alguns aspectos teóricos e metodológicos comuns.
+Com o objetivo principal de estudar a representação no ambiente virtual, e encontrar
+uma forma de representar a informação multimodal visando atender à web Semântica,
+entendeu-se que a representação dinâmica realizada através de ontologias, são especialmente
+úteis na gerência de conhecimento e para recuperação da informação, pois unifica termos,
+conceitos e relações de um mesmo domínio, possibilita não só a categorização, mas também
+permite seu reuso. Isso se da pelo fato das ontologias estarem no grupo dos tipos complexos
+de SOC (Sistema de Organização do Conhecimento), assim como os tesauros e as
+taxonomias, pois se desenvolvem através do método facetado, em meios convencionais ou na
+internet, seja para organização e representação de documentos textuais, imagéticos, sonoros,
+como pode ser visto no apêndice E.
+O ambiente Protégé utilizado (versão 3.4.) possibilita a geração automática não apenas
+dos formatos OWL e RDFS equivalentes, dispensando o trabalhoso processo de
+desenvolvimento do perfil de aplicação, que era uma das propostas iniciais no
+
+desenvolvimento desse trabalho. Essa geração é interessante, também nas questões de
+terminologia e linguística, quando existe a possibilidade de integração e interoperabilidade
+entre diferentes sistemas, vocabulários e idiomas. No ambiente da web Semântica as
+informações são lidas e entendidas por computadores com o uso de tecnologias tais como
+XML, SKOS, OWL, RDF entre outras. São alguns esforços que podem contribuir para a
+integração dos SOC existentes ou até mesmo criar sistemas novos que melhorem o
+compartilhamento de informações no ambiente web.
+A extensão da ontologia com a inserção de outros padrões de metadados poderá ser
+realizada através da classe “Model” da ontologia, onde em qualquer classe é possível fazer
+instanciações como exemplo de metadados genéricos, já que o formato apresentado possibilita
+inserir novos metadados. Isso é muito útil também com uso das tagging sociais, por exemplo,
+tanto para o vídeo isolado como para o multimodal. Portanto, possíveis ampliações futuras
+podem ser feitas através dos atributos “Model” e “Field”.
+A ontologia será posteriormente publicada em algum site ou em alguma ferramenta de
+compartilhamento de ontologias. Isso possibilitará o resgate da mesma por outros usuários
+que venham a precisar.
+O tratamento completo de som não foi incluído na ontologia, uma vez que envolve
+suportes e formatos de alto grau de complexidade, em função dos direitos autorais e de
+formatos que não são livres, como no caso de músicas e controle de cópias.
+Sem dúvidas este é o início de uma pesquisa que procura ligar estas duas áreas que
+tem tanto em comum, mas tanto distanciamento na academia. Espera-se que este trabalho seja
+um suporte para futuras pesquisas na área, auxiliando os pesquisadores a começarem em um
+ponto adiante.

@@ -1,0 +1,692 @@
+
+UM ROTEIRO PARA MODELAGEM CONCEITUAL DE SISTEMAS DE
+INFORMAÇÃO BASEADA EM PRINCÍPIOS ONTOLÓGICOS
+Resumo: Sistemas de Informação devem ser baseados em representações consistentes da
+realidade. Modelos construídos de maneira ad-hoc, sem diretivas que orientem as ações de
+modelagem, podem resultar em representações inadequadas, gerar dificuldade de
+comunicação e impossibilidade de integração e interoperabilidade entre sistemas. As
+ontologias são instrumentos fundamentais para a melhoria da modelagem conceitual, uma vez
+que são capazes de fornecer semânticas bem definidas. Este artigo apresenta um passo a passo
+para a modelagem conceitual, em forma de um roteiro, com base nos princípios ontológicos
+extraídos da Unified Foundational Ontology - UFO. Para isto, contextualiza-se a atividade de
+modelagem conceitual e os princípios ontológicos utilizados, através das categorias básicas de
+entidades e relações definidas pela ontologia de fundamentação. Em seguida, são descritas as
+atividades do roteiro proposto, bem como seus insumos e produtos gerados. Ao final, de
+forma a testar a viabilidade do roteiro proposto, descreve-se um estudo de caso de um modelo
+real do domínio da administração pública de Minas Gerais.
+Palavras-chave: Modelagem conceitual. Ontologia. Unified Foundational Ontology - UFO.
+Roteiro.
+1 INTRODUÇÃO
+Empresas que desenvolvem sistemas de informação estão inseridas em um mercado
+altamente competitivo e dinâmico. É perceptível, então, a necessidade crescente de
+investimentos em suas atividades de engenharia de software, na tentativa de melhorar os seus
+processos e produzir produtos e serviços de melhor qualidade. Para isto, existe uma grande
+variedade de padrões disponíveis para utilização por empresas de tecnologia da informação
+
+(TI), que variam de processos tradicionais como o Rational Unified Process - RUP
+(KRUCHTEN, 2001) a metodologias ágeis, centradas em dados ou em arquitetura, etc. A
+atividade de modelagem conceitual está presente na maioria dessas metodologias de
+desenvolvimento e é de fundamental importância, pois uma modelagem bem definida é a base
+para um bom sistema de informação (SÁNCHEZ, CAVERO e MARCOS, 2005).
+Modelos são estruturas de representação criadas a partir de abstrações da realidade.
+Podem variar de estruturas conceituais, como modelos mentais, a representações gráficas,
+como os modelos comumente elaborados em projetos de software utilizando a Unified
+Modeling Language – UML (OMG, 2012). Construir modelos consiste em descrever a
+realidade, reproduzindo conceitos e seus relacionamentos relevantes para os usuários, a partir
+de uma construção mental especificada por uma linguagem (SÁNCHEZ, CAVERO e
+MARCOS, 2005). Os modelos são aplicados na Ciência da Informação no âmbito da
+organização e representação da informação como forma de representação de um domínio. Na
+Ciência da Computação, os modelos são utilizados como mecanismos de captura e
+comunicação de informações pertinentes à construção de um sistema de informação, passando
+de modelos conceituais a modelos de dados implementados em um banco de dados.
+Segundo Guarino (1998), uma ontologia é um artefato de engenharia de software
+constituído por um vocabulário específico, que descreve certa realidade através de uma
+hierarquia de conceitos conectados por relações de subordinação. Dentre os tipos de
+ontologias existentes na literatura cabe destacar as ontologias de fundamentação, que são
+baseadas em estudos, teorias e ferramentas e buscam identificar as entidades básicas do
+mundo, sendo capazes de se adequar a vários domínios (OLIVEIRA, 2009).
+Para fins de modelagem computacional, modelos e ontologias são conceitos similares,
+pois ambos têm a finalidade de representar um domínio de conhecimento a partir de uma
+conceitualização da realidade (MENDONÇA e ALMEIDA, 2012). Porém, a aplicação de
+ontologias adiciona regras e restrições para possibilitar a padronização e a melhoria semântica
+da modelagem.
+A escolha por representar determinadas características em um modelo, geralmente, é
+feita de maneira ad-hoc, ou seja, parte da conceitualização particular de cada modelador, sem
+um embasamento consistente ou algum padrão que o oriente. A aplicação de ontologias à
+modelagem pode proporcionar mais subsídios para o modelador, fazendo com que a sua
+tomada de decisão passe a ser baseada em um padrão e deixe de ser ad-hoc. Outro benefício
+dessa aplicação é facilitar o entendimento sobre “o que é o sistema”, na medida em que a
+semântica é trabalhada na definição do domínio de negócio. Assim, acredita-se que a
+
+
+aplicação de princípios ontológicos para definição de conceitos e relações em um modelo
+conceitual pode proporcionar uma aproximação entre a realidade modelada e o modelo
+produzido.
+Este artigo apresenta um passo a passo para a modelagem conceitual, em forma de um
+roteiro, baseado em princípios ontológicos extraídos da Unified Foundational Ontology UFO como proposta para a melhoria semântica de modelos conceituais de sistemas de
+informação e também para a melhoria dos processos comunicacionais e melhor entendimento
+de um domínio do conhecimento, conforme prerrogativas da Ciência da Informação. Para a
+proposta do roteiro, este trabalho contextualiza a atividade de modelagem conceitual e detalha
+os princípios ontológicos utilizados através das categorias básicas de entidades e relações
+definidas pela UFO. Além disso, de forma a validar a viabilidade do roteiro proposto,
+descreve-se um estudo de caso com um modelo real do domínio da administração pública de
+Minas Gerais.
+O restante deste trabalho está organizado como se segue. A seção dois introduz a
+modelagem conceitual, contextualizando-a para a Ciência da Informação e para a Ciência da
+Computação. A seção três apresenta as ontologias e detalha os principais conceitos relevantes
+para o roteiro proposto. A seção quatro propõe o roteiro e apresenta o estudo de caso. A seção
+cinco apresenta as conclusões e perspectivas futuras.
+2 Modelagem conceitual
+A atividade de criação de modelos, ou modelagem, figura entre diversas áreas da
+ciência, caracterizando-se multidisciplinar. Para este trabalho, que transita entre a Ciência da
+Computação e a Ciência da Informação, entende-se importante a apresentação de definições
+sobre modelagem e também as diversas abordagens de sua aplicação encontradas na literatura,
+pertinentes a essas duas áreas, principalmente. Também são apresentadas aqui, e relacionadas
+aos conceitos de modelagem, as definições e abordagens sobre ontologias revisadas, que
+completam parte da base da fundamentação teórica desta pesquisa.
+Modelos são estruturas que possibilitam a representação de informações a partir de
+abstrações do mundo real. Podem variar de modelos abstratos, como representações mentais
+de forma descritiva, como os modelos matemáticos e diagramas gráficos, a modelos
+concretos, que representam todas as características e os requisitos necessários a uma ideia ou
+conceito (SÁNCHEZ, CAVERO E MARCOS, 2005). Exemplos de modelos concretos pode
+ser uma maquete de uma construção ou uma miniatura de um objeto.
+A construção dessas abstrações da realidade que tomam forma a partir dos modelos,
+cada pessoa toma como base a sua conceitualização particular e o seu conhecimento prévio
+sobre o mundo. Um modelo construído significa, então, abstrações da realidade representadas
+a partir da perspectiva de uma pessoa ou grupo de pessoas.
+Para Frigg (2006), existem três tipos de questões relativas a modelos: questões de
+natureza ontológica, de natureza epistemológica e de natureza semântica. As questões de
+natureza ontológica dizem respeito a definir o que são modelos dentre, por exemplo: objetos
+físicos, estruturas da teoria dos conjuntos, descrições, equações, ou combinações dos
+anteriores. Nas questões de natureza epistemológica, os modelos são considerados meios de
+aprendizado e, a partir deles, é possível descobrir características do sistema representado. As
+questões de natureza semântica dizem respeito à função representacional dos modelos. Nesse
+contexto, cabe distinguir modelos de fenômenos, teorias e modelos de dados. Um modelo de
+fenômeno lida com problemas de representação científica. Esse modelo é uma estrutura que
+torna verdadeiras as sentenças de uma teoria. Por sua vez, um modelo de dados é uma visão
+idealizada de dados obtidos por observação direta. Para Evermann (2005), os modelos
+possuem finalidade de meio de comunicação: é necessário entender a realidade, o que pode
+ser feito com a ajuda da modelagem.
+Para a Ciência da Informação, a modelagem está relacionada à representação do
+conhecimento, onde os mecanismos para tal representação possibilitam a elaboração de
+linguagens documentárias verbais e notacionais com o objetivo de organização e de
+recuperação (CAMPOS, 2001). Segundo Oliveira (2009), a representação constitui um
+processo de conhecimento, o qual consiste na assimilação das coisas, sendo os seres humanos
+os conhecedores e observadores da realidade externa. Como a Ciência da Informação
+necessita de estudos sobre representação, codificação e uso racional da informação
+(CAPURRO, 1991), os modelos e a atividade de modelar se apresentam como uma
+alternativa.
+2.1 Modelagem de sistemas de informação
+Na Ciência da Computação, os modelos possuem objetivos distintos, de representar e
+de auxiliar na implementação das estruturas computáveis e estão relacionados principalmente
+a modelos de dados, estruturas muito utilizadas em empresas de TI para representar a
+implementação de um sistema de informação através de estruturas de banco de dados
+(OLIVEIRA, 2009). Tais modelos são construídos de maneira que o armazenamento e
+recuperação ocorram de maneira eficiente e, em geral, são representados através da linguagem
+
+entidade relacionamento (ER), conforme exemplo da Figura 1. Cougo (1997) afirma que os
+modelos de dados são compostos por níveis de abstração distintos, denominados modelo
+físico, modelo lógico e modelo conceitual. Cada um desses níveis possui diferentes aspectos a
+representar. A área da Ciência da Computação que se preocupa com o desenvolvimento e
+manutenção de sistemas, a Engenharia de Software, define disciplinas específicas para
+abordagem da modelagem ao longo de um processo de software, sendo chamadas de análise e
+desenho de software (PÁDUA, 2001). Interessados em maiores detalhes sobre estas
+disciplinas podem consultar Pressman (2011), Sommerville (2003).
+FIGURA 4 - Exemplo de um modelo de dados ER
+
+Fonte: Elaborado pelos autores.
+
+Na atividade de modelagem de sistemas, representam-se os principais processos de um
+contexto específico objetivando a construção do sistema. A etapa em que são criados modelos
+sob a perspectiva do entendimento humano é conhecida como modelagem conceitual. Os
+modelos conceituais são obtidos a partir de abstrações de aspectos da realidade, isentos de
+decisões ou estruturas que possibilitam a implementação de um sistema e são, geralmente,
+representados através da UML. Estas últimas são aplicadas em níveis posteriores de
+modelagem de SI. As abstrações são formas de especificar as entidades e as relações entre as
+entidades, em um domínio do conhecimento de interesse para o sistema em desenvolvimento.
+FIGURA 5 - Exemplo de modelo UML
+
+Fonte: Elaborado pelos autores.
+A modelagem conceitual de SI, como conhecida hoje, é resultado de pesquisa
+produzida nos últimos 50 anos. Os primeiros modelos de dados (YOUNG; KENT, 1958;
+BOSAK ET AL., 1962) deram lugar aos modelos semânticos (ABRIAL, 1974; JARDINE,
+1976; CHEN, 1976), aos quais se seguiram os modelos orientadas a objeto (BOOCH, 1993;
+RUMBAUGH ET AL., 1991; JACOBSON ET AL., 1992).
+
+Ao longo dos anos, a pesquisa sobre modelos conceituais tem sido motivada pela
+busca de formas cada vez mais apuradas de representar a realidade em SI. Entretanto, os
+modelos semânticos dispõem de um conjunto limitado de constructos para a tarefa de
+modelagem conceitual. O modelo ER, por exemplo, pressupõe que a realidade pode ser
+articulada por dois tipos de constructos apenas, as entidades e os relacionamentos. Como
+alternativa Guarino (1998) destaca a necessidade de uma conceitualização comum entre
+sistemas de informação. A interoperabilidade entre sistemas é possível apenas se as
+linguagens subjacentes aos modelos possuem conceitualizações que se sobrepõem em algum
+nível. Em última instância, apenas uma conceitualização compartilhada, produto de maior
+esforço na comunicação humana, pode proporcionar melhorias na modelagem. Ontologias são
+alternativas para especificar tal conceitualização.
+3 ONTOLOGIAS
+O significado do termo ontologia é apresentado de diferentes formas em áreas diversas
+e tem se caracterizado pela coexistência de abordagens interdisciplinares, que abrangem
+Ciência da Computação, Filosofia, Ciência da Informação, Linguística, dentre outros campos.
+Na filosofia, onde se encontram as suas raízes, ontologia é um sistema particular de
+categorias para uma determinada visão do mundo. Nas áreas de computação e sistemas de
+informação, refere-se ao conjunto de formalismos que representam conceitos e suas relações,
+fundamentados na semântica de um domínio de conhecimento (OLIVEIRA, 2009).
+Para Guarino (1998), a ontologia é um artefato de engenharia de software, constituído
+por um vocabulário específico que descreve certa realidade, mais um conjunto de
+prerrogativas sobre o significado pretendido para os termos do vocabulário. Já Gruber (1993)
+define ontologias como um esquema conceitual para sistemas de banco de dados, o qual
+fornece a descrição lógica dos dados.
+Para Borst (1997), uma ontologia é uma especificação formal e explícita de uma
+conceitualização. Nesse contexto, conceitualização refere-se a um modelo abstrato de algum
+fenômeno do mundo; formal significa que pode ser lida por máquinas e explícita diz respeito
+a restrições explicitamente definidas. Segundo Sowa (2000), uma ontologia é um catálogo de
+tipos de coisas que se assume existir em um domínio, na perspectiva de uma pessoa que usa
+uma linguagem com a finalidade de representação.
+Em Benevides e Guizzardi (2009), ontologia é definida como um sistema formal e
+filosoficamente bem fundamentado de categorias que pode ser usado para articular
+conceitulizações e modelos em domínios específicos do conhecimento, para áreas como
+
+
+Modelagem Conceitual e Modelagem Organizacional. Para a Inteligência Artificial, a
+Engenharia de Software e a Web Semântica, uma ontologia é um artefato concreto de
+engenharia, projetado com um propósito específico e sem prestar nenhuma ou quase nenhuma
+atenção a aspectos teóricos de fundamentação. Significa um modelo de um domínio
+específico do conhecimento, por exemplo, um modelo da área de finanças, logística, doenças
+infecciosas, etc., e expresso em uma linguagem de representação específica, como UML, ER,
+SDM, entre outras.
+Fonseca (2007) afirma que é importante distinguir as conotações existentes sobre o
+termo ontologia, dada a sua utilização em diferentes campos de pesquisa. Uma distinção
+apresentada pelo autor classifica ontologias de sistemas de informação e ontologias para
+sistemas de informação. No primeiro caso, as ontologias de SI são usadas para criar modelos
+conceituais. A segunda distinção se concentra no uso de ontologias como parte do sistema de
+informação e descrevem o vocabulário de um domínio. Através de ontologias de SI, é
+possível avaliar a capacidade de representação de linguagens de modelagem. Comparam-se os
+constructos da linguagem aos constructos ontológicos de uma ontologia utilizada como
+referência, também denominada ontologia de fundamentação, nomenclatura utilizada por esta
+pesquisa.
+3.1 Ontologias de fundamentação para modelagem conceitual
+Baseando-se em princípios filosóficos consolidados, é possível identificar e reparar
+modelagens deficientes, conduzidas de forma ad-hoc e sem correspondência com o mundo
+real através das ontologias de fundamentação.
+De acordo com Guizzardi et. al. (2008), ontologias, no sentido filosófico, têm sido
+desenvolvidas em filosofia desde Aristóteles com sua teoria de Substância e Acidentes e, mais
+recentemente, várias dessas teorias têm sido propostas sob o nome de ontologias de
+fundamentação (Foundational Ontologies). Desde o fim da década de oitenta, observa-se um
+crescente interesse no uso dessas ontologias de fundamentação no processo de avaliação e
+(re)engenharia de linguagens de modelagem conceitual. A hipótese inicial, e que foi
+posteriormente confirmada por várias evidências empíricas, pode ser explicada através da
+seguinte argumentação: (i) modelos conceituais são artefatos produzidos com o objetivo de
+representar uma determinada porção da realidade segundo uma determinada conceitualização;
+(ii) ontologias de fundamentação descrevem as categorias que são usadas para a construção
+dessas conceitualizações. Pode-se, portanto, concluir que uma linguagem adequada de
+modelagem conceitual deve possuir primitivas de modelagem que reflitam as categorias
+
+
+
+conceituais definidas em uma ontologia de fundamentação (BENEVIDES E GUIZZARDI,
+2009).
+Exemplos de ontologias de fundamentação são: a Basic Formal Ontology - BFO
+(GRENON; SMITH, 2004), a Descriptive Ontology for Linguisitics and Cognitive
+Engineering - DOLCE (MASOLO et al., 2003), a General Formal Ontology - GFO (HERRE
+et al., 2006) e a Unified Foundational Ontology - UFO (GUIZZARDI; WAGNER, 2004). Em
+sistemas de informação, cabe ainda citar a pesquisa pioneira sobre ontologias de SI conhecida
+como Bunge-Wand-Weber Ontology - BWW (WAND; WEBER, 1990) (WAND; STOREY;
+WEBER, 1999).
+3.1.1 Ontologia de fundamentação unificada
+A Ontologia de Fundamentação Unificada (Unified Foundational Ontology - UFO)
+(GUIZZARDI e WAGNER, 2004) é resultado da combinação da GFO (HERRE et. al. 2006)
+e da DOLCE (MASOLO et. al., 2003), representando assim, uma síntese de ontologias de
+fundamentação. Foi criada na tentativa de tentar suprir as limitações de captura de conceitos
+básicos de linguagens de modelagem conceitual de outras ontologias de fundamentação,
+aproveitando as características positivas e sanando as limitações detectadas (GUIZZARDI;
+WAGNER, 2004).
+A UFO foi proposta inicialmente em por Guizzardi (2005) e é dividida em três
+camadas: UFO-A, que define o núcleo ontológico de indivíduos duradouros (endurants);
+UFO-B, que define um incremento da UFO-A incluindo os termos relacionados a processos
+(perdurants); UFO-C, que define termos relacionados às esferas sociais incluindo aspectos
+linguísticos, construída sobre as partes A e B. O escopo deste trabalho se limita, neste
+momento, ao estudo da UFO-A, a partir da qual foi proposta a linguagem de modelagem
+OntoUML. Esta linguagem integra a UFO-A e o Meta-Object Facility (MOF) da UML 2.0
+(OMG, 2012), que é reparado para garantir um isomorfismo em seu mapeamento para a
+estrutura definida pela ontologia. Este trabalho limita-se também ao mapeamento das
+entidades e relações definidas pela UFO consideradas como mais importantes para a
+modelagem conceitual. O mapeamento completo da UFO está em Guizzardi (2005).
+O
+
+
+QUADRO 2 apresenta o mapeamento das principais categorias de entidades determinadas
+pela UFO.
+
+
+QUADRO 2- Categorias de entidades da UFO
+Categoria
+
+Descrição
+
+Quantity
+
+Refere-se à quantidade de matéria. Ex.: água, açúcar, vinho, etc. A
+subQuantidade de matéria sempre se refere ao mesmo tipo de matéria. Ex.:
+Qualquer subQuantidade de água também é água.
+
+Collective
+
+Podem ter partes que não são do mesmo tipo, como árvore e floresta. Neste
+caso, um conjunto que não é infinitamente divisível, ou seja, uma floresta não
+pode ser composta apenas de uma árvore, mas um conjunto de árvores.
+
+Kind
+
+Representa uma substância cujas instâncias são complexos funcionais. Os
+exemplos incluem as instâncias de coisas naturais (pessoa, cão, árvore) e de
+artefatos (carro, televisão).
+
+Subkind
+
+Representa um subconjunto do tipo Kind, ou seja, uma especialidade de Kind.
+Ex.: Homem é um tipo específico de Pessoa.
+
+FunctionalComplex
+
+Os complexos são constituídos por peças que desempenham papéis múltiplos
+no contexto de um conjunto. As partes de um complexo têm em comum o fato
+de ter uma ligação funcional com o complexo todo.
+
+Role
+
+Representa um papel desempenhado por uma entidade do tipo Kind. Ex.:
+Estudante é um papel de uma Pessoa.
+
+Fonte: Guizzardi (2005).
+
+O QUADRO 3 apresenta o mapeamento das principais categorias de relações
+determinadas pela UFO.
+QUADRO 3- Classificação de relações da UFO.
+Categoria
+
+Descrição
+
+Generalization (is-a)
+
+Relação de generalização/especialização entre Kind e Role;
+entre Roles; entre Subkind e Role; entre Kind e Subkind
+
+Formal Relation
+
+Associação formal entre entidades do tipo Kind
+
+ComponentOf
+
+Relação meronímica entre FunctionComplex
+
+MemberOf
+
+Relação meronímica entre Collectives ou entre
+FunctionComplex e Collectives
+
+SubCollectionOf
+
+Relação meronímica entre Collectives
+
+SubQuantityOf
+
+Relação meronímica entre Quantities
+
+Fonte: Guizzardi (2005).
+
+4 ROTEIRO PROPOSTO: ELABORAÇÃO DO MODELO CONCEITUAL
+A presente seção descreve o roteiro para a modelagem conceitual, contemplando as
+suas etapas, insumos e produtos (seção 4.1). Além disso, apresenta-se um estudo de caso para
+avaliar a viabilidade da proposta por meio de uma necessidade de negócio real (Seção 4.2).
+
+
+4.1 Descrição das etapas
+O roteiro proposto para elaboração do modelo conceitual de SI é baseado em
+princípios ontológicos e organiza os procedimentos em quatro atividades principais. Para a
+realização de cada atividade é necessário um ou mais artefatos que vão subsidiar a sua
+execução, estes artefatos são chamados de entrada. Por sua vez, cada atividade produz um
+resultado, que é chamado de saída. O QUADRO 4 apresenta a relação das entradas e saídas de
+cada atividade proposta. Em seguida, cada subseção descreve uma atividade específica.
+QUADRO 4 – Relação de entradas e saídas das atividades propostas
+Entrada
+
+Atividade
+
+Identificação de termos e
+fatos
+Elaborar glossário do
+domínio
+Classificação dos termos
+e fatos
+
+Saída
+
+Especificação
+de
+requisitos, Lista de termos e fatos
+especificação de caso de uso
+Lista de termos e fatos
+Glossário
+
+Lista de tipos de entidades e
+relações, Glossário, Lista de termos
+e fatos
+Construção do diagrama Modelo semi-formal
+conceitual
+
+Lista de termos e fatos
+classificados, Modelo semiformal
+Diagrama Conceitual
+
+Fonte: Elaborado pelos autores.
+
+4.1.1 Identificação de termos e fatos do domínio
+A atividade de identificação de termos e fatos do domínio consiste na transposição dos
+conceitos e características observados no ambiente de domínio que se pretende modelar.
+Entende-se como termos os conceitos que representam entes físicos ou entes que se pode
+descrever por características. Os fatos se referem às ações que ocorrem no ambiente, que
+denotam comportamento dos entes ou interligação entre entes. A seguir, sugerem-se algumas
+técnicas para a seleção de termos e fatos candidatos. Para exemplificar considere a sentença a
+seguir: O cliente folheia o catálogo e seleciona itens para adicionar na cesta de compras.
+Seleção de termos candidatos: Seleção de palavras que tem função substantiva na
+sentença (substantivos, verbos substantivados, expressões, etc). Normalmente, estas palavras
+são determinadas por artigo, numeral ou pronome possessivo. Os atores do caso de uso
+também são termos candidatos. Na sentença exemplo, correspondem as palavras destacadas
+em negrito e itálico. Os termos geralmente são elementos que representam coisas tangíveis,
+funções exercidas por pessoas ou coisas, eventos, ou interações.
+Seleção de fatos candidatos: Seleção de verbos que designam ações que afetam os
+termos, ou verbos que não designam ações, mas que servem para ligar o sujeito a seu
+
+
+predicado quando estes dois equivalem a termos. Os casos de uso também são fatos
+candidatos. Na sentença exemplo, correspondem as palavras sublinhadas.
+4.1.2 Elaborar glossário do domínio
+Um glossário refere-se a uma organização de todas as palavras (termos e fatos) com
+sua respectiva definição, importantes para o entendimento do negócio que esta sendo
+modelado. Esta atividade consiste em definir cada um dos termos e fatos identificados na
+atividade anterior e se necessário de novos termos e fatos que sejam importantes para a
+compreensão do ambiente que esta sendo observado e modelado.
+A obtenção dos conceitos ou definições dos termos e fatos do glossário pode ser pela
+análise de documentação pertinente ao ambiente em questão, por meio de entrevistas ou
+seções de brainstorm com especialistas no assunto. O importante a resaltar é que a definição
+dada a um termo ou fato deve ser consensual entre os participantes do projeto e clientes. Para
+orientar a elaboração das definições, sugere-se o entendimento da Teoria do Conceito de
+Dahlberg (1978) e da Teoria da Terminologia Dahlberg (1983).
+4.1.3 Classificação dos termos e fatos quanto às categorias de entidades e relacionamento
+Esta atividade versa a classificar os termos e fatos segundo as categorias de entidades
+e relacionamento que são propostas pela UFO (seção 3.1.1). A seguir são apresentadas
+categorias propostas para este roteiro.
+Classificação para termos: Determinar para cada termo identificado na primeira
+atividade (seção 4.1.1) qual das categorias do QUADRO 5 o termo se refere.
+QUADRO 5- Proposta de categorias de termos para modelagem conceitual
+Categoria
+
+Descrição
+
+Quantidade
+Coletivo
+Coisa
+Complexo Funcional
+Papel
+
+Quantitativo de matéria. Algo que possa ser dimensionado.
+Algo que faz parte de um conjunto de elementos, não
+necessariamente do mesmo tipo.
+Algo que fornece um princípio de identidade para suas instâncias.
+Representa uma espécie na sua forma mais primitiva.
+Todo constituído de partes que desempenham múltiplos papéis.
+Função específica desempenhada por uma entidade do tipo Coisa.
+
+Fonte: Elaborado pelos autores.
+
+Classificação para termos: Determinar para cada fato identificado na primeira
+atividade
+
+(seção
+
+4.1.1)
+
+qual
+
+das
+
+categorias
+
+do QUADRO 6 o fato se refere.
+
+
+
+QUADRO 6- Proposta de categorias de fatos para modelagem conceitual
+Categoria
+
+É um/ É uma
+
+Descrição
+
+É uma relação de generalização que remete a uma hierarquia entre
+termos onde os termos específicos possuem as mesmas características
+do termo mais genérico e outras características específicas dele.
+
+É Sub quantidade
+É uma relação meronímica entre termos da categoria quantidade.
+de
+É Sub coleção de
+É uma relação meronímica entre termos que são coletivos (plurais).
+É uma relação meronímica entre termos complexos funcionais,
+É Membro de
+singulares ou coletivos, como parte de termos que são coletivos.
+É Componente de É uma relação meronímica entre termos que são complexos funcionais.
+Fonte: Elaborado pelos autores.
+
+Documentação semi-formal de termos e fatos: Consiste em escrever sentenças em
+linguagem natural utilizando os termos e fatos categorizados a partir da sua definição
+semiformal com base ontológica. O QUADRO 7 apresenta a coluna da esquerda corresponde
+à definição semiformal existente entre uma categoria de termo e uma categoria de fato. A
+coluna da direita refere-se a um exemplo de escrita semiformal.
+QUADRO 7 – Exemplo de documentação semi-formal
+Definição semiformal
+
+Papel é uma Coisa
+Quantidade é sub quantidade
+Quantidade
+Coletivo é sub coleção de Coletivo
+Papel é membro de Coleção
+Coisa é componente de Coisa
+
+Exemplo
+
+Cliente é uma Pessoa
+de 200 ml de água é sub quantidade de 1 litro de
+água
+Um conjunto de árvores é sub coleção de Uma
+floresta
+Um jogador é membro de Um Time
+Coração é componente de Pessoa
+
+Fonte: Elaborado pelos autores.
+
+4.1.4 Construção do diagrama conceitual
+O diagrama conceitual é uma representação visual estrutura por uma abordagem de
+modelagem conceitual. Conforme discutido na seção 2.1, duas abordagens são comunmente
+usadas na engenharia de software, a abordagem Entidade-Relacionamento que origina os
+diagramas E-R e a abordagem orientada a objeto que utiliza a linguagem UML para elaborar
+os diagramas de classes. Na seção 3.1.1, é introduzido a abordagens ontológica e a
+modelagem OntoUML como uma extensão da UML que tem suas classes e relacionamentos
+baseados na ontologia UFO-A que também produz um diagrama de classe.
+Para a construção do diagrama conceitual, optou-se pela abordagem UML, utilizando
+como representação visual o diagrama de classes, porém sem determinar estereótipos de
+
+
+classes e relacionamentos. Em linhas gerais, as entidades ou classes equivalem aos termos
+categorizados conforme QUADRO 5 e os relacionamentos são os fatos categorizados
+conforme QUADRO 6. A seguir são descritos os passos para a elaboração do diagrama conceitual.
+Passo 1: Definição de Classes ou Entidades.
+As entidades são os elementos ou termos que persistem ao tempo e espaço. Selecionar
+os termos identificados e categorizados e criar uma classes no diagrama para cada um dos
+termos. As classes são representadas no diagrama como retângulos.
+Observe que alguns termos que foram identificados na atividade da seção 4.1.1 podem
+não ter sido categorizados, porém, estes termos podem representar características ou
+propriedades de termos categorizados, também conhecidos como os atributos das entidades.
+Passo 2: Definição de relacionamentos associativos.
+Os relacionamentos associativos equivalem aos fatos que denotam as seguintes
+categorias: É Sub quantidade de, É Sub coleção de, É Membro de, É Componente de. Estes
+relacionamentos são representados no diagrama de classe como associações, agregações ou
+composições.
+Passo 3: Definição de relacionamentos hierárquicos.
+Os relacionamentos hierárquicos equivalem aos fatos que denotam a categorias “É
+um/é uma”, e são representados no diagrama de classe como herança.
+Passo 4: Definir a multiplicidade entre associações.
+A multiplicidade de uma associação refere-se ao número de instâncias da classe de
+uma das extremidades da associação em relação a classe da outra extremidade. Pode-se
+indicar o número mínimo e máximo das instancias.
+4.2 Estudo de caso: gestão da estrutura administrativa estadual
+O objetivo do estudo de caso foi avaliar a viabilidade do roteiro proposto, aplicando-o
+a um requisito real de SI. No estudo de caso foi utilizado um cenário de negócio real da
+administração pública do Estado de MG. A seção 4.2.1 apresenta uma parte da especificação
+de requisitos do cenário “Gerir estrutura administrativa estadual”. Cada uma das seções
+seguintes (4.2.2 à 4.2.5) equivale ao resultado da realização de uma das atividades propostas
+no roteiro da seção 4.1.
+4.2.1 Especificação de requisitos
+A FIGURA 6 equivale à parte da especificação de requisitos do cenário de negócio da
+gestão da estrutura organizacional da Administração Pública.
+FIGURA 6 - Especificação de requisitos do estudo de caso
+
+
+Fonte: Elaborado pelos autores.
+
+4.2.2 Identificação de termos e fatos do domínio
+No texto de especificação de requisitos (FIGURA 6) os termos identificados
+correspondem aos substantivos e verbos substantivados e foram marcados como negrito e
+itálico, os fatos correspondem aos verbos sublinhados.
+4.2.3 Elaborar glossário do domínio
+Dentre as experiências obtidas ao longo da pesquisa, cabe destacar a discussão com a
+equipe acerca das definições dadas a cada termo ou fato identificado. A FIGURA 7 demonstra
+um extrato do glossário criado nesta atividade, ressalta-se que não foi apresentado o artefato
+como um todo em função da limitação de espaço para o artigo.
+FIGURA 7 - Extrato do glossário do estudo de caso
+
+Fonte: Elaborado pelos autores.
+
+
+4.2.4 Classificação dos termos e fatos quanto às categorias de entidades e relacionamento
+Classificação de termos: O termos foram classificados de acordo com a categoria e
+organizados no QUADRO 8.
+QUADRO 8- Categorização dos termos do estudo de caso
+Categoria de
+Termo
+Quantidade
+
+Termos do Estudo de Caso
+Nenhum termo identificado
+Administração Pública, Administração Pública Direta, Administração Pública
+Indireta
+Órgãos, Entidades, Governadoria, Vice-governadoria, Secretarias de Estado,
+Órgãos Autônomos, Autarquia, Fundação Pública, Empresa Pública,
+Sociedade de Economia Mista
+
+Coletivo
+Coisa
+Complexo
+Funcional
+Papel
+
+Nenhum termo identificado
+Unidade Administrativa
+
+Fonte: Elaborado pelos autores.
+
+Classificação de fatos: Os fatos categorizados foram organizados no QUADRO 9.
+QUADRO 9- Categorização dos fatos do estudo de caso
+Categoria de Fato
+
+Fatos do Estudo de Caso
+
+É um/ É uma
+É Sub quantidade de
+É Sub coleção de
+É Membro de
+É Componente de
+
+É, são
+Faz parte
+É formada
+
+Fonte: Elaborado pelos autores.
+
+Documentação semi-formal de termos e fatos: Um extrato da documentação
+semiformal
+
+é
+
+apresentado
+
+no
+
+
+
+QUADRO 10.
+
+
+QUADRO 10 – Exemplo de documentação semi-formal
+Definição semiformal
+Coisa é uma Coisa
+
+Exemplo
+Governadoria é um órgão.
+Autarquia é uma Entidade.
+
+Coletivo é sub coleção de
+Coletivo
+
+Administração Pública Direta é sub coleção de
+Administração Pública
+Administração Pública Indireta é sub coleção de
+Administração Pública
+
+Coisa é membro de Coleção
+
+Órgão é membro de Administração Pública Direta
+Entidade é membro de Administração Pública Indireta
+
+Fonte: Elaborado pelos autores.
+
+4.2.5 construção do diagrama conceitual
+A FIGURA 8 refere-se ao diagrama conceitual baseado no extrato da documentação
+semiformal apresentado.
+FIGURA 8 - Diagrama conceitual do estudo de caso
+
+Fonte: Elaborado pelos autores.
+
+5 CONSIDERAÇÕES FINAIS
+Este artigo discutiu a aplicação de princípios ontológicos à modelagem conceitual de
+sistemas de informação e teve como objetivo apresentar a proposta de um roteiro que possa
+orientar a atividade de modelagem com base na ontologia, possibilitando a geração de
+modelos semanticamente bem definidos. O roteiro foi elaborado com base nos princípios
+ontológicos extraídos da UFO e a partir das categorias de entidades e relações definidas em
+sua especificação. As premissas sobre a atividade de modelagem conceitual encontradas na
+
+
+literatura também orientaram a proposta. Ao final, foi realizado um estudo de caso sobre o
+domínio da Administração Pública Estadual de Minas Gerais para a verificação de viabilidade
+do roteiro proposto.
+Através do estudo de caso realizado pode-se concluir que o roteiro proposto é viável
+de ser aplicado à modelagem conceitual para diversos domínios de informação. Conclui-se
+também que a proposta é caracterizada como uma forma “leve” de uso de ontologias para
+pessoas que não estão ambientadas com os seus conceitos e ainda assim possibilita diversos
+benefícios para o desenvolvimento de um sistema de informação, tais como melhoria da
+interoperabilidade entre sistemas, a diminuição de ambiguidades em modelos e a melhoria dos
+processos comunicacionais.
+A proposta aqui apresentada pode ser vista como uma oportunidade para promover a
+aplicação prática de ontologias no âmbito da Ciência da Computação, a qual se percebe ainda
+pouco explorada e também como oportunidade de esclarecimento da abordagem de
+modelagem conceitual de sistemas de informação para os profissionais da Ciência da
+Informação. Buscou-se contribuir para a interdisciplinaridade de saberes e aproximação das
+áreas de Ciência da Informação e Ciência da Computação, a partir do estudo de um problema
+real de interesse acadêmico e gerencial na tecnologia da informação.
+Por fim, podem ser pontuadas algumas oportunidades de trabalhos futuros, como:
+incremento de outras categorias de entidades e relações especificadas pela UFO para um
+roteiro mais completo; elaboração de novas versões do roteiro para outras ontologias de
+fundamentação aplicáveis à modelagem conceitual; aplicação do roteiro proposto para a
+modelagem de outros domínios de informação; validação do roteiro com profissionais que
+atuam na prática de modelagem conceitual.

@@ -1,0 +1,231 @@
+
+
+VISUALIZAÇÃO DE CORRESPONDÊNCIAS SEMÂNTICAS NO UNIVERSO BIG
+DATA
+Resumo: O Big Data consiste de uma vasta quantidade de dados disponíveis em diferentes
+níveis de complexidade – criados por humanos ou por máquinas, em diferentes ritmos – e que
+apresentam grandes níveis de ambiguidade, de forma que não podem ser processados
+computacionalmente por meio da utilização de tecnologias, dispositivos de comunicação,
+métodos de processamento e algoritmos tradicionais, além de qualquer outra solução similar.
+Desta forma, pode-se dizer que a recuperação da informação nessas grandes aglomerações de
+dados necessita de novas tecnologias e técnicas de apoio, que deverão modificar os processos
+tradicionais de coleta e análise da informação. Este trabalho utiliza abordagem qualiquantitativa. Trata-se de uma pesquisa exploratória e aplicada, que envolve pesquisa
+bibliográfica e faz parte de dois projetos de pesquisa em andamento. O objetivo deste trabalho
+é apresentar uma proposta preliminar para o desenvolvimento de visualizador de
+correspondências semânticas no contexto Big Data, de maneira a facilitar a interação humanocomputador. Por fim, concluiu-se que a possibilidade de visualizar correspondências
+semânticas dentro do universo Big Data, com interfaces adequadas quanto a sua usabilidade,
+pode melhorar sensivelmente o processo humano de tomada de decisão, pois possibilita
+descobrir e trazer à tona informações importantes, que de outra forma permaneceriam ocultas.
+Palavras-chave: Big Data. Visualização. Correspondências semânticas. Ontologias.
+Usabilidade.
+1 INTRODUÇÃO
+Big Data é um termo utilizado para descrever as volumosas quantidades de
+informações estruturadas, semi-estruturadas e não-estruturadas que as organizações
+produzem. Essas informações levariam muito tempo e necessitariam de muitos recursos para
+serem todas carregadas em uma base de dados convencional, de maneira que pudessem ser
+analisadas pelos modelos tradicionais. Embora não haja uma definição formal quanto à
+
+quantidade desses dados, convencionou-se usar o termo Big Data para situações em que se
+trata de petabytes ou exabytes de dados (MCKINSEY GLOBAL INSTITUTE, 2011).
+Segundo IBM (2012), diariamente são criados e disponibilizados 2,5 quintilhões de
+bytes de dados. Este volume é de tal monta que 90% dos dados existentes no mundo hoje
+foram criados nos dois últimos anos. Além disso, 80% dos dados existentes não estão
+estruturados. “Esses dados vêm de toda parte: sensores usados para coletar informações
+climáticas, textos postados em redes sociais, fotos e vídeos digitais, registros de transações de
+compra e venda, informações de GPS e de telefones celulares, apenas para nomear alguns.
+Isto é Big Data”.
+O conceito de Big Data se estende por três dimensões: volume, velocidade e
+variedade. Para IBM (2012, tradução livre), estas dimensões estão assim representadas:
+•
+
+Volume: as organizações estão “atoladas” em um número cada vez mais
+crescente de dados de todos os tipos, facilmente acumulando terabytes –
+às vezes mesmo petabytes – de informação. Exemplos de desafios:
+Como analisar os 12 terabytes de mensagens postadas no Twitter
+diariamente? Ou converter as 350 bilhões de leituras anuais dos
+medidores para melhor prever o consumo de energia?
+
+•
+
+Velocidade: Algumas vezes, 2 minutos podem ser tempo demais. Para
+processos baseados no tempo, como a detecção de fraudes eletrônicas, a
+ideia de Big Data pode ser utilizada pelas organizações, com o intuito de
+maximizar
+
+suas
+
+potencialidades.
+
+Exemplos:
+
+i)
+
+Examinar
+
+minunciosamente 5 milhões de transações comerciais feitas diariamente,
+para identificar potenciais fraudes. ii) Analisar 500 milhões de chamadas
+telefônicas diárias em tempo real, para identificar clientes em potencial.
+•
+
+Variedade: Big Data é qualquer tipo de dado – estruturado ou não –,
+como texto, dados de sensores, áudio, vídeo, sucessão de cliques,
+registro de operações em determinado sistema, e muito mais. Novas
+ideias surgem quando todos esses tipos de dados são analisados juntos.
+Exemplos: i) Monitorar 100% das imagens de vídeos obtidas a partir de
+câmeras de segurança de maneira e identificar pontos de interesse. ii)
+Explorar 80% do aumento de imagens, vídeos e documentos em geral,
+de maneira a incrementar a satisfação dos usuários.
+
+De acordo com o HMI Report of Global Information Industry Center (BOHN;
+SHORT, 2010), a quantidade de informação armazenada em sistemas locais ou distribuídos e
+disponibilizada publicamente na Web – ou de maneira privada, via bases de dados
+
+
+proprietárias – está em constante crescimento. Estima-se que o consumo de informação per
+capita diário gire em torno de 34GB por pessoa. Para Robredo (2011),
+[...] essas quantidades de dados irão, cada vez em maior escala, para alguma
+nuvem, e uma grande parte desses dados – mas não sempre os mesmos –
+estarão permanentemente em linha. [...] dos 35 ZB em 2020, 12 ZB passarão
+em algum momento por uma nuvem, e 5 ZB se fixarão numa nuvem. [...]
+dados médicos, de segurança nacional, estratégicos, dados bancários,
+cadastros de clientes, endereços de e-mails, sistemas cooperativos, grupos
+sociais, e mil coisas mais já estão armazenadas em alguma nuvem.
+
+Um zettabyte (ZB) equivale a um sextilhão de bytes. Segundo Sanchati e Kulkarni
+(2011), em breve as unidades de informação estarão construindo e gerenciando seus próprios
+data centers. Os autores também acham que a utilização da nuvem computacional é uma
+escolha bastante atrativa, e que será desafiada pelo crescimento do número de documentos
+indexados e pelas novas ferramentas tecnológicas que surgirem mais à frente.
+Para Mayer-Schönberger e Cukier (2013, tradução livre),
+Na sua essência, o Big Data trata de previsões. Embora seja descrito como
+um ramo da Ciência da Computação chamado Inteligência Artificial, e mais
+especificamente como uma subárea desta, chamada Aprendizado de
+Máquina (Machine Learning), esta classificação não está totalmente correta.
+Big Data não diz respeito a “ensinar” um computador a “pensar” como
+humanos. Ao invés disso, diz respeito à aplicação de técnicas matemáticas
+em grandes quantidades de dados de maneira a inferir probabilidades, por
+exemplo: a possibilidade de que um e-mail seja um spam; que a palavra
+digitada “cinêcia” seja na verdade “ciência”; que a velocidade e a trajetória
+de uma pessoa distraidamente atravessando uma rua implique que um carro
+auto-dirigido deva ajustar sua velocidade de maneira gradual, para dar tempo
+à mesma de chegar ao outro lado. A chave para o bom desempenho destes
+sistemas é a alimentação dos mesmos com enormes quantidades de dados,
+sobre os quais previsões serão feitas. Além disso, os sistemas são
+construídos para se autoaperfeiçoar com o passar do tempo, através do
+registro das melhores informações e dos melhores padrões obtidos, a partir
+dos quais novas informações serão procuradas futuramente. [...] No futuro –
+e mais cedo do que imaginamos – muitos aspectos de nosso mundo serão
+melhorados ou substituídos por sistemas computacionais que facilitarão a
+extensão do julgamento humano.
+
+Esta capacidade de “aprender a pensar” está relacionada com um conceito herdado da
+filosofia: a ontologia. De acordo com o Novo Dicionário Aurélio da Língua Portuguesa
+(2004), Ontologia é uma “parte da filosofia que trata do ser enquanto ser, i. e., do ser
+concebido como tendo uma natureza comum que é inerente a todos e a cada um dos seres”.
+Noy et al. (2001) afirmam que ontologias combinadas juntamente com um conjunto de
+instâncias de classes constituem uma base de conhecimento. “Há uma linha tênue que define
+onde a ontologia acaba e a base de conhecimento começa” (NOY et al., 2001, tradução livre).
+Em uma visão voltada à Ciência da Informação, as ontologias tratam das construções
+que estruturam conteúdos explícitos e que são capazes de codificar as regras implícitas de
+
+
+uma parte da realidade, ainda que trabalhem com declaração explícita independente do fim do
+domínio da aplicação (GARCÍA JIMÉNEZ, 2002), no qual o foco nas suas representações em
+prol de uma eficiente recuperação da informação, baseado em taxonomias e tesauros e
+linguagem natural da área. Para Bloehdorn et al. (2009), ontologias são essenciais para
+facilitar a interoperabilidade semântica e a integração de dados e processos. Eles também
+acreditam que nós estamos atualmente entrando em uma fase do desenvolvimento de sistemas
+na qual ontologias são produzidas em grande número e grande complexidade. Desta forma, a
+criação e gestão de infraestruturas para ontologias seriam necessárias para servir de suporte ao
+crescente número de aplicações, especialmente da Web Semântica, que trabalham com
+interoperabilidade semântica dentro das organizações.
+Podemos considerar, portanto, a utilização de ontologias como sendo de grande
+importância no contexto Big Data, pois as mesmas permitem um tipo de representação que
+facilita a descoberta de correspondências semânticas entre conceitos a priori distintos. Estas
+correspondências poderão ser utilizadas como base para a recuperação de informações e
+conhecimentos implícitos.
+O objetivo deste trabalho é apresentar uma proposta preliminar para o
+desenvolvimento de visualizador de correspondências semânticas no contexto Big Data, com
+usabilidade.
+2 VISUALIZAÇÃO E USABILIDADE
+A proposta de desenvolvimento de um visualizador de correspondências semânticas no
+contexto Big Data utilizará conceitos e princípios de usabilidade, ou de facilidade de uso.
+Vale ressaltar, que a usabilidade é uma característica essencial para facilitar o uso de sistemas,
+e a compreensão das informações apresentadas por um sistema de informação, ou por
+quaisquer elementos gráficos que possam representar informações para os usuários em um
+ambiente computacional.
+Segundo a norma ABNT NBR ISO 9241-11, a usabilidade é definida como: “medida
+na qual um produto pode ser usado por usuários específicos para alcançar objetivos
+específicos com eficácia, eficiência e satisfação em um contexto específico de uso”
+(ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS, 2011).
+Na interação entre a engenharia de usabilidade e a Ciência da Informação, surgem
+oportunidades para que especialistas em usabilidade e profissionais da informação possam
+trabalhar conjuntamente, interagir e compartilhar conhecimento a fim de projetar e
+desenvolver sistemas que possuam maior qualidade em suas interfaces.
+
+De acordo com Wilkes (2012), especialistas em usabilidade possuem o conhecimento
+para melhorar usabilidade de dados, garantindo não apenas que as pessoas que precisam de
+certos dados, possam acessá-los da forma que esperam (a partir de notebooks, smartphones
+e/ou outros dispositivos móveis), mas que também estejam de forma adequada: significativa,
+agradável, atrativa e útil. Além disto, os especialistas em usabilidade e os profissionais da
+informação possuem conhecimento para sugerir soluções nas quais os metadados sejam
+melhor integrados com mostradores e painéis de dados, com a indicação dos dados que
+possuem maior qualidade e confiabilidade.
+A complexidade envolvida na visualização de um grande volume de dados tem sido
+um tema desafiador para a Ciência da Informação, a Ciência da Computação, o Design, a
+Ergonomia e a Engenharia de Usabilidade; e algumas pesquisas, têm buscado desenvolver e
+testar possibilidades que possam gerar alternativas que permitam representar os mesmos
+fenômenos a partir de um conjunto menor de dados.
+Paul e Bruns (2013), por exemplo, realizaram um estudo nesta linha com o Twitter no
+qual analisaram mais de 164.000 tweets coletados durante o terremoto de 2011 para descobrir
+que tipo de informação específica sobre localização, os usuários mencionaram nos seus
+tweets, e em que momento eles trocaram informação sobre isto. Baseados em sua análise,
+descobriram que mesmo um conjunto de dados reduzido, não caracterizado como Big Data,
+pode ser útil para encontrar rapidamente áreas específicas de desastres. Com esta estratégia,
+nesta situação, conseguiram descobrir que área requer mais ajuda, e também os nomes dos
+lugares que foram atingidos mais gravemente durante o desastre.
+Entretanto, o grande desafio tem sido utilizar efetivamente grandes volumes de dados
+caracterizados como Big Data. Diversos visualizadores têm sido desenvolvidos e utilizados
+como instrumentos para entregar a informação de forma facilitada para os usuários.
+Takeda et al. (2012) desenvolveram uma ferramenta de visualização chamada
+Irregular Trend Finder (ITF) que foi projetada para análise de grandes volumes de dados, e
+que utiliza princípios de usabilidade, pois permite a utilização de estruturas hierárquicas, a fim
+de que o usuário possa obter primeiro uma visão geral, e depois, possa obter informação mais
+detalhada sob demanda. Os resultados dos estudos com esta ferramenta mostraram que
+abordagem utilizada mostrou-se eficiente para os usuários buscarem informações particulares
+em grandes volumes de dados.
+Schievelbein et al. (2014) descrevem um exemplo de ferramenta de visualização de
+ontologias e de captura e modelagem de conhecimento visual para um grupo de usuários
+
+
+especialistas da área de Geologia em um ambiente Web 2.0. A Figura 1 apresenta um
+exemplo de tela desta ferramenta chamada OBAITA.
+FIGURA 1 – Exemplo de ferramenta de visualização de ontologias – OBAITA
+
+Fonte: Schievelbein et al. (2014)
+
+3 ASPECTOS METODOLÓGICOS
+Esta pesquisa é exploratória, e utiliza a abordagem quali-quantitativa. A abordagem
+qualitativa está associada à avaliação da usabilidade da ferramenta a ser desenvolvida; e a
+quantitativa está presente principalmente no tratamento dos dados referentes à visualização
+das correspondências semânticas.
+Este estudo utiliza pesquisa bibliográfica, o paradigma da orientação a objeto para
+especificação e desenvolvimento da ferramenta de visualização, e as técnicas de avaliação de
+interfaces humano-computador da engenharia de usabilidade: avaliação heurística e inspeção
+de usabilidade (CYBIS, 2010).
+Este trabalho envolverá as seguintes etapas a serem realizadas: levantamento
+bibliográfico sobre Big Data, visualização, correspondências semânticas, ontologias e
+usabilidade; levantamento sobre ferramentas existentes que integrem estes temas e conceitos;
+especificação da ferramenta de visualização proposta; desenvolvimento da ferramenta
+proposta; avaliação da usabilidade da ferramenta desenvolvida.
+4 CONSIDERAÇÕES FINAIS
+Vale ressaltar que este estudo faz parte de um projeto de pesquisa em andamento, e
+que, portanto, seus resultados parciais envolvem a construção da proposta que se caracteriza
+por explorar a interação entre as áreas de Ciência da Informação, Ciência da Computação e
+
+
+
+Engenharia de Usabilidade e, mais especificamente, a aplicação integrada dos conceitos de
+big data, visualização, correspondências semânticas, ontologias e usabilidade.
+A partir da literatura já levantada e consultada, pode-se afirmar que tal abordagem de
+integração mostrou-se viável e potencialmente profícua.
