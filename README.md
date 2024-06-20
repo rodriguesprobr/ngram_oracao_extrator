@@ -4,6 +4,8 @@ Código-fonte utilizado na Versão *alpha* do Projeto de Extração de [*n-grams
 
 O conteúdo deste projeto é de livre distribuição, desde que seja referenciado e utilizada a Licença [Creative Commons 4.0 BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
 
+Este projeto foi inspirado no software White, desenvolvido em Linguagem de Programação [Delphi](https://www.embarcadero.com/products/delphi) pelo Professor Dr. [Ricardo César Gonçalves Sant'Ana](http://lattes.cnpq.br/1022660730972320), utilizado nos artigos _Informação e Tecnologia no ENANCIB: Percurso do GT 08 no período de 2008 - 2015_ e _Informação e Tecnologia: Percurso Temático do GT 08_, liderados pela Professora Dra. [Plácida Leopoldina Ventura Amorim da Costa Santos](http://lattes.cnpq.br/7408791408049766). 
+
 # Colaboradores do Projeto:
 
 - Profa. Dra. [Ana Carolina Simionato Arakaki](http://lattes.cnpq.br/9896600626524397) (Instituto Brasileiro de Informação em Ciência e Tecnologia - IBICT)
@@ -13,7 +15,7 @@ O conteúdo deste projeto é de livre distribuição, desde que seja referenciad
 
 # Preparação dos Textos
 
-Para a execução deste algoritmo, os textos já devem estar no formato texto (TXT), utilizado codificação [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) nos arquivos. Existem vários conversores de outros formatos para o formato texto, inclusive _on-line_.
+Para a execução deste algoritmo, os textos já devem estar no [formato texto](https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/V1_chap03.html#tag_03_403) (TXT), utilizado codificação [UTF-8](https://pt.wikipedia.org/wiki/UTF-8) nos arquivos. Existem vários conversores de outros formatos para o formato texto, inclusive _on-line_.
 
 Os textos devem ser separados em diretórios/pastas por ano de publicação (*e.g.* 2014, 2015, 2016, etc.). Este projeto já inclui estes dados, mas podem ser modificados, excluídos ou subistituídos a depender das análises desejadas.
 
