@@ -30,7 +30,8 @@ ComunicacaoCientificaNgram = db.Table(
     "comunicacao_cientifica_ngram",
     metadata,
     db.Column("comunicacao_cientifica_id", db.Integer, primary_key=True, foreign_key="comunicacao_cientifica.id"),
-    db.Column("ngram_id", db.Integer, primary_key=True, foreign_key="ngram.id")
+    db.Column("ngram_id", db.Integer, primary_key=True, foreign_key="ngram.id"),
+    db.Column("counter", db.Integer, nullable=False)
 )
 metadata.create_all(engine)
 
@@ -117,7 +118,7 @@ def comunicacao_cientifica_analisar_finalizar(comunicacao_cientifica_id):
     # conn.commit()
 
 
-def ngram_por_ano_selecionar():
+def ngram_por_ano_selecionar(tipo):
     retorno = []
     cabecalho = ["ngram", "tipo"]
     sql = """
@@ -128,9 +129,15 @@ def ngram_por_ano_selecionar():
     anos = ano_selecionar()
     for ano in anos:
         cabecalho.append(ano.ano)
-        sql += f"count(case when ano = {ano.ano} then 1 end) as '{ano.ano}',"
+        if tipo == "ocorrencia":
+            sql += f"count(case when ano = {ano.ano} then 1 end) as '{ano.ano}',"
+        elif tipo == "frequencia":
+            sql += f"sum(case when ano = {ano.ano} then counter end) as '{ano.ano}',"
+    if tipo == "ocorrencia":
+        sql += f"count(ccn.ngram_id) as total"
+    elif tipo == "frequencia":
+        sql += f"sum(ccn.counter) as total"
     sql += """
-            count(ccn.ngram_id) as total
         FROM ngram n
         LEFT JOIN comunicacao_cientifica_ngram ccn ON ccn.ngram_id = n.id
         LEFT JOIN comunicacao_cientifica cc ON cc.id = ccn.comunicacao_cientifica_id
@@ -192,10 +199,13 @@ def comunicacao_cientifica_ngram_inserir(comunicacao_cientifica_id, ngram_id):
     if qtde == 0:
         result = conn.execute(
             db.insert(ComunicacaoCientificaNgram).values(comunicacao_cientifica_id=comunicacao_cientifica_id,
-                                                         ngram_id=ngram_id)).lastrowid
+                                                         ngram_id=ngram_id,
+                                                         counter=1)).lastrowid
         # conn.commit()
     else:
-        result = conn.execute(db.select(ComunicacaoCientificaNgram).where(
-            ComunicacaoCientificaNgram.c.comunicacao_cientifica_id == comunicacao_cientifica_id).where(  # type: ignore
-            ComunicacaoCientificaNgram.c.ngram_id == ngram_id)).first()  # type: ignore
+        result = conn.execute(db.update(ComunicacaoCientificaNgram).where(
+            ComunicacaoCientificaNgram.c.comunicacao_cientifica_id == comunicacao_cientifica_id
+        ).where(
+            ComunicacaoCientificaNgram.c.ngram_id == ngram_id
+        ).values(counter=ComunicacaoCientificaNgram.c.counter+1)).lastrowid
     return result
