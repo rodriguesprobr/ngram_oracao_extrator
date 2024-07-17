@@ -1,5 +1,6 @@
 from datetime import datetime
 
 
-def log(mensagem):
-    print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {mensagem}")
+class log:
+    def imprime(self, mensagem):
+        print(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {mensagem}")
