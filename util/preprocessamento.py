@@ -14,7 +14,6 @@ class PreProcessamento:
         spacy_model=None,
         remove_numbers=False,
         remove_special=True,
-        remove_hyperlinks=True,
         pos_to_remove=None,
         remove_stopwords=False,
         lemmatize=False
@@ -24,7 +23,6 @@ class PreProcessamento:
         :param remove_numbers: Whether to remove numbers from text
         :param remove_stopwords: Whether to remove stopwords from text
         :param remove_special: Whether to remove special characters (including numbers)
-        :param remove_hyperlinks: Whether to remove hyperlinks
         :param pos_to_remove: list of PoS tags to remove
         :param lemmatize:  Whether to apply lemmatization
         """
@@ -33,7 +31,6 @@ class PreProcessamento:
         self._pos_to_remove = pos_to_remove
         self._remove_stopwords = remove_stopwords
         self._remove_special = remove_special
-        self._remove_hyperlinks = remove_hyperlinks
         self._lemmatize = lemmatize
 
         if not spacy_model:
@@ -60,12 +57,6 @@ class PreProcessamento:
         :param text: text string to clean
         :return: str, clean text
         """
-        if self._remove_hyperlinks is True:
-            text = re.sub(
-                r'(https?:\/\/)(\s)*(www\.)?(\s)*((\w|\s)+\.)*([\w\-\s]+\/)*([\w\-]+)((\?)?[\w\s]*=\s*[\w\%&]*)*',
-                "",
-                text,
-                flags=re.MULTILINE)
         doc = self.model(text)
         return self.__clean(doc)
 
