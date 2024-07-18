@@ -32,11 +32,11 @@ class processamento:
         self.instancia.excluir_dados()
 
     def processar(self):
-        for ano in os.listdir(self.config.recuperar("comunicacoes_cientificas_dir")):
+        for ano in os.listdir(self.config.recuperar("local_comunicacoes_cientificas")):
             ano_id = self.instancia.ano_inserir(ano)
             self.logger.imprime(f"Processando: {ano}")
             for comunicacao_cientifica in os.listdir(
-                    os.path.join(self.config.recuperar("comunicacoes_cientificas_dir"), ano)):
+                    os.path.join(self.config.recuperar("local_comunicacoes_cientificas"), ano)):
                 self.instancia.comunicacao_cientifica_inserir(
                     comunicacao_cientifica,
                     ano_id,
@@ -78,7 +78,7 @@ class processamento:
             conteudo = preprocessor.preprocess_text(
                 open(
                     os.path.join(
-                        self.config.recuperar("comunicacoes_cientificas_dir"),
+                        self.config.recuperar("local_comunicacoes_cientificas"),
                         str(ano.ano),
                         comunicacao_cientifica.arquivo_nome),
                     "r",
@@ -105,18 +105,18 @@ class processamento:
         else:
             self.logger.imprime(f"Thread {threading.get_ident()} - Não há dados a serem processados pela Thread.")
 
-    def ngram_ocorrencia_por_ano(self):
-        self.logger.imprime("- Ocorrência de N-gramas por Ano")
-        csv = open("dados/analise_ngram_ocorrencia_por_ano.csv", "w", encoding="UTF-8")
-        dados = self.instancia.ngram_por_ano_selecionar("ocorrencia")
+    def ngram_frequencia_por_ano(self):
+        self.logger.imprime("- Frequência de N-gramas por Ano")
+        csv = open(self.config.recuperar("local_analise_ngram_frequencia_por_ano"), "w", encoding="UTF-8")
+        dados = self.instancia.ngram_por_ano_selecionar("frequencia")
         for dado in dados:
             csv.write(''.join(str(f"{x}\t") for x in dado) + "\n")
         csv.close()
 
-    def ngram_frequencia_por_ano(self):
-        self.logger.imprime("- Frequência de N-gramas por Ano")
-        csv = open("dados/analise_ngram_frequencia_por_ano.csv", "w", encoding="UTF-8")
-        dados = self.instancia.ngram_por_ano_selecionar("frequencia")
+    def ngram_ocorrencia_por_ano(self):
+        self.logger.imprime("- Ocorrência de N-gramas por Ano")
+        csv = open(self.config.recuperar("local_analise_ngram_ocorrencia_por_ano"), "w", encoding="UTF-8")
+        dados = self.instancia.ngram_por_ano_selecionar("ocorrencia")
         for dado in dados:
             csv.write(''.join(str(f"{x}\t") for x in dado) + "\n")
         csv.close()

@@ -49,7 +49,13 @@ Após a instalação do _Python_ e das bibliotecas, deve-se executar o _script_ 
 
 O _script_ _\_\_init\_\_.py_ pode demorar algumas horas para terminar a execução. Ele utiliza programação em _threads_ para processar múltiplos textos ao mesmo tempo. No arquivo _config.json_ você poderá aumentar ou diminuir quantos textos são processados em paralelo, alterando o valor do atributo _threads_quantidade_.
 
-No _config.json_ também pode ser alterado se os dados serão excluídos na execução (atributo _excluir_dados_) e o local em que o algoritmo fará a varredura procurando os textos a serem processados (atributo _comunicacoes_cientificas_dir_).
+## Parametrização do config.json
+
+Parte do algoritmo pode ser personalizado no arquivo _config.json_.
+
+- Se na execução os dados serão excluídos, deve ser deixar o atributo _excluir_dados_ para _true_. Caso contrário, deve-se configurar o parâmetro para _false_.
+- O local em que o algoritmo fará a varredura procurando as comunicações científicas a serem processadas está referenciado no atributo _local_comunicacoes_cientificas_. O padrão está configurado para pasta dados, subpasta comunicacoes_cientificas. O projeto já está populado com as comunicações científicas do ENANCIB, que podem ser substituídas.
+- O local em que o algoritmo exportará a frequência e a ocorrência de ngramas por ano são configuradas, respecitivamente, nos atributos _local_analise_ngram_frequencia_por_ano_ e _local_analise_ngram_ocorrencia_por_ano_. Por padrão, o local em que serão salvos os arquivos em formato [Comma-Separated Values (CSV)](https://pt.wikipedia.org/wiki/Comma-separated_values) é na pasta dados.
 
 # _TODO List_
 - [ ] Separar Comunicações Científicas (_e.g._ poster, resumo, etc.).
