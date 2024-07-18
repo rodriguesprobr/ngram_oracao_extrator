@@ -8,5 +8,5 @@ setup(
     license='Creative Commons 4.0 BY-NC-SA',
     author='RODRIGUES, F. A.; FARINELLI, F.; ARAKAKI, A. C. S.; ARAKAKI, F. A.',
     author_email='deassis@ufpa.br',
-    description='Versão alpha do Projeto de Extração de n-grams e Isolamento de Orações de Textos'
+    description='Projeto de Extração de n-grams e Isolamento de Orações de Textos'
 )
